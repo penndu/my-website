@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>杜老师说</title>
+  
+  
+  <link href="https://dusays.com/atom.xml" rel="self"/>
+  
+  <link href="https://dusays.com/"/>
+  <updated>2021-10-07T08:37:12.696Z</updated>
+  <id>https://dusays.com/</id>
+  
+  <author>
+    <name>Teacher Du</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说网站：两种通过 Nginx 实现强制 HTTPS 访问方法</title>
+    <link href="https://dusays.com/392/"/>
+    <id>https://dusays.com/392/</id>
+    <published>2021-10-12T16:00:00.000Z</published>
+    <updated>2021-10-07T08:37:12.696Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>现在 HTTPS 已非常普遍，很多网站都加了 SSL 证书，但仍然有许多访客使用 HTTP 的方式访问，今天杜老师分享下两种通过 Nginx 实现强制 HTTPS 访问方法。</p></blockquote><span id="more"></span><h2 id="强制跳转访问"><a href="#强制跳转访问" class="headerlink" title="强制跳转访问"></a>强制跳转访问</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">#HTTP_TO_HTTPS_STARTif ($server_port !~ 443)&#123;    rewrite ^(&#x2F;.*)$ https:&#x2F;&#x2F;$host$1 permanent;&#125;#HTTP_TO_HTTPS_END<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：将上面的代码无需任何编辑，直接复制到 Nginx 的配置文件中即可，当用户通过 HTTP 访问，会强制跳转到 HTTPS 的形式。</p></div><h2 id="强制安全访问"><a href="#强制安全访问" class="headerlink" title="强制安全访问"></a>强制安全访问</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">add_header Strict-Transport-Security &quot;max-age&#x3D;31536000; includeSubDomains&quot; always;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：max-age 为强制最大时间，单位为秒，设置 31536000 则含义为一年内强制使用 HTTPS 的形式访问；includeSubDomains 含义为包含二级域名，如存在该设置，则 dusays.com 和 cdn.dusays.com 都要验证；always 为响应所有的请求头。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;现在 HTTPS 已非常普遍，很多网站都加了 SSL 证书，但仍然有许多访客使用 HTTP 的方式访问，今天杜老师分享下两种通过 Nginx 实现强制 HTTPS 访问方法。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="网站" scheme="https://dusays.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说博客：通过 Vercel 部署 Hexo「发表」</title>
+    <link href="https://dusays.com/388/"/>
+    <id>https://dusays.com/388/</id>
+    <published>2021-09-30T16:00:00.000Z</published>
+    <updated>2021-10-07T08:37:12.696Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我们在上文中讲解了如何部署 Hexo，本文主要说明如何通过 GitHub 在线更新博客的内容。当然，如果您熟悉 Git 相关操作，也可以 clone 到本地编辑并提交。</p></blockquote><span id="more"></span><h2 id="在线更新"><a href="#在线更新" class="headerlink" title="在线更新"></a>在线更新</h2><div class="story post-story"><p>登录自己的 GitHub 账号，在 Repositories 列表中找到存放源码的仓库：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/388-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/388-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/388-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>进入保存博文的目录 source/_posts：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/388-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/388-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/388-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>点击 Add file 添加一个新文件：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/388-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/388-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/388-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>填写文件名称：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/388-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/388-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/388-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>按照下图格式添加内容模板，并添加自己的内容：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/388-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/388-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/388-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>编辑好内容后，点击 Commit new file 提交并自动部署：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/388-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/388-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/388-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="博文模板"><a href="#博文模板" class="headerlink" title="博文模板"></a>博文模板</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">---title: 标题tags:  - 标签categories:  - 分类date: 2021-10-01 00:00:00---&gt; 导语&lt;!-- more --&gt;正文<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：可以添加多个标签、分类，按照上面格式，每行一个。导语一行可以省略。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我们在上文中讲解了如何部署 Hexo，本文主要说明如何通过 GitHub 在线更新博客的内容。当然，如果您熟悉 Git 相关操作，也可以 clone 到本地编辑并提交。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说博客：通过 Vercel 部署 Hexo「部署」</title>
+    <link href="https://dusays.com/387/"/>
+    <id>https://dusays.com/387/</id>
+    <published>2021-09-27T16:00:00.000Z</published>
+    <updated>2021-10-07T08:37:12.696Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>也许您也想拥有一套自己的博客，方便面试的时候想展示自我，或者想记录自己的生活，但是一直没找到合适的平台；也许有一些自己的小玩意想部署到服务器，但是服务器又有点小贵，打工人又舍不得买，那么 Vercel 平台可能是您不错的选择，不用花钱，访问速度不错，域名也有！本文的主要目的是帮助想拥有自己的博客的小伙伴，提供一套完整博客搭建方案，那么现在就开干吧！</p></blockquote><span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>以 Vercel 和 Hexo 作为关键词去搜索，会搜到一大堆教程，而且每一篇都非常详细。就会小伙伴会问了：杜老师为什么要重复的造轮子呢？</p><p>说实话我也不想这么做，奈何再详细的教程，还是会有些小伙伴不会操作，一个劲追问为什么。既然如此，贴心的杜老师就把每一步骤都截图在下面，并且尽量减少代码出现，让需要的小伙伴仅通过鼠标点击就可以完成 Hexo 部署。</p></div><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><div class="story post-story"><p>Vercel 提供一个云平台，可优化整个项目开发和部署体验，它有强大的功能值得去探索，个人使用是免费的，提供域名访问，使用方便快捷：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>Hexo 是一个基于 Node.js 的静态博客网站生成工具，命令操作简单，直接开箱使用，支持丰富主题，支持高度自定义化，主要用 Markdown 语法：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><div class="story post-story"><p>首先使用 GitHub 用户登录 Vercel，如果没有 GitHub 可注册一个，这里就不再叙述了。如果不会操作，可在下面评论留言，杜老师会第一时间协助注册：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>因为杜老师之前部署过一个站点，所以该页面会有所不同。不过都能看到右上方的新建项目：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>支持从 GitHub 导入项目，但本次我们主题是通过 Vercel 全新部署 Hexo 博客，所以我们选右侧的查看所有模板：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在刷新的页面下方，即可看到 Hexo 项，点击开始部署：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>我们首先将部署的代码，保存在 GitHub：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-7.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-7.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-7.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>设置在 GitHub 仓库名称，点击创建，Vercel 会自动在 GitHub 中创建对应仓库，并将相关的代码存储在其中：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-8.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-8.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-8.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>这里不做过多解释，问就是要收费，直接跳过即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-9.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-9.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-9.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>接着 Vercel 开始全自动部署博客，稍等一会即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-10.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-10.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-10.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>部署完成之后，页面会自动跳转并跳出烟花，杜老师手慢了没有截到，点击去仪表盘即可查看部署结果：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-11.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-11.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-11.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>仪表盘中，我们能看到 Vercel 为我们提供的免费二级域名，使用该域名即可访问刚搭建好的博客：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/387-12.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/387-12.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/387-12.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><div class="story post-story"><p>杜老师不喜欢读长文更不喜欢写长文，所以完整搭建流程，会分为四个章节来更新，本篇仅讲述如何部署 Hexo，下一篇将更新如何更新文章，再一篇会更新如何安装插件，最后一篇更新如何使用模板。</p><p>杜老师会根据小伙伴的需求，考虑更新进阶教程，不过最终目标就是使用最少的代码完成 Hexo 的搭建和后期更新。有任何的问题及建议请在评论区留言，杜老师会尽快回复！</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;也许您也想拥有一套自己的博客，方便面试的时候想展示自我，或者想记录自己的生活，但是一直没找到合适的平台；也许有一些自己的小玩意想部署到服务器，但是服务器又有点小贵，打工人又舍不得买，那么 Vercel 平台可能是您不错的选择，不用花钱，访问速度不错，域名也有！本文的主要目的是帮助想拥有自己的博客的小伙伴，提供一套完整博客搭建方案，那么现在就开干吧！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说域名：可白嫖的顶级域名</title>
+    <link href="https://dusays.com/386/"/>
+    <id>https://dusays.com/386/</id>
+    <published>2021-09-24T16:00:00.000Z</published>
+    <updated>2021-09-21T11:00:11.316Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>顶级域名可是一个小网站身份的象征，今天杜老师分享下如何白嫖一枚顶级域名。不过在最先要说上一句：免费的才是最贵的！如果条件允许，还是建议付费购买。</p></blockquote><span id="more"></span><h2 id="资源介绍"><a href="#资源介绍" class="headerlink" title="资源介绍"></a>资源介绍</h2><div class="story post-story"><p>首先感谢小朋友 MrZeFr，是他让我知道这个资源，毕竟杜老师平时很少会关注免费资源「凡尔赛 ing」该网站支持申请多种后缀的顶级域名，如tk/ml/ga/cf/gq，还支持在该网站以成本价格购买其它顶级域名。更多的大家可自行体验，毕竟杜老师没申请成功，申请网址如下，将鼠标放在下面即可显示该网站地址：</p><psw>http://www.freenom.com/zh/index.html</psw></div><h2 id="失败演示"><a href="#失败演示" class="headerlink" title="失败演示"></a>失败演示</h2><div class="story post-story"><p>试了五次都失败了，后来了解到该网站已经禁止国内注册「估计是白嫖党太多」不过这难不倒机智的博友们，对吧：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/386-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/386-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/386-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;顶级域名可是一个小网站身份的象征，今天杜老师分享下如何白嫖一枚顶级域名。不过在最先要说上一句：免费的才是最贵的！如果条件允许，还是建议付费购买。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="域名" scheme="https://dusays.com/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说图床：去不图床 Chrome/Edge 浏览器扩展</title>
+    <link href="https://dusays.com/385/"/>
+    <id>https://dusays.com/385/</id>
+    <published>2021-09-21T16:00:00.000Z</published>
+    <updated>2021-09-13T10:38:57.681Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>为了方便大家上传图片，去不图床提供 Chrome/Edge 浏览器扩展，可以实现无需打开图床页面，也能快速上传并复制图片的外链地址。</p></blockquote><span id="more"></span><h2 id="扩展下载"><a href="#扩展下载" class="headerlink" title="扩展下载"></a>扩展下载</h2><div class="story post-story"><p>首先进入浏览器的扩展管理界面，打开开发人员模式，然后将下载好的文件解压缩，并拖拽其中的插件到扩展管理界面中，当提示是否安装时，点击确认即可：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/f187231fe52d40' title='下载地址'>下载地址</a></span></div><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><div class="story post-story"><p>安装后即可在扩展栏中看到图标，右键选择设置，依次输入去不图床 API 的地址，图床用户名和密码即可。上传方式参考下面动画：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/385-1.gif' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/385-1.gif" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/385-1.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;为了方便大家上传图片，去不图床提供 Chrome/Edge 浏览器扩展，可以实现无需打开图床页面，也能快速上传并复制图片的外链地址。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说测试：杜老师的人格测试</title>
+    <link href="https://dusays.com/384/"/>
+    <id>https://dusays.com/384/</id>
+    <published>2021-09-18T16:00:00.000Z</published>
+    <updated>2021-09-07T18:00:13.401Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>杜老师分享了很多技术文章，却很少提及自己的生活日常，想更加的了解杜老师吗？快来看看杜老师的人格测试！欢迎小伙伴们将自己的测试结果留言给杜老师。</p></blockquote><span id="more"></span><h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><div class="story post-story"><p>解释结果如图：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/384-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/384-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/384-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="人格介绍"><a href="#人格介绍" class="headerlink" title="人格介绍"></a>人格介绍</h2><div class="story post-story"><p>守卫者人格类型是一个很独特的类型，他们的许多品质与他们自身的特质不相符。虽然非常照顾他人感受，一旦到了需要保护家人或朋友的时候，就会变得非常强悍；虽然安静内向，却有很好的社交技巧和强大社会关系；虽然追求安全、稳定，但只要他们得到理解和尊重，就会愿意接受改变。和很多的事物一样，有守卫者人格类型的人作为一个整体不可小觑，他们的身份由他们如何用这些强项而定义。</p><p>他们是所有人格类型中占人口总数比例最大的一个类型，有接近 13%。他们既能坚守最好的传统也乐善好施，所以会从事一些有历史感的行业，比如医学、学术和社会慈善等工作。这种人格类型的人「尤其是性格不安定的那部分」经常一丝不苟到完美主义的程度，虽然他们有拖延的习惯，但他们总能可靠地按时完成工作。守卫者人格类型的人重视自己的责任，会时刻尽最大努力超出预期地让别人满意，无论在家庭还是工作中。</p></div><h2 id="眼见为实"><a href="#眼见为实" class="headerlink" title="眼见为实"></a>眼见为实</h2><div class="story post-story"><p>守卫者人格类型的人所面临挑战在于，如何确保让别人注意自己做的事。他们总是对自己的成就轻描淡写，虽然这样的善良经常会得到尊重，自私自利的人可能占他们爱奉献和谦虚的便宜，会把工作推给他们，荣誉留给自己。如果想保持自信和热情，守卫者们需要知道什么时候说不并用于为自己反抗。</p><p>天生喜欢社交是内向者们身上少见的特点，守卫者们不会把出色的记忆力用在数据和琐事，而是记住人和他们生活中的细节。他们擅长赠送礼物，他们天生富有想象力且感情细腻，他们的礼物可以送到接收者的心坎里。对于被守卫者们当作朋友的同事们来说是这样，而在家庭里守卫者们会尽情表达爱意。</p></div><h2 id="会保护你"><a href="#会保护你" class="headerlink" title="会保护你"></a>会保护你</h2><div class="story post-story"><p>守卫者人格类型的人是一个奇妙团体，正事没有完成之前，他们绝对不会虚度光阴。与人亲密接触的能力是其他内向型遥不可及的，他们使用这些关系来维系一个相互支持的快乐家庭，这对每个参与其中的人来说都很幸运。</p><p>他们在聚光灯下可能永远都不会觉得舒服，把团队成就归功于自己会使他们感到内疚，但是如果他们的努力被认可，守卫者们从所做的事情中得到的满足是其他人格类型无法企及的。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;杜老师分享了很多技术文章，却很少提及自己的生活日常，想更加的了解杜老师吗？快来看看杜老师的人格测试！欢迎小伙伴们将自己的测试结果留言给杜老师。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="测试" scheme="https://dusays.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说解析：通过 SRV 解析无需端口连接我的世界服务器</title>
+    <link href="https://dusays.com/383/"/>
+    <id>https://dusays.com/383/</id>
+    <published>2021-09-15T16:00:00.000Z</published>
+    <updated>2021-09-02T16:23:17.468Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>SRV 记录是 DNS 服务器的数据库中支持的一种资源记录类型，它记录了哪台计算机提供哪个服务这么一个简单的信息。一般是为 Microsoft 的活动目录设置时的应用。</p></blockquote><span id="more"></span><h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><div class="story post-story"><p>杜老师搭建我的世界服务器已经有一个多月了，有很多小伙伴加入一起游戏，被问到最多的问题就是：游戏的端口是多少？</p><p>我们的服务器是同他人合租，所以无法使用默认端口，连接时需输入端口才可进入游戏，无形中增加了记忆成本。</p><p>如何免端口进入游戏呢？杜老师之前有写过一篇文章《<a href="https://dusays.com/366/">杜老师说网站：80 端口重定向三种解决方案</a>》，可以通过反向代理、端口转发等方式解决该问题，但需要在用户和服务器间新增一台中间件，这将会增加游戏的延迟。</p><p>最终杜老师了解到，可以通过 DNS 解析中的 SRV 功能，实现不需要端口连接我的世界服务器。</p></div><h2 id="解析设置"><a href="#解析设置" class="headerlink" title="解析设置"></a>解析设置</h2><div class="story post-story"><p>这里已 Cloudflare 为例，演示如何添加 SRV 解析项。参考如图，其中类型选 <code>SRV</code>，名称则为二级域名，如需要通过 <code>mc.dusays.com</code> 连接游戏，则名称输入 <code>mc</code>，服务可自定义，因为我们要连接我的世界服务器，所以填写了<code>_minecraft</code>，协议根据实际情况选择 <code>TCP</code> 或者 <code>UDP</code>，<code>TTL</code> 可自动，优先级和权重根据需求填写，范围是 <code>0-65535</code>，数字越小优先级和权重越高，端口则写服务器的端口，最后在目标中填写服务器的地址：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/383-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/383-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/383-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="设置效果"><a href="#设置效果" class="headerlink" title="设置效果"></a>设置效果</h2><div class="story post-story"><p>设置好解析后保存即可，等待解析同步 DNS 缓存服务器，2 小时内即可同步完成「往往等几分钟即可」进入游戏后添加服务器试试，效果如下动画：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/383-2.gif' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/383-2.gif" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/383-2.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="解析查询"><a href="#解析查询" class="headerlink" title="解析查询"></a>解析查询</h2><div class="story post-story"><p>这里做个技术扩展，我们可以通过 nslookup 命令查看 SRV 解析，完整的命令参考 <code>nslookup -q=srv _minecraft._tcp.mc.dusays.com</code>，执行效果如图：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/383-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/383-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/383-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;SRV 记录是 DNS 服务器的数据库中支持的一种资源记录类型，它记录了哪台计算机提供哪个服务这么一个简单的信息。一般是为 Microsoft 的活动目录设置时的应用。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="解析" scheme="https://dusays.com/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说萌宠：杜老师的镇博萌宠</title>
+    <link href="https://dusays.com/382/"/>
+    <id>https://dusays.com/382/</id>
+    <published>2021-09-12T16:00:00.000Z</published>
+    <updated>2021-08-28T13:44:42.100Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>借助十年之约虫洞穿梭访问了不少圈内博主的站点，大多都是分享生活。有博主回访的时候留言要求更新一些生活日志，那今天就穿越写上一篇，不要吝啬您的脚印，请在评论区里狠狠的踩！</p></blockquote><span id="more"></span><h2 id="西瓜由来"><a href="#西瓜由来" class="headerlink" title="西瓜由来"></a>西瓜由来</h2><div class="story post-story"><p>一日下班回来，听到单元门附近有奶猫叫声，有气无力特别凄惨，好奇心大起过去瞧了下，瞬间内心为之一振。</p><p>猫咪躺在草丛，脖颈处有个贯穿伤，周围环绕着好多的苍蝇，并不时有些落在猫咪脖颈处排卵，且可以看到好多蚂蚁在猫咪的口耳处进进出出。</p><p>本来想着多一事不如少一事，但架不住对生命的尊重，所以赶紧回家拿了一件旧外衣和手套，抱着猫咪奔向了附近的宠物医院。</p><p>宠物医生做了详细的检查后，建议保守治疗，毕竟不敢保证在极力救治下，猫咪是否可以存活，且治疗的费用很高。</p><p>在清理好伤口并包扎后，将小猫咪抱回了家，并用闲置的空纸壳为其搭建了一个临时的小窝。</p><p>猫咪躺在窝里十分安静，不叫也不爱动，用在宠物医院买的奶粉给他冲了一些喝的，用注射器一点一点的喂。</p><p>开始喝的很少，绝大多数时间都在睡觉，后来吃的东西越来越多，也可以自己吃饭了，慢慢的开始满屋跑。</p><p>再送到宠物医院时，医生也很惊喜，没想到小家伙的生命力蛮顽强的，除了伤口还没愈合，其它的已并无大碍。</p><p>这时遇到了一个大问题：如何处置这只猫咪？</p><p>本来想着治好后就留在宠物医院，等待好心人的收留。将这个想法和医生说了，医生建议先拿回去再养两天，等联系到收养人后，再联系我。</p><p>不过随着相处时间增加，发现养只猫咪也挺好的，故给其起了个名字：西瓜。</p><p>如果问为什么叫他西瓜，其实是很早前，遇到过一只流浪猫，很粘着我。但因为没有能力养，所以给朋友了，最后朋友说猫跑了。希望这只猫可以乖一些，不要乱跑！</p></div><h2 id="小调皮蛋"><a href="#小调皮蛋" class="headerlink" title="小调皮蛋"></a>小调皮蛋</h2><div class="story post-story"><p>本来以为是只乖巧的猫，待其伤好之后，就开始其称皇猫生。一天到晚上串下跳，动不动冲过来咬我一口。等我想抓住他，瞬间跑到床底够不到的地方，一动不动。又待我放松警惕时，再跑出来补上一口。配喵图你瞅啥：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜饮食"><a href="#西瓜饮食" class="headerlink" title="西瓜饮食"></a>西瓜饮食</h2><div class="story post-story"><p>我感觉他最大特点就是贪吃，我吃什么，都要过来闻闻「朕给你鉴个毒」每天回家第一件事，冲我嗷嗷的叫，翻译成中文是「撒冷的喂我吃东西」因为白天需要上班而且经常出差，就给他买了个自动的喂食器，后来发现自动完全没有必要，他会自己按出粮键：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-1.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-2.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜饮水"><a href="#西瓜饮水" class="headerlink" title="西瓜饮水"></a>西瓜饮水</h2><div class="story post-story"><p>猫咪饮水是非常重要的，喝水少了容易生病，所以给他买了智能的饮水机。可以手机控制出水间隔，并可以监控剩余水量及水质滤芯的使用量。他最喜欢做的事情，就是沾上一爪子水，然后在我脸上狂甩:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-3.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-4.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="满屋猫毛"><a href="#满屋猫毛" class="headerlink" title="满屋猫毛"></a>满屋猫毛</h2><div class="story post-story"><p>猫咪一如夏季，就会开始脱毛，脱到我都不敢碰他，每次摸完都感觉自己戴了双手套。天热丝毫没有降低他爱动的兴趣，照样疯跑，那满屋如下雪般的猫毛，我真想把他剃秃了！最后买了空气净化器整天吹，在屋子里才勉强能呼吸:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-5.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-6.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="温湿度计"><a href="#温湿度计" class="headerlink" title="温湿度计"></a>温湿度计</h2><div class="story post-story"><p>冬天阳台的温度低，为了避免猫咪受凉，买了台加热器。但电表要起飞的转速让我着实的心疼，所以买了温湿度计，可以联动小米智能插座，到舒适温度后自动关闭加热。电费倒是小事，屋子里少了煮屎的味道:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-7.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-7.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-7.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-8.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-8.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-8.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜监控"><a href="#西瓜监控" class="headerlink" title="西瓜监控"></a>西瓜监控</h2><div class="story post-story"><p>卧室的零碎有好多，白天上班时担心猫在卧室会乱碰，关在阳台又怕猫出事情，所以买了云摄像头，可以随时查看猫的状态。十次看有九次在晒太阳，一次躲在猫砂盆中拉屎，隔着屏幕都能感受到猫屎的味道:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-9.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-9.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-9.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="粑粑除臭"><a href="#粑粑除臭" class="headerlink" title="粑粑除臭"></a>粑粑除臭</h2><div class="story post-story"><p>猫咪拉屎真的很臭，有时怀疑他是不是背着我吃屎了。平时关着他的阳台，已经成为我的禁地，毕竟活动空间和名，还是后者重要。不过毕竟要晾晒衣服的，所以扛不住就买了台负离子除臭器，说实话确实挺好使。后来猫咪可能发现他的味道影响不到我了，直接改用屁股坐我的脸。要不是我靠脸吃饭，真想把这张脸扔了:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-10.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-10.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-10.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜玩具"><a href="#西瓜玩具" class="headerlink" title="西瓜玩具"></a>西瓜玩具</h2><div class="story post-story"><p>上班累了一天，到家就想摊在床上。奈何理想的丰满被猫爪无情撕碎，得先陪着他玩爽了，才能做自己的事情。实在受不了就买了个自动逗猫机，结果理想的丰满再次被猫爪无情撕碎，我得看着他玩不说，他的动作仿佛开启教学模式，仿佛在说「看到了吗？要这样抓才行，你个傻叉」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-11.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-11.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-11.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜出行"><a href="#西瓜出行" class="headerlink" title="西瓜出行"></a>西瓜出行</h2><div class="story post-story"><p>在家称王称霸，一出卧室门就怂了。每次抱出去都大叫着要回家，为了防止猫咪出现应激反应，就买了个猫包，带空调的那种「因为是夏季购买的」结果可怜猫包没有发挥几次作用，变成了烘干箱，猫咪洗完澡后放入猫包开始吹干，包生应该无遗憾了:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-12.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-12.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-12.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;借助十年之约虫洞穿梭访问了不少圈内博主的站点，大多都是分享生活。有博主回访的时候留言要求更新一些生活日志，那今天就穿越写上一篇，不要吝啬您的脚印，请在评论区里狠狠的踩！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="萌宠" scheme="https://dusays.com/tags/%E8%90%8C%E5%AE%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说命令：ip -s link 输出内容的注解</title>
+    <link href="https://dusays.com/381/"/>
+    <id>https://dusays.com/381/</id>
+    <published>2021-09-09T16:00:00.000Z</published>
+    <updated>2021-08-19T09:08:32.809Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>ip 命令用来显示或操纵 Linux 主机的路由、网络设备、策略路由和隧道等，是 Linux 下比较新且功能强大的网络配置工具。下面对 <code>ip -s link</code> 输出的内容进行简单的注解。</p></blockquote><span id="more"></span><h3 id="命令截图"><a href="#命令截图" class="headerlink" title="命令截图"></a>命令截图</h3><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/381-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/381-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/381-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><h3 id="参数含义"><a href="#参数含义" class="headerlink" title="参数含义"></a>参数含义</h3><table><thead><tr><th>参数</th><th>含义</th></tr></thead><tbody><tr><td>lo</td><td>网卡名称</td></tr><tr><td>LOOPBACK</td><td>环回地址</td></tr><tr><td>UP</td><td>启用状态</td></tr><tr><td>LOWER_UP</td><td>物理网卡处于启动状态</td></tr><tr><td>BROADCAST</td><td>开启广播功能</td></tr><tr><td>MULTICAST</td><td>开启多播功能</td></tr><tr><td>mtu 65535</td><td>MTU 值</td></tr><tr><td>qdisc</td><td>传输队列规则</td></tr><tr><td>noqueue</td><td>没有规则限制</td></tr><tr><td>fq_codel</td><td>流量队列控制延迟</td></tr><tr><td>state</td><td>状态</td></tr><tr><td>UNKNOWN</td><td>未知</td></tr><tr><td>mode DEFAULT group default qlen 1000</td><td>默认模式</td></tr><tr><td>link/loopback</td><td>网卡类型</td></tr><tr><td>00:00:00:00:00:00</td><td>物理地址</td></tr><tr><td>brd</td><td>广播地址</td></tr><tr><td>RX: bytes</td><td>收到的数据量</td></tr><tr><td>packets</td><td>通信的数据包</td></tr><tr><td>errors</td><td>错误的数据包</td></tr><tr><td>dropped</td><td>表示数据包已经进入 Ring Buffer，但由于内存不够等系统原因，导致在拷贝到内存过程中被丢弃。</td></tr><tr><td>overrun</td><td>指被物理网卡丢弃</td></tr><tr><td>mcast</td><td>多播包的数量</td></tr><tr><td>TX: bytes</td><td>发送的数据量</td></tr><tr><td>carrier</td><td>由于 carrier 错误而丢弃的数据包数量</td></tr><tr><td>collsns</td><td>冲突信息包的数目</td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;ip 命令用来显示或操纵 Linux 主机的路由、网络设备、策略路由和隧道等，是 Linux 下比较新且功能强大的网络配置工具。下面对 &lt;code&gt;ip -s link&lt;/code&gt; 输出的内容进行简单的注解。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="命令" scheme="https://dusays.com/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说升级：Ubuntu 设置指定软件不参与升级</title>
+    <link href="https://dusays.com/380/"/>
+    <id>https://dusays.com/380/</id>
+    <published>2021-09-06T16:00:00.000Z</published>
+    <updated>2021-08-19T03:38:05.828Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>与 CentOS 的 yum -y update APPNAME 不同，Ubuntu 在使用 apt -y dist-upgrade 更新时无法指定软件，会更新所有已安装程序，今天杜老师说下如何设置指定软件不参与升级。</p></blockquote><span id="more"></span><h2 id="查询软件状态"><a href="#查询软件状态" class="headerlink" title="查询软件状态"></a>查询软件状态</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@penn-VMware-Virtual-Platform:~&#x2F;桌面$ sudo dpkg --get-selections...zenity-commoninstallzhaoxin-linux-graphics-driver-dri:amd64installzipinstallzlib1g:amd64installzlib1g-dev:amd64installpenn@penn-VMware-Virtual-Platform:~&#x2F;桌面$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：使用 <code>sudo dpkg --get-selections</code> 可查询所有软件状态，输出数据会比较多，建议用 more 命令分屏显示。其中左侧为软件名，右侧为软件的状态。install 为升级，hold 为锁定「即不升级」</p></div><h2 id="修改软件状态"><a href="#修改软件状态" class="headerlink" title="修改软件状态"></a>修改软件状态</h2><div class="story post-story"><p>如果需要锁定软件，可执行 <code>sudo echo APPNAME hold | sudo dpkg --set-selections</code>，其中 APPNAME 为软件名称，修改后可以通过命令 <code>sudo dpkg --get-selections | grep hold</code> 查询是否生效。下面以 zip 作为演示：</p><pre class="line-numbers language-none"><code class="language-none">penn@penn-VMware-Virtual-Platform:~&#x2F;桌面$ sudo dpkg --get-selections | grep holdpenn@penn-VMware-Virtual-Platform:~&#x2F;桌面$ sudo echo zip hold | sudo dpkg --set-selectionspenn@penn-VMware-Virtual-Platform:~&#x2F;桌面$ sudo dpkg --get-selections | grep holdzipholdpenn@penn-VMware-Virtual-Platform:~&#x2F;桌面$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如需恢复软件状态，可执行 <code>sudo echo APPNAME install | sudo dpkg --set-selections</code>：</p><pre class="line-numbers language-none"><code class="language-none">penn@penn-VMware-Virtual-Platform:~&#x2F;桌面$ sudo dpkg --get-selections | grep holdzipholdpenn@penn-VMware-Virtual-Platform:~&#x2F;桌面$ sudo echo zip install | sudo dpkg --set-selectionspenn@penn-VMware-Virtual-Platform:~&#x2F;桌面$ sudo dpkg --get-selections | grep holdpenn@penn-VMware-Virtual-Platform:~&#x2F;桌面$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;与 CentOS 的 yum -y update APPNAME 不同，Ubuntu 在使用 apt -y dist-upgrade 更新时无法指定软件，会更新所有已安装程序，今天杜老师说下如何设置指定软件不参与升级。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="升级" scheme="https://dusays.com/tags/%E5%8D%87%E7%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说图床：给公益图床提供者的一些小建议</title>
+    <link href="https://dusays.com/379/"/>
+    <id>https://dusays.com/379/</id>
+    <published>2021-09-03T16:00:00.000Z</published>
+    <updated>2021-08-19T04:04:31.101Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近发现一些小伙伴开始搭建起公益图床。去不图床已经运营近两年了，期间经历过很多事，也给杜老师提供了很多运营经验，在这里同小伙伴们分享一下，让公益更长久！</p></blockquote><span id="more"></span><h2 id="隐藏地址"><a href="#隐藏地址" class="headerlink" title="隐藏地址"></a>隐藏地址</h2><div class="story post-story"><p>总有些人对公益有一些误解，认为公益可能是好心的，但办的不一定就是好事。所以有些人发现公益图床后，可能会进行一些破坏性操作，比如直接攻击图床的服务器。</p><p>建议运营图床的小伙伴，尽可能在图床所在服务器前添加 CDN 等服务，隐藏服务器的真实地址，防止恶意用户攻击。</p><p>因去不图床的域名没有备案，且考虑到流量成本，所以杜老师选择了 CloudFlare 作为前置 CDN。</p><p>部分图床程序开启 CDN 后可能无法正常运行，可以开启 Cloudflare 的开发模式，这样请求端可与服务端直接通信，不再通过 CDN 的缓存，保障服务同时又隐藏了服务器的真实地址。</p></div><h2 id="异地存储"><a href="#异地存储" class="headerlink" title="异地存储"></a>异地存储</h2><div class="story post-story"><p>建议异地存储主要是有两个原因。一是如果选择本地存储，随着存储图片量的增大，存储成本也会随之增大，后期升级及转移都非常麻烦。</p><p>二是相比图床源码所在的服务器，存储服务器的运行维护更少，也更不容易出问题。所以当图床服务器出问题时，存储服务器还可以持续提供服务，仅会影响上传，但不影响调用已上传的图片。</p><p>经过多个云服务商的对比后，杜老师最终选择又拍云存储及 CDN，对比条件非常简单，在可正常提供服务的情况下，费用最低。</p><p>有些小伙伴可能会提到云存储及 CDN 的性能，对于存储来说无非就是上传数据，而调用数据时，则是 CDN 在发挥作用。对于静态图片文件来说，对这些的要求都非常小。</p></div><h2 id="图片审核"><a href="#图片审核" class="headerlink" title="图片审核"></a>图片审核</h2><div class="story post-story"><p>不管服务器在国内还是国外，只要通过大陆网络访问，就必然要合法合规。</p><p>我们无法把控用户上传哪些图片，但是我们可以把控图片的合法合规性。人为审核也好，通过 API 调动云服务进行审核也罢，总之要保障上传图片的合法合规。</p><p>如果资金充足，可以使用云服务商提供图片审核服务，比如腾讯云 COS 配合数据万象，当出现违规图片时，数据万象会自动将 COS 中的图片设置成禁止访问的权限。</p><p>如果资金不足，可以使用免费的 API，国内国外有很多免费的图片审核网站，可以提供一定免费额度。当然，随着上传量的增大，转为收费是不可避免的。</p></div><h2 id="不要放弃"><a href="#不要放弃" class="headerlink" title="不要放弃"></a>不要放弃</h2><div class="story post-story"><p>随着图片数量增多，外链图片访问量的增大，存储成本、流量成本也会越来越大，很多小伙伴都是因为承受不住而选择放弃。</p><p>在这里建议这些小伙伴，要么不做，要做就请坚持，毕竟用户上传的图片可能此刻正在网络的一个小角落被调用，一个放弃很有可能导致用户整站无法正常访问，且无法再找回图片数据。</p><p>搭建好图床后，除了宣传之外，还有两件事需要做。</p><p>第一件事就是平衡成本。公益不代表零成本，图床程序所在的服务器、保留图片数据的云存储、用于加速访问的 CDN，这都是不小的花销，如果只有出项没有进项，那么图床必然无法坚持下去。</p><p>有的小伙伴会说不是公益图床吗？为什么还收费？首先可以拆成两个部分，比如免费功能、收费服务。其次可以考虑赞助，相信会有很多小伙伴都不希望一个优秀的图床宣告停用。</p><p>另一件则为无限优化以降低成本。随着用户量的增加，访问量和数据量会随之增加，当达到一个临界点，图床运行相关环境也不得不升级。而我们要做的，就是尽可能的优化这个运行环境，使其可以服务更多用户，减少升级成本，毕竟减少成本就是变相增加图床寿命！</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近发现一些小伙伴开始搭建起公益图床。去不图床已经运营近两年了，期间经历过很多事，也给杜老师提供了很多运营经验，在这里同小伙伴们分享一下，让公益更长久！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说侵权：收到阿里云知识产权投诉通知的邮件</title>
+    <link href="https://dusays.com/378/"/>
+    <id>https://dusays.com/378/</id>
+    <published>2021-08-31T16:00:00.000Z</published>
+    <updated>2021-08-13T08:30:10.858Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>作为阿里云的用户经常会收到阿里发来的邮件，一般都是产品推荐之类，今天这封邮件吓杜老师一跳，没想到有生之年也会遇到这种事，小伙伴们遇到过这种情况吗？</p></blockquote><span id="more"></span><h2 id="邮件截图"><a href="#邮件截图" class="headerlink" title="邮件截图"></a>邮件截图</h2><div class="story post-story"><p>点击图片可以放大查看：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/378-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/378-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/378-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><div class="timeline"><p class='p h2'>后续处理</p><div class="timenode"><div class="meta"><p><p>2021 年 08 月 05 日</p></p></div><div class="body"><p>杜老师已于第一时间下架了所有相关链接，同时给版权方回复邮件并抄送阿里云，目前尚未收到版权方及阿里云方任何回复。</p></div></div><div class="timenode"><div class="meta"><p><p>2021 年 08 月 06 日</p></p></div><div class="body"><p>如有后续事件，杜老师也会同步更新至本文。</p></div></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;作为阿里云的用户经常会收到阿里发来的邮件，一般都是产品推荐之类，今天这封邮件吓杜老师一跳，没想到有生之年也会遇到这种事，小伙伴们遇到过这种情况吗？&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="侵权" scheme="https://dusays.com/tags/%E4%BE%B5%E6%9D%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说软件：轻启动 APP 测评</title>
+    <link href="https://dusays.com/377/"/>
+    <id>https://dusays.com/377/</id>
+    <published>2021-08-28T16:00:00.000Z</published>
+    <updated>2021-08-13T08:30:10.858Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>很多 APP 启动时都会出现启动广告，会拖慢 APP 启动速度、增加手机的耗电量，如果不小心点错了，还会唤起其它的 APP，十分令人反感。今天杜老师为加大推荐一款安卓软件。</p></blockquote><span id="more"></span><h2 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h2><div class="story post-story"><p>软件运行截图如下，我们可以看到加速次数、运行状态：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/377-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/377-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/377-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="软件特点"><a href="#软件特点" class="headerlink" title="软件特点"></a>软件特点</h2><div class="story post-story"><p>可以帮忙自动跳过启动广告，大幅提升 APP 的启动速度，节省电量，且无需 root 手机。</p><p>不仅如此，如果使用完整版本「可以通过购买或者抽奖获得」还可享受更多功能，比如微信/QQ 自动登录等。</p><p>如果使用安卓手机，建议体验一下。</p><p>另外如果是小米系手机，还可以打开 MIUI 增强功能「该功能是完整版提供的」</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;很多 APP 启动时都会出现启动广告，会拖慢 APP 启动速度、增加手机的耗电量，如果不小心点错了，还会唤起其它的 APP，十分令人反感。今天杜老师为加大推荐一款安卓软件。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="软件" scheme="https://dusays.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说除湿：松井除湿机 SJ-121E 测评</title>
+    <link href="https://dusays.com/376/"/>
+    <id>https://dusays.com/376/</id>
+    <published>2021-08-25T16:00:00.000Z</published>
+    <updated>2021-08-13T08:30:10.858Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>杜老师目前住一楼，夏天的梅雨季，屋子就会返潮厉害，如果不及时的处理，不少物品都会发霉。所以买了台除湿机，用了几天，和大家分享下使用体验！</p></blockquote><span id="more"></span><h2 id="产品样貌"><a href="#产品样貌" class="headerlink" title="产品样貌"></a>产品样貌</h2><div class="story post-story"><p>客厅光线不是很好，而且周围杂物太多，所以就从产品宣传也找了张图片，实际的效果差不多，如下：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/376-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/376-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/376-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><div class="story post-story"><p>除湿机有很多种类，目前家用级别分为两种：一是冷凝型的，通过半导体来制冷，潮湿空气经过冷凝板后会凝结成水滴后流入储水槽，进而实现除湿效果；另一种是压缩机型，使潮湿空气压缩成水滴，实现除湿效果。</p><p>杜老师买的是后者，原因有二：一是相比半导体型，压缩机型的除湿量更大。大多家用型半导体能实现 4L/天除湿量，而压缩型能实现 12L 左右；二是半导体型会影响空气的温度，冬天使用效果欠佳，且会使屋子的温度更低。</p><p>除湿机买来后建议静置 2 小时后再用，这样可以使搬运过程中分散的冷却液流回压缩机中。这款机型赠送一个水管，可以外接排水使用，建议不要依靠水箱蓄水，毕竟全功率下储满一箱水很快的。顺便说下个人感觉附带水箱容量不是很大，开始未外接排水时，几乎 2 个小时水箱就储满了。</p><p>不过有件事需要说清楚，不是外接排水就没事了，还会有水流入储水箱中，这点在介绍和说明中都没有提到，不知道是设计缺陷，还是其它原因，这就导致在无人干预下，它无法实现 24 小时连续除湿。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;杜老师目前住一楼，夏天的梅雨季，屋子就会返潮厉害，如果不及时的处理，不少物品都会发霉。所以买了台除湿机，用了几天，和大家分享下使用体验！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="除湿" scheme="https://dusays.com/tags/%E9%99%A4%E6%B9%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说仲裁：杜老师经历过的劳动仲裁记录篇</title>
+    <link href="https://dusays.com/375/"/>
+    <id>https://dusays.com/375/</id>
+    <published>2021-08-22T16:00:00.000Z</published>
+    <updated>2021-08-05T06:25:40.428Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>平生第一次和法院打交道竟然是因为讨薪，相信有些小伙伴也遇到和杜老师差不多的情况。为了避免第一次接触仲裁的小伙伴们束手无策，杜老师决定分享这次劳动仲裁的经历！</p></blockquote><span id="more"></span><h2 id="事件起源"><a href="#事件起源" class="headerlink" title="事件起源"></a>事件起源</h2><div class="story post-story"><p>去年「2020年」 8 月份左右，杜老师入职了一家初创型的外包公司，至于选择这家公司的原因就不提及了。在职期间该公司因各种原因未能按时发薪，作为一个曾创业者杜老师能理解，毕竟是甲方将费用结给公司，公司再发给下面的员工。每个甲方的结算周期和结算凭证不同，所以就导致了该公司的资金链出现了问题，最终导致该公司拖欠众员工几个月的薪资。</p><p>在公司明确无法继续运行下，安排了集体性离职，并与每位员工签署了薪资承诺书，承诺会在指定日期发放。然而到了指定日期并未发放，且拖欠的薪资前后跨度超过半年，所以杜老师同其他小伙伴商量后决定劳动仲裁。</p></div><h2 id="准备素材"><a href="#准备素材" class="headerlink" title="准备素材"></a>准备素材</h2><div class="story post-story"><p>劳动仲裁也有很多情况，有些是公司不愿支付员工的薪资，一种是想支付，但确实没有钱。杜老师的情况属于后者，所以情况就要简单多了。</p><p>首先去公司管辖区的劳动仲裁委员会，可以选择三者中的一个：总公司所在地的劳动仲裁委员会，分公司所在地的劳动仲裁委员会，派遣公司所在地劳动仲裁委员会。</p><p>进入劳动仲裁委员会大厅后取号等候，待叫到号后前往窗口说明要劳动仲裁，工作人员会提供一些表要求填写，拿着表到一旁填写即可。</p><p>表中包含示例，按照示例格式填写相关表格，其中证据素材需要自行准备，比如说银行的流水、报销发票等等。</p><p>填写好表单后不要提交，先去复印三份。按份数分类整理后，提交给窗口的工作人员，工作人员会反馈一个确认单，回去等通知就行了。</p><p>最后说下需提前准备的东西：身份证及复印、相关证据、劳动关系证明，最好带一支笔。</p></div><h2 id="仲裁调解"><a href="#仲裁调解" class="headerlink" title="仲裁调解"></a>仲裁调解</h2><div class="story post-story"><p>一般不需要等太久就会收到仲裁委员会的电话，先要经过调解，看是否能达成一致。如果结果双方认可即可按照调解书的内容执行，如不认可，就要开庭审理。</p><p>带好身份证在指定时间前往仲裁委员会调解厅，调解员会先宣布调解前声明，然后双方开始阐述情况「个人感觉就是聊天」</p><p>调解员会在沟通中获取一些信息，并在确认后录入调解记录中，最后双方确认即可。</p><p>在这里需要说一下，因为当时公司方负责人与我私下关系良好，所以场面氛围十分融洽，公司方不断打感情牌希望杜老师放弃赔偿「赔偿信息会在最后说明」</p><p>在调节中有几点需要明确下：所欠薪资总额、支付时间、支付次数「就是分几笔给」</p><p>最后调解员会汇总生成调解书等，一共四页，需要签字，一定要保存好原版。</p></div><h2 id="等待结果"><a href="#等待结果" class="headerlink" title="等待结果"></a>等待结果</h2><div class="story post-story"><p>在调解中会沟通欠薪支付的时间，而在此之前就是漫长的等待。期间无需沟通，因为这笔钱已经打上了法律烙印，对方不能不支付的。</p><p>如未按期支付只有两种情况：确实没钱、恶意拒绝支付「有钱但也不给」</p><p>不管是哪一种直接到公司所在地管辖的人们法院去申请强制执行。</p><p>这里补充一下，有人说仲裁委员会所在区的人民法院也能受理，这个杜老师没有去尝试，如果有小伙伴遇到这种情况，可以去问一下。</p><div class="timeline"><p class='p h2'>法院执行</p><div class="timenode"><div class="meta"><p><p>2021 年 08 月 04 日</p></p></div><div class="body"><p>携带身份证和调解书复印件「一份即可」前往人民法院。根据窗口工作人员要求填写表单，然后移交至下一个窗口，待确认后回去等通知就行了；</p></div></div><div class="timenode"><div class="meta"><p><p>2021 年 08 月 05 日</p></p></div><div class="body"><p>截止到此文的发布时间，杜老师的劳动仲裁经历还未结束，后面事项还会继续更新。</p></div></div></div></div><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><div class="story post-story"><p>对于本次仲裁，杜老师最要提及的就是补偿问题。小伙伴们在离职时，往往会中了企业的套路，比如杜老师遇到的就是集体离职，公司说帮忙谈好了下家，要求立即签署离职协议，没有提到任何补偿。而实际上，一家公司同时辞退多名员工，这种情况叫做遣散，是要给予一定经济补偿，6个月以上的要补偿一个月薪资。</p><p>如果不确定要多少补偿，或者索要补偿怕公司会拒绝，可以在调解前，询问仲裁委员会调解员，以此确保索要补偿的合法合理性。最后一定要坚定住底线，合理合法的要求都会被支持，不要因为对方态度、语气等放弃一些理应获取的权益。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;平生第一次和法院打交道竟然是因为讨薪，相信有些小伙伴也遇到和杜老师差不多的情况。为了避免第一次接触仲裁的小伙伴们束手无策，杜老师决定分享这次劳动仲裁的经历！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="求职面试" scheme="https://dusays.com/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="仲裁" scheme="https://dusays.com/tags/%E4%BB%B2%E8%A3%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说博客：Blogger 选程序的那些事</title>
+    <link href="https://dusays.com/374/"/>
+    <id>https://dusays.com/374/</id>
+    <published>2021-08-19T16:00:00.000Z</published>
+    <updated>2021-08-05T10:42:01.984Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>杜老师之前就是一枚 WPer，后来因为 WordPress 太过于臃肿，不想再折腾了，所以选择了 Hexo。不过最近又遇到了新的问题……</p></blockquote><span id="more"></span><h2 id="WordPress-的优缺"><a href="#WordPress-的优缺" class="headerlink" title="WordPress 的优缺"></a>WordPress 的优缺</h2><div class="story post-story"><p>WordPress 的优点可真不少，首先使用人群基数较大。据不完全统计，十个网站就有三个是 WordPress 创建，而且还不都是博客。这也带出其第二个优点，拓展性强，几乎我们所需要的功能，都可以通过插件来实现，甚至某些大牛，可以直接上手修改代码。因为人群基数关系，也有不少前端工程师们为其开发模板，所以我们可以很容易在 WordPress 平台中，找到心仪模板。</p><p>再说一个优点，也是因为人群基数大的关系，技术支持丰富，随便找个博客圈里问问，都能解决当下问题，省时省力。</p><p>夸赞完了该说说缺点了。第一个缺点是臃肿，为了让其更具备扩展性，程序作者为其加入不少函数，很多都是普通用户不需要的，所以代码十分臃肿。接下来是效率，WordPress 不仅耗费服务器资源，而且执行效率低下，作为一个依赖 MySQL 数据存储的程序，竟然不做 SQL 的优化，在服务器上经常可以看到关于 WordPress 的慢查询语句，而且偷偷的说，MySQL 的临时缓存加速对其无效，别问我为什么。</p><p>最后一个就是用出问题。你本想安静的这篇文章，却经常因为程序或插件，亦或者是模板升级带来一些问题，轻则无法正常使用，重则数据丢失，你的时间都浪费在处理这些问题上了。导致杜老师放弃 WordPress 最主要的原因是它的量级比较重，700 篇博客竟然需要 4H8G 的配置才能带动，也可能是杜老师没优化好的关系。</p></div><h2 id="Hexo-的优缺"><a href="#Hexo-的优缺" class="headerlink" title="Hexo 的优缺"></a>Hexo 的优缺</h2><div class="story post-story"><p>轻量部署、成本很低、定制性强、安全性高。</p><p>轻量部署，Hexo 并不需要复杂的网站运行环境，只需要支持 Node.js 即可，几条命令就可实现 Hexo 的安装使用。</p><p>成本很低，如果只是为了记录，对服务端的要求并不高，可以选择免费网站托管平台。如想自建托管平台，也不需要太高的服务器配置，入门级云主机配置即可实现超强并发。</p><p>定制性强，Hexo 外观及功能实现，大多都依赖于模板，而模板的使用及修改都非常简单，并不像 WordPress 那样需要掌握 PHP 语言才可以。</p><p>安全性高，生成的页面为 HTML 的格式，没有动态文件产生，不会出现 SQL 语句注入等安全问题。</p><p>功能有限、模板有限、容易出错、需要扩展。</p><p>功能有限，既然是 HTML，没有数据库的支持，功能方面必然有限。</p><p>模板有限，相比较 WordPress，Hexo 的模板不是很多，而且大多都是个人作者，不像 WordPress 有企业级模板作者。</p><p>容易出错，Hexo 本身还好些，不过其依赖的 Node.js 可能会报错，而且某些报错比较神奇，同样的环境有人没问题，有人就会报错。</p><p>需要扩展，很多功能都依赖第三方服务，如评论等。</p></div><h2 id="目前状况"><a href="#目前状况" class="headerlink" title="目前状况"></a>目前状况</h2><div class="story post-story"><p>上述缺点还是比较好的，毕竟玩博客这么久，早已没有折腾的心，就想安静的写个文。且目前 Hexo 具备的功能可以满足杜老师需求，所以对 Hexo 来说还是比较满意。</p><p>只是随着文章数量增多，生成页面时间越来越长，其中优化过很多次「升级版本、修改参数」均未能提高其效率，所以想换一个程序。</p></div><h2 id="我的需求"><a href="#我的需求" class="headerlink" title="我的需求"></a>我的需求</h2><div class="story post-story"><p>希望这款程序可以将.md 文件直接转换博客文章，毕竟.md 的备份修改都很方便。可以的话，最好是拥有自身的评论系统，依赖第三方整合性较差，且 Hexo 目前支持的第三方评论工具，大多都需要将数据存于其它位置，这种动态数据不管备份还是管理起来都很麻烦，数据放在自己手里才更放心。</p><p>之前有小伙伴推荐过 Ghost 以及 Hugo 等，但测试的效果不尽人意，期待有天能遇到心仪的博客程序，也欢迎大家的推荐！</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;杜老师之前就是一枚 WPer，后来因为 WordPress 太过于臃肿，不想再折腾了，所以选择了 Hexo。不过最近又遇到了新的问题……&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说游戏：我的世界 PCL 启动器 1.17 整合版资源分享「推荐」</title>
+    <link href="https://dusays.com/373/"/>
+    <id>https://dusays.com/373/</id>
+    <published>2021-08-16T16:00:00.000Z</published>
+    <updated>2021-08-19T04:04:31.101Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 PCL 启动器的下载资源，杜老师用的就是该整合版本，推荐小伙伴们下载使用。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>PCL 启动器下载地址：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/e5f4eda845eb43' title='下载地址'>下载地址</a></span></div><h2 id="运行界面"><a href="#运行界面" class="headerlink" title="运行界面"></a>运行界面</h2><div class="story post-story"><p>刚打开时需设置用户名，然后启动游戏即可，如遇任何问题，欢迎在评论区留言：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/373-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/373-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/373-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 PCL 启动器的下载资源，杜老师用的就是该整合版本，推荐小伙伴们下载使用。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说游戏：我的世界 Mac 启动器 1.17 整合版资源分享</title>
+    <link href="https://dusays.com/372/"/>
+    <id>https://dusays.com/372/</id>
+    <published>2021-08-13T16:00:00.000Z</published>
+    <updated>2021-08-13T08:30:10.858Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 Mac 启动器的下载资源，使用苹果电脑的小伙伴快进来看看吧。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>Mac 启动器下载地址：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/f7dc26b424e84f' title='下载地址'>下载地址</a></span></div><h2 id="运行界面"><a href="#运行界面" class="headerlink" title="运行界面"></a>运行界面</h2><div class="story post-story"><p>刚打开时需设置用户名，然后启动游戏即可，如遇任何问题，欢迎在评论区留言：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/372-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/372-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/372-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 Mac 启动器的下载资源，使用苹果电脑的小伙伴快进来看看吧。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说游戏：我的世界 HMCL 启动器 1.17 整合版资源分享</title>
+    <link href="https://dusays.com/371/"/>
+    <id>https://dusays.com/371/</id>
+    <published>2021-08-10T16:00:00.000Z</published>
+    <updated>2021-08-13T08:30:10.858Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 HMCL 启动器的下载资源，有需要的小伙伴快进来看看。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>HMCL 启动器下载地址：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/1920ff8c02334e' title='下载地址'>下载地址</a></span></div><h2 id="运行界面"><a href="#运行界面" class="headerlink" title="运行界面"></a>运行界面</h2><div class="story post-story"><p>下图为游戏的运行界面，可看到在左上角添加了运行信息，右上角多了小地图，右下角有装备耐久：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/371-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/371-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/371-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 HMCL 启动器的下载资源，有需要的小伙伴快进来看看。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说游戏：我的世界 1.17 版资源分享</title>
+    <link href="https://dusays.com/370/"/>
+    <id>https://dusays.com/370/</id>
+    <published>2021-08-07T16:00:00.000Z</published>
+    <updated>2021-08-13T08:30:10.858Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>自从服务器发布后，有不少小伙伴想一起玩，但在网络上找不到合适的启动器，在此分享一个 1.17 版本懒人启动器，按照文中说明，即可正常游戏。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>1.17 版本懒人启动器下载地址，纯净无插件以及 MOD：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/fd6c23239bbc46' title='下载地址'>下载地址</a></span></div><h2 id="启动设置"><a href="#启动设置" class="headerlink" title="启动设置"></a>启动设置</h2><div class="story post-story"><p>打开启动器后，先进入左侧的游戏设置，设置 Java 所在的路径。建议设置成压缩包中自带的，路径参考下图：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>然后选择游戏版本，懒人版中仅提供了 1.17 版，如果需要其它版本，可在评论区中留言：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>修改游戏昵称，然后启动游戏即可「如果进行线上游戏，一定要改名称，因为服务端是通过 ID 来判断用户身份」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h2><div class="story post-story"><p>游戏默认是英文的界面，点 Options 进行调整：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在第二个界面选 Language：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>下拉列表，在最下端可以看到简体中文，选择并点击 Done 即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="加入线上"><a href="#加入线上" class="headerlink" title="加入线上"></a>加入线上</h2><div class="story post-story"><p>如果想和杜老师及小伙伴们一同游戏，可以加入杜老师说的服务器。在首界面点击多人游戏：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-7.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-7.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-7.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>首次进入多人游戏会有提示，这个无视即可，感觉麻烦可以勾选不再提示：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-8.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-8.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-8.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在右下方会看到添加服务器：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-9.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-9.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-9.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>首次连接可能会有防火墙的警告，直接允许即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-10.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-10.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-10.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在服务器地址输入连接地址，如 <code>mc.dusays.com:26295</code>：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-11.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-11.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-11.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>然后可在界面中看到杜老师的服务器状态，点击服务器名称前的箭头即可加入游戏中：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-12.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-12.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-12.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;自从服务器发布后，有不少小伙伴想一起玩，但在网络上找不到合适的启动器，在此分享一个 1.17 版本懒人启动器，按照文中说明，即可正常游戏。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+</feed>
