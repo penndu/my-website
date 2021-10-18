@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2021-10-07T08:37:12.696Z</updated>
+  <updated>2021-10-18T17:21:08.050Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说网站：修改 GitLab 默认地址及端口</title>
+    <link href="https://dusays.com/395/"/>
+    <id>https://dusays.com/395/</id>
+    <published>2021-10-21T16:00:00.000Z</published>
+    <updated>2021-10-18T17:21:08.050Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>为了方便更新文章，杜老师使用 Docker 搭建 GitLab 做文章管理，后期迁移到群晖上，并做了外网的映射。迁移后需要修改 GitLab 的域名及端口，那么就分享下修改方法。 </p></blockquote><span id="more"></span><h2 id="地址修改"><a href="#地址修改" class="headerlink" title="地址修改"></a>地址修改</h2><div class="story post-story"><p>查询绑定地址或 IP 的命令为：</p><pre class="line-numbers language-none"><code class="language-none">grep ^external_url &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如需修改绑定地址，则编辑文件/etc/gitlab/gitlab.rb：</p><pre class="line-numbers language-none"><code class="language-none">external_url http:&#x2F;&#x2F;gitlab.dusays.com;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><h2 id="端口修改"><a href="#端口修改" class="headerlink" title="端口修改"></a>端口修改</h2><div class="story post-story"><p>如需修改修改端口，则编辑文件/etc/gitlab/gitlab.rb：</p><pre class="line-numbers language-none"><code class="language-none">nginx[&#39;listen_port&#39;] &#x3D; 8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>记得取消注释。最后提醒任何配置修改完后，需要重跑一下配置：</p><pre class="line-numbers language-none"><code class="language-none">gitlab-ctl reconfigure<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;为了方便更新文章，杜老师使用 Docker 搭建 GitLab 做文章管理，后期迁移到群晖上，并做了外网的映射。迁移后需要修改 GitLab 的域名及端口，那么就分享下修改方法。 &lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="网站" scheme="https://dusays.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说网站：如何将 Hexo 部署到 OSS</title>
+    <link href="https://dusays.com/394/"/>
+    <id>https://dusays.com/394/</id>
+    <published>2021-10-18T16:00:00.000Z</published>
+    <updated>2021-10-18T17:21:08.050Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>鉴于最近 GitHub 从中国大陆访问网速较慢，而且现在国内阿里云 OSS 支持将静态网站部署在上面，而且访问速度尚可。今天杜老师为大家介绍一款插件，可以将 Hexo 部署到 OSS。</p></blockquote><span id="more"></span><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><div class="story post-story"><p>已搭建 Hexo 博客，如果还未搭建，可以参考《<a href="https://dusays.com/361/">杜老师说部署：杜老师说同款博客搭建</a>》一文。同时需拥有阿里云账号，注意部署静态网站需要实名认证，且域名需备案：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">npm i -S hexo-deployer-oss-aliyun<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：在 Hexo 博客目录下执行上面的命令。</p></div><h2 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">deploy:  type: aliyunoss  region: Endpoint  bucket: Bucket  accessKeyId: AccessKey ID  accessKeySecret: AccessKey Secret<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：在 Hexo 配置文件 _config.yml 中添加上面配置，并按实际情况修改，如有任何问题，可在评论区中留言。</p></div><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><div class="story post-story"><p>改好之后记得保存，保存好之后执行 <code>hexo d</code>，一般没问题的话就可以将 Hexo 生成的静态文件上传到 OSS 中。默认将文件上传到阿里云 OSS Bucket 根目录下，如需要部署到其它目录，在 deploy 下添加 remotePath 选项进行指定。</p><p>另外在创建阿里云 OSS Bucket 时，应将存储权限设置为公共读。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;鉴于最近 GitHub 从中国大陆访问网速较慢，而且现在国内阿里云 OSS 支持将静态网站部署在上面，而且访问速度尚可。今天杜老师为大家介绍一款插件，可以将 Hexo 部署到 OSS。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="网站" scheme="https://dusays.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说部署：修改 gitlab-runner 的执行用户</title>
+    <link href="https://dusays.com/393/"/>
+    <id>https://dusays.com/393/</id>
+    <published>2021-10-15T16:00:00.000Z</published>
+    <updated>2021-10-18T17:21:08.050Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>安装 gitlab-runner 构建机默认会将用户设置为 gitlab-runner，该设置会导致.gitlab-ci.yml 脚本运行时出现一些权限问题。为了解决这些权限问题，杜老师将 gitlab-runner 构建机上的默认用户设置为 root。</p></blockquote><span id="more"></span><h2 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h2><div class="story post-story"><p>这种方式虽然简单粗暴，当然也会带来一些弊端，比如：通过.gitlab-ci.yml 脚本进行文件操作要格外小心。</p><p>另外要做好服务端安全设置，确保不要被恶意用户获取到操作权限。</p></div><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><div class="story post-story"><p>通过下面命令可以查看到 gitlab-runner 的工作目录和默认用户等一系列相关信息：</p><pre class="line-numbers language-none"><code class="language-none">ps aux | grep gitlab-runner<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>通过下面命令可以卸载掉 gitlab-runner 默认用户：</p><pre class="line-numbers language-none"><code class="language-none">gitlab-runner uninstall<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>通过下面命令将 gitlab-runner 运行用户设置为 root：</p><pre class="line-numbers language-none"><code class="language-none">gitlab-runner install --user root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>最后重启 gitlab-runner 就行了：</p><pre class="line-numbers language-none"><code class="language-none">systemctl restart gitlab-runner<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;安装 gitlab-runner 构建机默认会将用户设置为 gitlab-runner，该设置会导致.gitlab-ci.yml 脚本运行时出现一些权限问题。为了解决这些权限问题，杜老师将 gitlab-runner 构建机上的默认用户设置为 root。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="部署" scheme="https://dusays.com/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说网站：两种通过 Nginx 实现强制 HTTPS 访问方法</title>
@@ -36,6 +105,75 @@
     
     
     <category term="网站" scheme="https://dusays.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说解析：Ubuntu 的 DNS 不可用处理办法</title>
+    <link href="https://dusays.com/391/"/>
+    <id>https://dusays.com/391/</id>
+    <published>2021-10-09T16:00:00.000Z</published>
+    <updated>2021-10-18T17:21:08.050Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>受博友圈夏目同学所托，帮其新购置的云服务器搭建网站运行环境。几个 apt 的问题，想都没想就答应了，却未料到一开始就出现问题，Ubuntu 的 DNS 不可用，今天说下如何解决这个问题。</p></blockquote><span id="more"></span><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><div class="story post-story"><p>接手新系统后，习惯性第一时间更新软件源，却发现执行失败了。看返回的错误提示，判断应该是域名解析的问题：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# apt updateErr:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;Err:2 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security InRelease  Temporary failure resolving &#39;security.ubuntu.com&#39;Err:3 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic InRelease  Temporary failure resolving &#39;archive.canonical.com&#39;Err:4 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;Reading package lists... DoneBuilding dependency tree... DoneAll packages are up to date.W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic-updates&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;W: Failed to fetch http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic-security&#x2F;InRelease  Temporary failure resolving &#39;security.ubuntu.com&#39;W: Failed to fetch http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic&#x2F;InRelease  Temporary failure resolving &#39;archive.canonical.com&#39;W: Some index files failed to download. They have been ignored, or old ones used instead.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>测了一下网络的连通性，没有任何问题，可以与 DNS 服务器正常通信：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# ping 8.8.8.8PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.64 bytes from 8.8.8.8: icmp_seq&#x3D;1 ttl&#x3D;118 time&#x3D;1.53 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;2 ttl&#x3D;118 time&#x3D;1.52 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;3 ttl&#x3D;118 time&#x3D;1.56 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;4 ttl&#x3D;118 time&#x3D;1.57 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;5 ttl&#x3D;118 time&#x3D;1.55 ms^C--- 8.8.8.8 ping statistics ---5 packets transmitted, 5 received, 0% packet loss, time 4006msrtt min&#x2F;avg&#x2F;max&#x2F;mdev &#x3D; 1.522&#x2F;1.551&#x2F;1.575&#x2F;0.040 ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>又使用杜老师的博客域名做了下测试，果然又报错了，几乎可以确定是 DNS 问题：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# ping dusays.comping: dusays.com: Temporary failure in name resolution<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>查看一下通用 DNS 服务器配置文件，发现该文件已被 systemd-resolved 服务替代，看来需要激活 systemd-resolved 才可以：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# cat &#x2F;etc&#x2F;resolv.conf# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN# 127.0.0.53 is the systemd-resolved stub resolver.# run &quot;systemd-resolve --status&quot; to see details about the actual nameservers.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><div class="story post-story"><p>添一条设置项到/etc/systemd/resolved.conf「该主机在国外，如果是国内的主机，建议不要用8.8.8.8，以免因为网络不稳导致解析失败」默认该项会被注释，直接执行下面命令即可：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# echo &quot;DNS&#x3D;8.8.8.8&quot; &gt;&gt; &#x2F;etc&#x2F;systemd&#x2F;resolved.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>因修改了配置文件，需要重启服务，却发现提示该服务被锁：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl restart systemd-resolved.serviceFailed to restart unit: Unit file &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service is masked.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>使用下面命令即可解锁服务：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl unmask systemd-resolved.serviceRemoved &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>查看一下服务状态，目前该服务已经被解锁，并且服务没在运行，且未设置开机启动：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl status systemd-resolved● systemd-resolved.service - Network Name Resolution   Loaded: loaded (&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service; disabled; vendor preset: enabled)   Active: inactive (dead)     Docs: man:systemd-resolved.service(8)           https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;systemd&#x2F;resolved           https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;systemd&#x2F;writing-network-configuration-managers           https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;systemd&#x2F;writing-resolver-clients<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>使用下面命令启动服务：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl start systemd-resolved<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用下面命令设置开机启动：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl enable systemd-resolved.serviceCreated symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;dbus-org.freedesktop.resolve1.service → &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service.Created symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;multi-user.target.wants&#x2F;systemd-resolved.service → &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>再次通过杜老师说域名测试一下，发现解析没问题了：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# ping dusays.comPING dusays.com (76.76.21.21) 56(84) bytes of data.64 bytes from 76.76.21.21 (76.76.21.21): icmp_seq&#x3D;1 ttl&#x3D;120 time&#x3D;1.91 ms64 bytes from 76.76.21.21 (76.76.21.21): icmp_seq&#x3D;2 ttl&#x3D;120 time&#x3D;1.91 ms64 bytes from 76.76.21.21 (76.76.21.21): icmp_seq&#x3D;3 ttl&#x3D;120 time&#x3D;1.89 ms^C--- dusays.com ping statistics ---3 packets transmitted, 3 received, 0% packet loss, time 2002msrtt min&#x2F;avg&#x2F;max&#x2F;mdev &#x3D; 1.896&#x2F;1.907&#x2F;1.914&#x2F;0.007 ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>重新执行下软件源更新命令，执行成功，问题解决：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# apt updateGet:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic InRelease [242 kB]Get:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates InRelease [88.7 kB]                                                                 Get:3 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic InRelease [10.2 kB]                                                                Get:4 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security InRelease [88.7 kB]                                                         Get:5 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;main amd64 Packages [1019 kB]          Get:6 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;main Translation-en [516 kB]                     Get:7 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;restricted amd64 Packages [9184 B]         Get:8 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;restricted Translation-en [3584 B]    Get:9 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;universe amd64 Packages [8570 kB]           Get:10 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic&#x2F;partner amd64 Packages [1592 B]                        Get:11 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;universe Translation-en [4941 kB]                         Get:12 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic&#x2F;partner Translation-en [1004 B]                                 Get:13 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;main amd64 Packages [2237 kB]                                               Get:14 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;main amd64 Packages [1892 kB] Get:15 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;main Translation-en [436 kB]          Get:16 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;restricted amd64 Packages [483 kB]         Get:17 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;restricted Translation-en [65.6 kB] Get:18 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;universe amd64 Packages [1749 kB]           Get:19 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;universe Translation-en [375 kB]     Get:20 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;main Translation-en [344 kB]            Get:21 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;restricted amd64 Packages [459 kB]Get:22 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;restricted Translation-en [61.7 kB]Get:23 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;universe amd64 Packages [1138 kB]Get:24 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;universe Translation-en [259 kB]Get:25 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;multiverse amd64 Packages [20.9 kB]Get:26 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;multiverse Translation-en [4732 B]Fetched 25.0 MB in 5s (5376 kB&#x2F;s)                                Reading package lists... DoneBuilding dependency tree... Done15 packages can be upgraded. Run &#39;apt list --upgradable&#39; to see them.root@dusays:~# <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;受博友圈夏目同学所托，帮其新购置的云服务器搭建网站运行环境。几个 apt 的问题，想都没想就答应了，却未料到一开始就出现问题，Ubuntu 的 DNS 不可用，今天说下如何解决这个问题。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="解析" scheme="https://dusays.com/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说博客：通过 Webify 部署 Hexo</title>
+    <link href="https://dusays.com/390/"/>
+    <id>https://dusays.com/390/</id>
+    <published>2021-10-06T16:00:00.000Z</published>
+    <updated>2021-10-18T17:21:08.050Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Vercel 虽是免费的，但因为其服务器在国外，常会遇到访问不稳定的问题。最近良心云推出了个人站点扶持计划，不少已备案的小伙伴转到了国内托管，今天就分享下通过 Webify 部署 Hexo。</p></blockquote><span id="more"></span><h2 id="服务介绍"><a href="#服务介绍" class="headerlink" title="服务介绍"></a>服务介绍</h2><div class="story post-story"><p>CloudBase Webify 为您的 Web 应用提供一站式托管服务，支持包括态网静站、动态 Web 服务等各种类型的 Web 应用，提供默认域名、可自定义域名、安全证书、CDN 加速等，提升 Web 应用的性能和安全性，此外提供基于 Git 的工作流、自动部署流程、加速开发部署流程，提供极佳体验。</p><p>可将博客/论坛/官网等任意形式的个人站点部署到 Webify，即可以申请获得扶持代金券，即实现零成本网站托管。</p></div><h2 id="在线部署"><a href="#在线部署" class="headerlink" title="在线部署"></a>在线部署</h2><div class="story post-story"><p>进入良心云 Web 应用托管页面，点击页面中的新建应用：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在右侧从模板创建中找到 Hexo：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>选择源码托管平台，并设置托管仓库名，然后点下一步：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在框架预设中，选择 Hexo 项，然后点击部署应用：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>服务开始部署应用，待页面提示发布成功后，即可正常访问博客：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>服务会免费送一个访问地址，不过该支持较长不容易记忆，可以自行添加域名，且支持 SSL：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Vercel 虽是免费的，但因为其服务器在国外，常会遇到访问不稳定的问题。最近良心云推出了个人站点扶持计划，不少已备案的小伙伴转到了国内托管，今天就分享下通过 Webify 部署 Hexo。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说博客：通过 Vercel 部署 Hexo「主题」</title>
+    <link href="https://dusays.com/389/"/>
+    <id>https://dusays.com/389/</id>
+    <published>2021-10-03T16:00:00.000Z</published>
+    <updated>2021-10-18T17:21:08.050Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>如果不喜欢 Hexo 自带的默认主题，想换一个心仪的主题如何操作呢？今天就以杜老师用的这款 Volantis 作为演示，说一下如何更换 Hexo 主题。</p></blockquote><span id="more"></span><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><div class="story post-story"><p>通过前两篇的教程，大家应该发现除了发布文章时固定的文章格式代码外，并没有其它的命令。参考杜老师的教程，可以实现仅用鼠标点击，就能创建一个博客。</p><p>本文较之前的教程相比，需要借助 GitHub 官方的 Desktop 工具才可实现无代码操作。如果了解 Git 的相关命令，也可直接通过命令操作。本站不提供  GitHub Desktop 下载地址，请自行搜索并下载安装，如需帮助可以在页面下留言。</p></div><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><div class="story post-story"><p>安装好 GitHub Desktop 并打开后，首先需要登录账号，就可在工具中看到博客的部署源码所在仓库了，选择其并点击下方的 Clone：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>点击 Clone 后，工具会提示仓库的地址，以及本地存放路径，根据需求可以修改本地存放路径：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>通过浏览器访问心仪模板的页面，点击 Code 后选择 Download ZIP 下载模板文件：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>返回 GitHub Desktop 点击 Repository，选择 Show in Explorer 即可打开博客的部署源码所在文件夹：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>找到刚刚下好的模板压缩包，将里面的文件解压到 themes 目录：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>记得修改下目录的名称，将其改为模板名称，下图中是未修改的演示：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>返回到 GitHub Desktop，在图示的位置输入任意字符，点击 Commit to master 即可将模板文件上传至 GitHub：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-7.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-7.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-7.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>通过 GitHub 访问博客的部署源码页面，点击进入到_config.yml 文件：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-8.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-8.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-8.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>点击右侧的笔，即可进入修改模式：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-9.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-9.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-9.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>将文件中设置项 theme 后的值改为主题的名称，最后点击 Commit changes 就行了。Vercel 会自动部署，待部署完成后即可看到博客换了新的主题：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-10.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-10.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-10.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;如果不喜欢 Hexo 自带的默认主题，想换一个心仪的主题如何操作呢？今天就以杜老师用的这款 Volantis 作为演示，说一下如何更换 Hexo 主题。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -335,144 +473,6 @@
     
     
     <category term="除湿" scheme="https://dusays.com/tags/%E9%99%A4%E6%B9%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说仲裁：杜老师经历过的劳动仲裁记录篇</title>
-    <link href="https://dusays.com/375/"/>
-    <id>https://dusays.com/375/</id>
-    <published>2021-08-22T16:00:00.000Z</published>
-    <updated>2021-08-05T06:25:40.428Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>平生第一次和法院打交道竟然是因为讨薪，相信有些小伙伴也遇到和杜老师差不多的情况。为了避免第一次接触仲裁的小伙伴们束手无策，杜老师决定分享这次劳动仲裁的经历！</p></blockquote><span id="more"></span><h2 id="事件起源"><a href="#事件起源" class="headerlink" title="事件起源"></a>事件起源</h2><div class="story post-story"><p>去年「2020年」 8 月份左右，杜老师入职了一家初创型的外包公司，至于选择这家公司的原因就不提及了。在职期间该公司因各种原因未能按时发薪，作为一个曾创业者杜老师能理解，毕竟是甲方将费用结给公司，公司再发给下面的员工。每个甲方的结算周期和结算凭证不同，所以就导致了该公司的资金链出现了问题，最终导致该公司拖欠众员工几个月的薪资。</p><p>在公司明确无法继续运行下，安排了集体性离职，并与每位员工签署了薪资承诺书，承诺会在指定日期发放。然而到了指定日期并未发放，且拖欠的薪资前后跨度超过半年，所以杜老师同其他小伙伴商量后决定劳动仲裁。</p></div><h2 id="准备素材"><a href="#准备素材" class="headerlink" title="准备素材"></a>准备素材</h2><div class="story post-story"><p>劳动仲裁也有很多情况，有些是公司不愿支付员工的薪资，一种是想支付，但确实没有钱。杜老师的情况属于后者，所以情况就要简单多了。</p><p>首先去公司管辖区的劳动仲裁委员会，可以选择三者中的一个：总公司所在地的劳动仲裁委员会，分公司所在地的劳动仲裁委员会，派遣公司所在地劳动仲裁委员会。</p><p>进入劳动仲裁委员会大厅后取号等候，待叫到号后前往窗口说明要劳动仲裁，工作人员会提供一些表要求填写，拿着表到一旁填写即可。</p><p>表中包含示例，按照示例格式填写相关表格，其中证据素材需要自行准备，比如说银行的流水、报销发票等等。</p><p>填写好表单后不要提交，先去复印三份。按份数分类整理后，提交给窗口的工作人员，工作人员会反馈一个确认单，回去等通知就行了。</p><p>最后说下需提前准备的东西：身份证及复印、相关证据、劳动关系证明，最好带一支笔。</p></div><h2 id="仲裁调解"><a href="#仲裁调解" class="headerlink" title="仲裁调解"></a>仲裁调解</h2><div class="story post-story"><p>一般不需要等太久就会收到仲裁委员会的电话，先要经过调解，看是否能达成一致。如果结果双方认可即可按照调解书的内容执行，如不认可，就要开庭审理。</p><p>带好身份证在指定时间前往仲裁委员会调解厅，调解员会先宣布调解前声明，然后双方开始阐述情况「个人感觉就是聊天」</p><p>调解员会在沟通中获取一些信息，并在确认后录入调解记录中，最后双方确认即可。</p><p>在这里需要说一下，因为当时公司方负责人与我私下关系良好，所以场面氛围十分融洽，公司方不断打感情牌希望杜老师放弃赔偿「赔偿信息会在最后说明」</p><p>在调节中有几点需要明确下：所欠薪资总额、支付时间、支付次数「就是分几笔给」</p><p>最后调解员会汇总生成调解书等，一共四页，需要签字，一定要保存好原版。</p></div><h2 id="等待结果"><a href="#等待结果" class="headerlink" title="等待结果"></a>等待结果</h2><div class="story post-story"><p>在调解中会沟通欠薪支付的时间，而在此之前就是漫长的等待。期间无需沟通，因为这笔钱已经打上了法律烙印，对方不能不支付的。</p><p>如未按期支付只有两种情况：确实没钱、恶意拒绝支付「有钱但也不给」</p><p>不管是哪一种直接到公司所在地管辖的人们法院去申请强制执行。</p><p>这里补充一下，有人说仲裁委员会所在区的人民法院也能受理，这个杜老师没有去尝试，如果有小伙伴遇到这种情况，可以去问一下。</p><div class="timeline"><p class='p h2'>法院执行</p><div class="timenode"><div class="meta"><p><p>2021 年 08 月 04 日</p></p></div><div class="body"><p>携带身份证和调解书复印件「一份即可」前往人民法院。根据窗口工作人员要求填写表单，然后移交至下一个窗口，待确认后回去等通知就行了；</p></div></div><div class="timenode"><div class="meta"><p><p>2021 年 08 月 05 日</p></p></div><div class="body"><p>截止到此文的发布时间，杜老师的劳动仲裁经历还未结束，后面事项还会继续更新。</p></div></div></div></div><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><div class="story post-story"><p>对于本次仲裁，杜老师最要提及的就是补偿问题。小伙伴们在离职时，往往会中了企业的套路，比如杜老师遇到的就是集体离职，公司说帮忙谈好了下家，要求立即签署离职协议，没有提到任何补偿。而实际上，一家公司同时辞退多名员工，这种情况叫做遣散，是要给予一定经济补偿，6个月以上的要补偿一个月薪资。</p><p>如果不确定要多少补偿，或者索要补偿怕公司会拒绝，可以在调解前，询问仲裁委员会调解员，以此确保索要补偿的合法合理性。最后一定要坚定住底线，合理合法的要求都会被支持，不要因为对方态度、语气等放弃一些理应获取的权益。</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;平生第一次和法院打交道竟然是因为讨薪，相信有些小伙伴也遇到和杜老师差不多的情况。为了避免第一次接触仲裁的小伙伴们束手无策，杜老师决定分享这次劳动仲裁的经历！&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="求职面试" scheme="https://dusays.com/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/"/>
-    
-    
-    <category term="仲裁" scheme="https://dusays.com/tags/%E4%BB%B2%E8%A3%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说博客：Blogger 选程序的那些事</title>
-    <link href="https://dusays.com/374/"/>
-    <id>https://dusays.com/374/</id>
-    <published>2021-08-19T16:00:00.000Z</published>
-    <updated>2021-08-05T10:42:01.984Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>杜老师之前就是一枚 WPer，后来因为 WordPress 太过于臃肿，不想再折腾了，所以选择了 Hexo。不过最近又遇到了新的问题……</p></blockquote><span id="more"></span><h2 id="WordPress-的优缺"><a href="#WordPress-的优缺" class="headerlink" title="WordPress 的优缺"></a>WordPress 的优缺</h2><div class="story post-story"><p>WordPress 的优点可真不少，首先使用人群基数较大。据不完全统计，十个网站就有三个是 WordPress 创建，而且还不都是博客。这也带出其第二个优点，拓展性强，几乎我们所需要的功能，都可以通过插件来实现，甚至某些大牛，可以直接上手修改代码。因为人群基数关系，也有不少前端工程师们为其开发模板，所以我们可以很容易在 WordPress 平台中，找到心仪模板。</p><p>再说一个优点，也是因为人群基数大的关系，技术支持丰富，随便找个博客圈里问问，都能解决当下问题，省时省力。</p><p>夸赞完了该说说缺点了。第一个缺点是臃肿，为了让其更具备扩展性，程序作者为其加入不少函数，很多都是普通用户不需要的，所以代码十分臃肿。接下来是效率，WordPress 不仅耗费服务器资源，而且执行效率低下，作为一个依赖 MySQL 数据存储的程序，竟然不做 SQL 的优化，在服务器上经常可以看到关于 WordPress 的慢查询语句，而且偷偷的说，MySQL 的临时缓存加速对其无效，别问我为什么。</p><p>最后一个就是用出问题。你本想安静的这篇文章，却经常因为程序或插件，亦或者是模板升级带来一些问题，轻则无法正常使用，重则数据丢失，你的时间都浪费在处理这些问题上了。导致杜老师放弃 WordPress 最主要的原因是它的量级比较重，700 篇博客竟然需要 4H8G 的配置才能带动，也可能是杜老师没优化好的关系。</p></div><h2 id="Hexo-的优缺"><a href="#Hexo-的优缺" class="headerlink" title="Hexo 的优缺"></a>Hexo 的优缺</h2><div class="story post-story"><p>轻量部署、成本很低、定制性强、安全性高。</p><p>轻量部署，Hexo 并不需要复杂的网站运行环境，只需要支持 Node.js 即可，几条命令就可实现 Hexo 的安装使用。</p><p>成本很低，如果只是为了记录，对服务端的要求并不高，可以选择免费网站托管平台。如想自建托管平台，也不需要太高的服务器配置，入门级云主机配置即可实现超强并发。</p><p>定制性强，Hexo 外观及功能实现，大多都依赖于模板，而模板的使用及修改都非常简单，并不像 WordPress 那样需要掌握 PHP 语言才可以。</p><p>安全性高，生成的页面为 HTML 的格式，没有动态文件产生，不会出现 SQL 语句注入等安全问题。</p><p>功能有限、模板有限、容易出错、需要扩展。</p><p>功能有限，既然是 HTML，没有数据库的支持，功能方面必然有限。</p><p>模板有限，相比较 WordPress，Hexo 的模板不是很多，而且大多都是个人作者，不像 WordPress 有企业级模板作者。</p><p>容易出错，Hexo 本身还好些，不过其依赖的 Node.js 可能会报错，而且某些报错比较神奇，同样的环境有人没问题，有人就会报错。</p><p>需要扩展，很多功能都依赖第三方服务，如评论等。</p></div><h2 id="目前状况"><a href="#目前状况" class="headerlink" title="目前状况"></a>目前状况</h2><div class="story post-story"><p>上述缺点还是比较好的，毕竟玩博客这么久，早已没有折腾的心，就想安静的写个文。且目前 Hexo 具备的功能可以满足杜老师需求，所以对 Hexo 来说还是比较满意。</p><p>只是随着文章数量增多，生成页面时间越来越长，其中优化过很多次「升级版本、修改参数」均未能提高其效率，所以想换一个程序。</p></div><h2 id="我的需求"><a href="#我的需求" class="headerlink" title="我的需求"></a>我的需求</h2><div class="story post-story"><p>希望这款程序可以将.md 文件直接转换博客文章，毕竟.md 的备份修改都很方便。可以的话，最好是拥有自身的评论系统，依赖第三方整合性较差，且 Hexo 目前支持的第三方评论工具，大多都需要将数据存于其它位置，这种动态数据不管备份还是管理起来都很麻烦，数据放在自己手里才更放心。</p><p>之前有小伙伴推荐过 Ghost 以及 Hugo 等，但测试的效果不尽人意，期待有天能遇到心仪的博客程序，也欢迎大家的推荐！</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;杜老师之前就是一枚 WPer，后来因为 WordPress 太过于臃肿，不想再折腾了，所以选择了 Hexo。不过最近又遇到了新的问题……&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说游戏：我的世界 PCL 启动器 1.17 整合版资源分享「推荐」</title>
-    <link href="https://dusays.com/373/"/>
-    <id>https://dusays.com/373/</id>
-    <published>2021-08-16T16:00:00.000Z</published>
-    <updated>2021-08-19T04:04:31.101Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 PCL 启动器的下载资源，杜老师用的就是该整合版本，推荐小伙伴们下载使用。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>PCL 启动器下载地址：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/e5f4eda845eb43' title='下载地址'>下载地址</a></span></div><h2 id="运行界面"><a href="#运行界面" class="headerlink" title="运行界面"></a>运行界面</h2><div class="story post-story"><p>刚打开时需设置用户名，然后启动游戏即可，如遇任何问题，欢迎在评论区留言：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/373-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/373-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/373-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 PCL 启动器的下载资源，杜老师用的就是该整合版本，推荐小伙伴们下载使用。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说游戏：我的世界 Mac 启动器 1.17 整合版资源分享</title>
-    <link href="https://dusays.com/372/"/>
-    <id>https://dusays.com/372/</id>
-    <published>2021-08-13T16:00:00.000Z</published>
-    <updated>2021-08-13T08:30:10.858Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 Mac 启动器的下载资源，使用苹果电脑的小伙伴快进来看看吧。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>Mac 启动器下载地址：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/f7dc26b424e84f' title='下载地址'>下载地址</a></span></div><h2 id="运行界面"><a href="#运行界面" class="headerlink" title="运行界面"></a>运行界面</h2><div class="story post-story"><p>刚打开时需设置用户名，然后启动游戏即可，如遇任何问题，欢迎在评论区留言：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/372-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/372-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/372-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 Mac 启动器的下载资源，使用苹果电脑的小伙伴快进来看看吧。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说游戏：我的世界 HMCL 启动器 1.17 整合版资源分享</title>
-    <link href="https://dusays.com/371/"/>
-    <id>https://dusays.com/371/</id>
-    <published>2021-08-10T16:00:00.000Z</published>
-    <updated>2021-08-13T08:30:10.858Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 HMCL 启动器的下载资源，有需要的小伙伴快进来看看。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>HMCL 启动器下载地址：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/1920ff8c02334e' title='下载地址'>下载地址</a></span></div><h2 id="运行界面"><a href="#运行界面" class="headerlink" title="运行界面"></a>运行界面</h2><div class="story post-story"><p>下图为游戏的运行界面，可看到在左上角添加了运行信息，右上角多了小地图，右下角有装备耐久：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/371-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/371-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/371-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.17 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 HMCL 启动器的下载资源，有需要的小伙伴快进来看看。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说游戏：我的世界 1.17 版资源分享</title>
-    <link href="https://dusays.com/370/"/>
-    <id>https://dusays.com/370/</id>
-    <published>2021-08-07T16:00:00.000Z</published>
-    <updated>2021-08-13T08:30:10.858Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>自从服务器发布后，有不少小伙伴想一起玩，但在网络上找不到合适的启动器，在此分享一个 1.17 版本懒人启动器，按照文中说明，即可正常游戏。</p></blockquote><span id="more"></span><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><div class="story post-story"><p>1.17 版本懒人启动器下载地址，纯净无插件以及 MOD：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/fd6c23239bbc46' title='下载地址'>下载地址</a></span></div><h2 id="启动设置"><a href="#启动设置" class="headerlink" title="启动设置"></a>启动设置</h2><div class="story post-story"><p>打开启动器后，先进入左侧的游戏设置，设置 Java 所在的路径。建议设置成压缩包中自带的，路径参考下图：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>然后选择游戏版本，懒人版中仅提供了 1.17 版，如果需要其它版本，可在评论区中留言：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>修改游戏昵称，然后启动游戏即可「如果进行线上游戏，一定要改名称，因为服务端是通过 ID 来判断用户身份」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h2><div class="story post-story"><p>游戏默认是英文的界面，点 Options 进行调整：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在第二个界面选 Language：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>下拉列表，在最下端可以看到简体中文，选择并点击 Done 即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="加入线上"><a href="#加入线上" class="headerlink" title="加入线上"></a>加入线上</h2><div class="story post-story"><p>如果想和杜老师及小伙伴们一同游戏，可以加入杜老师说的服务器。在首界面点击多人游戏：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-7.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-7.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-7.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>首次进入多人游戏会有提示，这个无视即可，感觉麻烦可以勾选不再提示：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-8.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-8.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-8.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在右下方会看到添加服务器：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-9.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-9.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-9.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>首次连接可能会有防火墙的警告，直接允许即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-10.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-10.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-10.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在服务器地址输入连接地址，如 <code>mc.dusays.com:26295</code>：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-11.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-11.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-11.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>然后可在界面中看到杜老师的服务器状态，点击服务器名称前的箭头即可加入游戏中：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/370-12.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/370-12.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/370-12.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;自从服务器发布后，有不少小伙伴想一起玩，但在网络上找不到合适的启动器，在此分享一个 1.17 版本懒人启动器，按照文中说明，即可正常游戏。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   

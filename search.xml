@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>杜老师说网站：修改 GitLab 默认地址及端口</title>
+      <link href="/395/"/>
+      <url>/395/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>为了方便更新文章，杜老师使用 Docker 搭建 GitLab 做文章管理，后期迁移到群晖上，并做了外网的映射。迁移后需要修改 GitLab 的域名及端口，那么就分享下修改方法。 </p></blockquote><span id="more"></span><h2 id="地址修改"><a href="#地址修改" class="headerlink" title="地址修改"></a>地址修改</h2><div class="story post-story"><p>查询绑定地址或 IP 的命令为：</p><pre class="line-numbers language-none"><code class="language-none">grep ^external_url &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如需修改绑定地址，则编辑文件/etc/gitlab/gitlab.rb：</p><pre class="line-numbers language-none"><code class="language-none">external_url http:&#x2F;&#x2F;gitlab.dusays.com;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><h2 id="端口修改"><a href="#端口修改" class="headerlink" title="端口修改"></a>端口修改</h2><div class="story post-story"><p>如需修改修改端口，则编辑文件/etc/gitlab/gitlab.rb：</p><pre class="line-numbers language-none"><code class="language-none">nginx[&#39;listen_port&#39;] &#x3D; 8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>记得取消注释。最后提醒任何配置修改完后，需要重跑一下配置：</p><pre class="line-numbers language-none"><code class="language-none">gitlab-ctl reconfigure<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网站搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杜老师说网站：如何将 Hexo 部署到 OSS</title>
+      <link href="/394/"/>
+      <url>/394/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>鉴于最近 GitHub 从中国大陆访问网速较慢，而且现在国内阿里云 OSS 支持将静态网站部署在上面，而且访问速度尚可。今天杜老师为大家介绍一款插件，可以将 Hexo 部署到 OSS。</p></blockquote><span id="more"></span><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><div class="story post-story"><p>已搭建 Hexo 博客，如果还未搭建，可以参考《<a href="https://dusays.com/361/">杜老师说部署：杜老师说同款博客搭建</a>》一文。同时需拥有阿里云账号，注意部署静态网站需要实名认证，且域名需备案：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">npm i -S hexo-deployer-oss-aliyun<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：在 Hexo 博客目录下执行上面的命令。</p></div><h2 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">deploy:  type: aliyunoss  region: Endpoint  bucket: Bucket  accessKeyId: AccessKey ID  accessKeySecret: AccessKey Secret<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：在 Hexo 配置文件 _config.yml 中添加上面配置，并按实际情况修改，如有任何问题，可在评论区中留言。</p></div><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><div class="story post-story"><p>改好之后记得保存，保存好之后执行 <code>hexo d</code>，一般没问题的话就可以将 Hexo 生成的静态文件上传到 OSS 中。默认将文件上传到阿里云 OSS Bucket 根目录下，如需要部署到其它目录，在 deploy 下添加 remotePath 选项进行指定。</p><p>另外在创建阿里云 OSS Bucket 时，应将存储权限设置为公共读。</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网站搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杜老师说部署：修改 gitlab-runner 的执行用户</title>
+      <link href="/393/"/>
+      <url>/393/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>安装 gitlab-runner 构建机默认会将用户设置为 gitlab-runner，该设置会导致.gitlab-ci.yml 脚本运行时出现一些权限问题。为了解决这些权限问题，杜老师将 gitlab-runner 构建机上的默认用户设置为 root。</p></blockquote><span id="more"></span><h2 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h2><div class="story post-story"><p>这种方式虽然简单粗暴，当然也会带来一些弊端，比如：通过.gitlab-ci.yml 脚本进行文件操作要格外小心。</p><p>另外要做好服务端安全设置，确保不要被恶意用户获取到操作权限。</p></div><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><div class="story post-story"><p>通过下面命令可以查看到 gitlab-runner 的工作目录和默认用户等一系列相关信息：</p><pre class="line-numbers language-none"><code class="language-none">ps aux | grep gitlab-runner<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>通过下面命令可以卸载掉 gitlab-runner 默认用户：</p><pre class="line-numbers language-none"><code class="language-none">gitlab-runner uninstall<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>通过下面命令将 gitlab-runner 运行用户设置为 root：</p><pre class="line-numbers language-none"><code class="language-none">gitlab-runner install --user root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>最后重启 gitlab-runner 就行了：</p><pre class="line-numbers language-none"><code class="language-none">systemctl restart gitlab-runner<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 运维教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 部署 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>杜老师说网站：两种通过 Nginx 实现强制 HTTPS 访问方法</title>
       <link href="/392/"/>
       <url>/392/</url>
@@ -21,6 +96,81 @@
         <tags>
             
             <tag> 网站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杜老师说解析：Ubuntu 的 DNS 不可用处理办法</title>
+      <link href="/391/"/>
+      <url>/391/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>受博友圈夏目同学所托，帮其新购置的云服务器搭建网站运行环境。几个 apt 的问题，想都没想就答应了，却未料到一开始就出现问题，Ubuntu 的 DNS 不可用，今天说下如何解决这个问题。</p></blockquote><span id="more"></span><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><div class="story post-story"><p>接手新系统后，习惯性第一时间更新软件源，却发现执行失败了。看返回的错误提示，判断应该是域名解析的问题：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# apt updateErr:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;Err:2 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security InRelease  Temporary failure resolving &#39;security.ubuntu.com&#39;Err:3 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic InRelease  Temporary failure resolving &#39;archive.canonical.com&#39;Err:4 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;Reading package lists... DoneBuilding dependency tree... DoneAll packages are up to date.W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic-updates&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;W: Failed to fetch http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic-security&#x2F;InRelease  Temporary failure resolving &#39;security.ubuntu.com&#39;W: Failed to fetch http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu&#x2F;dists&#x2F;bionic&#x2F;InRelease  Temporary failure resolving &#39;archive.canonical.com&#39;W: Some index files failed to download. They have been ignored, or old ones used instead.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>测了一下网络的连通性，没有任何问题，可以与 DNS 服务器正常通信：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# ping 8.8.8.8PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.64 bytes from 8.8.8.8: icmp_seq&#x3D;1 ttl&#x3D;118 time&#x3D;1.53 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;2 ttl&#x3D;118 time&#x3D;1.52 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;3 ttl&#x3D;118 time&#x3D;1.56 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;4 ttl&#x3D;118 time&#x3D;1.57 ms64 bytes from 8.8.8.8: icmp_seq&#x3D;5 ttl&#x3D;118 time&#x3D;1.55 ms^C--- 8.8.8.8 ping statistics ---5 packets transmitted, 5 received, 0% packet loss, time 4006msrtt min&#x2F;avg&#x2F;max&#x2F;mdev &#x3D; 1.522&#x2F;1.551&#x2F;1.575&#x2F;0.040 ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>又使用杜老师的博客域名做了下测试，果然又报错了，几乎可以确定是 DNS 问题：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# ping dusays.comping: dusays.com: Temporary failure in name resolution<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>查看一下通用 DNS 服务器配置文件，发现该文件已被 systemd-resolved 服务替代，看来需要激活 systemd-resolved 才可以：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# cat &#x2F;etc&#x2F;resolv.conf# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN# 127.0.0.53 is the systemd-resolved stub resolver.# run &quot;systemd-resolve --status&quot; to see details about the actual nameservers.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><div class="story post-story"><p>添一条设置项到/etc/systemd/resolved.conf「该主机在国外，如果是国内的主机，建议不要用8.8.8.8，以免因为网络不稳导致解析失败」默认该项会被注释，直接执行下面命令即可：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# echo &quot;DNS&#x3D;8.8.8.8&quot; &gt;&gt; &#x2F;etc&#x2F;systemd&#x2F;resolved.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>因修改了配置文件，需要重启服务，却发现提示该服务被锁：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl restart systemd-resolved.serviceFailed to restart unit: Unit file &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service is masked.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>使用下面命令即可解锁服务：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl unmask systemd-resolved.serviceRemoved &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>查看一下服务状态，目前该服务已经被解锁，并且服务没在运行，且未设置开机启动：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl status systemd-resolved● systemd-resolved.service - Network Name Resolution   Loaded: loaded (&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service; disabled; vendor preset: enabled)   Active: inactive (dead)     Docs: man:systemd-resolved.service(8)           https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;systemd&#x2F;resolved           https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;systemd&#x2F;writing-network-configuration-managers           https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;systemd&#x2F;writing-resolver-clients<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>使用下面命令启动服务：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl start systemd-resolved<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用下面命令设置开机启动：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# systemctl enable systemd-resolved.serviceCreated symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;dbus-org.freedesktop.resolve1.service → &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service.Created symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;multi-user.target.wants&#x2F;systemd-resolved.service → &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;systemd-resolved.service.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>再次通过杜老师说域名测试一下，发现解析没问题了：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# ping dusays.comPING dusays.com (76.76.21.21) 56(84) bytes of data.64 bytes from 76.76.21.21 (76.76.21.21): icmp_seq&#x3D;1 ttl&#x3D;120 time&#x3D;1.91 ms64 bytes from 76.76.21.21 (76.76.21.21): icmp_seq&#x3D;2 ttl&#x3D;120 time&#x3D;1.91 ms64 bytes from 76.76.21.21 (76.76.21.21): icmp_seq&#x3D;3 ttl&#x3D;120 time&#x3D;1.89 ms^C--- dusays.com ping statistics ---3 packets transmitted, 3 received, 0% packet loss, time 2002msrtt min&#x2F;avg&#x2F;max&#x2F;mdev &#x3D; 1.896&#x2F;1.907&#x2F;1.914&#x2F;0.007 ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>重新执行下软件源更新命令，执行成功，问题解决：</p><pre class="line-numbers language-none"><code class="language-none">root@dusays:~# apt updateGet:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic InRelease [242 kB]Get:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates InRelease [88.7 kB]                                                                 Get:3 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic InRelease [10.2 kB]                                                                Get:4 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security InRelease [88.7 kB]                                                         Get:5 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;main amd64 Packages [1019 kB]          Get:6 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;main Translation-en [516 kB]                     Get:7 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;restricted amd64 Packages [9184 B]         Get:8 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;restricted Translation-en [3584 B]    Get:9 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;universe amd64 Packages [8570 kB]           Get:10 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic&#x2F;partner amd64 Packages [1592 B]                        Get:11 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic&#x2F;universe Translation-en [4941 kB]                         Get:12 http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu bionic&#x2F;partner Translation-en [1004 B]                                 Get:13 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;main amd64 Packages [2237 kB]                                               Get:14 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;main amd64 Packages [1892 kB] Get:15 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;main Translation-en [436 kB]          Get:16 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;restricted amd64 Packages [483 kB]         Get:17 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;restricted Translation-en [65.6 kB] Get:18 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;universe amd64 Packages [1749 kB]           Get:19 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu bionic-updates&#x2F;universe Translation-en [375 kB]     Get:20 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;main Translation-en [344 kB]            Get:21 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;restricted amd64 Packages [459 kB]Get:22 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;restricted Translation-en [61.7 kB]Get:23 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;universe amd64 Packages [1138 kB]Get:24 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;universe Translation-en [259 kB]Get:25 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;multiverse amd64 Packages [20.9 kB]Get:26 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu bionic-security&#x2F;multiverse Translation-en [4732 B]Fetched 25.0 MB in 5s (5376 kB&#x2F;s)                                Reading package lists... DoneBuilding dependency tree... Done15 packages can be upgraded. Run &#39;apt list --upgradable&#39; to see them.root@dusays:~# <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 运维教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 解析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杜老师说博客：通过 Webify 部署 Hexo</title>
+      <link href="/390/"/>
+      <url>/390/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Vercel 虽是免费的，但因为其服务器在国外，常会遇到访问不稳定的问题。最近良心云推出了个人站点扶持计划，不少已备案的小伙伴转到了国内托管，今天就分享下通过 Webify 部署 Hexo。</p></blockquote><span id="more"></span><h2 id="服务介绍"><a href="#服务介绍" class="headerlink" title="服务介绍"></a>服务介绍</h2><div class="story post-story"><p>CloudBase Webify 为您的 Web 应用提供一站式托管服务，支持包括态网静站、动态 Web 服务等各种类型的 Web 应用，提供默认域名、可自定义域名、安全证书、CDN 加速等，提升 Web 应用的性能和安全性，此外提供基于 Git 的工作流、自动部署流程、加速开发部署流程，提供极佳体验。</p><p>可将博客/论坛/官网等任意形式的个人站点部署到 Webify，即可以申请获得扶持代金券，即实现零成本网站托管。</p></div><h2 id="在线部署"><a href="#在线部署" class="headerlink" title="在线部署"></a>在线部署</h2><div class="story post-story"><p>进入良心云 Web 应用托管页面，点击页面中的新建应用：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在右侧从模板创建中找到 Hexo：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>选择源码托管平台，并设置托管仓库名，然后点下一步：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在框架预设中，选择 Hexo 项，然后点击部署应用：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>服务开始部署应用，待页面提示发布成功后，即可正常访问博客：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>服务会免费送一个访问地址，不过该支持较长不容易记忆，可以自行添加域名，且支持 SSL：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/390-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/390-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/390-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网站搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杜老师说博客：通过 Vercel 部署 Hexo「主题」</title>
+      <link href="/389/"/>
+      <url>/389/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>如果不喜欢 Hexo 自带的默认主题，想换一个心仪的主题如何操作呢？今天就以杜老师用的这款 Volantis 作为演示，说一下如何更换 Hexo 主题。</p></blockquote><span id="more"></span><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><div class="story post-story"><p>通过前两篇的教程，大家应该发现除了发布文章时固定的文章格式代码外，并没有其它的命令。参考杜老师的教程，可以实现仅用鼠标点击，就能创建一个博客。</p><p>本文较之前的教程相比，需要借助 GitHub 官方的 Desktop 工具才可实现无代码操作。如果了解 Git 的相关命令，也可直接通过命令操作。本站不提供  GitHub Desktop 下载地址，请自行搜索并下载安装，如需帮助可以在页面下留言。</p></div><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><div class="story post-story"><p>安装好 GitHub Desktop 并打开后，首先需要登录账号，就可在工具中看到博客的部署源码所在仓库了，选择其并点击下方的 Clone：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>点击 Clone 后，工具会提示仓库的地址，以及本地存放路径，根据需求可以修改本地存放路径：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>通过浏览器访问心仪模板的页面，点击 Code 后选择 Download ZIP 下载模板文件：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>返回 GitHub Desktop 点击 Repository，选择 Show in Explorer 即可打开博客的部署源码所在文件夹：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>找到刚刚下好的模板压缩包，将里面的文件解压到 themes 目录：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-5.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>记得修改下目录的名称，将其改为模板名称，下图中是未修改的演示：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-6.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>返回到 GitHub Desktop，在图示的位置输入任意字符，点击 Commit to master 即可将模板文件上传至 GitHub：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-7.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-7.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-7.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>通过 GitHub 访问博客的部署源码页面，点击进入到_config.yml 文件：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-8.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-8.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-8.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>点击右侧的笔，即可进入修改模式：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-9.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-9.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-9.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>将文件中设置项 theme 后的值改为主题的名称，最后点击 Commit changes 就行了。Vercel 会自动部署，待部署完成后即可看到博客换了新的主题：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/10/389-10.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/10/389-10.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/10/389-10.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网站搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
             
         </tags>
       
