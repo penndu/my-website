@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dusays.com/365/</loc>
+    <lastmod>2021-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://dusays.com/389/</loc>
     <lastmod>2021-10-18</lastmod>
   </url>
@@ -23,10 +27,6 @@
   <url>
     <loc>https://dusays.com/395/</loc>
     <lastmod>2021-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://dusays.com/365/</loc>
-    <lastmod>2021-10-07</lastmod>
   </url>
   <url>
     <loc>https://dusays.com/387/</loc>
