@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2021-11-10T17:06:09.025Z</updated>
+  <updated>2021-11-16T13:30:52.438Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说游戏：我的世界插件使用介绍</title>
+    <link href="https://dusays.com/403/"/>
+    <id>https://dusays.com/403/</id>
+    <published>2021-11-14T16:00:00.000Z</published>
+    <updated>2021-11-16T13:30:52.438Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>杜老师说游戏服添加了很多插件，不少新来的小伙伴因为不了解它们的使用方式，没有获得更好游戏体验。杜老师收集了向玩家开放的一些命令，方便小伙伴们查询使用。此文章不定期更新，会根据玩家需求添加不同的命令，如有权限需求，也可在评论区留言！</p></blockquote><span id="more"></span><h2 id="插件列表"><a href="#插件列表" class="headerlink" title="插件列表"></a>插件列表</h2><div class="story post-story"><p>杜老师说游戏服使用了下列「但不限于」插件：</p><table><thead><tr><th>插件命令</th><th>插件作用</th><th>备注信息</th></tr></thead><tbody><tr><td>AuthMe</td><td>身份验证</td><td>用于验证玩家身份，首次登录需要注册，再次登录需要验证</td></tr><tr><td>BlockLocker</td><td>箱子锁头</td><td>在箱子上添加告示牌可加密，他人无法打开，保障物品安全</td></tr><tr><td>CMI</td><td>拓展命令</td><td>增加很多功能，如传送门、飞行等等</td></tr><tr><td>QuickShop</td><td>游戏商城</td><td>通过出售资源获得金钱，目前金钱可以购买其它资源，更多用于购买飞行能量</td></tr><tr><td>Residence</td><td>玩家领地</td><td>通过划分领地，可保护领地内建筑，以及限制其它玩家部分权限</td></tr></tbody></table></div><h2 id="身份验证"><a href="#身份验证" class="headerlink" title="身份验证"></a>身份验证</h2><div class="story post-story"><p>AuthMe 的相关命令：</p><table><thead><tr><th>指令</th><th>作用</th><th>备注</th></tr></thead><tbody><tr><td>/register</td><td>注册用户</td><td>使用新用户名首次登录使用</td></tr><tr><td>/login</td><td>登录用户</td><td>每次登录使用</td></tr></tbody></table></div><h2 id="箱子锁头"><a href="#箱子锁头" class="headerlink" title="箱子锁头"></a>箱子锁头</h2><div class="story post-story"><p>对于箱类，只需放置木牌即可，玩家名会自动生成；对于门类，放置木牌在门上或周围的方块上即可，内容自动生成。</p><p>右击木牌编辑木牌，输入<code>/blocklocker &lt;行数&gt; &lt;文本&gt;</code>来编辑木牌。</p></div><h2 id="拓展命令"><a href="#拓展命令" class="headerlink" title="拓展命令"></a>拓展命令</h2><div class="story post-story"><p>CMI 的相关命令：</p><table><thead><tr><th>指令</th><th>作用</th><th>备注</th></tr></thead><tbody><tr><td>/cmi afk</td><td>切换状态</td><td>可以在离开和回来状态切换</td></tr><tr><td>/cmi back</td><td>返回传送</td><td>传回上一个传送点</td></tr><tr><td>/cmi balance</td><td>金钱查询</td><td>查询金钱数量</td></tr><tr><td>/cmi baltop</td><td>金钱排行</td><td>查询金钱排行</td></tr><tr><td>/cmi home</td><td>传送回家</td><td>传送回家</td></tr><tr><td>/cmi homes</td><td>家的列表</td><td>查看所有的家</td></tr><tr><td>/cmi list</td><td>显示玩家</td><td>显示在线玩家</td></tr><tr><td>/cmi mirror start</td><td>打开镜像</td><td>开启镜像功能，可以搭建镜像建筑</td></tr><tr><td>/cmi mirror stop</td><td>关闭镜像</td><td>关闭镜像功能</td></tr><tr><td>/cmi playtime</td><td>游戏时间</td><td>显示玩家游玩时间</td></tr><tr><td>/cmi playtimetop</td><td>时间排行</td><td>显示玩家游玩时间排行</td></tr><tr><td>/cmi sethome</td><td>设置位置</td><td>设置家的位置</td></tr><tr><td>/cmi setspawn</td><td>设重生点</td><td>设置玩家的重生点</td></tr><tr><td>/cmi spawn</td><td>传重生点</td><td>传送到出生点</td></tr><tr><td>/cmi tpa &lt;玩家名称&gt;</td><td>传到玩家</td><td>将自己传送到指定玩家附近</td></tr><tr><td>/cmi tpaccept</td><td>接受传送</td><td>接受其他玩家传送申请</td></tr><tr><td>/cmi tpahere &lt;玩家名称&gt;</td><td>召唤玩家</td><td>将指定玩家传送到自己附近</td></tr><tr><td>/cmi warp</td><td>传送列表</td><td>查看服务器的传送列表</td></tr></tbody></table></div><h2 id="游戏商城"><a href="#游戏商城" class="headerlink" title="游戏商城"></a>游戏商城</h2><div class="story post-story"><p>左键点击即可购买，然后进入输入模式，输入购买数量即可。</p><p>如需出售商品，同上面的操作相同。</p></div><h2 id="玩家领地"><a href="#玩家领地" class="headerlink" title="玩家领地"></a>玩家领地</h2><div class="story post-story"><p>Residence 的相关命令：</p><table><thead><tr><th>指令</th><th>作用</th><th>备注</th></tr></thead><tbody><tr><td>/res create &lt;领地名称&gt;</td><td>创建领地</td><td>先用木锄划出领地范围，然后输入该命令创建领地</td></tr><tr><td>/res remove</td><td>删除领地</td><td>删除游戏角色当前所处领地，前提是有操作权限</td></tr></tbody></table></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;杜老师说游戏服添加了很多插件，不少新来的小伙伴因为不了解它们的使用方式，没有获得更好游戏体验。杜老师收集了向玩家开放的一些命令，方便小伙伴们查询使用。此文章不定期更新，会根据玩家需求添加不同的命令，如有权限需求，也可在评论区留言！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜老师说容器：什么是 Docker in Docker</title>
+    <link href="https://dusays.com/401/"/>
+    <id>https://dusays.com/401/</id>
+    <published>2021-11-08T16:00:00.000Z</published>
+    <updated>2021-11-16T13:30:52.438Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者构建的代码和自动化脚本打包成 Docker 镜像，然后部署在各个运行环境中。</p></blockquote><span id="more"></span><h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><div class="story post-story"><p>而在 CI/CD 中，我们常用一些 CI/CD 服务器，比如 Jenkins 和 GoCD 来构建与部署我们的应用，从而实现 CI/CD 自动化。现在一些 CI/CD 服务器也被 Docker 化运行在真实的物理机上。于是我们需在 CI/CD 服务器的 Docker container 里面来 build 与 run 我们的 Docker 镜像，这就涉及到 Docker in Docker 问题。</p><p>一个很自然的想法：我们是不是需要在 CI/CD 服务器镜像中安装一个 Docker Daemon 和 Docker 命令？但是 Docker 里面跑 Docker 总感觉有些蹩脚，额外安装与运行 Docker 无疑增加了 CI/CD 服务器镜像的大小，同时还增加了 Docker 的深度。</p></div><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><div class="story post-story"><p>实际上我们并不需要在 CI/CD 服务器上安装 Docker。通过上面的命令在 CI/CD 服务器上运行我们的镜像：</p><pre class="line-numbers language-none"><code class="language-none">docker run -v &#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Docker 采取的是 C/S 架构，Docker 的成功运行需要 Docker Daemon 和 Docker Client 的支持，当我们运行一些 docker build 等命令时，实际需要 Docker Client 连接 Docker Daemon 发送命令，Docker Daemon 会在宿主机操作系统分配文件、网络资源：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/11/401-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/11/401-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/11/401-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者构建的代码和自动化脚本打包成 Docker 镜像，然后部署在各个运行环境中。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="容器" scheme="https://dusays.com/tags/%E5%AE%B9%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说图床：去不图床坚决抵制违禁图片</title>
@@ -427,52 +473,6 @@
     
     
     <category term="解析" scheme="https://dusays.com/tags/%E8%A7%A3%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说萌宠：杜老师的镇博萌宠</title>
-    <link href="https://dusays.com/382/"/>
-    <id>https://dusays.com/382/</id>
-    <published>2021-09-12T16:00:00.000Z</published>
-    <updated>2021-08-28T13:44:42.100Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>借助十年之约虫洞穿梭访问了不少圈内博主的站点，大多都是分享生活。有博主回访的时候留言要求更新一些生活日志，那今天就穿越写上一篇，不要吝啬您的脚印，请在评论区里狠狠的踩！</p></blockquote><span id="more"></span><h2 id="西瓜由来"><a href="#西瓜由来" class="headerlink" title="西瓜由来"></a>西瓜由来</h2><div class="story post-story"><p>一日下班回来，听到单元门附近有奶猫叫声，有气无力特别凄惨，好奇心大起过去瞧了下，瞬间内心为之一振。</p><p>猫咪躺在草丛，脖颈处有个贯穿伤，周围环绕着好多的苍蝇，并不时有些落在猫咪脖颈处排卵，且可以看到好多蚂蚁在猫咪的口耳处进进出出。</p><p>本来想着多一事不如少一事，但架不住对生命的尊重，所以赶紧回家拿了一件旧外衣和手套，抱着猫咪奔向了附近的宠物医院。</p><p>宠物医生做了详细的检查后，建议保守治疗，毕竟不敢保证在极力救治下，猫咪是否可以存活，且治疗的费用很高。</p><p>在清理好伤口并包扎后，将小猫咪抱回了家，并用闲置的空纸壳为其搭建了一个临时的小窝。</p><p>猫咪躺在窝里十分安静，不叫也不爱动，用在宠物医院买的奶粉给他冲了一些喝的，用注射器一点一点的喂。</p><p>开始喝的很少，绝大多数时间都在睡觉，后来吃的东西越来越多，也可以自己吃饭了，慢慢的开始满屋跑。</p><p>再送到宠物医院时，医生也很惊喜，没想到小家伙的生命力蛮顽强的，除了伤口还没愈合，其它的已并无大碍。</p><p>这时遇到了一个大问题：如何处置这只猫咪？</p><p>本来想着治好后就留在宠物医院，等待好心人的收留。将这个想法和医生说了，医生建议先拿回去再养两天，等联系到收养人后，再联系我。</p><p>不过随着相处时间增加，发现养只猫咪也挺好的，故给其起了个名字：西瓜。</p><p>如果问为什么叫他西瓜，其实是很早前，遇到过一只流浪猫，很粘着我。但因为没有能力养，所以给朋友了，最后朋友说猫跑了。希望这只猫可以乖一些，不要乱跑！</p></div><h2 id="小调皮蛋"><a href="#小调皮蛋" class="headerlink" title="小调皮蛋"></a>小调皮蛋</h2><div class="story post-story"><p>本来以为是只乖巧的猫，待其伤好之后，就开始其称皇猫生。一天到晚上串下跳，动不动冲过来咬我一口。等我想抓住他，瞬间跑到床底够不到的地方，一动不动。又待我放松警惕时，再跑出来补上一口。配喵图你瞅啥：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜饮食"><a href="#西瓜饮食" class="headerlink" title="西瓜饮食"></a>西瓜饮食</h2><div class="story post-story"><p>我感觉他最大特点就是贪吃，我吃什么，都要过来闻闻「朕给你鉴个毒」每天回家第一件事，冲我嗷嗷的叫，翻译成中文是「撒冷的喂我吃东西」因为白天需要上班而且经常出差，就给他买了个自动的喂食器，后来发现自动完全没有必要，他会自己按出粮键：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-1.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-2.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜饮水"><a href="#西瓜饮水" class="headerlink" title="西瓜饮水"></a>西瓜饮水</h2><div class="story post-story"><p>猫咪饮水是非常重要的，喝水少了容易生病，所以给他买了智能的饮水机。可以手机控制出水间隔，并可以监控剩余水量及水质滤芯的使用量。他最喜欢做的事情，就是沾上一爪子水，然后在我脸上狂甩:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-3.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-4.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="满屋猫毛"><a href="#满屋猫毛" class="headerlink" title="满屋猫毛"></a>满屋猫毛</h2><div class="story post-story"><p>猫咪一如夏季，就会开始脱毛，脱到我都不敢碰他，每次摸完都感觉自己戴了双手套。天热丝毫没有降低他爱动的兴趣，照样疯跑，那满屋如下雪般的猫毛，我真想把他剃秃了！最后买了空气净化器整天吹，在屋子里才勉强能呼吸:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-5.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-5.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-5.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-6.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-6.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-6.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="温湿度计"><a href="#温湿度计" class="headerlink" title="温湿度计"></a>温湿度计</h2><div class="story post-story"><p>冬天阳台的温度低，为了避免猫咪受凉，买了台加热器。但电表要起飞的转速让我着实的心疼，所以买了温湿度计，可以联动小米智能插座，到舒适温度后自动关闭加热。电费倒是小事，屋子里少了煮屎的味道:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-7.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-7.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-7.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-8.jpg-1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-8.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-8.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜监控"><a href="#西瓜监控" class="headerlink" title="西瓜监控"></a>西瓜监控</h2><div class="story post-story"><p>卧室的零碎有好多，白天上班时担心猫在卧室会乱碰，关在阳台又怕猫出事情，所以买了云摄像头，可以随时查看猫的状态。十次看有九次在晒太阳，一次躲在猫砂盆中拉屎，隔着屏幕都能感受到猫屎的味道:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-9.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-9.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-9.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="粑粑除臭"><a href="#粑粑除臭" class="headerlink" title="粑粑除臭"></a>粑粑除臭</h2><div class="story post-story"><p>猫咪拉屎真的很臭，有时怀疑他是不是背着我吃屎了。平时关着他的阳台，已经成为我的禁地，毕竟活动空间和名，还是后者重要。不过毕竟要晾晒衣服的，所以扛不住就买了台负离子除臭器，说实话确实挺好使。后来猫咪可能发现他的味道影响不到我了，直接改用屁股坐我的脸。要不是我靠脸吃饭，真想把这张脸扔了:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-10.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-10.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-10.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜玩具"><a href="#西瓜玩具" class="headerlink" title="西瓜玩具"></a>西瓜玩具</h2><div class="story post-story"><p>上班累了一天，到家就想摊在床上。奈何理想的丰满被猫爪无情撕碎，得先陪着他玩爽了，才能做自己的事情。实在受不了就买了个自动逗猫机，结果理想的丰满再次被猫爪无情撕碎，我得看着他玩不说，他的动作仿佛开启教学模式，仿佛在说「看到了吗？要这样抓才行，你个傻叉」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-11.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-11.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-11.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="西瓜出行"><a href="#西瓜出行" class="headerlink" title="西瓜出行"></a>西瓜出行</h2><div class="story post-story"><p>在家称王称霸，一出卧室门就怂了。每次抱出去都大叫着要回家，为了防止猫咪出现应激反应，就买了个猫包，带空调的那种「因为是夏季购买的」结果可怜猫包没有发挥几次作用，变成了烘干箱，猫咪洗完澡后放入猫包开始吹干，包生应该无遗憾了:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/382-12.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-12.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-12.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;借助十年之约虫洞穿梭访问了不少圈内博主的站点，大多都是分享生活。有博主回访的时候留言要求更新一些生活日志，那今天就穿越写上一篇，不要吝啬您的脚印，请在评论区里狠狠的踩！&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="萌宠" scheme="https://dusays.com/tags/%E8%90%8C%E5%AE%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说命令：ip -s link 输出内容的注解</title>
-    <link href="https://dusays.com/381/"/>
-    <id>https://dusays.com/381/</id>
-    <published>2021-09-09T16:00:00.000Z</published>
-    <updated>2021-08-19T09:08:32.809Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>ip 命令用来显示或操纵 Linux 主机的路由、网络设备、策略路由和隧道等，是 Linux 下比较新且功能强大的网络配置工具。下面对 <code>ip -s link</code> 输出的内容进行简单的注解。</p></blockquote><span id="more"></span><h3 id="命令截图"><a href="#命令截图" class="headerlink" title="命令截图"></a>命令截图</h3><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/381-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/381-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/381-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><h3 id="参数含义"><a href="#参数含义" class="headerlink" title="参数含义"></a>参数含义</h3><table><thead><tr><th>参数</th><th>含义</th></tr></thead><tbody><tr><td>lo</td><td>网卡名称</td></tr><tr><td>LOOPBACK</td><td>环回地址</td></tr><tr><td>UP</td><td>启用状态</td></tr><tr><td>LOWER_UP</td><td>物理网卡处于启动状态</td></tr><tr><td>BROADCAST</td><td>开启广播功能</td></tr><tr><td>MULTICAST</td><td>开启多播功能</td></tr><tr><td>mtu 65535</td><td>MTU 值</td></tr><tr><td>qdisc</td><td>传输队列规则</td></tr><tr><td>noqueue</td><td>没有规则限制</td></tr><tr><td>fq_codel</td><td>流量队列控制延迟</td></tr><tr><td>state</td><td>状态</td></tr><tr><td>UNKNOWN</td><td>未知</td></tr><tr><td>mode DEFAULT group default qlen 1000</td><td>默认模式</td></tr><tr><td>link/loopback</td><td>网卡类型</td></tr><tr><td>00:00:00:00:00:00</td><td>物理地址</td></tr><tr><td>brd</td><td>广播地址</td></tr><tr><td>RX: bytes</td><td>收到的数据量</td></tr><tr><td>packets</td><td>通信的数据包</td></tr><tr><td>errors</td><td>错误的数据包</td></tr><tr><td>dropped</td><td>表示数据包已经进入 Ring Buffer，但由于内存不够等系统原因，导致在拷贝到内存过程中被丢弃。</td></tr><tr><td>overrun</td><td>指被物理网卡丢弃</td></tr><tr><td>mcast</td><td>多播包的数量</td></tr><tr><td>TX: bytes</td><td>发送的数据量</td></tr><tr><td>carrier</td><td>由于 carrier 错误而丢弃的数据包数量</td></tr><tr><td>collsns</td><td>冲突信息包的数目</td></tr></tbody></table>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;ip 命令用来显示或操纵 Linux 主机的路由、网络设备、策略路由和隧道等，是 Linux 下比较新且功能强大的网络配置工具。下面对 &lt;code&gt;ip -s link&lt;/code&gt; 输出的内容进行简单的注解。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="命令" scheme="https://dusays.com/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   

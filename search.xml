@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>杜老师说游戏：我的世界插件使用介绍</title>
+      <link href="/403/"/>
+      <url>/403/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>杜老师说游戏服添加了很多插件，不少新来的小伙伴因为不了解它们的使用方式，没有获得更好游戏体验。杜老师收集了向玩家开放的一些命令，方便小伙伴们查询使用。此文章不定期更新，会根据玩家需求添加不同的命令，如有权限需求，也可在评论区留言！</p></blockquote><span id="more"></span><h2 id="插件列表"><a href="#插件列表" class="headerlink" title="插件列表"></a>插件列表</h2><div class="story post-story"><p>杜老师说游戏服使用了下列「但不限于」插件：</p><table><thead><tr><th>插件命令</th><th>插件作用</th><th>备注信息</th></tr></thead><tbody><tr><td>AuthMe</td><td>身份验证</td><td>用于验证玩家身份，首次登录需要注册，再次登录需要验证</td></tr><tr><td>BlockLocker</td><td>箱子锁头</td><td>在箱子上添加告示牌可加密，他人无法打开，保障物品安全</td></tr><tr><td>CMI</td><td>拓展命令</td><td>增加很多功能，如传送门、飞行等等</td></tr><tr><td>QuickShop</td><td>游戏商城</td><td>通过出售资源获得金钱，目前金钱可以购买其它资源，更多用于购买飞行能量</td></tr><tr><td>Residence</td><td>玩家领地</td><td>通过划分领地，可保护领地内建筑，以及限制其它玩家部分权限</td></tr></tbody></table></div><h2 id="身份验证"><a href="#身份验证" class="headerlink" title="身份验证"></a>身份验证</h2><div class="story post-story"><p>AuthMe 的相关命令：</p><table><thead><tr><th>指令</th><th>作用</th><th>备注</th></tr></thead><tbody><tr><td>/register</td><td>注册用户</td><td>使用新用户名首次登录使用</td></tr><tr><td>/login</td><td>登录用户</td><td>每次登录使用</td></tr></tbody></table></div><h2 id="箱子锁头"><a href="#箱子锁头" class="headerlink" title="箱子锁头"></a>箱子锁头</h2><div class="story post-story"><p>对于箱类，只需放置木牌即可，玩家名会自动生成；对于门类，放置木牌在门上或周围的方块上即可，内容自动生成。</p><p>右击木牌编辑木牌，输入<code>/blocklocker &lt;行数&gt; &lt;文本&gt;</code>来编辑木牌。</p></div><h2 id="拓展命令"><a href="#拓展命令" class="headerlink" title="拓展命令"></a>拓展命令</h2><div class="story post-story"><p>CMI 的相关命令：</p><table><thead><tr><th>指令</th><th>作用</th><th>备注</th></tr></thead><tbody><tr><td>/cmi afk</td><td>切换状态</td><td>可以在离开和回来状态切换</td></tr><tr><td>/cmi back</td><td>返回传送</td><td>传回上一个传送点</td></tr><tr><td>/cmi balance</td><td>金钱查询</td><td>查询金钱数量</td></tr><tr><td>/cmi baltop</td><td>金钱排行</td><td>查询金钱排行</td></tr><tr><td>/cmi home</td><td>传送回家</td><td>传送回家</td></tr><tr><td>/cmi homes</td><td>家的列表</td><td>查看所有的家</td></tr><tr><td>/cmi list</td><td>显示玩家</td><td>显示在线玩家</td></tr><tr><td>/cmi mirror start</td><td>打开镜像</td><td>开启镜像功能，可以搭建镜像建筑</td></tr><tr><td>/cmi mirror stop</td><td>关闭镜像</td><td>关闭镜像功能</td></tr><tr><td>/cmi playtime</td><td>游戏时间</td><td>显示玩家游玩时间</td></tr><tr><td>/cmi playtimetop</td><td>时间排行</td><td>显示玩家游玩时间排行</td></tr><tr><td>/cmi sethome</td><td>设置位置</td><td>设置家的位置</td></tr><tr><td>/cmi setspawn</td><td>设重生点</td><td>设置玩家的重生点</td></tr><tr><td>/cmi spawn</td><td>传重生点</td><td>传送到出生点</td></tr><tr><td>/cmi tpa &lt;玩家名称&gt;</td><td>传到玩家</td><td>将自己传送到指定玩家附近</td></tr><tr><td>/cmi tpaccept</td><td>接受传送</td><td>接受其他玩家传送申请</td></tr><tr><td>/cmi tpahere &lt;玩家名称&gt;</td><td>召唤玩家</td><td>将指定玩家传送到自己附近</td></tr><tr><td>/cmi warp</td><td>传送列表</td><td>查看服务器的传送列表</td></tr></tbody></table></div><h2 id="游戏商城"><a href="#游戏商城" class="headerlink" title="游戏商城"></a>游戏商城</h2><div class="story post-story"><p>左键点击即可购买，然后进入输入模式，输入购买数量即可。</p><p>如需出售商品，同上面的操作相同。</p></div><h2 id="玩家领地"><a href="#玩家领地" class="headerlink" title="玩家领地"></a>玩家领地</h2><div class="story post-story"><p>Residence 的相关命令：</p><table><thead><tr><th>指令</th><th>作用</th><th>备注</th></tr></thead><tbody><tr><td>/res create &lt;领地名称&gt;</td><td>创建领地</td><td>先用木锄划出领地范围，然后输入该命令创建领地</td></tr><tr><td>/res remove</td><td>删除领地</td><td>删除游戏角色当前所处领地，前提是有操作权限</td></tr></tbody></table></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 资源分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杜老师说容器：什么是 Docker in Docker</title>
+      <link href="/401/"/>
+      <url>/401/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者构建的代码和自动化脚本打包成 Docker 镜像，然后部署在各个运行环境中。</p></blockquote><span id="more"></span><h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><div class="story post-story"><p>而在 CI/CD 中，我们常用一些 CI/CD 服务器，比如 Jenkins 和 GoCD 来构建与部署我们的应用，从而实现 CI/CD 自动化。现在一些 CI/CD 服务器也被 Docker 化运行在真实的物理机上。于是我们需在 CI/CD 服务器的 Docker container 里面来 build 与 run 我们的 Docker 镜像，这就涉及到 Docker in Docker 问题。</p><p>一个很自然的想法：我们是不是需要在 CI/CD 服务器镜像中安装一个 Docker Daemon 和 Docker 命令？但是 Docker 里面跑 Docker 总感觉有些蹩脚，额外安装与运行 Docker 无疑增加了 CI/CD 服务器镜像的大小，同时还增加了 Docker 的深度。</p></div><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><div class="story post-story"><p>实际上我们并不需要在 CI/CD 服务器上安装 Docker。通过上面的命令在 CI/CD 服务器上运行我们的镜像：</p><pre class="line-numbers language-none"><code class="language-none">docker run -v &#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Docker 采取的是 C/S 架构，Docker 的成功运行需要 Docker Daemon 和 Docker Client 的支持，当我们运行一些 docker build 等命令时，实际需要 Docker Client 连接 Docker Daemon 发送命令，Docker Daemon 会在宿主机操作系统分配文件、网络资源：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/11/401-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/11/401-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/11/401-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 运维教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 容器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>杜老师说图床：去不图床坚决抵制违禁图片</title>
       <link href="/400/"/>
       <url>/400/</url>
