@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1637122921427" as="style">
+  <link rel="preload" href="/css/style.css?time=1637127811179" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-11-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-11-17T04:19:59.965Z">
+<meta property="article:modified_time" content="2021-11-17T05:41:30.474Z">
 <meta property="article:author" content="Teacher Du">
 <meta property="article:tag" content="容器">
 <meta name="twitter:card" content="summary">
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1637122921427" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1637122921427"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1637127811179" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1637127811179"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2906,7 +2906,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：900 字</p>
+      <p>字数：953 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2946,8 +2946,10 @@ Status: Downloaded newer image for minecraftservers&#x2F;minecraft-server:latest
 docker.io&#x2F;minecraftservers&#x2F;minecraft-server:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：在 Docker Hub 上有很多镜像，大多都是玩家自行创建上传分享。杜老师选了一个版本最新且功能最全的为示例。</p>
-</div><h2 id="存档目录"><a href="#存档目录" class="headerlink" title="存档目录"></a>存档目录</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@dusays:~$ sudo mkdir &#x2F;data
-penn@dusays:~$ sudo chmod 777 &#x2F;data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</div><h2 id="存档目录"><a href="#存档目录" class="headerlink" title="存档目录"></a>存档目录</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@dusays:~$ sudo mkdir -v &#x2F;data
+mkdir: 已创建目录 &#39;&#x2F;data&#39;
+penn@dusays:~$ sudo chmod 777 -c &#x2F;data
+&#39;&#x2F;data&#39; 的权限模式已由 0755 (rwxr-xr-x) 更改为 0777 (rwxrwxrwx)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：创建服务器运行容器前，我们需要先创建好游戏存档目录，并赋予 Docker 访问权限。</p>
 </div><h2 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@dusays:~$ sudo docker run -itd --name&#x3D;mc -v &#x2F;data:&#x2F;data -p 25565:25565 \
@@ -2981,9 +2983,10 @@ drwxrwxr-x 3 penn penn     4096 11月 16 18:17 world_the_end<span aria-hidden="t
 
 <p>注意：启动容器后稍等会，就会在游戏存档目录中，看到新生成的相关文件，具体作用和配置可自行搜索。</p>
 </div><h2 id="进控制台"><a href="#进控制台" class="headerlink" title="进控制台"></a>进控制台</h2><div class="story post-story"><p>如果需要进入到游戏控制台，可以参考如下命令，如需退出按<kbd>CTRL</kbd>+<kbd>C</kbd>即可：</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo docker exec -i mc rcon-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">sudo docker exec -i mc rcon-cli
+&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>还有一种进入方式，参考如下命令，只是退出比较麻烦，需先按<kbd>CTRL</kbd>+<kbd>P</kbd>，后再按<kbd>CTRL</kbd>+<kbd>Q</kbd>才行：</p>
+<p>还有一种进入方式，参考如下命令。进入后没有任何提示符，直接输入指令操作即可。只是退出比较麻烦，需先按<kbd>CTRL</kbd>+<kbd>P</kbd>，后再按<kbd>CTRL</kbd>+<kbd>Q</kbd>才行：</p>
 <pre class="line-numbers language-none"><code class="language-none">sudo docker attach mc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 </div>
@@ -3848,7 +3851,7 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>310.1k 字</div>
+          <div>310.2k 字</div>
         </div>
       
 
@@ -3860,7 +3863,7 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Nov 17 2021 12:20:11 GMT+0800 (China Standard Time)</div>
+            <div id="last-update" style="display: none;">Wed Nov 17 2021 13:41:42 GMT+0800 (China Standard Time)</div>
             <div id="last-update-show">2021-11-17 日</div>
           
         </div>
@@ -4108,8 +4111,8 @@ var _hmt = _hmt || [];
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1637122921427')
-      volantis.js('/js/message.js?time=1637122921427', () => {
+      volantis.css('/css/message.css?time=1637127811179')
+      volantis.js('/js/message.js?time=1637127811179', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -4154,8 +4157,8 @@ var _hmt = _hmt || [];
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1637122921427')
-      volantis.js('/js/message.js?time=1637122921427', () => {
+      volantis.css('/css/message.css?time=1637127811179')
+      volantis.js('/js/message.js?time=1637127811179', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -4214,8 +4217,8 @@ var _hmt = _hmt || [];
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1637122921427')
-      volantis.js('/js/message.js?time=1637122921427', () => {
+      volantis.css('/css/message.css?time=1637127811179')
+      volantis.js('/js/message.js?time=1637127811179', () => {
         hideMessage(done);
       });
     } else {
@@ -4261,19 +4264,19 @@ var _hmt = _hmt || [];
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1637122921427")
+        volantis.js("/js/plugins/sites.js?time=1637127811179")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1637122921427")
+        volantis.js("/js/plugins/friends.js?time=1637127811179")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1637122921427")
+        volantis.js("/js/plugins/contributors.js?time=1637127811179")
       }
     
   };
@@ -4369,7 +4372,7 @@ var _hmt = _hmt || [];
 
 
 
-<script src="/js/app.js?time=1637122921427.js"></script>
+<script src="/js/app.js?time=1637127811179.js"></script>
 
 
 <!-- optional -->
@@ -4382,7 +4385,7 @@ var _hmt = _hmt || [];
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1637122921427");
+    return volantis.js("/js/search/hexo.js?time=1637127811179");
   }
 
   function loadSearchService() {
@@ -4655,7 +4658,7 @@ var _hmt = _hmt || [];
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/402/","name":"杜老师说容器：使用 Docker 搭建我的世界服务器"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说容器：使用 Docker 搭建我的世界服务器","description":"\n这几天一直在研究容器，偶尔抽空玩会我的世界，突发奇想：可否通过 Docker 搭建我的世界服务器？今天就来操作下吧！\n","datePublished":"2021-11-11T16:00:00.000Z","dateModified":"2021-11-17T04:19:59.965Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/402/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/402/","wordCount":60,"articleSection":"运维教程","keywords":"容器","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/402/","name":"杜老师说容器：使用 Docker 搭建我的世界服务器"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说容器：使用 Docker 搭建我的世界服务器","description":"\n这几天一直在研究容器，偶尔抽空玩会我的世界，突发奇想：可否通过 Docker 搭建我的世界服务器？今天就来操作下吧！\n","datePublished":"2021-11-11T16:00:00.000Z","dateModified":"2021-11-17T05:41:30.474Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/402/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/402/","wordCount":60,"articleSection":"运维教程","keywords":"容器","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
