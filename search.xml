@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>杜老师说容器：使用 Docker 搭建我的世界服务器</title>
+      <link href="/402/"/>
+      <url>/402/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>这几天一直在研究容器，偶尔抽空玩会我的世界，突发奇想：可否通过 Docker 搭建我的世界服务器？今天就来操作下吧！</p></blockquote><span id="more"></span><h2 id="设备需求"><a href="#设备需求" class="headerlink" title="设备需求"></a>设备需求</h2><div class="story post-story"><p>如果只是自己游戏，那主机的配置没啥要求，能进就行。如果是联网大家玩，建议选择 CPU 主频较高的主机，不要考虑多核多线程的问题，目前不管官方还是其它核心，对多线程优化都不够好。</p><p>如果更喜欢高版本的小伙伴「如杜老师」建议使用水桶或纸飞机核心，官方核心实在不推荐的！杜老师强烈推荐纸飞机，相比水桶稳定性差一些「偶尔可能报错，但不影响游戏」纸飞机的性能优化还是很明显的，当然还有其它衍生版本，这里就不再推荐了。</p></div><h2 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@dusays:~$ sudo docker pull minecraftservers&#x2F;minecraft-serverUsing default tag: latestlatest: Pulling from minecraftservers&#x2F;minecraft-server476c1ed2267c: Pull complete 4f4fb700ef54: Pull complete Digest: sha256:b279da117768925b4a773176dee5c0e8669e3af2abcca58c11b82a05640c6248Status: Downloaded newer image for minecraftservers&#x2F;minecraft-server:latestdocker.io&#x2F;minecraftservers&#x2F;minecraft-server:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：在 Docker Hub 上有很多镜像，大多都是玩家自行创建上传分享。杜老师选了一个版本最新且功能最全的为示例。</p></div><h2 id="存档目录"><a href="#存档目录" class="headerlink" title="存档目录"></a>存档目录</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@dusays:~$ sudo mkdir &#x2F;datapenn@dusays:~$ sudo chmod 777 &#x2F;data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>注意：创建服务器运行容器前，我们需要先创建好游戏存档目录，并赋予 Docker 访问权限。</p></div><h2 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@dusays:~$ sudo docker run -itd --name&#x3D;mc -v &#x2F;data:&#x2F;data -p 25565:25565 \&gt; -e EULA&#x3D;TRUE -e VERSION&#x3D;1.17 -e TYPE&#x3D;PAPER minecraftservers&#x2F;minecraft-server0d3f314da12e2e2d9c59ac3a40a2102507c98c54b7601d1332a6f627ed15a4b2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>注意：-e EULA=TRUE 为必须参数，如果不设置将无法正常进入游戏；-e VERSION=1.17 用于指定服务端游戏版本，杜老师用的就是 1.17；-e TYPE=PAPER 为指定核心，优势在前文踢到了。</p></div><h2 id="查看存档"><a href="#查看存档" class="headerlink" title="查看存档"></a>查看存档</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">penn@dusays:~$ ls -l &#x2F;data总用量 59068-rw-rw-r-- 1 penn penn        2 11月 16 18:16 banned-ips.json-rw-rw-r-- 1 penn penn        2 11月 16 18:16 banned-players.json-rw-rw-r-- 1 penn penn     1136 11月 16 18:16 bukkit.ymldrwxrwxr-x 2 penn penn     4096 11月 16 18:16 cache-rw-rw-r-- 1 penn penn      598 11月 16 18:16 commands.yml-rw-rw-r-- 1 penn penn       65 11月 16 18:15 eula.txt-rw-rw-r-- 1 penn penn     2576 11月 16 18:16 help.ymldrwxrwxr-x 2 penn penn     4096 11月 16 18:16 logs-rw-rw-r-- 1 penn penn        2 11月 16 18:16 ops.json-rw-rw-r-- 1 penn penn 60391784 11月 16 18:16 paper-1.17-79.jar-rw-rw-r-- 1 penn penn     8604 11月 16 18:17 paper.yml-rw-rw-r-- 1 penn penn        0 11月 16 18:16 permissions.ymldrwxrwxr-x 3 penn penn     4096 11月 16 18:16 plugins-rwxr-xr-x 1 penn penn     1220 11月 16 18:16 server.properties-rw-rw-r-- 1 penn penn     4367 11月 16 18:17 spigot.yml-rw-rw-r-- 1 penn penn        2 11月 16 18:16 usercache.json-rw-rw-r-- 1 penn penn       44 11月 16 18:16 version_history.json-rw-rw-r-- 1 penn penn        2 11月 16 18:16 whitelist.jsondrwxrwxr-x 8 penn penn     4096 11月 16 18:17 worlddrwxrwxr-x 3 penn penn     4096 11月 16 18:17 world_netherdrwxrwxr-x 3 penn penn     4096 11月 16 18:17 world_the_end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：启动容器后稍等会，就会在游戏存档目录中，看到新生成的相关文件，具体作用和配置可自行搜索。</p></div><h2 id="进控制台"><a href="#进控制台" class="headerlink" title="进控制台"></a>进控制台</h2><div class="story post-story"><p>如果需要进入到游戏控制台，可以参考如下命令，如需退出按<kbd>CTRL</kbd>+<kbd>C</kbd>即可：</p><pre class="line-numbers language-none"><code class="language-none">sudo docker exec -i mc rcon-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>还有一种进入方式，参考如下命令，只是退出比较麻烦，需先按<kbd>CTRL</kbd>+<kbd>P</kbd>，后再按<kbd>CTRL</kbd>+<kbd>Q</kbd>才行：</p><pre class="line-numbers language-none"><code class="language-none">sudo docker attach mc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 运维教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 容器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>杜老师说容器：什么是 Docker in Docker</title>
       <link href="/401/"/>
       <url>/401/</url>
