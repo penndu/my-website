@@ -29,31 +29,6 @@
     
     
     <entry>
-      <title>杜老师说游戏：我的世界插件使用介绍</title>
-      <link href="/406/"/>
-      <url>/406/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>杜老师说游戏服添加了很多插件，不少新来的小伙伴因为不了解它们的使用方式，没有获得更好游戏体验。杜老师收集了向玩家开放的一些命令，方便小伙伴们查询使用。此文章不定期更新，会根据玩家需求添加不同的命令，如有权限需求，也可在评论区留言！</p></blockquote><span id="more"></span><h2 id=""><a href="#" class="headerlink" title=""></a></h2><div class="story post-story"><p>uniq 可以用来按行去重</p><p>3.1 简单例子：</p><pre class="line-numbers language-none"><code class="language-none">~&#x2F;test  cat a.txtvimvimvimvimtutorvirtualenvwcwcwgetwgetwgetwhich~&#x2F;test  cat a.txt | uniqvimvimtutorvirtualenvwcwgetwhich~&#x2F;test  uniq a.txt   # 同上vimvimtutorvirtualenvwcwgetwhich<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>3.2 -u 显示无重复的行：</p><pre class="line-numbers language-none"><code class="language-none">~&#x2F;test  cat a.txt | uniq -uvimtutorvirtualenvwhich<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>3.3 -d 显示有重复的行：</p><pre class="line-numbers language-none"><code class="language-none">~&#x2F;test  uniq -d a.txtvimwcwget<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>3.4 -c 显示每行重复的次数：</p><pre class="line-numbers language-none"><code class="language-none">~&#x2F;test  cat a.txt | uniq -c   3 vim   1 vimtutor   1 virtualenv   2 wc   3 wget   1 which<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>3.5 综合命令：</p><pre class="line-numbers language-none"><code class="language-none">history | cut -c 8- | cut -f 1 -d &#39; &#39; | sort | uniq -c | sort -n | wc -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 资源分享 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 游戏 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>杜老师说容器：使用 Docker 搭建我的世界服务器</title>
       <link href="/402/"/>
       <url>/402/</url>
