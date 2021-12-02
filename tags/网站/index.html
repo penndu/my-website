@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1638360065267" as="style">
+  <link rel="preload" href="/css/style.css?time=1638408945184" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1657,8 +1657,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1638360065267" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1638360065267"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1638408945184" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1638408945184"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2405,13 +2405,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 				</ul>
 			</div>
-
+      
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fas fa-search fa-fw"></i>
           <input type="text" class="input u-search-input" placeholder="键入关键词按「回车」搜索" />
         </form>
       </div>
+      
 
 			<ul class='switcher nav-list-h m-phone'>
 				
@@ -2866,7 +2867,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>为了方便更新文章，杜老师使用 Docker 搭建 GitLab 做文章管理，后期迁移到群晖上，并做了外网的映射。迁移后需要修改 GitLab 的域名及端口，那么就分享下修改方法。 </p>
@@ -2925,7 +2926,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>鉴于最近 GitHub 从中国大陆访问网速较慢，而且现在国内阿里云 OSS 支持将静态网站部署在上面，而且访问速度尚可。今天杜老师为大家介绍一款插件，可以将 Hexo 部署到 OSS。</p>
@@ -2984,7 +2985,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>现在 HTTPS 已非常普遍，很多网站都加了 SSL 证书，但仍然有许多访客使用 HTTP 的方式访问，今天杜老师分享下两种通过 Nginx 实现强制 HTTPS 访问方法。</p>
@@ -3043,7 +3044,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>当搭建非 80 端口服务时，是无法直接通过域名访问的。一般我们会通过 Nginx 的反向代理功能实现端口重定向，今天我们聊一下三种重定向解决方案。</p>
@@ -3102,7 +3103,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>正向代理是一个位于客户端和目标服务器之间的服务器，为了从目标服务器取得内容，客户端向代理服务器发送一个请求并指定目标，然后代理服务器向目标服务器转交请求并将获得的内容返回给客户端。</p>
@@ -3161,7 +3162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>反向代理是指以代理服务器来接受 internet 上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给 internet 上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
@@ -3220,7 +3221,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>我们在搭建网站时，为了方便管理，常常会选用 PHP+MySQL 这种架构，Web 引擎可选择 Apache 或是 Nginx。今天杜老师说一下，选择 Apache 时，主配置文件和站点配置文件如何改写！</p>
@@ -3279,7 +3280,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>我们在搭建网站时，为了方便管理，常常会选用 PHP+MySQL 这种架构，Web 引擎可选择 Apache 或是 Nginx。今天杜老师说一下，选择 Nginx 时，主配置文件和站点配置文件如何改写！</p>
@@ -3338,7 +3339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>我们想访问一个网站时，每次按下回车或是点击链接，都希望网站页面能尽快的映入到我们眼帘，那您知道每次等待的时间中，都发生了什么？</p>
@@ -3397,7 +3398,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>我们在打开网站时，会发现有些网站打开特别慢，有些网站瞬间打开，今天杜老师与大家聊聊常用页面加载速度优化方法！</p>
@@ -3456,7 +3457,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>有学生找到我，说想做一个和我这个一样的博客，但不知道如何操作。今天杜老师与大家聊下，如何搭建一个博客，以及一个小博客的成长！</p>
@@ -3515,7 +3516,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </a>
     </h2>
   
-  <div class='md' itemprop="articleBody">
+  <div class='md article-desc' itemprop="articleBody">
     
       <blockquote>
 <p>有个同学，父亲开了一家装修公司，想在网上搭建一个平台，做宣传的同时，也可以和同行相互交流。最后他来问我，选什么平台比较好，如何搭建这种平台，那杜老师就来说下如何建好家装论坛！</p>
@@ -4273,8 +4274,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Dec 01 2021 20:00:54 GMT+0800 (China Standard Time)</div>
-            <div id="last-update-show">2021-12-01 日</div>
+            <div id="last-update" style="display: none;">Thu Dec 02 2021 09:35:34 GMT+0800 (China Standard Time)</div>
+            <div id="last-update-show">2021-12-02 日</div>
           
         </div>
         
@@ -4324,7 +4325,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-12-01 日';
+            document.getElementById('last-update-show').innerHTML = '2021-12-02 日';
           }
         </script>
         
@@ -4524,8 +4525,8 @@ var _hmt = _hmt || [];
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1638360065267')
-      volantis.js('/js/message.js?time=1638360065267', () => {
+      volantis.css('/css/message.css?time=1638408945184')
+      volantis.js('/js/thirdparty/message.js?time=1638408945184', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -4570,8 +4571,8 @@ var _hmt = _hmt || [];
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1638360065267')
-      volantis.js('/js/message.js?time=1638360065267', () => {
+      volantis.css('/css/message.css?time=1638408945184')
+      volantis.js('/js/thirdparty/message.js?time=1638408945184', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -4630,8 +4631,8 @@ var _hmt = _hmt || [];
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1638360065267')
-      volantis.js('/js/message.js?time=1638360065267', () => {
+      volantis.css('/css/message.css?time=1638408945184')
+      volantis.js('/js/thirdparty/message.js?time=1638408945184', () => {
         hideMessage(done);
       });
     } else {
@@ -4677,19 +4678,19 @@ var _hmt = _hmt || [];
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1638360065267")
+        volantis.js("/js/plugins/sites.js?time=1638408945184")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1638360065267")
+        volantis.js("/js/plugins/friends.js?time=1638408945184")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1638360065267")
+        volantis.js("/js/plugins/contributors.js?time=1638408945184")
       }
     
   };
@@ -4785,7 +4786,7 @@ var _hmt = _hmt || [];
 
 
 
-<script src="/js/app.js?time=1638360065267.js"></script>
+<script src="/js/app.js?time=1638408945184.js"></script>
 
 
 <!-- optional -->
@@ -4798,7 +4799,7 @@ var _hmt = _hmt || [];
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1638360065267");
+    return volantis.js("/js/search/hexo.js?time=1638408945184");
   }
 
   function loadSearchService() {
@@ -4887,6 +4888,46 @@ var _hmt = _hmt || [];
 
 
 
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://unpkg.com/swiper@6/swiper-bundle.min.css");
+    volantis.js("https://unpkg.com/swiper@6/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function pjax_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  });
+</script>
 
 
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
