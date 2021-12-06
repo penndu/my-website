@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1638813264984" as="style">
+  <link rel="preload" href="/css/style.css?time=1638814431378" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1638813264984" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1638813264984"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1638814431378" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1638814431378"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -3840,7 +3840,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Tue Dec 07 2021 01:53:03 GMT+0800 (China Standard Time)</div>
+            <div id="last-update" style="display: none;">Tue Dec 07 2021 02:12:25 GMT+0800 (China Standard Time)</div>
             <div id="last-update-show">2021-12-07 日</div>
           
         </div>
@@ -4088,8 +4088,8 @@ var _hmt = _hmt || [];
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1638813264984')
-      volantis.js('/js/thirdparty/message.js?time=1638813264984', () => {
+      volantis.css('/css/message.css?time=1638814431378')
+      volantis.js('/js/thirdparty/message.js?time=1638814431378', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -4134,8 +4134,8 @@ var _hmt = _hmt || [];
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1638813264984')
-      volantis.js('/js/thirdparty/message.js?time=1638813264984', () => {
+      volantis.css('/css/message.css?time=1638814431378')
+      volantis.js('/js/thirdparty/message.js?time=1638814431378', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -4194,8 +4194,8 @@ var _hmt = _hmt || [];
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1638813264984')
-      volantis.js('/js/thirdparty/message.js?time=1638813264984', () => {
+      volantis.css('/css/message.css?time=1638814431378')
+      volantis.js('/js/thirdparty/message.js?time=1638814431378', () => {
         hideMessage(done);
       });
     } else {
@@ -4241,19 +4241,19 @@ var _hmt = _hmt || [];
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1638813264984")
+        volantis.js("/js/plugins/sites.js?time=1638814431378")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1638813264984")
+        volantis.js("/js/plugins/friends.js?time=1638814431378")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1638813264984")
+        volantis.js("/js/plugins/contributors.js?time=1638814431378")
       }
     
   };
@@ -4349,7 +4349,7 @@ var _hmt = _hmt || [];
 
 
 
-<script src="/js/app.js?time=1638813264984.js"></script>
+<script src="/js/app.js?time=1638814431378.js"></script>
 
 
 <!-- optional -->
@@ -4362,7 +4362,7 @@ var _hmt = _hmt || [];
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1638813264984");
+    return volantis.js("/js/search/hexo.js?time=1638814431378");
   }
 
   function loadSearchService() {
@@ -4515,7 +4515,7 @@ var _hmt = _hmt || [];
       link.addEventListener("click", (event) => {
         event.preventDefault();
         // 这里的 addTop 是通过错位使得 toc 自动展开.
-        volantis.scroll.to(target,{addTop: 5, observer:true})
+        volantis.scroll.to(target,{addTop: 5, observer:false})
         // Anchor id
         history.pushState(null, document.title, "#" + target.id);
       });
