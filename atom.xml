@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2021-11-16T13:47:06.463Z</updated>
+  <updated>2021-12-06T14:58:59.118Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说游戏：杜老师服务器皮肤修改教程</title>
+    <link href="https://dusays.com/407/"/>
+    <id>https://dusays.com/407/</id>
+    <published>2021-11-26T16:00:00.000Z</published>
+    <updated>2021-12-06T14:58:59.118Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>近日群中有小伙伴建议装个皮肤管理插件，为了满足大家需求，杜老师不仅安装了皮肤插件，而且还搭建了一个在线皮肤设置工具，更方便小伙伴们的操作，此文简单说明工具如何使用。</p></blockquote><span id="more"></span><h2 id="皮肤管理"><a href="#皮肤管理" class="headerlink" title="皮肤管理"></a>皮肤管理</h2><div class="story post-story"><p>此工具需将游戏服务器中的身份认证数据由本地存储切换到远程数据库中，实现直接登录即可完成皮肤修改操作。</p><p>皮肤修改的地址 <code>https://skin.dusays.com</code>。</p></div><h2 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h2><div class="story post-story"><p>首先登录您的游戏账户，用户名为游戏内的昵称「注意一律小写」密码则为平时登录密码：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/11/407-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/11/407-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/11/407-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>上传从其它平台找到的皮肤文件，上传成功会有提示：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/11/407-2.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/11/407-2.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/11/407-2.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>回到游戏内输入指令<code>/skin update</code> 即可刷新皮肤：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/11/407-3.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/11/407-3.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/11/407-3.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>脱掉装备即可看到刷新后的皮肤效果：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/11/407-4.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/11/407-4.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/11/407-4.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;近日群中有小伙伴建议装个皮肤管理插件，为了满足大家需求，杜老师不仅安装了皮肤插件，而且还搭建了一个在线皮肤设置工具，更方便小伙伴们的操作，此文简单说明工具如何使用。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说游戏：我的世界插件使用介绍</title>
@@ -450,29 +473,6 @@
     
     
     <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说测试：杜老师的人格测试</title>
-    <link href="https://dusays.com/384/"/>
-    <id>https://dusays.com/384/</id>
-    <published>2021-09-18T16:00:00.000Z</published>
-    <updated>2021-09-07T18:00:13.401Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>杜老师分享了很多技术文章，却很少提及自己的生活日常，想更加的了解杜老师吗？快来看看杜老师的人格测试！欢迎小伙伴们将自己的测试结果留言给杜老师。</p></blockquote><span id="more"></span><h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><div class="story post-story"><p>解释结果如图：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/09/384-1.jpg-1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/384-1.jpg-1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/384-1.jpg-1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="人格介绍"><a href="#人格介绍" class="headerlink" title="人格介绍"></a>人格介绍</h2><div class="story post-story"><p>守卫者人格类型是一个很独特的类型，他们的许多品质与他们自身的特质不相符。虽然非常照顾他人感受，一旦到了需要保护家人或朋友的时候，就会变得非常强悍；虽然安静内向，却有很好的社交技巧和强大社会关系；虽然追求安全、稳定，但只要他们得到理解和尊重，就会愿意接受改变。和很多的事物一样，有守卫者人格类型的人作为一个整体不可小觑，他们的身份由他们如何用这些强项而定义。</p><p>他们是所有人格类型中占人口总数比例最大的一个类型，有接近 13%。他们既能坚守最好的传统也乐善好施，所以会从事一些有历史感的行业，比如医学、学术和社会慈善等工作。这种人格类型的人「尤其是性格不安定的那部分」经常一丝不苟到完美主义的程度，虽然他们有拖延的习惯，但他们总能可靠地按时完成工作。守卫者人格类型的人重视自己的责任，会时刻尽最大努力超出预期地让别人满意，无论在家庭还是工作中。</p></div><h2 id="眼见为实"><a href="#眼见为实" class="headerlink" title="眼见为实"></a>眼见为实</h2><div class="story post-story"><p>守卫者人格类型的人所面临挑战在于，如何确保让别人注意自己做的事。他们总是对自己的成就轻描淡写，虽然这样的善良经常会得到尊重，自私自利的人可能占他们爱奉献和谦虚的便宜，会把工作推给他们，荣誉留给自己。如果想保持自信和热情，守卫者们需要知道什么时候说不并用于为自己反抗。</p><p>天生喜欢社交是内向者们身上少见的特点，守卫者们不会把出色的记忆力用在数据和琐事，而是记住人和他们生活中的细节。他们擅长赠送礼物，他们天生富有想象力且感情细腻，他们的礼物可以送到接收者的心坎里。对于被守卫者们当作朋友的同事们来说是这样，而在家庭里守卫者们会尽情表达爱意。</p></div><h2 id="会保护你"><a href="#会保护你" class="headerlink" title="会保护你"></a>会保护你</h2><div class="story post-story"><p>守卫者人格类型的人是一个奇妙团体，正事没有完成之前，他们绝对不会虚度光阴。与人亲密接触的能力是其他内向型遥不可及的，他们使用这些关系来维系一个相互支持的快乐家庭，这对每个参与其中的人来说都很幸运。</p><p>他们在聚光灯下可能永远都不会觉得舒服，把团队成就归功于自己会使他们感到内疚，但是如果他们的努力被认可，守卫者们从所做的事情中得到的满足是其他人格类型无法企及的。</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;杜老师分享了很多技术文章，却很少提及自己的生活日常，想更加的了解杜老师吗？快来看看杜老师的人格测试！欢迎小伙伴们将自己的测试结果留言给杜老师。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="测试" scheme="https://dusays.com/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
