@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   volantis.requestAnimationFrame(() => {
     VolantisApp.init();
     VolantisApp.subscribe();
-    volantisFancyBox.loadFancyBox();
+    VolantisFancyBox.init();
     highlightKeyWords.startFromURL();
     locationHash();
 
     volantis.pjax.push(() => {
       VolantisApp.pjaxReload();
+      VolantisFancyBox.init();
       sessionStorage.setItem("domTitle", document.title);
-      highlightKeyWords.startFromURL()
-      volantisFancyBox.pjaxReload()
+      highlightKeyWords.startFromURL();
     }, 'app.js');
     volantis.pjax.send(() => {
       volantis.dom.switcher.removeClass('active'); // 关闭移动端激活的搜索框
@@ -485,81 +485,111 @@ const VolantisApp = (() => {
 })()
 Object.freeze(VolantisApp);
 
-const volantisFancyBox = (() => {
+const VolantisFancyBox = (() => {
   const fn = {};
 
-  fn.initFB = () => {
-    const group = new Set();
-    group.add('default');  // 默认类
-    group.add('Comments'); // 评论类
-
-    if (!document.querySelector(".md .gallery img, .fancybox")) return;
-    document.querySelectorAll(".md .gallery").forEach(function (ele) {
-      if (ele.querySelector("img")) {
-        group.add(ele.getAttribute('data-group') || 'default');
-      }
-    })
-
-    Fancybox.destroy();
-    for (const iterator of group) {
-      if (!!iterator) Fancybox.bind('[data-fancybox="' + iterator + '"]', {
-        Hash: false
-      });
-    }
-  }
-
   fn.loadFancyBox = (done) => {
-    if (!document.querySelector(".md .gallery img, .fancybox")) return;
     volantis.css(" https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css");
     volantis.js('https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js').then(() => {
-      fn.initFB();
       if (done) done();
     })
   }
 
   /**
-   * 指定元素的监听处理
+   * 加载及处理
+   * 
+   * @param {*} checkMain 是否只处理文章区域的文章
+   * @param {*} done      FancyBox 加载完成后的动作，默认执行分组绑定
+   * @returns 
+   */
+  fn.init = (checkMain = true, done = fn.groupBind) => {
+    if (!document.querySelector(".md .gallery img, .fancybox") && checkMain) return;
+    if (typeof Fancybox === "undefined") {
+      fn.loadFancyBox(done);
+    } else {
+      done();
+    }
+  }
+
+  /**
+   * 图片元素预处理
    * 
    * @param {*} selectors 选择器
-   * @param {*} flag      分组
+   * @param {*} name      分组
    */
-  fn.reloadFancyBox = (selectors, flag) => {
+  fn.elementHandling = (selectors, name) => {
     const nodeList = document.querySelectorAll(selectors);
     nodeList.forEach($item => {
-      if($item.hasAttribute('fancybox')) return;
+      if ($item.hasAttribute('fancybox')) return;
       $item.setAttribute('fancybox', '');
       const $link = document.createElement('a');
       $link.setAttribute('href', $item.src);
       $link.setAttribute('data-caption', $item.alt);
-      $link.setAttribute('data-fancybox', flag);
+      $link.setAttribute('data-fancybox', name);
       $link.classList.add('fancybox');
       $link.append($item.cloneNode());
       $item.replaceWith($link);
     })
-    fn.checkFancyBox();
   }
 
-  fn.checkFancyBox = () => {
-    if (typeof Fancybox === "undefined") {
-      fn.loadFancyBox();
-    } else {
-      fn.initFB();
+  /**
+   * 原生绑定
+   * 
+   * @param {*} selectors 选择器
+   */
+  fn.bind = (selectors) => {
+    fn.init(false, () => {
+      Fancybox.bind(selectors, {
+        groupAll: true,
+        Hash: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: function (fancybox, carousel, slide) {
+          return slide.$trigger.alt || null
+        }
+      });
+    });
+  }
+
+  /**
+   * 分组绑定
+   * 
+   * @param {*} groupName 分组名称
+   */
+  fn.groupBind = (groupName = null) => {
+    const group = new Set();
+
+    document.querySelectorAll(".gallery").forEach(ele => {
+      if (ele.querySelector("img")) {
+        group.add(ele.getAttribute('data-group') || 'default');
+      }
+    })
+
+    if (!!groupName) group.add(groupName);
+
+    for (const iterator of group) {
+      if (!!iterator) Fancybox.bind('[data-fancybox="' + iterator + '"]', {
+        Hash: false,
+        Thumbs: {
+          autoStart: false,
+        }
+      });
     }
   }
 
   return {
-    loadFancyBox: (done = null) => {
-      fn.loadFancyBox(done);
+    init: fn.init,
+    bind: (selectors) => {
+      fn.bind(selectors)
     },
-    initFancyBox: fn.initFB,
-    pjaxReload: fn.checkFancyBox,
-    reloadFancyBox: (selectors, flag = 'RELOAD', done = null) => {
-      fn.reloadFancyBox(selectors, flag);
-      if (done) done();
+    groupBind: (selectors, groupName = 'default') => {
+      fn.elementHandling(selectors, groupName);
+      fn.init(false, fn.groupBind(groupName));
     }
   }
 })()
-Object.freeze(volantisFancyBox);
+Object.freeze(VolantisFancyBox);
 
 // highlightKeyWords 与 搜索功能搭配 https://github.com/next-theme/hexo-theme-next/blob/eb194a7258058302baf59f02d4b80b6655338b01/source/js/third-party/search/local-search.js
 
