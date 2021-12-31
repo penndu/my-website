@@ -82,8 +82,8 @@ const SitesJS = {
       cfg.class = el.getAttribute('class');
       cfg.el = el;
       cfg.api = api;
-      cfg.avatar = 'https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg';
-      cfg.screenshot = 'https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg';
+      cfg.avatar = 'https://cdn.dusays.com/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg';
+      cfg.screenshot = 'https://cdn.dusays.com/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg';
       SitesJS.layout(cfg);
     }
   }
