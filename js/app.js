@@ -170,6 +170,7 @@ const VolantisApp = (() => {
       }
     }
   }
+
   // 设置滚动锚点
   fn.setScrollAnchor = () => {
     // click topBtn 滚动至bodyAnchor 【移动端 PC】
@@ -468,8 +469,6 @@ const VolantisApp = (() => {
     }
   }
 
-<<<<<<< HEAD
-=======
   // 工具类：返回时间间隔
   fn.utilTimeAgo = (dateTimeStamp) => {
     const minute = 1e3 * 60, hour = minute * 60, day = hour * 24, week = day * 7, month = day * 30;
@@ -644,7 +643,6 @@ const VolantisApp = (() => {
     }
   }
 
->>>>>>> dd7a683818abf94a352f39bdfa8d04f16c8a130c
   return {
     init: () => {
       fn.init();
@@ -676,10 +674,6 @@ const VolantisApp = (() => {
       })
       document.querySelector("#l_header .menu-phone.list-v").removeAttribute("style")
     },
-<<<<<<< HEAD
-    writeClipText: fn.writeClipText,
-    copyCode: fn.copyCode,
-=======
     utilCopyCode: fn.utilCopyCode,
     utilWriteClipText: fn.utilWriteClipText,
     utilTimeAgo: fn.utilTimeAgo,
@@ -687,7 +681,6 @@ const VolantisApp = (() => {
     question: fn.question,
     hideMessage: fn.hideMessage,
     messageCopyright: fn.messageCopyright
->>>>>>> dd7a683818abf94a352f39bdfa8d04f16c8a130c
   }
 })()
 Object.freeze(VolantisApp);
@@ -799,7 +792,7 @@ const VolantisFancyBox = (() => {
           fn.groupBind(groupName)
         });
       } catch (error) {
-        console.error(error) 
+        console.error(error)
       }
     }
   }
@@ -807,9 +800,7 @@ const VolantisFancyBox = (() => {
 Object.freeze(VolantisFancyBox);
 
 // highlightKeyWords 与 搜索功能搭配 https://github.com/next-theme/hexo-theme-next/blob/eb194a7258058302baf59f02d4b80b6655338b01/source/js/third-party/search/local-search.js
-
 // Question: 锚点稳定性未知
-
 // ToDo: 查找模式 
 // 0. (/////////要知道浏览器自带全页面查找功能 CTRL + F)
 // 1. 右键开启查找模式 / 导航栏菜单开启?? / CTRL + F ???
@@ -820,7 +811,6 @@ Object.freeze(VolantisFancyBox);
 // 6. 在选定区域中查找 querySelector ??
 // 7. 关闭查找模式
 // 8. 搜索跳转 (URL 入口) 自动开启查找模式 调用 scrollToNextHighlightKeywordMark()
-
 const highlightKeyWords = (() => {
   let fn = {}
   fn.markNum = 0
