@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1643112820179" as="style">
+  <link rel="preload" href="/css/style.css?time=1643117213987" as="style">
   <link rel="preload" href="https://cdn.dusays.com/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.dusays.com/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1643112820179" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1643112820179"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1643117213987" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1643117213987"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -3951,77 +3951,35 @@ vi 是 Linux 操作系统中最经典的文本编辑工具，只能编辑字符�
       
 
       
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Tue Jan 25 2022 20:12:39 GMT+0800 (China Standard Time)</div>
-            <div id="last-update-show">2022-01-25 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2022-01-25 日';
-          }
-        </script>
-        
-      
     </div>
   </div>
 </section>
 
   
 
+  
+    
+     
+
+ 
+<section class="widget shadow desktop mobile pjax"> 
+  
+  <header>
+    
+      <i class="fas fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+    
+  </header>
+
+ 
+  <div class='content'> 
+    <ul class="list entry navigation"><li><a class="widget-last" href="/104/"><div class="item"><time>2022-01-24</time><span>资源分享</span></div><span>杜老师说网盘：高速分享网盘推荐</span></a></li><li><a class="widget-last" href="/425/"><div class="item"><time>2022-01-22</time><span>资源分享</span></div><span>杜老师说软件：iObit Advanced SystemCare 15 Pro 清理优化工具</span></a></li><li><a class="widget-last" href="/424/"><div class="item"><time>2022-01-22</time><span>资源分享</span></div><span>杜老师说软件：Hard Disk Sentinel Pro 专业版硬盘检测工具软件</span></a></li><li><a class="widget-last" href="/365/"><div class="item"><time>2022-01-17</time><span>资源分享</span></div><span>杜老师说游戏：杜老师版我的世界「全版」</span></a></li><li><a class="widget-last" href="/423/"><div class="item"><time>2022-01-13</time><span>资源分享</span></div><span>杜老师说软件：Wise Care 365 Pro 系统优化清理软件</span></a></li></ul> 
+  </div> 
+</section> 
+
+  
+
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -4198,7 +4156,7 @@ var _hmt = _hmt || [];
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1643112820179.js"></script>
+<script src="/js/app.js?time=1643117213987.js"></script>
 
 
 
@@ -4212,19 +4170,19 @@ var _hmt = _hmt || [];
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1643112820179")
+        volantis.js("/js/plugins/sites.js?time=1643117213986")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1643112820179")
+        volantis.js("/js/plugins/friends.js?time=1643117213986")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1643112820179")
+        volantis.js("/js/plugins/contributors.js?time=1643117213986")
       }
     
   };
@@ -4340,7 +4298,7 @@ var _hmt = _hmt || [];
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1643112820179");
+    return volantis.js("/js/search/hexo.js?time=1643117213986");
   }
 
   function loadSearchService() {
