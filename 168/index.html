@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.0.0-alpha.5'>
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.0.0-alpha.6'>
   <meta name="generator" content="Hexo 6.0.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1643046614056" as="style">
+  <link rel="preload" href="/css/style.css?time=1643112819725" as="style">
   <link rel="preload" href="https://cdn.dusays.com/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.dusays.com/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1643046614056" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1643046614056"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1643112819725" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1643112819725"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1956,7 +1956,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://cdn.dusays.com/npm/jquery@3.5/dist/jquery.min.js")
+        return volantis.js("/libs/jquery/dist/jquery.min.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2783,6 +2783,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <link itemprop="mainEntityOfPage" href="https://dusays.com/168/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="">
   </span>
   
 
@@ -5379,7 +5383,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Tue Jan 25 2022 01:48:57 GMT+0800 (China Standard Time)</div>
+            <div id="last-update" style="display: none;">Tue Jan 25 2022 20:12:24 GMT+0800 (China Standard Time)</div>
             <div id="last-update-show">2022-01-25 日</div>
           
         </div>
@@ -5612,7 +5616,7 @@ var _hmt = _hmt || [];
 
 <script>
   
-  volantis.css("https://cdn.dusays.com/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css");
+  volantis.css("/libs/@fortawesome/fontawesome-free/css/all.min.css");
   
   
   
@@ -5623,7 +5627,7 @@ var _hmt = _hmt || [];
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1643046614056.js"></script>
+<script src="/js/app.js?time=1643112819725.js"></script>
 
 
 
@@ -5637,19 +5641,19 @@ var _hmt = _hmt || [];
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1643046614056")
+        volantis.js("/js/plugins/sites.js?time=1643112819725")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1643046614056")
+        volantis.js("/js/plugins/friends.js?time=1643112819725")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1643046614056")
+        volantis.js("/js/plugins/contributors.js?time=1643112819725")
       }
     
   };
@@ -5663,7 +5667,7 @@ var _hmt = _hmt || [];
 
 
 
-  <script defer src="https://cdn.dusays.com/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+  <script defer src="/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -5702,7 +5706,7 @@ var _hmt = _hmt || [];
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://cdn.dusays.com/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+<script defer src="/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -5765,7 +5769,7 @@ var _hmt = _hmt || [];
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1643046614056");
+    return volantis.js("/js/search/hexo.js?time=1643112819725");
   }
 
   function loadSearchService() {
@@ -5892,8 +5896,8 @@ var _hmt = _hmt || [];
   <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://unpkg.com/swiper@6/swiper-bundle.min.css");
-    volantis.js("https://unpkg.com/swiper@6/swiper-bundle.min.js").then(() => {
+    volantis.css("/libs/swiper/swiper-bundle.min.css");
+    volantis.js("/libs/swiper/swiper-bundle.min.js").then(() => {
       pjax_swiper();
     });
   }
@@ -6128,7 +6132,7 @@ var _hmt = _hmt || [];
 
 
 
-<script src="https://cdn.dusays.com/npm/pjax@0.2.8/pjax.min.js"></script>
+<script src="/libs/pjax/pjax.min.js"></script>
 
 
 <script>
@@ -6138,6 +6142,9 @@ var _hmt = _hmt || [];
         elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox]):not([onclick="return false;"]):not([target="_blank"]):not([target="view_window"]):not([href$=".xml"])',
         selectors: [
           "head title",
+          "head meta[name='description']",
+          "head meta[name='keywords']",
+          "head meta[property^='og']",
           
           "#l_main",
           "#pjax-header-nav-list",
