@@ -4586,7 +4586,7 @@ details[open] >div.content > details:last-child {
   margin-bottom: 20px;
 }
 .md .frame-wrap#iphone11 .frame {
-  background-image: url("https://cdn.dusays.com/gh/volantis-x/cdn-volantis@3/img/frame/iphone11.svg");
+  background-image: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/frame/iphone11.svg");
   width: 329px;
   height: 658px;
 }
