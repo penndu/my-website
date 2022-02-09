@@ -63,6 +63,29 @@
   </entry>
   
   <entry>
+    <title>杜老师说游戏：《Halo Wars 2》战地第1幕（制图机）「无人声版」</title>
+    <link href="https://dusays.com/433/"/>
+    <id>https://dusays.com/433/</id>
+    <published>2022-02-06T16:00:00.000Z</published>
+    <updated>2022-02-09T13:27:31.326Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>光环战争 2 由开发《全面战争》系列 Creative Assembly 工作室制作。Halo Wars 2 强势回归光环系列的即时战略游戏舞台。将由您率领斯巴达战士、疣猪号以及其他经典的光环部队加入到残酷的战争，并在史上最大的光环战场上与恐怖的全新敌人厮杀。</p></blockquote><span id="more"></span><h3 id=""><a href="#" class="headerlink" title=""></a></h3><pre class="line-numbers language-none"><code class="language-none">Running with gitlab-runner 14.7.0 (98daeee0)  on VM-20-12-centos u6yhrxygPreparing the &quot;shell&quot; executorUsing Shell executor...Preparing environmentRunning on VM-20-12-centos...Getting source from Git repositoryFetching changes with git depth set to 20...Reinitialized existing Git repository in &#x2F;root&#x2F;builds&#x2F;u6yhrxyg&#x2F;0&#x2F;vian&#x2F;vian&#x2F;.git&#x2F;fatal: git fetch-pack: expected shallow listfatal: The remote end hung up unexpectedlyERROR: Job failed: exit status 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;光环战争 2 由开发《全面战争》系列 Creative Assembly 工作室制作。Halo Wars 2 强势回归光环系列的即时战略游戏舞台。将由您率领斯巴达战士、疣猪号以及其他经典的光环部队加入到残酷的战争，并在史上最大的光环战场上与恐怖的全新敌人厮杀。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="游戏视频" scheme="https://dusays.com/categories/%E6%B8%B8%E6%88%8F%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>杜老师说游戏：《Halo Wars 2》战地第1幕（130）「无人声版」</title>
     <link href="https://dusays.com/430/"/>
     <id>https://dusays.com/430/</id>
@@ -450,29 +473,6 @@
     
     
     <category term="游玩" scheme="https://dusays.com/tags/%E6%B8%B8%E7%8E%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说练习：对于文本的处理和分析的小练习</title>
-    <link href="https://dusays.com/413/"/>
-    <id>https://dusays.com/413/</id>
-    <published>2021-12-14T16:00:00.000Z</published>
-    <updated>2022-02-08T10:20:46.280Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>在 Linux 中对于文本处理和分析是极为重要的，杜老师找了一道某度的运维工程师面试题，大家不妨试试能否完成要求。</p></blockquote><span id="more"></span><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">cd &#x2F;root&#x2F;wget https:&#x2F;&#x2F;cdn.dusays.com&#x2F;2021&#x2F;12&#x2F;data1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>注意：现在有一个文件叫做 data1，可使用上面的命令下载。</p></div><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><div class="story post-story"><p>data1 文件里记录是一些命令的操作记录，现在需要您从里面找出出现频率次数前 3 的命令并保存在 /root/result。</p><p>处理指定的文本文件 /root/data1。</p><p>将结果写入 /root/result。</p><p>结果包含三行内容，每行内容都是出现的次数和命令名称，如「100 ls」</p></div><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><div class="story post-story"><p>可能会使用到如下命令：</p><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>cut</td><td>截取</td></tr><tr><td>uniq</td><td>去重</td></tr><tr><td>sort</td><td>排序</td></tr><tr><td>|</td><td>管道</td></tr></tbody></table></div><h2 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h2><div class="story post-story"><p>请务必自己独立思考解决问题之后再对照参考答案，一开始直接看参考答案收获不大：</p><psw>cat data1 | cut -c 8- | sort | uniq -dc | sort -rn -k 1 | head -3 > /root/result</psw></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;在 Linux 中对于文本处理和分析是极为重要的，杜老师找了一道某度的运维工程师面试题，大家不妨试试能否完成要求。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="练习" scheme="https://dusays.com/tags/%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   
