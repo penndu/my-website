@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-02-09T03:26:15.350Z</updated>
+  <updated>2022-02-09T10:52:15.268Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说游戏：CentOS7 如何升级Git</title>
+    <link href="https://dusays.com/432/"/>
+    <id>https://dusays.com/432/</id>
+    <published>2022-02-09T16:00:00.000Z</published>
+    <updated>2022-02-09T10:52:15.268Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>光环战争 2 由开发《全面战争》系列 Creative Assembly 工作室制作。Halo Wars 2 强势回归光环系列的即时战略游戏舞台。将由您率领斯巴达战士、疣猪号以及其他经典的光环部队加入到残酷的战争，并在史上最大的光环战场上与恐怖的全新敌人厮杀。</p></blockquote><span id="more"></span><h3 id="游戏录屏"><a href="#游戏录屏" class="headerlink" title="游戏录屏"></a>游戏录屏</h3><p>CentOS7自带的git版本1.8.3.1，这个版本有点低了。于是决定折腾升级，我首先想到的是用update更新：</p><p>1<br>yum update git<br>结果，事与原违，还是1.8.3.1。在网上提供的升级方案，其本上都是先删除原来的，然后在官网上下载最新的，自己make，但是很折腾人啊，make过程中也是各种报错，一个个解决，累觉不爱。</p><p>无意中在网上看到，另一个思路，记录在此：</p><p>1、确认你的当前git版本</p><p>在终端输入：</p><p>1<br>git –version</p><p>2、使用root账号</p><p>在终端终入：</p><p>1<br>su root<br> 然后输入root账号的密码，注意linux下输密码时界面是没有变化的</p><p>3、配置存储库</p><p>启用Wandisco GIT存储库，在此之前我们先写入新yum存储库配置文件，在终端输入：</p><p>1<br>vim /etc/yum.repos.d/wandisco-git.repo<br> 按i，进入插入模式，输入：</p><p>1<br>2<br>3<br>4<br>5<br>6<br>[wandisco-git]<br>name=Wandisco GIT Repository<br>baseurl=<a href="http://opensource.wandisco.com/centos/7/git/$basearch/">http://opensource.wandisco.com/centos/7/git/$basearch/</a><br>enabled=1<br>gpgcheck=1<br>gpgkey=<a href="http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco">http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco</a><br> 按ESC键，然后输入:wq回车，保存存退出</p><p>4、导入存储库GPG密钥</p><p>在终端输入：</p><p>1<br>sudo rpm –import <a href="http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco">http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco</a></p><p>5、安装Git</p><p>在终端输入：</p><p>1<br>yum install git</p><p>6、验证Git版本</p><p>在终端输入：</p><p>1<br>git –version</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;光环战争 2 由开发《全面战争》系列 Creative Assembly 工作室制作。Halo Wars 2 强势回归光环系列的即时战略游戏舞台。将由您率领斯巴达战士、疣猪号以及其他经典的光环部队加入到残酷的战争，并在史上最大的光环战场上与恐怖的全新敌人厮杀。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="游戏视频" scheme="https://dusays.com/categories/%E6%B8%B8%E6%88%8F%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说游戏：《Halo Wars 2》战地第1幕（制图机）「无人声版」</title>
@@ -450,29 +473,6 @@
     
     
     <category term="练习" scheme="https://dusays.com/tags/%E7%BB%83%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说命令：sort 的用法</title>
-    <link href="https://dusays.com/412/"/>
-    <id>https://dusays.com/412/</id>
-    <published>2021-12-11T16:00:00.000Z</published>
-    <updated>2022-02-08T10:20:46.280Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>sort 命令在 Linux 里非常有用，它将文本数据进行排序，并将排序结果标准输出。sort 命令既可以从特定的文件，也可以从 stdin 中获取数据。</p></blockquote><span id="more"></span><h3 id="字典排序"><a href="#字典排序" class="headerlink" title="字典排序"></a>字典排序</h3><pre class="line-numbers language-none"><code class="language-none">$ cat &#x2F;etc&#x2F;passwd | sort<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="反转排序"><a href="#反转排序" class="headerlink" title="反转排序"></a>反转排序</h3><pre class="line-numbers language-none"><code class="language-none">$ cat &#x2F;etc&#x2F;passwd | sort -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="特定排序"><a href="#特定排序" class="headerlink" title="特定排序"></a>特定排序</h3><pre class="line-numbers language-none"><code class="language-none">$ cat &#x2F;etc&#x2F;passwd | sort -t &#39;:&#39; -k 3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="数值排序"><a href="#数值排序" class="headerlink" title="数值排序"></a>数值排序</h3><pre class="line-numbers language-none"><code class="language-none">$ cat &#x2F;etc&#x2F;passwd | sort -t &#39;:&#39; -k 3 -n<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;sort 命令在 Linux 里非常有用，它将文本数据进行排序，并将排序结果标准输出。sort 命令既可以从特定的文件，也可以从 stdin 中获取数据。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="命令" scheme="https://dusays.com/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
