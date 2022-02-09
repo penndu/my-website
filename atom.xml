@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-02-08T18:13:23.667Z</updated>
+  <updated>2022-02-09T03:26:15.350Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说游戏：《Halo Wars 2》战地第1幕（制图机）「无人声版」</title>
+    <link href="https://dusays.com/431/"/>
+    <id>https://dusays.com/431/</id>
+    <published>2022-02-06T16:00:00.000Z</published>
+    <updated>2022-02-09T03:26:15.350Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>光环战争 2 由开发《全面战争》系列 Creative Assembly 工作室制作。Halo Wars 2 强势回归光环系列的即时战略游戏舞台。将由您率领斯巴达战士、疣猪号以及其他经典的光环部队加入到残酷的战争，并在史上最大的光环战场上与恐怖的全新敌人厮杀。</p></blockquote><span id="more"></span><h3 id="游戏录屏"><a href="#游戏录屏" class="headerlink" title="游戏录屏"></a>游戏录屏</h3><iframe src="//player.bilibili.com/player.html?aid=593995755&bvid=BV14q4y187WC&cid=504456071&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="774" height="514"> </iframe><h3 id="游戏体验"><a href="#游戏体验" class="headerlink" title="游戏体验"></a>游戏体验</h3>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;光环战争 2 由开发《全面战争》系列 Creative Assembly 工作室制作。Halo Wars 2 强势回归光环系列的即时战略游戏舞台。将由您率领斯巴达战士、疣猪号以及其他经典的光环部队加入到残酷的战争，并在史上最大的光环战场上与恐怖的全新敌人厮杀。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="游戏视频" scheme="https://dusays.com/categories/%E6%B8%B8%E6%88%8F%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说游戏：《Halo Wars 2》战地第1幕（130）「无人声版」</title>
@@ -442,29 +465,6 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;sort 命令在 Linux 里非常有用，它将文本数据进行排序，并将排序结果标准输出。sort 命令既可以从特定的文件，也可以从 stdin 中获取数据。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="命令" scheme="https://dusays.com/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说命令：cut 的用法</title>
-    <link href="https://dusays.com/411/"/>
-    <id>https://dusays.com/411/</id>
-    <published>2021-12-08T16:00:00.000Z</published>
-    <updated>2022-02-08T10:20:46.280Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>cut 是一个选取命令，就是将一段数据经过分析取出我们想要的。一般来说，选取的信息通常是按行来进行分析的。cut 命令从文件的每一行剪切字节、字符和字段将这些字节、字符和字段输送到标准输出。</p></blockquote><span id="more"></span><h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-b</td><td>以字节为单位进行分割</td></tr><tr><td>-c</td><td>以字符为单位进行分割</td></tr><tr><td>-d</td><td>自定义分隔符，默认为制表符</td></tr><tr><td>-f</td><td>与 -d 一起使用，指定显示哪个区域</td></tr></tbody></table><h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><pre class="line-numbers language-none"><code class="language-none">penn:~&#x2F; $ head -n 3 &#x2F;etc&#x2F;passwd | cut -d : -f 1,6 root:&#x2F;rootdaemon:&#x2F;usr&#x2F;sbinbin:&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="前五个含"><a href="#前五个含" class="headerlink" title="前五个含"></a>前五个含</h3><pre class="line-numbers language-none"><code class="language-none">$ cut &#x2F;etc&#x2F;passwd -c -5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="第五个后"><a href="#第五个后" class="headerlink" title="第五个后"></a>第五个后</h3><pre class="line-numbers language-none"><code class="language-none">$ cut &#x2F;etc&#x2F;passwd -c 5-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="只有第五"><a href="#只有第五" class="headerlink" title="只有第五"></a>只有第五</h3><pre class="line-numbers language-none"><code class="language-none">$ cut &#x2F;etc&#x2F;passwd -c 5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="二到五间"><a href="#二到五间" class="headerlink" title="二到五间"></a>二到五间</h3><pre class="line-numbers language-none"><code class="language-none">$ cut &#x2F;etc&#x2F;passwd -c 2-5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;cut 是一个选取命令，就是将一段数据经过分析取出我们想要的。一般来说，选取的信息通常是按行来进行分析的。cut 命令从文件的每一行剪切字节、字符和字段将这些字节、字符和字段输送到标准输出。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
