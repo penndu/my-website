@@ -1730,7 +1730,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Mon Feb 14 2022 22:04:10 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Tue Feb 15 2022 14:26:48 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -3815,7 +3815,7 @@ VMware Workstation 是一款功能强大的桌面虚拟计算机软件，提供�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-02-14 日</div> 
+          <div id="last-update-show">2022-02-15 日</div> 
         </div>
       
     </div>
@@ -4009,19 +4009,19 @@ VMware Workstation 是一款功能强大的桌面虚拟计算机软件，提供�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1644847450876")
+        volantis.js("/js/plugins/sites.js?time=1644906408972")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1644847450876")
+        volantis.js("/js/plugins/friends.js?time=1644906408972")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1644847450876")
+        volantis.js("/js/plugins/contributors.js?time=1644906408972")
       }
     
   };
@@ -4143,7 +4143,7 @@ VMware Workstation 是一款功能强大的桌面虚拟计算机软件，提供�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1644847450876");
+    return volantis.js("/js/search/hexo.js?time=1644906408972");
   }
 
   function loadSearchService() {
