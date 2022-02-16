@@ -1730,7 +1730,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Tue Feb 15 2022 14:26:48 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 10:12:42 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -3798,7 +3798,7 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-02-15 日</div> 
+          <div id="last-update-show">2022-02-16 日</div> 
         </div>
       
     </div>
@@ -3992,19 +3992,19 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1644906408030")
+        volantis.js("/js/plugins/sites.js?time=1644977562261")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1644906408030")
+        volantis.js("/js/plugins/friends.js?time=1644977562261")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1644906408030")
+        volantis.js("/js/plugins/contributors.js?time=1644977562261")
       }
     
   };
@@ -4126,7 +4126,7 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1644906408030");
+    return volantis.js("/js/search/hexo.js?time=1644977562261");
   }
 
   function loadSearchService() {
