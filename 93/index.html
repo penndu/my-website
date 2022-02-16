@@ -1730,7 +1730,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 10:12:43 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 10:15:45 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -3995,19 +3995,19 @@ Oh My Zsh 是基于 Zsh 命令行的一个扩展工具集，提供了丰富的�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1644977563067")
+        volantis.js("/js/plugins/sites.js?time=1644977745605")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1644977563067")
+        volantis.js("/js/plugins/friends.js?time=1644977745605")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1644977563067")
+        volantis.js("/js/plugins/contributors.js?time=1644977745605")
       }
     
   };
@@ -4129,7 +4129,7 @@ Oh My Zsh 是基于 Zsh 命令行的一个扩展工具集，提供了丰富的�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1644977563067");
+    return volantis.js("/js/search/hexo.js?time=1644977745605");
   }
 
   function loadSearchService() {
