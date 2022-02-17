@@ -1730,21 +1730,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 10:15:45 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
-  async function volantisInitConfig() {
-    try {
-      let respThemeConfig = await fetch('/volantis-themeconfig.json');
-      let respWebConfig = await fetch('/volantis-webconfig.json');
-      volantis.THEMECONFIG = await respThemeConfig.json();
-      volantis.WEBCONFIG = await respWebConfig.json();
-    } catch (e) {
-      console.error(`主题配置读取失败： ${e}`)
-      
+  volantis.GLOBAL_CONFIG ={
+    cdn: {"js":{"app":"/js/app.js","sites":"/js/plugins/sites.js?time=1645061460469","friends":"/js/plugins/friends.js?time=1645061460469","parallax":"/js/plugins/parallax.js?time=1645061460469","rightMenu":"/js/plugins/rightMenu.js?time=1645061460469","contributors":"/js/plugins/contributors.js?time=1645061460469","message":"/js/thirdparty/message.js?time=1645061460469","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js","search":"/js/search/hexo.js?time=1645061460469"},"css":{"style":"/css/style.css","message":"/css/message.css?time=1645061460469"}},
+    default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date('Thu Feb 17 2022 09:31:00 GMT+0800 (China Standard Time)'),
+    sidebar: {
+      for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
+      for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
+      webinfo: {
+        lastupd: {
+          enable: true,
+          friendlyShow: true
+        },
+        runtime: {
+          data: "2019/07/10",
+          unit: "天"
+        }
+      }
+    },
+    plugins: {
+      message: {"enable":true,"icon":{"default":"fas fa-info-circle light-blue","quection":"fas fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fas fa-play","pause":"fas fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      fancybox: {"css":"/libs/@fancyapps/ui/dist/fancybox.css","js":"/libs/@fancyapps/ui/dist/fancybox.umd.js"},
+      aplayer: {
+        id: 3175833810,
+        enable:null
+      },
+      rightmenu: {
+        faicon: "fa",
+        layout: ["home","hr","help","examples","contributors","hr","source_docs","source_theme","hr","print","darkmode","reading","music"],
+        music_alwaysShow: true,
+        customPicUrl: {"enable":false,"old":null,"new":null},
+        print: true
+      }
     }
   }
-  volantisInitConfig()
 
   /******************** volantis.EventListener ********************************/
   // 事件监听器 see: /source/js/app.js
@@ -3822,7 +3843,7 @@ Linux 系统是一个由文件组成的操作系统，我们可以这么理解�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-02-16 日</div> 
+          <div id="last-update-show">2022-02-17 日</div> 
         </div>
       
     </div>
@@ -4016,19 +4037,19 @@ Linux 系统是一个由文件组成的操作系统，我们可以这么理解�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1644977745349")
+        volantis.js("/js/plugins/sites.js?time=1645061460469")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1644977745349")
+        volantis.js("/js/plugins/friends.js?time=1645061460469")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1644977745349")
+        volantis.js("/js/plugins/contributors.js?time=1645061460469")
       }
     
   };
@@ -4150,7 +4171,7 @@ Linux 系统是一个由文件组成的操作系统，我们可以这么理解�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1644977745349");
+    return volantis.js("/js/search/hexo.js?time=1645061460469");
   }
 
   function loadSearchService() {
