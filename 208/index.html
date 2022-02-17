@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js","sites":"/js/plugins/sites.js?time=1645061460159","friends":"/js/plugins/friends.js?time=1645061460159","parallax":"/js/plugins/parallax.js?time=1645061460159","rightMenu":"/js/plugins/rightMenu.js?time=1645061460159","contributors":"/js/plugins/contributors.js?time=1645061460159","message":"/js/thirdparty/message.js?time=1645061460159","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js","search":"/js/search/hexo.js?time=1645061460159"},"css":{"style":"/css/style.css","message":"/css/message.css?time=1645061460159"}},
+    cdn: {"js":{"app":"/js/app.js","sites":"/js/plugins/sites.js?time=1645069549518","friends":"/js/plugins/friends.js?time=1645069549518","parallax":"/js/plugins/parallax.js?time=1645069549518","rightMenu":"/js/plugins/rightMenu.js?time=1645069549518","contributors":"/js/plugins/contributors.js?time=1645069549518","message":"/js/thirdparty/message.js?time=1645069549518","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js","search":"/js/search/hexo.js?time=1645069549518"},"css":{"style":"/css/style.css","message":"/css/message.css?time=1645069549518"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Thu Feb 17 2022 09:31:00 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Thu Feb 17 2022 11:45:49 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -4062,19 +4062,19 @@ Linux 系统提供 who/w/ps 和 top 等查看进程信息的系统调用，通�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645061460159")
+        volantis.js("/js/plugins/sites.js?time=1645069549518")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645061460159")
+        volantis.js("/js/plugins/friends.js?time=1645069549518")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645061460159")
+        volantis.js("/js/plugins/contributors.js?time=1645069549518")
       }
     
   };
@@ -4196,7 +4196,7 @@ Linux 系统提供 who/w/ps 和 top 等查看进程信息的系统调用，通�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645061460159");
+    return volantis.js("/js/search/hexo.js?time=1645069549518");
   }
 
   function loadSearchService() {
