@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js","sites":"/js/plugins/sites.js?time=1645285703564","friends":"/js/plugins/friends.js?time=1645285703564","parallax":"/js/plugins/parallax.js?time=1645285703564","rightMenu":"/js/plugins/rightMenu.js?time=1645285703564","contributors":"/js/plugins/contributors.js?time=1645285703564","message":"/js/thirdparty/message.js?time=1645285703564","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js","search":"/js/search/hexo.js?time=1645285703564"},"css":{"style":"/css/style.css","message":"/css/message.css?time=1645285703564"}},
+    cdn: {"js":{"app":"/js/app.js","sites":"/js/plugins/sites.js?time=1645288369415","friends":"/js/plugins/friends.js?time=1645288369415","parallax":"/js/plugins/parallax.js?time=1645288369415","rightMenu":"/js/plugins/rightMenu.js?time=1645288369415","contributors":"/js/plugins/contributors.js?time=1645288369415","message":"/js/thirdparty/message.js?time=1645288369415","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js","search":"/js/search/hexo.js?time=1645288369415"},"css":{"style":"/css/style.css","message":"/css/message.css?time=1645288369415"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Sat Feb 19 2022 23:48:23 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Sun Feb 20 2022 00:32:49 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3847,7 +3847,7 @@ RAID 全称 Redundant Array of Inexpensive Disks，廉价冗余磁盘阵列，�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-02-19 日</div> 
+          <div id="last-update-show">2022-02-20 日</div> 
         </div>
       
     </div>
@@ -4041,19 +4041,19 @@ RAID 全称 Redundant Array of Inexpensive Disks，廉价冗余磁盘阵列，�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645285703564")
+        volantis.js("/js/plugins/sites.js?time=1645288369415")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645285703564")
+        volantis.js("/js/plugins/friends.js?time=1645288369415")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645285703564")
+        volantis.js("/js/plugins/contributors.js?time=1645288369415")
       }
     
   };
@@ -4175,7 +4175,7 @@ RAID 全称 Redundant Array of Inexpensive Disks，廉价冗余磁盘阵列，�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645285703564");
+    return volantis.js("/js/search/hexo.js?time=1645288369415");
   }
 
   function loadSearchService() {
