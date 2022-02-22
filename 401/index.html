@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497241807" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538759565" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497241807" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497241807"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538759565" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538759565"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497241807","sites":"/js/plugins/sites.js?time=1645497241807","friends":"/js/plugins/friends.js?time=1645497241807","parallax":"/js/plugins/parallax.js?time=1645497241807","rightMenu":"/js/plugins/rightMenu.js?time=1645497241807","contributors":"/js/plugins/contributors.js?time=1645497241807","message":"/js/thirdparty/message.js?time=1645497241807","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497241807","search":"/js/search/hexo.js?time=1645497241807"},"css":{"style":"/css/style.css?time=1645497241807","message":"/css/message.css?time=1645497241807"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538759565","sites":"/js/plugins/sites.js?time=1645538759565","friends":"/js/plugins/friends.js?time=1645538759565","parallax":"/js/plugins/parallax.js?time=1645538759565","rightMenu":"/js/plugins/rightMenu.js?time=1645538759565","contributors":"/js/plugins/contributors.js?time=1645538759565","message":"/js/thirdparty/message.js?time=1645538759565","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538759565","search":"/js/search/hexo.js?time=1645538759565"},"css":{"style":"/css/style.css?time=1645538759565","message":"/css/message.css?time=1645538759565"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:01 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:05:59 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：368 字</p>
+      <p>字数：378 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2941,12 +2941,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 
-<h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><div class="story post-story"><p>而在 CI/CD 中，我们常用一些 CI/CD 服务器，比如 Jenkins 和 GoCD 来构建与部署我们的应用，从而实现 CI/CD 自动化。现在一些 CI/CD 服务器也被 Docker 化运行在真实的物理机上。于是我们需在 CI/CD 服务器的 Docker container 里面来 build 与 run 我们的 Docker 镜像，这就涉及到 Docker in Docker 问题。</p>
-<p>一个很自然的想法：我们是不是需要在 CI/CD 服务器镜像中安装一个 Docker Daemon 和 Docker 命令？但是 Docker 里面跑 Docker 总感觉有些蹩脚，额外安装与运行 Docker 无疑增加了 CI/CD 服务器镜像的大小，同时还增加了 Docker 的深度。</p>
-</div><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><div class="story post-story"><p>实际上我们并不需要在 CI/CD 服务器上安装 Docker。通过上面的命令在 CI/CD 服务器上运行我们的镜像：</p>
+<h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><div class="story post-story"><p>而在 CI&#x2F;CD 中，我们常用一些 CI&#x2F;CD 服务器，比如 Jenkins 和 GoCD 来构建与部署我们的应用，从而实现 CI&#x2F;CD 自动化。现在一些 CI&#x2F;CD 服务器也被 Docker 化运行在真实的物理机上。于是我们需在 CI&#x2F;CD 服务器的 Docker container 里面来 build 与 run 我们的 Docker 镜像，这就涉及到 Docker in Docker 问题。</p>
+<p>一个很自然的想法：我们是不是需要在 CI&#x2F;CD 服务器镜像中安装一个 Docker Daemon 和 Docker 命令？但是 Docker 里面跑 Docker 总感觉有些蹩脚，额外安装与运行 Docker 无疑增加了 CI&#x2F;CD 服务器镜像的大小，同时还增加了 Docker 的深度。</p>
+</div><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><div class="story post-story"><p>实际上我们并不需要在 CI&#x2F;CD 服务器上安装 Docker。通过上面的命令在 CI&#x2F;CD 服务器上运行我们的镜像：</p>
 <pre class="line-numbers language-none"><code class="language-none">docker run -v &#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>Docker 采取的是 C/S 架构，Docker 的成功运行需要 Docker Daemon 和 Docker Client 的支持，当我们运行一些 docker build 等命令时，实际需要 Docker Client 连接 Docker Daemon 发送命令，Docker Daemon 会在宿主机操作系统分配文件、网络资源：</p>
+<p>Docker 采取的是 C&#x2F;S 架构，Docker 的成功运行需要 Docker Daemon 和 Docker Client 的支持，当我们运行一些 docker build 等命令时，实际需要 Docker Client 连接 Docker Daemon 发送命令，Docker Daemon 会在宿主机操作系统分配文件、网络资源：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/11/401-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/11/401-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/11/401-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 </div>
@@ -3808,7 +3808,7 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -3999,7 +3999,7 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497241807.js"></script>
+<script src="/js/app.js?time=1645538759565.js"></script>
 
 
 
@@ -4013,19 +4013,19 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497241807")
+        volantis.js("/js/plugins/sites.js?time=1645538759565")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497241807")
+        volantis.js("/js/plugins/friends.js?time=1645538759565")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497241807")
+        volantis.js("/js/plugins/contributors.js?time=1645538759565")
       }
     
   };
@@ -4147,7 +4147,7 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497241807");
+    return volantis.js("/js/search/hexo.js?time=1645538759565");
   }
 
   function loadSearchService() {

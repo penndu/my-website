@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497242721" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538760428" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497242721" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497242721"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538760428" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538760428"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497242721","sites":"/js/plugins/sites.js?time=1645497242721","friends":"/js/plugins/friends.js?time=1645497242721","parallax":"/js/plugins/parallax.js?time=1645497242721","rightMenu":"/js/plugins/rightMenu.js?time=1645497242721","contributors":"/js/plugins/contributors.js?time=1645497242721","message":"/js/thirdparty/message.js?time=1645497242721","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497242721","search":"/js/search/hexo.js?time=1645497242721"},"css":{"style":"/css/style.css?time=1645497242721","message":"/css/message.css?time=1645497242721"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538760428","sites":"/js/plugins/sites.js?time=1645538760428","friends":"/js/plugins/friends.js?time=1645538760428","parallax":"/js/plugins/parallax.js?time=1645538760428","rightMenu":"/js/plugins/rightMenu.js?time=1645538760428","contributors":"/js/plugins/contributors.js?time=1645538760428","message":"/js/thirdparty/message.js?time=1645538760428","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538760428","search":"/js/search/hexo.js?time=1645538760428"},"css":{"style":"/css/style.css?time=1645538760428","message":"/css/message.css?time=1645538760428"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:02 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:00 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：941 字</p>
+      <p>字数：944 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3066,9 +3066,9 @@ R4(config-if)#switchport access vlan 30
 R4(config)#interface fastEthernet 0&#x2F;3  
 R4(config-if)#switchport access vlan 40<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-</div><h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><div class="story post-story"><p>根据上面配置，当 VLAN10/VLAN20 发送数据，会通过 R1，而 VLAN30/VLAN40 发送数据，会通过 R2。</p>
+</div><h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><div class="story post-story"><p>根据上面配置，当 VLAN10&#x2F;VLAN20 发送数据，会通过 R1，而 VLAN30&#x2F;VLAN40 发送数据，会通过 R2。</p>
 <p>这就是负载均衡了，流量均衡到两台设备上，降低了设备的负载；当出现故障时，例如 R2 宕机了，R1 就会承担 R2 流量。</p>
-</div><h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><div class="story post-story"><p>终端在发送数据时，会先去找网关，而网关地址是通过 R1/R2 的优先级决定的，优先级高的会抢虚拟网关 IP，而优先级低的只能等高的设备宕机后再抢过来，以此实现高可用性。</p>
+</div><h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><div class="story post-story"><p>终端在发送数据时，会先去找网关，而网关地址是通过 R1&#x2F;R2 的优先级决定的，优先级高的会抢虚拟网关 IP，而优先级低的只能等高的设备宕机后再抢过来，以此实现高可用性。</p>
 <p>而将两台设备的优先级平均分配，这样就实现了负载均衡。</p>
 
 </div>
@@ -3930,7 +3930,7 @@ R4(config-if)#switchport access vlan 40<span aria-hidden="true" class="line-numb
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4121,7 +4121,7 @@ R4(config-if)#switchport access vlan 40<span aria-hidden="true" class="line-numb
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497242721.js"></script>
+<script src="/js/app.js?time=1645538760428.js"></script>
 
 
 
@@ -4135,19 +4135,19 @@ R4(config-if)#switchport access vlan 40<span aria-hidden="true" class="line-numb
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497242721")
+        volantis.js("/js/plugins/sites.js?time=1645538760428")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497242721")
+        volantis.js("/js/plugins/friends.js?time=1645538760428")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497242721")
+        volantis.js("/js/plugins/contributors.js?time=1645538760428")
       }
     
   };
@@ -4269,7 +4269,7 @@ R4(config-if)#switchport access vlan 40<span aria-hidden="true" class="line-numb
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497242721");
+    return volantis.js("/js/search/hexo.js?time=1645538760428");
   }
 
   function loadSearchService() {

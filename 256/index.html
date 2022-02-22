@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497242546" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538760253" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497242546" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497242546"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538760253" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538760253"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497242546","sites":"/js/plugins/sites.js?time=1645497242546","friends":"/js/plugins/friends.js?time=1645497242546","parallax":"/js/plugins/parallax.js?time=1645497242546","rightMenu":"/js/plugins/rightMenu.js?time=1645497242546","contributors":"/js/plugins/contributors.js?time=1645497242546","message":"/js/thirdparty/message.js?time=1645497242546","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497242546","search":"/js/search/hexo.js?time=1645497242546"},"css":{"style":"/css/style.css?time=1645497242546","message":"/css/message.css?time=1645497242546"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538760253","sites":"/js/plugins/sites.js?time=1645538760253","friends":"/js/plugins/friends.js?time=1645538760253","parallax":"/js/plugins/parallax.js?time=1645538760253","rightMenu":"/js/plugins/rightMenu.js?time=1645538760253","contributors":"/js/plugins/contributors.js?time=1645538760253","message":"/js/thirdparty/message.js?time=1645538760253","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538760253","search":"/js/search/hexo.js?time=1645538760253"},"css":{"style":"/css/style.css?time=1645538760253","message":"/css/message.css?time=1645538760253"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:02 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:00 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3012,7 +3012,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>基础仓库准备；</li>
 <li>安装 rsync 服务端；</li>
 <li>安装 nfs-utils 服务端；</li>
-<li>创建 www 用户指定 UID/GID；</li>
+<li>创建 www 用户指定 UID&#x2F;GID；</li>
 <li>准备 rsync 客户端密码文件。</li>
 </ol>
 <p>建立基础环境的 YAML：</p>
@@ -3058,11 +3058,11 @@ playbook: base.yaml
 <li>安装 rsync 服务端；</li>
 <li>配置 rsync 服务端；</li>
 <li>启动 rsync 服务端；</li>
-<li>准备对应的数据存储仓库/backup、/data 并授权为 www；</li>
+<li>准备对应的数据存储仓库&#x2F;backup、&#x2F;data 并授权为 www；</li>
 <li>准备虚拟用户和密码文件权限 600；</li>
 <li>变更配置，重载服务。</li>
 </ol>
-<p>准备对应配置文件存放至/etc/ansible/ansible_playbook/files/：</p>
+<p>准备对应配置文件存放至&#x2F;etc&#x2F;ansible&#x2F;ansible_playbook&#x2F;files&#x2F;：</p>
 <pre class="line-numbers language-none"><code class="language-none">[root@m01 conf]# cat &#x2F;etc&#x2F;ansible&#x2F;ansible_playbook&#x2F;files&#x2F;rsyncd.conf 
 uid &#x3D; www
 gid &#x3D; www
@@ -3119,7 +3119,7 @@ path &#x3D; &#x2F;data<span aria-hidden="true" class="line-numbers-rows"><span><
 <li>安装 NFS 服务端；</li>
 <li>配置 NFS 服务端；</li>
 <li>启动 NFS 服务端；</li>
-<li>准备对应数据存储仓库/data 并授权为 www；</li>
+<li>准备对应数据存储仓库&#x2F;data 并授权为 www；</li>
 <li>变更配置，重载服务。</li>
 </ol>
 <p>准备 NFS 配置文件 exports：</p>
@@ -3275,7 +3275,7 @@ path &#x3D; &#x2F;data<span aria-hidden="true" class="line-numbers-rows"><span><
 
 </div><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="story post-story"><ol>
 <li>测试 Web 是否能同步数据至 NFS 存储；</li>
-<li>NFS 是否实时同步至 rsync 的/data；</li>
+<li>NFS 是否实时同步至 rsync 的&#x2F;data；</li>
 <li>使用客户端测试能否推送数据至 rsync 的 backup。</li>
 </ol>
 
@@ -3405,9 +3405,7 @@ YAML 的语法和其它的高级语言类似，并且可以简单表达清单、
         <a class='next' href='/255/'>
           <p class='title'>杜老师说技术：Apache 的三种工作模式介绍「event 篇」<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 event 模式！
-
-...</p>
+Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 event ...</p>
         </a>
       
     </div>
@@ -4134,7 +4132,7 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worke
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4325,7 +4323,7 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worke
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497242546.js"></script>
+<script src="/js/app.js?time=1645538760253.js"></script>
 
 
 
@@ -4339,19 +4337,19 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worke
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497242546")
+        volantis.js("/js/plugins/sites.js?time=1645538760253")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497242546")
+        volantis.js("/js/plugins/friends.js?time=1645538760253")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497242546")
+        volantis.js("/js/plugins/contributors.js?time=1645538760253")
       }
     
   };
@@ -4473,7 +4471,7 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worke
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497242546");
+    return volantis.js("/js/search/hexo.js?time=1645538760253");
   }
 
   function loadSearchService() {

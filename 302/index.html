@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497242332" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538760042" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497242332" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497242332"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538760042" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538760042"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497242332","sites":"/js/plugins/sites.js?time=1645497242332","friends":"/js/plugins/friends.js?time=1645497242332","parallax":"/js/plugins/parallax.js?time=1645497242332","rightMenu":"/js/plugins/rightMenu.js?time=1645497242332","contributors":"/js/plugins/contributors.js?time=1645497242332","message":"/js/thirdparty/message.js?time=1645497242332","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497242332","search":"/js/search/hexo.js?time=1645497242332"},"css":{"style":"/css/style.css?time=1645497242332","message":"/css/message.css?time=1645497242332"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538760042","sites":"/js/plugins/sites.js?time=1645538760042","friends":"/js/plugins/friends.js?time=1645538760042","parallax":"/js/plugins/parallax.js?time=1645538760042","rightMenu":"/js/plugins/rightMenu.js?time=1645538760042","contributors":"/js/plugins/contributors.js?time=1645538760042","message":"/js/thirdparty/message.js?time=1645538760042","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538760042","search":"/js/search/hexo.js?time=1645538760042"},"css":{"style":"/css/style.css?time=1645538760042","message":"/css/message.css?time=1645538760042"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:02 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:00 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：867 字</p>
+      <p>字数：868 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2945,7 +2945,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>由于 Windows VL 都为批量激活而诞生，所以在一个激活单位中肯定会有很多台配置相等的电脑，并用一个服务器建立起一个局域网 LAN，而 KMS 正好利用这点，它要求局域网中必须有一台 KMS 服务器，KMS 服务器的作用是给局域网中的所有计算机的操作系统设定周期，提供一个随机的激活 ID，然后计算机里面的 KMS 服务就会自动将系统激活，实现正常的系统软件服务与操作。</p>
 <p>所以计算机需保持与 KMS 服务器的定期连接，以便 KMS 激活服务的自动检查实现激活自动续期，这样就实现了限制于公司域内的激活范围，避免对于外界计算机的非法授权，当非法激活者离开公司域后，因客户端 KMS 服务不能连接位于域内的 KMS 激活服务器，让 KMS 服务器提供一个新的序列号，超过 180 天以后就会因为激活 ID 过期而重新回到试用版本状态，而合法授权者则能够定期获得 ID 更新，保持一直正确激活状态。</p>
 <p>基于对 KMS 原理研究成果，我们可以自行搭建 KMS 激活服务器，实现每 180 天一次的自动激活，使得系统一直保持激活状态。</p>
-</div><h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><div class="story post-story"><p>下载并启用 mikolatero/vlmcsd 镜像，无需过多设置，只需做好端口映射即可：</p>
+</div><h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><div class="story post-story"><p>下载并启用 mikolatero&#x2F;vlmcsd 镜像，无需过多设置，只需做好端口映射即可：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/01/302-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/01/302-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/01/302-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <p>进入待激活的系统，使用管理员的身份，运行命令提示符 cmd，或 PowerShell，然后执行如下命令：</p>
@@ -3848,7 +3848,7 @@ Windows Server 2022
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4039,7 +4039,7 @@ Windows Server 2022
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497242332.js"></script>
+<script src="/js/app.js?time=1645538760042.js"></script>
 
 
 
@@ -4053,19 +4053,19 @@ Windows Server 2022
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497242332")
+        volantis.js("/js/plugins/sites.js?time=1645538760042")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497242332")
+        volantis.js("/js/plugins/friends.js?time=1645538760042")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497242332")
+        volantis.js("/js/plugins/contributors.js?time=1645538760042")
       }
     
   };
@@ -4187,7 +4187,7 @@ Windows Server 2022
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497242332");
+    return volantis.js("/js/search/hexo.js?time=1645538760042");
   }
 
   function loadSearchService() {

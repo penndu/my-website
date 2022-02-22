@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497243438" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538761103" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497243438" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497243438"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538761103" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538761103"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497243438","sites":"/js/plugins/sites.js?time=1645497243438","friends":"/js/plugins/friends.js?time=1645497243438","parallax":"/js/plugins/parallax.js?time=1645497243438","rightMenu":"/js/plugins/rightMenu.js?time=1645497243438","contributors":"/js/plugins/contributors.js?time=1645497243438","message":"/js/thirdparty/message.js?time=1645497243438","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497243438","search":"/js/search/hexo.js?time=1645497243438"},"css":{"style":"/css/style.css?time=1645497243438","message":"/css/message.css?time=1645497243438"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538761103","sites":"/js/plugins/sites.js?time=1645538761103","friends":"/js/plugins/friends.js?time=1645538761103","parallax":"/js/plugins/parallax.js?time=1645538761103","rightMenu":"/js/plugins/rightMenu.js?time=1645538761103","contributors":"/js/plugins/contributors.js?time=1645538761103","message":"/js/thirdparty/message.js?time=1645538761103","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538761103","search":"/js/search/hexo.js?time=1645538761103"},"css":{"style":"/css/style.css?time=1645538761103","message":"/css/message.css?time=1645538761103"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:03 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:01 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：260 字</p>
+      <p>字数：269 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2937,7 +2937,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <blockquote>
-<p>我们可直接通过修改 /etc/shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 /etc/shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！</p>
+<p>我们可直接通过修改 &#x2F;etc&#x2F;shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 &#x2F;etc&#x2F;shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！</p>
 </blockquote>
 <span id="more"></span>
 
@@ -2964,7 +2964,7 @@ chage -E EXPIREDATE USERNAME
 chage -W WARNDAYS USERNAME
 #设置密码过期前开始警告的天数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>注意：其中，MINDAYS/MAXDAYS/INACTIVE/WARNDAYS 只能是天数；而 LASTDAY 与 EXPIREDATE 则可以是日期。例 2015/11/05，或者从 1970 年 1 月 1 日起至该日期天数。</p>
+<p>注意：其中，MINDAYS&#x2F;MAXDAYS&#x2F;INACTIVE&#x2F;WARNDAYS 只能是天数；而 LASTDAY 与 EXPIREDATE 则可以是日期。例 2015&#x2F;11&#x2F;05，或者从 1970 年 1 月 1 日起至该日期天数。</p>
 
 </div>
   </div>
@@ -3018,7 +3018,7 @@ chage -W WARNDAYS USERNAME
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://dusays.com/85/&title=杜老师说命令：chage 账号与密码有效期限 - 杜老师说&summary=
-我们可直接通过修改 /etc/shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 /etc/shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！
+我们可直接通过修改 &#x2F;etc&#x2F;shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 &#x2F;etc&#x2F;shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！
 "
           
           >
@@ -3032,7 +3032,7 @@ chage -W WARNDAYS USERNAME
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://dusays.com/85/&title=杜老师说命令：chage 账号与密码有效期限 - 杜老师说&summary=
-我们可直接通过修改 /etc/shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 /etc/shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！
+我们可直接通过修改 &#x2F;etc&#x2F;shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 &#x2F;etc&#x2F;shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！
 "
           
           >
@@ -3046,7 +3046,7 @@ chage -W WARNDAYS USERNAME
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://dusays.com/85/&title=杜老师说命令：chage 账号与密码有效期限 - 杜老师说&summary=
-我们可直接通过修改 /etc/shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 /etc/shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！
+我们可直接通过修改 &#x2F;etc&#x2F;shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 &#x2F;etc&#x2F;shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！
 "
           
           >
@@ -3822,7 +3822,7 @@ chage -W WARNDAYS USERNAME
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4013,7 +4013,7 @@ chage -W WARNDAYS USERNAME
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497243438.js"></script>
+<script src="/js/app.js?time=1645538761103.js"></script>
 
 
 
@@ -4027,19 +4027,19 @@ chage -W WARNDAYS USERNAME
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497243438")
+        volantis.js("/js/plugins/sites.js?time=1645538761103")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497243438")
+        volantis.js("/js/plugins/friends.js?time=1645538761103")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497243438")
+        volantis.js("/js/plugins/contributors.js?time=1645538761103")
       }
     
   };
@@ -4161,7 +4161,7 @@ chage -W WARNDAYS USERNAME
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497243438");
+    return volantis.js("/js/search/hexo.js?time=1645538761103");
   }
 
   function loadSearchService() {
@@ -4478,7 +4478,7 @@ chage -W WARNDAYS USERNAME
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/85/","name":"杜老师说命令：chage 账号与密码有效期限"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说命令：chage 账号与密码有效期限","description":"\n我们可直接通过修改 /etc/shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 /etc/shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！\n","datePublished":"2019-10-01T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.284Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/85/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/85/","wordCount":111,"articleSection":"运维教程","keywords":"命令","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/85/","name":"杜老师说命令：chage 账号与密码有效期限"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说命令：chage 账号与密码有效期限","description":"\n我们可直接通过修改 &#x2F;etc&#x2F;shadow 的内容来实现用户账号密码有效期的变更，但这样很麻烦，而且对 &#x2F;etc&#x2F;shadow 直接操作，会降低系统安全性。今天杜老师讲一下通过 chage 命令管理账号与密码的有效期！\n","datePublished":"2019-10-01T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.284Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/85/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/85/","wordCount":131,"articleSection":"运维教程","keywords":"命令","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497243610" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538761273" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497243610" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497243610"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538761273" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538761273"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497243610","sites":"/js/plugins/sites.js?time=1645497243610","friends":"/js/plugins/friends.js?time=1645497243610","parallax":"/js/plugins/parallax.js?time=1645497243610","rightMenu":"/js/plugins/rightMenu.js?time=1645497243610","contributors":"/js/plugins/contributors.js?time=1645497243610","message":"/js/thirdparty/message.js?time=1645497243610","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497243610","search":"/js/search/hexo.js?time=1645497243610"},"css":{"style":"/css/style.css?time=1645497243610","message":"/css/message.css?time=1645497243610"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538761273","sites":"/js/plugins/sites.js?time=1645538761273","friends":"/js/plugins/friends.js?time=1645538761273","parallax":"/js/plugins/parallax.js?time=1645538761273","rightMenu":"/js/plugins/rightMenu.js?time=1645538761273","contributors":"/js/plugins/contributors.js?time=1645538761273","message":"/js/thirdparty/message.js?time=1645538761273","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538761273","search":"/js/search/hexo.js?time=1645538761273"},"css":{"style":"/css/style.css?time=1645538761273","message":"/css/message.css?time=1645538761273"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:03 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:01 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：665 字</p>
+      <p>字数：671 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2945,7 +2945,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/08/48-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/08/48-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/08/48-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 </div><h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><div class="story post-story"><p>PC0 可以 Ping 通 PC1。</p>
-<p>Router0 只知道两个网段，分别是 192.168.1.0/192.168.2.0。Router1 只知道两个网段，分别是 192.168.2.0/192.168.3.0。Router2 只知道两个网段，分别是 192.168.3.0/192.168.4.0。所以如果想要 PC0 可以 Ping 通 PC1，必须告诉 0 路由器 192.168.3.0/192.168.4.0 的走向，并且因为需要回包，所以 2 路由器需要知道 192.168.1.0/192.168.2.0 的走向。同时需要 1 路由器知道 192.168.1.0/192.168.4.0 的走向。</p>
+<p>Router0 只知道两个网段，分别是 192.168.1.0&#x2F;192.168.2.0。Router1 只知道两个网段，分别是 192.168.2.0&#x2F;192.168.3.0。Router2 只知道两个网段，分别是 192.168.3.0&#x2F;192.168.4.0。所以如果想要 PC0 可以 Ping 通 PC1，必须告诉 0 路由器 192.168.3.0&#x2F;192.168.4.0 的走向，并且因为需要回包，所以 2 路由器需要知道 192.168.1.0&#x2F;192.168.2.0 的走向。同时需要 1 路由器知道 192.168.1.0&#x2F;192.168.4.0 的走向。</p>
 </div><h2 id="项目方案"><a href="#项目方案" class="headerlink" title="项目方案"></a>项目方案</h2><div class="story post-story"><p>通过动态路由实现。</p>
 <p>我们只是通过少量设备演示，如果大家有时间和精力，可以大量添加路由设备。</p>
 </div><h2 id="方案步骤"><a href="#方案步骤" class="headerlink" title="方案步骤"></a>方案步骤</h2><div class="story post-story"><ul>
@@ -3884,7 +3884,7 @@ Router(config-router)#network 192.168.4.0<span aria-hidden="true" class="line-nu
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4075,7 +4075,7 @@ Router(config-router)#network 192.168.4.0<span aria-hidden="true" class="line-nu
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497243610.js"></script>
+<script src="/js/app.js?time=1645538761273.js"></script>
 
 
 
@@ -4089,19 +4089,19 @@ Router(config-router)#network 192.168.4.0<span aria-hidden="true" class="line-nu
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497243610")
+        volantis.js("/js/plugins/sites.js?time=1645538761273")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497243610")
+        volantis.js("/js/plugins/friends.js?time=1645538761273")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497243610")
+        volantis.js("/js/plugins/contributors.js?time=1645538761273")
       }
     
   };
@@ -4223,7 +4223,7 @@ Router(config-router)#network 192.168.4.0<span aria-hidden="true" class="line-nu
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497243610");
+    return volantis.js("/js/search/hexo.js?time=1645538761273");
   }
 
   function loadSearchService() {

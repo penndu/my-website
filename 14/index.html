@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497243758" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538761418" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497243758" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497243758"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538761418" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538761418"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497243758","sites":"/js/plugins/sites.js?time=1645497243758","friends":"/js/plugins/friends.js?time=1645497243758","parallax":"/js/plugins/parallax.js?time=1645497243758","rightMenu":"/js/plugins/rightMenu.js?time=1645497243758","contributors":"/js/plugins/contributors.js?time=1645497243758","message":"/js/thirdparty/message.js?time=1645497243758","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497243758","search":"/js/search/hexo.js?time=1645497243758"},"css":{"style":"/css/style.css?time=1645497243758","message":"/css/message.css?time=1645497243757"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538761418","sites":"/js/plugins/sites.js?time=1645538761418","friends":"/js/plugins/friends.js?time=1645538761418","parallax":"/js/plugins/parallax.js?time=1645538761418","rightMenu":"/js/plugins/rightMenu.js?time=1645538761418","contributors":"/js/plugins/contributors.js?time=1645538761418","message":"/js/thirdparty/message.js?time=1645538761418","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538761418","search":"/js/search/hexo.js?time=1645538761418"},"css":{"style":"/css/style.css?time=1645538761418","message":"/css/message.css?time=1645538761418"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:03 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:01 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：283 字</p>
+      <p>字数：285 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2947,7 +2947,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div><h2 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">systemctl start nfs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>注意：在启动 NFS 之前，需要先查询 rpcbind 状态，如果该服务为停止状态，需要先启用 rpcbind，再启用 NFS。</p>
-</div><h2 id="服务配置"><a href="#服务配置" class="headerlink" title="服务配置"></a>服务配置</h2><div class="story post-story"><p>编辑主配置文件/etc/exports，按照如下格式输入，注意在设置挂载目录时，需要注意绝对路径，且该目录是否允许访问：</p>
+</div><h2 id="服务配置"><a href="#服务配置" class="headerlink" title="服务配置"></a>服务配置</h2><div class="story post-story"><p>编辑主配置文件&#x2F;etc&#x2F;exports，按照如下格式输入，注意在设置挂载目录时，需要注意绝对路径，且该目录是否允许访问：</p>
 <pre class="line-numbers language-none"><code class="language-none">&#x2F;PATH ClientIP(rw)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>设置共享目录的权限时，除了服务权限，还要注意系统权限。然后执行刷新命令即可：</p>
@@ -3812,7 +3812,7 @@ NFS 即网络文件系统，是 FreeBSD 支持文件系统中的一种，它允�
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4003,7 +4003,7 @@ NFS 即网络文件系统，是 FreeBSD 支持文件系统中的一种，它允�
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497243758.js"></script>
+<script src="/js/app.js?time=1645538761418.js"></script>
 
 
 
@@ -4017,19 +4017,19 @@ NFS 即网络文件系统，是 FreeBSD 支持文件系统中的一种，它允�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497243758")
+        volantis.js("/js/plugins/sites.js?time=1645538761418")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497243758")
+        volantis.js("/js/plugins/friends.js?time=1645538761418")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497243758")
+        volantis.js("/js/plugins/contributors.js?time=1645538761418")
       }
     
   };
@@ -4151,7 +4151,7 @@ NFS 即网络文件系统，是 FreeBSD 支持文件系统中的一种，它允�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497243758");
+    return volantis.js("/js/search/hexo.js?time=1645538761418");
   }
 
   function loadSearchService() {

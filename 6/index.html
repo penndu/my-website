@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497243796" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538761453" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497243796" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497243796"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538761453" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538761453"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497243796","sites":"/js/plugins/sites.js?time=1645497243796","friends":"/js/plugins/friends.js?time=1645497243796","parallax":"/js/plugins/parallax.js?time=1645497243796","rightMenu":"/js/plugins/rightMenu.js?time=1645497243796","contributors":"/js/plugins/contributors.js?time=1645497243796","message":"/js/thirdparty/message.js?time=1645497243796","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497243796","search":"/js/search/hexo.js?time=1645497243796"},"css":{"style":"/css/style.css?time=1645497243796","message":"/css/message.css?time=1645497243796"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538761453","sites":"/js/plugins/sites.js?time=1645538761452","friends":"/js/plugins/friends.js?time=1645538761452","parallax":"/js/plugins/parallax.js?time=1645538761452","rightMenu":"/js/plugins/rightMenu.js?time=1645538761452","contributors":"/js/plugins/contributors.js?time=1645538761452","message":"/js/thirdparty/message.js?time=1645538761452","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538761452","search":"/js/search/hexo.js?time=1645538761452"},"css":{"style":"/css/style.css?time=1645538761453","message":"/css/message.css?time=1645538761452"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:03 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:01 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：664 字</p>
+      <p>字数：669 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2962,7 +2962,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div><h2 id="使用证书登录"><a href="#使用证书登录" class="headerlink" title="使用证书登录"></a>使用证书登录</h2><div class="story post-story"><p>上面的两种方式可以提升服务器的安全性，但也并不是绝对的，毕竟端口号的范围是 1-65535，而用户名是明文的，所以很多企业都会使用证书验证形式。首先在客户端生成证书文件：</p>
 <pre class="line-numbers language-none"><code class="language-none">ssh-keygen<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>一路回车即可，生成的证书一般会保存在~/.ssh/id_rsa.pub，需要上传到服务器：</p>
+<p>一路回车即可，生成的证书一般会保存在~&#x2F;.ssh&#x2F;id_rsa.pub，需要上传到服务器：</p>
 <pre class="line-numbers language-none"><code class="language-none">scp ~&#x2F;.ssh&#x2F;id_rsa.pub USERNAME@HOSTNAME:~<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>然后在服务器将该证书，导入到验证文件中：</p>
 <pre class="line-numbers language-none"><code class="language-none">cat ~&#x2F;id_rsa.pub &gt;&gt; ~&#x2F;.ssh&#x2F;authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -2973,7 +2973,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div><h2 id="保持持久连接"><a href="#保持持久连接" class="headerlink" title="保持持久连接"></a>保持持久连接</h2><div class="story post-story"><p>一般服务器都会设置无响应超时断开时间，即长时间未收到客户端的数据后，会自动断开与客户端的连接。就像电脑长时间未操作，系统会自动进入到休眠一样。有时候我们需要长时间保持连接，可以执行下面命令：</p>
 <pre class="line-numbers language-none"><code class="language-none">ssh -o ServerAliveInterval&#x3D;60 USERNAME@HOSTNAME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>如果感觉每次输入太过麻烦，也可以修改配置文件/etc/ssh/ssh_config，添加以下内容即可：</p>
+<p>如果感觉每次输入太过麻烦，也可以修改配置文件&#x2F;etc&#x2F;ssh&#x2F;ssh_config，添加以下内容即可：</p>
 <pre class="line-numbers language-none"><code class="language-none">ServerAliveInterval 60<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 </div>
@@ -3833,7 +3833,7 @@ SSH 为 Secure Shell 缩写，由 IETF 的网络小组所制定。SSH 为建立�
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4024,7 +4024,7 @@ SSH 为 Secure Shell 缩写，由 IETF 的网络小组所制定。SSH 为建立�
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497243796.js"></script>
+<script src="/js/app.js?time=1645538761453.js"></script>
 
 
 
@@ -4038,19 +4038,19 @@ SSH 为 Secure Shell 缩写，由 IETF 的网络小组所制定。SSH 为建立�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497243796")
+        volantis.js("/js/plugins/sites.js?time=1645538761452")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497243796")
+        volantis.js("/js/plugins/friends.js?time=1645538761452")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497243796")
+        volantis.js("/js/plugins/contributors.js?time=1645538761452")
       }
     
   };
@@ -4172,7 +4172,7 @@ SSH 为 Secure Shell 缩写，由 IETF 的网络小组所制定。SSH 为建立�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497243796");
+    return volantis.js("/js/search/hexo.js?time=1645538761452");
   }
 
   function loadSearchService() {

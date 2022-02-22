@@ -20,7 +20,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1645497242553" as="style">
+  <link rel="preload" href="/css/style.css?time=1645538760260" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1645497242553" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1645497242553"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1645538760260" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1645538760260"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1645497242553","sites":"/js/plugins/sites.js?time=1645497242553","friends":"/js/plugins/friends.js?time=1645497242553","parallax":"/js/plugins/parallax.js?time=1645497242553","rightMenu":"/js/plugins/rightMenu.js?time=1645497242553","contributors":"/js/plugins/contributors.js?time=1645497242553","message":"/js/thirdparty/message.js?time=1645497242553","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645497242553","search":"/js/search/hexo.js?time=1645497242553"},"css":{"style":"/css/style.css?time=1645497242553","message":"/css/message.css?time=1645497242553"}},
+    cdn: {"js":{"app":"/js/app.js?time=1645538760260","sites":"/js/plugins/sites.js?time=1645538760260","friends":"/js/plugins/friends.js?time=1645538760260","parallax":"/js/plugins/parallax.js?time=1645538760260","rightMenu":"/js/plugins/rightMenu.js?time=1645538760260","contributors":"/js/plugins/contributors.js?time=1645538760260","message":"/js/thirdparty/message.js?time=1645538760260","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1645538760260","search":"/js/search/hexo.js?time=1645538760260"},"css":{"style":"/css/style.css?time=1645538760260","message":"/css/message.css?time=1645538760260"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Feb 22 2022 10:34:02 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Tue Feb 22 2022 22:06:00 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2913,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：884 字</p>
+      <p>字数：887 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2937,14 +2937,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <blockquote>
-<p>Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！</p>
+<p>Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！</p>
 </blockquote>
 <span id="more"></span>
 
 <h2 id="worker-模式的工作原理"><a href="#worker-模式的工作原理" class="headerlink" title="worker 模式的工作原理"></a>worker 模式的工作原理</h2><div class="story post-story"><p>worker 模式和 prefork 模式相比较，worker 模式使用了多进程和多线程的混合模式，worker 模式也同样会先预派生一些子进程，然后每一个子进程创建一些线程，同时包括一个监听线程，每个请求过来会被分配到一个线程来服务。线程比起进程会更轻量，因为线程是通过共享父进程内存空间，因此，内存的占用会减少一些，在高并发场景下会比 prefork 有更多可用的线程，表现会更优秀一些。另外，如果一个线程出现问题也会导致同一进程下的线程出现问题，如果是多个线程出现了问题，也只是影响 Apache 的一部分，而不是全部的。由于用到多进程多线程，需要考虑到线程的安全，在使用 keep-alive 长连接的时候，某个线程会一直被占用，即使中间没有请求，需要等待到超时才会被释放。</p>
 <p>Apache 总是试图维持一个备用或空闲的服务线程池。这样，客户端无须等待新线程或者新进程的建立即可得到处理。在 Unix 中为了能够绑定 80 端口，父进程一般都是以 root 的身份启动，随后，Apache 会以较低权限的用户建立子进程和线程。User 和 Group 指令用于配置 Apache 子进程的权限。虽然子进程必须对其提供内容拥有读权限，但应该尽可能给予它较少的特权。另外，除非使用了 suEXEC ，否则，这些指令配置的权限将被 CGI 脚本继承。</p>
-</div><h2 id="worker-模式的安装方法"><a href="#worker-模式的安装方法" class="headerlink" title="worker 模式的安装方法"></a>worker 模式的安装方法</h2><div class="story post-story"><p>在编译安装 Apache 的过程中，加入参数–with-mpm=worker 即进行编译安装。</p>
-<p>也可以使用–enable-mpms-shared=all，这样在编译的时候会在 modules 目录下自动编译出三个 MPM 文件的 so，然后通过修改 httpd.conf 配置文件更改 MPM 即可。</p>
+</div><h2 id="worker-模式的安装方法"><a href="#worker-模式的安装方法" class="headerlink" title="worker 模式的安装方法"></a>worker 模式的安装方法</h2><div class="story post-story"><p>在编译安装 Apache 的过程中，加入参数–with-mpm&#x3D;worker 即进行编译安装。</p>
+<p>也可以使用–enable-mpms-shared&#x3D;all，这样在编译的时候会在 modules 目录下自动编译出三个 MPM 文件的 so，然后通过修改 httpd.conf 配置文件更改 MPM 即可。</p>
 </div><h2 id="worker-模式优缺点"><a href="#worker-模式优缺点" class="headerlink" title="worker 模式优缺点"></a>worker 模式优缺点</h2><div class="story post-story"><p>优点：占据更少内存，高并发下表现优秀。</p>
 <p>缺点：必须考虑线程安全问题，因为多个子线程是共享父进程内存地址的。如使用 keep-alive 的长连接方式，也许中间几乎没有请求，这时就会发生阻塞，线程会被挂起，需要一直等待到超时才会被释放。如果线程过多，被这样的占据，也会导致高并发场景下的无服务线程可用。</p>
 </div><h2 id="worker-模式配置参数说明"><a href="#worker-模式配置参数说明" class="headerlink" title="worker 模式配置参数说明"></a>worker 模式配置参数说明</h2><div class="story post-story"><table>
@@ -3032,7 +3032,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://dusays.com/254/&title=杜老师说技术：Apache 的三种工作模式介绍「worker 篇」 - 杜老师说&summary=
-Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！
+Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！
 "
           
           >
@@ -3046,7 +3046,7 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worke
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://dusays.com/254/&title=杜老师说技术：Apache 的三种工作模式介绍「worker 篇」 - 杜老师说&summary=
-Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！
+Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！
 "
           
           >
@@ -3060,7 +3060,7 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worke
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://dusays.com/254/&title=杜老师说技术：Apache 的三种工作模式介绍「worker 篇」 - 杜老师说&summary=
-Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！
+Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！
 "
           
           >
@@ -3097,9 +3097,7 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worke
         <a class='prev' href='/255/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>杜老师说技术：Apache 的三种工作模式介绍「event 篇」</p>
           <p class='content'>
-Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 event 模式！
-
-...</p>
+Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 event ...</p>
         </a>
       
       
@@ -3837,7 +3835,7 @@ natapp 是基于 ngrok 的反向代理软件，通过在公网和本地运行的
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>325.7k 字</div>
+          <div>326.6k 字</div>
         </div>
       
 
@@ -4028,7 +4026,7 @@ natapp 是基于 ngrok 的反向代理软件，通过在公网和本地运行的
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1645497242553.js"></script>
+<script src="/js/app.js?time=1645538760260.js"></script>
 
 
 
@@ -4042,19 +4040,19 @@ natapp 是基于 ngrok 的反向代理软件，通过在公网和本地运行的
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645497242553")
+        volantis.js("/js/plugins/sites.js?time=1645538760260")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645497242553")
+        volantis.js("/js/plugins/friends.js?time=1645538760260")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645497242553")
+        volantis.js("/js/plugins/contributors.js?time=1645538760260")
       }
     
   };
@@ -4176,7 +4174,7 @@ natapp 是基于 ngrok 的反向代理软件，通过在公网和本地运行的
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645497242553");
+    return volantis.js("/js/search/hexo.js?time=1645538760260");
   }
 
   function loadSearchService() {
@@ -4493,7 +4491,7 @@ natapp 是基于 ngrok 的反向代理软件，通过在公网和本地运行的
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/254/","name":"杜老师说技术：Apache 的三种工作模式介绍「worker 篇」"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说技术：Apache 的三种工作模式介绍「worker 篇」","description":"\nApache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork/worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！\n","datePublished":"2020-08-21T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.272Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/254/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/254/","wordCount":97,"articleSection":"运维教程","keywords":"技术","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/254/","name":"杜老师说技术：Apache 的三种工作模式介绍「worker 篇」"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说技术：Apache 的三种工作模式介绍「worker 篇」","description":"\nApache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;worker 和 event，它们同时也代表 Apache 的演变和发展。今天杜老师就聊下 worker 模式！\n","datePublished":"2020-08-21T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.272Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/254/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/254/","wordCount":102,"articleSection":"运维教程","keywords":"技术","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
