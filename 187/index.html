@@ -20,25 +20,25 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1646395354265" as="style">
+  <link rel="preload" href="/css/style.css?time=1646395790348" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>杜老师说技术：MySQL 几种存储引擎的介绍 - 杜老师说</title>
-  <meta name="keywords" content="技术,杜老师说,老师,讲师,运维,博客,技术,微软,思科,红帽,服务,软件,图文,视频,单词,求职,面试,网站,搭建,网络,教程,说课,资源,分享,单词">
-  <meta name="description" content="在数据库中存的就是一张张有着千丝万缕关系的表，所以表设计的好坏，直接影响着整个数据库。而在设计表的时候，我们都会关注一个问题，使用什么存储引擎。等下，存储引擎？什么是存储引擎呢？">
+  <title>杜老师说面试：面试官的几个问题如何回答 - 杜老师说</title>
+  <meta name="keywords" content="面试,杜老师说,老师,讲师,运维,博客,技术,微软,思科,红帽,服务,软件,图文,视频,单词,求职,面试,网站,搭建,网络,教程,说课,资源,分享,单词">
+  <meta name="description" content="杜老师在之前有发表过一篇文章，分享在面试时被问到一些问题该如何回答。今天杜老师整理了一些问题，掌握这些问题回答技巧，可以在面试时加分。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杜老师说技术：MySQL 几种存储引擎的介绍">
+<meta property="og:title" content="杜老师说面试：面试官的几个问题如何回答">
 <meta property="og:url" content="https://dusays.com/187/">
 <meta property="og:site_name" content="杜老师说">
-<meta property="og:description" content="在数据库中存的就是一张张有着千丝万缕关系的表，所以表设计的好坏，直接影响着整个数据库。而在设计表的时候，我们都会关注一个问题，使用什么存储引擎。等下，存储引擎？什么是存储引擎呢？">
+<meta property="og:description" content="杜老师在之前有发表过一篇文章，分享在面试时被问到一些问题该如何回答。今天杜老师整理了一些问题，掌握这些问题回答技巧，可以在面试时加分。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dusays.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2020-02-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-08T10:20:46.268Z">
+<meta property="article:modified_time" content="2022-03-04T12:05:21.680Z">
 <meta property="article:author" content="Teacher Du">
-<meta property="article:tag" content="技术">
+<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dusays.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1646395354265" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1646395354265"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1646395790348" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1646395790348"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1646395354265","sites":"/js/plugins/sites.js?time=1646395354265","friends":"/js/plugins/friends.js?time=1646395354265","parallax":"/js/plugins/parallax.js?time=1646395354265","rightMenu":"/js/plugins/rightMenu.js?time=1646395354265","contributors":"/js/plugins/contributors.js?time=1646395354265","message":"/js/thirdparty/message.js?time=1646395354265","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1646395354265","search":"/js/search/hexo.js?time=1646395354265"},"css":{"style":"/css/style.css?time=1646395354265","message":"/css/message.css?time=1646395354265"}},
+    cdn: {"js":{"app":"/js/app.js?time=1646395790348","sites":"/js/plugins/sites.js?time=1646395790348","friends":"/js/plugins/friends.js?time=1646395790348","parallax":"/js/plugins/parallax.js?time=1646395790348","rightMenu":"/js/plugins/rightMenu.js?time=1646395790348","contributors":"/js/plugins/contributors.js?time=1646395790348","message":"/js/thirdparty/message.js?time=1646395790348","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1646395790348","search":"/js/search/hexo.js?time=1646395790348"},"css":{"style":"/css/style.css?time=1646395790348","message":"/css/message.css?time=1646395790348"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Fri Mar 04 2022 20:02:34 GMT+0800 (China Standard Time)'),
+    lastupdate: new Date('Fri Mar 04 2022 20:09:50 GMT+0800 (China Standard Time)'),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2836,7 +2836,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        杜老师说技术：MySQL 几种存储引擎的介绍
+        杜老师说面试：面试官的几个问题如何回答
       </h1>
       <div class='new-meta-box'>
         
@@ -2855,10 +2855,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/">运维教程</a>
+    <a class="category-link" href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/">求职面试</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">运维教程</span></a>
+        <a href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/" itemprop="url"><span itemprop="name">求职面试</span></a>
       </span>
     
   </div>
@@ -2882,7 +2882,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <a class='notlink'>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="/187/" class="leancloud_visitors" data-flag-title="杜老师说技术：MySQL 几种存储引擎的介绍">
+      <span id="/187/" class="leancloud_visitors" data-flag-title="杜老师说面试：面试官的几个问题如何回答">
       <p>
         <span class="leancloud-visitors-count"></span>
       </p>
@@ -2912,13 +2912,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1.7k 字</p>
+      <p>字数：684 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：5 分钟</p>
+      <p>时长：2 分钟</p>
     </a>
   </div>
 
@@ -2936,45 +2936,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <blockquote>
-<p>在数据库中存的就是一张张有着千丝万缕关系的表，所以表设计的好坏，直接影响着整个数据库。而在设计表的时候，我们都会关注一个问题，使用什么存储引擎。等下，存储引擎？什么是存储引擎呢？</p>
+<p>杜老师在之前有发表过一篇文章，分享在面试时被问到一些问题该如何回答。今天杜老师整理了一些问题，掌握这些问题回答技巧，可以在面试时加分。</p>
 </blockquote>
 <span id="more"></span>
 
-<h2 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h2><div class="story post-story"><p>关系数据库表用于存储和组织信息的数据结构，可以将表理解为由行和列组成的表格，类似于 Excel 的电子表格的形式。有的表简单有的表复杂，有的表根本不用存储任何长期的数据，有的表读取非常快，但是插入数据时却很差；我们在实际开发过程中，可能需要各种各样的表，不同的表，意味着存储不同类型的数据，数据的处理上也会存在差异。</p>
-<p>那么，对 MySQL 来说，它提供了很多种类型的存储引擎，我们可以根据对数据处理的需求，选择不同存储引擎，从而最大限度利用 MySQL 强大的功能。</p>
-<p>这篇博文将总结和分析各个引擎特点，以及适用场合，并不会纠结更深层次的东西。</p>
-<p>我的学习方法是先学会用懂得怎么用，再去知道到底是如何能用的。下面就对 MySQL 支持的存储引擎进行简单介绍。</p>
-</div><h2 id="MyISAM-表"><a href="#MyISAM-表" class="headerlink" title="MyISAM 表"></a>MyISAM 表</h2><div class="story post-story"><p>MyISAM 是独立于操作系统的，这说明可以轻松地将其从 Windows 服务器移植到 Linux 服务器；每当我们建立一个 MyISAM 引擎的表时，就会在本地磁盘上建立三个文件，文件名就是表名称。例如，我建立了一个 MyISAM 引擎的 tb_demo 表，那么就会生成以下三个文件：</p>
-<ol>
-<li>tb_demo.frm 存储表定义；</li>
-<li>tb_demo.MYD 存储表数据；</li>
-<li>tb_demo.MYI 存储表索引。</li>
-</ol>
-<p>MyISAM 表无法处理事务，这就意味着有事务处理需求的表，不能用 MyISAM 存储引擎。MyISAM 存储引擎特别适合以下几种情况下使用：</p>
-<ol>
-<li>选择密集型表。MyISAM 存储引擎在筛选大量数据时非常快，是它最突出的优点；</li>
-<li>插入密集型表。MyISAM 的并发插入特性允许同时选择、插入数据。例如：MyISAM 存储引擎非常适合管理邮件或 Web 服务器日志数据。</li>
-</ol>
-</div><h2 id="InnoDB-表"><a href="#InnoDB-表" class="headerlink" title="InnoDB 表"></a>InnoDB 表</h2><div class="story post-story"><p>InnoDB 是一个健壮的事务型存储引擎，这种存储引擎已经被很多互联网公司使用，为用户操作非常大的数据存储提供一个强大的解决方案。我的电脑上安装的 MySQL 5.6.13 版，InnoDB 就是作为默认的存储引擎。InnoDB 还引入了行级锁定和外键约束，在以下场合下，使用 InnoDB 是最理想的选择：</p>
-<ol>
-<li>更新密集的表。InnoDB 存储引擎特别适合处理多重并发的更新请求；</li>
-<li>事务。InnoDB 存储引擎是支持事务的标准 MySQL 存储引擎；</li>
-<li>自动灾难恢复。与其它的存储引擎不同，InnoDB 表能够自动从灾难中恢复；</li>
-<li>外键约束。支持外键的存储引擎只有 InnoDB；</li>
-<li>支持自动增加列 AUTO_INCREMENT 属性；</li>
-</ol>
-<p>一般来说，如果需要事务支持，并且有较高的并发读取频率，InnoDB 是很不错的选择。</p>
-</div><h2 id="MEMORY-表"><a href="#MEMORY-表" class="headerlink" title="MEMORY 表"></a>MEMORY 表</h2><div class="story post-story"><p>使用 MySQL Memory 存储引擎的出发点是速度。为得到最快的响应时间，采用的逻辑存储介质是系统内存。虽然在内存中存储表数据确实提供很高的性能，但当 mysqld 守护进程崩溃时，所有的 Memory 数据都会丢失。获得速度的同时也带来一些缺陷。它要求存储在 Memory 数据表里的数据用的是长度不变的格式，这意味着不能用 BLOB 和 TEXT 这样的长度可变的数据类型，VARCHAR 是种长度可变的类型，但因为它在 MySQL 内部当做长度固定不变的 CHAR 类型，所以可以使用。一般在以下几种情况下用 Memory 存储引擎：</p>
-<ol>
-<li>目标数据较小，而且被非常频繁地访问。在内存中存放数据，所以会造成内存的使用，可以通过参数 max_heap_table_size 控制 Memory 表的大小，设置此参数就可以限制 Memory 表最大大小；</li>
-<li>如果数据是临时的，而且要求必须立即可用，那么就可以存放在内存表中；</li>
-<li>存储在 Memory 表中的数据如突然丢失，不会对应用服务产生实质的负面影响。</li>
-</ol>
-<p>Memory 同时支持散列索引和 B 树索引。B 树索引可以使用部分查询、通配查询，也可以使用操作符方便数据挖掘。散列索引进行“相等比较”时非常快，但对“范围比较”速度就慢多了，因此散列索引值适合使用在和操作符，不适合在或操作符，也同样不适合用在 order by 子句中。</p>
-</div><h2 id="Merge-表"><a href="#Merge-表" class="headerlink" title="Merge 表"></a>Merge 表</h2><div class="story post-story"><p>Merge 存储引擎是一组 MyISAM 表组合，这些 MyISAM 表结构必须完全相同，尽管使用不如其它引擎突出，但是在某些情况下非常有用。说白了 Merge 表就是几个相同 MyISAM 表的聚合；Merge 表中并没有数据，对 Merge 类型的表可以进行查询、更新、删除操作，这些操作实际上是对内部的 MyISAM 表进行操作。</p>
-<p>Merge 存储引擎使用场景对于服务器日志这种信息，一般常用的存储策略是将数据分成很多表，每个名称与特定时间端相关。例如：可以用 12 个相同的表来存储服务器的日志数据，每个表用对应各个月份的名字来命名。当有必要基于所有 12 个日志表的数据来生成报表时，这意味着需要编写、更新多表查询，以反映这些表中的信息。与其编写这些可能会出现错误的查询，不如将这些表合并起来使用一条查询，之后再删除 Merge 表而不影响原来的数据，删除 Merge 表只会删除掉 Merge 表的定义，对内部表没有任何影响。</p>
-</div><h2 id="Archive-表"><a href="#Archive-表" class="headerlink" title="Archive 表"></a>Archive 表</h2><div class="story post-story"><p>Archive 就是归档的意思，在归档之后很多的高级功能就不再支持了，仅支持最基本的插入和查询两种功能。在 MySQL 5.5 版前，Archive 不支持索引，但是在 MySQL 5.5 以后的版本中就开始支持索引了。</p>
-<p>Archive 拥有很好的压缩机制，使用 zlib 压缩库，在记录被请求时会实时压缩，所以它经常被用来当做仓库使用。</p>
+<h2 id="薪资"><a href="#薪资" class="headerlink" title="薪资"></a>薪资</h2><div class="story post-story"><p>问题：您期待的薪资是多少呢？</p>
+<p>技巧：要给予明确的期待薪资。</p>
+<p>回答：我期待的薪资是 10000，之所以要这个薪资，是因为参考了我上一份工作收入，以及行业标准，还有自身能力。</p>
+<p>注意：千万不要回答一个范围，这样相当于告诉了人事，你最低能接受多少薪资。</p>
+</div><h2 id="加班"><a href="#加班" class="headerlink" title="加班"></a>加班</h2><div class="story post-story"><p>问题：您是否能接受加班？</p>
+<p>技巧：看似是一道选择题，其实是想了解您对加班态度。</p>
+<p>回答：首先我会努力工作，避免因为效率问题加班；其次如果公司需要赶工完成项目，我也会积极的配合。</p>
+<p>注意：不要给予肯定答复，不能接受肯定是扣分的。如果回答可以接受又会任人宰割，表达态度非常重要。</p>
+</div><h2 id="离职"><a href="#离职" class="headerlink" title="离职"></a>离职</h2><div class="story post-story"><p>问题：请问您上一家工作离职原因？</p>
+<p>技巧：想了解您是不是个稳定性高的人，避免公司辛苦培养好了，却突然又离职。</p>
+<p>回答：我自认为现在年轻，想体验更多的工作模式，以寻找更适合我的。经过之前经历，感觉贵公司的工作模式，适合我长期的发展。</p>
+<p>注意：千万不要说上一家公司坏话，因为他们知道，您从这家公司离职之后，也会说这家的坏话。</p>
+</div><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><div class="story post-story"><p>问题：能简单说说您的优点吗？</p>
+<p>技巧：面试官想了解您对这项工作的契合度。</p>
+<p>回答：之前同事都说我性格较开朗，为人热情，所以我才选择贵公司的行政客服。</p>
+<p>注意：不要单纯说喜欢旅游呀、电影啥的。</p>
+</div><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><div class="story post-story"><p>问题：能简单说说您的缺点吗？</p>
+<p>技巧：对照你的上级，聊聊你的欠缺之处。</p>
+<p>回答：目前我的协调能力较为薄弱，无法管理较多人的团队。</p>
+<p>注意：不要说自己好吃懒做哦。</p>
+</div><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><div class="story post-story"><p>问题：您还有什么问题需要了解的？</p>
+<p>技巧：虽然在面试互动过程中，已经了解一些情况，但还是要提问，这表现出您对这家公司的向往性。可以问问组织架构，如果人数较少，说明工作量会较大。</p>
+<p>回答：我想了解一下团队组织架构，以及晋升空间。</p>
+<p>注意：不要上来就问福利待遇，这些后面都会详谈。</p>
 
 </div>
   </div>
@@ -3013,8 +3002,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%8A%80%E6%9C%AF/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>技术</p></a></div>
-  <span hidden itemprop="keywords">技术</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E8%AF%95/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>面试</p></a></div>
+  <span hidden itemprop="keywords">面试</span>
 
 
         
@@ -3027,8 +3016,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://dusays.com/187/&title=杜老师说技术：MySQL 几种存储引擎的介绍 - 杜老师说&summary=
-在数据库中存的就是一张张有着千丝万缕关系的表，所以表设计的好坏，直接影响着整个数据库。而在设计表的时候，我们都会关注一个问题，使用什么存储引擎。等下，存储引擎？什么是存储引擎呢？
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://dusays.com/187/&title=杜老师说面试：面试官的几个问题如何回答 - 杜老师说&summary=
+杜老师在之前有发表过一篇文章，分享在面试时被问到一些问题该如何回答。今天杜老师整理了一些问题，掌握这些问题回答技巧，可以在面试时加分。
 "
           
           >
@@ -3041,8 +3030,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://dusays.com/187/&title=杜老师说技术：MySQL 几种存储引擎的介绍 - 杜老师说&summary=
-在数据库中存的就是一张张有着千丝万缕关系的表，所以表设计的好坏，直接影响着整个数据库。而在设计表的时候，我们都会关注一个问题，使用什么存储引擎。等下，存储引擎？什么是存储引擎呢？
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://dusays.com/187/&title=杜老师说面试：面试官的几个问题如何回答 - 杜老师说&summary=
+杜老师在之前有发表过一篇文章，分享在面试时被问到一些问题该如何回答。今天杜老师整理了一些问题，掌握这些问题回答技巧，可以在面试时加分。
 "
           
           >
@@ -3055,8 +3044,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://dusays.com/187/&title=杜老师说技术：MySQL 几种存储引擎的介绍 - 杜老师说&summary=
-在数据库中存的就是一张张有着千丝万缕关系的表，所以表设计的好坏，直接影响着整个数据库。而在设计表的时候，我们都会关注一个问题，使用什么存储引擎。等下，存储引擎？什么是存储引擎呢？
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://dusays.com/187/&title=杜老师说面试：面试官的几个问题如何回答 - 杜老师说&summary=
+杜老师在之前有发表过一篇文章，分享在面试时被问到一些问题该如何回答。今天杜老师整理了一些问题，掌握这些问题回答技巧，可以在面试时加分。
 "
           
           >
@@ -3220,7 +3209,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E"><span class="toc-text">存储引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyISAM-%E8%A1%A8"><span class="toc-text">MyISAM 表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#InnoDB-%E8%A1%A8"><span class="toc-text">InnoDB 表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MEMORY-%E8%A1%A8"><span class="toc-text">MEMORY 表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Merge-%E8%A1%A8"><span class="toc-text">Merge 表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Archive-%E8%A1%A8"><span class="toc-text">Archive 表</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%96%AA%E8%B5%84"><span class="toc-text">薪资</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E7%8F%AD"><span class="toc-text">加班</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E8%81%8C"><span class="toc-text">离职</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-text">优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-text">缺点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-text">问题</span></a></li></ol>
     </div>
   </section>
 
@@ -3728,7 +3717,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <li><a class="flat-box"
             title="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/" href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/"
             active-action="action-categoriesE6B182E8818CE99DA2E8AF95"
-            ><div class='name'>求职面试</div><div class='badge'>(12)</div></a></li>
+            ><div class='name'>求职面试</div><div class='badge'>(13)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%B8%B8%E6%88%8F%E8%A7%86%E9%A2%91/" href="/categories/%E6%B8%B8%E6%88%8F%E8%A7%86%E9%A2%91/"
@@ -3763,7 +3752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <li><a class="flat-box"
             title="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/" href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"
             active-action="action-categoriesE8BF90E7BBB4E69599E7A88B"
-            ><div class='name'>运维教程</div><div class='badge'>(146)</div></a></li>
+            ><div class='name'>运维教程</div><div class='badge'>(145)</div></a></li>
         
       </ul>
     </div>
@@ -3787,7 +3776,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-      <a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 14px; color: #999">下载</a> <a href="/tags/%E4%BA%91%E7%9B%98/" style="font-size: 14px; color: #999">云盘</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 15.58px; color: #8e8e8e">代码</a> <a href="/tags/%E4%BB%B2%E8%A3%81/" style="font-size: 14px; color: #999">仲裁</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14.53px; color: #959595">优化</a> <a href="/tags/%E4%BC%9A%E5%91%98/" style="font-size: 14px; color: #999">会员</a> <a href="/tags/%E4%BE%B5%E6%9D%83/" style="font-size: 14px; color: #999">侵权</a> <a href="/tags/%E5%85%AC%E5%8F%B8/" style="font-size: 14px; color: #999">公司</a> <a href="/tags/%E5%86%85%E5%AD%98/" style="font-size: 14.53px; color: #959595">内存</a> <a href="/tags/%E5%87%BA%E5%B7%AE/" style="font-size: 14px; color: #999">出差</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 17.16px; color: #848484">分享</a> <a href="/tags/%E5%88%86%E5%8F%91/" style="font-size: 16.11px; color: #8b8b8b">分发</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 14px; color: #999">升级</a> <a href="/tags/%E5%8D%95%E8%AF%8D/" style="font-size: 24px; color: #555">单词</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 19.79px; color: #727272">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 22.42px; color: #606060">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 17.68px; color: #808080">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 14px; color: #999">备份</a> <a href="/tags/%E5%A5%97%E4%BB%B6/" style="font-size: 14.53px; color: #959595">套件</a> <a href="/tags/%E5%AD%98%E5%82%A8/" style="font-size: 15.58px; color: #8e8e8e">存储</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 15.58px; color: #8e8e8e">安全</a> <a href="/tags/%E5%AE%B6%E4%BA%BA/" style="font-size: 14px; color: #999">家人</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 18.21px; color: #7c7c7c">容器</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 22.95px; color: #5c5c5c">工具</a> <a href="/tags/%E5%BA%94%E7%94%A8/" style="font-size: 14.53px; color: #959595">应用</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 15.05px; color: #929292">技巧</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 22.95px; color: #5c5c5c">技术</a> <a href="/tags/%E6%8E%92%E7%89%88/" style="font-size: 16.11px; color: #8b8b8b">排版</a> <a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 14px; color: #999">推荐</a> <a href="/tags/%E6%92%AD%E5%AE%A2/" style="font-size: 14px; color: #999">播客</a> <a href="/tags/%E6%94%AF%E4%BB%98/" style="font-size: 14px; color: #999">支付</a> <a href="/tags/%E6%9C%8D%E5%8A%A1/" style="font-size: 17.16px; color: #848484">服务</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size: 15.58px; color: #8e8e8e">权限</a> <a href="/tags/%E6%9E%B6%E6%9E%84/" style="font-size: 15.05px; color: #929292">架构</a> <a href="/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 14.53px; color: #959595">概念</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 14px; color: #999">正则</a> <a href="/tags/%E6%B1%82%E8%81%8C/" style="font-size: 15.05px; color: #929292">求职</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 22.42px; color: #606060">游戏</a> <a href="/tags/%E6%B8%B8%E7%8E%A9/" style="font-size: 14px; color: #999">游玩</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 16.11px; color: #8b8b8b">电影</a> <a href="/tags/%E7%94%B5%E8%84%91/" style="font-size: 14px; color: #999">电脑</a> <a href="/tags/%E7%94%B5%E8%A7%86/" style="font-size: 14px; color: #999">电视</a> <a href="/tags/%E7%9B%AE%E5%BD%95/" style="font-size: 14px; color: #999">目录</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 14px; color: #999">硬件</a> <a href="/tags/%E7%A3%81%E7%9B%98/" style="font-size: 14.53px; color: #959595">磁盘</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 21.37px; color: #676767">福利</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 20.32px; color: #6e6e6e">系统</a> <a href="/tags/%E7%BB%83%E4%B9%A0/" style="font-size: 14px; color: #999">练习</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 14px; color: #999">终端</a> <a href="/tags/%E7%BC%93%E5%AD%98/" style="font-size: 18.74px; color: #797979">缓存</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 14px; color: #999">编程</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 14px; color: #999">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 19.26px; color: #757575">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 23.47px; color: #595959">网络</a> <a href="/tags/%E7%BE%A4%E6%99%96/" style="font-size: 20.84px; color: #6a6a6a">群晖</a> <a href="/tags/%E7%BE%A4%E8%BE%89/" style="font-size: 14px; color: #999">群辉</a> <a href="/tags/%E8%81%8C%E5%9C%BA/" style="font-size: 14.53px; color: #959595">职场</a> <a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 15.58px; color: #8e8e8e">脚本</a> <a href="/tags/%E8%8B%B9%E6%9E%9C/" style="font-size: 16.63px; color: #878787">苹果</a> <a href="/tags/%E8%90%8C%E5%AE%A0/" style="font-size: 14px; color: #999">萌宠</a> <a href="/tags/%E8%A1%A5%E4%B8%81/" style="font-size: 14px; color: #999">补丁</a> <a href="/tags/%E8%A7%A3%E6%9E%90/" style="font-size: 15.58px; color: #8e8e8e">解析</a> <a href="/tags/%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">评论</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 21.89px; color: #636363">软件</a> <a href="/tags/%E8%BF%87%E5%B9%B4/" style="font-size: 14px; color: #999">过年</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 15.58px; color: #8e8e8e">运维</a> <a href="/tags/%E8%BF%9C%E7%A8%8B/" style="font-size: 15.05px; color: #929292">远程</a> <a href="/tags/%E9%83%A8%E7%BD%B2/" style="font-size: 15.05px; color: #929292">部署</a> <a href="/tags/%E9%99%A4%E6%B9%BF/" style="font-size: 14px; color: #999">除湿</a> <a href="/tags/%E9%9B%86%E6%88%90/" style="font-size: 14px; color: #999">集成</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15.05px; color: #929292">面试</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 14px; color: #999">音乐</a>
+      <a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 14px; color: #999">下载</a> <a href="/tags/%E4%BA%91%E7%9B%98/" style="font-size: 14px; color: #999">云盘</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 15.5px; color: #8f8f8f">代码</a> <a href="/tags/%E4%BB%B2%E8%A3%81/" style="font-size: 14px; color: #999">仲裁</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14.5px; color: #969696">优化</a> <a href="/tags/%E4%BC%9A%E5%91%98/" style="font-size: 14px; color: #999">会员</a> <a href="/tags/%E4%BE%B5%E6%9D%83/" style="font-size: 14px; color: #999">侵权</a> <a href="/tags/%E5%85%AC%E5%8F%B8/" style="font-size: 14px; color: #999">公司</a> <a href="/tags/%E5%86%85%E5%AD%98/" style="font-size: 14.5px; color: #969696">内存</a> <a href="/tags/%E5%87%BA%E5%B7%AE/" style="font-size: 14px; color: #999">出差</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 17px; color: #858585">分享</a> <a href="/tags/%E5%88%86%E5%8F%91/" style="font-size: 16px; color: #8b8b8b">分发</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 14px; color: #999">升级</a> <a href="/tags/%E5%8D%95%E8%AF%8D/" style="font-size: 24px; color: #555">单词</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 19.5px; color: #747474">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 22px; color: #636363">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 17.5px; color: #818181">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 14px; color: #999">备份</a> <a href="/tags/%E5%A5%97%E4%BB%B6/" style="font-size: 14.5px; color: #969696">套件</a> <a href="/tags/%E5%AD%98%E5%82%A8/" style="font-size: 15.5px; color: #8f8f8f">存储</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 15.5px; color: #8f8f8f">安全</a> <a href="/tags/%E5%AE%B6%E4%BA%BA/" style="font-size: 14px; color: #999">家人</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 18px; color: #7e7e7e">容器</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 23px; color: #5c5c5c">工具</a> <a href="/tags/%E5%BA%94%E7%94%A8/" style="font-size: 14.5px; color: #969696">应用</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 15px; color: #929292">技巧</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 22.5px; color: #5f5f5f">技术</a> <a href="/tags/%E6%8E%92%E7%89%88/" style="font-size: 16px; color: #8b8b8b">排版</a> <a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 14px; color: #999">推荐</a> <a href="/tags/%E6%92%AD%E5%AE%A2/" style="font-size: 14px; color: #999">播客</a> <a href="/tags/%E6%94%AF%E4%BB%98/" style="font-size: 14px; color: #999">支付</a> <a href="/tags/%E6%9C%8D%E5%8A%A1/" style="font-size: 17px; color: #858585">服务</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size: 15.5px; color: #8f8f8f">权限</a> <a href="/tags/%E6%9E%B6%E6%9E%84/" style="font-size: 15px; color: #929292">架构</a> <a href="/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 14.5px; color: #969696">概念</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 14px; color: #999">正则</a> <a href="/tags/%E6%B1%82%E8%81%8C/" style="font-size: 15px; color: #929292">求职</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 22px; color: #636363">游戏</a> <a href="/tags/%E6%B8%B8%E7%8E%A9/" style="font-size: 14px; color: #999">游玩</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 16px; color: #8b8b8b">电影</a> <a href="/tags/%E7%94%B5%E8%84%91/" style="font-size: 14px; color: #999">电脑</a> <a href="/tags/%E7%94%B5%E8%A7%86/" style="font-size: 14px; color: #999">电视</a> <a href="/tags/%E7%9B%AE%E5%BD%95/" style="font-size: 14px; color: #999">目录</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 14px; color: #999">硬件</a> <a href="/tags/%E7%A3%81%E7%9B%98/" style="font-size: 14.5px; color: #969696">磁盘</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 21px; color: #696969">福利</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 20px; color: #707070">系统</a> <a href="/tags/%E7%BB%83%E4%B9%A0/" style="font-size: 14px; color: #999">练习</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 14px; color: #999">终端</a> <a href="/tags/%E7%BC%93%E5%AD%98/" style="font-size: 18.5px; color: #7a7a7a">缓存</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 14px; color: #999">编程</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 14px; color: #999">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 19px; color: #777">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 23.5px; color: #585858">网络</a> <a href="/tags/%E7%BE%A4%E6%99%96/" style="font-size: 20.5px; color: #6d6d6d">群晖</a> <a href="/tags/%E7%BE%A4%E8%BE%89/" style="font-size: 14px; color: #999">群辉</a> <a href="/tags/%E8%81%8C%E5%9C%BA/" style="font-size: 14.5px; color: #969696">职场</a> <a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 15.5px; color: #8f8f8f">脚本</a> <a href="/tags/%E8%8B%B9%E6%9E%9C/" style="font-size: 16.5px; color: #888">苹果</a> <a href="/tags/%E8%90%8C%E5%AE%A0/" style="font-size: 14px; color: #999">萌宠</a> <a href="/tags/%E8%A1%A5%E4%B8%81/" style="font-size: 14px; color: #999">补丁</a> <a href="/tags/%E8%A7%A3%E6%9E%90/" style="font-size: 15.5px; color: #8f8f8f">解析</a> <a href="/tags/%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">评论</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 21.5px; color: #666">软件</a> <a href="/tags/%E8%BF%87%E5%B9%B4/" style="font-size: 14px; color: #999">过年</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 15.5px; color: #8f8f8f">运维</a> <a href="/tags/%E8%BF%9C%E7%A8%8B/" style="font-size: 15px; color: #929292">远程</a> <a href="/tags/%E9%83%A8%E7%BD%B2/" style="font-size: 15px; color: #929292">部署</a> <a href="/tags/%E9%99%A4%E6%B9%BF/" style="font-size: 14px; color: #999">除湿</a> <a href="/tags/%E9%9B%86%E6%88%90/" style="font-size: 14px; color: #999">集成</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15.5px; color: #8f8f8f">面试</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 14px; color: #999">音乐</a>
     </div>
   </section>
 
@@ -3827,7 +3816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>328.5k 字</div>
+          <div>327.4k 字</div>
         </div>
       
 
@@ -3877,7 +3866,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="杜老师说技术：MySQL 几种存储引擎的介绍";
+  pdata.postTitle="杜老师说面试：面试官的几个问题如何回答";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4018,7 +4007,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1646395354265.js"></script>
+<script src="/js/app.js?time=1646395790348.js"></script>
 
 
 
@@ -4032,19 +4021,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1646395354265")
+        volantis.js("/js/plugins/sites.js?time=1646395790348")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1646395354265")
+        volantis.js("/js/plugins/friends.js?time=1646395790348")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1646395354265")
+        volantis.js("/js/plugins/contributors.js?time=1646395790348")
       }
     
   };
@@ -4166,7 +4155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1646395354265");
+    return volantis.js("/js/search/hexo.js?time=1646395790348");
   }
 
   function loadSearchService() {
@@ -4483,7 +4472,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/187/","name":"杜老师说技术：MySQL 几种存储引擎的介绍"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说技术：MySQL 几种存储引擎的介绍","description":"\n在数据库中存的就是一张张有着千丝万缕关系的表，所以表设计的好坏，直接影响着整个数据库。而在设计表的时候，我们都会关注一个问题，使用什么存储引擎。等下，存储引擎？什么是存储引擎呢？\n","datePublished":"2020-02-02T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.268Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/187/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/187/","wordCount":91,"articleSection":"运维教程","keywords":"技术","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/求职面试/","name":"求职面试"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/187/","name":"杜老师说面试：面试官的几个问题如何回答"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说面试：面试官的几个问题如何回答","description":"\n杜老师在之前有发表过一篇文章，分享在面试时被问到一些问题该如何回答。今天杜老师整理了一些问题，掌握这些问题回答技巧，可以在面试时加分。\n","datePublished":"2020-02-02T16:00:00.000Z","dateModified":"2022-03-04T12:05:21.680Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/187/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/187/","wordCount":69,"articleSection":"求职面试","keywords":"面试","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
