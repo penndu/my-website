@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-03-09T18:27:19.991Z</updated>
+  <updated>2022-03-18T11:07:53.525Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说磁盘：RAID10 软阵列搭建流程</title>
+    <link href="https://dusays.com/449/"/>
+    <id>https://dusays.com/449/</id>
+    <published>2022-04-01T16:00:00.000Z</published>
+    <updated>2022-03-18T11:07:53.525Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>RAID 全称 Redundant Array of Inexpensive Disks，廉价冗余磁盘阵列，通过多块磁盘组成一种模式，来提高吞吐量和可靠性。今天杜老师就为大家演示下 RAID10 软阵列搭建流程。</p></blockquote><span id="more"></span><h2 id="搭建说明"><a href="#搭建说明" class="headerlink" title="搭建说明"></a>搭建说明</h2><div class="story post-story"><p>磁盘阵列相关概念参考《磁盘阵列搭建<a href="https://dusays.com/146/">磁盘阵列搭建</a>》一文。大家对 RAID10 和 RAID01 理解有些困难，下图是两者的区别。</p><p>RAID10 的组建形式：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><a href="https://bu.dusays.com/2022/03/12/ab4c41b37d518.png">https://bu.dusays.com/2022/03/12/ab4c41b37d518.png</a></div><p>RAID01 的组建形式：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><a href="https://bu.dusays.com/2022/03/12/f2cd1ba3e2fa2.png">https://bu.dusays.com/2022/03/12/f2cd1ba3e2fa2.png</a></div><p>RAID10 允许在每组中损坏一块盘，不允许坏一组。RAID01 允许坏一组，但不允许跨组坏盘。</p></div><h2 id="流程演示"><a href="#流程演示" class="headerlink" title="流程演示"></a>流程演示</h2><div class="story post-story"><p>点击播放：</p><p><a href="https://asciinema.org/a/477989"><img src="https://asciinema.org/a/477989.svg" class="lazyload" data-srcset="https://asciinema.org/a/477989.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="asciicast"></a></p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;RAID 全称 Redundant Array of Inexpensive Disks，廉价冗余磁盘阵列，通过多块磁盘组成一种模式，来提高吞吐量和可靠性。今天杜老师就为大家演示下 RAID10 软阵列搭建流程。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="磁盘" scheme="https://dusays.com/tags/%E7%A3%81%E7%9B%98/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说系统：Rectify11 系统中文化</title>
@@ -450,29 +473,6 @@
     
     
     <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说过年：杜老师祝大家新春快乐</title>
-    <link href="https://dusays.com/429/"/>
-    <id>https://dusays.com/429/</id>
-    <published>2022-01-31T16:00:00.000Z</published>
-    <updated>2022-02-08T17:36:31.845Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>在这个阖家欢乐的日子，不管您是否看到了这篇祝福，都祝愿您和您的家人新一年开怀大笑！</p></blockquote><span id="more"></span><h2 id="新春快乐"><a href="#新春快乐" class="headerlink" title="新春快乐"></a>新春快乐</h2><div class="story post-story"><p>开春虎已关照，大礼每人一套：一首喜庆曲调，一段幸福论调，一脸喜悦保票，一把理财金钥，一片祥云笼罩，一轮洪福高照：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/02/429-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/02/429-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/02/429-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="虎年吉祥"><a href="#虎年吉祥" class="headerlink" title="虎年吉祥"></a>虎年吉祥</h2><div class="story post-story"><p>想要此款红包封面的小伙伴，可在评论区留言哦：</p><iframe src="//player.bilibili.com/player.html?aid=681433969&bvid=BV18S4y1G72q&cid=504391908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="774" height="514"> </iframe></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;在这个阖家欢乐的日子，不管您是否看到了这篇祝福，都祝愿您和您的家人新一年开怀大笑！&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="过年" scheme="https://dusays.com/tags/%E8%BF%87%E5%B9%B4/"/>
     
   </entry>
   
