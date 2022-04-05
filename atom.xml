@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-04-02T17:56:17.095Z</updated>
+  <updated>2022-04-05T08:52:29.398Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说系统：绕过 TPM2 安装 Win11 两种方法 - 系统</title>
+    <link href="https://dusays.com/453/"/>
+    <id>https://dusays.com/453/</id>
+    <published>2022-04-13T16:00:00.000Z</published>
+    <updated>2022-04-05T08:52:29.398Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>下载电脑健康状况检查工具，点击立即检查就能查看结果，如果您电脑通过检查即可直接通过系统更新安装 Win11，如果提示因为 TPM2 检查不通过，则可通过杜老师分享的方法来绕过 TPM2 的检测安装 Win11。</p></blockquote><span id="more"></span><h2 id="增量升级"><a href="#增量升级" class="headerlink" title="增量升级"></a>增量升级</h2><div class="story post-story"><p>网络上提示的修改注册表等方式亲测已经不生效了，有需要的可以自行尝试，这里介绍的是通过开源工具 MediaCreationTool.bat 进行 Win11 安装：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/ed69ae8e-c6a3-491a-8463-bac90e3a0f05' title='下载地址'>下载地址</a></span><p>下载软件后您会看到这几个工具，运行 bypass11 目录中的 Skip_TPM_Check_on_Dynamic_Update.cmd 脚本，有如下提示则代表操作成功，这时再通过 Win10 的系统升级看能否成功：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/04/336-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/04/336-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/04/336-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h2><div class="story post-story"><p>如果还是不行的话，则需要通过第二种方法进行升级。准备一个 8G 以上的 U 盘，打开下载的 MediaCreationTool.bat 制作 U 盘安装工具，在弹出的界面选择 11 ，</p><p>再选择 Create USB，</p><p>然后弹出 powershell 权限选择 是，然后选择 U盘 介质，等待制作完成即可，这里虽然提示的是 Windows 10，实际制作的是 Windows 11 启动盘，它只是利用了 Win10 的工具而已。</p><p>U盘安装 Win11 和 其他系统没有区别，重启系统，快速按热键（根据品牌上网查询）进入UEFI启动项，选择U盘名对应的启动项，按照提示操作即可。</p><p>注意事项：需要注意的是U盘安装系统无法进行增量升级，请提前备份好重要数据。U盘安装系统请一定要提前备份好系统盘数据。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;下载电脑健康状况检查工具，点击立即检查就能查看结果，如果您电脑通过检查即可直接通过系统更新安装 Win11，如果提示因为 TPM2 检查不通过，则可通过杜老师分享的方法来绕过 TPM2 的检测安装 Win11。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>杜老师说服务：麒麟高级服务器操作系统安装 Redis</title>
@@ -442,29 +463,6 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;最近给博客圈小伙伴 Vian 同学架设了在线编辑器，实现了通过 GitLab 管理博客文章，通过 gitlab-runner 激活同步和部署操作。不过在近期升级时遇到一个问题导致部署失败，本文记录解决方法。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="工具" scheme="https://dusays.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说工具：CentOS7 如何升级 Git 版本</title>
-    <link href="https://dusays.com/432/"/>
-    <id>https://dusays.com/432/</id>
-    <published>2022-02-09T16:00:00.000Z</published>
-    <updated>2022-02-10T18:00:32.606Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>杜老师习惯使用 Git 工具管理代码，最近因为工作所需，要在 CentOS7 服务器上安装 Git 工具，但在使用时出现了一些问题，最终发现因 Git 版本导致，那么就说说如何升级 Git 版本。</p></blockquote><span id="more"></span><h2 id="版本查询"><a href="#版本查询" class="headerlink" title="版本查询"></a>版本查询</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">[root@localhost ~]# git --versiongit version 1.8.3.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>注意：杜老师服务器的 Git 是通过 yum 安装，使用命令查询目前版本。</p></div><h2 id="尝试升级"><a href="#尝试升级" class="headerlink" title="尝试升级"></a>尝试升级</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">[root@localhost ~]# yum update git已加载插件：fastestmirror, langpacksLoading mirror speeds from cached hostfile * base: mirrors.bfsu.edu.cn * extras: mirrors.bfsu.edu.cn * updates: mirrors.bfsu.edu.cnNo packages marked for update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：杜老师首先想到的是使用 yum update 更新，结果事与原违，并没有版本的更新。</p></div><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><div class="story post-story"><p>在网上提供的升级方案，其本上都是先删除原来版本，然后在官网上下载最新版本，最后编译安装。编辑安装不仅麻烦，而且容易出错，无意中在网上看到一个 Git 软件源，在此分享一下使用方法：</p><pre class="line-numbers language-none"><code class="language-none">vim &#x2F;etc&#x2F;yum.repos.d&#x2F;wandisco-git.repo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>首先输入上门命令新建配置文件，在配置文件中输入下面内容：</p><pre class="line-numbers language-none"><code class="language-none">[wandisco-git]name&#x3D;Wandisco GIT Repositorybaseurl&#x3D;http:&#x2F;&#x2F;opensource.wandisco.com&#x2F;centos&#x2F;7&#x2F;git&#x2F;$basearch&#x2F;enabled&#x3D;1gpgcheck&#x3D;1gpgkey&#x3D;http:&#x2F;&#x2F;opensource.wandisco.com&#x2F;RPM-GPG-KEY-WANdisco<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>因为开启了 gpgcheck，所以需导入 key 文件：</p><pre class="line-numbers language-none"><code class="language-none">rpm --import http:&#x2F;&#x2F;opensource.wandisco.com&#x2F;RPM-GPG-KEY-WANdisco<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>导入成功后即可进行 Git 升级：</p><pre class="line-numbers language-none"><code class="language-none">yum -y udpate git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><h2 id="验证版本"><a href="#验证版本" class="headerlink" title="验证版本"></a>验证版本</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">[root@localhost ~]# git --versiongit version 2.31.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>注意：版本升级成功。不过杜老师在升级前查询了官网最新版本是 2.35.1，看来该软件源并非最新版本。</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;杜老师习惯使用 Git 工具管理代码，最近因为工作所需，要在 CentOS7 服务器上安装 Git 工具，但在使用时出现了一些问题，最终发现因 Git 版本导致，那么就说说如何升级 Git 版本。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
