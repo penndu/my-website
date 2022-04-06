@@ -21,7 +21,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649259495755" as="style">
+  <link rel="preload" href="/css/style.css?time=1649261956980" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1661,9 +1661,53 @@ ul.list-v >li>a:hover {
   }
 }
 
+    :root {
+      /* 字体大小 */
+      --waline-font-size: 16px;
+    
+      /* 常规颜色 */
+      --waline-white: #fff;
+      --waline-light-grey: #999;
+      --waline-dark-grey: #666;
+    
+      /* 主题色 */
+      --waline-theme-color: #27ae60;
+      --waline-active-color: #2ecc71;
+    
+      /* 布局颜色 */
+      --waline-text-color: #444;
+      --waline-bgcolor: #fff;
+      --waline-bgcolor-light: #f8f8f8;
+      --waline-bgcolor-hover: #f0f0f0;
+      --waline-border-color: #ddd;
+      --waline-disable-bgcolor: #f8f8f8;
+      --waline-disable-color: #bbb;
+      --waline-code-bgcolor: #282c34;
+    
+      /* 特殊颜色 */
+      --waline-bq-color: #f0f0f0;
+    
+      /* 头像 */
+      --waline-avatar-size: 3.25rem;
+      --waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+    
+      /* 徽章 */
+      --waline-badge-color: #3498db;
+      --waline-badge-font-size: 0.775em;
+    
+      /* 信息 */
+      --waline-info-bgcolor: #f8f8f8;
+      --waline-info-color: #999;
+      --waline-info-font-size: 0.625em;
+    
+      /* 渲染选择 */
+      --waline-border: 1px solid var(--waline-border-color);
+      --waline-avatar-radius: 50%;
+      --waline-box-shadow: none;
+    }
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649259495755" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649259495755"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649261956980" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649261956980"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1734,9 +1778,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649259495755","sites":"/js/plugins/sites.js?time=1649259495755","friends":"/js/plugins/friends.js?time=1649259495755","parallax":"/js/plugins/parallax.js?time=1649259495755","rightMenu":"/js/plugins/rightMenu.js?time=1649259495755","contributors":"/js/plugins/contributors.js?time=1649259495755","message":"/js/thirdparty/message.js?time=1649259495755","search":"/js/search/hexo.js?time=1649259495755"},"css":{"style":"/css/style.css?time=1649259495755","message":"/css/message.css?time=1649259495755"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649261956980","sites":"/js/plugins/sites.js?time=1649261956980","friends":"/js/plugins/friends.js?time=1649261956980","parallax":"/js/plugins/parallax.js?time=1649261956980","rightMenu":"/js/plugins/rightMenu.js?time=1649261956980","contributors":"/js/plugins/contributors.js?time=1649261956980","message":"/js/thirdparty/message.js?time=1649261956980","search":"/js/search/hexo.js?time=1649261956980"},"css":{"style":"/css/style.css?time=1649261956980","message":"/css/message.css?time=1649261956980"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1649259495755),
+    lastupdate: new Date(1649261956980),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2987,7 +3031,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <details cyan open><summary> 申请规则 </summary>
               <div class='content'>
-              <div class='checkbox checked'><input type="radio" checked="checked"/>            <p>按照以下流程，邮件至 <a href="mailto:&#x70;&#101;&#x6e;&#110;&#100;&#x75;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;">&#x70;&#101;&#x6e;&#110;&#100;&#x75;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;</a>；</p>            </div><div class='checkbox checked'><input type="radio" checked="checked"/>            <p>标题：说说页面发布权限申请，内容为用户名、密码，用户名和密码为自定义，想好了写在邮件里即可；</p>            </div><div class='checkbox checked'><input type="radio" checked="checked"/>            <p>邮件发送后在本页评论区域留言，内容为已发送申请，然后等待审批即可；</p>            </div><div class='checkbox checked'><input type="radio" checked="checked"/>            <p>审核通过即可进入说说页面，通过右下角的图标登录发布。</p>            </div>
+              <div class='checkbox checked'><input type="radio" checked="checked"/>            <p>按照以下流程，邮件至 <a href="mailto:&#x70;&#101;&#x6e;&#110;&#x64;&#x75;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;">&#x70;&#101;&#x6e;&#110;&#x64;&#x75;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;</a>；</p>            </div><div class='checkbox checked'><input type="radio" checked="checked"/>            <p>标题：说说页面发布权限申请，内容为用户名、密码，用户名和密码为自定义，想好了写在邮件里即可；</p>            </div><div class='checkbox checked'><input type="radio" checked="checked"/>            <p>邮件发送后在本页评论区域留言，内容为已发送申请，然后等待审批即可；</p>            </div><div class='checkbox checked'><input type="radio" checked="checked"/>            <p>审核通过即可进入说说页面，通过右下角的图标登录发布。</p>            </div>
               </div>
             </details>
 
@@ -3855,7 +3899,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-04-06 日</div> 
+          <div id="last-update-show">2022-04-07 日</div> 
         </div>
       
     </div>
@@ -4035,7 +4079,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649259495755.js"></script>
+<script src="/js/app.js?time=1649261956980.js"></script>
 
 
 
@@ -4049,19 +4093,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649259495755")
+        volantis.js("/js/plugins/sites.js?time=1649261956980")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649259495755")
+        volantis.js("/js/plugins/friends.js?time=1649261956980")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649259495755")
+        volantis.js("/js/plugins/contributors.js?time=1649261956980")
       }
     
   };
@@ -4188,7 +4232,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1649259495755");
+    return volantis.js("/js/search/hexo.js?time=1649261956980");
   }
 
   function loadSearchService() {
