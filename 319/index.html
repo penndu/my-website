@@ -21,7 +21,7 @@
   <meta content="杜老师说" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649258222720" as="style">
+  <link rel="preload" href="/css/style.css?time=1649259495755" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1662,8 +1662,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649258222720" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649258222720"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649259495755" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649259495755"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1734,9 +1734,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649258222720","sites":"/js/plugins/sites.js?time=1649258222720","friends":"/js/plugins/friends.js?time=1649258222720","parallax":"/js/plugins/parallax.js?time=1649258222720","rightMenu":"/js/plugins/rightMenu.js?time=1649258222720","contributors":"/js/plugins/contributors.js?time=1649258222720","message":"/js/thirdparty/message.js?time=1649258222720","search":"/js/search/hexo.js?time=1649258222720"},"css":{"style":"/css/style.css?time=1649258222720","message":"/css/message.css?time=1649258222720"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649259495755","sites":"/js/plugins/sites.js?time=1649259495755","friends":"/js/plugins/friends.js?time=1649259495755","parallax":"/js/plugins/parallax.js?time=1649259495755","rightMenu":"/js/plugins/rightMenu.js?time=1649259495755","contributors":"/js/plugins/contributors.js?time=1649259495755","message":"/js/thirdparty/message.js?time=1649259495755","search":"/js/search/hexo.js?time=1649259495755"},"css":{"style":"/css/style.css?time=1649259495755","message":"/css/message.css?time=1649259495755"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1649258222720),
+    lastupdate: new Date(1649259495755),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -4094,7 +4094,7 @@ Bongo Cat Mver 是一款很不错的键盘鼠标工具，这款软件主要是�
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649258222720.js"></script>
+<script src="/js/app.js?time=1649259495755.js"></script>
 
 
 
@@ -4108,19 +4108,19 @@ Bongo Cat Mver 是一款很不错的键盘鼠标工具，这款软件主要是�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649258222720")
+        volantis.js("/js/plugins/sites.js?time=1649259495755")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649258222720")
+        volantis.js("/js/plugins/friends.js?time=1649259495755")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649258222720")
+        volantis.js("/js/plugins/contributors.js?time=1649259495755")
       }
     
   };
@@ -4187,13 +4187,13 @@ Bongo Cat Mver 是一款很不错的键盘鼠标工具，这款软件主要是�
   volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
   function pjax_waline() {
     if(!document.querySelector("#waline"))return;
-    let pagePlaceholder = pdata.commentPlaceholder || "评论支持贴图，大家在截图后，在评论框粘贴，自动传至图床~";
+    let pagePlaceholder = pdata.commentPlaceholder || "评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    new Waline(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js","path":null,"placeholder":"评论支持贴图，大家在截图后，在评论框粘贴，自动传至图床~","imageHosting":"https://test.7bu.top/api/v1/upload","Authorization":"1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"serverURL":"https://n.dusays.com","avatar":"robohash","avatarCDN":null,"emoji":["https://dusays.com/media/Sticker-100/"],"pageSize":10,"lang":"zh-CN","visitor":true,"copyright":false}, {
+    new Waline(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~","imageHosting":"https://test.7bu.top/api/v1/upload","Authorization":"1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"serverURL":"https://n.dusays.com","avatar":"robohash","avatarCDN":null,"emoji":["https://dusays.com/media/Sticker-100/"],"pageSize":10,"lang":"zh-CN","visitor":true,"copyright":false}, {
       el: '#waline',
       path: path,
       placeholder: pagePlaceholder,
@@ -4204,9 +4204,11 @@ Bongo Cat Mver 是一款很不错的键盘鼠标工具，这款软件主要是�
           const formData = new FormData();
           formData.append('file', file);
           return fetch('https://test.7bu.top/api/v1/upload', {
-            headers:{
+            
+            headers: {
               'Authorization': 'Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L'
             },
+            
             method: 'POST',
           body: formData
           }).then(resp => resp.json()).then(resp => resp.data.links.url);
@@ -4245,7 +4247,7 @@ Bongo Cat Mver 是一款很不错的键盘鼠标工具，这款软件主要是�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1649258222720");
+    return volantis.js("/js/search/hexo.js?time=1649259495755");
   }
 
   function loadSearchService() {
