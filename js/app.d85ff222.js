@@ -191,7 +191,7 @@ const VolantisApp = (() => {
     if (!pdata.ispage) return;
 
     // 填充二级导航文章标题 【移动端 PC】
-    volantis.dom.wrapper.find('.nav-sub .title').html(pdata.postTitle);
+    volantis.dom.wrapper.find('.nav-sub .title').html(document.title.split(" - ")[0]);
 
     // ====== bind events to every btn =========
     // 评论按钮 【移动端 PC】
@@ -510,8 +510,8 @@ const VolantisApp = (() => {
   // 消息提示：标准
   fn.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css(volantis.GLOBAL_CONFIG.cdn.css.message)
-      volantis.js(volantis.GLOBAL_CONFIG.cdn.js.message, () => {
+      volantis.css(volantis.GLOBAL_CONFIG.plugins.message.css)
+      volantis.js(volantis.GLOBAL_CONFIG.plugins.message.js, () => {
         tozashMessage(title, message, option, done);
       });
     } else {

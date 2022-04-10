@@ -1,3 +1,6 @@
+#safearea {
+  display: block;
+}
 :root {
   --block-hover: #ededed;
   --text-p1: #222;
@@ -6453,9 +6456,4 @@ pre::-webkit-scrollbar-thumb:hover {
 }
 .iziToast-message {
   word-break: break-all !important;
-}
-#safearea {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
 }
