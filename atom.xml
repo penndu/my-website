@@ -40,6 +40,29 @@
   </entry>
   
   <entry>
+    <title>杜老师说图床：Waline 评论系统新版贴图 API 设置示例</title>
+    <link href="https://dusays.com/456/"/>
+    <id>https://dusays.com/456/</id>
+    <published>2022-04-22T16:00:00.000Z</published>
+    <updated>2022-04-17T15:12:37.628Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>去不图床使用全新的 API 接口，原有的 Waline 评论系统贴图方法发生改变，该文分享杜老师说 Waline 评论系统新版贴图 API 设置示例。</p></blockquote><span id="more"></span><h2 id="调整内容"><a href="#调整内容" class="headerlink" title="调整内容"></a>调整内容</h2><div class="story post-story"><p>新版 API 主要对提交数据类型、身份验证方式、返回值做了些调整，所以无法继续使用原有调用方式。</p><p>请先参考《<a href="https://dusays.com/454/">新版本去不图床 Token 的获取与清空</a>》获取所需信息。</p></div><h2 id="设置示例"><a href="#设置示例" class="headerlink" title="设置示例"></a>设置示例</h2><div class="story post-story"><p>请参考下面的代码，记得将 <code>TOKEN</code> 替换成自己的：</p><pre class="line-numbers language-none"><code class="language-none">&lt;div id&#x3D;&quot;waline&quot;&gt;&lt;&#x2F;div&gt;&lt;script&gt;  Waline(&#123;    el: &#39;#waline&#39;,    serverURL: &#39;https:&#x2F;&#x2F;n.dusays.com&#39;,    emoji: [&#39;https:&#x2F;&#x2F;cdn.dusays.com&#x2F;Sticker-100&#39;],    dark: &#39;auto&#39;,    requiredMeta: [&#39;nick&#39;, &#39;mail&#39;],    uploadImage: function(file) &#123;      const formData &#x3D; new FormData();      formData.append(&#39;file&#39;, file);      &#x2F;&#x2F; formData.append(&#39;strategy_id&#39;, 0); &#x2F;&#x2F; 可选策略ID      return fetch(&#39;https:&#x2F;&#x2F;test.7bu.top&#x2F;api&#x2F;v1&#x2F;upload&#39;, &#123;        headers: &#123;          &#39;Authorization&#39;: &#39;Bearer TOKEN&#39;        &#125;,        method: &#39;POST&#39;,      body: formData      &#125;).then(resp &#x3D;&gt; resp.json()).then(resp &#x3D;&gt; resp.data.links.url);    &#125;,    copyright: false,  &#125;);&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;去不图床使用全新的 API 接口，原有的 Waline 评论系统贴图方法发生改变，该文分享杜老师说 Waline 评论系统新版贴图 API 设置示例。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>杜老师说图床：新版本去不图床 PicGo 插件设置</title>
     <link href="https://dusays.com/455/"/>
     <id>https://dusays.com/455/</id>
@@ -450,29 +473,6 @@
     
     
     <category term="群晖" scheme="https://dusays.com/tags/%E7%BE%A4%E6%99%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说家人：祝愿奶奶健康长寿</title>
-    <link href="https://dusays.com/437/"/>
-    <id>https://dusays.com/437/</id>
-    <published>2022-02-24T16:00:00.000Z</published>
-    <updated>2022-02-28T08:10:42.361Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>前两天向公司请了年假，回家探望奶奶。毕竟今天仍旧未能回家过年，那为什么要选择这个时间点？因为正月廿五是奶奶的生日，而且是八十岁生日。</p></blockquote><span id="more"></span><h2 id="奶奶与我"><a href="#奶奶与我" class="headerlink" title="奶奶与我"></a>奶奶与我</h2><div class="story post-story"><p>我的家庭并不富裕，为了生计，爸爸出去打工，妈妈在我们生活的小城里开了个超市，忙里忙外也无暇顾及我，所以照顾我的任务，就落在了奶奶身上。作为长子长孙，我被奶奶捧在手里害怕摔了，含在嘴里害怕化了。所以打小就跟奶奶关系最好：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/02/437-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/02/437-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/02/437-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="生日快乐"><a href="#生日快乐" class="headerlink" title="生日快乐"></a>生日快乐</h2><div class="story post-story"><p>随着年龄增大、工作繁重，和家人团聚的时间越来越少。旁人常说，现在网络发达，平时可以视个频语个音啥的。但老人毕竟对电子产品接受能力有限，加上耳背，每次视频大多时间都干瞪眼，听不清对方说什么。终不及子女儿孙陪伴在身边，所以趁此时机，请了年假，回家给奶奶过生日：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/02/437-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/02/437-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/02/437-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><h2 id="更多陪伴"><a href="#更多陪伴" class="headerlink" title="更多陪伴"></a>更多陪伴</h2><div class="story post-story"><p>因为事先没打招呼「其实是提前了一天」家人看到我都特别惊喜，奶奶笑的合不拢嘴，嘴上还说着心疼路费还怕我折腾耽误工作，但我当时感觉一切都值。</p><p>老人不会管你挣了多少，他们只担心你每天开不开心，身体健不健康，工作顺不顺利，而他们想要的，也不是钱和保养品，只是我们更多陪伴。</p></div><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><div class="story post-story"><p>现今养生科学、医疗先进，但这些并不会增加太多陪伴老人的时间和机会，所以请尽可能抽出玩游戏和刷视频的时间，多联系下家人，告诉他们最近发生了什么开心事，让他们知道你的工作很顺利，领导很关照你，同事很喜欢你。让他们知道你身体健康，每天按时吃饭睡觉，多多锻炼健身。让他们知道你每天都很开心，没有生活压力。</p><p>最后祝愿所有看到或没有看到这篇文章的小伙伴及其家人们，开心快乐、身体健康、工作顺利，希望小伙伴们，能有更多时间陪伴家人！</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;前两天向公司请了年假，回家探望奶奶。毕竟今天仍旧未能回家过年，那为什么要选择这个时间点？因为正月廿五是奶奶的生日，而且是八十岁生日。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="家人" scheme="https://dusays.com/tags/%E5%AE%B6%E4%BA%BA/"/>
     
   </entry>
   
