@@ -66,6 +66,10 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
+.post-story + .post-story {
+  content-visibility: auto;
+  contain-intrinsic-size: 10px 500px;
+}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1916,7 +1920,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650291948014),
+    lastupdate: new Date(1650300592891),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3182,11 +3186,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 
-<h2 id="WordPress-的优缺"><a href="#WordPress-的优缺" class="headerlink" title="WordPress 的优缺"></a>WordPress 的优缺</h2><p>WordPress 的优点可真不少，首先使用人群基数较大。据不完全统计，十个网站就有三个是 WordPress 创建，而且还不都是博客。这也带出其第二个优点，拓展性强，几乎我们所需要的功能，都可以通过插件来实现，甚至某些大牛，可以直接上手修改代码。因为人群基数关系，也有不少前端工程师们为其开发模板，所以我们可以很容易在 WordPress 平台中，找到心仪模板。</p>
+<div class="story post-story"><h2 id="WordPress-的优缺"><a href="#WordPress-的优缺" class="headerlink" title="WordPress 的优缺"></a>WordPress 的优缺</h2><p>WordPress 的优点可真不少，首先使用人群基数较大。据不完全统计，十个网站就有三个是 WordPress 创建，而且还不都是博客。这也带出其第二个优点，拓展性强，几乎我们所需要的功能，都可以通过插件来实现，甚至某些大牛，可以直接上手修改代码。因为人群基数关系，也有不少前端工程师们为其开发模板，所以我们可以很容易在 WordPress 平台中，找到心仪模板。</p>
 <p>再说一个优点，也是因为人群基数大的关系，技术支持丰富，随便找个博客圈里问问，都能解决当下问题，省时省力。</p>
 <p>夸赞完了该说说缺点了。第一个缺点是臃肿，为了让其更具备扩展性，程序作者为其加入不少函数，很多都是普通用户不需要的，所以代码十分臃肿。接下来是效率，WordPress 不仅耗费服务器资源，而且执行效率低下，作为一个依赖 MySQL 数据存储的程序，竟然不做 SQL 的优化，在服务器上经常可以看到关于 WordPress 的慢查询语句，而且偷偷的说，MySQL 的临时缓存加速对其无效，别问我为什么。</p>
 <p>最后一个就是用出问题。你本想安静的这篇文章，却经常因为程序或插件，亦或者是模板升级带来一些问题，轻则无法正常使用，重则数据丢失，你的时间都浪费在处理这些问题上了。导致杜老师放弃 WordPress 最主要的原因是它的量级比较重，700 篇博客竟然需要 4H8G 的配置才能带动，也可能是杜老师没优化好的关系。</p>
-<h2 id="Hexo-的优缺"><a href="#Hexo-的优缺" class="headerlink" title="Hexo 的优缺"></a>Hexo 的优缺</h2><p>轻量部署、成本很低、定制性强、安全性高。</p>
+</div><div class="story post-story"><h2 id="Hexo-的优缺"><a href="#Hexo-的优缺" class="headerlink" title="Hexo 的优缺"></a>Hexo 的优缺</h2><p>轻量部署、成本很低、定制性强、安全性高。</p>
 <p>轻量部署，Hexo 并不需要复杂的网站运行环境，只需要支持 Node.js 即可，几条命令就可实现 Hexo 的安装使用。</p>
 <p>成本很低，如果只是为了记录，对服务端的要求并不高，可以选择免费网站托管平台。如想自建托管平台，也不需要太高的服务器配置，入门级云主机配置即可实现超强并发。</p>
 <p>定制性强，Hexo 外观及功能实现，大多都依赖于模板，而模板的使用及修改都非常简单，并不像 WordPress 那样需要掌握 PHP 语言才可以。</p>
@@ -3196,11 +3200,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>模板有限，相比较 WordPress，Hexo 的模板不是很多，而且大多都是个人作者，不像 WordPress 有企业级模板作者。</p>
 <p>容易出错，Hexo 本身还好些，不过其依赖的 Node.js 可能会报错，而且某些报错比较神奇，同样的环境有人没问题，有人就会报错。</p>
 <p>需要扩展，很多功能都依赖第三方服务，如评论等。</p>
-<h2 id="目前状况"><a href="#目前状况" class="headerlink" title="目前状况"></a>目前状况</h2><p>上述缺点还是比较好的，毕竟玩博客这么久，早已没有折腾的心，就想安静的写个文。且目前 Hexo 具备的功能可以满足杜老师需求，所以对 Hexo 来说还是比较满意。</p>
+</div><div class="story post-story"><h2 id="目前状况"><a href="#目前状况" class="headerlink" title="目前状况"></a>目前状况</h2><p>上述缺点还是比较好的，毕竟玩博客这么久，早已没有折腾的心，就想安静的写个文。且目前 Hexo 具备的功能可以满足杜老师需求，所以对 Hexo 来说还是比较满意。</p>
 <p>只是随着文章数量增多，生成页面时间越来越长，其中优化过很多次「升级版本、修改参数」均未能提高其效率，所以想换一个程序。</p>
-<h2 id="我的需求"><a href="#我的需求" class="headerlink" title="我的需求"></a>我的需求</h2><p>希望这款程序可以将.md 文件直接转换博客文章，毕竟.md 的备份修改都很方便。可以的话，最好是拥有自身的评论系统，依赖第三方整合性较差，且 Hexo 目前支持的第三方评论工具，大多都需要将数据存于其它位置，这种动态数据不管备份还是管理起来都很麻烦，数据放在自己手里才更放心。</p>
+</div><div class="story post-story"><h2 id="我的需求"><a href="#我的需求" class="headerlink" title="我的需求"></a>我的需求</h2><p>希望这款程序可以将.md 文件直接转换博客文章，毕竟.md 的备份修改都很方便。可以的话，最好是拥有自身的评论系统，依赖第三方整合性较差，且 Hexo 目前支持的第三方评论工具，大多都需要将数据存于其它位置，这种动态数据不管备份还是管理起来都很麻烦，数据放在自己手里才更放心。</p>
 <p>之前有小伙伴推荐过 Ghost 以及 Hugo 等，但测试的效果不尽人意，期待有天能遇到心仪的博客程序，也欢迎大家的推荐！</p>
 
+</div>
   </div>
   
   
@@ -4120,7 +4125,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-04-18 日</div> 
+          <div id="last-update-show">2022-04-19 日</div> 
         </div>
       
     </div>
@@ -4854,6 +4859,33 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+   <script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      pjax_scrollrebeal();
+    }
+  }
+  volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/scrollreveal/dist/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal);
+  volantis.pjax.push(
+    pjax_scrollrebeal,
+    "pjax_scrollrebeal",
+    (setRequestAnimationFrame = false)
+  );
+</script>
+
+
 
 
 
@@ -4966,6 +4998,308 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     e.addEventListener("focus", loadSearchService, false);
   });
 </script>
+
+
+
+
+
+
+
+  
+  
+<script src="https://npm.elemecdn.com/prismjs/components/prism-core.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function pjax_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(pjax_prismjs_copyCode)
+  volantis.pjax.push(pjax_prismjs_copyCode)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function pjax_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  });
+</script>
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
+  function listennSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    let targets = []
+    const sections = [...navItems].map((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        decodeURI(link.getAttribute("href")).replace("#", "")
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      link.setAttribute("onclick","return false;")
+      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
+      link.setAttribute("href","/")
+      // 配置 点击 触发新的锚点定位
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        // 这里的 addTop 是通过错位使得 toc 自动展开.
+        volantis.scroll.to(target,{addTop: 5, observer:false})
+        // Anchor id
+        history.pushState(null, document.title, "#" + target.id);
+      });
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex=0
+    volantis.scroll.push(()=>{
+      if (targets[0].getBoundingClientRect().top >= 0) {
+        volantis.activateNavIndex = 0
+      }else if (targets[targets.length-1].getBoundingClientRect().top < 0) {
+        volantis.activateNavIndex = targets.length-1
+      } else {
+        for (let index = 0; index < targets.length; index++) {
+          const target0 = targets[index];
+          const target1 = targets[(index+1)%targets.length];
+          if (target0.getBoundingClientRect().top < 0&&target1.getBoundingClientRect().top >= 0) {
+            volantis.activateNavIndex=index
+            break;
+          }
+        }
+      }
+      activateNavByIndex(navItems[volantis.activateNavIndex])
+    })
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+  document.addEventListener("pjax:success", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+</script>
+
+<script>
+  // https://web.dev/content-visibility/
+  // https://www.caniuse.com/?search=content-visibility
+  // https://infrequently.org/2020/12/content-visibility-scroll-fix/
+  // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
+
+  // 备注 目前已知的问题:
+  // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
+  // scrollreveal 插件潜在问题 目前尚不明确
+
+  let eqIsh = (a, b, fuzz = 2) => {
+    return Math.abs(a - b) <= fuzz;
+  };
+
+  let rectNotEQ = (a, b) => {
+    return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
+  };
+
+  // Keep a map of elements and the dimensions of
+  // their place-holders, re-setting the element's
+  // intrinsic size when we get updated measurements
+  // from observers.
+  let spaced = new WeakMap();
+
+  // Only call this when known cheap, post layout
+  let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
+    let old = spaced.get(el);
+    // Set intrinsic size to prevent jumping on un-painting:
+    //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
+    if (!old || rectNotEQ(old, rect)) {
+      spaced.set(el, rect);
+      el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
+    }
+  };
+
+  let iObs = new IntersectionObserver(
+    (entries, o) => {
+      entries.forEach((entry) => {
+        // We don't care if the element is intersecting or
+        // has been laid out as our page structure ensures
+        // they'll get the right width.
+        reserveSpace(entry.target, entry.boundingClientRect);
+      });
+    },
+    { rootMargin: "500px 0px 500px 0px" }
+  );
+
+  let rObs = new ResizeObserver((entries, o) => {
+    entries.forEach((entry) => {
+      reserveSpace(entry.target, entry.contentRect);
+    });
+  });
+
+  let resizeResilientDeferredRendering = (Selector) => {
+    let articles = document.querySelectorAll(Selector);
+
+    if (articles.length) {
+      articles.forEach((el) => {
+        iObs.observe(el);
+        rObs.observe(el);
+      });
+
+      // Workaround for Chrome bug, part 2.
+      //
+      // Re-enable browser management of rendering for the
+      // first article after the first paint. Double-rAF
+      // to ensure we get called after a layout.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          articles[0].style["content-visibility"] = "auto";
+        });
+      });
+    }
+  };
+
+  let contentVisibilityScrollFix = () => {
+    if (!("content-visibility" in document.documentElement.style)) {
+      return;
+    }
+    resizeResilientDeferredRendering(".post-story");
+  };
+  contentVisibilityScrollFix();
+  volantis.pjax.push(contentVisibilityScrollFix);
+</script>
+
+
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/网站搭建/","name":"网站搭建"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/374/","name":"杜老师说博客：Blogger 选程序的那些事"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说博客：Blogger 选程序的那些事","description":"\n杜老师之前就是一枚 WPer，后来因为 WordPress 太过于臃肿，不想再折腾了，所以选择了 Hexo。不过最近又遇到了新的问题……\n","datePublished":"2021-08-19T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.280Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/374/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/374/","wordCount":70,"articleSection":"网站搭建","keywords":"博客","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

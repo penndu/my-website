@@ -66,6 +66,10 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
+.post-story + .post-story {
+  content-visibility: auto;
+  contain-intrinsic-size: 10px 500px;
+}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1916,7 +1920,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650291948014),
+    lastupdate: new Date(1650300592891),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3182,7 +3186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 
-<h2 id="西瓜由来"><a href="#西瓜由来" class="headerlink" title="西瓜由来"></a>西瓜由来</h2><p>一日下班回来，听到单元门附近有奶猫叫声，有气无力特别凄惨，好奇心大起过去瞧了下，瞬间内心为之一振。</p>
+<div class="story post-story"><h2 id="西瓜由来"><a href="#西瓜由来" class="headerlink" title="西瓜由来"></a>西瓜由来</h2><p>一日下班回来，听到单元门附近有奶猫叫声，有气无力特别凄惨，好奇心大起过去瞧了下，瞬间内心为之一振。</p>
 <p>猫咪躺在草丛，脖颈处有个贯穿伤，周围环绕着好多的苍蝇，并不时有些落在猫咪脖颈处排卵，且可以看到好多蚂蚁在猫咪的口耳处进进出出。</p>
 <p>本来想着多一事不如少一事，但架不住对生命的尊重，所以赶紧回家拿了一件旧外衣和手套，抱着猫咪奔向了附近的宠物医院。</p>
 <p>宠物医生做了详细的检查后，建议保守治疗，毕竟不敢保证在极力救治下，猫咪是否可以存活，且治疗的费用很高。</p>
@@ -3194,33 +3198,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>本来想着治好后就留在宠物医院，等待好心人的收留。将这个想法和医生说了，医生建议先拿回去再养两天，等联系到收养人后，再联系我。</p>
 <p>不过随着相处时间增加，发现养只猫咪也挺好的，故给其起了个名字：西瓜。</p>
 <p>如果问为什么叫他西瓜，其实是很早前，遇到过一只流浪猫，很粘着我。但因为没有能力养，所以给朋友了，最后朋友说猫跑了。希望这只猫可以乖一些，不要乱跑！</p>
-<h2 id="小调皮蛋"><a href="#小调皮蛋" class="headerlink" title="小调皮蛋"></a>小调皮蛋</h2><p>本来以为是只乖巧的猫，待其伤好之后，就开始其称皇猫生。一天到晚上串下跳，动不动冲过来咬我一口。等我想抓住他，瞬间跑到床底够不到的地方，一动不动。又待我放松警惕时，再跑出来补上一口。配喵图你瞅啥：</p>
+</div><div class="story post-story"><h2 id="小调皮蛋"><a href="#小调皮蛋" class="headerlink" title="小调皮蛋"></a>小调皮蛋</h2><p>本来以为是只乖巧的猫，待其伤好之后，就开始其称皇猫生。一天到晚上串下跳，动不动冲过来咬我一口。等我想抓住他，瞬间跑到床底够不到的地方，一动不动。又待我放松警惕时，再跑出来补上一口。配喵图你瞅啥：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2021/06/20/6f93691f53ac5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="西瓜饮食"><a href="#西瓜饮食" class="headerlink" title="西瓜饮食"></a>西瓜饮食</h2><p>我感觉他最大特点就是贪吃，我吃什么，都要过来闻闻「朕给你鉴个毒」每天回家第一件事，冲我嗷嗷的叫，翻译成中文是「撒冷的喂我吃东西」因为白天需要上班而且经常出差，就给他买了个自动的喂食器，后来发现自动完全没有必要，他会自己按出粮键：</p>
+</div><div class="story post-story"><h2 id="西瓜饮食"><a href="#西瓜饮食" class="headerlink" title="西瓜饮食"></a>西瓜饮食</h2><p>我感觉他最大特点就是贪吃，我吃什么，都要过来闻闻「朕给你鉴个毒」每天回家第一件事，冲我嗷嗷的叫，翻译成中文是「撒冷的喂我吃东西」因为白天需要上班而且经常出差，就给他买了个自动的喂食器，后来发现自动完全没有必要，他会自己按出粮键：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-1.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-2.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="西瓜饮水"><a href="#西瓜饮水" class="headerlink" title="西瓜饮水"></a>西瓜饮水</h2><p>猫咪饮水是非常重要的，喝水少了容易生病，所以给他买了智能的饮水机。可以手机控制出水间隔，并可以监控剩余水量及水质滤芯的使用量。他最喜欢做的事情，就是沾上一爪子水，然后在我脸上狂甩:</p>
+</div><div class="story post-story"><h2 id="西瓜饮水"><a href="#西瓜饮水" class="headerlink" title="西瓜饮水"></a>西瓜饮水</h2><p>猫咪饮水是非常重要的，喝水少了容易生病，所以给他买了智能的饮水机。可以手机控制出水间隔，并可以监控剩余水量及水质滤芯的使用量。他最喜欢做的事情，就是沾上一爪子水，然后在我脸上狂甩:</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-3.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-4.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="满屋猫毛"><a href="#满屋猫毛" class="headerlink" title="满屋猫毛"></a>满屋猫毛</h2><p>猫咪一如夏季，就会开始脱毛，脱到我都不敢碰他，每次摸完都感觉自己戴了双手套。天热丝毫没有降低他爱动的兴趣，照样疯跑，那满屋如下雪般的猫毛，我真想把他剃秃了！最后买了空气净化器整天吹，在屋子里才勉强能呼吸:</p>
+</div><div class="story post-story"><h2 id="满屋猫毛"><a href="#满屋猫毛" class="headerlink" title="满屋猫毛"></a>满屋猫毛</h2><p>猫咪一如夏季，就会开始脱毛，脱到我都不敢碰他，每次摸完都感觉自己戴了双手套。天热丝毫没有降低他爱动的兴趣，照样疯跑，那满屋如下雪般的猫毛，我真想把他剃秃了！最后买了空气净化器整天吹，在屋子里才勉强能呼吸:</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-5.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-5.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-5.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-6.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-6.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-6.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="温湿度计"><a href="#温湿度计" class="headerlink" title="温湿度计"></a>温湿度计</h2><p>冬天阳台的温度低，为了避免猫咪受凉，买了台加热器。但电表要起飞的转速让我着实的心疼，所以买了温湿度计，可以联动小米智能插座，到舒适温度后自动关闭加热。电费倒是小事，屋子里少了煮屎的味道:</p>
+</div><div class="story post-story"><h2 id="温湿度计"><a href="#温湿度计" class="headerlink" title="温湿度计"></a>温湿度计</h2><p>冬天阳台的温度低，为了避免猫咪受凉，买了台加热器。但电表要起飞的转速让我着实的心疼，所以买了温湿度计，可以联动小米智能插座，到舒适温度后自动关闭加热。电费倒是小事，屋子里少了煮屎的味道:</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='one'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-7.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-7.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-7.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-8.jpg/1' data-fancybox='one' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-8.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-8.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="西瓜监控"><a href="#西瓜监控" class="headerlink" title="西瓜监控"></a>西瓜监控</h2><p>卧室的零碎有好多，白天上班时担心猫在卧室会乱碰，关在阳台又怕猫出事情，所以买了云摄像头，可以随时查看猫的状态。十次看有九次在晒太阳，一次躲在猫砂盆中拉屎，隔着屏幕都能感受到猫屎的味道:</p>
+</div><div class="story post-story"><h2 id="西瓜监控"><a href="#西瓜监控" class="headerlink" title="西瓜监控"></a>西瓜监控</h2><p>卧室的零碎有好多，白天上班时担心猫在卧室会乱碰，关在阳台又怕猫出事情，所以买了云摄像头，可以随时查看猫的状态。十次看有九次在晒太阳，一次躲在猫砂盆中拉屎，隔着屏幕都能感受到猫屎的味道:</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-9.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-9.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-9.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="粑粑除臭"><a href="#粑粑除臭" class="headerlink" title="粑粑除臭"></a>粑粑除臭</h2><p>猫咪拉屎真的很臭，有时怀疑他是不是背着我吃屎了。平时关着他的阳台，已经成为我的禁地，毕竟活动空间和命，还是后者重要。不过毕竟要晾晒衣服的，所以扛不住就买了台负离子除臭器，说实话确实挺好使。后来猫咪可能发现他的味道影响不到我了，直接改用屁股坐我的脸。要不是我靠脸吃饭，真想把这张脸扔了:</p>
+</div><div class="story post-story"><h2 id="粑粑除臭"><a href="#粑粑除臭" class="headerlink" title="粑粑除臭"></a>粑粑除臭</h2><p>猫咪拉屎真的很臭，有时怀疑他是不是背着我吃屎了。平时关着他的阳台，已经成为我的禁地，毕竟活动空间和命，还是后者重要。不过毕竟要晾晒衣服的，所以扛不住就买了台负离子除臭器，说实话确实挺好使。后来猫咪可能发现他的味道影响不到我了，直接改用屁股坐我的脸。要不是我靠脸吃饭，真想把这张脸扔了:</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-10.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-10.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-10.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="西瓜玩具"><a href="#西瓜玩具" class="headerlink" title="西瓜玩具"></a>西瓜玩具</h2><p>上班累了一天，到家就想摊在床上。奈何理想的丰满被猫爪无情撕碎，得先陪着他玩爽了，才能做自己的事情。实在受不了就买了个自动逗猫机，结果理想的丰满再次被猫爪无情撕碎，我得看着他玩不说，他的动作仿佛开启教学模式，仿佛在说「看到了吗？要这样抓才行，你个傻叉」</p>
+</div><div class="story post-story"><h2 id="西瓜玩具"><a href="#西瓜玩具" class="headerlink" title="西瓜玩具"></a>西瓜玩具</h2><p>上班累了一天，到家就想摊在床上。奈何理想的丰满被猫爪无情撕碎，得先陪着他玩爽了，才能做自己的事情。实在受不了就买了个自动逗猫机，结果理想的丰满再次被猫爪无情撕碎，我得看着他玩不说，他的动作仿佛开启教学模式，仿佛在说「看到了吗？要这样抓才行，你个傻叉」</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-11.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-11.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-11.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="西瓜出行"><a href="#西瓜出行" class="headerlink" title="西瓜出行"></a>西瓜出行</h2><p>在家称王称霸，一出卧室门就怂了。每次抱出去都大叫着要回家，为了防止猫咪出现应激反应，就买了个猫包，带空调的那种「因为是夏季购买的」结果可怜猫包没有发挥几次作用，变成了烘干箱，猫咪洗完澡后放入猫包开始吹干，包生应该无遗憾了:</p>
+</div><div class="story post-story"><h2 id="西瓜出行"><a href="#西瓜出行" class="headerlink" title="西瓜出行"></a>西瓜出行</h2><p>在家称王称霸，一出卧室门就怂了。每次抱出去都大叫着要回家，为了防止猫咪出现应激反应，就买了个猫包，带空调的那种「因为是夏季购买的」结果可怜猫包没有发挥几次作用，变成了烘干箱，猫咪洗完澡后放入猫包开始吹干，包生应该无遗憾了:</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2021/09/382-12.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/09/382-12.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/09/382-12.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
+</div>
   </div>
   
   
@@ -4144,7 +4149,7 @@ ip 命令用来显示或操纵 Linux 主机的路由、网络设备、策略路�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-04-18 日</div> 
+          <div id="last-update-show">2022-04-19 日</div> 
         </div>
       
     </div>
@@ -4878,6 +4883,33 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+   <script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      pjax_scrollrebeal();
+    }
+  }
+  volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/scrollreveal/dist/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal);
+  volantis.pjax.push(
+    pjax_scrollrebeal,
+    "pjax_scrollrebeal",
+    (setRequestAnimationFrame = false)
+  );
+</script>
+
+
 
 
 
@@ -4990,6 +5022,308 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     e.addEventListener("focus", loadSearchService, false);
   });
 </script>
+
+
+
+
+
+
+
+  
+  
+<script src="https://npm.elemecdn.com/prismjs/components/prism-core.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function pjax_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(pjax_prismjs_copyCode)
+  volantis.pjax.push(pjax_prismjs_copyCode)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function pjax_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  });
+</script>
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
+  function listennSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    let targets = []
+    const sections = [...navItems].map((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        decodeURI(link.getAttribute("href")).replace("#", "")
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      link.setAttribute("onclick","return false;")
+      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
+      link.setAttribute("href","/")
+      // 配置 点击 触发新的锚点定位
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        // 这里的 addTop 是通过错位使得 toc 自动展开.
+        volantis.scroll.to(target,{addTop: 5, observer:false})
+        // Anchor id
+        history.pushState(null, document.title, "#" + target.id);
+      });
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex=0
+    volantis.scroll.push(()=>{
+      if (targets[0].getBoundingClientRect().top >= 0) {
+        volantis.activateNavIndex = 0
+      }else if (targets[targets.length-1].getBoundingClientRect().top < 0) {
+        volantis.activateNavIndex = targets.length-1
+      } else {
+        for (let index = 0; index < targets.length; index++) {
+          const target0 = targets[index];
+          const target1 = targets[(index+1)%targets.length];
+          if (target0.getBoundingClientRect().top < 0&&target1.getBoundingClientRect().top >= 0) {
+            volantis.activateNavIndex=index
+            break;
+          }
+        }
+      }
+      activateNavByIndex(navItems[volantis.activateNavIndex])
+    })
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+  document.addEventListener("pjax:success", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+</script>
+
+<script>
+  // https://web.dev/content-visibility/
+  // https://www.caniuse.com/?search=content-visibility
+  // https://infrequently.org/2020/12/content-visibility-scroll-fix/
+  // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
+
+  // 备注 目前已知的问题:
+  // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
+  // scrollreveal 插件潜在问题 目前尚不明确
+
+  let eqIsh = (a, b, fuzz = 2) => {
+    return Math.abs(a - b) <= fuzz;
+  };
+
+  let rectNotEQ = (a, b) => {
+    return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
+  };
+
+  // Keep a map of elements and the dimensions of
+  // their place-holders, re-setting the element's
+  // intrinsic size when we get updated measurements
+  // from observers.
+  let spaced = new WeakMap();
+
+  // Only call this when known cheap, post layout
+  let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
+    let old = spaced.get(el);
+    // Set intrinsic size to prevent jumping on un-painting:
+    //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
+    if (!old || rectNotEQ(old, rect)) {
+      spaced.set(el, rect);
+      el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
+    }
+  };
+
+  let iObs = new IntersectionObserver(
+    (entries, o) => {
+      entries.forEach((entry) => {
+        // We don't care if the element is intersecting or
+        // has been laid out as our page structure ensures
+        // they'll get the right width.
+        reserveSpace(entry.target, entry.boundingClientRect);
+      });
+    },
+    { rootMargin: "500px 0px 500px 0px" }
+  );
+
+  let rObs = new ResizeObserver((entries, o) => {
+    entries.forEach((entry) => {
+      reserveSpace(entry.target, entry.contentRect);
+    });
+  });
+
+  let resizeResilientDeferredRendering = (Selector) => {
+    let articles = document.querySelectorAll(Selector);
+
+    if (articles.length) {
+      articles.forEach((el) => {
+        iObs.observe(el);
+        rObs.observe(el);
+      });
+
+      // Workaround for Chrome bug, part 2.
+      //
+      // Re-enable browser management of rendering for the
+      // first article after the first paint. Double-rAF
+      // to ensure we get called after a layout.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          articles[0].style["content-visibility"] = "auto";
+        });
+      });
+    }
+  };
+
+  let contentVisibilityScrollFix = () => {
+    if (!("content-visibility" in document.documentElement.style)) {
+      return;
+    }
+    resizeResilientDeferredRendering(".post-story");
+  };
+  contentVisibilityScrollFix();
+  volantis.pjax.push(contentVisibilityScrollFix);
+</script>
+
+
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/智慧生活/","name":"智慧生活"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/382/","name":"杜老师说萌宠：杜老师的镇博萌宠"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说萌宠：杜老师的镇博萌宠","description":"\n借助十年之约虫洞穿梭访问了不少圈内博主的站点，大多都是分享生活。有博主回访的时候留言要求更新一些生活日志，那今天就穿越写上一篇，不要吝啬您的脚印，请在评论区里狠狠的踩！\n","datePublished":"2021-09-12T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.280Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/382/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/382/","wordCount":86,"articleSection":"智慧生活","keywords":"萌宠","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

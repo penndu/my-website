@@ -65,6 +65,10 @@ NAS 全称 Network Attached Storage，网络附属存储。按照字面简单说
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
+.post-story + .post-story {
+  content-visibility: auto;
+  contain-intrinsic-size: 10px 500px;
+}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1915,7 +1919,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650291948014),
+    lastupdate: new Date(1650300592891),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3181,9 +3185,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 
-<h2 id="网络云盘"><a href="#网络云盘" class="headerlink" title="网络云盘"></a>网络云盘</h2><p>平时会把数据存在哪里？分享数据时会使用什么方式？我们习惯将数据存放在本地，这样调用起来十分方便。不过相比台式电脑，更便携的笔记本愈加的普及，而笔记本的存储量有限，扩展性比较差「目前大多品牌已经开始采用焊接型的存储模块，也就是说出厂即决定了电脑的最大存储量」</p>
+<div class="story post-story"><h2 id="网络云盘"><a href="#网络云盘" class="headerlink" title="网络云盘"></a>网络云盘</h2><p>平时会把数据存在哪里？分享数据时会使用什么方式？我们习惯将数据存放在本地，这样调用起来十分方便。不过相比台式电脑，更便携的笔记本愈加的普及，而笔记本的存储量有限，扩展性比较差「目前大多品牌已经开始采用焊接型的存储模块，也就是说出厂即决定了电脑的最大存储量」</p>
 <p>这时就有小伙伴会选择优盘或是移动硬盘，前者携带更为便携，后者高速且存储量较大。作为移动存储设备忠实用户，杜老师为学员分享大量数据时甚至采用了邮寄移动硬盘这种方式。既然是互联网时代，通过网络传输数据也是一个非常好的方法。很多小伙伴会借助某度网盘分享数据，加上网盘的存储容量大，不少的小伙伴更会将本地一些不常用文件存在网上节约本地空间。</p>
-<h2 id="网盘缺点"><a href="#网盘缺点" class="headerlink" title="网盘缺点"></a>网盘缺点</h2><p>目前使用量比较大的就是某度网盘了，我们就拿这个网盘举例说明一下都有哪些缺点：</p>
+</div><div class="story post-story"><h2 id="网盘缺点"><a href="#网盘缺点" class="headerlink" title="网盘缺点"></a>网盘缺点</h2><p>目前使用量比较大的就是某度网盘了，我们就拿这个网盘举例说明一下都有哪些缺点：</p>
 <ol>
 <li>存储空间有限。虽然声称几个 T 的空间，但有很多开通限制，比如说要下载软件、邀请他人开通、付费开通会员。这些也能理解，毕竟人家是免费提供的，有些使用限制情有可原；</li>
 <li>限制传输速度。这个几乎所有小伙伴都会吐槽的，某度网盘针对上传下载做了限速，只有开通会员才会解除限速，而且还要开通高级会员，普通的还不行。也有些小伙伴使用一些工具绕过限速，但都不太理想，传说某个软件作者，还被某度请去喝茶；</li>
@@ -3191,14 +3195,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>经常占用带宽。这个属于玄学，与某雷有异曲同工之妙。明明此刻没有任何上传下载操作，但本地的客户端却偏偏占用大量带宽资源，您知道它在传输什么吗？</li>
 </ol>
 <p>当然网盘也有很多优点，比如免费、方便等等。不过对一个大数据量的用户来说，上面提到的那些缺点足够致命了。</p>
-<h2 id="附属存储"><a href="#附属存储" class="headerlink" title="附属存储"></a>附属存储</h2><p>杜老师始终认为把数据放在自己的手里最安全。那么如何把存储和网络融合到一起呢，就是今天提到的 NAS。先放上一张效果图，我们再来聊一下为什么要选择 NAS：</p>
+</div><div class="story post-story"><h2 id="附属存储"><a href="#附属存储" class="headerlink" title="附属存储"></a>附属存储</h2><p>杜老师始终认为把数据放在自己的手里最安全。那么如何把存储和网络融合到一起呢，就是今天提到的 NAS。先放上一张效果图，我们再来聊一下为什么要选择 NAS：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2020/09/262-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2020/09/262-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2020/09/262-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<h2 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h2><p>如果您的数据量特别大，肯定需要一台 NAS 了。杜老师除了运维外，偶尔还研究一些人工智能的技术，主要专攻内容识别方向。举个例子，一段视频中是否有不和谐的内容，之前都是人工排查，借助人工智能，我们可以自动识别，而这样就需要大量视频素材。这些素材如果存在网盘上面，调用起来肯定十分麻烦，所以 NAS 成为它们最佳存放地。</p>
+</div><div class="story post-story"><h2 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h2><p>如果您的数据量特别大，肯定需要一台 NAS 了。杜老师除了运维外，偶尔还研究一些人工智能的技术，主要专攻内容识别方向。举个例子，一段视频中是否有不和谐的内容，之前都是人工排查，借助人工智能，我们可以自动识别，而这样就需要大量视频素材。这些素材如果存在网盘上面，调用起来肯定十分麻烦，所以 NAS 成为它们最佳存放地。</p>
 <p>杜老师的电脑很多，有生产主力机、测试用机、计算节点，还有一台用于移动办公，以及一台公司配的电脑，一共五台。如果将数据同时存放在五台电脑上面，肯定更加安全，因为其中一个坏了，还有另外几台电脑中的备份。但这样也占用大量空间，可是如果不这样做，杜老师就需要经常忙于数据转移，毕竟某些工作需要多台电脑配合。这时通过 NAS 的网络共享功能，杜老师可直接将数据存放在 NAS 中，任何一台电脑都可以通过网络高速获取到所需要的数据。</p>
 <p>通过上面的效果图，有些小伙伴会发现，杜老师用的是群晖的 NAS。只要提到群晖，就不要提性价比了，因为相同价格，可以配出一个台式机了，且性能远比群晖高上不止一个层次了。毕竟群晖可以说是买软件送硬件，而这些软件可以为我们提供更多服务，别的不说，虚拟机和容器技术就涵盖了众多我们所需要的功能。</p>
 <p>今天只是发一个口水文，在接下来的文章中，杜老师会针对群晖的 NAS，做一个功能性讲解，并在后期的教程中，聊聊如何低成本自建 NAS。</p>
 
+</div>
   </div>
   
   
@@ -4122,7 +4127,7 @@ NAS 全称 Network Attached Storage，网络附属存储。按照字面简单说
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-04-18 日</div> 
+          <div id="last-update-show">2022-04-19 日</div> 
         </div>
       
     </div>
@@ -4856,6 +4861,33 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+   <script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      pjax_scrollrebeal();
+    }
+  }
+  volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/scrollreveal/dist/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal);
+  volantis.pjax.push(
+    pjax_scrollrebeal,
+    "pjax_scrollrebeal",
+    (setRequestAnimationFrame = false)
+  );
+</script>
+
+
 
 
 
@@ -4968,6 +5000,308 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     e.addEventListener("focus", loadSearchService, false);
   });
 </script>
+
+
+
+
+
+
+
+  
+  
+<script src="https://npm.elemecdn.com/prismjs/components/prism-core.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function pjax_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(pjax_prismjs_copyCode)
+  volantis.pjax.push(pjax_prismjs_copyCode)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function pjax_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  });
+</script>
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
+  function listennSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    let targets = []
+    const sections = [...navItems].map((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        decodeURI(link.getAttribute("href")).replace("#", "")
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      link.setAttribute("onclick","return false;")
+      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
+      link.setAttribute("href","/")
+      // 配置 点击 触发新的锚点定位
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        // 这里的 addTop 是通过错位使得 toc 自动展开.
+        volantis.scroll.to(target,{addTop: 5, observer:false})
+        // Anchor id
+        history.pushState(null, document.title, "#" + target.id);
+      });
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex=0
+    volantis.scroll.push(()=>{
+      if (targets[0].getBoundingClientRect().top >= 0) {
+        volantis.activateNavIndex = 0
+      }else if (targets[targets.length-1].getBoundingClientRect().top < 0) {
+        volantis.activateNavIndex = targets.length-1
+      } else {
+        for (let index = 0; index < targets.length; index++) {
+          const target0 = targets[index];
+          const target1 = targets[(index+1)%targets.length];
+          if (target0.getBoundingClientRect().top < 0&&target1.getBoundingClientRect().top >= 0) {
+            volantis.activateNavIndex=index
+            break;
+          }
+        }
+      }
+      activateNavByIndex(navItems[volantis.activateNavIndex])
+    })
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+  document.addEventListener("pjax:success", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+</script>
+
+<script>
+  // https://web.dev/content-visibility/
+  // https://www.caniuse.com/?search=content-visibility
+  // https://infrequently.org/2020/12/content-visibility-scroll-fix/
+  // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
+
+  // 备注 目前已知的问题:
+  // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
+  // scrollreveal 插件潜在问题 目前尚不明确
+
+  let eqIsh = (a, b, fuzz = 2) => {
+    return Math.abs(a - b) <= fuzz;
+  };
+
+  let rectNotEQ = (a, b) => {
+    return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
+  };
+
+  // Keep a map of elements and the dimensions of
+  // their place-holders, re-setting the element's
+  // intrinsic size when we get updated measurements
+  // from observers.
+  let spaced = new WeakMap();
+
+  // Only call this when known cheap, post layout
+  let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
+    let old = spaced.get(el);
+    // Set intrinsic size to prevent jumping on un-painting:
+    //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
+    if (!old || rectNotEQ(old, rect)) {
+      spaced.set(el, rect);
+      el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
+    }
+  };
+
+  let iObs = new IntersectionObserver(
+    (entries, o) => {
+      entries.forEach((entry) => {
+        // We don't care if the element is intersecting or
+        // has been laid out as our page structure ensures
+        // they'll get the right width.
+        reserveSpace(entry.target, entry.boundingClientRect);
+      });
+    },
+    { rootMargin: "500px 0px 500px 0px" }
+  );
+
+  let rObs = new ResizeObserver((entries, o) => {
+    entries.forEach((entry) => {
+      reserveSpace(entry.target, entry.contentRect);
+    });
+  });
+
+  let resizeResilientDeferredRendering = (Selector) => {
+    let articles = document.querySelectorAll(Selector);
+
+    if (articles.length) {
+      articles.forEach((el) => {
+        iObs.observe(el);
+        rObs.observe(el);
+      });
+
+      // Workaround for Chrome bug, part 2.
+      //
+      // Re-enable browser management of rendering for the
+      // first article after the first paint. Double-rAF
+      // to ensure we get called after a layout.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          articles[0].style["content-visibility"] = "auto";
+        });
+      });
+    }
+  };
+
+  let contentVisibilityScrollFix = () => {
+    if (!("content-visibility" in document.documentElement.style)) {
+      return;
+    }
+    resizeResilientDeferredRendering(".post-story");
+  };
+  contentVisibilityScrollFix();
+  volantis.pjax.push(contentVisibilityScrollFix);
+</script>
+
+
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/智慧生活/","name":"智慧生活"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/262/","name":"杜老师说工具：您可能需要 NAS"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说工具：您可能需要 NAS","description":"\nNAS 全称 Network Attached Storage，网络附属存储。按照字面简单说就是连接在网络上具备资料存储功能的装置，因此也称为网络存储器。它是一种专用的数据存储服务器。以数据为中心，将存储设备与服务器彻底的分离，集中管理数据，从而释放带宽、提高性能、降低成本、保护资产。其成本远远低于使用服务器存储，而效率却远远高于后者。\n","datePublished":"2020-09-14T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.272Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/262/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/262/","wordCount":171,"articleSection":"智慧生活","keywords":"工具","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

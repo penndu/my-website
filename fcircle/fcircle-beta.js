@@ -382,3 +382,4 @@ function initFriendCircle(sortNow,changeUrl){
 }
 // 执行初始化
 initFriendCircle(sortNow)
+
