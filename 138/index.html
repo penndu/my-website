@@ -25,7 +25,7 @@
   
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://cdn.dusays.com/favicon.ico">
-  <link rel="preload" href="/css/style.d5821d4e.css" as="style">
+  <link rel="preload" href="/css/style.e0234e1d.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1841,8 +1841,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.d5821d4e.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.d5821d4e.css"></noscript>
+  <link rel="stylesheet" href="/css/style.e0234e1d.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.e0234e1d.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1920,9 +1920,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.d5821d4e.css"}},
+    cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650245710218),
+    lastupdate: new Date(1650247909659),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -5095,19 +5095,45 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
+  
+  
+<script src="https://npm.elemecdn.com/prismjs/components/prism-core.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
 
 
-  function pjax_highlightjs_copyCode(){
-    if (!(document.querySelector(".highlight .code pre") ||
-      document.querySelector(".article pre code"))) {
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function pjax_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
       return;
     }
-    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
   }
-  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
-  volantis.pjax.push(pjax_highlightjs_copyCode)
+  volantis.requestAnimationFrame(pjax_prismjs_copyCode)
+  volantis.pjax.push(pjax_prismjs_copyCode)
 
 </script>
 
