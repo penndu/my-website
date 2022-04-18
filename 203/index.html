@@ -66,11 +66,6 @@ Apache 是世界使用排名第一的 Web 服务软件。它可运行在几乎�
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story,
-article + article {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1921,7 +1916,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650274065518),
+    lastupdate: new Date(1650281224945),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3187,9 +3182,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 
-<h2 id="服务介绍"><a href="#服务介绍" class="headerlink" title="服务介绍"></a>服务介绍</h2><div class="story post-story"><p>快速、可靠并可通过简单的 API 扩充，将 Perl&#x2F;Python 等解释器编译到服务中。</p>
+<h2 id="服务介绍"><a href="#服务介绍" class="headerlink" title="服务介绍"></a>服务介绍</h2><p>快速、可靠并可通过简单的 API 扩充，将 Perl&#x2F;Python 等解释器编译到服务中。</p>
 <p>Apache 安装后，默认为基于 IP，而且是单 IP 的形式，既直接可通过本机的 IP 访问，默认的 DocumentRoot 为&#x2F;var&#x2F;www&#x2F;html，可通过配置文件&#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf 修改。</p>
-</div><h2 id="基于-IP-的"><a href="#基于-IP-的" class="headerlink" title="基于 IP 的"></a>基于 IP 的</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">&lt;VirtualHost 192.168.18.251:80&gt;
+<h2 id="基于-IP-的"><a href="#基于-IP-的" class="headerlink" title="基于 IP 的"></a>基于 IP 的</h2><pre class="line-numbers language-none"><code class="language-none">&lt;VirtualHost 192.168.18.251:80&gt;
     DocumentRoot &#x2F;var&#x2F;www&#x2F;html&#x2F;web1
 &lt;&#x2F;VirtualHost&gt;
 &lt;VirtualHost 192.168.18.252:80&gt;
@@ -3197,7 +3192,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 &lt;&#x2F;VirtualHost&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：如果做多 IP 的虚拟主机，请为主机增加 IP 后按照上面的流程配置。</p>
-</div><h2 id="基于端口"><a href="#基于端口" class="headerlink" title="基于端口"></a>基于端口</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">Listen 81
+<h2 id="基于端口"><a href="#基于端口" class="headerlink" title="基于端口"></a>基于端口</h2><pre class="line-numbers language-none"><code class="language-none">Listen 81
 Listen 82
 &lt;VirtualHost 192.168.18.250:81&gt;
     DocumentRoot &#x2F;var&#x2F;www&#x2F;html&#x2F;web1
@@ -3207,7 +3202,7 @@ Listen 82
 &lt;&#x2F;VirtualHost&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：配置文件如上，大家可以自行更换端口及根目录。</p>
-</div><h2 id="基于域名"><a href="#基于域名" class="headerlink" title="基于域名"></a>基于域名</h2><div class="story post-story"><pre class="line-numbers language-none"><code class="language-none">&lt;VirtualHost *:80&gt;  
+<h2 id="基于域名"><a href="#基于域名" class="headerlink" title="基于域名"></a>基于域名</h2><pre class="line-numbers language-none"><code class="language-none">&lt;VirtualHost *:80&gt;  
     ServerName a.dusays.com  
     DocumentRoot &#x2F;var&#x2F;www&#x2F;html&#x2F;web1  
 &lt;&#x2F;VirtualHost&gt;  
@@ -3218,7 +3213,6 @@ Listen 82
 
 <p>注意：需首先将配置文件中 NameVirtualHost *:80 一项去掉注释，然后进行如上配置。</p>
 
-</div>
   </div>
   
   
@@ -4980,290 +4974,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     e.addEventListener("focus", loadSearchService, false);
   });
 </script>
-
-
-
-
-
-
-
-  
-  
-<script src="https://npm.elemecdn.com/prismjs/components/prism-core.min.js"></script>
-
-
-  
-<script src="https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
-
-
-  
-<script src="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
-
-
-
-  
-<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/themes/prism-dark.css">
-
-
-  
-<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
-
-
-<script>
-
-  function pjax_prismjs_copyCode(){
-    if (!document.querySelector("pre")) {
-      return;
-    }
-    let pres = document.querySelectorAll("pre")
-    pres.forEach(pre=>{
-      var wrapper = document.createElement('div');
-      wrapper.classList.add('code-toolbar');
-      pre.parentNode.insertBefore(wrapper, pre);
-      wrapper.appendChild(pre);
-    })
-    VolantisApp.utilCopyCode(".code-toolbar pre")
-  }
-  volantis.requestAnimationFrame(pjax_prismjs_copyCode)
-  volantis.pjax.push(pjax_prismjs_copyCode)
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-  <script>
-  function load_swiper() {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.css");
-    volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.js").then(() => {
-      pjax_swiper();
-    });
-  }
-
-  load_swiper();
-
-  function pjax_swiper() {
-    volantis.swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 8,
-      centeredSlides: true,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  }
-
-  volantis.pjax.push(() => {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    if (typeof volantis.swiper === "undefined") {
-      load_swiper();
-    } else {
-      pjax_swiper();
-    }
-  });
-</script>
-
-
-<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
-<pjax>
-
-</pjax>
-
-<script>
-  function listennSidebarTOC() {
-    const navItems = document.querySelectorAll(".toc li");
-    if (!navItems.length) return;
-    const sections = [...navItems].map((element) => {
-      const link = element.querySelector(".toc-link");
-      const target = document.getElementById(
-        decodeURI(link.getAttribute("href")).replace("#", "")
-      );
-      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
-      link.setAttribute("onclick","return false;")
-      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
-      link.setAttribute("href","/")
-      // 配置 点击 触发新的锚点定位
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        // 这里的 addTop 是通过错位使得 toc 自动展开.
-        volantis.scroll.to(target,{addTop: 5, observer:false})
-        // Anchor id
-        history.pushState(null, document.title, "#" + target.id);
-      });
-      return target;
-    });
-
-    function activateNavByIndex(target) {
-      if (target.classList.contains("active-current")) return;
-
-      document.querySelectorAll(".toc .active").forEach((element) => {
-        element.classList.remove("active", "active-current");
-      });
-      target.classList.add("active", "active-current");
-      let parent = target.parentNode;
-      while (!parent.matches(".toc")) {
-        if (parent.matches("li")) parent.classList.add("active");
-        parent = parent.parentNode;
-      }
-    }
-
-    function findIndex(entries) {
-      let index = 0;
-      let entry = entries[index];
-      if (entry.boundingClientRect.top > 0) {
-        index = sections.indexOf(entry.target);
-        return index === 0 ? 0 : index - 1;
-      }
-      for (; index < entries.length; index++) {
-        if (entries[index].boundingClientRect.top <= 0) {
-          entry = entries[index];
-        } else {
-          return sections.indexOf(entry.target);
-        }
-      }
-      return sections.indexOf(entry.target);
-    }
-
-    function createIntersectionObserver(marginTop) {
-      marginTop = Math.floor(marginTop + 10000);
-      let intersectionObserver = new IntersectionObserver(
-        (entries, observe) => {
-          let scrollHeight = document.documentElement.scrollHeight;
-          if (scrollHeight > marginTop) {
-            observe.disconnect();
-            createIntersectionObserver(scrollHeight);
-            return;
-          }
-          let index = findIndex(entries);
-          activateNavByIndex(navItems[index]);
-        }, {
-          rootMargin: marginTop + "px 0px -100% 0px",
-          threshold: 0,
-        }
-      );
-      sections.forEach((element) => {
-        element && intersectionObserver.observe(element);
-      });
-    }
-
-    createIntersectionObserver(document.documentElement.scrollHeight);
-  }
-
-  document.addEventListener("DOMContentLoaded", ()=>{
-    volantis.requestAnimationFrame(listennSidebarTOC)
-  });
-  document.addEventListener("pjax:success", ()=>{
-    volantis.requestAnimationFrame(listennSidebarTOC)
-  });
-</script>
-
-<!-- https://github.com/volantis-x/hexo-theme-volantis/issues/693#issuecomment-987667610 -->
-
-  <script>
-  // https://web.dev/content-visibility/
-  // https://www.caniuse.com/?search=content-visibility
-  // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-  // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-  // 备注 目前已知的问题:
-  // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-  // scrollreveal 插件潜在问题 目前尚不明确
-
-  let eqIsh = (a, b, fuzz = 2) => {
-    return Math.abs(a - b) <= fuzz;
-  };
-
-  let rectNotEQ = (a, b) => {
-    return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-  };
-
-  // Keep a map of elements and the dimensions of
-  // their place-holders, re-setting the element's
-  // intrinsic size when we get updated measurements
-  // from observers.
-  let spaced = new WeakMap();
-
-  // Only call this when known cheap, post layout
-  let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-    let old = spaced.get(el);
-    // Set intrinsic size to prevent jumping on un-painting:
-    //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-    if (!old || rectNotEQ(old, rect)) {
-      spaced.set(el, rect);
-      el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-    }
-  };
-
-  let iObs = new IntersectionObserver(
-    (entries, o) => {
-      entries.forEach((entry) => {
-        // We don't care if the element is intersecting or
-        // has been laid out as our page structure ensures
-        // they'll get the right width.
-        reserveSpace(entry.target, entry.boundingClientRect);
-      });
-    },
-    { rootMargin: "500px 0px 500px 0px" }
-  );
-
-  let rObs = new ResizeObserver((entries, o) => {
-    entries.forEach((entry) => {
-      reserveSpace(entry.target, entry.contentRect);
-    });
-  });
-
-  let resizeResilientDeferredRendering = (Selector) => {
-    let articles = document.querySelectorAll(Selector);
-
-    if (articles.length) {
-      articles.forEach((el) => {
-        iObs.observe(el);
-        rObs.observe(el);
-      });
-
-      // Workaround for Chrome bug, part 2.
-      //
-      // Re-enable browser management of rendering for the
-      // first article after the first paint. Double-rAF
-      // to ensure we get called after a layout.
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          articles[0].style["content-visibility"] = "auto";
-        });
-      });
-    }
-  };
-
-  let contentVisibilityScrollFix = () => {
-    if (!("content-visibility" in document.documentElement.style)) {
-      return;
-    }
-    resizeResilientDeferredRendering(".post-story");
-    resizeResilientDeferredRendering("article");
-  };
-  contentVisibilityScrollFix();
-  volantis.pjax.push(contentVisibilityScrollFix);
-</script>
-
-
-
-
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/203/","name":"杜老师说技术：基于端口、域名及 IP 的 Apache 虚拟主机"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说技术：基于端口、域名及 IP 的 Apache 虚拟主机","description":"\nApache 是世界使用排名第一的 Web 服务软件。它可运行在几乎所有广泛使用的计算机平台上，由于其跨平台和安全性被广泛的使用，是最流行的 Web 服务器端软件之一。\n","datePublished":"2020-03-21T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.268Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/203/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/203/","wordCount":86,"articleSection":"运维教程","keywords":"技术","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

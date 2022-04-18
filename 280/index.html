@@ -66,11 +66,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story,
-article + article {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1921,7 +1916,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650274065518),
+    lastupdate: new Date(1650281224945),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3187,16 +3182,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 
-<h2 id="域名查询时间"><a href="#域名查询时间" class="headerlink" title="域名查询时间"></a>域名查询时间</h2><div class="story post-story"><p>我们需要知道，在网络中，两个设备间的通信是需要 IP 地址才可以的，也就是说，您每次访问网站时，都是通过 IP 地址实现的，可您输入的明明是域名，并不是 IP，这又是什么情况呢？</p>
+<h2 id="域名查询时间"><a href="#域名查询时间" class="headerlink" title="域名查询时间"></a>域名查询时间</h2><p>我们需要知道，在网络中，两个设备间的通信是需要 IP 地址才可以的，也就是说，您每次访问网站时，都是通过 IP 地址实现的，可您输入的明明是域名，并不是 IP，这又是什么情况呢？</p>
 <p>原因就是您的电脑，会自动去询问设置在您电脑上的 DNS 服务器，然后通过 DNS 服务器返回的 IP 地址访问网站。而询问的过程，就是域名查询时间，大家可以用 Ping 命令，测试一下与 DNS 服务器的连接时间，可以大致得出域名查询时间。为什么说大致，因为 Ping 命令只可以测出连接时间，DNS 还需要处理！</p>
-</div><h2 id="网络队列时间"><a href="#网络队列时间" class="headerlink" title="网络队列时间"></a>网络队列时间</h2><div class="story post-story"><p>电脑知道要访问网站的 IP 后，就会与之通信，而在网络中与之通信的不止是您一个，那么多人同时访问，先处理谁后处理谁？这时就需要排队了！排到您了，服务器自然会处理您的请求。</p>
+<h2 id="网络队列时间"><a href="#网络队列时间" class="headerlink" title="网络队列时间"></a>网络队列时间</h2><p>电脑知道要访问网站的 IP 后，就会与之通信，而在网络中与之通信的不止是您一个，那么多人同时访问，先处理谁后处理谁？这时就需要排队了！排到您了，服务器自然会处理您的请求。</p>
 <p>当然不只是网络资源要排队，服务器的内部处理进程，也需要排队的，等待排队还有数据处理，都需要时间的！</p>
-</div><h2 id="页面生成时间"><a href="#页面生成时间" class="headerlink" title="页面生成时间"></a>页面生成时间</h2><div class="story post-story"><p>以我们的常见的博客程序 WordPress 为例，WordPress 是用 PHP 语言所写，通过 MySQL 来存储数据，Nginx 为页面解析。所以 PHP 首先去找 MySQL 索要数据，然后再通过 Nginx 服务生成页面数据。</p>
+<h2 id="页面生成时间"><a href="#页面生成时间" class="headerlink" title="页面生成时间"></a>页面生成时间</h2><p>以我们的常见的博客程序 WordPress 为例，WordPress 是用 PHP 语言所写，通过 MySQL 来存储数据，Nginx 为页面解析。所以 PHP 首先去找 MySQL 索要数据，然后再通过 Nginx 服务生成页面数据。</p>
 <p>您的每次浏览 PHP 都需要去 MySQL 中索要一次数据，然后再经过 Nginx 生成，所以您会发现，有些网站打开后再刷新，速度并没有变很快！</p>
-</div><h2 id="文件传输时间"><a href="#文件传输时间" class="headerlink" title="文件传输时间"></a>文件传输时间</h2><div class="story post-story"><p>页面数据传输到您的浏览器之后，您的浏览器就会开始加载页面数据包含的文件，例如 JavaScript 库、CSS 样式表、图片等等，这些时间就取决于您的带宽和浏览器的处理能力了。</p>
+<h2 id="文件传输时间"><a href="#文件传输时间" class="headerlink" title="文件传输时间"></a>文件传输时间</h2><p>页面数据传输到您的浏览器之后，您的浏览器就会开始加载页面数据包含的文件，例如 JavaScript 库、CSS 样式表、图片等等，这些时间就取决于您的带宽和浏览器的处理能力了。</p>
 <p>一般的浏览器会默认缓存这些静态类文件「简单来说就是不会经常变的文件」使得再刷新时，不用重新下载，从而加快浏览速度！</p>
 
-</div>
   </div>
   
   
@@ -4965,290 +4959,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     e.addEventListener("focus", loadSearchService, false);
   });
 </script>
-
-
-
-
-
-
-
-  
-  
-<script src="https://npm.elemecdn.com/prismjs/components/prism-core.min.js"></script>
-
-
-  
-<script src="https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
-
-
-  
-<script src="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
-
-
-
-  
-<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/themes/prism-dark.css">
-
-
-  
-<link rel="stylesheet" href="https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
-
-
-<script>
-
-  function pjax_prismjs_copyCode(){
-    if (!document.querySelector("pre")) {
-      return;
-    }
-    let pres = document.querySelectorAll("pre")
-    pres.forEach(pre=>{
-      var wrapper = document.createElement('div');
-      wrapper.classList.add('code-toolbar');
-      pre.parentNode.insertBefore(wrapper, pre);
-      wrapper.appendChild(pre);
-    })
-    VolantisApp.utilCopyCode(".code-toolbar pre")
-  }
-  volantis.requestAnimationFrame(pjax_prismjs_copyCode)
-  volantis.pjax.push(pjax_prismjs_copyCode)
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-  <script>
-  function load_swiper() {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.css");
-    volantis.js("https://npm.elemecdn.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.js").then(() => {
-      pjax_swiper();
-    });
-  }
-
-  load_swiper();
-
-  function pjax_swiper() {
-    volantis.swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 8,
-      centeredSlides: true,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  }
-
-  volantis.pjax.push(() => {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    if (typeof volantis.swiper === "undefined") {
-      load_swiper();
-    } else {
-      pjax_swiper();
-    }
-  });
-</script>
-
-
-<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
-<pjax>
-
-</pjax>
-
-<script>
-  function listennSidebarTOC() {
-    const navItems = document.querySelectorAll(".toc li");
-    if (!navItems.length) return;
-    const sections = [...navItems].map((element) => {
-      const link = element.querySelector(".toc-link");
-      const target = document.getElementById(
-        decodeURI(link.getAttribute("href")).replace("#", "")
-      );
-      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
-      link.setAttribute("onclick","return false;")
-      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
-      link.setAttribute("href","/")
-      // 配置 点击 触发新的锚点定位
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        // 这里的 addTop 是通过错位使得 toc 自动展开.
-        volantis.scroll.to(target,{addTop: 5, observer:false})
-        // Anchor id
-        history.pushState(null, document.title, "#" + target.id);
-      });
-      return target;
-    });
-
-    function activateNavByIndex(target) {
-      if (target.classList.contains("active-current")) return;
-
-      document.querySelectorAll(".toc .active").forEach((element) => {
-        element.classList.remove("active", "active-current");
-      });
-      target.classList.add("active", "active-current");
-      let parent = target.parentNode;
-      while (!parent.matches(".toc")) {
-        if (parent.matches("li")) parent.classList.add("active");
-        parent = parent.parentNode;
-      }
-    }
-
-    function findIndex(entries) {
-      let index = 0;
-      let entry = entries[index];
-      if (entry.boundingClientRect.top > 0) {
-        index = sections.indexOf(entry.target);
-        return index === 0 ? 0 : index - 1;
-      }
-      for (; index < entries.length; index++) {
-        if (entries[index].boundingClientRect.top <= 0) {
-          entry = entries[index];
-        } else {
-          return sections.indexOf(entry.target);
-        }
-      }
-      return sections.indexOf(entry.target);
-    }
-
-    function createIntersectionObserver(marginTop) {
-      marginTop = Math.floor(marginTop + 10000);
-      let intersectionObserver = new IntersectionObserver(
-        (entries, observe) => {
-          let scrollHeight = document.documentElement.scrollHeight;
-          if (scrollHeight > marginTop) {
-            observe.disconnect();
-            createIntersectionObserver(scrollHeight);
-            return;
-          }
-          let index = findIndex(entries);
-          activateNavByIndex(navItems[index]);
-        }, {
-          rootMargin: marginTop + "px 0px -100% 0px",
-          threshold: 0,
-        }
-      );
-      sections.forEach((element) => {
-        element && intersectionObserver.observe(element);
-      });
-    }
-
-    createIntersectionObserver(document.documentElement.scrollHeight);
-  }
-
-  document.addEventListener("DOMContentLoaded", ()=>{
-    volantis.requestAnimationFrame(listennSidebarTOC)
-  });
-  document.addEventListener("pjax:success", ()=>{
-    volantis.requestAnimationFrame(listennSidebarTOC)
-  });
-</script>
-
-<!-- https://github.com/volantis-x/hexo-theme-volantis/issues/693#issuecomment-987667610 -->
-
-  <script>
-  // https://web.dev/content-visibility/
-  // https://www.caniuse.com/?search=content-visibility
-  // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-  // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-  // 备注 目前已知的问题:
-  // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-  // scrollreveal 插件潜在问题 目前尚不明确
-
-  let eqIsh = (a, b, fuzz = 2) => {
-    return Math.abs(a - b) <= fuzz;
-  };
-
-  let rectNotEQ = (a, b) => {
-    return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-  };
-
-  // Keep a map of elements and the dimensions of
-  // their place-holders, re-setting the element's
-  // intrinsic size when we get updated measurements
-  // from observers.
-  let spaced = new WeakMap();
-
-  // Only call this when known cheap, post layout
-  let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-    let old = spaced.get(el);
-    // Set intrinsic size to prevent jumping on un-painting:
-    //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-    if (!old || rectNotEQ(old, rect)) {
-      spaced.set(el, rect);
-      el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-    }
-  };
-
-  let iObs = new IntersectionObserver(
-    (entries, o) => {
-      entries.forEach((entry) => {
-        // We don't care if the element is intersecting or
-        // has been laid out as our page structure ensures
-        // they'll get the right width.
-        reserveSpace(entry.target, entry.boundingClientRect);
-      });
-    },
-    { rootMargin: "500px 0px 500px 0px" }
-  );
-
-  let rObs = new ResizeObserver((entries, o) => {
-    entries.forEach((entry) => {
-      reserveSpace(entry.target, entry.contentRect);
-    });
-  });
-
-  let resizeResilientDeferredRendering = (Selector) => {
-    let articles = document.querySelectorAll(Selector);
-
-    if (articles.length) {
-      articles.forEach((el) => {
-        iObs.observe(el);
-        rObs.observe(el);
-      });
-
-      // Workaround for Chrome bug, part 2.
-      //
-      // Re-enable browser management of rendering for the
-      // first article after the first paint. Double-rAF
-      // to ensure we get called after a layout.
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          articles[0].style["content-visibility"] = "auto";
-        });
-      });
-    }
-  };
-
-  let contentVisibilityScrollFix = () => {
-    if (!("content-visibility" in document.documentElement.style)) {
-      return;
-    }
-    resizeResilientDeferredRendering(".post-story");
-    resizeResilientDeferredRendering("article");
-  };
-  contentVisibilityScrollFix();
-  volantis.pjax.push(contentVisibilityScrollFix);
-</script>
-
-
-
-
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/网站搭建/","name":"网站搭建"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/280/","name":"杜老师说网站：网站时间的那些事"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"杜老师说网站：网站时间的那些事","description":"\n我们想访问一个网站时，每次按下回车或是点击链接，都希望网站页面能尽快的映入到我们眼帘，那您知道每次等待的时间中，都发生了什么？\n","datePublished":"2020-11-07T16:00:00.000Z","dateModified":"2022-02-08T10:20:46.272Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/280/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dusays.com/280/","wordCount":65,"articleSection":"网站搭建","keywords":"网站","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
