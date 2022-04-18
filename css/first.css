@@ -7,8 +7,7 @@
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
 .post-story + .post-story,
-article + article,
-.post-wrapper + .post-wrapper {
+article + article {
   content-visibility: auto;
   contain-intrinsic-size: 10px 500px;
 }

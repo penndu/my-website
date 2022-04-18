@@ -67,8 +67,7 @@
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
 .post-story + .post-story,
-article + article,
-.post-wrapper + .post-wrapper {
+article + article {
   content-visibility: auto;
   contain-intrinsic-size: 10px 500px;
 }
@@ -1922,7 +1921,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.80db1a18.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650249076545),
+    lastupdate: new Date(1650272206121),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -5159,7 +5158,9 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   });
 </script>
 
-<script>
+<!-- https://github.com/volantis-x/hexo-theme-volantis/issues/693#issuecomment-987667610 -->
+
+  <script>
   // https://web.dev/content-visibility/
   // https://www.caniuse.com/?search=content-visibility
   // https://infrequently.org/2020/12/content-visibility-scroll-fix/
@@ -5240,11 +5241,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     }
     resizeResilientDeferredRendering(".post-story");
     resizeResilientDeferredRendering("article");
-    resizeResilientDeferredRendering(".post-wrapper");
   };
   contentVisibilityScrollFix();
   volantis.pjax.push(contentVisibilityScrollFix);
 </script>
+
 
 
 
