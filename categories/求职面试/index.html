@@ -1914,7 +1914,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.68379f6b.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650734960548),
+    lastupdate: new Date(1650736878776),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -5439,7 +5439,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    new Waline.init(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/@waline/client@next/dist/waline.js","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~","imageHosting":"https://7bu.top/api/v1/upload","Authorization":"1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"serverURL":"https://n.dusays.com","avatar":"robohash","avatarCDN":null,"emoji":["https://npm.elemecdn.com/sticker-heo@0.17.2/Sticker-100/"],"pageSize":10,"lang":"zh-CN","visitor":true,"copyright":false}, {
+    new Waline(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~","imageHosting":"https://7bu.top/api/v1/upload","Authorization":"1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"serverURL":"https://n.dusays.com","avatar":"robohash","avatarCDN":null,"emoji":["https://npm.elemecdn.com/sticker-heo@0.17.2/Sticker-100/"],"pageSize":10,"lang":"zh-CN","visitor":true,"copyright":false}, {
       el: '#waline',
       path: path,
       placeholder: pagePlaceholder,
@@ -5475,7 +5475,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       VolantisFancyBox.bind('#waline .vcontent img:not(.vemoji)');
     }
   }
-  volantis.js('https://npm.elemecdn.com/@waline/client@next/dist/waline.js').then(pjax_waline)
+  volantis.js('https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js').then(pjax_waline)
   volantis.pjax.push(pjax_waline);
 </script>
 
