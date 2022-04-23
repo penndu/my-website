@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dusays.com/456/</loc>
+    <lastmod>2022-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://dusays.com/455/</loc>
+    <lastmod>2022-04-23</lastmod>
+  </url>
+  <url>
     <loc>https://dusays.com/452/</loc>
     <lastmod>2022-04-23</lastmod>
   </url>
@@ -13,20 +21,12 @@
     <lastmod>2022-04-19</lastmod>
   </url>
   <url>
-    <loc>https://dusays.com/455/</loc>
-    <lastmod>2022-04-19</lastmod>
-  </url>
-  <url>
     <loc>https://dusays.com/458/</loc>
     <lastmod>2022-04-18</lastmod>
   </url>
   <url>
     <loc>https://dusays.com/321/</loc>
     <lastmod>2022-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://dusays.com/456/</loc>
-    <lastmod>2022-04-17</lastmod>
   </url>
   <url>
     <loc>https://dusays.com/457/</loc>
@@ -1373,10 +1373,6 @@
     <lastmod>2022-02-08</lastmod>
   </url>
   <url>
-    <loc>https://dusays.com/188/</loc>
-    <lastmod>2022-02-08</lastmod>
-  </url>
-  <url>
     <loc>https://dusays.com/189/</loc>
     <lastmod>2022-02-08</lastmod>
   </url>
@@ -1458,6 +1454,10 @@
   </url>
   <url>
     <loc>https://dusays.com/206/</loc>
+    <lastmod>2022-02-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dusays.com/188/</loc>
     <lastmod>2022-02-08</lastmod>
   </url>
   <url>
