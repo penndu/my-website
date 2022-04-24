@@ -25,7 +25,7 @@
   
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://cdn.dusays.com/favicon.ico">
-  <link rel="preload" href="/css/style.e0234e1d.css" as="style">
+  <link rel="preload" href="/css/style.f7eb1ad4.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1839,8 +1839,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.e0234e1d.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.e0234e1d.css"></noscript>
+  <link rel="stylesheet" href="/css/style.f7eb1ad4.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.f7eb1ad4.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1918,9 +1918,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.68379f6b.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.e0234e1d.css"}},
+    cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.68379f6b.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.f7eb1ad4.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650736878776),
+    lastupdate: new Date(1650810732099),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3125,32 +3125,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class="new-meta-item browse">
-    <a class='notlink'>
-      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/416/" class="leancloud_visitors" data-flag-title="杜老师说电脑：升级作战装备">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
+    <div class="new-meta-item browse">
+      <a class='notlink'>
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <p>
+        <span id="artalk_visitors">
+          <i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i>
+        </span>
+        次浏览
+        </p>
+      </a>
+    </div>
+  
 
           
         
           
             
-<div class="new-meta-item comments-count">
-  
-  <a href="/416/#comments">
-    <i class="fa-solid fa-comment-dots fa-fw"></i>
-    <span id="/416/" class="waline-comment-count"></span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
 
           
         
@@ -4911,53 +4902,58 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  function pjax_waline() {
-    if(!document.querySelector("#waline"))return;
-    let pagePlaceholder = pdata.commentPlaceholder || "评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~";
+  volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
+  function load_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0])return;
+    volantis.css("https://npm.elemecdn.com/artalk@2.2.6/dist/Artalk.css");
+    volantis.js("https://npm.elemecdn.com/artalk@2.2.6/dist/Artalk.js").then(pjax_artalk);
+  }
+
+  function pjax_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0])return;
     let path = pdata.commentPath;
+    let placeholder = pdata.commentPlaceholder || "" || "";
     if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || decodeURI(window.location.pathname);
+      path = '' || decodeURI(window.location.pathname);
     }
-    new Waline(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~","imageHosting":"https://7bu.top/api/v1/upload","Authorization":"1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"serverURL":"https://n.dusays.com","avatar":"robohash","avatarCDN":null,"emoji":["https://npm.elemecdn.com/sticker-heo@0.17.2/Sticker-100/"],"pageSize":10,"lang":"zh-CN","visitor":true,"copyright":false}, {
-      el: '#waline',
-      path: path,
-      placeholder: pagePlaceholder,
-      
-      // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-      
-        uploadImage: function(file) {
-          const formData = new FormData();
-          formData.append('file', file);
-          return fetch('https://7bu.top/api/v1/upload', {
-            
-            headers: {
-              'Authorization': 'Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L'
-            },
-            
-            method: 'POST',
-          body: formData
-          }).then(resp => resp.json()).then(resp => resp.data.links.url);
-        }
-      
-  
-  }),pdata.commentConfig));
-    fancybox_waline()
+
+    volantis.artalk = new Artalk(Object.assign({"js":"https://npm.elemecdn.com/artalk@2.2.6/dist/Artalk.js","css":"https://npm.elemecdn.com/artalk@2.2.6/dist/Artalk.css","server":"https://artalk.dusays.com:443","path":null}, {
+      el: '#artalk_container',
+      pageKey: path,
+      pageTitle: document.title,
+      placeholder: placeholder,
+      site: '杜老师说',
+      darkMode: volantis.dark.mode === "dark",
+      pvEl: '#artalk_visitors'
+    }));
+
+    volantis.artalk.on('comments-loaded', () => {
+      if (typeof VolantisFancyBox === "undefined"){
+        const checkFancyBox = setInterval(() => {
+          if(typeof VolantisFancyBox === "undefined") return;
+          clearInterval(checkFancyBox);
+          VolantisFancyBox.groupBind('.atk-content img:not([atk-emoticon])', 'Comments');
+        })
+      } else {
+        VolantisFancyBox.groupBind('.atk-content img:not([atk-emoticon])', 'Comments');
+      }
+    })
   }
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .vcontent img:not(.vemoji)');
-      })
+
+  load_artalk();
+  volantis.pjax.push(()=>{
+    if (typeof Artalk === "undefined") {
+      load_artalk();
     } else {
-      VolantisFancyBox.bind('#waline .vcontent img:not(.vemoji)');
+      pjax_artalk();
     }
+  },'artalk');
+
+  function dark_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0]) return;
+    volantis.artalk.setDarkMode(volantis.dark.mode === "dark")
   }
-  volantis.js('https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js').then(pjax_waline)
-  volantis.pjax.push(pjax_waline);
+  volantis.dark.push(dark_artalk);
 </script>
 
     
