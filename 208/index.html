@@ -1918,9 +1918,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.68379f6b.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.f7eb1ad4.css"}},
+    cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.48fa1716.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.f7eb1ad4.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650826231845),
+    lastupdate: new Date(1650905092221),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -2097,6 +2097,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     push: volantis.pjax.method.complete.push,
     error: volantis.pjax.method.error.push,
     send: volantis.pjax.method.send.push,
+  });
+  /******************** RightMenu ********************************/
+  // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
+  // 可在 volantis.mouseEvent 处获取右键事件
+  volantis.rightmenu = {};
+  volantis.rightmenu.method = {
+    handle: new RunItem(),
+  }
+  volantis.rightmenu = Object.assign(volantis.rightmenu, {
+    handle: volantis.rightmenu.method.handle.push,
   });
   /********************  Dark Mode  ********************************/
   // /layout/_partial/scripts/darkmode.ejs
@@ -3136,7 +3146,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </p>
       </a>
     </div>
-  
+
 
           
         
@@ -4159,13 +4169,12 @@ Linux 系统提供 who&#x2F;w&#x2F;ps 和 top 等查看进程信息的系统调�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-04-25 日</div> 
+          <div id="last-update-show">2022-04-26 日</div> 
         </div>
       
     </div>
   </div>
 </section>
-
   
 
 
@@ -4585,7 +4594,7 @@ Linux 系统提供 who&#x2F;w&#x2F;ps 和 top 等查看进程信息的系统调�
 
   </ul>
 </div>
-<script src="/js/plugins/rightMenus.68379f6b.js"></script>
+<script src="/js/plugins/rightMenus.48fa1716.js"></script>
 <script>
   const RightMenusFunction = {};
    
@@ -4928,38 +4937,41 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
   function load_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
-    volantis.css("https://npm.elemecdn.com/artalk@2.2.7/dist/Artalk.css");
-    volantis.js("https://npm.elemecdn.com/artalk@2.2.7/dist/Artalk.js").then(pjax_artalk);
+    volantis.css("https://yours-artalk-domain/dist/Artalk.css");
+    volantis.js("https://yours-artalk-domain/dist/Artalk.js").then(pjax_artalk);
   }
 
   function pjax_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
     let path = pdata.commentPath;
-    let placeholder = pdata.commentPlaceholder || "" || "";
+    let placeholder = pdata.commentPlaceholder || "评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~" || "";
     if (path.length == 0) {
       path = '' || decodeURI(window.location.pathname);
     }
 
-    volantis.artalk = new Artalk(Object.assign({"js":"https://npm.elemecdn.com/artalk@2.2.7/dist/Artalk.js","css":"https://npm.elemecdn.com/artalk@2.2.7/dist/Artalk.css","server":"https://artalk.dusays.com:443","path":null,"emoticons":"https://cdn.dusays.com/info.json"}, {
+    volantis.artalk = new Artalk(Object.assign({"js":"https://yours-artalk-domain/dist/Artalk.js","css":"https://yours-artalk-domain/dist/Artalk.css","server":"https://artalk.dusays.com","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~","pagination":{"readMore":false,"autoLoad":false,"pageSize":10},"heightLimit":{"content":0}}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
       placeholder: placeholder,
+      useBackendConf: true,
       site: '杜老师说',
       darkMode: volantis.dark.mode === "dark",
       pvEl: '#artalk_visitors'
     }));
 
-    volantis.artalk.on('comments-loaded', () => {
-      if (typeof VolantisFancyBox === "undefined"){
-        const checkFancyBox = setInterval(() => {
-          if(typeof VolantisFancyBox === "undefined") return;
-          clearInterval(checkFancyBox);
+    volantis.artalk.then(ctx => {
+      ctx.on('comments-loaded', () => {
+        if (typeof VolantisFancyBox === "undefined"){
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.atk-content img:not([atk-emoticon])', 'Comments');
+          })
+        } else {
           VolantisFancyBox.groupBind('.atk-content img:not([atk-emoticon])', 'Comments');
-        })
-      } else {
-        VolantisFancyBox.groupBind('.atk-content img:not([atk-emoticon])', 'Comments');
-      }
+        }
+      })
     })
   }
 
@@ -4974,7 +4986,9 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function dark_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0]) return;
-    volantis.artalk.setDarkMode(volantis.dark.mode === "dark")
+    volantis.artalk.then(ctx => {
+      ctx.setDarkMode(volantis.dark.mode === "dark")
+    })
   }
   volantis.dark.push(dark_artalk);
 </script>
