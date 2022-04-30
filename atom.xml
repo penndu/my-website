@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-04-23T16:30:12.098Z</updated>
+  <updated>2022-04-30T18:09:14.029Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说群晖：在群晖上使用 Docker 安装 Lsky Pro 图床「SQLite 版」</title>
+    <link href="https://dusays.com/461/"/>
+    <id>https://dusays.com/461/</id>
+    <published>2022-05-07T16:00:00.000Z</published>
+    <updated>2022-04-30T18:09:14.029Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>GitHub 上有小伙伴说通过群晖的 Docker 安装 Lsky Pro 图床失败，杜老师看到问题后自己试了一下，没有发现什么问题，整理一下操作步骤，给需要的小伙伴作参考！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Lsky Pro 图床程序支持多种数据库类型，如常见的 MySQL&#x2F;SQLite 等，该文以 SQLite 为例，截图在群晖 Docker 上的部署过程。</p><p>杜老师的群晖型号为 DS720plus，系统版本为 DSM 7.1-42661 Update 1，Docker 套件的版本为 20.10.3-1306。</p></div><div class="story post-story"><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>首先进入 Docker 注册表，搜索关键词 <code>HalcyonAzure/lsky-pro-docker</code>，出现的结果中，直接下载即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/05/461-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/05/461-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/05/461-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>映像约 800M 左右，下载好后启动。网络默认的 bridge 即可，下一步后，记得勾选启用自动重新启动：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/05/461-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/05/461-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/05/461-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>设置访问端口，如不设置，也可使用自动生成端口，对图床使用无影响：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/05/461-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/05/461-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/05/461-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>设置目录映射，将群晖本地文件夹映射到 <code>/var/www/html</code>，最后确认完成就可以了：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/05/461-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/05/461-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/05/461-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;GitHub 上有小伙伴说通过群晖的 Docker 安装 Lsky Pro 图床失败，杜老师看到问题后自己试了一下，没有发现什么问题，整理一下操作步骤，给需要的小伙伴作参考！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="群晖" scheme="https://dusays.com/tags/%E7%BE%A4%E6%99%96/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说图床：新版本去不图床 Upgit 上传工具设置</title>
@@ -450,29 +473,6 @@
     
     
     <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说群晖：DSM 7.1 升级包分享</title>
-    <link href="https://dusays.com/440/"/>
-    <id>https://dusays.com/440/</id>
-    <published>2022-03-05T16:00:00.000Z</published>
-    <updated>2022-02-28T16:54:37.254Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>全新 DSM 7.1 可实现更弹性的部署，无缝融入各种规模的 IT 架构，更直觉化且简便的文件分享机制，且更新多项 NAS 应用体验，包含数据备份、影像监控，彻底简化管理流程。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h2><ol><li><p>保护更加全面：高效备份和还原 DSM 系统配置、应用程序、服务数据；</p></li><li><p>提升存储效能：改进 SSD 的缓存设置，效能表现有感提升，并新增支持简化 SMB 文件服务全新功能；</p></li><li><p>灵活部署：针对繁重工作负载环境，如虚拟化应用、多站点数据保护和非信任环境中的域管理，提供更具弹性部署选择；</p></li><li><p>套件更新：即刻体验为广受众多 NAS 玩家和企业用户好评的套件全新版本，享受更顺畅且直觉化 IT 管理流程，同时享有更加安全数据保护。</p></li></ol></div><div class="story post-story"><h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p>DSM 7.1 官方版下载地址，这里提供 DS720+ 升级版，如需其它设备的升级包，可在评论区中留言：</p><span class='btn regular'><a class="button" href='https://penn.cowtransfer.com/s/d51e1f6c0ca74e' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>首先这是测试版本，喜欢尝鲜的小伙伴可以试试，如果您的群晖处于生产环境，建议等待官方推送更新。</p><p>其次任何针对系统的操作都有危险性，建议做好数据备份。</p><p>再次正式升级之前，请关闭一些正运行套件，例如容器、虚拟机等，避免数据丢失。</p><p>最后升级完成还需进入系统手动更新一些套件，才可正常使用。</p></div><div class="story post-story"><h2 id="升级过程"><a href="#升级过程" class="headerlink" title="升级过程"></a>升级过程</h2><p>点击控制面板——更新还原——手动更新——浏览，选择本地下载好的 DSM 升级包，确认即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/03/440-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/03/440-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/03/440-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>升级后感觉没多大差别：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/03/440-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/03/440-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/03/440-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;全新 DSM 7.1 可实现更弹性的部署，无缝融入各种规模的 IT 架构，更直觉化且简便的文件分享机制，且更新多项 NAS 应用体验，包含数据备份、影像监控，彻底简化管理流程。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="群晖" scheme="https://dusays.com/tags/%E7%BE%A4%E6%99%96/"/>
     
   </entry>
   
