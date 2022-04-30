@@ -1920,7 +1920,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.48fa1716.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.5577c442.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1651240147881),
+    lastupdate: new Date(1651329110309),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -4128,7 +4128,7 @@ Virtual Machine Manager 是一种集中化的精致界面中整合了各种虚�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-04-29 日</div> 
+          <div id="last-update-show">2022-04-30 日</div> 
         </div>
       
     </div>
@@ -4896,8 +4896,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
   function load_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
-    volantis.css("https://artalk.dusays.com/dist/Artalk.css");
-    volantis.js("https://artalk.dusays.com/dist/Artalk.js").then(pjax_artalk);
+    volantis.css("https://o.static.szyink.com/storage/artalk/Artalk.css");
+    volantis.js("https://o.static.szyink.com/storage/artalk/Artalk.js").then(pjax_artalk);
   }
 
   function pjax_artalk() {
@@ -4908,7 +4908,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       path = '' || decodeURI(window.location.pathname);
     }
 
-    volantis.artalk = new Artalk(Object.assign({"js":"https://artalk.dusays.com/dist/Artalk.js","css":"https://artalk.dusays.com/dist/Artalk.css","server":"https://artalk.dusays.com","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~","pagination":{"readMore":false,"autoLoad":false,"pageSize":10},"heightLimit":{"content":0,"children":0},"maxNesting":7}, {
+    volantis.artalk = new Artalk(Object.assign({"js":"https://o.static.szyink.com/storage/artalk/Artalk.js","css":"https://o.static.szyink.com/storage/artalk/Artalk.css","server":"https://artalk.dusays.com","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，上传速度稍慢~","pagination":{"readMore":false,"autoLoad":false,"pageSize":10},"heightLimit":{"content":0,"children":0},"maxNesting":7}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
