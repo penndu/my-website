@@ -1848,6 +1848,23 @@ ul.list-v >li>a:hover {
 #comments {
   overflow: inherit;
 }
+#artalk_container {
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+#artalk_container .atk-main-editor {
+  background-color: var(--color-site-body);
+}
+#artalk_container .atk-main-editor .atk-textarea-wrap {
+  background-color: var(--color-site-body);
+  border-top: 1px solid var(--at-color-border);
+}
+#artalk_container code {
+  color: var(--color-inlinecode);
+  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+}
+#artalk_container code:before {
+  margin-top: -5px;
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.f7eb1ad4.css" media="print" onload="this.media='all';this.onload=null">
@@ -1931,7 +1948,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.48fa1716.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.f7eb1ad4.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1651402992415),
+    lastupdate: new Date(1651425025054),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3090,6 +3107,699 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/294/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/294/"  itemprop="url">
+        杜老师说网站：Apache 主配置、站点配置文件参考
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>我们在搭建网站时，为了方便管理，常常会选用 PHP+MySQL 这种架构，Web 引擎可选择 Apache 或是 Nginx。今天杜老师说一下，选择 Apache 时，主配置文件和站点配置文件如何改写！</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-12-21T00:00:00+08:00">2020-12-21</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">网站搭建</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" itemprop="url"><span itemprop="name">网站搭建</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/294/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/293/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/293/"  itemprop="url">
+        杜老师说网络：IPv4 子网查询表
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>子网划分是网络技术里非常基础且重要的内容，杜老师大学时所修的就是计算机网络技术，当时在学习子网划分时，不知道抓掉了多少头发，如果当时有下面的这些列表，杜老师的头发肯定更加浓密！</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-12-18T00:00:00+08:00">2020-12-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/">网络教程</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">网络教程</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/293/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/292/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/292/"  itemprop="url">
+        杜老师说网络：HTTP 状态码参考
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>这个页面上是 HTTP 超文本传输协议的常见返回状态码列表。根据互联网的资料，尤其是相关 RFC 中的描述整理而成。杜老师会努力保证这个页面上的描述是准确无误的。如果对其中提到内容有任何问题，欢迎在页面下留言讨论！</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-12-15T00:00:00+08:00">2020-12-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/">网络教程</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">网络教程</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/292/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/291/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/291/"  itemprop="url">
+        杜老师说容器：通过 Watchtower 实现 Docker 容器自动更新
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>杜老师喜欢使用 Docker 部署轻量级的应用，不过后期维护起来还是挺麻烦的，主要是新版本发布后的更新问题，需停止并删除当前容器，更新版本后使用相同参数再运行。今天介绍一款可以自动更新 Docker 容器的工具！</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-12-12T00:00:00+08:00">2020-12-12</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/">运维教程</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">运维教程</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/291/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/290/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/290/"  itemprop="url">
+        杜老师说群晖：建立集中式 Clash 网关
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>对于 Clash 不想做太多介绍，您可以理解为一个外网访问工具，对于杜老师来说主要用于加速下载 Switch 游戏，下面说下它的搭建方法！</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-12-09T00:00:00+08:00">2020-12-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/290/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/289/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/289/"  itemprop="url">
+        杜老师说群晖：通过 Docker 部署 AdGuard Home 实战
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>AdGuard Home 项目是著名广告拦截器 AdGuard 里解析服务的一个开源版本。该项目的原理是在 DNS 的域名解析的过程里拦截网页上的广告。</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-12-06T00:00:00+08:00">2020-12-06</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/289/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/288/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/288/"  itemprop="url">
+        杜老师说群晖：Docker 套件的功能介绍
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>Docker 是一个轻量级虚拟化应用程序，它可以运行世界各地的开发人员在 DSM 上创建的数以千计容器。Docker Hub 是使用广泛的内置映像存储库，可以从其他优秀开发人员那里找到共享的应用程序。</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-12-03T00:00:00+08:00">2020-12-03</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/288/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/287/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/287/"  itemprop="url">
+        杜老师说群晖：Virtual Machine Manager 使用和进阶
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>Virtual Machine Manager 是一种集中化的精致界面中整合了各种虚拟解决方案，可在 Synology NAS 上轻松创建、运行和管理多台虚拟机。可通过 Virtual Machine Manager 更灵活地分配硬件资源、为企业级部署和维护构建虚拟化环境、在主机间迁移虚拟机不发生中断，并提供全面的容错保护。</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-11-30T00:00:00+08:00">2020-11-30</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/287/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/286/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/286/"  itemprop="url">
+        杜老师说群晖：Virtual Machine Manager 安装和创建
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>Virtual Machine Manager 是一种集中化的精致界面中整合了各种虚拟解决方案，可在 Synology NAS 上轻松创建、运行和管理多台虚拟机。可通过 Virtual Machine Manager 更灵活地分配硬件资源、为企业级部署和维护构建虚拟化环境、在主机间迁移虚拟机不发生中断，并提供全面的容错保护。</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-11-27T00:00:00+08:00">2020-11-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/286/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/285/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/285/"  itemprop="url">
+        杜老师说群晖：小米云摄像头无法对接群晖存储解决方法
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>小米云摄像头无法对接群晖存储，用 Windows 系统创建一个共享目录，可以直接使用，但同为 SMB 服务的群辉 NAS，无法连接。今天杜老师说一下如何解决这个问题！</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-11-24T00:00:00+08:00">2020-11-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/285/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://dusays.com/284/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜老师说">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="杜老师说">
+    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/284/"  itemprop="url">
+        杜老师说群晖：群晖 NAS 全应用端口对应列表
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <blockquote>
+<p>为了方便随时随地访问，我们往往需要在群晖 NAS 接入的路由上做好端口映射，不过群晖的套件那么多，每个应用的端口又是多少呢？贴心的杜老师为大家准备了群晖 NAS 全应用端口对应列表，方便您的使用！</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2020-11-21T00:00:00+08:00">2020-11-21</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/284/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://dusays.com/283/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="杜老师说">
@@ -3339,762 +4049,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/279/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/279/"  itemprop="url">
-        杜老师说概念：数据中心，云计算和大数据之间有何区别和联系
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>不少人会把云计算数据中心、数据中心、大数据搞混淆，觉得三者是一样的产品，其实有显著地区别，数据中心机房是一整套复杂设施，如今，云计算即将成为信息社会的公共资源，而数据中心是支撑云计算服务的基础设施，所以自从云计算横空出世后，一切信息技术开始围着它转，云计算有如神一样地存在着，下面看看数据中心、云计算以及大数据之间有什么区别和联系？</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-11-05T00:00:00+08:00">2020-11-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/">求职面试</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/" itemprop="url"><span itemprop="name">求职面试</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/279/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/278/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/278/"  itemprop="url">
-        杜老师说编程：Java 的 SE/EE/ME 区别知道吗
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>许多零基础 Java 开发者刚参加 Java 培训时并不知道 JavaSE&#x2F;JavaEE&#x2F;JavaME 三者之间的区别，那我们究竟该学习 JavaSE 还是 JavaEE，还是 JavaME 呢？笔者将以通俗易懂的方式给大家讲解这三者之间的区别。</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-11-02T00:00:00+08:00">2020-11-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/">代码编程</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/" itemprop="url"><span itemprop="name">代码编程</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/278/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/277/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/277/"  itemprop="url">
-        杜老师说软件：在线、近线、离线存储都是什么
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>总的来说计算机的主要功能就是处理和存储数据的，今天杜老师就来聊一下关于数据存储的一些相关的专有名词！</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-30T00:00:00+08:00">2020-10-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/277/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/276/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/276/"  itemprop="url">
-        杜老师说安全：云主机需哪些安全设置
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>信息安全是个大的话题，对于我们这些小站长们，有哪些是需要我们注意的呢？今天杜老师聊聊云主机需要哪些安全设置！</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-27T00:00:00+08:00">2020-10-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="url"><span itemprop="name">网络安全</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/276/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/275/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/275/"  itemprop="url">
-        杜老师说脚本：VPS 云主机测试脚本
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>该段脚本来源于互联网，这里做了些简单的修改，主要删除了一些无用的代码，内部测试规则没有任何修改。脚本中使用国外源进行下载速度测试，针对国内主机可能不准，仅供参考！</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-24T00:00:00+08:00">2020-10-24</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" itemprop="url"><span itemprop="name">资源分享</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/275/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/274/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/274/"  itemprop="url">
-        杜老师说解析：公共 DNS 服务器地址
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>域名系统是解决网上机器命名的一种系统。就像拜访朋友要先知道别人家怎么走一样，当一台主机访问另外一台主机时，必须先获知其地址，TCP&#x2F;IP 中的 IP 地址是由四段数字组成，记起来总不如名字那么方便，所以，就采用了域名系统来管理名字和 IP 的对应关系。</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-21T00:00:00+08:00">2020-10-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" itemprop="url"><span itemprop="name">资源分享</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/274/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/273/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/273/"  itemprop="url">
-        杜老师说公司：坏公司的鉴别方法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>不知您的工作是否顺心，一般不顺心有两个原因，一是自己的能力不符合职位需求，二是这家公司并不符合您的职业发展，简单来说就是家坏公司。我们如何去鉴定一家公司的好坏？今天杜老师来聊聊坏公司的鉴别方法！</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-18T00:00:00+08:00">2020-10-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/">求职面试</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/" itemprop="url"><span itemprop="name">求职面试</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/273/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/272/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/272/"  itemprop="url">
-        杜老师说软件：群晖中 Transmission 替换中文界面
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>原版的 Transmission 不仅界面是英文的，而且使用、设置极不符合国人习惯。杜老师今天教大家如何将群晖中 Transmission 替换为中文界面。</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-15T00:00:00+08:00">2020-10-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/272/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/271/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/271/"  itemprop="url">
-        杜老师说软件：群晖 NAS 安装 Transmission
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>Transmission 是一种 BitTorrent 客户端，特点是一个跨平台的后端和其上的简洁的用户界面。Transmission 以 MIT 许可证和 GNU 通用公共许可证授权，故是一款自由软件。</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-12T00:00:00+08:00">2020-10-12</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/">智慧生活</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">智慧生活</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/271/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/270/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/270/"  itemprop="url">
-        杜老师说应用：Linux 中酷炫的终端应用程序二
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>那些相信 Linux 命令行是单调无聊且没有任何乐趣的人，你们错了，今天杜老师就为大家推荐一个小应用，让您感受下 Linux 是如何的有趣！</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-09T00:00:00+08:00">2020-10-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" itemprop="url"><span itemprop="name">资源分享</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/270/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/269/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/269/"  itemprop="url">
-        杜老师说应用：Linux 中酷炫的终端应用程序一
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>No More Secrets 这是个简单的命令行工具，可重现 1992 年电影 Sneakers 中所见的著名数据解密效果，命令与管道数据一起使用并以混乱字符的形式打印输出。</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-06T00:00:00+08:00">2020-10-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" itemprop="url"><span itemprop="name">资源分享</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/269/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://dusays.com/268/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="杜老师说">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="杜老师说">
-    <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/268/"  itemprop="url">
-        杜老师说分享：VMware Workstation 16 Pro 许可证分享
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>VMware Workstation 是一款功能强大的桌面虚拟计算机软件，提供用户可在单一的桌面上同时运行不同操作系统，用于进行开发、测试 、部署新的应用程序最佳解决方案。VMware Workstation 可在一部实体机器上模拟完整网络环境，以及可便于携带的虚拟机器，其更好的灵活性与先进的技术胜过了市面上其它虚拟计算机软件。</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2020-10-03T00:00:00+08:00">2020-10-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" itemprop="url"><span itemprop="name">资源分享</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/268/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -4109,7 +4063,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </a>
         
         <p class="current">
-          12 / 29
+          12 / 31
         </p>
         
           <a class="next" rel="next" href="/page/13/">
@@ -4863,7 +4817,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-05-01 日</div> 
+          <div id="last-update-show">2022-05-02 日</div> 
         </div>
       
     </div>
