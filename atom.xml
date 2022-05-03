@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-04-30T18:14:55.306Z</updated>
+  <updated>2022-05-03T15:46:46.860Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说游戏：在 Linux 搭建 Minecraft 服务端</title>
+    <link href="https://dusays.com/462/"/>
+    <id>https://dusays.com/462/</id>
+    <published>2022-05-10T16:00:00.000Z</published>
+    <updated>2022-05-03T15:46:46.860Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言说想在 Linux 系统上搭建 Minecraft 服务。其实搭建 Minecraft 服务很简单，装对应版本 Java，使用命令启动核心文件即可。简单整理一下搭建步骤，有需要的小伙伴可参考一下~</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="版本对应"><a href="#版本对应" class="headerlink" title="版本对应"></a>版本对应</h2><p>本教程以最常用核心 Paper 为例，下面是版本的对应列表：</p><table><thead><tr><th>Paper Version</th><th>Recommended Java Version</th></tr></thead><tbody><tr><td>1.8 to 1.11</td><td>Java 8</td></tr><tr><td>1.12 to 1.16.4</td><td>Java 11</td></tr><tr><td>1.16.5</td><td>Java 16</td></tr><tr><td>1.17.1-1.18.1+</td><td>Java 17</td></tr></tbody></table></div><div class="story post-story"><h2 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h2><p>下面教程以最新版本 Paper-317 作为演示，</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/32eb0cee-d896-4297-9a08-625864087514' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="开始架设"><a href="#开始架设" class="headerlink" title="开始架设"></a>开始架设</h2><p>317 对应 1.18.2 版本，需使用 Java 17：</p><pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;download.oracle.com&#x2F;java&#x2F;17&#x2F;latest&#x2F;jdk-17_linux-x64_bin.tar.gztar -zxf jdk-17_linux-x64_bin.tar.gzmv jdk-17.0.3.1 &#x2F;usr&#x2F;local&#x2F;java<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>将下载好的 Paper 上传到服务器中，这里以 <code>/opt/mc/</code> 为例：</p><pre class="line-numbers language-none"><code class="language-none">cd &#x2F;opt&#x2F;mc&#x2F;usr&#x2F;local&#x2F;java&#x2F;bin&#x2F;java -Xms2G -Xmx2G -jar paper.jar --nogui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div><div class="story post-story"><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><ol><li><p>相比官方的原版服务启动器，Paper 的性能优化更好，而且支持插件；</p></li><li><p>启动器运行后，会生成一大堆文件，插件请上传至 <code>plugins</code> 目录中；</p></li><li><p>服务运行期间，不可关闭终端，可通过 <code>screen</code> 命令运行；</p></li><li><p>如果使用云主机搭建 MC 服务，记得开启对应端口，端口设置可在 <code>server.properties</code> 文件中修改，默认为 25565。</p></li></ol></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;有小伙伴留言说想在 Linux 系统上搭建 Minecraft 服务。其实搭建 Minecraft 服务很简单，装对应版本 Java，使用命令启动核心文件即可。简单整理一下搭建步骤，有需要的小伙伴可参考一下~&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说群晖：在群晖上使用 Docker 安装 Lsky Pro 图床「SQLite 版」</title>
@@ -438,29 +461,6 @@
     <updated>2022-03-13T09:10:23.338Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>光环无限是一款由 343 工作室开发的 FPS 游戏，是光环 5 的下一部作品，大家又把它叫做光环 6，其实不是，真正的名字是《光环：无限》使用全新引擎制作，拥有不一样的剧情故事！</p></blockquote><span id="more"></span><h3 id="游戏录屏"><a href="#游戏录屏" class="headerlink" title="游戏录屏"></a>游戏录屏</h3><iframe src="//player.bilibili.com/player.html?aid=509540984&bvid=BV1sb4y1W7aA&cid=541848896&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="774" height="514"> </iframe><h3 id="游戏体验"><a href="#游戏体验" class="headerlink" title="游戏体验"></a>游戏体验</h3><p>本以为光环无限同之前作品一样，是一线通关的剧情游戏，没想到在这个版本中出现了分支剧情。当我们占领岛屿后，游戏中会出现很多据点，这些据点都是分支任务，玩家可自行选择先攻打哪个据点。不过这个体验对我来说不是很好，因为多个据点攻打模式没有太多差别，主剧情也没有太多进展，后期视频看缘分更新吧！</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;光环无限是一款由 343 工作室开发的 FPS 游戏，是光环 5 的下一部作品，大家又把它叫做光环 6，其实不是，真正的名字是《光环：无限》使用全新引擎制作，拥有不一样的剧情故事！&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="视频分享" scheme="https://dusays.com/categories/%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说游戏：《Halo Infinite》光环无限第2幕「无人声版」</title>
-    <link href="https://dusays.com/441/"/>
-    <id>https://dusays.com/441/</id>
-    <published>2022-03-08T16:00:00.000Z</published>
-    <updated>2022-03-13T09:10:23.338Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>光环无限是一款由 343 工作室开发的 FPS 游戏，是光环 5 的下一部作品，大家又把它叫做光环 6，其实不是，真正的名字是《光环：无限》使用全新引擎制作，拥有不一样的剧情故事！</p></blockquote><span id="more"></span><h3 id="游戏录屏"><a href="#游戏录屏" class="headerlink" title="游戏录屏"></a>游戏录屏</h3><iframe src="//player.bilibili.com/player.html?aid=509540984&bvid=BV1Vu411Q7KJ&cid=541848896&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="774" height="514"> </iframe><h3 id="游戏体验"><a href="#游戏体验" class="headerlink" title="游戏体验"></a>游戏体验</h3><p>先说点题外话。杜老师创建了和女友的博客，想记录相处的日常，女朋友平时很少写东西，也不知道记录些什么好，我就提议让她也录制些游戏视频，算是帮我水文章吧！本期的游戏剧情视频是女友录制，第一次玩 FPS 类游戏，为了不打消她的积极性，偷偷开了外挂，看她一边玩一边大叫的样子，感觉拍段她大叫的视频，可能播放量会更高！</p>]]></content>
     
     
     <summary type="html">&lt;blockquote&gt;
