@@ -1838,8 +1838,22 @@ ul.list-v >li>a:hover {
     background: var(--color-site-bg) !important;
   }
 }
+#artalk_container {
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+#artalk_container .atk-main-editor {
+  background-color: var(--color-site-body);
+}
+#artalk_container .atk-main-editor .atk-textarea-wrap {
+  background-color: var(--color-site-body);
+  border-top: 1px solid var(--at-color-border);
+}
 #artalk_container code {
-  text-shadow: unset;
+  color: var(--color-inlinecode);
+  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+}
+#artalk_container code:before {
+  margin-top: -5px;
 }
 
   </style>
@@ -1924,7 +1938,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.fda82528.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.a17251e0.js","rightMenus":"/js/plugins/rightMenus.0ca6d77c.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.7381cfdd.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1652019802221),
+    lastupdate: new Date(1652030445209),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -4162,7 +4176,7 @@ Apache 目前一共有三种稳定的 MPM 模式。它们分别是 prefork&#x2F;
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-05-08 日</div>
+          <div id="last-update-show">2022-05-09 日</div>
         </div>
       
     </div>
