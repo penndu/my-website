@@ -1799,3 +1799,6 @@ ul.list-v >li>a:hover {
 #artalk_container code:before {
   margin-top: -5px;
 }
+#artalk_container code {
+  text-shadow: unset;
+}
