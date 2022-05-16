@@ -63,6 +63,29 @@
   </entry>
   
   <entry>
+    <title>杜老师说服务：麒麟服务器操作系统安装 Samba 文件共享服务</title>
+    <link href="https://dusays.com/460/"/>
+    <id>https://dusays.com/460/</id>
+    <published>2022-05-04T16:00:00.000Z</published>
+    <updated>2022-05-16T13:29:24.527Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Samba 是在 Linux 和 Unix 系统上实现 SMB 协议的一个免费软件，由服务器及客户端程序构成。Samba 是能够在任何支持 SMB 协议的主机之间共享文件的一种实现，当然也包括 Windows。该文讲解如何在麒麟服务器操作系统上安装 Samba 文件共享服务。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="什么是-SMB"><a href="#什么是-SMB" class="headerlink" title="什么是 SMB"></a>什么是 SMB</h2><p>SMB 是一种在局域网上共享文件和打印机的一种通信协议，它为局域网内的不同计算机之间提供文件及打印机等资源的共享服务。</p><p>SMB 协议是 C&#x2F;S 型协议，客户机通过该协议可访问服务器上的共享文件系统、打印机及其它资源。</p></div><div class="story post-story"><h2 id="监听端口"><a href="#监听端口" class="headerlink" title="监听端口"></a>监听端口</h2><p>TCP 端口相对应的服务是 smbd 服务，其作用是提供对服务器中文件、打印资源的共享访问；UDP 端口相对应的服务是 nmbd 服务，其作用是提供基于 NetBIOS 主机名称的解析：</p><table><thead><tr><th>TCP</th><th>UDP</th></tr></thead><tbody><tr><td>139</td><td>137</td></tr><tr><td>445</td><td>138</td></tr></tbody></table></div><div class="story post-story"><h2 id="Samba-的安装"><a href="#Samba-的安装" class="headerlink" title="Samba 的安装"></a>Samba 的安装</h2><pre class="line-numbers language-none"><code class="language-none">yum -y install samba<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：麒麟操作系统官方源中包含 Samba 的安装文件，直接使用上面命令安装即可。</p></div><div class="story post-story"><h2 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h2><pre class="line-numbers language-none"><code class="language-none">[global]        workgroup &#x3D; SAMBA        security &#x3D; user        passdb backend &#x3D; tdbsam        printing &#x3D; cups        printcap name &#x3D; cups        load printers &#x3D; yes        cups options &#x3D; raw[homes]        comment &#x3D; Home Directories        valid users &#x3D; %S, %D%w%S        browseable &#x3D; No        read only &#x3D; No        inherit acls &#x3D; Yes[printers]        comment &#x3D; All Printers        path &#x3D; &#x2F;var&#x2F;tmp        printable &#x3D; Yes        create mask &#x3D; 0600        browseable &#x3D; No[print$]        comment &#x3D; Printer Drivers        path &#x3D; &#x2F;var&#x2F;lib&#x2F;samba&#x2F;drivers        write list &#x3D; @printadmin root        force group &#x3D; @printadmin        create mask &#x3D; 0664        directory mask &#x3D; 0775<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：<code>/etc/samba/smb.conf</code> 是服务端的配置文件，刚安装的就自带<code>/etc/samba/smb.conf</code> 文件，直接启动就可使用。</p></div><div class="story post-story"><h2 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h2><pre class="line-numbers language-none"><code class="language-none">systemctl start smb.servicessystemctl enable smb.services<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>注意：上面的是启动命令，下面的是设置开机自动启动。</p></div><div class="story post-story"><h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><pre class="line-numbers language-none"><code class="language-none">smbpasswd -a USERNAME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：用户可以直接用 Linux 用户，但密码也需要设置，使用上面命令可为指定用户设置 Samba 的密码。</p></div><div class="story post-story"><h2 id="Samba-的配置文件"><a href="#Samba-的配置文件" class="headerlink" title="Samba 的配置文件"></a>Samba 的配置文件</h2><p>主配置文件<code>/etc/samba/smb.conf</code>：</p><table><thead><tr><th>三大组成</th><th>作用</th></tr></thead><tbody><tr><td>global</td><td>全局配置，此处的设置项对整个 Samba 服务器都有效</td></tr><tr><td>homes</td><td>宿主目录共享设置，此处用来设置 Linux 用户的默认共享，对应用户宿主目录。用户访问服务器中与自己用户名同名的共享目录时，通过验证后将会自动映射到该用户的宿主目录</td></tr><tr><td>printers</td><td>打印机的共享设置</td></tr></tbody></table></div><div class="story post-story"><h2 id="常用配置文件参数"><a href="#常用配置文件参数" class="headerlink" title="常用配置文件参数"></a>常用配置文件参数</h2><p>主配置文件中常用参数：</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>workgroup</td><td>表示设置工作组的名称</td></tr><tr><td>security</td><td>表示设置安全级别，其值可设置 user&#x2F;server&#x2F;domain</td></tr><tr><td>passdb backend</td><td>表示设置共享帐户文件类型，其值可设置 tdbsam&#x2F;ldapsam&#x2F;smbpasswd</td></tr><tr><td>comment</td><td>表示设置对应共享目录注释，说明信息，即文件共享名</td></tr><tr><td>browseable</td><td>表示设置共享是否可见</td></tr><tr><td>writable</td><td>表示设置目录是否可写</td></tr><tr><td>path</td><td>表示共享目录路径</td></tr><tr><td>guest ok</td><td>表示设置是否所有人可访问共享目录</td></tr><tr><td>public</td><td>表示设置是否允许匿名用户访问</td></tr><tr><td>write list</td><td>表示设置允许写的用户和组，组用符号@来表示，如 write list &#x3D; @root</td></tr><tr><td>valid users</td><td>设置可访问的用户和组，如 valid users &#x3D; root,@root</td></tr><tr><td>hosts deny</td><td>设置拒绝哪台主机访问，如 hosts deny &#x3D; 192.168.1.1</td></tr><tr><td>hosts allow</td><td>设置允许哪台主机访问，如 hosts allow &#x3D; 192.168.1.1</td></tr><tr><td>printable</td><td>表示设置是否为打印机</td></tr></tbody></table></div><div class="story post-story"><h2 id="Samba-的安全级别"><a href="#Samba-的安全级别" class="headerlink" title="Samba 的安全级别"></a>Samba 的安全级别</h2><p>Samba 服务器的安全级别有三个，分别是 user&#x2F;server&#x2F;domain：</p><table><thead><tr><th>安全级别</th><th>作用</th></tr></thead><tbody><tr><td>user</td><td>基于本地验证</td></tr><tr><td>server</td><td>由另一台指定服务器对用户身份进行认证</td></tr><tr><td>domain</td><td>域控进行身份验证</td></tr></tbody></table></div><div class="story post-story"><h2 id="搭建匿名用户共享"><a href="#搭建匿名用户共享" class="headerlink" title="搭建匿名用户共享"></a>搭建匿名用户共享</h2><p>以前的 Samba 版本支持的安全级别有四个，分别是 share&#x2F;user&#x2F;server&#x2F;domain。share 用来设置匿名访问的，但现在的版本已经不支持 share ，但还是可以实现匿名访问的只是配置方式变了。首先我们创建共享目录：</p><pre class="line-numbers language-none"><code class="language-none">mkdir &#x2F;opt&#x2F;dusayschmod 777 &#x2F;opt&#x2F;dusays&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>将上面目录加入到 Samba 配置文件中：</p><pre class="line-numbers language-none"><code class="language-none">[dusays]comment &#x3D; dusayspath &#x3D; &#x2F;opt&#x2F;dusaysbrowseable &#x3D; yesguest ok &#x3D; yeswritable &#x3D; yespublic &#x3D; yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>测试配置文件是否有误：</p><pre class="line-numbers language-none"><code class="language-none">testparm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>重启服务：</p><pre class="line-numbers language-none"><code class="language-none">systemctl restart smb.services<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><div class="story post-story"><h2 id="Windows-下访问共享文件"><a href="#Windows-下访问共享文件" class="headerlink" title="Windows 下访问共享文件"></a>Windows 下访问共享文件</h2><p>在 Windows 资源管理器地址上输入<code>\\IP</code> 即可登陆 Samba 服务，如我的 Samba 服务器 IP 地址是 192.168.1.1，则输入<code>\\192.168.1.1</code>。</p><p>输入的刚才新增的 Samba 用户及密码就行，如果不想每次输入，可以勾选记住密码。</p></div><div class="story post-story"><h2 id="Linux-下共享文件"><a href="#Linux-下共享文件" class="headerlink" title="Linux 下共享文件"></a>Linux 下共享文件</h2><p>首先客户端需要安装支持文件共享服务的软件包 <code>cifs-utils</code>：</p><pre class="line-numbers language-none"><code class="language-none">yum -y install cifs-utils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后使用以下命令即可实现挂载：</p><pre class="line-numbers language-none"><code class="language-none">mount -t cifs -o username&#x3D;USERNAME,password&#x3D;PASSWORD &#x2F;&#x2F;192.168.1.1&#x2F;dusays &#x2F;mnt&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Samba 是在 Linux 和 Unix 系统上实现 SMB 协议的一个免费软件，由服务器及客户端程序构成。Samba 是能够在任何支持 SMB 协议的主机之间共享文件的一种实现，当然也包括 Windows。该文讲解如何在麒麟服务器操作系统上安装 Samba 文件共享服务。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="服务" scheme="https://dusays.com/tags/%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>杜老师说图床：新版本去不图床 Upgit 上传工具设置</title>
     <link href="https://dusays.com/459/"/>
     <id>https://dusays.com/459/</id>
@@ -450,29 +473,6 @@
     
     
     <category term="教程" scheme="https://dusays.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说游戏：《Halo Infinite》光环无限第3幕「无人声版」</title>
-    <link href="https://dusays.com/442/"/>
-    <id>https://dusays.com/442/</id>
-    <published>2022-03-11T16:00:00.000Z</published>
-    <updated>2022-03-13T09:10:23.338Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>光环无限是一款由 343 工作室开发的 FPS 游戏，是光环 5 的下一部作品，大家又把它叫做光环 6，其实不是，真正的名字是《光环：无限》使用全新引擎制作，拥有不一样的剧情故事！</p></blockquote><span id="more"></span><h3 id="游戏录屏"><a href="#游戏录屏" class="headerlink" title="游戏录屏"></a>游戏录屏</h3><iframe src="//player.bilibili.com/player.html?aid=509540984&bvid=BV1sb4y1W7aA&cid=541848896&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="774" height="514"> </iframe><h3 id="游戏体验"><a href="#游戏体验" class="headerlink" title="游戏体验"></a>游戏体验</h3><p>本以为光环无限同之前作品一样，是一线通关的剧情游戏，没想到在这个版本中出现了分支剧情。当我们占领岛屿后，游戏中会出现很多据点，这些据点都是分支任务，玩家可自行选择先攻打哪个据点。不过这个体验对我来说不是很好，因为多个据点攻打模式没有太多差别，主剧情也没有太多进展，后期视频看缘分更新吧！</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;光环无限是一款由 343 工作室开发的 FPS 游戏，是光环 5 的下一部作品，大家又把它叫做光环 6，其实不是，真正的名字是《光环：无限》使用全新引擎制作，拥有不一样的剧情故事！&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="视频分享" scheme="https://dusays.com/categories/%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
