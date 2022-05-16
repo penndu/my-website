@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-05-16T17:00:34.251Z</updated>
+  <updated>2022-05-16T17:10:22.100Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说游戏：我的世界 1.18.2 材质包推荐</title>
+    <link href="https://dusays.com/468/"/>
+    <id>https://dusays.com/468/</id>
+    <published>2022-05-28T16:00:00.000Z</published>
+    <updated>2022-05-16T17:10:22.100Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Minecraft 默认材质包是不是看着厌烦了，今天杜老师分享一个高清材质包，只要显卡能带的动，就一定会喜欢，正文是材质包的下载及使用方法。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="材质下载"><a href="#材质下载" class="headerlink" title="材质下载"></a>材质下载</h2><p>官方下载地址如下，鼠标放在上面即可查看。选择当前游戏版本，然后点击下方的材质包即可跳转页面，根据提示下载即可：</p><psw>https://sapixcraft.com/downloads/java/index</psw><p>如果感觉下载速度不够理想，且操作太麻烦，可以下载杜老师转存的。1.18.2 版 512x 版下载地址，下面都是 1.18.2 版，如果需要其它版本，可在评论区里留言：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/f8ecacdf-be64-4101-a98a-c9110f97870e' title='下载地址'>下载地址</a></span><p>256x 版下载地址：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/8c865f64-83c9-41c7-b5fd-4ba91aea94c1' title='下载地址'>下载地址</a></span><p>128x 版下载地址：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/f3d9d593-88b5-4299-8ae4-c0a976f2644e' title='下载地址'>下载地址</a></span><p>64x 版下载地址：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/6a0c4597-f661-42eb-8282-0f6626a3c3cd' title='下载地址'>下载地址</a></span><p>32x 版下载地址：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/6225d650-8f6a-437c-a678-940e8aeda142' title='下载地址'>下载地址</a></span><p>16x 版下载地址：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/7d7e2947-3204-48d7-8926-836ecbe04543' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="材质效果"><a href="#材质效果" class="headerlink" title="材质效果"></a>材质效果</h2><p>以下是杜老师使用 128x 版的材质包效果「本想使用 512x 的，但电脑太垃圾带不动了」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2021/08/369-6.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2021/08/369-6.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2021/08/369-6.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Minecraft 默认材质包是不是看着厌烦了，今天杜老师分享一个高清材质包，只要显卡能带的动，就一定会喜欢，正文是材质包的下载及使用方法。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说游戏：我的世界 HMCL 启动器 1.18.2 整合版资源分享</title>
@@ -450,29 +473,6 @@
     
     
     <category term="磁盘" scheme="https://dusays.com/tags/%E7%A3%81%E7%9B%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说系统：Rectify11 系统中文化</title>
-    <link href="https://dusays.com/448/"/>
-    <id>https://dusays.com/448/</id>
-    <published>2022-03-29T16:00:00.000Z</published>
-    <updated>2022-03-30T09:12:19.880Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Rectify11 系统默认全英文界面，在社区中看到很多国内网友，已经安装其作为主力的系统。该篇教程讲解如何设置 Rectify11 系统中文化，多图不要错过！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>Start–Settings–Language &amp; region:</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/03/448-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/03/448-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/03/448-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>Add a language——在框中输入 chinese——选择中文——点击下面的 Next：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/03/448-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/03/448-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/03/448-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>建议勾选下方的 Set as my Windows display language，最后点击下面的 Install：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/03/448-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/03/448-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/03/448-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>带语言包下载完成，点击界面中 Sign out：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/03/448-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/03/448-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/03/448-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><div class="story post-story"><h2 id="中文效果"><a href="#中文效果" class="headerlink" title="中文效果"></a>中文效果</h2><p>待重新登录用户后，即可看到中文界面：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/03/448-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/03/448-5.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/03/448-5.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Rectify11 系统默认全英文界面，在社区中看到很多国内网友，已经安装其作为主力的系统。该篇教程讲解如何设置 Rectify11 系统中文化，多图不要错过！&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="系统" scheme="https://dusays.com/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
