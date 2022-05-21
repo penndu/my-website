@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.1.1'>
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.2.0'>
   <meta name="generator" content="Hexo 6.2.0">
-  <meta name="Volantis" content="5.1.1">
+  <meta name="Volantis" content="5.2.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -1944,7 +1944,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.a17251e0.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.f7eb1ad4.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653147249672),
+    lastupdate: new Date(1653148083045),
     sidebar: {
       for_page: ["blogger","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -4286,7 +4286,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         本站使用
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.1.1" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.2.0" target="_blank" class="codename">Volantis</a>
         作为主题
       
     
@@ -4923,6 +4923,9 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (path.length == 0) {
       path = '' || decodeURI(window.location.pathname);
     }
+    if(!':title/'.includes('/index.html')) {
+      path = path.replaceAll('/index.html', '/')
+    }
 
     volantis.artalk = new Artalk(Object.assign({"js":"https://o.static.szyink.com/storage/artalk/Artalk.js","css":"https://o.static.szyink.com/storage/artalk/Artalk.css","server":"https://artalk.dusays.com","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，勿传违禁图片~","imgUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","resp":"data.links.url"},"pagination":{"readMore":false,"autoLoad":false},"heightLimit":{"children":0},"versionCheck":false}, {
       el: '#artalk_container',
@@ -4932,7 +4935,25 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       useBackendConf: true,
       site: '杜老师说',
       darkMode: volantis.dark.mode === "dark",
-      pvEl: '#artalk_visitors'
+      pvEl: '#artalk_visitors',
+
+      
+      imgUploader: function(file) {
+        let headers = new Headers();
+        headers.set('Accept', 'application/json');
+        
+          headers.set('Authorization', 'Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L')
+        
+        let formData = new FormData();
+        formData.append('file', file);
+        return fetch('https://7bu.top/api/v1/upload',{
+          method: 'POST',
+          body: formData,
+          headers: headers
+          }).then((resp) => resp.json())
+            .then((resp) => resp.data.links.url)
+      },
+      
     }));
 
     volantis.artalk.then(ctx => {
