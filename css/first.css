@@ -1785,23 +1785,3 @@ ul.list-v >li>a:hover {
     background: var(--color-site-bg) !important;
   }
 }
-#artalk_container {
-  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
-}
-#artalk_container .atk-main-editor {
-  background-color: var(--color-site-body);
-}
-#artalk_container .atk-main-editor .atk-textarea-wrap {
-  background-color: var(--color-site-body);
-  border-top: 1px solid var(--at-color-border);
-}
-#artalk_container code {
-  color: var(--color-inlinecode);
-  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
-}
-#artalk_container code:before {
-  margin-top: -5px;
-}
-#artalk_container code {
-  text-shadow: unset;
-}
