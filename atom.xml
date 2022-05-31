@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-05-24T16:50:41.894Z</updated>
+  <updated>2022-05-31T17:55:19.501Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说礼物：感谢羽忆童鞋的大白兔奶糖</title>
+    <link href="https://dusays.com/472/"/>
+    <id>https://dusays.com/472/</id>
+    <published>2022-06-09T16:00:00.000Z</published>
+    <updated>2022-05-31T17:55:19.501Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>男人至死是少年啊！因为减肥需要控糖，都忘了多久没有吃甜食。当羽忆童鞋说送奶糖时非常开心，因为还有一群人记得我们仍旧是少年。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="可爱的奶糖盒"><a href="#可爱的奶糖盒" class="headerlink" title="可爱的奶糖盒"></a>可爱的奶糖盒</h2><p>盒子非常小巧可爱，碰巧在我阴历生日这天收到，我女朋友还以为是其她小女生送我的生日礼物，要不是有对话截图，估计我生日要和搓衣板过了：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/472-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/472-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/472-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>打开后才知道，大白兔有那么多的口味，30年都白活了：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/472-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/472-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/472-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><div class="story post-story"><h2 id="圈里的小伙伴"><a href="#圈里的小伙伴" class="headerlink" title="圈里的小伙伴"></a>圈里的小伙伴</h2><p>独立博客，即 blog，是一种个人信息的发布平台，极其简便、丰富个人媒体形式，是互联网上独立的思想泡泡，它带来一种全新交流方式和生活可能「引自某度百科」</p><p>坚持自己的倾向和想法，使其他和你有同样观点的人更容易信任你，帮你传播信息「同样引自某度百科」</p><p>一个人的孤独，一群人的狂欢「引自十年之约」</p><p>再次感谢羽忆童鞋！</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;男人至死是少年啊！因为减肥需要控糖，都忘了多久没有吃甜食。当羽忆童鞋说送奶糖时非常开心，因为还有一群人记得我们仍旧是少年。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="礼物" scheme="https://dusays.com/tags/%E7%A4%BC%E7%89%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说托管：免费提供 Artalk 服务及数据托管</title>
@@ -450,29 +473,6 @@
     
     
     <category term="系统" scheme="https://dusays.com/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说图床：去不图床新版升级计划</title>
-    <link href="https://dusays.com/452/"/>
-    <id>https://dusays.com/452/</id>
-    <published>2022-04-10T16:00:00.000Z</published>
-    <updated>2022-05-06T10:59:59.661Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>在去不图床作者七月童鞋辛勤拖更下，图床程序终于迎来了 2.0 版本，新版本在底层和前端都做了很大变化。为了不影响用户的使用体验，现制定新版本升级上线计划。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="投放试用"><a href="#投放试用" class="headerlink" title="投放试用"></a>投放试用</h2><p>新版本图床已架设完成，用户数据和大部分图片数据已经做好迁移，访问 <a href="https://7bu.top/">https://7bu.top</a> 即可体验新版本。</p><p>由于新版程序使用加密技术不同，故未对用户密码做迁移，登录用户名为付费账户邮箱，如遗忘请访问 <a href="https://pay.dusays.com/">提卡系统</a> 查询，密码统一为 12345678，登录后请尽快修改密码。</p></div><div class="story post-story"><h2 id="相关教程"><a href="#相关教程" class="headerlink" title="相关教程"></a>相关教程</h2><p>部分小伙伴使用 API 方式管理图片，近期也会推出一系列的使用教程，将会以表格链接形式分享给大家，敬请期待：</p><table><thead><tr><th>教程名称</th><th>访问地址</th></tr></thead><tbody><tr><td>《<a href="https://dusays.com/454/">新版本去不图床 Token 的获取与清空</a>》</td><td><a href="https://dusays.com/454/">https://dusays.com/454/</a></td></tr><tr><td>《<a href="https://dusays.com/455/">新版本去不图床 PicGo 插件设置</a>》</td><td><a href="https://dusays.com/455/">https://dusays.com/455/</a></td></tr><tr><td>《<a href="https://dusays.com/456/">Waline 评论系统新版贴图 API 设置示例</a>》</td><td><a href="https://dusays.com/456/">https://dusays.com/456/</a></td></tr><tr><td>《<a href="https://dusays.com/458/">新版本去不图床 ShareX 截屏工具设置</a>》</td><td><a href="https://dusays.com/458/">https://dusays.com/458/</a></td></tr><tr><td>《<a href="https://dusays.com/459/">新版本去不图床 Upgit 上传工具设置</a>》</td><td><a href="https://dusays.com/459/">https://dusays.com/459/</a></td></tr></tbody></table></div><div class="story post-story"><h2 id="数据迁移"><a href="#数据迁移" class="headerlink" title="数据迁移"></a>数据迁移</h2><p>自 2022 年 4 月 10 日始，之后每周的星期日，我们会将旧图床的数据，增量迁移到新图床，方便用户通过新版图床，管理到之前上传的图片数据。</p><p>目前新旧图床公用存储节点，已上传的图片访问不受影响，新上传的图片访问域名不变。</p></div><div class="story post-story"><h2 id="关闭旧站"><a href="#关闭旧站" class="headerlink" title="关闭旧站"></a>关闭旧站</h2><p>如无不良反馈，将于 4 月 24 日关闭旧版图床上传功能，同时将主站域名划分给新版图床，并于 4 月 30 日停止旧版图床访问。</p><p>本站郑重承诺：迁移前后不会影响任何已上传图片的正常访问。如有任何问题欢迎在页面下留言，杜老师会第一时间处理！</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;在去不图床作者七月童鞋辛勤拖更下，图床程序终于迎来了 2.0 版本，新版本在底层和前端都做了很大变化。为了不影响用户的使用体验，现制定新版本升级上线计划。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
