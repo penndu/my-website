@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-05-31T17:55:19.501Z</updated>
+  <updated>2022-06-04T12:07:43.439Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师说电脑：刃 7000P 内存频率限制 2400 的解决方法</title>
+    <link href="https://dusays.com/473/"/>
+    <id>https://dusays.com/473/</id>
+    <published>2022-06-12T16:00:00.000Z</published>
+    <updated>2022-06-04T12:07:43.439Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>经常来杜老师博客的小伙伴可能记得，杜老师买了台联想刃 7000P，没想到刚过半年内存就不够用了。巧的是恰逢 618，正好采购内存做个升级，但插入内存后发现一些问题，于是有了这篇教程。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>杜老师的电脑自带内存是两条金士顿 16G3200MHz，原厂的内存价格比较高，所以就到某东上买了同品牌同频率的：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><div class="story post-story"><h2 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h2><p>插上新内存后，发现新内存频率仅有 2400MHz，且自带的内存也降为 2400MHz，开始以为是新内存问题，杜老师在另外一台电脑上测试新内存发现确实是 3200MHz。</p><p>询问了官方客服后，了解到刃 7000P 仅支持 JEDEC 的内存，而杜老师买的是市面上常见的 XMP 内存，这种内存需设置超频才能达到 3200MHz「JEDEC 和 XMP 的区别，请自行搜索下，如有不懂，欢迎留言交流」</p><p>内存主频和 CPU 主频一样，被用来表示内存的速度，它代表着该内存所能达到的最高工作频率。内存主频是以 MHz 为单位来计量的。内存主频越高在一定程度上代表着内存所能达到的速度越快。内存主频决定着该内存最高能在什么样的频率正常工作。</p><p>由于决定内存性能的核心因素有内存容量、带宽、频率，而如果在同代内存，相同的容量条件下，内存频率越高性能越好。如果是不同代内存，如 DDR3 和 DDR4 内存，如果是相同容量下，DDR4 的内存性能肯定在 DDR3 之上，毕竟 DDR4 内存频率均在 DDR3 之上，且新一代内存还在带宽上有升级，功耗更低。</p><p>其实 2400MHz 对普通用户来说很够用了，但杜老师对电脑的性能要求较高。</p><p>原厂的内存价格贵不说，还经常性断货，既然超频可以解决，为什么不搞一下呢？</p></div><div class="story post-story"><h2 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h2><p>官方下载地址如下：</p><span class='btn regular'><a class="button" href='https://download.amd.com/Desktop/AMD-Ryzen-Master.exe' title='下载地址'>下载地址</a></span><p>如果无法正常下载，可以下载杜老师转存的：</p><span class='btn regular'><a class="button" href='https://flowus.cn/penn/share/f7b8bb2c-5fb3-4bf7-8501-76344c38c213' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>安装好工具后，打开时会出现警告提示。因为超频都是通过加压方式实现，可能会对硬件有所影响，但这款官方的超频工具十分安全，我们点击确定即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>为了方便用户使用，工具提供了基础视图和高级视图两种模式，如果需要操作内存，则需点击进入高级视图：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在高级视图的左侧调整运行模式，这里我们选择了 Creator Mode。在内存控制的右侧，点击已排除项，即可切换成已包含「后面的自动推送和手动推送建议默认」最后点击下方应用，根据提示重启系统：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>重启后打开任务管理器，切换到性能栏的内存项，即可看到频率已变成 3200MHz：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-5.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-5.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;经常来杜老师博客的小伙伴可能记得，杜老师买了台联想刃 7000P，没想到刚过半年内存就不够用了。巧的是恰逢 618，正好采购内存做个升级，但插入内存后发现一些问题，于是有了这篇教程。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="电脑" scheme="https://dusays.com/tags/%E7%94%B5%E8%84%91/"/>
+    
+  </entry>
   
   <entry>
     <title>杜老师说礼物：感谢羽忆童鞋的大白兔奶糖</title>
@@ -450,29 +473,6 @@
     
     
     <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杜老师说系统：绕过 TPM2 安装 Win11 两种方法</title>
-    <link href="https://dusays.com/453/"/>
-    <id>https://dusays.com/453/</id>
-    <published>2022-04-13T16:00:00.000Z</published>
-    <updated>2022-04-05T10:57:13.600Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>下载电脑健康状况检查工具，点击立即检查就能查看结果，如果您电脑通过检查即可直接通过系统更新安装 Win11，如果提示因为 TPM2 检查不通过，则可通过杜老师分享的方法来绕过 TPM2 的检测安装 Win11。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h2><p>网络上提示的修改注册表等方式亲测已经不生效了，有需要的可以自行尝试，这里介绍的是通过开源工具 MediaCreationTool.bat 进行 Win11 安装：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/ed69ae8e-c6a3-491a-8463-bac90e3a0f05' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="增量安装"><a href="#增量安装" class="headerlink" title="增量安装"></a>增量安装</h2><p>下载软件后您会看到这几个工具，运行根目录中的 MediaCreationTool.bat 脚本，在弹出的界面选择 11：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/453-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/453-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/04/453-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>再选择 Auto Upgrade：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/453-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/453-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/04/453-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><div class="story post-story"><h2 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h2><p>如果还是不行的话，则需要通过第二种方法进行升级。准备一个 8G 以上的 U 盘，打开下载的 MediaCreationTool.bat 制作 U 盘安装工具，在弹出的界面选择 11。</p><p>再选择 Create USB，然后弹出 PowerShell 权限选择是，然后选择 U 盘介质，等待制作完成即可，这里虽然提示是 Win10，实际制作的是 Win11 启动盘，它只是利用了 Win10 的工具而已。</p><p>U 盘安装 Win11 和其他系统没有区别，重启系统，进入 UEFI 启动项，选择 U 盘对应的启动项，按照提示操作即可。</p><p>注意事项：U 盘安装系统无法进行增量升级，请提前备份好重要数据。</p></div><div class="story post-story"><h2 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h2><p>早期主板不支持 TPM2，如果不想绕开 TPM2 的验证，可以买 TPM2 模块，某宝上一大堆，价格百元以内。</p><p>需要注意的是，购买之前一定联系客服，确认主板支持。很多商家不支持七天无理由，这里不推荐店铺了，毕竟大多都是深圳发货，估计都是华强北的产品！</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;下载电脑健康状况检查工具，点击立即检查就能查看结果，如果您电脑通过检查即可直接通过系统更新安装 Win11，如果提示因为 TPM2 检查不通过，则可通过杜老师分享的方法来绕过 TPM2 的检测安装 Win11。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="系统" scheme="https://dusays.com/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
