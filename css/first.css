@@ -1788,13 +1788,6 @@ ul.list-v >li>a:hover {
 #artalk_container {
   font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
-#artalk_container .atk-main-editor {
-  background-color: var(--color-site-body);
-}
-#artalk_container .atk-main-editor .atk-textarea-wrap {
-  background-color: var(--color-site-body);
-  border-top: 10px solid var(--at-color-border);
-}
 #artalk_container code {
   color: var(--color-inlinecode);
   font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
