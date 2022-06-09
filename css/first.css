@@ -1793,7 +1793,7 @@ ul.list-v >li>a:hover {
 }
 #artalk_container .atk-main-editor .atk-textarea-wrap {
   background-color: var(--color-site-body);
-  border-top: 1px solid var(--at-color-border);
+  border-top: 10px solid var(--at-color-border);
 }
 #artalk_container code {
   color: var(--color-inlinecode);
