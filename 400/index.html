@@ -28,7 +28,7 @@
   
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://cdn.dusays.com/favicon.ico">
-  <link rel="preload" href="/css/style.d64f80e2.css" as="style">
+  <link rel="preload" href="/css/style.d531e37e.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -90,6 +90,7 @@
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
 }
 * {
   box-sizing: border-box;
@@ -879,6 +880,7 @@ button {
     --color-list-hl: #63e0c4;
     --color-meta: rgba(191,191,191,0.871);
     --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
     filter: brightness(70%) !important;
@@ -950,6 +952,7 @@ button {
   --color-list-hl: #63e0c4;
   --color-meta: rgba(191,191,191,0.871);
   --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
   filter: brightness(70%) !important;
@@ -1858,8 +1861,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.d64f80e2.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.d64f80e2.css"></noscript>
+  <link rel="stylesheet" href="/css/style.d531e37e.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.d531e37e.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1937,9 +1940,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.239a403b.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.a17251e0.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.d64f80e2.css"}},
+    cdn: {"js":{"app":"/js/app.239a403b.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.a17251e0.js","rightMenus":"/js/plugins/rightMenus.7708e665.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.d531e37e.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1654868386419),
+    lastupdate: new Date(1654882034576),
     sidebar: {
       for_page: ["blogger","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -1957,17 +1960,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     plugins: {
       message: {"enable":true,"css":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       fancybox: {"css":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
-      aplayer: {
-        id: 3175833810,
-        enable:null
-      },
-      rightmenu: {
-        faicon: "fa",
-        layout: ["home","hr","help","examples","contributors","hr","source_docs","source_theme","hr","print","darkmode","reading","music"],
-        music_alwaysShow: true,
-        customPicUrl: {"enable":false,"old":null,"new":null}
-      },
+      
+      
+      
       rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":false,"musicAlwaysShow":false},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"百度搜索","icon":"fa-solid fa-search","event":"window.open(`https://www.baidu.com/s?wd=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"去不图床","icon":"fa-solid fa-file-image","link":"https://7bu.top/","group":"link"},{"id":"examples","name":"提卡系统","icon":"fa-solid fa-address-card","link":"https://pay.dusays.com/","group":"link"},{"id":"contributors","name":"赞助平台","icon":"fa-solid fa-money-check-alt","link":"https://afdian.net/@teacherdu","group":"link"},"hr",{"id":"source_theme","name":"我的世界","icon":"fa-solid fa-gamepad","link":"https://dusays.com/465/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      
     }
   }
 
@@ -3289,24 +3286,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
+       <!-- 相关文章 -->
       
+      <!-- 版权声明组件 -->
       
-        <div class='copyright'>
-          <blockquote>
-            
+        
+          
+          <div class="copyright license">
+            <div class="license-title">去不图床坚决抵制违禁图片</div>
+            <div class="license-link"><a href="https://dusays.com/400/">https://dusays.com/400/</a>
+            </div>
+            <div class="license-meta">
+              <div class="license-meta-item">
+                <div class="license-meta-title">本文作者</div>
+                <div class="license-meta-text">Teacher Du</div>
+              </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">发布于</div>
+                <div class="license-meta-text">2021年11月6日</div>
+              </div>
               
-                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-
+              <div class="license-meta-item">
+                <div class="license-meta-title">更新于</div>
+                <div class="license-meta-text">2022年6月8日</div>
+              </div>
               
-            
               
-                <p>本文永久链接是：<a href=https://dusays.com/400/>https://dusays.com/400/</a></p>
-              
-            
-          </blockquote>
-        </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">许可协议</div>
+                <div class="license-meta-text"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a></div>
+              </div>
+            </div>
+            <div class="license-statement">署名-非商业性使用-相同方式共享 4.0 国际。</div>
+          </div>
+        
       
+      <!-- 打赏组件 -->
       
     </div>
   
@@ -3448,11 +3465,12 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
+
   
     
     
-
-<section class="widget blogger shadow floatable blur desktop mobile pjax">
+      
+<section class="widget blogger desktop mobile pjax">
   <div class='content'>
     
       
@@ -3517,33 +3535,20 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </div>
 </section>
 
+    
   
 
   
     
     
-
-
-
-  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
+      
     
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%AE%A1%E6%A0%B8"><span class="toc-text">图片审核</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%95%E8%AF%89%E4%B8%BE%E6%8A%A5"><span class="toc-text">投诉举报</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E5%AF%B9%E6%94%BF%E7%AD%96"><span class="toc-text">应对政策</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88"><span class="toc-text">替代方案</span></a></li></ol>
-    </div>
-  </section>
-
   
 
   
     
-    <section class="widget shadow floatable blur desktop mobile pjax">
+    
+      <section class="widget undefinedshadow floatable blur desktop mobile pjax">
     
 
     <div class="tabs" id="tab-widget-artalk">
@@ -3586,13 +3591,14 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
       </div>
     </div>
   </section>
+    
   
 
   
     
     
-
-<section class="widget text shadow floatable blur desktop mobile pjax">
+      
+<section class="widget text desktop mobile pjax">
   
   <header>
     
@@ -3608,13 +3614,14 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </div>
 </section>
 
+    
   
 
   
     
     
-
-<section class="widget text shadow floatable blur desktop mobile pjax">
+      
+<section class="widget text desktop mobile pjax">
   
   <header>
     
@@ -3630,13 +3637,14 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </div>
 </section>
 
+    
   
 
   
     
     
-
-<section class="widget text shadow floatable blur desktop mobile pjax">
+      
+<section class="widget text desktop mobile pjax">
   
   <header>
     
@@ -3652,13 +3660,14 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </div>
 </section>
 
+    
   
 
   
     
     
-
-<section class="widget text shadow floatable blur desktop mobile pjax">
+      
+<section class="widget text desktop mobile pjax">
   
   <header>
     
@@ -3674,13 +3683,14 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </div>
 </section>
 
+    
   
 
   
     
     
-
-<section class="widget list shadow floatable blur desktop mobile pjax">
+      
+<section class="widget list desktop mobile pjax">
   
   <header>
     
@@ -4110,13 +4120,14 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </div>
 </section>
 
+    
   
 
   
     
     
-
-<section class="widget grid shadow floatable blur desktop mobile pjax">
+      
+<section class="widget grid desktop mobile pjax">
   
   <header>
     
@@ -4192,14 +4203,15 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </div>
 </section>
 
+    
   
 
   
     
     
+      
   
-
-  <section class="widget category shadow floatable blur desktop pjax">
+  <section class="widget category desktop pjax">
     
   <header>
     
@@ -4266,14 +4278,15 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </section>
 
 
+    
   
 
   
     
     
+      
   
-
-  <section class="widget tagcloud shadow floatable blur desktop mobile pjax">
+  <section class="widget tagcloud desktop mobile pjax">
     
   <header>
     
@@ -4288,13 +4301,14 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
   </section>
 
 
+    
   
 
   
     
     
-
-<section class="widget shadow floatable blur desktop pjax">
+      
+<section class="widget desktop pjax">
   
   <header>
     
@@ -4334,13 +4348,39 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-06-10 日</div>
+          <div id="last-update-show">2022-06-11 日</div>
         </div>
       
     </div>
   </div>
 </section>
+    
   
+
+
+<div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%AE%A1%E6%A0%B8"><span class="toc-text">图片审核</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%95%E8%AF%89%E4%B8%BE%E6%8A%A5"><span class="toc-text">投诉举报</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E5%AF%B9%E6%94%BF%E7%AD%96"><span class="toc-text">应对政策</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88"><span class="toc-text">替代方案</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
+</div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
@@ -4357,6 +4397,9 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
     <!-- pjax占位 -->
   </div>
 
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <!-- Custom Files side begin -->
   
@@ -4750,7 +4793,7 @@ Docker 技术目前在 DevOps 中被广泛使用，我们需要将测试或者�
 
   </ul>
 </div>
-<script src="/js/plugins/rightMenus.cd02aa19.js"></script>
+<script src="/js/plugins/rightMenus.7708e665.js"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -5049,10 +5092,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       path = '' || decodeURI(window.location.pathname);
     }
     if(!':title/'.includes('/index.html')) {
-      path = path.replaceAll('/index.html', '/')
+      path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
-    new Artalk(Object.assign({"js":"https://o.static.szyink.com/storage/artalk/Artalk.js","css":"https://o.static.szyink.com/storage/artalk/Artalk.css","server":"https://artalk.dusays.com","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，勿传违禁图片~","imgUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","resp":"data.links.url"},"userImgUpload":{"url":"https://7bu.top/api/v1/upload","token":"1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L"},"pagination":{"readMore":false,"autoLoad":false},"heightLimit":{"children":0},"versionCheck":false,"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"darkMode":"auto"}, {
+    volantis.artalk = new Artalk(Object.assign({"js":"https://o.static.szyink.com/storage/artalk/Artalk.js","css":"https://o.static.szyink.com/storage/artalk/Artalk.css","server":"https://artalk.dusays.com","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，勿传违禁图片~","imgUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","resp":"data.links.url"},"userImgUpload":{"url":"https://7bu.top/api/v1/upload","token":"1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L"},"pagination":{"readMore":false,"autoLoad":false},"heightLimit":{"children":0},"versionCheck":false,"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"darkMode":"auto"}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
@@ -5107,7 +5150,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function dark_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0]) return;
-    Artalk.Use(ctx => {
+    volantis.artalk.then(ctx => {
       ctx.setDarkMode(volantis.dark.mode === "dark")
     })
   }
