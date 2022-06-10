@@ -1939,7 +1939,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.239a403b.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.a17251e0.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.d64f80e2.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1654834611397),
+    lastupdate: new Date(1654841316225),
     sidebar: {
       for_page: ["blogger","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3030,7 +3030,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post dock' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
+  <div class='cover-bg' style='background-image:url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture)'></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -3133,7 +3133,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="https://dusays.com/about/" rel="nofollow">
-    <img itemprop="image" src="https://cdn.dusays.com/avatar.png/2" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <img itemprop="image" src="https://cdn.dusays.com/avatar.png/2">
     <p itemprop="name">Teacher Du</p>
   </a>
 </div>
@@ -3239,7 +3239,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span id="more"></span>
 
 <div class="story post-story"><h2 id="服务架构"><a href="#服务架构" class="headerlink" title="服务架构"></a>服务架构</h2><p>服务架构如下，左侧为客户端，右侧为服务端，中间为地址获取的全部流程：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-1.jpg/1"></a><span></span></div></div>
 
 </div><div class="story post-story"><h2 id="服务流程"><a href="#服务流程" class="headerlink" title="服务流程"></a>服务流程</h2><ol>
 <li><p>地址请求：客户端连接网络后，如果其未设置网络地址，则会广播一条请求信息，所有设备都会收到该条信息，非 DHCP 服务设备则会丢弃该条信息；</p>
@@ -3252,109 +3252,109 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ol>
 </div><div class="story post-story"><h2 id="服务设置"><a href="#服务设置" class="headerlink" title="服务设置"></a>服务设置</h2><p>Server2019 默认不会安装 DHCP，需要自行安装。点击仪表板上的添加角色和功能：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-2.jpg/1"></a><span></span></div></div>
 
 <p>在添加角色和功能向导页面中点击下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-3.jpg/1"></a><span></span></div></div>
 
 <p>我们可以将服务安装在本机，也可以安装在远程服务器上，这里选择基于角色或基于功能的安装，然后点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-4.jpg/1"></a><span></span></div></div>
 
 <p>选从服务器池中选择服务器，目前服务器池只有当前的服务器，然后点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-5.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-5.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-5.jpg/1"></a><span></span></div></div>
 
 <p>在列表中选择角色，勾选 DHCP 服务器：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-6.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-6.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-6.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-6.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-6.jpg/1"></a><span></span></div></div>
 
 <p>勾选后会弹出添加功能确认界面，它会安装除了服务之外的相关工具和组件：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-7.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-7.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-7.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-7.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-7.jpg/1"></a><span></span></div></div>
 
 <p>弹出错误提示，需要给服务设置静态 IP 地址。毕竟要给别人分配地址，自己要先具备。我们可以现在设置，也可以安装好服务之后设置，然后点击继续：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-8.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-8.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-8.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-8.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-8.jpg/1"></a><span></span></div></div>
 
 <p>经过上面的操作后，会发现 DHCP 服务器角色已经被勾选，然后点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-9.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-9.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-9.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-9.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-9.jpg/1"></a><span></span></div></div>
 
 <p>接下来是功能选择，无需勾选任何，点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-10.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-10.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-10.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-10.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-10.jpg/1"></a><span></span></div></div>
 
 <p>显示注意事项，无需理会，直接点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-11.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-11.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-11.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-11.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-11.jpg/1"></a><span></span></div></div>
 
 <p>接下来是角色添加确认界面，点击安装即可：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-12.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-12.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-12.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-12.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-12.jpg/1"></a><span></span></div></div>
 
 <p>稍等一会安装成功，点击关闭：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-13.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-13.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-13.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-13.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-13.jpg/1"></a><span></span></div></div>
 
 <p>添加好角色后，又回到了初始界面，发现右上角弹出了警告信息需要处理：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-14.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-14.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-14.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-14.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-14.jpg/1"></a><span></span></div></div>
 
 <p>无需任何修改，直接提交：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-15.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-15.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-15.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-15.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-15.jpg/1"></a><span></span></div></div>
 
 <p>接下来会显示完成界面，点击关闭：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-16.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-16.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-16.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-16.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-16.jpg/1"></a><span></span></div></div>
 
 <p>警告信息处理好后，点击下面的 DHCP 即可进入角色：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-17.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-17.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-17.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-17.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-17.jpg/1"></a><span></span></div></div>
 
 <p>接下来我们开始配置 DHCP，在右上角的工具处，选 DHCP：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-18.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-18.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-18.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-18.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-18.jpg/1"></a><span></span></div></div>
 
 <p>双击 DHCP 的内容下面的服务器，即可展开地址配置：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-19.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-19.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-19.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-19.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-19.jpg/1"></a><span></span></div></div>
 
 <p>双击其中的 IPv4，打开后会发现空空如也，我们需要添加一个 IP 作用域，作用域就是 IP 的地址池：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-20.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-20.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-20.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-20.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-20.jpg/1"></a><span></span></div></div>
 
 <p>点击右侧更多操作：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-21.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-21.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-21.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-21.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-21.jpg/1"></a><span></span></div></div>
 
 <p>点新建作用域：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-22.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-22.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-22.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-22.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-22.jpg/1"></a><span></span></div></div>
 
 <p>在向导页面中点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-23.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-23.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-23.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-23.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-23.jpg/1"></a><span></span></div></div>
 
 <p>接下来给作用域起一个名称，我们这里以 dusays.com 为例：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-24.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-24.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-24.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-24.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-24.jpg/1"></a><span></span></div></div>
 
 <p>设置作用域分配的地址范围，依次输入 IP 起始地址与结束地址，余下的信息会自动生成：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-25.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-25.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-25.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-25.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-25.jpg/1"></a><span></span></div></div>
 
 <p>接下来设置 IP 排除地址，排除地址是指不会被分配出去的范围，输入起始、结束之后点击添加：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-26.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-26.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-26.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-26.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-26.jpg/1"></a><span></span></div></div>
 
 <p>添加后的效果：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-27.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-27.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-27.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-27.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-27.jpg/1"></a><span></span></div></div>
 
 <p>设置租用时间，默认 8 天，无需调整：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-28.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-28.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-28.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-28.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-28.jpg/1"></a><span></span></div></div>
 
 <p>DHCP 除了分配地址外，还能分配默认网关、DNS 等，如果稍后设置，则点击否。这里我们继续设置，选是即可：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-29.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-29.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-29.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-29.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-29.jpg/1"></a><span></span></div></div>
 
 <p>设置默认网关，我们这里就填写 192.168.1.1，然后点击添加：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-30.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-30.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-30.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-30.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-30.jpg/1"></a><span></span></div></div>
 
 <p>添加后的效果：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-31.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-31.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-31.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-31.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-31.jpg/1"></a><span></span></div></div>
 
 <p>设置域名称和 DNS 服务器界面根据实际情况填写，这里就不做修改了，直接点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-32.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-32.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-32.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-32.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-32.jpg/1"></a><span></span></div></div>
 
 <p>WINS 服务器界面不用修改，直接点下一步：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-33.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-33.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-33.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-33.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-33.jpg/1"></a><span></span></div></div>
 
 <p>DHCP 作用域是否立即激活，选是即可：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-34.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-34.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-34.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-34.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-34.jpg/1"></a><span></span></div></div>
 
 <p>最后显示确认完成界面：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-35.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-35.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-35.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-35.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-35.jpg/1"></a><span></span></div></div>
 
 </div><div class="story post-story"><h2 id="客户测试"><a href="#客户测试" class="headerlink" title="客户测试"></a>客户测试</h2><p>客户端测试图，大家可以看到 DHCP 服务器地址是 192.168.1.1，获取的 IP 地址是 192.168.1.100，因为 2-99 被排除：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-36.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-36.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2019/09/64-36.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2019/09/64-36.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2019/09/64-36.jpg/1"></a><span></span></div></div>
 </div>
   </div>
   
@@ -3412,7 +3412,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png">
           
         </a>
       
@@ -3426,7 +3426,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png">
           
         </a>
       
@@ -3440,7 +3440,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png">
           
         </a>
       
@@ -3667,7 +3667,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
 
   <div class='content'>
     
-      <center><a target="_blank" rel="noopener" href="https://afdian.net/@teacherdu"><img src="https://cdn.dusays.com/yf.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/yf.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
+      <center><a target="_blank" rel="noopener" href="https://afdian.net/@teacherdu"><img src="https://cdn.dusays.com/yf.jpg/2"></a><center>
     
   </div>
 </section>
@@ -3689,7 +3689,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
 
   <div class='content'>
     
-      <center><a href="https://dusays.com/sffw"><img src="https://cdn.dusays.com/sffw.gif" class="lazyload" data-srcset="https://cdn.dusays.com/sffw.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
+      <center><a href="https://dusays.com/sffw"><img src="https://cdn.dusays.com/sffw.gif"></a><center>
     
   </div>
 </section>
@@ -3711,7 +3711,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
 
   <div class='content'>
     
-      <center><a href="https://www.vpsor.cn?userCode=ohedb8" target="_blank"><img src="https://cdn.dusays.com/vpsor.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/vpsor.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
+      <center><a href="https://www.vpsor.cn?userCode=ohedb8" target="_blank"><img src="https://cdn.dusays.com/vpsor.jpg/2"></a><center>
     
   </div>
 </section>
@@ -3733,7 +3733,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
 
   <div class='content'>
     
-      <center><a href="https://flowus.cn/login?code=PDZ708" target="_blank"><img src="https://cdn.dusays.com/aliyundrive.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/aliyundrive.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a></center>
+      <center><a href="https://flowus.cn/login?code=PDZ708" target="_blank"><img src="https://cdn.dusays.com/aliyundrive.jpg/2"></a></center>
     
   </div>
 </section>
@@ -3767,7 +3767,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             贝贝吧
           </div>
@@ -3785,7 +3785,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png" class="lazyload" data-srcset="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png">
             
             Colsrch
           </div>
@@ -3803,7 +3803,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2020/11/10/ab1185891b443.png" class="lazyload" data-srcset="https://bu.dusays.com/2020/11/10/ab1185891b443.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://bu.dusays.com/2020/11/10/ab1185891b443.png">
             
             勤奋的思远
           </div>
@@ -3821,7 +3821,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg">
             
             Blogin
           </div>
@@ -3839,7 +3839,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             易学堂
           </div>
@@ -3857,7 +3857,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg">
             
             科研软件小站
           </div>
@@ -3875,7 +3875,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             梦之国
           </div>
@@ -3893,7 +3893,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             林林杂语
           </div>
@@ -3911,7 +3911,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             周良粥凉
           </div>
@@ -3929,7 +3929,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://www.roaing.com/fff.jpg" class="lazyload" data-srcset="https://www.roaing.com/fff.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://www.roaing.com/fff.jpg">
             
             R0A1NG’s blog
           </div>
@@ -3947,7 +3947,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             Dr.Pika’s Blog
           </div>
@@ -3965,7 +3965,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://qiumuu.gitee.io/mdchat/ico/3.jpg" class="lazyload" data-srcset="https://qiumuu.gitee.io/mdchat/ico/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://qiumuu.gitee.io/mdchat/ico/3.jpg">
             
             秋木小站
           </div>
@@ -3983,7 +3983,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://img.yt-blog.top/png/logo.png" class="lazyload" data-srcset="https://img.yt-blog.top/png/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://img.yt-blog.top/png/logo.png">
             
             懵懂の初一少年
           </div>
@@ -4001,7 +4001,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://std.thyuu.com/logo.png" class="lazyload" data-srcset="https://std.thyuu.com/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://std.thyuu.com/logo.png">
             
             风记星辰
           </div>
@@ -4019,7 +4019,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             宇哥博客
           </div>
@@ -4037,7 +4037,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://www.hackyh.com/avatar.png" class="lazyload" data-srcset="https://www.hackyh.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://www.hackyh.com/avatar.png">
             
             Hackyh’Blog
           </div>
@@ -4055,7 +4055,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://lisenhui.cn/img/avatar.png" class="lazyload" data-srcset="https://lisenhui.cn/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://lisenhui.cn/img/avatar.png">
             
             凡梦星尘空间站
           </div>
@@ -4071,7 +4071,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             imtoken
           </div>
@@ -4087,7 +4087,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg">
             
             小简博客
           </div>
@@ -4103,7 +4103,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg">
             
             HZH’s blog
           </div>
@@ -4119,7 +4119,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             joojen个人博客
           </div>
@@ -4135,7 +4135,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://bowenyoung.cn/img/avatar.png" class="lazyload" data-srcset="https://bowenyoung.cn/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://bowenyoung.cn/img/avatar.png">
             
             Bowenの破站
           </div>
@@ -4149,7 +4149,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             杜老师说
           </div>
@@ -4163,7 +4163,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <img src="https://cdn.dusays.com/avatar.png">
             
             友链申请
           </div>
@@ -4481,7 +4481,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/020-rss.svg" class="lazyload" data-srcset="https://cdn.dusays.com/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://cdn.dusays.com/020-rss.svg"/>
                 
               </a>
             
@@ -4492,7 +4492,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/017-picasa.svg" class="lazyload" data-srcset="https://cdn.dusays.com/017-picasa.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://cdn.dusays.com/017-picasa.svg"/>
                 
               </a>
             
@@ -4503,7 +4503,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/031-twitch.svg" class="lazyload" data-srcset="https://cdn.dusays.com/031-twitch.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://cdn.dusays.com/031-twitch.svg"/>
                 
               </a>
             
@@ -4514,7 +4514,7 @@ Windows Server 是微软在 2003 年 4 月 24 日推出的 Windows 服务器操�
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/033-spotify.svg" class="lazyload" data-srcset="https://cdn.dusays.com/033-spotify.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://cdn.dusays.com/033-spotify.svg"/>
                 
               </a>
             
@@ -5073,33 +5073,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-
-
-  <script defer src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
