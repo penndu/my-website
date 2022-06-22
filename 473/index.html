@@ -1942,7 +1942,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.239a403b.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.a17251e0.js","rightMenus":"/js/plugins/rightMenus.4d580c89.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.a2c56075.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655863360227),
+    lastupdate: new Date(1655863586404),
     sidebar: {
       for_page: ["blogger","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -3027,7 +3027,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post dock' style="display: none;">
         
-  <div class='cover-bg' style='background-image:url(https://fastly.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg)'></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://fastly.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -3130,7 +3130,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="https://dusays.com/about/" rel="nofollow">
-    <img itemprop="image" src="https://cdn.dusays.com/avatar.png/2">
+    <img itemprop="image" src="https://cdn.dusays.com/avatar.png/2" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Teacher Du</p>
   </a>
 </div>
@@ -3234,7 +3234,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span id="more"></span>
 
 <div class="story post-story"><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>杜老师的电脑自带内存是两条金士顿 16G3200MHz，原厂的内存价格比较高，所以就到某东上买了同品牌同频率的：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-1.jpg/1"></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 </div><div class="story post-story"><h2 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h2><p>插上新内存后，发现新内存频率仅有 2400MHz，且自带的内存也降为 2400MHz，开始以为是新内存问题，杜老师在另外一台电脑上测试新内存发现确实是 3200MHz。</p>
 <p>询问了官方客服后，了解到刃 7000P 仅支持 JEDEC 的内存，而杜老师买的是市面上常见的 XMP 内存，这种内存需设置超频才能达到 3200MHz「JEDEC 和 XMP 的区别，请自行搜索下，如有不懂，欢迎留言交流」</p>
@@ -3249,16 +3249,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span class='btn regular'><a class="button" target="_blank" rel="noopener" href='https://flowus.cn/penn/share/f7b8bb2c-5fb3-4bf7-8501-76344c38c213' title='下载地址'>下载地址</a></span>
 
 </div><div class="story post-story"><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>安装好工具后，打开时会出现警告提示。因为超频都是通过加压方式实现，可能会对硬件有所影响，但这款官方的超频工具十分安全，我们点击确定即可：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-2.jpg/1"></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <p>为了方便用户使用，工具提供了基础视图和高级视图两种模式，如果需要操作内存，则需点击进入高级视图：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-3.jpg/1"></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <p>在高级视图的左侧调整运行模式，这里我们选择了 Creator Mode。在内存控制的右侧，点击已排除项，即可切换成已包含「后面的自动推送和手动推送建议默认」最后点击下方应用，根据提示重启系统：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-4.jpg/1"></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <p>重启后打开任务管理器，切换到性能栏的内存项，即可看到频率已变成 3200MHz：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-5.jpg/1"></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://cdn.dusays.com/2022/06/473-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-5.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-5.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 </div><div class="story post-story"><h2 id="最新提示"><a href="#最新提示" class="headerlink" title="最新提示"></a>最新提示</h2><p>经过几天测试，发现内存频率并未真正提升，通过 AMD Software: Adrenalin Edition 查看仍为 2400。而 CPU-Z 测试结果为原厂 3200，后扩展仍为 2400。最后杜老师选择了退款，重新购入了另一款内存，开机后皆运行在 3200，且系统稳定未报错。购买地址如下：</p>
 <psw>https://item.jd.com/100014448188.html</psw>
@@ -3339,7 +3339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png">
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -3353,7 +3353,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png">
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -3367,7 +3367,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png">
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -3589,7 +3589,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='content'>
     
-      <center><a target="_blank" rel="noopener" href="https://afdian.net/@teacherdu"><img src="https://cdn.dusays.com/yf.jpg/2"></a><center>
+      <center><a target="_blank" rel="noopener" href="https://afdian.net/@teacherdu"><img src="https://cdn.dusays.com/yf.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/yf.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
     
   </div>
 </section>
@@ -3612,7 +3612,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='content'>
     
-      <center><a href="https://dusays.com/sffw/"><img src="https://cdn.dusays.com/sffw.gif"></a><center>
+      <center><a href="https://dusays.com/sffw/"><img src="https://cdn.dusays.com/sffw.gif" class="lazyload" data-srcset="https://cdn.dusays.com/sffw.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
     
   </div>
 </section>
@@ -3635,7 +3635,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='content'>
     
-      <center><a href="https://www.vpsor.cn?userCode=ohedb8" target="_blank"><img src="https://cdn.dusays.com/vpsor.jpg/2"></a><center>
+      <center><a href="https://www.vpsor.cn?userCode=ohedb8" target="_blank"><img src="https://cdn.dusays.com/vpsor.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/vpsor.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
     
   </div>
 </section>
@@ -3658,7 +3658,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='content'>
     
-      <center><a href="https://flowus.cn/login?code=PDZ708" target="_blank"><img src="https://cdn.dusays.com/aliyundrive.jpg/2"></a></center>
+      <center><a href="https://flowus.cn/login?code=PDZ708" target="_blank"><img src="https://cdn.dusays.com/aliyundrive.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/aliyundrive.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a></center>
     
   </div>
 </section>
@@ -3693,7 +3693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             贝贝吧
           </div>
@@ -3711,7 +3711,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png">
+              <img src="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png" class="lazyload" data-srcset="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             Colsrch
           </div>
@@ -3729,7 +3729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2020/11/10/ab1185891b443.png">
+              <img src="https://bu.dusays.com/2020/11/10/ab1185891b443.png" class="lazyload" data-srcset="https://bu.dusays.com/2020/11/10/ab1185891b443.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             勤奋的思远
           </div>
@@ -3747,7 +3747,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg">
+              <img src="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             Blogin
           </div>
@@ -3765,7 +3765,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             易学堂
           </div>
@@ -3783,7 +3783,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg">
+              <img src="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             科研软件小站
           </div>
@@ -3801,7 +3801,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             梦之国
           </div>
@@ -3819,7 +3819,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             林林杂语
           </div>
@@ -3837,7 +3837,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             周良粥凉
           </div>
@@ -3855,7 +3855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://www.roaing.com/fff.jpg">
+              <img src="https://www.roaing.com/fff.jpg" class="lazyload" data-srcset="https://www.roaing.com/fff.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             R0A1NG’s blog
           </div>
@@ -3873,7 +3873,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             Dr.Pika’s Blog
           </div>
@@ -3891,7 +3891,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://qiumuu.gitee.io/mdchat/ico/3.jpg">
+              <img src="https://qiumuu.gitee.io/mdchat/ico/3.jpg" class="lazyload" data-srcset="https://qiumuu.gitee.io/mdchat/ico/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             秋木小站
           </div>
@@ -3909,7 +3909,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://img.yt-blog.top/png/logo.png">
+              <img src="https://img.yt-blog.top/png/logo.png" class="lazyload" data-srcset="https://img.yt-blog.top/png/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             懵懂の初一少年
           </div>
@@ -3927,7 +3927,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://std.thyuu.com/logo.png">
+              <img src="https://std.thyuu.com/logo.png" class="lazyload" data-srcset="https://std.thyuu.com/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             风记星辰
           </div>
@@ -3945,7 +3945,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             宇哥博客
           </div>
@@ -3963,7 +3963,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://www.hackyh.com/avatar.png">
+              <img src="https://www.hackyh.com/avatar.png" class="lazyload" data-srcset="https://www.hackyh.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             Hackyh’Blog
           </div>
@@ -3981,7 +3981,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://lisenhui.cn/img/avatar.png">
+              <img src="https://lisenhui.cn/img/avatar.png" class="lazyload" data-srcset="https://lisenhui.cn/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             凡梦星尘空间站
           </div>
@@ -3997,7 +3997,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             imtoken
           </div>
@@ -4013,7 +4013,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg">
+              <img src="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             小简博客
           </div>
@@ -4029,7 +4029,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg">
+              <img src="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             HZH’s blog
           </div>
@@ -4045,7 +4045,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             joojen个人博客
           </div>
@@ -4061,7 +4061,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://oc.arcitcgn.cn/2022/06/11/62a45f6a02818.png">
+              <img src="https://oc.arcitcgn.cn/2022/06/11/62a45f6a02818.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a45f6a02818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             Bowenの破站
           </div>
@@ -4075,7 +4075,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             杜老师说
           </div>
@@ -4089,7 +4089,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-              <img src="https://cdn.dusays.com/avatar.png">
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
             友链申请
           </div>
@@ -4447,7 +4447,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/020-rss.svg"/>
+                  <img src="https://cdn.dusays.com/020-rss.svg" class="lazyload" data-srcset="https://cdn.dusays.com/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -4458,7 +4458,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/017-picasa.svg"/>
+                  <img src="https://cdn.dusays.com/017-picasa.svg" class="lazyload" data-srcset="https://cdn.dusays.com/017-picasa.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -4469,7 +4469,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/031-twitch.svg"/>
+                  <img src="https://cdn.dusays.com/031-twitch.svg" class="lazyload" data-srcset="https://cdn.dusays.com/031-twitch.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -4480,7 +4480,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://cdn.dusays.com/033-spotify.svg"/>
+                  <img src="https://cdn.dusays.com/033-spotify.svg" class="lazyload" data-srcset="https://cdn.dusays.com/033-spotify.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5043,6 +5043,47 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+
+  <script defer src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: ["#"],
+	maxRPS: 6,
+	hoverDelay: 0
+  };
+</script>
+<script defer src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
