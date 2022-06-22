@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-06-08T09:33:55.491Z</updated>
+  <updated>2022-06-22T01:57:11.258Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜老师自建国内不蒜子统计平台</title>
+    <link href="https://dusays.com/476/"/>
+    <id>https://dusays.com/476/</id>
+    <published>2022-06-21T16:00:00.000Z</published>
+    <updated>2022-06-22T01:57:11.258Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>想给静态博客加一个访问统计工具吗？LeanCloud有并发数的限制，且国内节点需域名备案才能使用。各大国内统计平台也陆续开始收费了。不蒜子的节点位于美国访问太慢，咋办？快看这里，杜老师又出公益服务了！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h2><p>首先特别感谢星辰童鞋，杜老师自建的国内不蒜子统计平台使用的就是他的开源代码，并且在测试过程中，提供了大量的帮助。</p><p>通过 Golang+Redis 实现模仿不蒜子统计功能；UV 通过 IP+UA 统计，PV 通过 Referer 区分。</p><p>服务器的配置为 4H8G，60G 的数据存储「后期可扩展 10T」</p><p>下行带宽为 500M，上行为 50M，所有流量走阿里 CDN。</p></div><div class="story post-story"><h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><p>如果是 Volantis 主题：</p><pre class="line-numbers language-none"><code class="language-none">############################### Analytics ############################### &gt; startanalytics:  busuanzi: https:&#x2F;&#x2F;cdn.dusays.com&#x2F;bsz.js # 修改这里即可############################### Analytics ############################### &gt; end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>如果非 Volantis 主题：</p><pre class="line-numbers language-none"><code class="language-none">&lt;script async src&#x3D;&quot;https:&#x2F;&#x2F;cdn.dusays.com&#x2F;bsz.js&quot;&gt;&lt;&#x2F;script&gt;本文总阅读量 &lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt; 次本文总访客量 &lt;span id&#x3D;&quot;busuanzi_value_page_uv&quot;&gt;&lt;&#x2F;span&gt; 人本站总访问量 &lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt; 次本站总访客数 &lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt; 人<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;想给静态博客加一个访问统计工具吗？LeanCloud有并发数的限制，且国内节点需域名备案才能使用。各大国内统计平台也陆续开始收费了。不蒜子的节点位于美国访问太慢，咋办？快看这里，杜老师又出公益服务了！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="统计" scheme="https://dusays.com/tags/%E7%BB%9F%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过 WebDAV 挂载 Cloudreve「Windows 篇」</title>
+    <link href="https://dusays.com/475/"/>
+    <id>https://dusays.com/475/</id>
+    <published>2022-06-18T16:00:00.000Z</published>
+    <updated>2022-06-20T18:02:31.957Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>应柯察金小朋友的需求，编写一篇 Windows 通过 WebDAV 挂载 Cloudreve 的教程。Cloudreve 可让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>杜老师家里有 NAS 服务器，也深知网盘的运营成本「多少大厂前辈最后都一一跑路了」</p><p>本次演示用的是柯察金小朋友的深海云盘，这是OCP1公益计划的项目之一，感兴趣的小伙伴可以去看看。</p><p>首先说下使用体验，除了容量小了一点，上传下载速度都很不错，离线下载不太好用。其实 WebDAV 挂载效果也不太理想。不过作为小文件临时存储点，还是很不错的。</p><p>最后分享一下云盘地址，点击 <a href="https://pan.arcitcgn.cn/">这里</a> 访问。</p></div><div class="story post-story"><h2 id="挂载过程"><a href="#挂载过程" class="headerlink" title="挂载过程"></a>挂载过程</h2><p>登录账号后点击左侧的 WebDAV 项，再点击创建新账号：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-1.jpg/1"></a><span></span></div></div><p>在弹出的窗口中输入备注名，如不想直接访问根目录，还可设置相对根目录的路径「需要注意的是，目录需要提前建好」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-2.jpg/1"></a><span></span></div></div><p>上一步操作确定后，可看到平台自动生成的密码：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-3.jpg/1"></a><span></span></div></div><p>切换到本地资源管理器，点击右键选择添加一个网络位置：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-4.jpg/1"></a><span></span></div></div><p>一路下一步后，输入 WebDAV 的地址：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-5.jpg/1"></a><span></span></div></div><p>根据提示输入登录名和密码「密码为上面平台自动生成的」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-6.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-6.jpg/1"></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;应柯察金小朋友的需求，编写一篇 Windows 通过 WebDAV 挂载 Cloudreve 的教程。Cloudreve 可让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="电脑" scheme="https://dusays.com/tags/%E7%94%B5%E8%84%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>坚持更新博客的动力是什么</title>
+    <link href="https://dusays.com/474/"/>
+    <id>https://dusays.com/474/</id>
+    <published>2022-06-15T16:00:00.000Z</published>
+    <updated>2022-06-20T18:02:31.957Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>博客圈子不断有新人的加入，也不断有老人退出。几乎每个月杜老师都会检查一下友情链接，看看哪些网站测掉了杜老师说的链接。而在这过程中，总会发现一些网站长久没有更新，还有一些网站，已然无法访问~</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="强迫症者"><a href="#强迫症者" class="headerlink" title="强迫症者"></a>强迫症者</h2><p>经常有小伙伴说文章的时间错了，为什么杜老师一直在更新穿越文「提前发布」</p><p>其实杜老师就是个强迫症加拖延症的患者，曾在《<a href="https://dusays.com/about/">留言</a>》中声称每三天更新一篇，不做到会浑身难受。</p><p>但有时候真的不知道该写什么好，有的时候又研究出有意思的技术，加上一些小伙伴的需求，总会突然更新多篇，而 Hexo 并没有定时发布的功能，所以杜老师就按照排期，一并发了出来，这就是各位小伙伴看到的穿越文！</p><p>不知道有多少的小伙伴和杜老师一样，通过强迫症迫使自己去更新博客，如果恰巧和杜老师一样，欢迎留言让杜老师知道，不是一个人在战斗！</p></div><div class="story post-story"><h2 id="习惯记录"><a href="#习惯记录" class="headerlink" title="习惯记录"></a>习惯记录</h2><p>朋友圈里不少的小伙伴，喜欢研究一些新奇的小玩意，有时候还会找到我交流。</p><p>在研究的过程中难免会遇到一些问题，每次解决之后，都会留下一篇笔记文章。</p><p>还有的小伙伴，会经常记录自己的生活。杜老师站在读者的角度，更加了解这些小伙伴的生活！</p><p>杜老师就非常喜欢记录，但自己的文笔不好，所以不会经常记录生活，加上本博主题就是技术分享，所以在本博中很少可以看到杜老师的生活分享，以后也许会有，敬请期待！</p></div><div class="story post-story"><h2 id="希望盈利"><a href="#希望盈利" class="headerlink" title="希望盈利"></a>希望盈利</h2><p>杜老师的友链圈中，还有一类博友，他们喜欢收集一些资源，然后付费分享。</p><p>或者提供一些收费服务，亦或站中加入大量广告。</p><p>首先杜老师要说明一点，本人不反感任何盈利性行为，毕竟建站本身就需要成本的。有些人可能不赞同，毕竟现在免费资源遍地都是。但大家都需要知道，维护时的精力和时间也算是成本，所以只要合理合法，大家应该都会支持。</p><p>杜老师目前的收费项目只有图床，实在是没办法，运营成本太大！而目前的付费收入远远不够支出，不过好在没有人再传违禁图片了，图片审核的成本降低了，而且每天不用提心吊胆担心链接被封，也知足了！</p></div><div class="story post-story"><h2 id="喜欢互动"><a href="#喜欢互动" class="headerlink" title="喜欢互动"></a>喜欢互动</h2><p>常来杜老师博客的小伙伴都知道，在本博的每条评论，杜老师都会用心去回复，并且都会回访、留言。</p><p>杜老师很喜欢十年之约的一句话：一个人的寂寞，一群人的狂欢。</p><p>在社交平台如此繁多的时代，只有互访在能让博客不寂寞。</p><p>也喜欢杜老师说的博文，可以给小伙伴带来更多话题，让更多小伙伴加入互动，实现一群人的狂欢。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;博客圈子不断有新人的加入，也不断有老人退出。几乎每个月杜老师都会检查一下友情链接，看看哪些网站测掉了杜老师说的链接。而在这过程中，总会发现一些网站长久没有更新，还有一些网站，已然无法访问~&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>刃 7000P 内存频率限制 2400 的解决方法</title>
@@ -205,7 +274,7 @@
     <link href="https://dusays.com/465/"/>
     <id>https://dusays.com/465/</id>
     <published>2022-05-19T16:00:00.000Z</published>
-    <updated>2022-06-20T16:26:23.190Z</updated>
+    <updated>2022-06-20T18:02:31.957Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>杜老师在家用机上搭建了一个 Minecraft 游戏平台，配置为 24H32G 内存，500M 的带宽，预估支持 100 人同时在线。如果您喜欢玩我的世界，又感觉自己玩没有意思，欢迎加入我们平台，大家一起 play 一起 happy！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li><p>本服务端仅支持 Java 版 Minecraft，内置常用插件，如箱子锁、身份验证、领地、家设置等；</p></li><li><p>服务端目前全版本支持，如果您已有客户端，只需进入多人游戏，输入杜老师服务器的地址 mc.dusays.com 即可「如果连接失败可加上端口 mc.dusays.com:25565」</p></li><li><p>我们将平台设置为空岛生存模式，困难难度，重生保留物品，并开启了防爆模式；</p></li><li><p>游戏无 GM 直接干预，没有任何隐藏收费项目，如果您喜欢我们的平台，可在本页面右侧的赞助图床进行资金支持；</p></li><li><p>我们本着共同游戏更多快乐原则，谢绝恶意玩家进入，请不要破坏他人的劳动成果，谢谢；</p></li><li><p>本游戏服长期有效，只要有一个人在线，游戏服就不会关闭，同时每周进行数据备份；</p></li><li><p>如有任何问题，可在评论区内留言，杜老师都会积极帮大家解决，最终解释权归杜老师说所有。欢迎加 QQ 群 454279233；</p></li><li><p>如果您没有客户端，可在评论区中留言，就会收到杜老师整合版客户端的下载链接。</p></li></ol></div><div class="story post-story"><h2 id="空岛指令"><a href="#空岛指令" class="headerlink" title="空岛指令"></a>空岛指令</h2><p>空岛常用命令：</p><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>&#x2F;is create</td><td>创建新的岛屿</td></tr><tr><td>&#x2F;is reset</td><td>重置岛屿</td></tr><tr><td>&#x2F;is setname NAME</td><td>修改岛屿名字</td></tr><tr><td>&#x2F;is go</td><td>回到自己岛屿</td></tr><tr><td>&#x2F;is settings</td><td>打开空岛权限管理菜单</td></tr><tr><td>&#x2F;is sethome</td><td>在空岛设置家</td></tr><tr><td>&#x2F;is home</td><td>回到空岛设置的家</td></tr><tr><td>&#x2F;is team invite PLAYER</td><td>邀请某个玩家加入你的空岛</td></tr><tr><td>&#x2F;is team accept</td><td>接受邀请</td></tr><tr><td>&#x2F;is team reject</td><td>拒绝邀请</td></tr><tr><td>&#x2F;is team kick PLAYER</td><td>将某玩家踢出你的空岛</td></tr><tr><td>&#x2F;is warp NAME</td><td>传至对应传送木牌</td></tr><tr><td>&#x2F;is warps</td><td>打开传送面板</td></tr><tr><td>&#x2F;is challenges</td><td>打开挑战菜单</td></tr><tr><td>&#x2F;is generator</td><td>打开刷石机的控制面板</td></tr></tbody></table></div><div class="story post-story"><h2 id="插件列表"><a href="#插件列表" class="headerlink" title="插件列表"></a>插件列表</h2><p>截止正式上线，服务器所使用的插件及版本如下：</p><table><thead><tr><th>名称</th><th>版本</th></tr></thead><tbody><tr><td>AuthMe</td><td>5.6.0-beta2</td></tr><tr><td>BentoBox</td><td>1.20.1</td></tr><tr><td>CMILib</td><td>1.1.2.5</td></tr><tr><td>CoreProtect</td><td>21.2</td></tr><tr><td>Dynmap</td><td>3.4-beta-3-spigot</td></tr><tr><td>EssentialsX</td><td>2.20.0-dev+5-d891268</td></tr><tr><td>FluffyMachines</td><td>Build 4 zh-CN(baoad) (git 228b135)</td></tr><tr><td>item-nbt-api-plugin</td><td>2.9.2</td></tr><tr><td>LuckPerms-Bukkit</td><td>5.4.14</td></tr><tr><td>MiraiMC-Bukkit</td><td>1.6.1</td></tr><tr><td>NekoMaid</td><td>0.2.5</td></tr><tr><td>OpenInv</td><td>4.1.10</td></tr><tr><td>PistonMOTD</td><td>5.0.1</td></tr><tr><td>PlaceholderAPI</td><td>2.11.1</td></tr><tr><td>PlugManX</td><td>2.3.0</td></tr><tr><td>QQconnect</td><td>3.1-SNAPSHOT</td></tr><tr><td>Slimefun</td><td>v2022.04-release</td></tr><tr><td>UltimateAntibot-UNIVERSAL</td><td>3.3</td></tr><tr><td>Uniporter</td><td>1.3.3-SNAPSHOT</td></tr><tr><td>Vault</td><td>1.7.3-b131</td></tr><tr><td>ViaBackwards</td><td>4.2.1</td></tr><tr><td>ViaRewind</td><td>2.0.2</td></tr><tr><td>ViaVersion</td><td>4.2.1</td></tr><tr><td>worldedit-bukkit</td><td>7.2.10</td></tr><tr><td>XConomy-Bukkit</td><td>2.18.4</td></tr></tbody></table><div class="timeline"><p class='p h2'>更新记录</p><div class="timenode"><div class="meta"><p><p>2022 年 05 月 14 日</p></p></div><div class="body"><p>新版本试运营；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 05 月 16 日</p></p></div><div class="body"><p>正式上线；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 05 月 18 日</p></p></div><div class="body"><p>加入 ProtocolLib 版本 4.8.0 插件；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 05 月 20 日</p></p></div><div class="body"><p>加入 MiaoChat 版本 2.1.2 插件；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 06 月 18 日</p></p></div><div class="body"><p>更新一大堆的插件；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 06 月 20 日</p></p></div><div class="body"><p>更新核心文件。</p></div></div></div></div>]]></content>
     
@@ -404,75 +473,6 @@
     
     
     <category term="系统" scheme="https://dusays.com/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Waline 评论系统新版贴图 API 设置示例</title>
-    <link href="https://dusays.com/456/"/>
-    <id>https://dusays.com/456/</id>
-    <published>2022-04-22T16:00:00.000Z</published>
-    <updated>2022-06-08T09:33:55.487Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>去不图床使用全新的 API 接口，原有的 Waline 评论系统贴图方法发生改变，该文分享杜老师说 Waline 评论系统新版贴图 API 设置示例。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="调整内容"><a href="#调整内容" class="headerlink" title="调整内容"></a>调整内容</h2><p>新版 API 主要对提交数据类型、身份验证方式、返回值做了些调整，所以无法继续使用原有调用方式。</p><p>请先参考《<a href="https://dusays.com/454/">新版本去不图床 Token 的获取与清空</a>》获取所需信息。</p></div><div class="story post-story"><h2 id="设置示例"><a href="#设置示例" class="headerlink" title="设置示例"></a>设置示例</h2><p>请参考下面的代码，记得将 <code>TOKEN</code> 替换成自己的：</p><pre class="line-numbers language-none"><code class="language-none">&lt;div id&#x3D;&quot;waline&quot;&gt;&lt;&#x2F;div&gt;&lt;script&gt;  Waline(&#123;    el: &#39;#waline&#39;,    serverURL: &#39;https:&#x2F;&#x2F;n.dusays.com&#39;,    emoji: [&#39;https:&#x2F;&#x2F;cdn.dusays.com&#x2F;Sticker-100&#39;],    dark: &#39;auto&#39;,    requiredMeta: [&#39;nick&#39;, &#39;mail&#39;],    uploadImage: function(file) &#123;      const formData &#x3D; new FormData();      formData.append(&#39;file&#39;, file);      &#x2F;&#x2F; formData.append(&#39;strategy_id&#39;, 0); &#x2F;&#x2F; 可选策略ID      return fetch(&#39;https:&#x2F;&#x2F;7bu.top&#x2F;api&#x2F;v1&#x2F;upload&#39;, &#123;        headers: &#123;          &#39;Authorization&#39;: &#39;Bearer TOKEN&#39;        &#125;,        method: &#39;POST&#39;,      body: formData      &#125;).then(resp &#x3D;&gt; resp.json()).then(resp &#x3D;&gt; resp.data.links.url);    &#125;,    copyright: false,  &#125;);&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;去不图床使用全新的 API 接口，原有的 Waline 评论系统贴图方法发生改变，该文分享杜老师说 Waline 评论系统新版贴图 API 设置示例。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新版本去不图床 PicGo 插件设置</title>
-    <link href="https://dusays.com/455/"/>
-    <id>https://dusays.com/455/</id>
-    <published>2022-04-19T16:00:00.000Z</published>
-    <updated>2022-06-08T09:33:55.483Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>很多小伙伴习惯使用第三方工具管理图床，PicGo 一个用于快速上传图片并获取图片 URL 链接的工具，今天杜老师分享下如何设置 PicGo 接入新版本图床！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="自定义-Web-图床插件"><a href="#自定义-Web-图床插件" class="headerlink" title="自定义 Web 图床插件"></a>自定义 Web 图床插件</h2><p>进入插件设置，搜索关键词 <code>web</code>，安装自定义 Web 图床插件：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/455-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/455-1.jpg/1"></a><span></span></div></div><p>通过《<a href="https://dusays.com/454/">新版本去不图床 Token 的获取与清空</a>》教程获取图床的 Token，依次填写 API 地址 <code>https://7bu.top/api/v1/upload</code>，POST 参数名为 <code>file</code>，JSON 路径 <code>data.links.url</code>，自定义请求头为<code>&#123;&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;&#125;</code>「记得将 TOKEN 换成自己的哦」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/455-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/455-2.jpg/1"></a><span></span></div></div></div><div class="story post-story"><h2 id="兰空图床专业插件"><a href="#兰空图床专业插件" class="headerlink" title="兰空图床专业插件"></a>兰空图床专业插件</h2><p>进入插件设置，搜索关键词 <code>lankong</code>，安装兰空图床专业插件：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/455-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/455-3.jpg/1"></a><span></span></div></div><p>Lsky Pro Version 选择 <code>V2</code>，填写 Server 地址 <code>https://7bu.top</code>，Auth token 填写 <code>Bearer TOKEN</code>，如果允许通过 PicGo 来删除图片，需开启 <code>Sync Delete</code>：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/455-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/455-4.jpg/1"></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;很多小伙伴习惯使用第三方工具管理图床，PicGo 一个用于快速上传图片并获取图片 URL 链接的工具，今天杜老师分享下如何设置 PicGo 接入新版本图床！&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新版本去不图床 Token 的获取与清空</title>
-    <link href="https://dusays.com/454/"/>
-    <id>https://dusays.com/454/</id>
-    <published>2022-04-16T16:00:00.000Z</published>
-    <updated>2022-06-08T09:33:55.483Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>新版本去不图床使用了全新底层框架，随之 API 的管理方式也发生了改变，本文讲述新版本去不图床 Token 获取与清空的方法，方便用户使用 PicGo 等工具上传、管理。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h2><p>新版图床在获取 Token 时需要使用 HTTP 请求工具，为了方便大家使用，杜老师已经填好大部分信息。请访问下面的地址，修改其中的 EMAIL「如果您已修改密码，将 12345678 改为新的密码」</p><psw>https://getman.cn/?s=91b1a0b3c8d3c832d237421aaf181a96</psw><p>填写好相关信息后，点击对勾提交请求，即可看到返回的 Token：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/454-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/454-1.jpg/1"></a><span></span></div></div></div><div class="story post-story"><h2 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h2><p>新版支持多 Token，这意味着您可多次申请并用在不同平台上。但需注意的是，一旦 Token 不慎被泄露，暂不支持自行取消对应的 Token 授权，您可以选择联系杜老师，或者手动清空所有的 Token。访问下面地址，修改其中的 EMAIL「如果您已修改密码，将 12345678 改为新的密码」</p><psw>https://getman.cn/?s=4d20a20fae3ca1bb18e74f20082e0049</psw><p>填写好相关信息后，点击对勾提交请求，即可看到返回信息：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/04/454-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/04/454-2.jpg/1"></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;新版本去不图床使用了全新底层框架，随之 API 的管理方式也发生了改变，本文讲述新版本去不图床 Token 获取与清空的方法，方便用户使用 PicGo 等工具上传、管理。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
