@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-07-06T16:44:12.526Z</updated>
+  <updated>2022-07-06T17:32:39.098Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://dusays.com/478/"/>
     <id>https://dusays.com/478/</id>
     <published>2022-06-27T16:00:00.000Z</published>
-    <updated>2022-07-06T16:44:12.526Z</updated>
+    <updated>2022-07-06T17:32:39.098Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>这是由冷寂童靴发起的一项公益项目，在此之前冷寂看见好几位站长因刚开始创建博客遭到攻击而退出。杜老师说支持个人站长公益项目，特此帮忙宣传一下！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网络上有很多种攻击模式如 CC&#x2F;DDoS&#x2F;UDP 等。</p><p>CC 攻击基本是不需要成本的，但这种消耗攻击非常烦，持续消耗服务器的资源，导致网站无法访问。</p><p>对于大站而言防御配备是必须的，而这需要非常高的费用。</p><p>我们小博客能做什么？</p><p>自设置基础的防御，如宝塔防火墙，宝塔有免费防火墙可以使用。对于 CC 攻击其实很有效。还有免费防御 CDN 如奇安信「原 360 网站卫士，节点少容易出故障」知道创宇「网评不怎么样」Cloudflare「国外，国内访问较慢防御可观」服务器自配的防御体系，比如封 UDP，CC 攻击 IP 封禁，及 DDoS 防御攻击，服务器防御体系需要费用来支持，而我们小博客需要花那么多钱吗？当然这不值得。</p><p>更多的小白站长刚入博客圈，基本对于这些一窍不通，只知道自己的网站打不开了，这时便会手忙脚乱，乱忙一通也没什么作用就弃坑了。</p></div><div class="story post-story"><h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><p>冷寂童靴提供国内和国外的防御节点。</p><p>前十位参与项目的站长们可设置站点长期使用「流量不限」风险是如果节点宕掉网站将无法访问。</p><p>其它的站长只提供在被攻击时的防护。</p><p>被攻击时请联系冷寂童靴获取 CNAME 解析域名，冷寂童靴的联系方式请点击 <a href="https://www.coldyun.cn/archives/227.html">这里</a> 查看原文。</p><p>国外节点：<br>美国DDOS 20G防御<br>法国DDOS 480G防御<br>国内节点：<br>成都封UDP DDOS 100G防御 无视cc<br>此节点只提供给博客、单页网站使用</p></div><div class="story post-story"><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>提问：防御节点什么配置？</p><p>回答：美国节点 20G 防御 DDoS，法国节点 480G 防御 DDoS，成都节点封 UDP 及 100G 防御 DDoS，无视 CC 注此节点只提供给博客、单页网站使用。</p><p>提问：各节点 CDN 只提供防御吗？</p><p>回答：默认没有加速效果，可以联系冷寂童靴添加。</p><p>提问：怎么节点只有三个？</p><p>回答: 公益项目冷寂童靴不会投入太多，仅限于让网站正常访问。</p><p>提问：用了 CDN 结果还是打不开什么原因？</p><p>回答: 可能攻击超出节点防御阀值，或者服务器已经宕掉或故障。</p><p>提问：我想长期用可以吗？</p><p>回答：只有前十位加入的站长可以长期使用，但可以自己提供服务器，冷寂童靴帮忙安装。</p></div><div class="story post-story"><h2 id="尾语"><a href="#尾语" class="headerlink" title="尾语"></a>尾语</h2><p>冷寂童靴仅提供一定的技术支持，且局限于冷寂童靴的时间和技术。</p><p>未备案域名只能用美国节点，已备案域名可使用成都节点「域名可能需要过白」</p></div>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>这是由冷寂童靴发起的一项公益项目，在此之前冷寂看见好几位站长因刚开始创建博客遭到攻击而退出。杜老师说支持个人站长公益项目，特此帮忙宣传一下！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网络上有很多种攻击模式如 CC&#x2F;DDoS&#x2F;UDP 等。</p><p>CC 攻击基本是不需要成本的，但这种消耗攻击非常烦，持续消耗服务器的资源，导致网站无法访问。</p><p>对于大站而言防御配备是必须的，而这需要非常高的费用。</p><p>我们小博客能做什么？</p><p>自设置基础的防御，如宝塔防火墙，宝塔有免费防火墙可以使用。对于 CC 攻击其实很有效。还有免费防御 CDN 如奇安信「原 360 网站卫士，节点少容易出故障」知道创宇「网评不怎么样」Cloudflare「国外，国内访问较慢防御可观」服务器自配的防御体系，比如封 UDP，CC 攻击 IP 封禁，及 DDoS 防御攻击，服务器防御体系需要费用来支持，而我们小博客需要花那么多钱吗？当然这不值得。</p><p>更多的小白站长刚入博客圈，基本对于这些一窍不通，只知道自己的网站打不开了，这时便会手忙脚乱，乱忙一通也没什么作用就弃坑了。</p></div><div class="story post-story"><h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><p>冷寂童靴提供国内和国外的防御节点。</p><p>前十位参与项目的站长们可设置站点长期使用「流量不限」风险是如果节点宕掉网站将无法访问。</p><p>其它的站长只提供在被攻击时的防护。</p><p>被攻击时请联系冷寂童靴获取 CNAME 解析域名，冷寂童靴的联系方式请点击 <a href="https://www.coldyun.cn/archives/227.html">这里</a> 查看原文。</p></div><div class="story post-story"><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>提问：防御节点什么配置？</p><p>回答：美国节点 20G 防御 DDoS，法国节点 480G 防御 DDoS，成都节点封 UDP 及 100G 防御 DDoS，无视 CC 注此节点只提供给博客、单页网站使用。</p><p>提问：各节点 CDN 只提供防御吗？</p><p>回答：默认没有加速效果，可以联系冷寂童靴添加。</p><p>提问：怎么节点只有三个？</p><p>回答: 公益项目冷寂童靴不会投入太多，仅限于让网站正常访问。</p><p>提问：用了 CDN 结果还是打不开什么原因？</p><p>回答: 可能攻击超出节点防御阀值，或者服务器已经宕掉或故障。</p><p>提问：我想长期用可以吗？</p><p>回答：只有前十位加入的站长可以长期使用，但可以自己提供服务器，冷寂童靴帮忙安装。</p></div><div class="story post-story"><h2 id="尾语"><a href="#尾语" class="headerlink" title="尾语"></a>尾语</h2><p>冷寂童靴仅提供一定的技术支持，且局限于冷寂童靴的时间和技术。</p><p>未备案域名只能用美国节点，已备案域名可使用成都节点「域名可能需要过白」</p></div>]]></content>
     
     
     <summary type="html">&lt;blockquote&gt;
