@@ -5,7 +5,6 @@
   <meta name="Volantis" content="5.6.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  
   <link rel="canonical" href="https://dusays.com/227/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -25,13 +24,11 @@
   <!-- import head_begin begin -->
   <!-- import head_begin end -->
   <!-- Custom Files headBegin begin-->
-  
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://cdn.dusays.com/favicon.ico">
   <link rel="preload" href="/css/style.a2c56075.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="杜老师说" type="application/atom+xml">
   <!-- 页面元数据 -->
@@ -39,7 +36,6 @@
   <meta name="keywords" content="缓存,杜老师说,老师,讲师,运维,博客,技术,微软,思科,红帽,服务,软件,图文,视频,单词,求职,面试,网站,搭建,网络,教程,说课,资源,分享,单词">
   <meta desc name="description" content="
 Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存储 value 类型相对更多，包括链表、集合、有序集合、哈希类型和字符串。这些数据类型都支持 Push&#x2F;Pull、Add&#x2F;Remove 及取交集并集和差集及更丰富操作，而且这些操作都是原子性的。在这个基... - Teacher Du - 杜老师说">
-  
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis 主从复制的配置">
 <meta property="og:url" content="https://dusays.com/227/">
@@ -1858,7 +1854,6 @@ ul.list-v >li>a:hover {
 #artalk_container code {
   text-shadow: unset;
 }
-
   </style>
   <link rel="stylesheet" href="/css/style.a2c56075.css" media="print" onload="this.media='all';this.onload=null">
   <noscript><link rel="stylesheet" href="/css/style.a2c56075.css"></noscript>
@@ -1868,7 +1863,6 @@ ul.list-v >li>a:hover {
         document.documentElement.setAttribute("color-scheme", userColorScheme);
       }
     </script>
-  
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
     document.write(
@@ -1899,8 +1893,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
-
-
 <noscript>
 	<style>
 		html{
@@ -1929,19 +1921,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
-
-
   <script>
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
-
   volantis.GLOBAL_CONFIG ={
     debug: false,
     cdn: {"js":{"app":"/js/app.239a403b.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.a17251e0.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.a2c56075.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1657117324115),
+    lastupdate: new Date(1657118173965),
     sidebar: {
       for_page: ["blogger","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
       for_post: ["blogger","toc","artalk","zanzhu","sffw","vpsor","cowtransfer","tui_jian","dao_hang","category","tagcloud","webinfo"],
@@ -1959,14 +1948,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     plugins: {
       message: {"enable":true,"css":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       fancybox: {"css":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
-      
-      
-      
       rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"百度搜索","icon":"fa-solid fa-search","event":"window.open(`https://www.baidu.com/s?wd=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"去不图床","icon":"fa-solid fa-file-image","link":"https://7bu.top/","group":"link"},{"id":"examples","name":"提卡系统","icon":"fa-solid fa-address-card","link":"https://pay.dusays.com/","group":"link"},{"id":"contributors","name":"赞助平台","icon":"fa-solid fa-money-check-alt","link":"https://afdian.net/@teacherdu","group":"link"},"hr",{"id":"source_theme","name":"我的世界","icon":"fa-solid fa-gamepad","link":"https://dusays.com/465/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
-      
     }
   }
-
   /******************** volantis.EventListener ********************************/
   // 事件监听器 see: /source/js/app.js
   volantis.EventListener = {}
@@ -2144,13 +2128,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /********************脚本动态加载函数********************************/
   // volantis.js(src, cb)  cb 可以传入onload回调函数 或者 JSON对象 例如: volantis.js("src", ()=>{}) 或 volantis.js("src", {defer:true,onload:()=>{}})
   // volantis.css(src)
-
   // 返回Promise对象，如下方法同步加载资源，这利于处理文件资源之间的依赖关系，例如：APlayer 需要在 MetingJS 之前加载
   // (async () => {
   //     await volantis.js("...theme.plugins.aplayer.js.aplayer...")
   //     await volantis.js("...theme.plugins.aplayer.js.meting...")
   // })();
-
   // 已经加入了setTimeout
   volantis.js = (src, cb) => {
     return new Promise(resolve => {
@@ -2348,18 +2330,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /******************************************************************************/
 </script>
-
   <!-- import head_end begin -->
   <!-- import head_end end -->
   <!-- Custom Files headEnd begin-->
-  
   <!-- Custom Files headEnd end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
     <!-- import body_begin end-->
     <!-- Custom Files bodyBegin begin-->
-    
     <!-- Custom Files bodyBegin end-->
     <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
@@ -2368,736 +2347,364 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
-        
           <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
-        
       </ul>
     </div>
 		<div class="nav-main">
-      
-        
         <a class="title flat-box" target="_self" href='/'>
-          
             <img no-lazy class='logo' src='https://cdn.dusays.com/logo.png'/>
-          
-          
-          
         </a>
-      
-
 			<div class='menu navigation'>
 				<ul class='nav-list-h m-pc'>
-          
-          
-          
-            
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/categories/" title="分类"
-                  
-                  
-                  
                     active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
-                
                   <ul class="list-v">
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/" title="代码编程"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE4BBA3E7A081E7BC96E7A88B"
                   >
                   <i class='fas fa-file-code fa-fw'></i>代码编程
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" title="智慧生活"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE699BAE685A7E7949FE6B4BB"
                   >
                   <i class='fas fa-couch fa-fw'></i>智慧生活
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/" title="求职面试"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE6B182E8818CE99DA2E8AF95"
                   >
                   <i class='fas fa-business-time fa-fw'></i>求职面试
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" title="网站搭建"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE7BD91E7AB99E690ADE5BBBA"
                   >
                   <i class='fas fa-ethernet fa-fw'></i>网站搭建
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" title="网络安全"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE7BD91E7BB9CE5AE89E585A8"
                   >
                   <i class='fas fa-ethernet fa-fw'></i>网络安全
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/" title="网络教程"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE7BD91E7BB9CE69599E7A88B"
                   >
                   <i class='fas fa-network-wired fa-fw'></i>网络教程
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%80%81%E5%B8%88%E8%AF%B4%E8%AF%BE/" title="老师说课"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE88081E5B888E8AFB4E8AFBE"
                   >
                   <i class='fas fa-chalkboard-teacher fa-fw'></i>老师说课
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/" title="视频分享"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE8A786E9A291E58886E4BAAB"
                   >
                   <i class='fas fa-video fa-fw'></i>视频分享
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" title="资源分享"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE8B584E6BA90E58886E4BAAB"
                   >
                   <i class='fas fa-download fa-fw'></i>资源分享
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/" title="运维教程"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE8BF90E7BBB4E69599E7A88B"
                   >
                   <i class='fas fa-database fa-fw'></i>运维教程
                 </a>
-                
               </li>
-            
-          
-                    
                   </ul>
-                
               </li>
-            
-          
-          
-            
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
-                  
-                  
-                  
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
-                
               </li>
-            
-          
-          
-            
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/friends/" title="友链"
-                  
-                  
-                  
                     active-action="action-friends"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
-                
                   <ul class="list-v">
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/fcircle/" title="友链文章"
-                  
-                  
-                  
                     active-action="action-https:dusayscomfcircle"
                   >
                   友链文章
                 </a>
-                
               </li>
-            
-          
-                    
                   </ul>
-                
               </li>
-            
-          
-          
-            
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/about/" title="留言"
-                  
-                  
-                  
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>留言
                 </a>
-                
               </li>
-            
-          
-          
-            
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/shuoshuo/" title="说说"
-                  
-                  
-                  
                     active-action="action-https:dusayscomshuoshuo"
                   >
                   <i class='fa-solid fa-comment fa-fw'></i>说说
                 </a>
-                
               </li>
-            
-          
-          
-            
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://7bu.top" title="图床"
-                  
-                  
                     target="_blank"
-                  
-                  
                     active-action="action-https:7butop"
                   >
                   <i class='fa-solid fa-image fa-fw'></i>图床
                 </a>
-                
               </li>
-            
-          
-          
 				</ul>
 			</div>
-      
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
           <input type="text" class="input u-search-input" placeholder="输关键词「回车」搜索" />
         </form>
       </div>
-      
-
 			<ul class='switcher nav-list-h m-phone'>
-				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
-				
 				<li>
           <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
           <ul class="menu-phone list-v navigation white-box">
-            
-              
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/categories/" title="分类"
-                  
-                  
-                  
                     active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
-                
                   <ul class="list-v">
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/" title="代码编程"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE4BBA3E7A081E7BC96E7A88B"
                   >
                   <i class='fas fa-file-code fa-fw'></i>代码编程
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" title="智慧生活"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE699BAE685A7E7949FE6B4BB"
                   >
                   <i class='fas fa-couch fa-fw'></i>智慧生活
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/" title="求职面试"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE6B182E8818CE99DA2E8AF95"
                   >
                   <i class='fas fa-business-time fa-fw'></i>求职面试
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" title="网站搭建"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE7BD91E7AB99E690ADE5BBBA"
                   >
                   <i class='fas fa-ethernet fa-fw'></i>网站搭建
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" title="网络安全"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE7BD91E7BB9CE5AE89E585A8"
                   >
                   <i class='fas fa-ethernet fa-fw'></i>网络安全
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/" title="网络教程"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE7BD91E7BB9CE69599E7A88B"
                   >
                   <i class='fas fa-network-wired fa-fw'></i>网络教程
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%80%81%E5%B8%88%E8%AF%B4%E8%AF%BE/" title="老师说课"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE88081E5B888E8AFB4E8AFBE"
                   >
                   <i class='fas fa-chalkboard-teacher fa-fw'></i>老师说课
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/" title="视频分享"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE8A786E9A291E58886E4BAAB"
                   >
                   <i class='fas fa-video fa-fw'></i>视频分享
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" title="资源分享"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE8B584E6BA90E58886E4BAAB"
                   >
                   <i class='fas fa-download fa-fw'></i>资源分享
                 </a>
-                
               </li>
-            
-          
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/" title="运维教程"
-                  
-                  
-                  
                     active-action="action-https:dusayscomcategoriesE8BF90E7BBB4E69599E7A88B"
                   >
                   <i class='fas fa-database fa-fw'></i>运维教程
                 </a>
-                
               </li>
-            
-          
-                    
                   </ul>
-                
               </li>
-            
-          
-            
-              
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
-                  
-                  
-                  
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
-                
               </li>
-            
-          
-            
-              
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/friends/" title="友链"
-                  
-                  
-                  
                     active-action="action-friends"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
-                
                   <ul class="list-v">
-                    
-                      
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/fcircle/" title="友链文章"
-                  
-                  
-                  
                     active-action="action-https:dusayscomfcircle"
                   >
                   友链文章
                 </a>
-                
               </li>
-            
-          
-                    
                   </ul>
-                
               </li>
-            
-          
-            
-              
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="/about/" title="留言"
-                  
-                  
-                  
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>留言
                 </a>
-                
               </li>
-            
-          
-            
-              
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://dusays.com/shuoshuo/" title="说说"
-                  
-                  
-                  
                     active-action="action-https:dusayscomshuoshuo"
                   >
                   <i class='fa-solid fa-comment fa-fw'></i>说说
                 </a>
-                
               </li>
-            
-          
-            
-              
-            
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
                 href="https://7bu.top" title="图床"
-                  
-                  
                     target="_blank"
-                  
-                  
                     active-action="action-https:7butop"
                   >
                   <i class='fa-solid fa-image fa-fw'></i>图床
                 </a>
-                
               </li>
-            
-          
-            
           </ul>
         </li>
 			</ul>
-
       <!-- Custom Files header begin -->
-      
       <!-- Custom Files header end -->
 		</div>
 	</div>
   </div>
 </header>
-
     <div id="l_body">
       <div id="l_cover">
-  
-    
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post dock' style="display: none;">
-        
   <div class='cover-bg lazyload placeholder' data-bg="https://fastly.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
-
 <div class='cover-body'>
   <div class='top'>
-    
-    
       <p class="title">Volantis</p>
-    
-    
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
             <a href="/v4/getting-started/"
-              
-              
               active-action="action-v4getting-started">
               <img src='https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>文档</p>
             </a>
-          
             <a href="/faqs/"
-              
-              
               active-action="action-faqs">
               <img src='https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>帮助</p>
             </a>
-          
             <a href="/examples/"
-              
-              
               active-action="action-examples">
               <img src='https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f396.svg'><p>示例</p>
             </a>
-          
             <a href="/contributors/"
-              
-              
               active-action="action-contributors">
               <img src='https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f389.svg'><p>社区</p>
             </a>
-          
             <a href="/archives/"
-              
-              
               active-action="action-archives">
               <img src='https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
-          
             <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
-              
-              
               active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
               <img src='https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
             </a>
-          
-        
       </div>
     </div>
   </div>
 </div>
-
         <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
-    
-  
 </div>
-
       <div id="safearea">
         <div class="body-wrapper">
-          
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://dusays.com/227/">
@@ -3108,99 +2715,53 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="name" content="杜老师说">
     <meta itemprop="description" content="云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。">
   </span>
-  
-
-
-  
     <span hidden>
       <meta itemprop="image" content="https://cdn.dusays.com/favicon.ico">
     </span>
-  
   <div class="article-meta" id="top">
-    
-    
-    
       <h1 class="title" itemprop="name headline">
         Redis 主从复制的配置
       </h1>
       <div class='new-meta-box'>
-        
-          
-            
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="https://dusays.com/about/" rel="nofollow">
     <img itemprop="image" src="https://cdn.dusays.com/avatar.png/2" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Teacher Du</p>
   </a>
 </div>
-
-          
-        
-          
-            
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/">运维教程</a>
-    
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/" itemprop="url"><span itemprop="name">运维教程</span></a>
       </span>
-    
   </div>
-
-
-          
-        
-          
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2020-06-02T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2020年6月2日</p>
   </a>
 </div>
-
-          
-        
-          
-            
-
-
 <div class="new-meta-item browse">
   <a class='notlink'>
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
-      
       <span id="busuanzi_value_page_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
-      
       <span>次浏览</span>
     </p>
   </a>
 </div>
-
-
-          
-        
-          
-             
   <div class="new-meta-item comments-count"> 
-     
     <a href="/227/#comments"> 
       <i class="fa-solid fa-comment-dots fa-fw"></i> 
       <p> 
         <span data-page-key="/227/" id="ArtalkCount"> 
           <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
         </span> 
-         
           <span class="leancloud-comments-count">&nbsp;条评论</span> 
-         
       </p>       
     </a> 
   </div> 
- 
-          
-        
-          
-            
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
@@ -3213,50 +2774,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p>时长：1 分钟</p>
     </a>
   </div>
-
-
-          
-        
         <!-- Custom Files topMeta begin-->
-        
         <!-- Custom Files topMeta end-->
       </div>
-    
   </div>
-
-
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <blockquote>
 <p>Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存储 value 类型相对更多，包括链表、集合、有序集合、哈希类型和字符串。这些数据类型都支持 Push&#x2F;Pull、Add&#x2F;Remove 及取交集并集和差集及更丰富操作，而且这些操作都是原子性的。在这个基础上，Redis 支持各种不同方式的排序。与 Memcached 一样，为了保证效率，数据都是缓存在内存中。区别的是 Redis 会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了主从同步。</p>
 </blockquote>
 <span id="more"></span>
-
 <div class="story post-story"><h2 id="章节简介"><a href="#章节简介" class="headerlink" title="章节简介"></a>章节简介</h2><p>本章节讲解了 Redis 主从复制的配置过程。</p>
 <p>内容是大神提供的，考虑到知识版权等问题，本教程以电子书的形式分享。在阅读中遇到问题，可在评论区域留言，杜老师会转述给大神来解答！</p>
 </div><div class="story post-story"><h2 id="在线阅读"><a href="#在线阅读" class="headerlink" title="在线阅读"></a>在线阅读</h2><p>在线阅读：</p>
-
-
 	<div class="row">
     <embed src="https://cdn.dusays.com/2020/06/227-1.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
-
-
 </div>
   </div>
-  
-  
-    
     <div class='footer'>
        <!-- 参考资料、相关资料等 -->
-      
        <!-- 相关文章 -->
-      
       <!-- 版权声明组件 -->
-      
-        
-          
           <div class="copyright license">
             <div class="license-title">Redis 主从复制的配置</div>
             <div class="license-link"><a href="https://dusays.com/227/">https://dusays.com/227/</a>
@@ -3270,13 +2809,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 <div class="license-meta-title">发布于</div>
                 <div class="license-meta-text">2020年6月2日</div>
               </div>
-              
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
                 <div class="license-meta-text">2022年6月8日</div>
               </div>
-              
-              
               <div class="license-meta-item">
                 <div class="license-meta-title">许可协议</div>
                 <div class="license-meta-text"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a></div>
@@ -3284,228 +2820,99 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             </div>
             <div class="license-statement">署名-非商业性使用-相同方式共享 4.0 国际。</div>
           </div>
-        
-      
       <!-- 打赏组件 -->
-      
     </div>
-  
-  
-    
-
-
   <div class='article-meta' id="bottom">
     <div class='new-meta-box'>
-      
-        
-          
-  
   <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%93%E5%AD%98/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>缓存</p></a></div>
   <span hidden itemprop="keywords">缓存</span>
-
-
-        
-      
-        
-          
   <div class="new-meta-item share -mob-share-list">
   <div class="-mob-share-list share-body">
-    
-      
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://dusays.com/227/&title=Redis 主从复制的配置 - 杜老师说&summary=
 Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存储 value 类型相对更多，包括链表、集合、有序集合、哈希类型和字符串。这些数据类型都支持 Push&#x2F;Pull、Add&#x2F;Remove 及取交集并集和差集及更丰富操作，而且这些操作都是原子性的。在这个基础上，Redis 支持各种不同方式的排序。与 Memcached 一样，为了保证效率，数据都是缓存在内存中。区别的是 Redis 会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了主从同步。
 "
-          
           >
-          
             <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
         </a>
-      
-    
-      
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://dusays.com/227/&title=Redis 主从复制的配置 - 杜老师说&summary=
 Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存储 value 类型相对更多，包括链表、集合、有序集合、哈希类型和字符串。这些数据类型都支持 Push&#x2F;Pull、Add&#x2F;Remove 及取交集并集和差集及更丰富操作，而且这些操作都是原子性的。在这个基础上，Redis 支持各种不同方式的排序。与 Memcached 一样，为了保证效率，数据都是缓存在内存中。区别的是 Redis 会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了主从同步。
 "
-          
           >
-          
             <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
         </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://dusays.com/227/&title=Redis 主从复制的配置 - 杜老师说&summary=
 Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存储 value 类型相对更多，包括链表、集合、有序集合、哈希类型和字符串。这些数据类型都支持 Push&#x2F;Pull、Add&#x2F;Remove 及取交集并集和差集及更丰富操作，而且这些操作都是原子性的。在这个基础上，Redis 支持各种不同方式的排序。与 Memcached 一样，为了保证效率，数据都是缓存在内存中。区别的是 Redis 会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了主从同步。
 "
-          
           >
-          
             <img src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
         </a>
-      
-    
-      
-    
-      
-    
   </div>
 </div>
-
-
-
-        
-      
     </div>
     <!-- Custom Files bottomMeta begin -->
-    
     <!-- Custom Files bottomMeta end -->
   </div>
-
-
-  
-  
-
-  
     <div class="prev-next">
-      
         <a class='prev' href='/228/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>菊花宝典</p>
           <p class='content'>
 一入 Mac 深似海，从此 Windows 是路人。我也不知道这句话是谁说的，你就当是杜老师说的吧，作为前 Mac 技术讲师，我之前的电脑一直都是 Mac 本，其系统的高效和稳定性，一直是我所...</p>
         </a>
-      
-      
         <a class='next' href='/226/'>
           <p class='title'>Redis 主从复制的原理<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
 Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存储 value 类型相对更多，包括链表、集合、有序集合、哈希类型和字符串。这些数据类型都支持 Push...</p>
         </a>
-      
     </div>
-  
   <!-- Custom Files postEnd begin-->
-  
   <!-- Custom Files postEnd end-->
 </article>
-
-
-  
-
-
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
       <meta itemprop="discussionUrl" content="/227/#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
-    
-
     <div id="layoutHelper-comments"></div>
-
   </article>
-
-
-
-
-
-
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
-  
-
-  
-    
-    
-      
 <section class="widget blogger desktop mobile pjax">
   <div class='content'>
-    
-      
         <a class='avatar flat-box rectangle' href='/about/'>
           <img no-lazy src='https://cdn.dusays.com/avatar.png/2'/>
         </a>
-      
-    
-    
       <div class='text'>
-        
           <h2>Teacher Du</h2>
-        
-        
           <p>师者，传道，授业，解惑！</p>
-
-        
-        
       </div>
-    
-    
       <div class="social-wrapper">
-        
-          
             <a href="/atom.xml"
               class="social fa-solid fa-rss flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
-              
             </a>
-          
-        
-          
             <a href="http://7bu.top/"
               class="social fa-solid fa-image flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
-              
             </a>
-          
-        
-          
             <a href="https://travellings.link/"
               class="social fa-solid fa-subway flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
-              
             </a>
-          
-        
-          
             <a href="https://dusays.com/baidusitemap.xml"
               class="social fa-solid fa-sitemap flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
-              
             </a>
-          
-        
       </div>
-    
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
-    
-  
-
-  
-    
-    
       <section class="widget undefinedshadow floatable blur desktop mobile pjax">
-    
-
     <div class="tabs" id="tab-widget-artalk">
       <ul class="nav-tabs">
         <li class="tab active">
@@ -3546,865 +2953,449 @@ Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存�
       </div>
     </div>
   </section>
-    
-  
-
-  
-    
-    
-      
 <section class="widget text desktop mobile pjax">
-  
   <header>
-    
       <i class="fas fa-wallet fa-fw" aria-hidden="true"></i><span class='name'>点击赞助</span>
-    
   </header>
-
-
   <div class='content'>
-    
       <center><a target="_blank" rel="noopener" href="https://afdian.net/@teacherdu"><img src="https://cdn.dusays.com/yf.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/yf.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
-    
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
 <section class="widget text desktop mobile pjax">
-  
   <header>
-    
       <a href='https://dusays.com/sffw/'><i class="fas fa-dollar-sign fa-fw" aria-hidden="true"></i><span class='name'>收费服务</span></a>
-    
   </header>
-
-
   <div class='content'>
-    
       <center><a href="https://dusays.com/sffw/"><img src="https://cdn.dusays.com/sffw.gif" class="lazyload" data-srcset="https://cdn.dusays.com/sffw.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
-    
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
 <section class="widget text desktop mobile pjax">
-  
   <header>
-    
       <a target="_blank" rel="noopener" href='https://www.vpsor.cn?userCode=ohedb8'><i class="fas fa-cloud fa-fw" aria-hidden="true"></i><span class='name'>硅云主机</span></a>
-    
   </header>
-
-
   <div class='content'>
-    
       <center><a href="https://www.vpsor.cn?userCode=ohedb8" target="_blank"><img src="https://cdn.dusays.com/vpsor.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/vpsor.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><center>
-    
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
 <section class="widget text desktop mobile pjax">
-  
   <header>
-    
       <a target="_blank" rel="noopener" href='https://flowus.cn/login?code=PDZ708'><i class="fas fa-upload fa-fw" aria-hidden="true"></i><span class='name'>息流工具</span></a>
-    
   </header>
-
-
   <div class='content'>
-    
       <center><a href="https://flowus.cn/login?code=PDZ708" target="_blank"><img src="https://cdn.dusays.com/aliyundrive.jpg/2" class="lazyload" data-srcset="https://cdn.dusays.com/aliyundrive.jpg/2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a></center>
-    
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
 <section class="widget list desktop mobile pjax">
-  
   <header>
-    
       <a href='/friends/'><i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i><span class='name'>友情链接</span></a>
-    
   </header>
-
-
   <div class='content'>
     <ul class="list entry navigation">
-      
         <li><a class="flat-box" title="http://www.hibbba.com/" href="http://www.hibbba.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-http:wwwhibbbacom"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             贝贝吧
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://colsrch.cn/" href="https://colsrch.cn/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:colsrchcn"
           >
           <div class='name'>
-            
               <img src="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png" class="lazyload" data-srcset="https://bu.dusays.com/2022/02/23/cb173cbdcc7c6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             Colsrch
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://lsybk.xyz/" href="https://lsybk.xyz/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:lsybkxyz"
           >
           <div class='name'>
-            
               <img src="https://bu.dusays.com/2020/11/10/ab1185891b443.png" class="lazyload" data-srcset="https://bu.dusays.com/2020/11/10/ab1185891b443.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             勤奋的思远
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="http://2dogz.cn/" href="http://2dogz.cn/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-http:2dogzcn"
           >
           <div class='name'>
-            
               <img src="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2020/11/13/b54215c2293a9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             Blogin
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.qqeg.cn/" href="https://www.qqeg.cn/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwqqegcn"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             易学堂
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.sciencesoft.cn/" href="https://www.sciencesoft.cn/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwsciencesoftcn"
           >
           <div class='name'>
-            
               <img src="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2021/08/25/6ea5def2f92c9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             科研软件小站
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.dreamcs6.com/" href="https://www.dreamcs6.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwdreamcs6com"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             梦之国
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.linlinzzo.top/" href="https://www.linlinzzo.top/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwlinlinzzotop"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             林林杂语
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://imzl.com/" href="https://imzl.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:imzlcom"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             周良粥凉
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.roaing.com/" href="https://www.roaing.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwroaingcom"
           >
           <div class='name'>
-            
               <img src="https://www.roaing.com/fff.jpg" class="lazyload" data-srcset="https://www.roaing.com/fff.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             R0A1NG’s blog
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://blog.drpika.com/" href="https://blog.drpika.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:blogdrpikacom"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             Dr.Pika’s Blog
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.qiumu.club/" href="https://www.qiumu.club/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwqiumuclub"
           >
           <div class='name'>
-            
               <img src="https://qiumuu.gitee.io/mdchat/ico/3.jpg" class="lazyload" data-srcset="https://qiumuu.gitee.io/mdchat/ico/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             秋木小站
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.yt-blog.top/" href="https://www.yt-blog.top/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwyt-blogtop"
           >
           <div class='name'>
-            
               <img src="https://img.yt-blog.top/png/logo.png" class="lazyload" data-srcset="https://img.yt-blog.top/png/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             懵懂の初一少年
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.thyuu.com/" href="https://www.thyuu.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwthyuucom"
           >
           <div class='name'>
-            
               <img src="https://std.thyuu.com/logo.png" class="lazyload" data-srcset="https://std.thyuu.com/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             风记星辰
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="http://www.ygbks.com/" href="http://www.ygbks.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-http:wwwygbkscom"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             宇哥博客
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.hackyh.com/" href="https://www.hackyh.com/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwhackyhcom"
           >
           <div class='name'>
-            
               <img src="https://www.hackyh.com/avatar.png" class="lazyload" data-srcset="https://www.hackyh.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             Hackyh’Blog
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://lisenhui.cn/" href="https://lisenhui.cn/"
-          
             rel="external nofollow noopener noreferrer"
-          
-          
             target="_blank"
-          
           active-action="action-https:lisenhuicn"
           >
           <div class='name'>
-            
               <img src="https://lisenhui.cn/img/avatar.png" class="lazyload" data-srcset="https://lisenhui.cn/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             凡梦星尘空间站
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://czjy.cn/" href="https://czjy.cn/"
-          
-          
             target="_blank"
-          
           active-action="action-https:czjycn"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             imtoken
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://blog.ideaopen.cn/" href="https://blog.ideaopen.cn/"
-          
-          
             target="_blank"
-          
           active-action="action-https:blogideaopencn"
           >
           <div class='name'>
-            
               <img src="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2022/05/31/6295d1906b264.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             小简博客
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://arcitcgn.cn/" href="https://arcitcgn.cn/"
-          
-          
             target="_blank"
-          
           active-action="action-https:arcitcgncn"
           >
           <div class='name'>
-            
               <img src="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/05/27/629090073d32b.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             HZH’s blog
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://joojen.com/" href="https://joojen.com/"
-          
-          
             target="_blank"
-          
           active-action="action-https:joojencom"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             joojen个人博客
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://bowenyoung.cn/" href="https://bowenyoung.cn/"
-          
-          
             target="_blank"
-          
           active-action="action-https:bowenyoungcn"
           >
           <div class='name'>
-            
               <img src="https://oc.arcitcgn.cn/2022/06/11/62a45f6a02818.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a45f6a02818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             Bowenの破站
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.coldyun.cn/" href="https://www.coldyun.cn/"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwcoldyuncn"
           >
           <div class='name'>
-            
               <img src="https://cdn.coldimg.com/2022/05/18/62846fcfbc11c.jpg" class="lazyload" data-srcset="https://cdn.coldimg.com/2022/05/18/62846fcfbc11c.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             Cold’blog
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="https://www.llyz.net/" href="https://www.llyz.net/"
-          
-          
             target="_blank"
-          
           active-action="action-https:wwwllyznet"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             imtoken
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="http://dusays.com/" href="http://dusays.com/"
-          
-          
           active-action="action-http:dusayscom"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             杜老师说
           </div>
-          
         </a></li>
-      
         <li><a class="flat-box" title="http://dusays.com/friends/" href="http://dusays.com/friends/"
-          
-          
           active-action="action-http:dusayscomfriends"
           >
           <div class='name'>
-            
               <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            
             友链申请
           </div>
-          
         </a></li>
-      
     </ul>
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
 <section class="widget grid desktop mobile pjax">
-  
   <header>
-    
       <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>站内导航</span>
-    
   </header>
-
-
   <div class='content'>
     <div class="grid navigation fixed">
-      
         <a class="flat-box" href="/"
-          
-          
           active-action="action-home">
-          
             <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
-          
           近期文章
         </a>
-      
         <a class="flat-box" href="/archives/"
-          
-          
           active-action="action-archives">
-          
             <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
-          
           文章归档
         </a>
-      
         <a class="flat-box" href="/friends/"
-          
-          
           active-action="action-friends">
-          
             <i class="fas fa-link fa-fw" aria-hidden="true"></i>
-          
           我的友链
         </a>
-      
         <a class="flat-box" href="/about/"
-          
-          
           active-action="action-about">
-          
             <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-          
           关于小站
         </a>
-      
         <a class="flat-box" href="/categories/"
-          
-          
           active-action="action-categories">
-          
             <i class="fas fa-book fa-fw" aria-hidden="true"></i>
-          
           文章分类
         </a>
-      
         <a class="flat-box" href="/tags/"
-          
-          
           active-action="action-tags">
-          
             <i class="fas fa-fire fa-fw" aria-hidden="true"></i>
-          
           热门标签
         </a>
-      
     </div>
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
-  
   <section class="widget category desktop pjax">
-    
   <header>
-    
       <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
   </header>
-
-
     <div class='content'>
       <ul class="entry navigation">
-        
           <li><a class="flat-box"
             title="/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/" href="/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/"
             active-action="action-categoriesE4BBA3E7A081E7BC96E7A88B"
             ><div class='name'>代码编程</div><div class='badge'>(5)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"
             active-action="action-categoriesE699BAE685A7E7949FE6B4BB"
             ><div class='name'>智慧生活</div><div class='badge'>(44)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/" href="/categories/%E6%B1%82%E8%81%8C%E9%9D%A2%E8%AF%95/"
             active-action="action-categoriesE6B182E8818CE99DA2E8AF95"
             ><div class='name'>求职面试</div><div class='badge'>(13)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" href="/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"
             active-action="action-categoriesE7BD91E7AB99E690ADE5BBBA"
             ><div class='name'>网站搭建</div><div class='badge'>(43)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"
             active-action="action-categoriesE7BD91E7BB9CE5AE89E585A8"
             ><div class='name'>网络安全</div><div class='badge'>(4)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/" href="/categories/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B/"
             active-action="action-categoriesE7BD91E7BB9CE69599E7A88B"
             ><div class='name'>网络教程</div><div class='badge'>(34)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E8%80%81%E5%B8%88%E8%AF%B4%E8%AF%BE/" href="/categories/%E8%80%81%E5%B8%88%E8%AF%B4%E8%AF%BE/"
             active-action="action-categoriesE88081E5B888E8AFB4E8AFBE"
             ><div class='name'>老师说课</div><div class='badge'>(39)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/" href="/categories/%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/"
             active-action="action-categoriesE8A786E9A291E58886E4BAAB"
             ><div class='name'>视频分享</div><div class='badge'>(10)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" href="/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"
             active-action="action-categoriesE8B584E6BA90E58886E4BAAB"
             ><div class='name'>资源分享</div><div class='badge'>(136)</div></a></li>
-        
           <li><a class="flat-box"
             title="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/" href="/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"
             active-action="action-categoriesE8BF90E7BBB4E69599E7A88B"
             ><div class='name'>运维教程</div><div class='badge'>(148)</div></a></li>
-        
       </ul>
     </div>
   </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
   <section class="widget tagcloud desktop mobile pjax">
-    
   <header>
-    
       <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
   </header>
-
-
     <div class='content'>
       <a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 14px; color: #999">下载</a> <a href="/tags/%E4%BA%91%E7%9B%98/" style="font-size: 14px; color: #999">云盘</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 15.58px; color: #8e8e8e">代码</a> <a href="/tags/%E4%BB%B2%E8%A3%81/" style="font-size: 14px; color: #999">仲裁</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14.53px; color: #959595">优化</a> <a href="/tags/%E4%BC%9A%E5%91%98/" style="font-size: 14px; color: #999">会员</a> <a href="/tags/%E4%BE%B5%E6%9D%83/" style="font-size: 14px; color: #999">侵权</a> <a href="/tags/%E5%85%AC%E5%8F%B8/" style="font-size: 14px; color: #999">公司</a> <a href="/tags/%E5%86%85%E5%AD%98/" style="font-size: 14.53px; color: #959595">内存</a> <a href="/tags/%E5%87%BA%E5%B7%AE/" style="font-size: 14px; color: #999">出差</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 17.16px; color: #848484">分享</a> <a href="/tags/%E5%88%86%E5%8F%91/" style="font-size: 16.11px; color: #8b8b8b">分发</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 14px; color: #999">升级</a> <a href="/tags/%E5%8D%95%E8%AF%8D/" style="font-size: 24px; color: #555">单词</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 19.26px; color: #757575">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 21.37px; color: #676767">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 19.26px; color: #757575">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 14px; color: #999">备份</a> <a href="/tags/%E5%A5%96%E5%93%81/" style="font-size: 14.53px; color: #959595">奖品</a> <a href="/tags/%E5%A5%97%E4%BB%B6/" style="font-size: 14.53px; color: #959595">套件</a> <a href="/tags/%E5%AD%98%E5%82%A8/" style="font-size: 15.58px; color: #8e8e8e">存储</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 15.58px; color: #8e8e8e">安全</a> <a href="/tags/%E5%AE%B6%E4%BA%BA/" style="font-size: 14px; color: #999">家人</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 17.68px; color: #808080">容器</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 22.42px; color: #606060">工具</a> <a href="/tags/%E5%BA%94%E7%94%A8/" style="font-size: 14.53px; color: #959595">应用</a> <a href="/tags/%E6%89%98%E7%AE%A1/" style="font-size: 14px; color: #999">托管</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 15.05px; color: #929292">技巧</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 21.89px; color: #636363">技术</a> <a href="/tags/%E6%8E%92%E7%89%88/" style="font-size: 16.11px; color: #8b8b8b">排版</a> <a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 14px; color: #999">推荐</a> <a href="/tags/%E6%8E%A8%E9%80%81/" style="font-size: 14px; color: #999">推送</a> <a href="/tags/%E6%92%AD%E5%AE%A2/" style="font-size: 14px; color: #999">播客</a> <a href="/tags/%E6%94%AF%E4%BB%98/" style="font-size: 14px; color: #999">支付</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 15.58px; color: #8e8e8e">教程</a> <a href="/tags/%E6%9C%8D%E5%8A%A1/" style="font-size: 17.68px; color: #808080">服务</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size: 15.58px; color: #8e8e8e">权限</a> <a href="/tags/%E6%9E%B6%E6%9E%84/" style="font-size: 15.05px; color: #929292">架构</a> <a href="/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 14.53px; color: #959595">概念</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 14px; color: #999">正则</a> <a href="/tags/%E6%B1%82%E8%81%8C/" style="font-size: 15.05px; color: #929292">求职</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 22.95px; color: #5c5c5c">游戏</a> <a href="/tags/%E6%B8%B8%E7%8E%A9/" style="font-size: 14px; color: #999">游玩</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 16.11px; color: #8b8b8b">电影</a> <a href="/tags/%E7%94%B5%E8%84%91/" style="font-size: 15.05px; color: #929292">电脑</a> <a href="/tags/%E7%94%B5%E8%A7%86/" style="font-size: 14px; color: #999">电视</a> <a href="/tags/%E7%9B%AE%E5%BD%95/" style="font-size: 14px; color: #999">目录</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 14px; color: #999">硬件</a> <a href="/tags/%E7%A3%81%E7%9B%98/" style="font-size: 15.05px; color: #929292">磁盘</a> <a href="/tags/%E7%A4%BC%E7%89%A9/" style="font-size: 14px; color: #999">礼物</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 19.79px; color: #727272">福利</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 20.32px; color: #6e6e6e">系统</a> <a href="/tags/%E7%BB%83%E4%B9%A0/" style="font-size: 14px; color: #999">练习</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 14px; color: #999">终端</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 14px; color: #999">统计</a> <a href="/tags/%E7%BC%93%E5%AD%98/" style="font-size: 18.21px; color: #7c7c7c">缓存</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 14px; color: #999">编程</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 14px; color: #999">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 18.74px; color: #797979">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 23.47px; color: #595959">网络</a> <a href="/tags/%E7%BE%A4%E6%99%96/" style="font-size: 19.79px; color: #727272">群晖</a> <a href="/tags/%E7%BE%A4%E8%BE%89/" style="font-size: 14px; color: #999">群辉</a> <a href="/tags/%E8%81%8C%E5%9C%BA/" style="font-size: 14.53px; color: #959595">职场</a> <a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 16.11px; color: #8b8b8b">脚本</a> <a href="/tags/%E8%8B%B9%E6%9E%9C/" style="font-size: 16.63px; color: #878787">苹果</a> <a href="/tags/%E8%90%8C%E5%AE%A0/" style="font-size: 14px; color: #999">萌宠</a> <a href="/tags/%E8%A1%A5%E4%B8%81/" style="font-size: 14px; color: #999">补丁</a> <a href="/tags/%E8%A7%A3%E6%9E%90/" style="font-size: 15.58px; color: #8e8e8e">解析</a> <a href="/tags/%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">评论</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 20.84px; color: #6a6a6a">软件</a> <a href="/tags/%E8%BF%87%E5%B9%B4/" style="font-size: 14px; color: #999">过年</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 15.58px; color: #8e8e8e">运维</a> <a href="/tags/%E8%BF%9C%E7%A8%8B/" style="font-size: 15.05px; color: #929292">远程</a> <a href="/tags/%E9%83%A8%E7%BD%B2/" style="font-size: 15.05px; color: #929292">部署</a> <a href="/tags/%E9%99%A4%E6%B9%BF/" style="font-size: 14px; color: #999">除湿</a> <a href="/tags/%E9%9B%86%E6%88%90/" style="font-size: 14px; color: #999">集成</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15.58px; color: #8e8e8e">面试</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 14px; color: #999">音乐</a>
     </div>
   </section>
-
-
-    
-  
-
-  
-    
-    
-      
 <section class="widget desktop pjax">
-  
   <header>
-    
       <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
   </header>
-
-
   <div class='content'>
     <div class="webinfo">
-      
         <div class="webinfo-item">
           <div>文章数目：</div>
           <div>476 篇</div>
         </div>
-      
-
-      
         <div class="webinfo-item">
           <div>已运行时间：</div>
           <div id="webinfo-runtime-count"></div>
         </div>
-      
-
-
-      
         <div class="webinfo-item">
           <div>本站总字数：</div>
           <div>342.9k 字</div>
         </div>
-      
-
-      
         <div class="webinfo-item">
           <div>本站访客数：</div>
-          
           <div><span id="busuanzi_value_site_uv"><i class="fa-solid fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-          
         </div>
-      
-
-      
-
-      
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           <div id="last-update-show">2022-07-06 日</div>
         </div>
-      
     </div>
   </div>
 </section>
-    
-  
-
-
 <div class="widget-sticky pjax">
-
-  
-  
-
-
   <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
   <header>
-    
       <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
   </header>
-
-
     <div class='content'>
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%A0%E8%8A%82%E7%AE%80%E4%BB%8B"><span class="toc-text">章节简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BB"><span class="toc-text">在线阅读</span></a></li></ol>
     </div>
   </section>
-
-  
-
 </div>
-
-
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
   <div class="pjax">
     <!-- pjax占位 -->
   </div>
-
   <div class="pjax">
     <!-- pjax占位 -->
   </div>
-
   <div class="pjax">
     <!-- pjax占位 -->
   </div>
-
   <div class="pjax">
     <!-- pjax占位 -->
   </div>
-
   <!-- Custom Files side begin -->
-  
   <!-- Custom Files side end -->
 </aside>
-
-
-
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
-
 <pjax>
 <script>
   window.pdata={}
@@ -4413,115 +3404,62 @@ Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存�
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
   //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
-  
     // header
     var l_header=document.getElementById("l_header");
-    
     l_header.classList.add("show");
-    
-    
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
       cover_wrapper.id="none";
       cover_wrapper.style.display="none";
       scroll_down.style.display="none";
-    
-  
 </script>
 </pjax>
         </div>
-        
-  
   <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
-    
-      
         <div class="aplayer-container">
-          
-
-
         </div>
-      
-    
-      
         <br>
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          
-            
               <a href="/atom.xml"
                 class="social  flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
-                
                   <img src="https://cdn.dusays.com/020-rss.svg" class="lazyload" data-srcset="https://cdn.dusays.com/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
               </a>
-            
-          
-            
               <a href="http://7bu.top/"
                 class="social  flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
-                
                   <img src="https://cdn.dusays.com/017-picasa.svg" class="lazyload" data-srcset="https://cdn.dusays.com/017-picasa.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
               </a>
-            
-          
-            
               <a href="http://status.dusays.com/"
                 class="social  flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
-                
                   <img src="https://cdn.dusays.com/031-twitch.svg" class="lazyload" data-srcset="https://cdn.dusays.com/031-twitch.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
               </a>
-            
-          
-            
               <a href="https://dusays.com/baidusitemap.xml"
                 class="social  flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
-                
                   <img src="https://cdn.dusays.com/033-spotify.svg" class="lazyload" data-srcset="https://cdn.dusays.com/033-spotify.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
               </a>
-            
-          
         </div>
-      
-    
-      
         <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-      
-    
-      
         本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.6.0" target="_blank" class="codename">Volantis</a>
         作为主题，总访问量为
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           次
-        
-      
-    
-      
         <div class='copyright'>
         <p><embed src="https://cdn.dusays.com/7bu.svg" type="image/svg+xml"> <embed src="https://cdn.dusays.com/yinsi.svg" type="image/svg+xml"> <embed src="https://cdn.dusays.com/mianze.svg" type="image/svg+xml"> <embed src="https://cdn.dusays.com/says.svg" type="image/svg+xml"><br><embed src="https://cdn.dusays.com/fb.svg" type="image/svg+xml"> <embed src="https://cdn.dusays.com/icp.svg" type="image/svg+xml"> <embed src="https://cdn.dusays.com/liao.svg" type="image/svg+xml"> <embed src="https://cdn.dusays.com/copyright.svg" type="image/svg+xml"></p>
-
         </div>
-      
-    
     <!-- Custom Files footer begin-->
-    
     <!-- Custom Files footer end-->
   </footer>
-
-
         <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
       </div>
     </div>
@@ -4538,228 +3476,125 @@ Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存�
   volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
   volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
 </script>
-
 <script>
-  
   volantis.css("https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-free/css/all.min.css");
-  
-  
-  
 </script>
-
 <!-- required -->
-
-
 <!-- internal -->
-
 <script src="/js/app.239a403b.js"></script>
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div id="rightmenu-wrapper">
   <ul class="list-v rightmenu" id="rightmenu-content">
-    
   <li class='navigation menuNavigation-Content'>
-
-
     <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
-
-
-
     <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
-
-
-
     <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
-
-
-
     <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
-
-
   </li>
-
-
     <hr class="menuLoad-Content" >
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
       <i class="fa-solid fa-paste fa-fw"></i>
       粘贴文本
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
       <i class="fa-solid fa-object-ungroup fa-fw"></i>
       全选文本
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
       <i class="fa-solid fa-cut fa-fw"></i>
       剪切文本
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
       <i class="fa-solid fa-copy fa-fw"></i>
       复制文本
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
       <i class="fa-solid fa-search fa-fw"></i>
       站内搜索
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://www.baidu.com/s?wd=${__text__}`)" data-group="seletctText">
       <i class="fa-solid fa-search fa-fw"></i>
       百度搜索
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
       <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
       新标签页打开
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
       <i class="fa-solid fa-link fa-fw"></i>
       复制链接地址
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
       <i class="fa-solid fa-image fa-fw"></i>
       复制图片
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
       <i class="fa-solid fa-images fa-fw"></i>
       谷歌识图
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <a class="vlts-menu fix-cursor-default" id="help" target="_blank" rel="noopener" href="https://7bu.top/" data-group="link">
       <i class="fa-solid fa-file-image fa-fw"></i>
       去不图床
     </a>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <a class="vlts-menu fix-cursor-default" id="examples" target="_blank" rel="noopener" href="https://pay.dusays.com/" data-group="link">
       <i class="fa-solid fa-address-card fa-fw"></i>
       提卡系统
     </a>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <a class="vlts-menu fix-cursor-default" id="contributors" target="_blank" rel="noopener" href="https://afdian.net/@teacherdu" data-group="link">
       <i class="fa-solid fa-money-check-alt fa-fw"></i>
       赞助平台
     </a>
   </li>
-
-
-
     <hr class="menuLoad-Content" >
-
-
-
   <li class="menuLoad-Content">
     <a class="vlts-menu fix-cursor-default" id="source_theme" href="https://dusays.com/465/" data-group="link">
       <i class="fa-solid fa-gamepad fa-fw"></i>
       我的世界
     </a>
   </li>
-
-
-
     <hr class="menuLoad-Content" >
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
       <i class="fa-solid fa-moon fa-fw"></i>
       暗黑模式
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
       <i class="fa-solid fa-print fa-fw"></i>
       打印页面
     </span>
   </li>
-
-
-
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
       <i class="fa-solid fa-book-open fa-fw"></i>
       阅读模式
     </span>
   </li>
-
-
 <div id="menuMusic">
   <li class='music name menuOption-Content'>
     <p class='nav music-title fix-cursor-default'></p>
@@ -4787,121 +3622,26 @@ Redis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存�
     </div>
   </li>
 </div>
-
   </ul>
 </div>
 <script src="/js/plugins/rightMenus.1aa99ff1.js"></script>
 <script>
   const RightMenusFunction = {};
-  
-
-
-
-
-
-
-
-
-
-
-
-
   //RightMenusFunction['copyPaste'] = (fun) => {fun()}
-
-
-
-
-
   //RightMenusFunction['copyAll'] = (fun) => {fun()}
-
-
-
-
-
   //RightMenusFunction['copyCut'] = (fun) => {fun()}
-
-
-
-
-
   //RightMenusFunction['copyText'] = (fun) => {fun()}
-
-
-
-
-
   RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
-
-
-
-
-
   RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://www.baidu.com/s?wd=${__text__}`)}
-
-
-
-
-
   RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
-
-
-
-
-
   //RightMenusFunction['copyLink'] = (fun) => {fun()}
-
-
-
-
-
   //RightMenusFunction['copyImg'] = (fun) => {fun()}
-
-
-
-
-
   RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
-
-
-
-
-
   //RightMenusFunction['printMode'] = (fun) => {fun()}
-
-
-
-
-
   //RightMenusFunction['readMode'] = (fun) => {fun()}
-
-
-
-
-
 </script>
-
-
-
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
-
   <script>
 const rootElement = document.documentElement;
 const darkModeStorageKey = "color-scheme";
@@ -4986,7 +3726,6 @@ volantis.dark.toggle=()=>{
 /**
  * bind event for toggle button
  */
-
 function bindToggleButton() {
   var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
   btn.forEach(function (e) {
@@ -4998,7 +3737,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
   volantis.requestAnimationFrame(bindToggleButton)
 });
 volantis.pjax.push(bindToggleButton);
-
 const darkModelListeners={
   dark:(mediaQueryList )=>{
     if(mediaQueryList.matches){
@@ -5016,41 +3754,26 @@ const darkModelListeners={
 window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
 window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
 </script>
-
-
-
-
 <script>
   function loadIssuesJS() {
-    
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
         volantis.js("/js/plugins/tags/sites.76bf19b8.js")
       }
-    
-    
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
         volantis.js("/js/plugins/tags/friends.f372da57.js")
       }
-    
-    
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
         volantis.js("/js/plugins/tags/contributors.aec80453.js")
       }
-    
   };
   loadIssuesJS()
   volantis.pjax.push(()=>{
     loadIssuesJS();
   })
-
 </script>
-
-
-
-
   <script defer src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
@@ -5076,12 +3799,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     lazyLoadInstance.update();
   });
 </script>
-
-
-
-
-  
-
 <script>
   window.FPConfig = {
 	delay: 0,
@@ -5091,15 +3808,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   };
 </script>
 <script defer src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
-
-
-
-
-
-
-
-
-
       <script>
   volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
   function load_artalk() {
@@ -5107,7 +3815,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     volantis.css("https://o.static.szyink.com/storage/artalk/Artalk.css");
     volantis.js("https://o.static.szyink.com/storage/artalk/Artalk.js").then(pjax_artalk);
   }
-
   function pjax_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
     let path = pdata.commentPath;
@@ -5118,7 +3825,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if(!':title/'.includes('/index.html')) {
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
-
     volantis.artalk = new Artalk(Object.assign({"js":"https://o.static.szyink.com/storage/artalk/Artalk.js","css":"https://o.static.szyink.com/storage/artalk/Artalk.css","server":"https://artalk.dusays.com","path":null,"placeholder":"评论支持贴图，在评论框粘贴，自动传至图床，勿传违禁图片~","imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L","resp":"data.links.url"},"pagination":{"readMore":false,"autoLoad":false},"heightLimit":{"children":0},"versionCheck":false,"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"darkMode":"auto"}, {
       el: '#artalk_container',
       pageKey: path,
@@ -5128,14 +3834,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       site: '杜老师说',
       darkMode: volantis.dark.mode === "dark",
       pvEl: '#artalk_visitors',
-
-      
       imgUploader: function(file) {
         let headers = new Headers();
         headers.set('Accept', 'application/json');
-        
           headers.set('Authorization', 'Bearer 1|SXnVbbmKpTgvDDRBbb6kdbStWoYyPPzeauHBkz4L')
-        
         let formData = new FormData();
         formData.append('file', file);
         return fetch('https://7bu.top/api/v1/upload',{
@@ -5145,9 +3847,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
           }).then((resp) => resp.json())
             .then((resp) => resp.data.links.url)
       },
-      
     }));
-
     Artalk.use(ctx => {
       ctx.on('list-loaded', () => {
         if (typeof VolantisFancyBox === "undefined"){
@@ -5162,7 +3862,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       })
     })
   }
-
   load_artalk();
   volantis.pjax.push(()=>{
     if (typeof Artalk === "undefined") {
@@ -5171,7 +3870,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       pjax_artalk();
     }
   },'artalk');
-
   function dark_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0]) return;
     volantis.artalk.then(ctx => {
@@ -5180,41 +3878,28 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   }
   volantis.dark.push(dark_artalk);
 </script>
-
-    
-
-
-
-
   <script defer src="https://cdn.dusays.com/bsz.js" data-pjax></script>
-
-
 <!-- optional -->
-
   <script>
   const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
     "/" || "/" :
     "//" || "/";
   const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
-
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
     return volantis.js("/js/search/hexo.0e52f222.js");
   }
-
   function loadSearchService() {
     loadSearchScript();
     document.querySelectorAll(".input.u-search-input").forEach((e) => {
       e.removeEventListener("focus", loadSearchService, false);
     });
-
     document.querySelectorAll(".u-search-form").forEach((e) => {
       e.addEventListener("submit", (event) => {
         event.preventDefault();
       }, false);
     });
   }
-
   // 打开并搜索 字符串 s
   function OpenSearch(s) {
     if (typeof SearchService === 'undefined')
@@ -5227,7 +3912,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       SearchService.search();
     }
   }
-
   // 访问含有 ?s=xxx  的链接时打开搜索 // 与搜索引擎 structured data 相关: /scripts/helpers/structured-data/lib/config.js
   if (window.location.search && /^\?s=/g.test(window.location.search)) {
     let queryText = decodeURI(window.location.search)
@@ -5235,43 +3919,17 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       .replace(/^\?s=/g, "");
     OpenSearch(queryText);
   }
-
   // 搜索输入框获取焦点时加载搜索
   document.querySelectorAll(".input.u-search-input").forEach((e) => {
     e.addEventListener("focus", loadSearchService, false);
   });
 </script>
-
-
-
-
-
-
-
-  
-  
 <script src="https://npm.elemecdn.com/prismjs@1.28.0/components/prism-core.min.js"></script>
-
-
-  
 <script src="https://npm.elemecdn.com/prismjs@1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
-
-
-  
 <script src="https://npm.elemecdn.com/prismjs@1.28.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-
-
-
-  
 <link rel="stylesheet" href="https://npm.elemecdn.com/prismjs@1.28.0/themes/prism-twilight.css">
-
-
-  
 <link rel="stylesheet" href="https://npm.elemecdn.com/prismjs@1.28.0/plugins/line-numbers/prism-line-numbers.css">
-
-
 <script>
-
   function pjax_prismjs_copyCode(){
     if (!document.querySelector("pre")) {
       return;
@@ -5287,20 +3945,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   }
   volantis.requestAnimationFrame(pjax_prismjs_copyCode)
   volantis.pjax.push(pjax_prismjs_copyCode)
-
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
   <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
@@ -5309,9 +3954,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       pjax_swiper();
     });
   }
-
   load_swiper();
-
   function pjax_swiper() {
     volantis.swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
@@ -5328,7 +3971,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       },
     });
   }
-
   volantis.pjax.push(() => {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
     if (typeof volantis.swiper === "undefined") {
@@ -5338,13 +3980,9 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     }
   });
 </script>
-
-
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
-
 </pjax>
-
 <script>
   function listennSidebarTOC() {
     const navItems = document.querySelectorAll(".toc li");
@@ -5370,10 +4008,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       });
       return target;
     });
-
     function activateNavByIndex(target) {
       if (target.classList.contains("active-current")) return;
-
       document.querySelectorAll(".toc .active").forEach((element) => {
         element.classList.remove("active", "active-current");
       });
@@ -5384,7 +4020,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         parent = parent.parentNode;
       }
     }
-
     // 方案一：
     volantis.activateNavIndex=0
     activateNavByIndex(navItems[volantis.activateNavIndex])
@@ -5405,7 +4040,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       }
       activateNavByIndex(navItems[volantis.activateNavIndex])
     })
-
     // 方案二：
     // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
     // function findIndex(entries) {
@@ -5447,7 +4081,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     // }
     // createIntersectionObserver(document.documentElement.scrollHeight);
   }
-
   document.addEventListener("DOMContentLoaded", ()=>{
     volantis.requestAnimationFrame(listennSidebarTOC)
   });
@@ -5455,32 +4088,26 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     volantis.requestAnimationFrame(listennSidebarTOC)
   });
 </script>
-
 <script>
   try {
     // https://web.dev/content-visibility/
     // https://www.caniuse.com/?search=content-visibility
     // https://infrequently.org/2020/12/content-visibility-scroll-fix/
     // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
     // 备注 目前已知的问题:
     // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
     // scrollreveal 插件潜在问题 目前尚不明确
-
     let eqIsh = (a, b, fuzz = 2) => {
       return Math.abs(a - b) <= fuzz;
     };
-
     let rectNotEQ = (a, b) => {
       return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
     };
-
     // Keep a map of elements and the dimensions of
     // their place-holders, re-setting the element's
     // intrinsic size when we get updated measurements
     // from observers.
     let spaced = new WeakMap();
-
     // Only call this when known cheap, post layout
     let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
       let old = spaced.get(el);
@@ -5491,7 +4118,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
       }
     };
-
     let iObs = new IntersectionObserver(
       (entries, o) => {
         entries.forEach((entry) => {
@@ -5503,22 +4129,18 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       },
       { rootMargin: "500px 0px 500px 0px" }
     );
-
     let rObs = new ResizeObserver((entries, o) => {
       entries.forEach((entry) => {
         reserveSpace(entry.target, entry.contentRect);
       });
     });
-
     let resizeResilientDeferredRendering = (Selector) => {
       let articles = document.querySelectorAll(Selector);
-
       if (articles.length) {
         articles.forEach((el) => {
           iObs.observe(el);
           rObs.observe(el);
         });
-
         // Workaround for Chrome bug, part 2.
         //
         // Re-enable browser management of rendering for the
@@ -5531,7 +4153,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         });
       }
     };
-
     let contentVisibilityScrollFix = () => {
       if (!("content-visibility" in document.documentElement.style)) {
         return;
@@ -5544,8 +4165,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     console.log(error);
   }
 </script>
-
-
 <script>
   document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
@@ -5560,13 +4179,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     }
   }
 </script>
-
-
   <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://cdn.dusays.com/favicon.ico","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://cdn.dusays.com/favicon.ico"},"url":"https://dusays.com/","sameAs":["https://github.com/volantis-x"],"description":"云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dusays.com/","name":"杜老师说"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dusays.com/categories/运维教程/","name":"运维教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dusays.com/227/","name":"Redis 主从复制的配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"杜老师说","url":"https://dusays.com/","keywords":"杜老师说,老师,讲师,运维,博客,技术,微软,思科,红帽,服务,软件,图文,视频,单词,求职,面试,网站,搭建,网络,教程,说课,资源,分享,单词","description":"云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。","author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://cdn.dusays.com/favicon.ico"},"url":"https://dusays.com/","description":"云计算运维讲师杜老师私人技术博客，主要分享一些运维技术、经验；本博客每三天更新，欢迎订阅。"},"publisher":{"@type":"Organization","name":"杜老师说","url":"https://dusays.com/","logo":{"@type":"ImageObject","url":"https://cdn.dusays.com/favicon.ico","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://dusays.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Redis 主从复制的配置","description":"\nRedis 是一个 Key-Value 的存储系统。和 Memcached 类似，它支持存储 value 类型相对更多，包括链表、集合、有序集合、哈希类型和字符串。这些数据类型都支持 Push&#x2F;Pull、Add&#x2F;Remove 及取交集并集和差集及更丰富操作，而且这些操作都是原子性的。在这个基础上，Redis 支持各种不同方式的排序。与 Memcached 一样，为了保证效率，数据都是缓存在内存中。区别的是 Redis 会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了主从同步。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dusays.com/227/"},"author":{"@type":"Person","name":"Teacher Du","image":{"@type":"ImageObject","url":"https://cdn.dusays.com/favicon.ico"},"url":"https://dusays.com/"},"publisher":{"@type":"Organization","name":"杜老师说","logo":{"@type":"ImageObject","url":"https://cdn.dusays.com/favicon.ico","width":192,"height":192}},"url":"https://dusays.com/227/","wordCount":270,"datePublished":"2020-06-01T16:00:00.000Z","dateModified":"2022-06-08T09:33:55.391Z","articleSection":"运维教程","keywords":"缓存","image":{"@type":"ImageObject","url":"https://cdn.dusays.com/favicon.ico","width":192,"height":192}}]</script>
-
-
-
-      
         <!--
   pjax重载区域接口：
   1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
@@ -5574,12 +4187,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   3.  .pjax-reload script
   4.  .pjax
 -->
-
-
-
 <script src="https://npm.elemecdn.com/volantis-static@0.0.1654736714924/libs/pjax/pjax.min.js"></script>
-
-
 <script>
     var pjax;
     document.addEventListener('DOMContentLoaded', function () {
@@ -5589,7 +4197,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
           "head title",
           "head meta[name=keywords]",
           "head meta[name=description]",
-          
           "#l_main",
           "#pjax-header-nav-list",
           ".pjax",
@@ -5598,13 +4205,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         ],
         cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
         timeout: 5000,
-        
       });
     });
-
     document.addEventListener('pjax:send', function (e) {
       //window.stop(); // 相当于点击了浏览器的停止按钮
-
       try {
         var currentUrl = window.location.pathname;
         var targetUrl = e.triggerElement.href;
@@ -5617,16 +4221,13 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
           });
         }
       } catch (error) {}
-
       // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
       volantis.pjax.method.send.start();
     });
-
     document.addEventListener('pjax:complete', function () {
       // 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
       volantis.pjax.method.complete.start();
     });
-
     document.addEventListener('pjax:error', function (e) {
       if(volantis.debug) {
         console.error(e);
@@ -5638,13 +4239,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       }
     });
 </script>
-
-      
     </div>
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    
     <!-- Custom Files bodyEnd end-->
   </body>
 </html>
