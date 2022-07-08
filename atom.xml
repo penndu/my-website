@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-07-07T03:52:29.502Z</updated>
+  <updated>2022-07-08T20:54:02.027Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KMS 客户端安装密钥</title>
+    <link href="https://dusays.com/482/"/>
+    <id>https://dusays.com/482/</id>
+    <published>2022-07-09T16:00:00.000Z</published>
+    <updated>2022-07-08T20:54:02.027Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>每个密钥都有时效性和激活次数限制，如果密钥失效或被用完，可联系杜老师获取最新可用密钥。</p></blockquote><span id="more"></span><h3 id="Windows-11-Pro"><a href="#Windows-11-Pro" class="headerlink" title="Windows 11 Pro"></a>Windows 11 Pro</h3><table><thead><tr><th>Number</th><th>KMS Client Setup Key</th></tr></thead><tbody><tr><td>1</td><td>VK7JG-NPHTM-C97JM-9MPGT-3V66T</td></tr></tbody></table><h3 id="Windows-10-Pro"><a href="#Windows-10-Pro" class="headerlink" title="Windows 10 Pro"></a>Windows 10 Pro</h3><table><thead><tr><th>Number</th><th>KMS Client Setup Key</th></tr></thead><tbody><tr><td>1</td><td>TPYNC-4J6KF-4B4GP-2HD89-7XMP6</td></tr><tr><td>2</td><td>2BXNW-6CGWX-9BXPV-YJ996-GMT6T</td></tr><tr><td>3</td><td>NRTT2-86GJM-T969G-8BCBH-BDWXG</td></tr><tr><td>4</td><td>XC88X-9N9QX-CDRVP-4XV22-RVV26</td></tr><tr><td>5</td><td>TNM78-FJKXR-P26YV-GP8MB-JK8XG</td></tr><tr><td>6</td><td>TR8NX-K7KPD-YTRW3-XTHKX-KQBP6</td></tr><tr><td>7</td><td>VK7JG-NPHTM-C97JM-9MPGT-3V66T</td></tr><tr><td>8</td><td>NPPR9-FWDCX-D2C8J-H872K-2YT43</td></tr><tr><td>9</td><td>W269N-WFGWX-YVC9B-4J6C9-T83GX</td></tr><tr><td>10</td><td>NYW94-47Q7H-7X9TT-W7TXD-JTYPM</td></tr><tr><td>11</td><td>NJ4MX-VQQ7Q-FP3DB-VDGHX-7XM87</td></tr><tr><td>12</td><td>MH37W-N47XK-V7XM9-C7227-GCQG9</td></tr><tr><td>13</td><td>NKJFK-GPHP7-G8C3J-P6JXR-HQRJR</td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;每个密钥都有时效性和激活次数限制，如果密钥失效或被用完，可联系杜老师获取最新可用密钥。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="系统" scheme="https://dusays.com/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>XMind 2022 专业思维导图脑图软件</title>
@@ -450,29 +473,6 @@
     
     
     <category term="奖品" scheme="https://dusays.com/tags/%E5%A5%96%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Linux 搭建 Minecraft 服务端</title>
-    <link href="https://dusays.com/462/"/>
-    <id>https://dusays.com/462/</id>
-    <published>2022-05-10T16:00:00.000Z</published>
-    <updated>2022-06-08T09:33:55.487Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言说想在 Linux 系统上搭建 Minecraft 服务。其实搭建 Minecraft 服务很简单，装对应版本 Java，使用命令启动核心文件即可。简单整理一下搭建步骤，有需要的小伙伴可参考一下~</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="版本对应"><a href="#版本对应" class="headerlink" title="版本对应"></a>版本对应</h2><p>本教程以最常用核心 Paper 为例，下面是版本的对应列表：</p><table><thead><tr><th>Paper Version</th><th>Recommended Java Version</th></tr></thead><tbody><tr><td>1.8 to 1.11</td><td>Java 8</td></tr><tr><td>1.12 to 1.16.4</td><td>Java 11</td></tr><tr><td>1.16.5</td><td>Java 16</td></tr><tr><td>1.17.1-1.18.1+</td><td>Java 17</td></tr></tbody></table></div><div class="story post-story"><h2 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h2><p>下面教程以最新版本 Paper-317 作为演示，</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/32eb0cee-d896-4297-9a08-625864087514' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="开始架设"><a href="#开始架设" class="headerlink" title="开始架设"></a>开始架设</h2><p>317 对应 1.18.2 版本，需使用 Java 17：</p><pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;download.oracle.com&#x2F;java&#x2F;17&#x2F;latest&#x2F;jdk-17_linux-x64_bin.tar.gztar -zxf jdk-17_linux-x64_bin.tar.gzmv jdk-17.0.3.1 &#x2F;usr&#x2F;local&#x2F;java<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>将下载好的 Paper 上传到服务器中，这里以<code>/opt/mc/</code>为例。其中<code>-Xms2G</code> 和<code>-Xmx2G</code> 为内存限制，根据实际情况修改：</p><pre class="line-numbers language-none"><code class="language-none">cd &#x2F;opt&#x2F;mc&#x2F;usr&#x2F;local&#x2F;java&#x2F;bin&#x2F;java -Xms2G -Xmx2G -jar paper.jar --nogui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>第一次启动时，Paper 会自动下载游戏服务端的运行文件，但会有个报错，执行以下的命令后，再次执行<code>/usr/local/java/bin/java -Xms2G -Xmx2G -jar paper.jar --nogui</code> 就行了：</p><pre class="line-numbers language-none"><code class="language-none">echo &quot;eula&#x3D;true&quot; &gt; &#x2F;opt&#x2F;mc&#x2F;eula.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如想使用非正版启动器登录游戏，还需关闭正版验证：</p><pre class="line-numbers language-none"><code class="language-none">sed -i &#39;s&#x2F;online-mode&#x3D;true&#x2F;online-mode&#x3D;false&#x2F; &#x2F;opt&#x2F;mc&#x2F;server.properties&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><div class="story post-story"><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><ol><li><p>相比官方的原版服务启动器，Paper 的性能优化更好，而且支持插件；</p></li><li><p>启动器运行后，会生成一大堆文件，插件请上传至 <code>plugins</code> 目录中；</p></li><li><p>服务运行期间，不可关闭终端，可通过 <code>screen</code> 命令运行；</p></li><li><p>如果使用云主机搭建 MC 服务，记得开启对应端口，端口设置可在 <code>server.properties</code> 文件中修改，默认为 25565。</p></li></ol></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;有小伙伴留言说想在 Linux 系统上搭建 Minecraft 服务。其实搭建 Minecraft 服务很简单，装对应版本 Java，使用命令启动核心文件即可。简单整理一下搭建步骤，有需要的小伙伴可参考一下~&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
