@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-07-13T08:48:30.647Z</updated>
+  <updated>2022-07-13T12:01:18.595Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://dusays.com/483/"/>
     <id>https://dusays.com/483/</id>
     <published>2022-07-12T16:00:00.000Z</published>
-    <updated>2022-07-13T08:48:30.647Z</updated>
+    <updated>2022-07-13T12:01:18.595Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>每个密钥都有时效性和激活次数限制，如果密钥失效或被用完，可联系杜老师获取最新可用密钥。KMS 可以使用杜老师提供的 <code>du.i234.me</code>！</p></blockquote><span id="more"></span><h3 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h3><p>OpenLiteSpeed 是 LiteSpeed EnterPrise 的社区版本，OpenLiteSpeed 的组件有官方进行主要维护和更新，提供商用企业级的体验。在性能上，LiteSpeed Tech 提供的 BenchMark 中，在 WordPress&#x2F;Joomla&#x2F;OpenCart&#x2F;ModSecurity和HTTP&#x2F;2以及小型静态文件的测试上都比 Apache HTTPD 和 Nginx 有这更好的表现：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/07/483-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/07/483-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/07/483-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol><li><p>OpenLiteSpeed 兼容 Apache 的伪静态格式，也就是说，可直接读取.htaccess文件；</p></li><li><p>OpenLiteSpeed 不支持低版本 PHP，如果您需要 PHP5.6以下版本，则不能使用 OpenLiteSpeed；</p></li><li><p>请不要为 OpenLiteSpeed 的 PHP 安装 OPcache 扩展，实测证明安装后会降低效率；</p></li><li><p>OpenLiteSpeed 相较 Nginx，PHP 的扩展性和可调配置略差。</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>最近有小伙伴反馈去不图床打开有一些慢，除了网络的问题外，页面处理速度多少也会有些影响，毕竟图床用户越来越多。经朋友的推荐，打算用 OpenLiteSpeed 替代 Nginx 以获取性能提升。</p></blockquote><span id="more"></span><h3 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h3><p>OpenLiteSpeed 是 LiteSpeed EnterPrise 的社区版本，OpenLiteSpeed 的组件有官方进行主要维护和更新，提供商用企业级的体验。在性能上，LiteSpeed Tech 提供的 BenchMark 中，在 WordPress&#x2F;Joomla&#x2F;OpenCart&#x2F;ModSecurity和HTTP&#x2F;2以及小型静态文件的测试上都比 Apache HTTPD 和 Nginx 有这更好的表现：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/07/483-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/07/483-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/07/483-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol><li><p>OpenLiteSpeed 兼容 Apache 的伪静态格式，也就是说，可直接读取.htaccess文件；</p></li><li><p>OpenLiteSpeed 不支持低版本 PHP，如果您需要 PHP5.6以下版本，则不能使用 OpenLiteSpeed；</p></li><li><p>请不要为 OpenLiteSpeed 的 PHP 安装 OPcache 扩展，实测证明安装后会降低效率；</p></li><li><p>OpenLiteSpeed 相较 Nginx，PHP 的扩展性和可调配置略差。</p></li></ol>]]></content>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;每个密钥都有时效性和激活次数限制，如果密钥失效或被用完，可联系杜老师获取最新可用密钥。KMS 可以使用杜老师提供的 &lt;code&gt;du.i234.me&lt;/code&gt;！&lt;/p&gt;
+&lt;p&gt;最近有小伙伴反馈去不图床打开有一些慢，除了网络的问题外，页面处理速度多少也会有些影响，毕竟图床用户越来越多。经朋友的推荐，打算用 OpenLiteSpeed 替代 Nginx 以获取性能提升。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
