@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-07-15T18:28:23.134Z</updated>
+  <updated>2022-07-16T18:30:11.339Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Caddy 的简介</title>
+    <link href="https://dusays.com/489/"/>
+    <id>https://dusays.com/489/</id>
+    <published>2022-07-30T16:00:00.000Z</published>
+    <updated>2022-07-16T18:30:11.339Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Caddy 是一个功能强大、可扩展的平台，用于为网站服务和应用程序提供服务，这些平台是用 Go 编写的。虽然相比 Nginx 等主流 Web 服务效率低，但其关注度非常高！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h2><p>Caddy 是一个支持 HTTP&#x2F;2 的跨平台 Web 服务，使用和配置都非常简单。Caddy 支持 HTTP&#x2F;2, IPv6&#x2F;Markdown&#x2F;WebSockets&#x2F;FastCGI 等。</p><p>Caddy 常用作 HTTPS 服务器，但它适用于任何长时间运行的 Go 程序。首先，它是一个运行 Go 应用程序的平台。Caddy 只是作为 Caddy 模块实现的 Go 程序。</p><p>Caddy 应用程序可立即受益于自动化文档、通过 API 进行的优雅在线配置更改，及与其他 Caddy 应用程序的统一。</p><p>虽然 JSON 是 Caddy 的原生配置语言，但 Caddy 可以接受来自配置适配器的输入，这些适配器基本上可以将选择的任何配置格式转换为 Caddyfile&#x2F;JSON 5&#x2F;YAML&#x2F;TOML&#x2F;Nginx 配置。</p><p>配置 Caddy 主要方法是通过其 API，但如果更喜欢配置文件，命令行界面也支持这些文件。</p><p>与现有的任何 Web 服务器相比，Caddy 暴露前所未有的控制水平。在 Caddy 中通常在内存中设置初始化类型的实际值，这些值为从 HTTP 处理程序和 TLS 握手到存储介质的所有内容提供支持。Caddy 可扩展性也非常可笑，它具有强大的插件系统，可以比其它 Web 服务器进行巨大的改进。</p><p>Caddy 几乎所有配置都包含在单个配置文档中，而不是像其它 Web 服务器那样分散在 CLI 标志和 env 变量及配置文件中。这使得管理服务器配置更加简单，并减少了隐藏的变量和因素。</p><p>以上是我从官方机翻过来的，感觉别扭可以找我获取英文原版！</p></div><div class="story post-story"><h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>Debian&#x2F;Ubuntu&#x2F;Raspbian 执行如下指令安装 Caddy：</p><pre class="line-numbers language-none"><code class="language-none">sudo apt install -y debian-keyring debian-archive-keyring apt-transport-httpscurl -1sLf &#39;https:&#x2F;&#x2F;dl.cloudsmith.io&#x2F;public&#x2F;caddy&#x2F;stable&#x2F;gpg.key&#39; | sudo gpg --dearmor -o &#x2F;usr&#x2F;share&#x2F;keyrings&#x2F;caddy-stable-archive-keyring.gpgcurl -1sLf &#39;https:&#x2F;&#x2F;dl.cloudsmith.io&#x2F;public&#x2F;caddy&#x2F;stable&#x2F;debian.deb.txt&#39; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;caddy-stable.listsudo apt updatesudo apt install caddy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Fedora&#x2F;RedHat&#x2F;CentOS 执行如下指令安装 Caddy：</p><pre class="line-numbers language-none"><code class="language-none">yum install yum-plugin-copryum copr enable @caddy&#x2F;caddyyum install caddy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div><div class="story post-story"><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>一个配置示例：</p><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;dusays.com                # Your site&#39;s addressext .html # Clean URLserrors &#123;    log ..&#x2F;errors.log             # Error log    404 error-404.html            # Custom error page&#125;fastcgi &#x2F;blog localhost:9000 php  # PHP backend<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>更简单的配置：</p><pre class="line-numbers language-none"><code class="language-none">localhostgzipbrowseext .htmlwebsocket &#x2F;echo catlog ..&#x2F;access.logheader &#x2F;api Access-Control-Allow-Origin *<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><div class="story post-story"><h2 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h2><pre class="line-numbers language-none"><code class="language-none">caddy run<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：如执行 <code>caddy</code>，该命令仅显示帮助文本。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Caddy 是一个功能强大、可扩展的平台，用于为网站服务和应用程序提供服务，这些平台是用 Go 编写的。虽然相比 Nginx 等主流 Web 服务效率低，但其关注度非常高！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="简介" scheme="https://dusays.com/tags/%E7%AE%80%E4%BB%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>通过群晖套件搭建内网邮件服务</title>
@@ -442,29 +465,6 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.18.2 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 PCL 启动器的下载资源，杜老师用的就是该整合版本，推荐小伙伴们下载使用。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的世界空岛生存「全版」</title>
-    <link href="https://dusays.com/465/"/>
-    <id>https://dusays.com/465/</id>
-    <published>2022-05-19T16:00:00.000Z</published>
-    <updated>2022-06-20T18:02:31.957Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>杜老师在家用机上搭建了一个 Minecraft 游戏平台，配置为 24H32G 内存，500M 的带宽，预估支持 100 人同时在线。如果您喜欢玩我的世界，又感觉自己玩没有意思，欢迎加入我们平台，大家一起 play 一起 happy！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li><p>本服务端仅支持 Java 版 Minecraft，内置常用插件，如箱子锁、身份验证、领地、家设置等；</p></li><li><p>服务端目前全版本支持，如果您已有客户端，只需进入多人游戏，输入杜老师服务器的地址 mc.dusays.com 即可「如果连接失败可加上端口 mc.dusays.com:25565」</p></li><li><p>我们将平台设置为空岛生存模式，困难难度，重生保留物品，并开启了防爆模式；</p></li><li><p>游戏无 GM 直接干预，没有任何隐藏收费项目，如果您喜欢我们的平台，可在本页面右侧的赞助图床进行资金支持；</p></li><li><p>我们本着共同游戏更多快乐原则，谢绝恶意玩家进入，请不要破坏他人的劳动成果，谢谢；</p></li><li><p>本游戏服长期有效，只要有一个人在线，游戏服就不会关闭，同时每周进行数据备份；</p></li><li><p>如有任何问题，可在评论区内留言，杜老师都会积极帮大家解决，最终解释权归杜老师说所有。欢迎加 QQ 群 454279233；</p></li><li><p>如果您没有客户端，可在评论区中留言，就会收到杜老师整合版客户端的下载链接。</p></li></ol></div><div class="story post-story"><h2 id="空岛指令"><a href="#空岛指令" class="headerlink" title="空岛指令"></a>空岛指令</h2><p>空岛常用命令：</p><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>&#x2F;is create</td><td>创建新的岛屿</td></tr><tr><td>&#x2F;is reset</td><td>重置岛屿</td></tr><tr><td>&#x2F;is setname NAME</td><td>修改岛屿名字</td></tr><tr><td>&#x2F;is go</td><td>回到自己岛屿</td></tr><tr><td>&#x2F;is settings</td><td>打开空岛权限管理菜单</td></tr><tr><td>&#x2F;is sethome</td><td>在空岛设置家</td></tr><tr><td>&#x2F;is home</td><td>回到空岛设置的家</td></tr><tr><td>&#x2F;is team invite PLAYER</td><td>邀请某个玩家加入你的空岛</td></tr><tr><td>&#x2F;is team accept</td><td>接受邀请</td></tr><tr><td>&#x2F;is team reject</td><td>拒绝邀请</td></tr><tr><td>&#x2F;is team kick PLAYER</td><td>将某玩家踢出你的空岛</td></tr><tr><td>&#x2F;is warp NAME</td><td>传至对应传送木牌</td></tr><tr><td>&#x2F;is warps</td><td>打开传送面板</td></tr><tr><td>&#x2F;is challenges</td><td>打开挑战菜单</td></tr><tr><td>&#x2F;is generator</td><td>打开刷石机的控制面板</td></tr></tbody></table></div><div class="story post-story"><h2 id="插件列表"><a href="#插件列表" class="headerlink" title="插件列表"></a>插件列表</h2><p>截止正式上线，服务器所使用的插件及版本如下：</p><table><thead><tr><th>名称</th><th>版本</th></tr></thead><tbody><tr><td>AuthMe</td><td>5.6.0-beta2</td></tr><tr><td>BentoBox</td><td>1.20.1</td></tr><tr><td>CMILib</td><td>1.1.2.5</td></tr><tr><td>CoreProtect</td><td>21.2</td></tr><tr><td>Dynmap</td><td>3.4-beta-3-spigot</td></tr><tr><td>EssentialsX</td><td>2.20.0-dev+5-d891268</td></tr><tr><td>FluffyMachines</td><td>Build 4 zh-CN(baoad) (git 228b135)</td></tr><tr><td>item-nbt-api-plugin</td><td>2.9.2</td></tr><tr><td>LuckPerms-Bukkit</td><td>5.4.14</td></tr><tr><td>MiraiMC-Bukkit</td><td>1.6.1</td></tr><tr><td>NekoMaid</td><td>0.2.5</td></tr><tr><td>OpenInv</td><td>4.1.10</td></tr><tr><td>PistonMOTD</td><td>5.0.1</td></tr><tr><td>PlaceholderAPI</td><td>2.11.1</td></tr><tr><td>PlugManX</td><td>2.3.0</td></tr><tr><td>QQconnect</td><td>3.1-SNAPSHOT</td></tr><tr><td>Slimefun</td><td>v2022.04-release</td></tr><tr><td>UltimateAntibot-UNIVERSAL</td><td>3.3</td></tr><tr><td>Uniporter</td><td>1.3.3-SNAPSHOT</td></tr><tr><td>Vault</td><td>1.7.3-b131</td></tr><tr><td>ViaBackwards</td><td>4.2.1</td></tr><tr><td>ViaRewind</td><td>2.0.2</td></tr><tr><td>ViaVersion</td><td>4.2.1</td></tr><tr><td>worldedit-bukkit</td><td>7.2.10</td></tr><tr><td>XConomy-Bukkit</td><td>2.18.4</td></tr></tbody></table><div class="timeline"><p class='p h2'>更新记录</p><div class="timenode"><div class="meta"><p><p>2022 年 05 月 14 日</p></p></div><div class="body"><p>新版本试运营；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 05 月 16 日</p></p></div><div class="body"><p>正式上线；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 05 月 18 日</p></p></div><div class="body"><p>加入 ProtocolLib 版本 4.8.0 插件；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 05 月 20 日</p></p></div><div class="body"><p>加入 MiaoChat 版本 2.1.2 插件；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 06 月 18 日</p></p></div><div class="body"><p>更新一大堆的插件；</p></div></div><div class="timenode"><div class="meta"><p><p>2022 年 06 月 20 日</p></p></div><div class="body"><p>更新核心文件。</p></div></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;杜老师在家用机上搭建了一个 Minecraft 游戏平台，配置为 24H32G 内存，500M 的带宽，预估支持 100 人同时在线。如果您喜欢玩我的世界，又感觉自己玩没有意思，欢迎加入我们平台，大家一起 play 一起 happy！&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
