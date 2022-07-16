@@ -63,6 +63,29 @@
   </entry>
   
   <entry>
+    <title>Argument list too long 原因与解决思路</title>
+    <link href="https://dusays.com/487/"/>
+    <id>https://dusays.com/487/</id>
+    <published>2022-07-24T16:00:00.000Z</published>
+    <updated>2022-07-16T19:19:20.543Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近在整理图床文件时，因为文件数量太多，执行 cp 命令提示 Argument list too long。简单说下其原因与解决思路！</p></blockquote><span id="more"></span><h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>在 Linux 下使用 cp&#x2F;mv&#x2F;rm 等命令时，经常会碰到 Argument list too long 错误。</p><p>这个主要是因为要 cp&#x2F;mv&#x2F;rm 的文件个数太多而导致的。</p><div class="story post-story"><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>Argument list too long 这个问题的解决主要会用到两个命令 find 和 xargs。</p><p>这里以删除 dusays 目录下以 com 后缀的文件为例：</p><pre class="line-numbers language-none"><code class="language-none">find dusays&#x2F; -name &quot;*.com&quot; | xargs -i rm -f &#123;&#125;find dusays&#x2F; -name &quot;*.com&quot; -exec rm -f &#123;&#125; \;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>复制 dusays 目录下以 com 后缀文件到 7bu 目录：</p><pre class="line-numbers language-none"><code class="language-none">find dusays&#x2F; -name  &quot;*.com&quot; | xargs -i cp &#123;&#125; 7bu&#x2F;find dusays&#x2F; -name  &quot;*.com&quot; -exec cp &#123;&#125; 7bu&#x2F; \;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>xargs 用于给其它命令传递参数的一个过滤器，也是组合多命令的一个工具。而-i 参数会将 xargs 的内容赋值给{}。</p></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近在整理图床文件时，因为文件数量太多，执行 cp 命令提示 Argument list too long。简单说下其原因与解决思路！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="问题" scheme="https://dusays.com/tags/%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>通过群晖套件搭建内网邮件服务</title>
     <link href="https://dusays.com/484/"/>
     <id>https://dusays.com/484/</id>
@@ -442,29 +465,6 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Minecraft 默认材质包是不是看着厌烦了，今天杜老师分享一个高清材质包，只要显卡能带的动，就一定会喜欢，正文是材质包的下载及使用方法。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="游戏" scheme="https://dusays.com/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的世界 HMCL 启动器 1.18.2 整合版资源分享</title>
-    <link href="https://dusays.com/467/"/>
-    <id>https://dusays.com/467/</id>
-    <published>2022-05-25T16:00:00.000Z</published>
-    <updated>2022-06-08T09:33:55.487Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>有小伙伴留言询问 MOD 和插件如何添加，目前 1.18.2 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 HMCL 启动器的下载资源，有需要的小伙伴快进来看看。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="游戏下载"><a href="#游戏下载" class="headerlink" title="游戏下载"></a>游戏下载</h2><p>HMCL 启动器下载地址：</p><span class='btn regular'><a class="button" href='https://flowus.cn/share/550d6017-728a-4c81-b334-7f543c0737bb' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="包含模组"><a href="#包含模组" class="headerlink" title="包含模组"></a>包含模组</h2><p>目前整合以下模组：</p><table><thead><tr><th>功能</th><th>模组</th></tr></thead><tbody><tr><td>3D 皮肤包</td><td>3dskinlayers-fabric-1.4.2-mc1.18.2.jar</td></tr><tr><td>MASA 前置包</td><td>malilib-fabric-1.18.2-0.12.1.jar</td></tr><tr><td>MASA 迷你 HUD</td><td>minihud-fabric-1.18.2-0.22.0.jar</td></tr><tr><td>MASA 鼠标手势包</td><td>itemscroller-fabric-1.18.2-0.16.0.jar</td></tr><tr><td>MOD 菜单包</td><td>modmenu-3.1.0.jar</td></tr><tr><td>REI 模组包</td><td>RoughlyEnoughItems-8.0.442.jar</td></tr><tr><td>REI 的前置</td><td>architectury-4.1.36.jar</td></tr><tr><td>REI 的前置</td><td>cloth-config-6.2.57-fabric.jar</td></tr><tr><td>WI 变焦包</td><td>WI-Zoom-1.3-MC1.18.2.jar</td></tr><tr><td>世界地图</td><td>XaerosWorldMap_1.20.5_Fabric_1.18.2.jar</td></tr><tr><td>优化启动</td><td>smoothboot-fabric-1.18.2-1.7.0.jar</td></tr><tr><td>优化方块实体</td><td>enhancedblockentities-0.6+1.18.2.jar</td></tr><tr><td>优化视角外的实体</td><td>entityculling-fabric-mc1.18-1.5.0.jar</td></tr><tr><td>你在看什么呢</td><td>wthit-fabric-4.8.0.jar</td></tr><tr><td>关闭提示</td><td>IKnowWhatImDoing-5.0.0-forge.jar</td></tr><tr><td>前置</td><td>fabric-api-0.48.0+1.18.2.jar</td></tr><tr><td>动态的 FPS</td><td>dynamic-fps-2.1.0.jar</td></tr><tr><td>小地图框</td><td>Xaeros_Minimap_22.4.0_Fabric_1.18.2.jar</td></tr><tr><td>我可以挖它吗</td><td>can-i-mine-this-block-1.2.0.jar</td></tr><tr><td>整理</td><td>InventoryProfilesNext-fabric-1.18.2-1.3.5.jar</td></tr><tr><td>更好的 F3</td><td>BetterF3-1.2.4-Fabric-1.18.2.jar</td></tr><tr><td>移动物品动画</td><td>Fabric-1.18-SmoothSwapping-0.4.4.jar</td></tr><tr><td>自定义局域网联机</td><td>lanserverproperties-1.7.1-fabric.jar</td></tr><tr><td>苹果皮肤</td><td>appleskin-fabric-mc1.18.2-2.4.0.jar</td></tr><tr><td>高清修复</td><td>OptiFine_1.18.2_HD_U_H6.jar</td></tr><tr><td>高清修复前置</td><td>optifabric-1.13.0.jar</td></tr><tr><td>黑色加载界面</td><td>dark-loading-screen-1.6.11.jar</td></tr><tr><td>MASA 投影包</td><td>litematica-fabric-1.18.2-0.11.1.jar</td></tr><tr><td>MASA 辅助包</td><td>tweakeroo-fabric-1.18.2-0.13.1.jar</td></tr><tr><td>信息提示修复</td><td>tooltipfix-1.0.4-1.18.jar</td></tr><tr><td>创世之神</td><td>worldedit-mod-7.2.10.jar</td></tr><tr><td>动态音效过滤</td><td>DynamicSoundFilters-1.3.0+1.18.2.jar</td></tr><tr><td>吃东西的动画</td><td>eating-animation-1.5.jar</td></tr><tr><td>弹道预览</td><td>Trajectory+Preview-1.0-1.18.1.jar</td></tr><tr><td>拾取提示</td><td>PickUpNotifier-v3.2.0-1.18.2-Fabric.jar</td></tr><tr><td>拾取提示前置</td><td>ForgeConfigAPIPort-v3.2.0-1.18.2-Fabric.jar</td></tr><tr><td>拾取提示前置</td><td>PuzzlesLib-v3.3.1-1.18.2-Fabric.jar</td></tr><tr><td>物品栏 HUD</td><td>InventoryHUD-fabric-[1.18]+-3.4.2.jar</td></tr><tr><td>盔甲音效调整</td><td>ArmorSoundTweak-5.0.0-fabric.jar</td></tr><tr><td>真实第一人称</td><td>firstperson-fabric-2.1.0-mc1.18-pre1.jar</td></tr><tr><td>真实第一人称前置</td><td>notenoughanimations-fabric-1.5.0-mc1.18.2.jar</td></tr><tr><td>破坏进度</td><td>breakprogress-1.0.1.jar</td></tr><tr><td>穿草攻击</td><td>cleancut-mc1.18-3.0-forge.jar</td></tr><tr><td>美观血条</td><td>HealthOverlay-1.18.1-6.0.1.jar</td></tr><tr><td>聊天显示头像</td><td>chat_heads-0.6.0-fabric-1.18.1.jar</td></tr><tr><td>脚步声音</td><td>PresenceFootsteps-1.5.0.jar</td></tr><tr><td>自动登录</td><td>AutoLoginCommand-1.0.1.jar</td></tr><tr><td>自动登录前置</td><td>fabric-language-kotlin-1.7.1+kotlin.1.6.10.jar</td></tr><tr><td>可自定义准星</td><td>custom-crosshair-mod-v1.3.9-fabric-mc1.18.2.jar</td></tr><tr><td>落叶</td><td>fallingleaves-1.10.0+1.18.2.jar</td></tr><tr><td>边走边拿</td><td>InvMove-1.18-0.6.2-Fabric.jar</td></tr><tr><td>附魔描述</td><td>EnchantmentDescriptions-Fabric-1.18.2-10.0.2.jar</td></tr><tr><td>附魔描述前置</td><td>Bookshelf-Fabric-1.18.2-13.0.8.jar</td></tr><tr><td>音乐</td><td>AllMusic-2.5.11.jar</td></tr><tr><td>飞行期间旋转视角</td><td>cool_elytra-1.3.1.jar</td></tr></tbody></table></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;有小伙伴留言询问 MOD 和插件如何添加，目前 1.18.2 版支持的 MOD 和插件非常少，为了方便小伙伴的使用，特此提供整合版本，本文为 HMCL 启动器的下载资源，有需要的小伙伴快进来看看。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
