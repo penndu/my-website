@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-07-19T17:20:57.822Z</updated>
+  <updated>2022-07-20T08:55:14.627Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中文博客列表导航项目</title>
+    <link href="https://dusays.com/494/"/>
+    <id>https://dusays.com/494/</id>
+    <published>2022-08-14T16:00:00.000Z</published>
+    <updated>2022-07-20T08:55:14.627Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这是木木木木小朋友的一个项目，之前让我推荐来着，趁着最近集中推荐公益项目，就一起发出来好了。这个项目立志要链接全部的中文独立博客，感兴趣的小伙伴可去项目中找找是否收录了自己的博客！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="项目原文地址"><a href="#项目原文地址" class="headerlink" title="项目原文地址"></a>项目原文地址</h2><p>原文地址：</p><div class="tag link"><a class="link-card" title="SP1.中文博客列表导航项目" href="https://www.linlinzzo.top/sp1/"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></div><div class="right"><p class="text">SP1.中文博客列表导航项目</p><p class="url">https://www.linlinzzo.top/sp1/</p></div></a></div><p>项目地址「鼠标放在下面即可查看」</p><psw>https://github.com/zh-blogs/blog-daohang</psw></div><div class="story post-story"><h2 id="这项目是什么"><a href="#这项目是什么" class="headerlink" title="这项目是什么"></a>这项目是什么</h2><p>这个项目立志要链接全部的中文独立博客「做中文博客的全集」</p><p>之后会向上游库提交它们没有收录的博客网站，互通有无。</p></div><div class="story post-story"><h2 id="如何发现博客"><a href="#如何发现博客" class="headerlink" title="如何发现博客"></a>如何发现博客</h2><ol><li><p>根据链接，可以从种子博客中找到十多个不等的网站地址，这些地址中符合要求的会自动成为新种子博客。理论上说，博主无需提交网址，就可以被发现；</p></li><li><p>同时会使用一些上游库。</p></li></ol></div><div class="story post-story"><h2 id="如何支持项目"><a href="#如何支持项目" class="headerlink" title="如何支持项目"></a>如何支持项目</h2><ol><li><p>可为本项目做宣传，让更多人知道项目；</p></li><li><p>程序员可帮忙实现本项目的功能目标，也可以加入共同维护地址库。</p></li></ol></div><div class="story post-story"><h2 id="博客收录标准"><a href="#博客收录标准" class="headerlink" title="博客收录标准"></a>博客收录标准</h2><ul><li><p>中文网站。</p></li><li><p>是博客网站且有 3 篇及以上公开博文。</p></li><li><p>具有博客网站基本属性：</p><ol><li>具有主观和知识积累性，尊重科学、公认事实、约定俗成、伦理道德，在给出依据和尊重他人的前提下挑战权威除外；</li><li>具有独立和自主性，拥有独立域名；</li><li>有交互性，提供评论功能或提供博主的个人联系方式；</li><li>收录博客网站时，会以非专业的角度评定网站是否符合收录标准，不能排除存在疏漏的可能性。</li></ol></li><li><p>不在本项目收录范围内：</p><ol><li>内容农场；</li><li>资源分享。</li></ol></li></ul></div><div class="story post-story"><h2 id="需要注意细节"><a href="#需要注意细节" class="headerlink" title="需要注意细节"></a>需要注意细节</h2><ol><li><p>在头部用 link 标签指向 RSS，或通过告诉项目你使用的网站程序尝试该程序默认的 feed 地址；</p></li><li><p>用 generator 元数据标签告诉项目你的网站所使用的程序。</p></li></ol></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是木木木木小朋友的一个项目，之前让我推荐来着，趁着最近集中推荐公益项目，就一起发出来好了。这个项目立志要链接全部的中文独立博客，感兴趣的小伙伴可去项目中找找是否收录了自己的博客！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>初柒科技致力于设计与开发</title>
@@ -36,6 +59,29 @@
     
     
     <category term="设计" scheme="https://dusays.com/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图床转换工具推荐</title>
+    <link href="https://dusays.com/492/"/>
+    <id>https://dusays.com/492/</id>
+    <published>2022-08-08T16:00:00.000Z</published>
+    <updated>2022-07-20T08:55:14.627Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>前几天和小伙伴有聊到图床迁移，恰好遇到 BBing 童靴编写的图床转换工具，推荐给需要做图床迁移的小伙伴！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="原文地址"><a href="#原文地址" class="headerlink" title="原文地址"></a>原文地址</h2><p>具体用法详见工具原文：</p><div class="tag link"><a class="link-card" title="图床转换工具-picvt" href="https://bbing.com.cn/202205/aboutpicvt/"><div class="left"><img src="https://bu.dusays.com/2022/06/20/62affefe3f2d4.png" class="lazyload" data-srcset="https://bu.dusays.com/2022/06/20/62affefe3f2d4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></div><div class="right"><p class="text">图床转换工具-picvt</p><p class="url">https://bbing.com.cn/202205/aboutpicvt/</p></div></a></div></div><div class="story post-story"><h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><p>源码地址「鼠标放在下面即可查看」</p><psw>https://github.com/caibingcheng/picvt</psw></div><div class="story post-story"><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>命令格式：</p><pre class="line-numbers language-none"><code class="language-none">python3 .&#x2F;picvt.py -D ..&#x2F;blog&#x2F;content&#x2F;posts&#x2F; -F imgtu -T github -t **** --repo resources --branch main --path images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>更多参数请参考 <code>python3 ./picvt.py -h</code>：</p><pre class="line-numbers language-none"><code class="language-none">usage: picvt.py [-h] [-u USER] [-p PASSWORD] [-t TOKEN]                [-f FORMAT [FORMAT ...]] [-r RETRY] [--repo REPO]                [--branch BRANCH] [--path PATH] -D DIR -F &#123;imgtu,github&#125; -T                &#123;imgtu,github&#125;optional arguments:  -h, --help            show this help message and exit  -u USER, --user USER  target user  -p PASSWORD, --password PASSWORD                        target password  -t TOKEN, --token TOKEN                        target token  -f FORMAT [FORMAT ...], --format FORMAT [FORMAT ...]                        file format  -r RETRY, --retry RETRY                        retry times  --repo REPO           repo name  --branch BRANCH       branch name  --path PATH           content path  -D DIR, --dir DIR     target dir  -F &#123;imgtu,github&#125;, --from &#123;imgtu,github&#125;                        from  -T &#123;imgtu,github&#125;, --to &#123;imgtu,github&#125;                        to<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><div class="story post-story"><h2 id="支持图床"><a href="#支持图床" class="headerlink" title="支持图床"></a>支持图床</h2><ul><li>GitHub 下载至本地</li></ul><pre class="line-numbers language-none"><code class="language-none">python3 .&#x2F;picvt.py -D ..&#x2F;blog&#x2F;content&#x2F; -F github -T local --path &#x2F;home&#x2F;xxxx&#x2F;projects&#x2F;blog&#x2F;content&#x2F;statics&#x2F; --link &#x2F;statics&#x2F; -r 3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>本地上传去不</li></ul><pre class="line-numbers language-none"><code class="language-none">python3 .&#x2F;picvt.py -D ..&#x2F;blog&#x2F;content&#x2F; -F github -T local --path &#x2F;home&#x2F;xxxx&#x2F;projects&#x2F;blog&#x2F;content&#x2F;statics&#x2F; --link &#x2F;statics&#x2F; -r 3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;前几天和小伙伴有聊到图床迁移，恰好遇到 BBing 童靴编写的图床转换工具，推荐给需要做图床迁移的小伙伴！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
@@ -419,52 +465,6 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;应柯察金小朋友的需求，编写一篇 Windows 通过 WebDAV 挂载 Cloudreve 的教程。Cloudreve 可让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="电脑" scheme="https://dusays.com/tags/%E7%94%B5%E8%84%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>坚持更新博客的动力是什么</title>
-    <link href="https://dusays.com/474/"/>
-    <id>https://dusays.com/474/</id>
-    <published>2022-06-15T16:00:00.000Z</published>
-    <updated>2022-06-22T06:25:51.550Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>博客圈子不断有新人的加入，也不断有老人退出。几乎每个月杜老师都会检查一下友情链接，看看哪些网站测掉了杜老师说的链接。而在这过程中，总会发现一些网站长久没有更新，还有一些网站，已然无法访问~</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="强迫症者"><a href="#强迫症者" class="headerlink" title="强迫症者"></a>强迫症者</h2><p>经常有小伙伴说文章的时间错了，为什么杜老师一直在更新穿越文「提前发布」</p><p>其实杜老师就是个强迫症加拖延症的患者，曾在《<a href="https://dusays.com/about/">留言</a>》中声称每三天更新一篇，不做到会浑身难受。</p><p>但有时候真的不知道该写什么好，有的时候又研究出有意思的技术，加上一些小伙伴的需求，总会突然更新多篇，而 Hexo 并没有定时发布的功能，所以杜老师就按照排期，一并发了出来，这就是各位小伙伴看到的穿越文！</p><p>不知道有多少的小伙伴和杜老师一样，通过强迫症迫使自己去更新博客，如果恰巧和杜老师一样，欢迎留言让杜老师知道，不是一个人在战斗！</p></div><div class="story post-story"><h2 id="习惯记录"><a href="#习惯记录" class="headerlink" title="习惯记录"></a>习惯记录</h2><p>朋友圈里不少的小伙伴，喜欢研究一些新奇的小玩意，有时候还会找到我交流。</p><p>在研究的过程中难免会遇到一些问题，每次解决之后，都会留下一篇笔记文章。</p><p>还有的小伙伴，会经常记录自己的生活。杜老师站在读者的角度，更加了解这些小伙伴的生活！</p><p>杜老师就非常喜欢记录，但自己的文笔不好，所以不会经常记录生活，加上本博主题就是技术分享，所以在本博中很少可以看到杜老师的生活分享，以后也许会有，敬请期待！</p></div><div class="story post-story"><h2 id="希望盈利"><a href="#希望盈利" class="headerlink" title="希望盈利"></a>希望盈利</h2><p>杜老师的友链圈中，还有一类博友，他们喜欢收集一些资源，然后付费分享。</p><p>或者提供一些收费服务，亦或站中加入大量广告。</p><p>首先杜老师要说明一点，本人不反感任何盈利性行为，毕竟建站本身就需要成本的。有些人可能不赞同，毕竟现在免费资源遍地都是。但大家都需要知道，维护时的精力和时间也算是成本，所以只要合理合法，大家应该都会支持。</p><p>杜老师目前的收费项目只有图床，实在是没办法，运营成本太大！而目前的付费收入远远不够支出，不过好在没有人再传违禁图片了，图片审核的成本降低了，而且每天不用提心吊胆担心链接被封，也知足了！</p></div><div class="story post-story"><h2 id="喜欢互动"><a href="#喜欢互动" class="headerlink" title="喜欢互动"></a>喜欢互动</h2><p>常来杜老师博客的小伙伴都知道，在本博的每条评论，杜老师都会用心去回复，并且都会回访、留言。</p><p>杜老师很喜欢十年之约的一句话：一个人的寂寞，一群人的狂欢。</p><p>在社交平台如此繁多的时代，只有互访才能让博客不寂寞。</p><p>也喜欢杜老师说的博文，可以给小伙伴带来更多话题，让更多小伙伴加入互动，实现一群人的狂欢。</p></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;博客圈子不断有新人的加入，也不断有老人退出。几乎每个月杜老师都会检查一下友情链接，看看哪些网站测掉了杜老师说的链接。而在这过程中，总会发现一些网站长久没有更新，还有一些网站，已然无法访问~&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="网站搭建" scheme="https://dusays.com/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="博客" scheme="https://dusays.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刃 7000P 内存频率限制 2400 的解决方法</title>
-    <link href="https://dusays.com/473/"/>
-    <id>https://dusays.com/473/</id>
-    <published>2022-06-12T16:00:00.000Z</published>
-    <updated>2022-06-08T09:33:55.491Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>经常来杜老师博客的小伙伴可能记得，杜老师买了台联想刃 7000P，没想到刚过半年内存就不够用了。巧的是恰逢 618，正好采购内存做个升级，但插入内存后发现一些问题，于是有了这篇教程。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>杜老师的电脑自带内存是两条金士顿 16G3200MHz，原厂的内存价格比较高，所以就到某东上买了同品牌同频率的：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><div class="story post-story"><h2 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h2><p>插上新内存后，发现新内存频率仅有 2400MHz，且自带的内存也降为 2400MHz，开始以为是新内存问题，杜老师在另外一台电脑上测试新内存发现确实是 3200MHz。</p><p>询问了官方客服后，了解到刃 7000P 仅支持 JEDEC 的内存，而杜老师买的是市面上常见的 XMP 内存，这种内存需设置超频才能达到 3200MHz「JEDEC 和 XMP 的区别，请自行搜索下，如有不懂，欢迎留言交流」</p><p>内存主频和 CPU 主频一样，被用来表示内存的速度，它代表着该内存所能达到的最高工作频率。内存主频是以 MHz 为单位来计量的。内存主频越高在一定程度上代表着内存所能达到的速度越快。内存主频决定着该内存最高能在什么样的频率正常工作。</p><p>由于决定内存性能的核心因素有内存容量、带宽、频率，而如果在同代内存，相同的容量条件下，内存频率越高性能越好。如果是不同代内存，如 DDR3 和 DDR4 内存，如果是相同容量下，DDR4 的内存性能肯定在 DDR3 之上，毕竟 DDR4 内存频率均在 DDR3 之上，且新一代内存还在带宽上有升级，功耗更低。</p><p>其实 2400MHz 对普通用户来说很够用了，但杜老师对电脑的性能要求较高。</p><p>原厂的内存价格贵不说，还经常性断货，既然超频可以解决，为什么不搞一下呢？</p></div><div class="story post-story"><h2 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h2><p>官方下载地址如下：</p><span class='btn regular'><a class="button" href='https://download.amd.com/Desktop/AMD-Ryzen-Master.exe' title='下载地址'>下载地址</a></span><p>如果无法正常下载，可以下载杜老师转存的：</p><span class='btn regular'><a class="button" href='https://flowus.cn/penn/share/f7b8bb2c-5fb3-4bf7-8501-76344c38c213' title='下载地址'>下载地址</a></span></div><div class="story post-story"><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>安装好工具后，打开时会出现警告提示。因为超频都是通过加压方式实现，可能会对硬件有所影响，但这款官方的超频工具十分安全，我们点击确定即可：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>为了方便用户使用，工具提供了基础视图和高级视图两种模式，如果需要操作内存，则需点击进入高级视图：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在高级视图的左侧调整运行模式，这里我们选择了 Creator Mode。在内存控制的右侧，点击已排除项，即可切换成已包含「后面的自动推送和手动推送建议默认」最后点击下方应用，根据提示重启系统：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>重启后打开任务管理器，切换到性能栏的内存项，即可看到频率已变成 3200MHz：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/473-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/473-5.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/473-5.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div><div class="story post-story"><h2 id="最新提示"><a href="#最新提示" class="headerlink" title="最新提示"></a>最新提示</h2><p>经过几天测试，发现内存频率并未真正提升，通过 AMD Software: Adrenalin Edition 查看仍为 2400。而 CPU-Z 测试结果为原厂 3200，后扩展仍为 2400。最后杜老师选择了退款，重新购入了另一款内存，开机后皆运行在 3200，且系统稳定未报错。购买地址如下：</p><psw>https://item.jd.com/100014448188.html</psw></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;经常来杜老师博客的小伙伴可能记得，杜老师买了台联想刃 7000P，没想到刚过半年内存就不够用了。巧的是恰逢 618，正好采购内存做个升级，但插入内存后发现一些问题，于是有了这篇教程。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
