@@ -6,7 +6,7 @@
   <link href="https://dusays.com/atom.xml" rel="self"/>
   
   <link href="https://dusays.com/"/>
-  <updated>2022-07-20T08:55:14.627Z</updated>
+  <updated>2022-07-22T03:12:40.279Z</updated>
   <id>https://dusays.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过 Docker 自建 Lsky Pro 图片审核接口</title>
+    <link href="https://dusays.com/495/"/>
+    <id>https://dusays.com/495/</id>
+    <published>2022-08-17T16:00:00.000Z</published>
+    <updated>2022-07-22T03:12:40.279Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>此篇为穿越文，实际的发布时间为 7 月 22 日，今天是星空小朋友生日，谨以此文祝他生日快乐。另外感谢 Arcitcgn 小朋友的夺命连环催，成功治好杜老师拖更的毛病！</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="NSFW-是什么"><a href="#NSFW-是什么" class="headerlink" title="NSFW 是什么"></a>NSFW 是什么</h2><p>NSFW 是一个英文网络用语，是 Not Safe For Work 或者 Not Suitable For Work 的缩写，意思是某个网络内容不适合上班时间浏览。</p><p>它通常被用于标记那些带有淫秽色情、暴力血腥、极端另类等内容的邮件、视频、博客、论坛帖子里等，以免读者不恰当的点击浏览。常见的用法是，在链接的后面，加上一对括号，括号中标记 NSFW。</p></div><div class="story post-story"><h2 id="部署方法"><a href="#部署方法" class="headerlink" title="部署方法"></a>部署方法</h2><p>使用如下命令部署，其中<code>-p 3000:3000</code> 是端口映射，<code>--restart=always</code> 是自动重启：</p><pre class="line-numbers language-none"><code class="language-none">docker run -p 3000:3000 --restart&#x3D;always penndu&#x2F;nsfw-api:latest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如 Docker Hub 下载较慢，也可使用下面阿里云镜像源：</p><pre class="line-numbers language-none"><code class="language-none">docker run -p 3000:3000 --restart&#x3D;always registry.cn-beijing.aliyuncs.com&#x2F;dusays&#x2F;nsfw-api:latest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><div class="story post-story"><h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><p><strong>POST &#x2F;classify</strong></p><p><strong>请求示例</strong></p><pre class="line-numbers language-none"><code class="language-none">POST &#x2F;classify HTTP&#x2F;1.1Content-Type: multipart&#x2F;form-data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>在 <code>image</code> 字段中提供图像。</p><p><strong>响应示例</strong></p><pre class="line-numbers language-none"><code class="language-none">HTTP&#x2F;1.1 200 OKContent-Type: application&#x2F;json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">&#123;    &quot;porn&quot;: 0.59248286485672,    &quot;sexy&quot;: 0.39802199602127075,    &quot;hentai&quot;: 0.006243097595870495,    &quot;neutral&quot;: 0.0031403270550072193,    &quot;drawing&quot;: 0.00011181648733327165&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><div class="story post-story"><h2 id="图床演示"><a href="#图床演示" class="headerlink" title="图床演示"></a>图床演示</h2><p>管理员进入后台角色组设置，选择指定的角色组点击编辑，进入图片审核标签，开启图片审核，设置审核动作，驱动调整为 NsfwJs，接口地址设置为 <code>http://127.0.0.1:3000/classify</code>，属性为 <code>image</code>，阈值为 <code>60</code>「以上参数根据实际情况调整」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/08/495-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/08/495-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/08/495-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;此篇为穿越文，实际的发布时间为 7 月 22 日，今天是星空小朋友生日，谨以此文祝他生日快乐。另外感谢 Arcitcgn 小朋友的夺命连环催，成功治好杜老师拖更的毛病！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>中文博客列表导航项目</title>
@@ -450,29 +473,6 @@
     
     
     <category term="统计" scheme="https://dusays.com/tags/%E7%BB%9F%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过 WebDAV 挂载 Cloudreve「Windows 篇」</title>
-    <link href="https://dusays.com/475/"/>
-    <id>https://dusays.com/475/</id>
-    <published>2022-06-18T16:00:00.000Z</published>
-    <updated>2022-06-20T18:02:31.957Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>应柯察金小朋友的需求，编写一篇 Windows 通过 WebDAV 挂载 Cloudreve 的教程。Cloudreve 可让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。</p></blockquote><span id="more"></span><div class="story post-story"><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>杜老师家里有 NAS 服务器，也深知网盘的运营成本「多少大厂前辈最后都一一跑路了」</p><p>本次演示用的是柯察金小朋友的深海云盘，这是OCP1公益计划的项目之一，感兴趣的小伙伴可以去看看。</p><p>首先说下使用体验，除了容量小了一点，上传下载速度都很不错，离线下载不太好用。其实 WebDAV 挂载效果也不太理想。不过作为小文件临时存储点，还是很不错的。</p><p>最后分享一下云盘地址，点击 <a href="https://pan.arcitcgn.cn/">这里</a> 访问。</p></div><div class="story post-story"><h2 id="挂载过程"><a href="#挂载过程" class="headerlink" title="挂载过程"></a>挂载过程</h2><p>登录账号后点击左侧的 WebDAV 项，再点击创建新账号：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-1.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-1.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/475-1.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>在弹出的窗口中输入备注名，如不想直接访问根目录，还可设置相对根目录的路径「需要注意的是，目录需要提前建好」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-2.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-2.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/475-2.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>上一步操作确定后，可看到平台自动生成的密码：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-3.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-3.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/475-3.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>切换到本地资源管理器，点击右键选择添加一个网络位置：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-4.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-4.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/475-4.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>一路下一步后，输入 WebDAV 的地址：</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-5.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-5.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/475-5.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div><p>根据提示输入登录名和密码「密码为上面平台自动生成的」</p><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='https://cdn.dusays.com/2022/06/475-6.jpg/1' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://cdn.dusays.com/2022/06/475-6.jpg/1" class="lazyload" data-srcset="https://cdn.dusays.com/2022/06/475-6.jpg/1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;应柯察金小朋友的需求，编写一篇 Windows 通过 WebDAV 挂载 Cloudreve 的教程。Cloudreve 可让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="电脑" scheme="https://dusays.com/tags/%E7%94%B5%E8%84%91/"/>
     
   </entry>
   
