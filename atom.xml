@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, Teacher Du</rights>
   <subtitle>运维技术分享博客</subtitle>
   <title>杜老师说</title>
-  <updated>2026-07-03T19:24:11.570Z</updated>
+  <updated>2026-07-04T09:21:42.679Z</updated>
   <entry>
     <author>
       <name>Teacher Du</name>
@@ -29,7 +29,47 @@
 </blockquote>]]>
     </summary>
     <title>推荐酷鸭数据主机</title>
-    <updated>2026-07-03T19:24:11.570Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    <category term="命令" scheme="https://dusays.com/tags/%E5%91%BD%E4%BB%A4/"/>
+    <content>
+      <![CDATA[<blockquote><p>上次杜老师写了一篇关于培训命令收纳的文章，这次讲的是更具体的两步：实际写 <code>~/.zshrc.local</code> 与命名约定。今天就跟大家讲讲，杜老师这两年来稳定在用的两个具体动作。</p></blockquote><span id="more"></span><h2 id="一、动作-1：拆出一个独立的-zshrc-local"><a href="#一、动作-1：拆出一个独立的-zshrc-local" class="headerlink" title="一、动作 1：拆出一个独立的 .zshrc.local"></a>一、动作 1：拆出一个独立的 <code>.zshrc.local</code></h2><p>很多教程建议直接把 alias 写进 <code>~/.zshrc</code>。杜老师现在的做法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ~/.zshrc</span><br><span class="line">source ~/.zshrc.local</span><br></pre></td></tr></table></figure><p><code>~/.zshrc.local</code> 单独存在，专门放：</p><ul><li>自己积累的 alias</li><li>自己积累的函数</li><li>培训带回来还没完全消化的命令</li></ul><p>好处是：</p><ul><li>升级系统或重装 shell 时，自己的设置不会跟着丢</li><li>备份只需要拷一个文件</li><li>找东西时一目了然</li></ul><h2 id="二、动作-2：所有-alias-加前缀"><a href="#二、动作-2：所有-alias-加前缀" class="headerlink" title="二、动作 2：所有 alias 加前缀"></a>二、动作 2：所有 alias 加前缀</h2><p>杜老师一开始是这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias k=&#x27;kubectl&#x27;</span><br><span class="line">alias kg=&#x27;kubectl get&#x27;</span><br><span class="line">alias kgp=&#x27;kubectl get pod&#x27;</span><br></pre></td></tr></table></figure><p>结果就是：敲 <code>k</code> 的时候经常敲成 <code>k</code>，跟某些命令冲突，得不停调试。</p><p>现在的约定：</p><ul><li>个人命令加 <code>x</code> 前缀（杜老师用 <code>x</code>，您可以用自己的）</li><li>简短但带语义</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias xk=&#x27;kubectl&#x27;</span><br><span class="line">alias xkg=&#x27;kubectl get&#x27;</span><br><span class="line">alias xkgp=&#x27;kubectl get pod&#x27;</span><br></pre></td></tr></table></figure><p>这种做法有两个好处：</p><ol><li>不会跟系统命令冲突</li><li>shell 命令补全时，按 <code>x</code> 找，能看到自己的所有 alias</li></ol><h2 id="三、为什么不要直接全用-alias"><a href="#三、为什么不要直接全用-alias" class="headerlink" title="三、为什么不要直接全用 alias"></a>三、为什么不要直接全用 alias</h2><p>杜老师自己也踩过这个坑：</p><ul><li>alias 写得太多，根本记不清</li><li>想不起来 alias 名字的时候，反而比”长命令”更慢</li><li>别人用你电脑时一脸茫然</li></ul><p>杜老师现在的折衷：</p><ul><li>一个月用不到 3 次的命令：保持长命令</li><li>一个月用 3 次以上的命令：加 alias</li><li>几乎每天用的命令：加 alias + 写进文档</li></ul><h2 id="四、杜老师自己的-zshrc-local-长这样"><a href="#四、杜老师自己的-zshrc-local-长这样" class="headerlink" title="四、杜老师自己的 .zshrc.local 长这样"></a>四、杜老师自己的 <code>.zshrc.local</code> 长这样</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># === kubectl ===</span><br><span class="line">alias xk=&#x27;kubectl&#x27;</span><br><span class="line">alias xkg=&#x27;kubectl get&#x27;</span><br><span class="line">alias xkgp=&#x27;kubectl get pod&#x27;</span><br><span class="line">alias xkga=&#x27;kubectl get pod -A&#x27;</span><br><span class="line"></span><br><span class="line"># === docker ===</span><br><span class="line">alias xd=&#x27;docker&#x27;</span><br><span class="line">alias xdc=&#x27;docker compose&#x27;</span><br><span class="line">alias xdcl=&#x27;docker compose logs -f&#x27;</span><br><span class="line"></span><br><span class="line"># === 自学 ===</span><br><span class="line">alias xv=&#x27;vim&#x27;</span><br><span class="line">alias xll=&#x27;ls -lah&#x27;</span><br><span class="line">alias xg=&#x27;git&#x27;</span><br><span class="line">alias xgs=&#x27;git status&#x27;</span><br></pre></td></tr></table></figure><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>培训回来的命令收纳这件事，杜老师觉得是”小习惯决定长期收益”。</p><p>希望对同样在日常跟命令打交道的您有所启发。如果您有别的收纳方式，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/854/</id>
+    <link href="https://dusays.com/archives/854/"/>
+    <published>2026-02-24T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>上次杜老师写了一篇关于培训命令收纳的文章，这次讲的是更具体的两步：实际写 <code>~/.zshrc.local</code> 与命名约定。今天就跟大家讲讲，杜老师这两年来稳定在用的两个具体动作。</p>
+</blockquote>]]>
+    </summary>
+    <title>培训归来：把新学到的命令收纳到 shell 的 2 个动作</title>
+    <updated>2026-07-04T09:21:42.679Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="健康" scheme="https://dusays.com/tags/%E5%81%A5%E5%BA%B7/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师最近养成了一个习惯：下班最后一段路，不再骑完，而是推着车走 5-10 分钟。听起来挺奇怪，但这几个月下来，杜老师自己感觉整个人的状态明显好了。今天就跟大家讲讲这个事。</p></blockquote><span id="more"></span><h2 id="一、为什么要”不骑完”"><a href="#一、为什么要”不骑完”" class="headerlink" title="一、为什么要”不骑完”"></a>一、为什么要”不骑完”</h2><p>表面看，黄昏推车走似乎浪费时间。</p><p>杜老师自己的观察：</p><ul><li>整天屏幕下来，肩颈已经僵了</li><li>一路骑行到家门口，立刻坐下吃饭，节奏太硬</li><li>突然停下来反而容易”压不住饿感”，导致吃太快</li></ul><p>推车走的 5-10 分钟，本质上是给身体一个”减速带”。</p><h2 id="二、推车走的具体做法"><a href="#二、推车走的具体做法" class="headerlink" title="二、推车走的具体做法"></a>二、推车走的具体做法</h2><p>杜老师每天大概这样做：</p><ul><li>离小区门口还有 5-10 分钟骑程的地方，找个阴凉的位置停下来</li><li>下车，推着车走完最后一段</li><li>期间不戴耳机，让眼睛多看看周围</li></ul><p>听起来很简单，但”主动减速”这个动作本身很难坚持。</p><h2 id="三、杜老师自己观察到的-3-个变化"><a href="#三、杜老师自己观察到的-3-个变化" class="headerlink" title="三、杜老师自己观察到的 3 个变化"></a>三、杜老师自己观察到的 3 个变化</h2><h3 id="变化-1：吃饭更香了"><a href="#变化-1：吃饭更香了" class="headerlink" title="变化 1：吃饭更香了"></a>变化 1：吃饭更香了</h3><p>推到家门口坐下吃饭时，饿感是”自然的”，而不是”憋出来的”。</p><p>杜老师现在每顿饭能吃的量稳定了，不再像以前一样突然暴饮暴食。</p><h3 id="变化-2：晚上睡眠更稳"><a href="#变化-2：晚上睡眠更稳" class="headerlink" title="变化 2：晚上睡眠更稳"></a>变化 2：晚上睡眠更稳</h3><p>推车阶段让身体从”骑行心率”自然过渡到”休息心率”。</p><p>回到家时，神经不再处于”在线状态”，洗漱时也不需要再刷一轮手机才能松弛下来。</p><h3 id="变化-3：跟家人相处时脾气更好"><a href="#变化-3：跟家人相处时脾气更好" class="headerlink" title="变化 3：跟家人相处时脾气更好"></a>变化 3：跟家人相处时脾气更好</h3><p>这个是意外收获。</p><p>推车走的几分钟，杜老师会想一想今天干了什么，整理一下思路。</p><p>回到家不是”空降进家”，而是”带着过渡回到家”。</p><h2 id="四、给同样通勤党的建议"><a href="#四、给同样通勤党的建议" class="headerlink" title="四、给同样通勤党的建议"></a>四、给同样通勤党的建议</h2><p>杜老师不是要大家都去推车，而是想说：</p><ul><li>找一段”主动减速”的时间段</li><li>让自己的身体从工作节奏慢慢切到生活节奏</li></ul><p>通勤时间长的人，建议把这段”减速”放在离家的最后 5-10 分钟。</p><p>通勤时间短的人，可以试试回家后换鞋、整理桌面、坐 5 分钟。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>节奏这件事，杜老师觉得以前一直没有重视。最近几个月才体会到，主动给自己一段缓冲时间，长期下来收获很大。</p><p>希望对同样每天都很匆忙的您有所启发。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/853/</id>
+    <link href="https://dusays.com/archives/853/"/>
+    <published>2026-02-18T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师最近养成了一个习惯：下班最后一段路，不再骑完，而是推着车走 5-10 分钟。听起来挺奇怪，但这几个月下来，杜老师自己感觉整个人的状态明显好了。今天就跟大家讲讲这个事。</p>
+</blockquote>]]>
+    </summary>
+    <title>黄昏漫步的&quot;下班缓冲&quot;为什么重要</title>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -49,7 +89,7 @@
 </blockquote>]]>
     </summary>
     <title>酒店 Wi-Fi 不稳的 3 个 fallback 工具</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -69,7 +109,7 @@
 </blockquote>]]>
     </summary>
     <title>培训归来：怎样把新学到的命令收纳到自己的 shell</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -89,7 +129,7 @@
 </blockquote>]]>
     </summary>
     <title>高铁出差路上的 4 个阅读习惯</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -109,7 +149,7 @@
 </blockquote>]]>
     </summary>
     <title>macOS 终端下本地跑 LLM 实测</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -129,7 +169,7 @@
 </blockquote>]]>
     </summary>
     <title>工作室暗光环境的护眼心得</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -149,7 +189,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤党耳机选型：3 款降噪豆横评</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -169,7 +209,7 @@
 </blockquote>]]>
     </summary>
     <title>深夜 Terminal 的 4 个提效小动作</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -189,7 +229,7 @@
 </blockquote>]]>
     </summary>
     <title>Minecraft 生存服务器来啦「1.21.8 版」</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.679Z</updated>
   </entry>
   <entry>
     <author>
@@ -209,7 +249,7 @@
 </blockquote>]]>
     </summary>
     <title>快速部署 Nexus Terminal 打造高颜值远程管理终端</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -229,7 +269,7 @@
 </blockquote>]]>
     </summary>
     <title>DEB 和 RPM 有什么区别</title>
-    <updated>2026-07-03T19:24:11.569Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -249,7 +289,7 @@
 </blockquote>]]>
     </summary>
     <title>ima 任务模式邀请码分享</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -269,7 +309,7 @@
 </blockquote>]]>
     </summary>
     <title>Temp Mail 兼具隐私和便捷性的最佳临时电子邮件服务</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -289,7 +329,7 @@
 </blockquote>]]>
     </summary>
     <title>Dockerd 日志太多？磁盘爆了？一篇教您搞定容器日志问题</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -309,7 +349,7 @@
 </blockquote>]]>
     </summary>
     <title>二手手机值得买吗？数码爱好者的省钱换机经验</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -329,7 +369,7 @@
 </blockquote>]]>
     </summary>
     <title>最近总觉得脑子不够用？杜老师的脑力不足自救实录</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -349,7 +389,7 @@
 </blockquote>]]>
     </summary>
     <title>一站式操作系统 ISO 下载平台</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -369,46 +409,6 @@
 </blockquote>]]>
     </summary>
     <title>MinIO 社区版 Web 管理界面被删事件全解析</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="代码编程" scheme="https://dusays.com/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/"/>
-    <category term="脚本" scheme="https://dusays.com/tags/%E8%84%9A%E6%9C%AC/"/>
-    <content>
-      <![CDATA[<blockquote><p>因为图床程序暂不支持套餐到期通知，需要杜老师定期统计到期的用户，再通过邮箱发通知。每次统计时操作较麻烦，为了方便统计用户，尝试用 PHP 编写一个页面，可以筛选去不图床到期用户邮箱。</p></blockquote><span id="more"></span><h2 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h2><p>去不图床会在用户的容量套餐到期后，发送邮件通知「请确保注册邮箱可用性」</p><p>通知内容包含数据到期时间「一般为容量到期后七天」如 5 月 24 日到期的用户，我们会保留数据到 5 月 31 日。</p><p>超过保留期限的数据会从数据库清除，但数据依然会保留在备份节点中。</p><p>为了方便用户从备份节点中恢复数据，去不图床定期「每半小时」同步至 OneDrive，需要的小伙伴可以访问 <a href="https://1drv.ms/f/s!AoqMjxlFoTbPgfwA77GrqExm8sszFQ">共享链接</a> 获取备份数据，页面密码为 <code>7bu.top</code>。</p><h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 数据库配置</span><br><span class="line">$host = &#x27;localhost&#x27;;       // 数据库主机</span><br><span class="line">$username = &#x27;your_username&#x27;; // 数据库用户名</span><br><span class="line">$password = &#x27;your_password&#x27;; // 数据库密码</span><br><span class="line">$database = &#x27;your_database&#x27;; // 数据库名称</span><br><span class="line"></span><br><span class="line">// 创建数据库连接</span><br><span class="line">$conn = new mysqli($host, $username, $password, $database);</span><br><span class="line"></span><br><span class="line">// 检查连接是否成功</span><br><span class="line">if ($conn-&gt;connect_error) &#123;</span><br><span class="line">    die(&quot;连接失败: &quot; . $conn-&gt;connect_error);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 执行查询</span><br><span class="line">$sql = &quot;SELECT * FROM `users` WHERE `capacity` = 0.00 AND `size` != 0.0000&quot;;</span><br><span class="line">$result = $conn-&gt;query($sql);</span><br><span class="line"></span><br><span class="line">// 检查是否有结果返回</span><br><span class="line">if ($result-&gt;num_rows &gt; 0) &#123;</span><br><span class="line">    // 打开文件准备写入</span><br><span class="line">    $file = fopen(&quot;1.txt&quot;, &quot;w&quot;);</span><br><span class="line"></span><br><span class="line">    // 写入表头</span><br><span class="line">    $headers = [];</span><br><span class="line">    while ($fieldinfo = $result-&gt;fetch_field()) &#123;</span><br><span class="line">        $headers[] = $fieldinfo-&gt;name;</span><br><span class="line">    &#125;</span><br><span class="line">    fwrite($file, implode(&quot;\t&quot;, $headers) . &quot;\n&quot;);</span><br><span class="line"></span><br><span class="line">    // 写入每一行数据</span><br><span class="line">    while ($row = $result-&gt;fetch_assoc()) &#123;</span><br><span class="line">        fwrite($file, implode(&quot;\t&quot;, $row) . &quot;\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 关闭文件句柄</span><br><span class="line">    fclose($file);</span><br><span class="line">    </span><br><span class="line">    echo &quot;数据已成功写入 1.txt&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    echo &quot;没有匹配的记录&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 关闭数据库连接</span><br><span class="line">$conn-&gt;close();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure><p>注意：以上是一个完整 PHP 脚本，用于连接 MySQL 数据库、执行 SQL 查询并将结果写入到 <code>1.txt</code> 文件中。</p><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><ol><li><p>将上述的代码保存为一个<code>.php</code> 文件如 <code>export_users.php</code>；</p></li><li><p>替换脚本中的数据库信息 <code>your_username</code>&#x2F;<code>your_password</code>&#x2F;<code>your_database</code> 为您自己的实际数据库凭证；</p></li><li><p>确保运行该脚本的服务器支持 PHP 并且可以访问 MySQL 数据库；</p></li><li><p>当通过浏览器或命令行访问这个 PHP 页面时，它会执行查询并将结果写入到当前目录下的 <code>1.txt</code> 文件。</p></li></ol><h2 id="输出示例"><a href="#输出示例" class="headerlink" title="输出示例"></a>输出示例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">email</span><br><span class="line">123123123@qq.com</span><br><span class="line">456456456@qq.com</span><br><span class="line">789789789@qq.com</span><br></pre></td></tr></table></figure><p>注意：确保 PHP 环境有权限写入目标文件「如 <code>1.txt</code>」</p>]]>
-    </content>
-    <id>https://dusays.com/archives/832/</id>
-    <link href="https://dusays.com/archives/832/"/>
-    <published>2025-10-15T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>因为图床程序暂不支持套餐到期通知，需要杜老师定期统计到期的用户，再通过邮箱发通知。每次统计时操作较麻烦，为了方便统计用户，尝试用 PHP 编写一个页面，可以筛选去不图床到期用户邮箱。</p>
-</blockquote>]]>
-    </summary>
-    <title>如何使用 PHP 脚本筛选去不图床已到期用户邮箱</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <category term="开源" scheme="https://dusays.com/tags/%E5%BC%80%E6%BA%90/"/>
-    <content>
-      <![CDATA[<blockquote><p>在当今数字化协作时代，高效的项目管理工具对于团队的成功至关重要。Focalboard 作为一款开源的项目管理软件，正在逐渐崭露头角，受到了众多团队和个人青睐。</p></blockquote><span id="more"></span><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Focalboard 是由 Mattermost 开发的功能强大开源项目管理和协作工具，能够以看板形式灵活地组织任务，创建详细笔记，并方便地共享文件。它支持创建各种类型的笔记页面，记录数字、链接、文字等多种类型的信息，且内置多种模板供用户直接套用编辑：</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="https://cdn.dusays.com/2025/05/831-1.jpg" data-src="https://cdn.dusays.com/2025/05/831-1.jpg" data-fancybox="true"onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"/><div class="lazy-icon" style="background-image:url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd);"></div></div></div><p>Focalboard 具有以下的特点：一是开源免费，数据自行托管，用户可将其部署在自己本地服务器上，确保数据安全可靠；二是支持多种平台，包括 Windows&#x2F;macOS&#x2F;Linux&#x2F;iOS 和 Android 等，方便用户随时随地接入项目；三是具备丰富功能，如拖放卡、进出口板、按状态或着截止日期等过滤板和任务，以及支持多人协作、文件共享、团队和直接消息等；四是界面简洁易用，操作便捷，易于上手：</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="https://cdn.dusays.com/2025/05/831-2.jpg" data-src="https://cdn.dusays.com/2025/05/831-2.jpg" data-fancybox="true"onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"/><div class="lazy-icon" style="background-image:url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd);"></div></div></div><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>使用 Docker 安装 Focalboard。</p><p>输入命令 <code>docker run -it -p 80:8000 mattermost/focalboard</code> 后，等待安装完成。安装成功后在浏览器输入 <code>localhost:8000</code> 即可进入 Focalboard 的登录界面。</p><p>或直接下载安装包安装。</p><p>可前往 Focalboard <a href="https://focalboard.com/">官方网站</a>，下载适用于不同操作系统的个人桌面版安装包，按照提示完成安装。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在 Focalboard 的欢迎屏幕上，用户可选择创建新的团队并设置团队名称。</p><p>进入团队页面，点击创建看板按钮，根据需要选择看板类型，例如项目任务、内容日历、公司目标与 OKR、路线图等模板创建看板，也可创建空白看板自行设计。</p><p>还可设置看板名称、描述以及背景色等信息。</p><p>在看板上，通过点击添加卡片按钮来创建新任务卡片。</p><p>可以在卡片中输入任务描述，并为卡片添加标签、截止日期、优先级等属性，以便更好对任务进行分类和管理。</p><p>同时，可以将任务卡片分配给团队中的不同成员，明确责任分工。</p><p>团队成员可在看板上实时查看和编辑任务卡片，共同推进项目进度。</p><p>在卡片添加评论和讨论，提及队友以引起他们的注意，分享想法意见，实现高效协作沟通。</p><p>此外，还可以通过 Focalboard 的团队和直接消息功能，进一步加强团队成员之间的交流。</p><p>Focalboard 还支持文件共享，用户可以在任务卡片中上传相关文件，方便团队的成员查阅和下载。</p><p>可对看板进行筛选、分组、排序，快速找到所需的任务和信息。</p><p>还能查看历史记录、备份快照等等，确保数据安全性和可恢复性。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Focalboard 作为一款开源的项目管理工具，凭借其丰富的功能、简洁易用的操作界面及数据自托管等优势，为个人和团队提供一个高效、可靠的项目管理和协作平台。</p><p>无论小型团队还是大型企业，都可利用 Focalboard 来规划项目、分配任务、跟踪进度并实现顺畅的协作，从而提高工作效率和项目成功率。</p>]]>
-    </content>
-    <id>https://dusays.com/archives/831/</id>
-    <link href="https://dusays.com/archives/831/"/>
-    <published>2025-10-09T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>在当今数字化协作时代，高效的项目管理工具对于团队的成功至关重要。Focalboard 作为一款开源的项目管理软件，正在逐渐崭露头角，受到了众多团队和个人青睐。</p>
-</blockquote>]]>
-    </summary>
-    <title>Focalboard 开源项目管理的有力工具</title>
-    <updated>2026-07-03T19:24:11.568Z</updated>
+    <updated>2026-07-04T09:21:42.678Z</updated>
   </entry>
 </feed>
