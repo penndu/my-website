@@ -10,7 +10,167 @@
   <rights>All rights reserved 2026, Teacher Du</rights>
   <subtitle>运维技术分享博客</subtitle>
   <title>杜老师说</title>
-  <updated>2026-07-12T08:42:45.706Z</updated>
+  <updated>2026-07-12T13:03:27.391Z</updated>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="老师讲课" scheme="https://dusays.com/categories/%E8%80%81%E5%B8%88%E8%AE%B2%E8%AF%BE/"/>
+    <category term="学习" scheme="https://dusays.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师参加过几次技术培训，最早一次是全抄命令，抄完基本记不住。后来改成”只记关键字”，反而效果好得多。今天杜老师就把这个方法分享给大家。</p></blockquote><span id="more"></span><h2 id="一、为什么不全抄"><a href="#一、为什么不全抄" class="headerlink" title="一、为什么不全抄"></a>一、为什么不全抄</h2><p>杜老师一开始的笔记是这样的：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># CentOS 7 链路聚合</span><br><span class="line">nmcli connection add type team con-name team0 ifname team0 autoconnect yes config &#x27;&#123;&quot;runner&quot;: &#123;&quot;name&quot;: &quot;activebackup&quot;&#125;&#125;&#x27;</span><br><span class="line">nmcli connection add type team-slave con-name team0-1 ifname eth1 master team0</span><br><span class="line">nmcli connection modify team0 ipv4.method manual ipv4.addresses 192.168.1.250 connection.autoconnect yes</span><br><span class="line">nmcli connection up team0</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>看起来很完整，但杜老师复盘下来发现：</p><ul><li>抄完之后基本没看过</li><li>真要用的时候不知道在哪一页</li><li>命令细节记不清，关键字反而不记得</li></ul><h2 id="二、关键字笔记长什么样"><a href="#二、关键字笔记长什么样" class="headerlink" title="二、关键字笔记长什么样"></a>二、关键字笔记长什么样</h2><p>杜老师现在的笔记是这样的：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># CentOS 7 链路聚合</span><br><span class="line"></span><br><span class="line">team0 — 创建虚拟网卡，绑定成员用</span><br><span class="line">team-slave — 向虚拟网卡添加成员网卡</span><br><span class="line">ipv4.method manual — 手动配置地址</span><br><span class="line">teamdctl team0 state — 查看聚合状态</span><br><span class="line"></span><br><span class="line">注意：activebackup 模式两边不要有空格</span><br></pre></td></tr></table></figure><p>每一条只记<strong>这条命令是干什么的</strong>，外加一句触发场景。</p><h2 id="三、只记关键字的-3-个好处"><a href="#三、只记关键字的-3-个好处" class="headerlink" title="三、只记关键字的 3 个好处"></a>三、只记关键字的 3 个好处</h2><h3 id="好处-1：笔记变短，能跟得上"><a href="#好处-1：笔记变短，能跟得上" class="headerlink" title="好处 1：笔记变短，能跟得上"></a>好处 1：笔记变短，能跟得上</h3><p>杜老师自己测试过：</p><ul><li>全抄命令：跟不上讲师节奏</li><li>只记关键字：基本能跟上，偶尔还能追问</li></ul><p>注意：跟不上的部分可以录音，回头补笔记。</p><h3 id="好处-2：回看时一眼能找到"><a href="#好处-2：回看时一眼能找到" class="headerlink" title="好处 2：回看时一眼能找到"></a>好处 2：回看时一眼能找到</h3><p>关键字笔记的特点是：</p><ul><li>每条不超过 2 行</li><li>关键词明显，扫一眼就能定位</li></ul><p>杜老师现在回看培训笔记，基本 1 分钟就能找到想要的。</p><h3 id="好处-3：强迫自己真正听懂"><a href="#好处-3：强迫自己真正听懂" class="headerlink" title="好处 3：强迫自己真正听懂"></a>好处 3：强迫自己真正听懂</h3><p>只记关键字有一个隐性要求：</p><ul><li>必须真正听懂这条命令是干什么的</li><li>不懂就没法写出一句话总结</li></ul><p>这个”强迫自己理解”的过程，比记下完整命令更有价值。</p><h2 id="四、杜老师自己的笔记模板"><a href="#四、杜老师自己的笔记模板" class="headerlink" title="四、杜老师自己的笔记模板"></a>四、杜老师自己的笔记模板</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># [主题]</span><br><span class="line"></span><br><span class="line">[命令关键字1] — [一句话功能]</span><br><span class="line">[命令关键字2] — [一句话功能]</span><br><span class="line">[命令关键字3] — [一句话功能]</span><br><span class="line"></span><br><span class="line">注意：[关键坑点]</span><br></pre></td></tr></table></figure><p>培训结束后，杜老师会再做两件事：</p><ul><li>把关键字笔记转成 markdown，放到 <code>~/notes/training/</code> 目录</li><li>在 <code>.zshrc.local</code> 里给高频命令加 alias</li></ul><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>培训笔记这件事，杜老师觉得”少而精”比”多而全”管用得多。</p><p>希望对同样需要记笔记的您有所帮助。如果您有别的笔记方法，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/867/</id>
+    <link href="https://dusays.com/archives/867/"/>
+    <published>2026-05-13T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师参加过几次技术培训，最早一次是全抄命令，抄完基本记不住。后来改成”只记关键字”，反而效果好得多。今天杜老师就把这个方法分享给大家。</p>
+</blockquote>]]>
+    </summary>
+    <title>培训笔记只记关键字的 3 个好处</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="健康" scheme="https://dusays.com/tags/%E5%81%A5%E5%BA%B7/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师最近养成了一个习惯：下班通勤的最后 10 分钟，不再骑完，而是推着车走完。听起来挺奇怪，但这几个月下来，杜老师自己感觉整个人的状态明显好了。今天就跟大家讲讲这个事。</p></blockquote><span id="more"></span><h2 id="一、为什么要”减速”"><a href="#一、为什么要”减速”" class="headerlink" title="一、为什么要”减速”"></a>一、为什么要”减速”</h2><p>表面看，通勤最后 10 分钟推车走似乎浪费时间。</p><p>杜老师自己的观察：</p><ul><li>整天屏幕下来，肩颈已经僵了</li><li>一路骑行到家门口，立刻坐下吃饭，节奏太硬</li><li>突然停下来反而容易”压不住饿感”，导致吃太快</li></ul><p>推车走的 10 分钟，本质上是给身体一个”减速带”。</p><h2 id="二、推车走的具体做法"><a href="#二、推车走的具体做法" class="headerlink" title="二、推车走的具体做法"></a>二、推车走的具体做法</h2><p>杜老师每天大概这样做：</p><ul><li>离小区门口还有 10 分钟骑程的地方，找个阴凉的位置停下来</li><li>下车，推着车走完最后一段</li><li>期间不戴耳机，让眼睛多看看周围</li></ul><p>听起来很简单，但”主动减速”这个动作本身很难坚持。</p><p>注意：第一次做可以只推 3 分钟，慢慢再加到 5 分钟、10 分钟。</p><h2 id="三、杜老师自己观察到的-3-个变化"><a href="#三、杜老师自己观察到的-3-个变化" class="headerlink" title="三、杜老师自己观察到的 3 个变化"></a>三、杜老师自己观察到的 3 个变化</h2><h3 id="变化-1：吃饭更香了"><a href="#变化-1：吃饭更香了" class="headerlink" title="变化 1：吃饭更香了"></a>变化 1：吃饭更香了</h3><p>推到家门口坐下吃饭时，饿感是”自然的”，而不是”憋出来的”。</p><p>杜老师现在每顿饭能吃的量稳定了，不再像以前一样突然暴饮暴食。</p><h3 id="变化-2：晚上睡眠更稳"><a href="#变化-2：晚上睡眠更稳" class="headerlink" title="变化 2：晚上睡眠更稳"></a>变化 2：晚上睡眠更稳</h3><p>推车阶段让身体从”骑行心率”自然过渡到”休息心率”。</p><p>回到家时，神经不再处于”在线状态”，洗漱时也不需要再刷一轮手机才能松弛下来。</p><h3 id="变化-3：跟家人相处时脾气更好"><a href="#变化-3：跟家人相处时脾气更好" class="headerlink" title="变化 3：跟家人相处时脾气更好"></a>变化 3：跟家人相处时脾气更好</h3><p>这个是意外收获。</p><p>推车走的几分钟，杜老师会想一想今天干了什么，整理一下思路。</p><p>回到家不是”空降进家”，而是”带着过渡回到家”。</p><h2 id="四、给同样通勤党的建议"><a href="#四、给同样通勤党的建议" class="headerlink" title="四、给同样通勤党的建议"></a>四、给同样通勤党的建议</h2><p>杜老师不是要大家都去推车，而是想说：</p><ul><li>找一段”主动减速”的时间段</li><li>让自己的身体从工作节奏慢慢切到生活节奏</li></ul><p>通勤时间长的人，建议把这段”减速”放在离家的最后 10 分钟。</p><p>通勤时间短的人，可以试试回家后换鞋、整理桌面、坐 5 分钟。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>节奏这件事，杜老师觉得以前一直没有重视。最近几个月才体会到，主动给自己一段缓冲时间，长期下来收获很大。</p><p>希望对同样每天都很匆忙的您有所启发。如果您有别的”减速”方式，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/866/</id>
+    <link href="https://dusays.com/archives/866/"/>
+    <published>2026-05-07T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师最近养成了一个习惯：下班通勤的最后 10 分钟，不再骑完，而是推着车走完。听起来挺奇怪，但这几个月下来，杜老师自己感觉整个人的状态明显好了。今天就跟大家讲讲这个事。</p>
+</blockquote>]]>
+    </summary>
+    <title>通勤最后 10 分钟的&quot;减速&quot;技巧</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://dusays.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师跟伴侣经常一起吃外卖，磨合了一年多，慢慢形成了一些小默契。今天杜老师就把自己觉得特别管用的 2 个分享给大家。</p></blockquote><span id="more"></span><h2 id="一、为什么需要”默契”"><a href="#一、为什么需要”默契”" class="headerlink" title="一、为什么需要”默契”"></a>一、为什么需要”默契”</h2><p>杜老师一开始觉得点外卖是件小事，但磨合下来发现：</p><ul><li>口味不一样，每次都要协调</li><li>一个人随便点，另一个人可能不爱吃</li><li>反复商量，反而比做饭还累</li></ul><p>后来形成一套小默契之后，整个过程轻松了很多。</p><h2 id="二、2-个小默契"><a href="#二、2-个小默契" class="headerlink" title="二、2 个小默契"></a>二、2 个小默契</h2><h3 id="默契-1：一周挑一天”换着来”"><a href="#默契-1：一周挑一天”换着来”" class="headerlink" title="默契 1：一周挑一天”换着来”"></a>默契 1：一周挑一天”换着来”</h3><p>杜老师跟伴侣的约定是这样的：</p><ul><li>周一到周五：一个人负责点单，另一个人不挑</li><li>周末：换过来</li></ul><p>这样做的好处：</p><ul><li>减少每次”点啥”的纠结</li><li>每个人都有机会吃到自己想吃的</li></ul><p>注意：不喜欢的那顿，也可以临时协商，但大部分时候按规矩来。</p><h3 id="默契-2：默认点一荤一素一汤"><a href="#默契-2：默认点一荤一素一汤" class="headerlink" title="默契 2：默认点一荤一素一汤"></a>默契 2：默认点一荤一素一汤</h3><p>杜老师跟伴侣的默认配置：</p><ul><li>一道主菜：比如黄焖鸡、烤鱼、牛肉</li><li>一道素菜：比如青菜、豆腐、菌菇</li><li>一份汤：紫菜蛋花、西红柿鸡蛋</li></ul><p>一荤一素一汤，营养均衡，份量也刚好。</p><p>注意：偶尔想吃麻辣烫、炸鸡，也可以破例一次。</p><h2 id="三、杜老师自己的组合"><a href="#三、杜老师自己的组合" class="headerlink" title="三、杜老师自己的组合"></a>三、杜老师自己的组合</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">工作日 → 一个人点单，另一个人默认接受</span><br><span class="line">周末 → 换过来点</span><br><span class="line">默认配置 → 一荤一素一汤</span><br><span class="line">偶尔破例 → 麻辣烫、炸鸡</span><br></pre></td></tr></table></figure><p>这套组合，杜老师用了大半年，目前两个人都比较舒服。</p><h2 id="四、默契需要慢慢磨合"><a href="#四、默契需要慢慢磨合" class="headerlink" title="四、默契需要慢慢磨合"></a>四、默契需要慢慢磨合</h2><p>杜老师一开始也试过”一周 7 天都让对方点”：</p><ul><li>看似体贴，其实反而增加了协调成本</li><li>偶尔一次吃到自己不爱吃的，反而容易攒情绪</li></ul><p>默契这件事，杜老师觉得<strong>不用太对称，关键是双方都舒服</strong>。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>两人吃外卖这件事，杜老师觉得”小默契比大道理管用”。</p><p>希望对同样跟伴侣一起点外卖的您有所启发。如果您有别的默契方法，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/865/</id>
+    <link href="https://dusays.com/archives/865/"/>
+    <published>2026-05-01T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师跟伴侣经常一起吃外卖，磨合了一年多，慢慢形成了一些小默契。今天杜老师就把自己觉得特别管用的 2 个分享给大家。</p>
+</blockquote>]]>
+    </summary>
+    <title>两人吃外卖的 2 个小默契</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="健康" scheme="https://dusays.com/tags/%E5%81%A5%E5%BA%B7/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师以前深夜吃夜宵的频率挺高的，泡面、辣条、肉干样样都来。最近一段时间杜老师调整了一下，发现只要方法对，节制夜宵并不是什么难事。今天杜老师就把自己用过的 3 个技巧分享给大家。</p></blockquote><span id="more"></span><h2 id="一、为什么之前总戒不掉"><a href="#一、为什么之前总戒不掉" class="headerlink" title="一、为什么之前总戒不掉"></a>一、为什么之前总戒不掉</h2><p>杜老师自己复盘下来，原因有 3 个：</p><ul><li>晚饭吃太早，睡前确实饿</li><li>桌面上随手就能拿到零食</li><li>没有任何替代方案，饿了就只能吃</li></ul><p>节制夜宵的关键不是”忍”，是<strong>提前把饿感解决掉</strong>。</p><h2 id="二、3-个节制技巧"><a href="#二、3-个节制技巧" class="headerlink" title="二、3 个节制技巧"></a>二、3 个节制技巧</h2><h3 id="技巧-1：晚餐时间往后挪"><a href="#技巧-1：晚餐时间往后挪" class="headerlink" title="技巧 1：晚餐时间往后挪"></a>技巧 1：晚餐时间往后挪</h3><p>杜老师以前的晚餐时间是 18:00 左右。</p><p>调整到 19:30 之后，睡前饿感明显减轻。</p><p>注意：这个方法对作息相对规律的人比较有效。如果作息不规律，晚饭晚了反而影响睡眠。</p><h3 id="技巧-2：把零食挪出桌面"><a href="#技巧-2：把零食挪出桌面" class="headerlink" title="技巧 2：把零食挪出桌面"></a>技巧 2：把零食挪出桌面</h3><p>杜老师的桌面规则：</p><ul><li>桌面上不放任何零食</li><li>收纳盒移到书架上，要吃就站起来拿</li></ul><p>伸手就能拿到的零食，比任何意志力都管用。</p><h3 id="技巧-3：备一份”轻夜宵”"><a href="#技巧-3：备一份”轻夜宵”" class="headerlink" title="技巧 3：备一份”轻夜宵”"></a>技巧 3：备一份”轻夜宵”</h3><p>杜老师晚上 22 点之后如果真的饿，会吃：</p><ul><li>一小把坚果</li><li>一根玉米</li><li>几颗荔枝</li></ul><p>注意：这些都比泡面、辣条热量低，吃完也不影响睡眠。</p><h2 id="三、杜老师自己的组合"><a href="#三、杜老师自己的组合" class="headerlink" title="三、杜老师自己的组合"></a>三、杜老师自己的组合</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">晚上饿了 → 先吃一份&quot;轻夜宵&quot;</span><br><span class="line">还是想吃泡面 → 离开桌面去拿</span><br><span class="line">离开桌面的过程中 → 饥饿感会下降</span><br></pre></td></tr></table></figure><p>这套组合，杜老师用了一个多月，泡面频率从一周 5 次降到了一周 1 次。</p><h2 id="四、节制的关键不是-0-次"><a href="#四、节制的关键不是-0-次" class="headerlink" title="四、节制的关键不是 0 次"></a>四、节制的关键不是 0 次</h2><p>杜老师觉得节制夜宵的目标不是”永远不吃”：</p><ul><li>完全不吃很难坚持</li><li>偶尔吃一次没什么问题</li></ul><p>关键是<strong>频率降下来</strong>。一周 5 次降到一周 1 次，已经很不错。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>深夜夜宵这件事，杜老师觉得”提前布局”比”硬扛”管用得多。</p><p>希望对同样深夜活跃的您有所帮助。如果您有别的节制方法，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/864/</id>
+    <link href="https://dusays.com/archives/864/"/>
+    <published>2026-04-25T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师以前深夜吃夜宵的频率挺高的，泡面、辣条、肉干样样都来。最近一段时间杜老师调整了一下，发现只要方法对，节制夜宵并不是什么难事。今天杜老师就把自己用过的 3 个技巧分享给大家。</p>
+</blockquote>]]>
+    </summary>
+    <title>深夜吃夜宵的 3 个节制技巧</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="宠物" scheme="https://dusays.com/tags/%E5%AE%A0%E7%89%A9/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师家里有一只橘白相间的猫，平时最爱跳上书桌”监工”。一开始杜老师挺困扰的，后来摸索出一套应对方案，今天就跟大家分享一下。</p></blockquote><span id="more"></span><h2 id="一、为什么不让猫上桌"><a href="#一、为什么不让猫上桌" class="headerlink" title="一、为什么不让猫上桌"></a>一、为什么不让猫上桌</h2><p>杜老师一开始试过”坚决不让它上来”，但很快就放弃了：</p><ul><li>猫的好奇心比任何训练都强</li><li>关上门它就在门口叫，更影响工作</li><li>把它赶下去 3 次，第四次它又跳上来</li></ul><p>后来杜老师换了个思路：<strong>让它上来，但让它上来之后没危险</strong>。</p><h2 id="二、3-个应对方案"><a href="#二、3-个应对方案" class="headerlink" title="二、3 个应对方案"></a>二、3 个应对方案</h2><h3 id="方案-1：易碎品全部下桌"><a href="#方案-1：易碎品全部下桌" class="headerlink" title="方案 1：易碎品全部下桌"></a>方案 1：易碎品全部下桌</h3><p>杜老师的桌面规则：</p><ul><li>显示器、机械键盘可以留</li><li>水杯、收纳盒全部下桌</li><li>文件、纸质资料挪到书架</li></ul><p>这样即使猫跳上来踩键盘，也踩不出大问题。</p><h3 id="方案-2：给猫留一个”专属位置”"><a href="#方案-2：给猫留一个”专属位置”" class="headerlink" title="方案 2：给猫留一个”专属位置”"></a>方案 2：给猫留一个”专属位置”</h3><p>杜老师在桌面左侧放了一个软垫：</p><ul><li>猫熟悉位置后，每次上来会先到软垫</li><li>工作间隙想摸它，伸手就到</li></ul><p>注意：软垫要放稳，猫才会反复去。</p><h3 id="方案-3：零食”勾引”下地"><a href="#方案-3：零食”勾引”下地" class="headerlink" title="方案 3：零食”勾引”下地"></a>方案 3：零食”勾引”下地</h3><p>杜老师平时在桌下放一小盒猫粮：</p><ul><li>工作时猫跳上来，喊它名字 + 拿零食</li><li>反复几次后，猫会主动下地”领赏”</li></ul><p>这套方法的关键是<strong>不要在它上来的时候大声吓它</strong>。</p><h2 id="三、杜老师自己的桌面长这样"><a href="#三、杜老师自己的桌面长这样" class="headerlink" title="三、杜老师自己的桌面长这样"></a>三、杜老师自己的桌面长这样</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------+</span><br><span class="line">|        显示器          |</span><br><span class="line">+-----------------------+</span><br><span class="line">|    手机竖立(副屏)       |</span><br><span class="line">+-------+---------------+</span><br><span class="line">| 猫    |    键盘+鼠标   |</span><br><span class="line">| 软垫  |              |</span><br><span class="line">+-------+-------+-------+</span><br><span class="line">        | 透明  |</span><br><span class="line">        | 水杯  |</span><br><span class="line">        +-------+</span><br><span class="line">            ↓</span><br><span class="line">        桌下猫粮盒</span><br></pre></td></tr></table></figure><p>猫在软垫上，键盘在工作区，猫粮在桌下。各得其所。</p><h2 id="四、3-个方案的组合"><a href="#四、3-个方案的组合" class="headerlink" title="四、3 个方案的组合"></a>四、3 个方案的组合</h2><p>杜老师最终的组合是这样的：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">猫跳上来 → 软垫接住</span><br><span class="line">猫想躺键盘 → 把它引导到软垫</span><br><span class="line">猫饿了 → 零食引导下地</span><br></pre></td></tr></table></figure><p>这套组合，杜老师用了半年多，目前人和猫都比较满意。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>养猫这事，杜老师觉得”硬挡不如引导”。让猫舒服，自己也舒服。</p><p>希望对同样养猫的您有所帮助。如果您有别的应对方法，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/863/</id>
+    <link href="https://dusays.com/archives/863/"/>
+    <published>2026-04-19T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师家里有一只橘白相间的猫，平时最爱跳上书桌”监工”。一开始杜老师挺困扰的，后来摸索出一套应对方案，今天就跟大家分享一下。</p>
+</blockquote>]]>
+    </summary>
+    <title>橘猫经常跳上书桌的 3 个应对</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="工作" scheme="https://dusays.com/tags/%E5%B7%A5%E4%BD%9C/"/>
+    <content>
+      <![CDATA[<blockquote><p>居家办公一年多，杜老师最大的感受是：书桌前的状态，决定了整天的状态。今天杜老师就把自己用了一年多、一直稳定在用的 4 个微习惯分享给大家。</p></blockquote><span id="more"></span><h2 id="一、为什么是”微习惯”"><a href="#一、为什么是”微习惯”" class="headerlink" title="一、为什么是”微习惯”"></a>一、为什么是”微习惯”</h2><p>杜老师一开始也试过那种”上午 4 小时专注编码”的大块时间规划，但很快就放弃了：</p><ul><li>中途被打断，恢复成本极高</li><li>任务一拖延，整块时间就废了</li><li>跟生活节奏容易冲突</li></ul><p>后来改成 4 个<strong>不需要意志力</strong>的微习惯，整天的状态反而稳定很多。</p><h2 id="二、4-个微习惯"><a href="#二、4-个微习惯" class="headerlink" title="二、4 个微习惯"></a>二、4 个微习惯</h2><h3 id="习惯-1：早上先开显示器，再开浏览器"><a href="#习惯-1：早上先开显示器，再开浏览器" class="headerlink" title="习惯 1：早上先开显示器，再开浏览器"></a>习惯 1：早上先开显示器，再开浏览器</h3><p>杜老师的桌面流程是这样的：</p><ul><li>起床 → 倒水 → 坐到桌前 → 开显示器</li><li>显示器亮起之前，不打开任何应用</li></ul><p>这样做的好处：</p><ul><li>给自己一个”开机仪式”</li><li>避免一起床就掉进消息&#x2F;邮件里</li></ul><h3 id="习惯-2：键盘上的水杯永远在右手边"><a href="#习惯-2：键盘上的水杯永远在右手边" class="headerlink" title="习惯 2：键盘上的水杯永远在右手边"></a>习惯 2：键盘上的水杯永远在右手边</h3><p>杜老师有 2 个水杯：</p><ul><li>透明塑料杯：装白水，放在键盘右侧</li><li>彩色保温杯：装饮料，放在显示器下方</li></ul><p>伸手就能拿到的水杯，比任何”提醒喝水”的 App 都管用。</p><h3 id="习惯-3：零食提前装好"><a href="#习惯-3：零食提前装好" class="headerlink" title="习惯 3：零食提前装好"></a>习惯 3：零食提前装好</h3><p>杜老师在桌面左侧放一个透明收纳盒，里面提前装好：</p><ul><li>一袋坚果</li><li>一袋肉干</li><li>一两根能量棒</li></ul><p>工作到一半饿了，随手就能拿到，不用站起来。</p><p>注意：收纳盒的位置要在伸手范围内，但不能挡住键盘。</p><h3 id="习惯-4：手机竖在键盘后方"><a href="#习惯-4：手机竖在键盘后方" class="headerlink" title="习惯 4：手机竖在键盘后方"></a>习惯 4：手机竖在键盘后方</h3><p>杜老师的桌面布局：</p><ul><li>显示器：正前方</li><li>手机：键盘后方，竖立起来</li><li>副屏：手机屏幕可以当弹幕视频用</li></ul><p>这样做的好处：</p><ul><li>手机不离开视线，但又不会切走主屏注意力</li><li>想看视频时瞄一眼就行</li></ul><h2 id="三、杜老师自己的桌面长这样"><a href="#三、杜老师自己的桌面长这样" class="headerlink" title="三、杜老师自己的桌面长这样"></a>三、杜老师自己的桌面长这样</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------+</span><br><span class="line">|        显示器          |</span><br><span class="line">+-----------------------+</span><br><span class="line">|    手机竖立(副屏)       |</span><br><span class="line">+-------+---------------+</span><br><span class="line">| 收纳  |    键盘+鼠标   |</span><br><span class="line">|  盒   |              |</span><br><span class="line">+-------+-------+-------+</span><br><span class="line">        | 透明  |</span><br><span class="line">        | 水杯  |</span><br><span class="line">        +-------+</span><br></pre></td></tr></table></figure><p>看着其实挺普通的，但<strong>每个物件都在伸手范围内</strong>。</p><h2 id="四、微习惯的关键"><a href="#四、微习惯的关键" class="headerlink" title="四、微习惯的关键"></a>四、微习惯的关键</h2><p>杜老师觉得微习惯跟”打卡”不同：</p><ul><li>不需要意志力</li><li>不需要成就感</li><li>关键是<strong>让自己舒服</strong></li></ul><p>舒服了，自然能坚持。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>居家办公这件事，杜老师觉得”桌子前的小习惯决定了一整天的节奏”。</p><p>希望对同样居家办公的您有所帮助。如果您有别的桌面习惯，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/862/</id>
+    <link href="https://dusays.com/archives/862/"/>
+    <published>2026-04-13T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>居家办公一年多，杜老师最大的感受是：书桌前的状态，决定了整天的状态。今天杜老师就把自己用了一年多、一直稳定在用的 4 个微习惯分享给大家。</p>
+</blockquote>]]>
+    </summary>
+    <title>居家办公桌前的 4 个微习惯</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
+    <category term="命令" scheme="https://dusays.com/tags/%E5%91%BD%E4%BB%A4/"/>
+    <content>
+      <![CDATA[<blockquote><p>上次杜老师讲了”培训归来 3 步收纳”的方法，不少小伙伴留言问：alias 到底怎么起名字，才不会跟系统命令打架？今天杜老师就把命名约定这件事单拎出来讲一讲。</p></blockquote><span id="more"></span><h2 id="一、为什么命名约定重要"><a href="#一、为什么命名约定重要" class="headerlink" title="一、为什么命名约定重要"></a>一、为什么命名约定重要</h2><p>杜老师一开始是这种写法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias k=&#x27;kubectl&#x27;</span><br><span class="line">alias kg=&#x27;kubectl get&#x27;</span><br><span class="line">alias kgp=&#x27;kubectl get pod&#x27;</span><br></pre></td></tr></table></figure><p>用了不到一周就发现：</p><ul><li>敲 <code>k</code> 经常跟某些命令冲突</li><li>自己都记不清哪个 alias 对应哪条长命令</li><li>别人用电脑时一脸茫然</li></ul><p>后来杜老师定了一套约定，再没出现过这些问题。</p><h2 id="二、杜老师的-3-条命名约定"><a href="#二、杜老师的-3-条命名约定" class="headerlink" title="二、杜老师的 3 条命名约定"></a>二、杜老师的 3 条命名约定</h2><h3 id="约定-1：所有-alias-加统一前缀"><a href="#约定-1：所有-alias-加统一前缀" class="headerlink" title="约定 1：所有 alias 加统一前缀"></a>约定 1：所有 alias 加统一前缀</h3><p>杜老师用的是 <code>x</code> 前缀：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias xk=&#x27;kubectl&#x27;</span><br><span class="line">alias xkg=&#x27;kubectl get&#x27;</span><br><span class="line">alias xkgp=&#x27;kubectl get pod&#x27;</span><br></pre></td></tr></table></figure><p>好处有两个：</p><ul><li>不会跟系统命令冲突</li><li>shell 按 <code>x</code> 找，能一键列出自己的所有 alias</li></ul><p>您可以选自己的前缀，但<strong>一定保持一致</strong>。</p><h3 id="约定-2：短前缀按”频次”分层"><a href="#约定-2：短前缀按”频次”分层" class="headerlink" title="约定 2：短前缀按”频次”分层"></a>约定 2：短前缀按”频次”分层</h3><p>杜老师的分层是这样的：</p><ul><li>每天用：<code>xk</code> <code>xd</code> <code>xg</code>（2 个字母）</li><li>每周用：<code>xkg</code> <code>xdc</code>（3 个字母）</li><li>偶尔用：保留长命令，不加 alias</li></ul><p>这样按 <code>x&lt;1字符&gt;</code> 就能列出高频命令。</p><h3 id="约定-3：动作在前，对象在后"><a href="#约定-3：动作在前，对象在后" class="headerlink" title="约定 3：动作在前，对象在后"></a>约定 3：动作在前，对象在后</h3><p>杜老师的命名顺序是 <strong>“工具 + 子命令”</strong>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xkgp  ← kubectl get pod</span><br><span class="line">xkga  ← kubectl get pod -A</span><br><span class="line">xdc   ← docker compose</span><br><span class="line">xdcl  ← docker compose logs -f</span><br></pre></td></tr></table></figure><p>不是 <code>xkpg</code>，也不是 <code>kgp</code>。</p><p>按这种顺序，敲到第二个字母基本能猜出完整 alias。</p><h2 id="三、杜老师自己的-zshrc-local-节选"><a href="#三、杜老师自己的-zshrc-local-节选" class="headerlink" title="三、杜老师自己的 .zshrc.local 节选"></a>三、杜老师自己的 <code>.zshrc.local</code> 节选</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># === kubectl ===</span><br><span class="line">alias xk=&#x27;kubectl&#x27;</span><br><span class="line">alias xkg=&#x27;kubectl get&#x27;</span><br><span class="line">alias xkgp=&#x27;kubectl get pod&#x27;</span><br><span class="line">alias xkga=&#x27;kubectl get pod -A&#x27;</span><br><span class="line"></span><br><span class="line"># === docker ===</span><br><span class="line">alias xd=&#x27;docker&#x27;</span><br><span class="line">alias xdc=&#x27;docker compose&#x27;</span><br><span class="line">alias xdcl=&#x27;docker compose logs -f&#x27;</span><br><span class="line"></span><br><span class="line"># === 自学 ===</span><br><span class="line">alias xv=&#x27;vim&#x27;</span><br><span class="line">alias xll=&#x27;ls -lah&#x27;</span><br><span class="line">alias xg=&#x27;git&#x27;</span><br><span class="line">alias xgs=&#x27;git status&#x27;</span><br></pre></td></tr></table></figure><p>注意：高频命令才加 alias，一个月用不到 3 次的保持长命令。</p><h2 id="四、约定一旦定下来，别轻易改"><a href="#四、约定一旦定下来，别轻易改" class="headerlink" title="四、约定一旦定下来，别轻易改"></a>四、约定一旦定下来，别轻易改</h2><p>杜老师自己踩过这个坑：</p><ul><li>前缀从 <code>x</code> 改成 <code>m</code>，结果老的 alias 全部失效</li><li>命令顺序从”工具+子命令”改成”子命令+工具”，每次都敲错</li></ul><p>约定一旦定下来，至少用半年再考虑调整。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>培训命令收纳这件事，杜老师觉得”命名约定是性价比最高的一步”。</p><p>希望对同样每天跟命令打交道的您有所启发。如果您有别的命名方式，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/861/</id>
+    <link href="https://dusays.com/archives/861/"/>
+    <published>2026-04-07T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>上次杜老师讲了”培训归来 3 步收纳”的方法，不少小伙伴留言问：alias 到底怎么起名字，才不会跟系统命令打架？今天杜老师就把命名约定这件事单拎出来讲一讲。</p>
+</blockquote>]]>
+    </summary>
+    <title>培训归来：把新命令收纳到 shell 的命名约定</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="出差" scheme="https://dusays.com/tags/%E5%87%BA%E5%B7%AE/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师经常出差，每次高铁上的几个小时是难得的整块时间。但车上电源、网络不稳定这事几乎每次都会遇到，今天杜老师就把自己用了一年多的 3 个 fallback 分享给大家。</p></blockquote><span id="more"></span><h2 id="一、为什么需要-fallback"><a href="#一、为什么需要-fallback" class="headerlink" title="一、为什么需要 fallback"></a>一、为什么需要 fallback</h2><p>杜老师自己碰到过几次挺尴尬的情况：</p><ul><li>笔记本电池剩 30%，前座乘客又把插座拔了</li><li>手机想连车上 Wi-Fi，但网页根本打不开</li><li>演示用的 PDF 还没同步到本地，4G 信号又掉了</li></ul><p>总不能直接认栽，备一套 fallback 工具很必要。</p><h2 id="二、3-个-fallback-工具"><a href="#二、3-个-fallback-工具" class="headerlink" title="二、3 个 fallback 工具"></a>二、3 个 fallback 工具</h2><h3 id="工具-1：充电宝-双口充电线"><a href="#工具-1：充电宝-双口充电线" class="headerlink" title="工具 1：充电宝 + 双口充电线"></a>工具 1：充电宝 + 双口充电线</h3><p>杜老师用的是 20000 mAh 的充电宝，配合一根 USB-C 转 USB-C + Lightning 的二合一线：</p><ul><li>优点：可以同时给笔记本和手机供电</li><li>缺点：体积略大，建议放在双肩包外层</li></ul><p>杜老师建议：</p><ul><li>出门前一定充满，出差当天早上再补一次</li><li>高铁上发现插座被占，第一时间切到充电宝</li></ul><h3 id="工具-2：手机热点-USB-共享网络"><a href="#工具-2：手机热点-USB-共享网络" class="headerlink" title="工具 2：手机热点 + USB 共享网络"></a>工具 2：手机热点 + USB 共享网络</h3><p>iPhone 和 Mac 之间可以做到：</p><ul><li>插线即用，不消耗手机电量</li><li>比开热点稳定，不会突然断流</li><li>适合需要稳定网络的演示场景</li></ul><p>杜老师偶尔需要在车上回一封带附件的邮件，就直接 USB 共享。</p><h3 id="工具-3：本地资料预先同步"><a href="#工具-3：本地资料预先同步" class="headerlink" title="工具 3：本地资料预先同步"></a>工具 3：本地资料预先同步</h3><p>这一条严格说不算工具，但杜老师觉得是性价比最高的一招：</p><ul><li>出门前 30 分钟，把当天可能用到的资料同步到本地</li><li>演示文件、PDF、代码片段，全部放进一个 <code>出差-2026-XX-XX/</code> 目录</li><li>信号再差，本地永远能打开</li></ul><h2 id="三、杜老师自己的组合"><a href="#三、杜老师自己的组合" class="headerlink" title="三、杜老师自己的组合"></a>三、杜老师自己的组合</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">笔记本没电 → 用充电宝补</span><br><span class="line">需要发邮件 → USB 共享网络</span><br><span class="line">演示当天 → 前一晚就把资料同步到本地</span><br></pre></td></tr></table></figure><p>这套组合，杜老师用了一年多，目前没掉过链子。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>高铁出行这件事，杜老师觉得”提前多花 30 分钟准备，比车上临时补救便宜太多”。</p><p>希望对同样经常出差的您有所帮助。如果您有别的更好办法，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/860/</id>
+    <link href="https://dusays.com/archives/860/"/>
+    <published>2026-04-01T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师经常出差，每次高铁上的几个小时是难得的整块时间。但车上电源、网络不稳定这事几乎每次都会遇到，今天杜老师就把自己用了一年多的 3 个 fallback 分享给大家。</p>
+</blockquote>]]>
+    </summary>
+    <title>高铁出差路上的电源与网络 3 个 fallback</title>
+    <updated>2026-07-12T13:03:27.391Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Teacher Du</name>
@@ -29,7 +189,7 @@
 </blockquote>]]>
     </summary>
     <title>夏季骑行通勤的 3 个小习惯</title>
-    <updated>2026-07-12T08:42:45.706Z</updated>
+    <updated>2026-07-12T13:03:27.391Z</updated>
   </entry>
   <entry>
     <author>
@@ -49,7 +209,7 @@
 </blockquote>]]>
     </summary>
     <title>推荐酷鸭数据主机</title>
-    <updated>2026-07-12T08:42:45.706Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -69,7 +229,7 @@
 </blockquote>]]>
     </summary>
     <title>培训归来：把新学到的命令收纳到 shell 的 2 个动作</title>
-    <updated>2026-07-12T08:42:45.706Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -89,7 +249,7 @@
 </blockquote>]]>
     </summary>
     <title>黄昏漫步的&quot;下班缓冲&quot;为什么重要</title>
-    <updated>2026-07-12T08:42:45.706Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -109,7 +269,7 @@
 </blockquote>]]>
     </summary>
     <title>酒店 Wi-Fi 不稳的 3 个 fallback 工具</title>
-    <updated>2026-07-12T08:42:45.706Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -129,7 +289,7 @@
 </blockquote>]]>
     </summary>
     <title>培训归来：怎样把新学到的命令收纳到自己的 shell</title>
-    <updated>2026-07-12T08:42:45.706Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -149,7 +309,7 @@
 </blockquote>]]>
     </summary>
     <title>高铁出差路上的 4 个阅读习惯</title>
-    <updated>2026-07-12T08:42:45.706Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -169,7 +329,7 @@
 </blockquote>]]>
     </summary>
     <title>macOS 终端下本地跑 LLM 实测</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -189,7 +349,7 @@
 </blockquote>]]>
     </summary>
     <title>工作室暗光环境的护眼心得</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -209,7 +369,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤党耳机选型：3 款降噪豆横评</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -229,7 +389,7 @@
 </blockquote>]]>
     </summary>
     <title>深夜 Terminal 的 4 个提效小动作</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
   <entry>
     <author>
@@ -249,166 +409,6 @@
 </blockquote>]]>
     </summary>
     <title>Minecraft 生存服务器来啦「1.21.8 版」</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <category term="终端" scheme="https://dusays.com/tags/%E7%BB%88%E7%AB%AF/"/>
-    <content>
-      <![CDATA[<blockquote><p>对于运维人员和开发者而言，一款高效、安全、易用的远程连接管理工具是日常工作的刚需。Nexus Terminal（星枢终端）作为一款现代化的Web SSH&#x2F;RDP&#x2F;VNC客户端，凭借高颜值界面、丰富功能和强大的安全机制，成为远程管理的优质选择。更重要的是，通过Docker可以快速部署这款工具，充分利用容器化的便捷性和环境隔离特性，让远程服务器管理效率大幅提升。本文将详细分享基于Docker部署Nexus Terminal的完整步骤，以及工具的基础使用方法，新手也能轻松上手。</p></blockquote><span id="more"></span><h2 id="一、认识Nexus-Terminal，高效远程管理的利器"><a href="#一、认识Nexus-Terminal，高效远程管理的利器" class="headerlink" title="一、认识Nexus Terminal，高效远程管理的利器"></a>一、认识Nexus Terminal，高效远程管理的利器</h2><p>Nexus Terminal是专为开发者、运维人员和企业团队打造的远程连接管理工具，兼具Web端和独立桌面端应用，核心围绕<strong>高效、安全、定制化</strong>设计，相比传统远程管理工具，优势十分突出。</p><p>其核心特性涵盖连接管理、安全防护、功能拓展等多个维度，完美适配日常远程运维需求：</p><ol><li><strong>多协议多标签支持</strong>：同时兼容SSH&#x2F;SFTP、RDP、VNC协议，多远程连接可通过标签页并行操作，告别多窗口切换的繁琐；</li><li><strong>类VS Code编辑体验</strong>：内置Monaco Editor，支持在线编辑文件，语法高亮、智能补全一应俱全，远程修改代码&#x2F;配置无需额外工具；</li><li><strong>强大安全防护体系</strong>：集成人机验证、双因素认证（2FA），支持IP白名单&#x2F;黑名单，异常访问自动封禁，还有全面的审计日志，记录所有用户行为和系统变更，满足合规审查和问题回溯需求；</li><li><strong>轻量高效易部署</strong>：基于Node.js开发的轻量级后端，资源占用低，还支持PWA渐进式Web应用，可安装为类原生应用，支持离线使用和推送通知；</li><li><strong>实用附加功能</strong>：内置简易Docker容器管理面板，简化DevOps流程；心跳保活机制确保连接稳定，避免超时断开；界面主题和布局可高度定制，适配不同使用习惯。</li></ol><p>此外，Nexus Terminal还配备了实时通知系统，登录提醒、异常告警等关键事件及时推送，让运维人员随时掌握系统状态。</p><h2 id="二、部署前准备，环境规划与检查"><a href="#二、部署前准备，环境规划与检查" class="headerlink" title="二、部署前准备，环境规划与检查"></a>二、部署前准备，环境规划与检查</h2><p>本次部署基于<strong>个人测试环境</strong>进行，生产环境部署需谨慎评估并做好安全加固，以下是具体的环境规划和检查步骤，确保部署过程顺利。</p><h3 id="2-1-本地环境规划"><a href="#2-1-本地环境规划" class="headerlink" title="2.1 本地环境规划"></a>2.1 本地环境规划</h3><p>本次实践的基础环境配置如下，核心需保证Docker和Docker Compose版本符合要求：</p><table><thead><tr><th>主机名</th><th>IP地址</th><th>操作系统版本</th><th>Docker版本</th><th>部署项目</th></tr></thead><tbody><tr><td>jeven01</td><td>192.168.3.88</td><td>Ubuntu 22.04.1 LTS</td><td>27.1.1</td><td>Nexus Terminal</td></tr></tbody></table><h3 id="2-2-环境核心检查"><a href="#2-2-环境核心检查" class="headerlink" title="2.2 环境核心检查"></a>2.2 环境核心检查</h3><p>部署前需确认Docker服务正常运行、Docker版本适配，且Docker Compose版本在2.0以上，依次执行以下命令检查：</p><ol><li><strong>检查Docker服务状态</strong></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure><p>输出结果显示<code>Active: active (running)</code>即为正常运行；<br>2. <strong>检查Docker版本</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure><ol start="3"><li><strong>检查Docker Compose版本</strong></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose version</span><br></pre></td></tr></table></figure><p>若Docker未安装或版本过低，需先完成安装&#x2F;升级，确保基础环境达标。</p><h2 id="三、Docker一键部署Nexus-Terminal，步骤超简单"><a href="#三、Docker一键部署Nexus-Terminal，步骤超简单" class="headerlink" title="三、Docker一键部署Nexus Terminal，步骤超简单"></a>三、Docker一键部署Nexus Terminal，步骤超简单</h2><p>基于Docker Compose部署Nexus Terminal，全程只需拉取镜像、配置部署文件、启动容器三步，无需复杂的环境配置，快速完成搭建。</p><h3 id="3-1-拉取相关容器镜像"><a href="#3-1-拉取相关容器镜像" class="headerlink" title="3.1 拉取相关容器镜像"></a>3.1 拉取相关容器镜像</h3><p>Nexus Terminal的部署需要前端、后端、远程网关和guacd四个镜像，依次执行以下命令拉取最新版本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker pull heavrnl/nexus-terminal-frontend:latest</span><br><span class="line">docker pull heavrnl/nexus-terminal-backend:latest</span><br><span class="line">docker pull heavrnl/nexus-terminal-remote-gateway:latest</span><br><span class="line">docker pull guacamole/guacd:latest</span><br></pre></td></tr></table></figure><h3 id="3-2-创建部署目录并编写docker-compose-yaml"><a href="#3-2-创建部署目录并编写docker-compose-yaml" class="headerlink" title="3.2 创建部署目录并编写docker-compose.yaml"></a>3.2 创建部署目录并编写docker-compose.yaml</h3><ol><li><strong>创建专属部署目录</strong>，并进入该目录：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /data/nexus-terminal &amp;&amp;  <span class="built_in">cd</span> /data/nexus-terminal</span><br></pre></td></tr></table></figure><ol start="2"><li><strong>创建并编辑docker-compose.yaml文件</strong>：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim docker-compose.yaml</span><br></pre></td></tr></table></figure><p>将以下配置内容复制到文件中，<strong>注意替换其中的IP地址为自身服务器的实际IP</strong>（示例为192.168.3.88）：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">frontend:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">heavrnl/nexus-terminal-frontend:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus-terminal-frontend</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;18111:80&quot;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">backend</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">remote-gateway</span></span><br><span class="line">  <span class="attr">backend:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">heavrnl/nexus-terminal-backend:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus-terminal-backend</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/app/data</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">NODE_ENV:</span> <span class="string">production</span></span><br><span class="line">      <span class="attr">PORT:</span> <span class="number">3001</span></span><br><span class="line">      <span class="attr">DEPLOYMENT_MODE:</span> <span class="string">docker</span>  <span class="comment"># local/docker</span></span><br><span class="line">      <span class="attr">REMOTE_GATEWAY_API_BASE_LOCAL:</span> <span class="string">http://192.168.3.88:9090</span></span><br><span class="line">      <span class="attr">REMOTE_GATEWAY_API_BASE_DOCKER:</span> <span class="string">http://remote-gateway:9090</span></span><br><span class="line">      <span class="attr">REMOTE_GATEWAY_WS_URL_LOCAL:</span> <span class="string">ws://192.168.3.88:8080</span></span><br><span class="line">      <span class="attr">REMOTE_GATEWAY_WS_URL_DOCKER:</span> <span class="string">ws://remote-gateway:8080</span></span><br><span class="line">      <span class="comment"># passkey</span></span><br><span class="line">      <span class="attr">RP_ID:</span> <span class="string">&quot;192.168.3.88&quot;</span></span><br><span class="line">      <span class="attr">RP_ORIGIN:</span> <span class="string">&quot;http://192.168.3.88:18111&quot;</span></span><br><span class="line">  <span class="attr">remote-gateway:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">heavrnl/nexus-terminal-remote-gateway:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus-terminal-remote-gateway</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">GUACD_HOST:</span> <span class="string">guacd</span></span><br><span class="line">      <span class="attr">GUACD_PORT:</span> <span class="number">4822</span></span><br><span class="line">      <span class="attr">REMOTE_GATEWAY_API_PORT:</span> <span class="number">9090</span></span><br><span class="line">      <span class="attr">REMOTE_GATEWAY_WS_PORT:</span> <span class="number">8080</span></span><br><span class="line">      <span class="attr">FRONTEND_URL:</span> <span class="string">http://frontend</span></span><br><span class="line">      <span class="attr">MAIN_BACKEND_URL:</span> <span class="string">http://backend:3001</span></span><br><span class="line">      <span class="attr">NODE_ENV:</span> <span class="string">production</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">guacd</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">backend</span></span><br><span class="line">  <span class="attr">guacd:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">guacamole/guacd:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus-terminal-guacd</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure><p>保存并退出编辑（vim中执行<code>:wq</code>）。</p><h3 id="3-3-启动Nexus-Terminal容器"><a href="#3-3-启动Nexus-Terminal容器" class="headerlink" title="3.3 启动Nexus Terminal容器"></a>3.3 启动Nexus Terminal容器</h3><p>在部署目录下执行以下命令，<strong>后台启动所有容器</strong>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure><h3 id="3-4-检查容器运行状态"><a href="#3-4-检查容器运行状态" class="headerlink" title="3.4 检查容器运行状态"></a>3.4 检查容器运行状态</h3><p>容器启动后，执行以下命令确认所有服务正常运行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose ps</span><br></pre></td></tr></table></figure><p>若所有容器的STATUS列显示<code>Up</code>（guacd会显示<code>Up (healthy)</code>），说明部署成功，前端容器已映射18111端口，可通过该端口访问。</p><h2 id="四、访问并初始化Nexus-Terminal"><a href="#四、访问并初始化Nexus-Terminal" class="headerlink" title="四、访问并初始化Nexus Terminal"></a>四、访问并初始化Nexus Terminal</h2><p>部署成功后，通过浏览器即可访问Nexus Terminal，首次访问需完成管理员账号创建，步骤如下：</p><ol><li><strong>浏览器访问</strong>：在地址栏输入<code>http://&lt;服务器实际IP&gt;:18111</code>，例如<code>http://192.168.3.88:18111</code>；</li><li><strong>创建管理员账号</strong>：首次进入会显示初始设置页面，自定义输入用户名、密码，确认密码后点击「创建账号」，建议设置复杂密码，提升安全性；</li><li><strong>首次登录</strong>：输入刚创建的账号密码，登录后进入Nexus Terminal主界面，可看到仪表盘、终端、连接管理、审计日志等功能模块。</li></ol><p><strong>注意</strong>：若无法访问，需检查宿主机防火墙是否放行18111端口，云服务器还需在安全组中添加18111端口的访问规则。</p><h2 id="五、Nexus-Terminal基础使用，快速上手远程管理"><a href="#五、Nexus-Terminal基础使用，快速上手远程管理" class="headerlink" title="五、Nexus Terminal基础使用，快速上手远程管理"></a>五、Nexus Terminal基础使用，快速上手远程管理</h2><p>成功登录后，即可开始使用Nexus Terminal进行远程服务器管理，核心的添加服务器、远程登录、在线编辑文件等操作，步骤简单易懂。</p><h3 id="5-1-添加远程服务器连接"><a href="#5-1-添加远程服务器连接" class="headerlink" title="5.1 添加远程服务器连接"></a>5.1 添加远程服务器连接</h3><ol><li>依次点击主界面的「终端」——「连接列表」，点击「添加第一个连接」；</li><li>配置服务器基本信息：填写连接名称（可选，便于区分）、服务器IP地址，选择连接类型（SSH&#x2F;RDP&#x2F;VNC，默认SSH），填写对应端口；</li><li>配置认证信息：选择认证方式（密码&#x2F;SSH密钥），若为密码认证，输入服务器登录用户名和密码；若为SSH密钥，上传对应密钥文件；</li><li>测试并添加：可点击「测试连接」确认服务器可达，测试成功后点击「确认添加」，连接即创建完成。</li></ol><h3 id="5-2-远程登录服务器"><a href="#5-2-远程登录服务器" class="headerlink" title="5.2 远程登录服务器"></a>5.2 远程登录服务器</h3><p>连接创建完成后，在连接列表中<strong>双击服务器名称</strong>，即可快速建立远程连接，进入终端界面，可直接执行服务器命令，操作与本地终端一致，多连接可通过标签页切换。</p><h3 id="5-3-在线编辑远程文件"><a href="#5-3-在线编辑远程文件" class="headerlink" title="5.3 在线编辑远程文件"></a>5.3 在线编辑远程文件</h3><p>远程登录后，终端界面下方会显示服务器的文件列表，无需借助SFTP工具，直接点击文件即可在左侧编辑区域打开，支持语法高亮和智能补全，编辑完成后保存即可同步到服务器，修改配置、编写代码高效便捷。</p><h3 id="5-4-查看审计日志，追踪操作记录"><a href="#5-4-查看审计日志，追踪操作记录" class="headerlink" title="5.4 查看审计日志，追踪操作记录"></a>5.4 查看审计日志，追踪操作记录</h3><p>所有的操作行为都会被记录在审计日志中，点击主界面的「审计日志」，可查看SSH连接成功&#x2F;失败、连接创建、设置更新等所有操作记录，支持按操作类型、时间筛选，便于问题排查和操作追溯。</p><h2 id="六、部署总结与使用建议"><a href="#六、部署总结与使用建议" class="headerlink" title="六、部署总结与使用建议"></a>六、部署总结与使用建议</h2><p>通过Docker部署Nexus Terminal，充分发挥了容器化的优势：<strong>部署流程简单、环境隔离性好、后续维护便捷</strong>，无需关注复杂的依赖配置，几分钟即可完成搭建，无论是个人测试环境还是企业轻量运维场景，都非常适用。</p><p>Nexus Terminal凭借高颜值的界面、丰富的功能和强大的安全防护，完美解决了传统远程管理工具的痛点：多协议兼容满足多样化远程需求，类VS Code的编辑体验简化远程文件操作，全面的安全机制保障服务器访问安全，审计日志和通知系统让运维管理更可控。</p><p><strong>生产环境使用建议</strong>：</p><ol><li>强化密码安全，开启双因素认证（2FA），配置IP白名单，仅允许可信IP访问；</li><li>定期备份部署目录下的data文件夹，防止数据丢失；</li><li>及时更新Nexus Terminal镜像，修复已知安全漏洞；</li><li>对18111端口做反向代理，配置HTTPS，提升传输安全性。</li></ol><p>无论是日常的服务器远程维护、代码部署，还是团队协作的远程管理，Nexus Terminal都能成为高效的辅助工具，结合Docker的便捷部署，让远程管理工作更轻松、更安全。</p>]]>
-    </content>
-    <id>https://dusays.com/archives/841/</id>
-    <link href="https://dusays.com/archives/841/"/>
-    <published>2025-12-08T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>对于运维人员和开发者而言，一款高效、安全、易用的远程连接管理工具是日常工作的刚需。Nexus Terminal（星枢终端）作为一款现代化的Web SSH&#x2F;RDP&#x2F;VNC客户端，凭借高颜值界面、丰富功能和强大的安全机制，成为远程管理的优质选择。更重要的是，通过Docker可以快速部署这款工具，充分利用容器化的便捷性和环境隔离特性，让远程服务器管理效率大幅提升。本文将详细分享基于Docker部署Nexus Terminal的完整步骤，以及工具的基础使用方法，新手也能轻松上手。</p>
-</blockquote>]]>
-    </summary>
-    <title>快速部署 Nexus Terminal 打造高颜值远程管理终端</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    <category term="区别" scheme="https://dusays.com/tags/%E5%8C%BA%E5%88%AB/"/>
-    <content>
-      <![CDATA[<blockquote><p>在 Linux 系统中，软件的安装和管理通常依赖于软件包（Package），而 .deb 和 .rpm 是两种最主流的软件包格式。它们分别服务于不同的 Linux 发行版生态系统，不仅文件后缀不同，所使用的工具链、依赖管理方式、系统集成方式等方面也各有特点。本文将从多个角度对这两种格式进行深入解析。</p></blockquote><span id="more"></span><h2 id="基础定义"><a href="#基础定义" class="headerlink" title="基础定义"></a>基础定义</h2><table><thead><tr><th>格式</th><th>全称</th><th>主要用途</th></tr></thead><tbody><tr><td>.deb</td><td>Debian Binary Package</td><td>用于 Debian 及其衍生系统</td></tr><tr><td>.rpm</td><td>RPM Package Manager</td><td>用于 Red Hat 等及其衍生系统</td></tr></tbody></table><h2 id="软件包管理工具的不同"><a href="#软件包管理工具的不同" class="headerlink" title="软件包管理工具的不同"></a>软件包管理工具的不同</h2><table><thead><tr><th>操作</th><th>.deb 系列</th><th>.rpm 系列</th></tr></thead><tbody><tr><td>低层包管理器</td><td>dpkg</td><td>rpm</td></tr><tr><td>高层包管理器</td><td>apt、apt-get、gdebi</td><td>yum、dnf、zypper</td></tr><tr><td>自动解决依赖</td><td>apt 系列具备强大的自动依赖解决能力</td><td>yum &#x2F; dnf 支持自动依赖解析</td></tr><tr><td>安装命令示例</td><td>sudo apt install .&#x2F;xxx.deb ; sudo dpkg -i xxx.deb</td><td>sudo yum install xxx.rpm ; sudo rpm -ivh xxx.rpm</td></tr></tbody></table><h2 id="软件包内部结构差异"><a href="#软件包内部结构差异" class="headerlink" title="软件包内部结构差异"></a>软件包内部结构差异</h2><p>尽管 .deb 和 .rpm 都包含软件的可执行文件、元信息、安装脚本等，但它们的打包方式和控制文件结构并不相同：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.deb 软件包结构：</span><br><span class="line">.deb 文件实际上是一个 ar 档案，包含：</span><br><span class="line">├── control.tar.gz  → 控制信息（如版本、依赖、脚本）</span><br><span class="line">├── data.tar.gz     → 软件内容（实际文件）</span><br><span class="line">├── debian-binary   → 版本信息（固定为2.0）</span><br><span class="line">.rpm 软件包结构：</span><br><span class="line">.rpm 文件是经过 CPIO 和 RPM 格式封装的结构，包含：</span><br><span class="line">├── 包描述信息（名称、版本、架构等）</span><br><span class="line">├── 安装/卸载脚本（%pre、%post、%preun、%postun）</span><br><span class="line">├── 文件列表及路径</span><br><span class="line">├── 安装数据（通过 CPIO 解包）</span><br></pre></td></tr></table></figure><h2 id="平台兼容性"><a href="#平台兼容性" class="headerlink" title="平台兼容性"></a>平台兼容性</h2><p>.deb 和 .rpm 是彼此不兼容的，不同包管理器和元数据结构使它们无法直接在非原生系统中使用。但可以通过跨格式转换工具实现临时兼容；</p><p>注意：转换后的包可能在目标系统中运行异常，特别是涉及依赖项或系统级服务时。</p><h2 id="系统集成差异"><a href="#系统集成差异" class="headerlink" title="系统集成差异"></a>系统集成差异</h2><p>.deb 系列操作系统默认使用 systemd 或 sysvinit 管理服务，依赖包也多以 .deb 分发。</p><p>.rpm 系统通常更加倾向于企业级应用部署，具备更强的 SELinux、Firewalld 集成与限制管理。</p><p>此外，.rpm 包更早支持数字签名验证（GPG 签名），而 .deb 也已在 apt 中引入类似机制。</p><h2 id="使用场景与生态对比"><a href="#使用场景与生态对比" class="headerlink" title="使用场景与生态对比"></a>使用场景与生态对比</h2><table><thead><tr><th>项目</th><th>.deb 系列（如 Ubuntu、麒麟桌面、统信桌面）</th><th>.rpm 系列（如 openEuler、麒麟服务器、统信服务器）</th></tr></thead><tbody><tr><td>使用人群</td><td>个人用户、国产桌面操作系统用户居多</td><td>企业级、服务器、运维自动化场景多见</td></tr><tr><td>系统更新频率</td><td>快，偏向社区活跃发展</td><td>稳定，重视长期支持（LTS）版本</td></tr><tr><td>支持工具</td><td>apt, dpkg</td><td>yum, dnf, rpm, zypper</td></tr></tbody></table>]]>
-    </content>
-    <id>https://dusays.com/archives/840/</id>
-    <link href="https://dusays.com/archives/840/"/>
-    <published>2025-12-02T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>在 Linux 系统中，软件的安装和管理通常依赖于软件包（Package），而 .deb 和 .rpm 是两种最主流的软件包格式。它们分别服务于不同的 Linux 发行版生态系统，不仅文件后缀不同，所使用的工具链、依赖管理方式、系统集成方式等方面也各有特点。本文将从多个角度对这两种格式进行深入解析。</p>
-</blockquote>]]>
-    </summary>
-    <title>DEB 和 RPM 有什么区别</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <category term="分享" scheme="https://dusays.com/tags/%E5%88%86%E4%BA%AB/"/>
-    <content>
-      <![CDATA[<blockquote><p>在当今快节奏的工作中，高效的信息处理与内容创作工具越来越受到人们的青睐。腾讯推出的 ima，是一款以知识库为核心，面向学习与办公场景的 AI 智能工作台，致力于帮助用户提升信息获取效率并大幅提高内容创作的效率与质量。</p></blockquote><span id="more"></span><h2 id="ima-工作台简介"><a href="#ima-工作台简介" class="headerlink" title="ima 工作台简介"></a>ima 工作台简介</h2><p>高效获取信息：无论是全网搜索还是基于个人知识库，ima 都能快速定位精准答案；</p><p>智能解读内容：支持对文档、网页、图片、音视频等多种格式内容进行 AI 解读与总结；</p><p>便捷知识沉淀：可将公众号文章、网页、笔记、文档等一键加入个人或共享知识库，形成自己的知识体系；</p><p>辅助内容创作：提供 AI 写作、扩写、缩写、翻译、脑图生成等能力，助力用户高效产出高质量内容。</p><h2 id="任务模式"><a href="#任务模式" class="headerlink" title="任务模式"></a>任务模式</h2><p>智能任务生成</p><p>用户仅需输入主题描述，或通过 @ 指定个人&#x2F;共享知识库，ima 就能基于你的需求与知识储备，智能生成结构化内容，如行业报告、项目总结、分析文档等。</p><p>支持生成 播客音频内容，可选择对谈人数、音色，模拟真实对话场景，适用于知识分享、培训、访谈类内容创作。</p><p>结构化输出</p><p>生成的报告自带 目录导航，目录条目与报告内容层级一一对应，点击即可快速跳转，便于阅读与分享。</p><p>播客内容支持 音频下载，便于后续传播与再加工。</p><p>个性化延续</p><p>系统会自动记录用户上次使用的音色与对谈人数设置，下次使用时无需重复配置，提升连续创作体验。</p><p>任务模式体验申请机制</p><p>任务模式目前为邀请制体验功能，并非所有用户默认开放。用户需要通过申请获得体验资格，体验期内每日有使用次数限制（通常为每日 5 次，次数每日重置）。</p><h2 id="邀请分享"><a href="#邀请分享" class="headerlink" title="邀请分享"></a>邀请分享</h2><p>由于任务模式目前处于 逐步开放体验阶段，并非所有用户默认可用，因此官方设置了 邀请码分享机制，以便于感兴趣的用户通过官方渠道或已体验用户获取试用资格。</p><p>若你想体验 ima 任务模式，可按如下步骤申请：</p><p>第一步：确保你的 ima 客户端为最新版本</p><p>手机端（iOS&#x2F;Android&#x2F;鸿蒙）或电脑端（Windows&#x2F;Mac）的 ima 版本需 升级至 2.0 或更高版本。</p><p>第二步：进入任务模式入口</p><p>在 ima 对话界面中，切换至「任务模式」（通常在模式选择区或功能入口中可以找到）。</p><p>第三步：点击“申请体验”</p><p>在任务模式页面，会有 “申请体验”按钮，点击后提交申请。</p><p>第四步：等待官方审核与邀请码发放</p><p>任务模式体验资格将 根据申请顺序分批发放，通过审核后，你将在 ima 端内收到 站内信通知，内含你的 体验资格及可能的邀请码（如有）。</p><p>第五步：开始使用</p><p>获得体验资格后，每个账号 每日最多可体验 5 次任务模式功能，系统可能会根据实际运营情况调整使用次数。</p><h2 id="本站分享"><a href="#本站分享" class="headerlink" title="本站分享"></a>本站分享</h2><p>杜老师获取了 3 个 任务模式体验资格，可通过如下方式使用：</p><ol><li><p>在本站评论去留言，留下邮箱接收；</p></li><li><p>本站在看到留言后，会尽快发送邀请码到你的邮箱；</p></li><li><p>收到邀请码后，可在 ima 端内使用 “邀请码” 功能，输入邀请码即可获取体验资格。</p></li><li><p>目前剩余一个邀请码，最终解释权归杜老师说所有。</p></li></ol>]]>
-    </content>
-    <id>https://dusays.com/archives/839/</id>
-    <link href="https://dusays.com/archives/839/"/>
-    <published>2025-11-26T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>在当今快节奏的工作中，高效的信息处理与内容创作工具越来越受到人们的青睐。腾讯推出的 ima，是一款以知识库为核心，面向学习与办公场景的 AI 智能工作台，致力于帮助用户提升信息获取效率并大幅提高内容创作的效率与质量。</p>
-</blockquote>]]>
-    </summary>
-    <title>ima 任务模式邀请码分享</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <category term="邮件" scheme="https://dusays.com/tags/%E9%82%AE%E4%BB%B6/"/>
-    <content>
-      <![CDATA[<blockquote><p>您是否曾经需要一个快捷的电子邮件地址？比如注册游戏或网站？这时 Temp Mail 就能派上用场了！它能为您提供一个可在短时间内使用的临时电子邮件地址。</p></blockquote><span id="more"></span><h2 id="什么是临时邮件？"><a href="#什么是临时邮件？" class="headerlink" title="什么是临时邮件？"></a>什么是临时邮件？</h2><p>使用临时邮箱，您可以创建一个有效期仅为 24 小时的电子邮件地址。这意味着您无需使用真实邮箱即可注册网站或 Facebook、Twitter 等社交媒体。它非常适合保持您的收件箱整洁！</p><p>有了临时邮箱后，您就可以立即阅读收到的邮件。超级简单方便！</p><p>因此，如果您想尝试一下，只需访问 <a href="https://tempmail100.com/">Temp Mail</a> 并立即获取您的临时电子邮件地址！</p><p>在深入探讨最佳实践之前，让我们先来了解一下临时邮箱的各种术语。常见的名称包括一次性邮箱地址、一次性邮箱地址、10分钟邮箱地址和一次性邮箱地址。其他术语，例如虚假邮箱地址、匿名邮箱账户和别名邮箱地址，则强调了其隐私功能。此外，临时邮件和自毁邮箱地址则强调了其保护您的主邮箱免受垃圾邮件侵害的用途。这些术语都体现了增强安全性和有效管理通信的目标，并且可以互换使用。</p><h2 id="主要特点和优势"><a href="#主要特点和优势" class="headerlink" title="主要特点和优势"></a>主要特点和优势</h2><ul><li>临时电子邮件地址</li></ul><p>使用临时邮箱地址是明智之举。它能确保您真实邮箱的安全。您可以随时创建新邮箱。这样，您就可以避免收到垃圾邮件和不需要的邮件。</p><ul><li>轻松注册网站和社交媒体</li></ul><p>使用临时邮箱注册网站和社交媒体非常方便。您只需输入临时邮箱地址即可。无需分享您的真实邮箱地址。这可以确保您的信息安全。</p><ul><li>隐私保护</li></ul><p>您的隐私至关重要。使用临时邮箱，您的个人数据安全无虞。所有邮件将在一小时后删除。您也可以随时删除临时邮箱。这意味着没有人可以追踪您。</p><p>有关我们如何保护您的隐私的更多详细信息，请查看我们的<a href="https://tempmail100.com/legal/privacy-policy">隐私政策</a></p><p>使用临时邮箱是保障网络安全的好方法。立即试用！</p><h2 id="临时邮件的理想用户"><a href="#临时邮件的理想用户" class="headerlink" title="临时邮件的理想用户"></a>临时邮件的理想用户</h2><p>您是否曾经想在线注册某些服务，但又不想使用真实邮箱？这时，<a href="https://tempmail100.com/zh-cn/">临时邮箱</a> 就派上用场了！它非常适合那些想要保持邮箱整洁的用户。</p><p>以下是 <a href="https://tempmail100.com/">Temp Mail</a> 的一些理想用户：</p><ul><li>想要尝试新服务但又不想泄露个人电子邮件的人。</li><li>需要注册在线资源但又想避免垃圾邮件的学生。</li><li>任何重视隐私并希望保证信息安全的人。</li></ul><p>使用临时邮件很简单，并且可以帮助您在线保持安全！</p><h2 id="临时邮件的优点和缺点"><a href="#临时邮件的优点和缺点" class="headerlink" title="临时邮件的优点和缺点"></a>临时邮件的优点和缺点</h2><p>你听说过临时邮箱吗？它是一款很酷的工具，可以为你提供一个临时的电子邮件地址。但它真的有用吗？让我们来一探究竟！</p><table><thead><tr><th align="left">优势</th><th align="left">缺点</th></tr></thead><tbody><tr><td align="left">保护您的隐私</td><td align="left">可能会被某些网站屏蔽</td></tr><tr><td align="left">便于使用</td><td align="left">电子邮件可能很快就会过期</td></tr><tr><td align="left">无需注册</td><td align="left">与常规电子邮件相比功能有限</td></tr></tbody></table><p>总而言之，<a href="https://tempmail100.com/zh-cn/">临时邮箱</a>有其优缺点。它在保护隐私方面做得很好，但可能并非万能。您觉得呢？</p><h2 id="临时邮件适合您吗？"><a href="#临时邮件适合您吗？" class="headerlink" title="临时邮件适合您吗？"></a>临时邮件适合您吗？</h2><p>您是否曾经需要邮箱地址，但又不想使用真实邮箱？这时，<a href="https://tempmail100.com/">Temp Mail</a> 就派上用场了！它能为您提供一个临时邮箱地址。您可以用它来注册网站或获取验证码。但它真的适合您吗？如果您想保障网络安全并避免垃圾邮件，那么答案是肯定的！但请记住，它不适用于发送重要邮件。</p><h2 id="使用临时电子邮件的最佳实践"><a href="#使用临时电子邮件的最佳实践" class="headerlink" title="使用临时电子邮件的最佳实践"></a>使用临时电子邮件的最佳实践</h2><p>临时邮箱服务对于管理在线隐私和沟通至关重要。随着垃圾邮件和数据泄露事件的增多，临时邮箱提供了一种保护个人信息的实用方法。本指南概述了有效使用临时邮箱的最佳实践，帮助您在享受其优势的同时，确保在线活动的安全性和便捷性。</p><p>1.<strong>使用临时邮件满足临时需求</strong></p><p>临时邮箱非常适合短期用途，例如订阅新闻简报、查看一次性优惠或注册您不完全信任的网站。请避免使用临时邮箱进行长期或重要的通信，因为收件箱通常会在短时间后被删除。</p><p>2.<strong>避免使用临时邮件发送敏感信息</strong></p><p>虽然临时邮箱可以保护您的主邮箱免受垃圾邮件的侵扰，但它并非用于处理敏感信息。请避免使用临时邮箱进行金融交易、个人通信或任何涉及敏感数据的活动。</p><p>3.<strong>定期清除浏览器缓存</strong></p><p>使用临时邮箱时，建议定期清除浏览器缓存和 Cookie。这有助于保护您的隐私，并确保不会留下任何可能被利用的残留数据。</p><p>4.<strong>保持临时邮件匿名</strong></p><p>临时邮箱的主要优势之一是匿名性。请勿将您的临时邮箱地址与您的主邮箱或任何个人信息关联。这有助于保障您的身份安全并保护您的在线活动隐私。</p><p>5.<strong>谨慎使用链接和附件</strong></p><p>与普通电子邮件一样，请谨慎处理临时邮箱收件箱中收到的任何链接或附件。这些链接或附件可能包含恶意软件或钓鱼攻击。请仅与来自可信来源的内容进行互动。</p><p>6.<strong>使用临时邮箱进行多次注册</strong></p><p>如果您需要在一个平台上注册多个帐户，临时邮箱会是一个很有用的工具。它可以让您快速轻松地创建多个地址，从而帮助您管理多个帐户，而不会使主收件箱变得杂乱无章。</p><h3 id="推荐的临时邮箱网站"><a href="#推荐的临时邮箱网站" class="headerlink" title="推荐的临时邮箱网站"></a>推荐的临时邮箱网站</h3><ul><li><a href="https://tempmail100.com/">https://tempmail100.com</a></li><li><a href="https://tempmail365.com/">https://tempmail365.com</a></li></ul>]]>
-    </content>
-    <id>https://dusays.com/archives/838/</id>
-    <link href="https://dusays.com/archives/838/"/>
-    <published>2025-11-20T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>您是否曾经需要一个快捷的电子邮件地址？比如注册游戏或网站？这时 Temp Mail 就能派上用场了！它能为您提供一个可在短时间内使用的临时电子邮件地址。</p>
-</blockquote>]]>
-    </summary>
-    <title>Temp Mail 兼具隐私和便捷性的最佳临时电子邮件服务</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    <category term="容器" scheme="https://dusays.com/tags/%E5%AE%B9%E5%99%A8/"/>
-    <content>
-      <![CDATA[<blockquote><p>Docker 重度使用者们，您了解过 Docker 日志吗？如何查找、减少以及管理日志，从而有效节省磁盘空间！今天分享一下如何处理 Docker 日志的问题。</p></blockquote><span id="more"></span><h2 id="日志好坑"><a href="#日志好坑" class="headerlink" title="日志好坑"></a>日志好坑</h2><p>Docker 默认使用的是 json-file 日志驱动。日志会一直写，没有限制、没有轮转、没有清理！日志默认位置：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/docker/containers/&lt;container-id&gt;/&lt;container-id&gt;-json.log</span><br></pre></td></tr></table></figure><p>当您发现它时，可能已经：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IO 等待时间长</span><br><span class="line">占了几十个 G</span><br><span class="line">吃满磁盘</span><br><span class="line">服务挂了</span><br></pre></td></tr></table></figure><h2 id="处理问题"><a href="#处理问题" class="headerlink" title="处理问题"></a>处理问题</h2><p>主要通过日志轮询方式处理，下面介绍两种方式设置日志轮询。在运行容器时设置轮转策略：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name myapp \</span><br><span class="line">  --log-driver json-file \</span><br><span class="line">  --log-opt max-size=10m \</span><br><span class="line">  --log-opt max-file=3 \</span><br><span class="line">  myapp:latest</span><br></pre></td></tr></table></figure><p>参数解释：</p><table><thead><tr><th>参数</th><th>解释</th></tr></thead><tbody><tr><td>max-size&#x3D;10m</td><td>单日志文件最大 10MB</td></tr><tr><td>max-file&#x3D;3</td><td>最多保留 3 个轮转文件，容器总日志控制在 30MB 内</td></tr></tbody></table><p>修改 Docker 的配置，该配置适用于所有容器，编辑 Docker 配置文件&#x2F;etc&#x2F;docker&#x2F;daemon.json：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;log-driver&quot;: &quot;json-file&quot;,</span><br><span class="line">  &quot;log-opts&quot;: &#123;</span><br><span class="line">    &quot;max-size&quot;: &quot;10m&quot;,</span><br><span class="line">    &quot;max-file&quot;: &quot;5&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>重启下 Docker 服务，注意只对之后创建的容器生效！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure><h2 id="日志清理"><a href="#日志清理" class="headerlink" title="日志清理"></a>日志清理</h2><p>正运行的容器，可以这样快速清理日志「生产环境慎用」</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;&quot; &gt; $(docker inspect --format=&#x27;&#123;&#123;.LogPath&#125;&#125;&#x27; &lt;container-id&gt;)</span><br></pre></td></tr></table></figure><p>或者更稳一点：</p><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>docker stop</td><td>停掉容器</td></tr><tr><td>docker rm</td><td>删除容器</td></tr></tbody></table><p>禁用日志输出，这个操作慎用，有可能到影响应用运行，而且不方便后续的排查：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --log-driver=none &lt;container-id&gt;</span><br></pre></td></tr></table></figure><p>日志快速清理，仅推荐在磁盘告急临时使用：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /var/lib/docker/containers -name *-json.log -exec truncate -s 0 &#123;&#125; \;</span><br></pre></td></tr></table></figure><h2 id="实战建议"><a href="#实战建议" class="headerlink" title="实战建议"></a>实战建议</h2><p>根据不同的场景推荐配置值：</p><table><thead><tr><th>场景</th><th>配置值一</th><th>配置值二</th></tr></thead><tbody><tr><td>开发环境</td><td>max-size&#x3D;5m</td><td>max-file&#x3D;3</td></tr><tr><td>测试环境</td><td>max-size&#x3D;10m</td><td>max-file&#x3D;5</td></tr><tr><td>生产环境</td><td>max-size&#x3D;50m</td><td>max-file&#x3D;10</td></tr></tbody></table><p>最佳实践：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">用 json-file+max-size+max-file</span><br><span class="line">修改 daemon.json 设置全局默认值</span><br><span class="line">旧的容器要么清理日志，要么重启带有轮转参数</span><br></pre></td></tr></table></figure>]]>
-    </content>
-    <id>https://dusays.com/archives/837/</id>
-    <link href="https://dusays.com/archives/837/"/>
-    <published>2025-11-14T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>Docker 重度使用者们，您了解过 Docker 日志吗？如何查找、减少以及管理日志，从而有效节省磁盘空间！今天分享一下如何处理 Docker 日志的问题。</p>
-</blockquote>]]>
-    </summary>
-    <title>Dockerd 日志太多？磁盘爆了？一篇教您搞定容器日志问题</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
-    <category term="手机" scheme="https://dusays.com/tags/%E6%89%8B%E6%9C%BA/"/>
-    <content>
-      <![CDATA[<blockquote><p>作为一名资深的数码爱好者，杜老师有个坚持多年的习惯：每年小米新品旗舰发布，必定第一时间入手尝鲜，再把手上的旧机挂出去二手转出。本以为这样能“以旧补新”降低成本，可算下来每年差价依然不菲，长期累积竟是一笔不小开支。期间杜老师也接触很多二手平台，但感觉不靠谱。直到杜老师接触了某转平台，才算真正找到了兼顾体验与性价比的二手换机方案。</p></blockquote><span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>对数码迷来说，新机的吸引力不言而喻。小米每一代旗舰的性能升级、影像优化、系统创新，都会让杜老师忍不住想第一时间上手体验。</p><p>以前更换手机，都是新品一到手就会把旧机挂在个人闲置渠道，不仅要反复的沟通议价，还要担心买家挑剔成色、质疑质量，最后往往只能低价成交。</p><p>更关键的，即便算上旧机残值，每年换小米新机的净支出仍要两千多，长期下来成本压力越发明显。</p><p>期间杜老师也接触很多二手平台，但感觉不靠谱。很多商家会把二手机器进行翻新，外观上看不到任何使用痕迹，但电池健康度极低，运行主流 APP 都卡顿不堪，体验极差。</p><h2 id="平台"><a href="#平台" class="headerlink" title="平台"></a>平台</h2><p>后来身边的朋友推荐杜老师试试某转，说是平台能解决二手交易的信任难题，价格也更实在。抱着试试看的心态，杜老师第一次在某转上入手了一台 95 新的小米旗舰机型。</p><p>下单前杜老师特意研究了平台的官方验机服务，发现每一台手机都会经过 20 道外观检测和 55 道功能检测，从屏幕的显示、电池的健康到核心硬件性能都有详细报告，连边框的细微划痕、电池循环次数都标注得一清二楚，完全杜绝了暗病机、翻新机的隐患。</p><h2 id="体验"><a href="#体验" class="headerlink" title="体验"></a>体验</h2><p>在收到手机后，实际体验比预期更惊喜。机身的成色几乎和新机无异，仅在边角有极难察觉的使用痕迹，电池健康度保持在百分之 90 以上，日常使用一天一充完全够用，运行主流 APP 和大型游戏都流畅无卡顿，和新机的体验差距极小。</p><p>而价格仅为新机首发价的一半多，直接省下一千多元，这笔钱足够再入手一副无线耳机，大幅降低换机成本。</p><p>其实很多人对二手手机的顾虑本质上是担心质量没保障、交易会有风险。但正规平台标准化服务，早已解决这些痛点。</p><p>某转不仅有专业验机和一年质保服务，还支持七天无理由退换，让二手交易变得和购买新机一样省心。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对杜老师这种每年都想追新的数码爱好者来说，用某转入手上一代旗舰，既能以低成本享受高端体验，又可以把旧机通过平台高价转出，形成低成本循环换机的闭环。</p><p>现在杜老师早已放弃新机必买全新的执念。毕竟手机更新迭代速度飞快，旗舰机型性能冗余足够支撑两年使用，二手的准新机的性价比无疑更高。</p><p>某转上官方验机报告和质保服务，让杜老师彻底打消对二手手机的顾虑，每年换小米机型的成本直接降低了近一半。</p><p>回到最初问题：二手手机值得买吗？答案因人而异，但是对追求性价比的数码爱好者来说，选对平台至关重要。像某转这样的正规平台，用标准化服务抹平二手交易的信息差，让二手手机既能省钱又省心。</p>]]>
-    </content>
-    <id>https://dusays.com/archives/836/</id>
-    <link href="https://dusays.com/archives/836/"/>
-    <published>2025-11-08T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>作为一名资深的数码爱好者，杜老师有个坚持多年的习惯：每年小米新品旗舰发布，必定第一时间入手尝鲜，再把手上的旧机挂出去二手转出。本以为这样能“以旧补新”降低成本，可算下来每年差价依然不菲，长期累积竟是一笔不小开支。期间杜老师也接触很多二手平台，但感觉不靠谱。直到杜老师接触了某转平台，才算真正找到了兼顾体验与性价比的二手换机方案。</p>
-</blockquote>]]>
-    </summary>
-    <title>二手手机值得买吗？数码爱好者的省钱换机经验</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
-    <category term="脑力" scheme="https://dusays.com/tags/%E8%84%91%E5%8A%9B/"/>
-    <content>
-      <![CDATA[<blockquote><p>不知道有没有朋友和杜老师一样，最近这段时间总是被脑力不足的状态困扰。以前处理工作、规划生活都会游刃有余，现在却频繁陷入反应慢半拍、记不住事的窘境，连原本轻松日常都变得有些吃力。今天就来好好聊聊这种状态，也分享下杜老师为了改善它做的那些尝试。</p></blockquote><span id="more"></span><h2 id="具体表现"><a href="#具体表现" class="headerlink" title="具体表现"></a>具体表现</h2><p>先说说杜老师感受到的脑力不足具体表现，真的是渗透在生活和工作的方方面面。工作上最明显的就是专注力严重下降。</p><p>以前能安安稳稳连续处理两三个小时任务，现在坐下来不到半小时，思绪就会不受控制飘走，一会儿想起没晾的衣服，一会儿纠结晚上吃什么，哪怕强行把注意力拉回来效率也大打折扣。</p><p>除了工作，日常里脑子短路也特别频繁。和朋友聊天有时候想表达一个简单的观点，话到嘴边却突然卡壳了，想不出合适的词语；甚至有时候会对着手机屏幕发呆，忘了自己打开手机要做什么。</p><p>更关键的，这种状态还伴随着明显的疲惫感，不是身上的累，而是脑子转不动的疲惫，哪怕休息了一会儿，也很难恢复到以前精力充沛状态。</p><h2 id="调整作息"><a href="#调整作息" class="headerlink" title="调整作息"></a>调整作息</h2><p>当意识到问题越来越严重后，杜老师开始主动尝试各种办法来改善，毕竟总不能一直陷在这种低效又焦虑的状态里。</p><p>首先从作息上入手，杜老师发现之前经常熬夜刷手机，凌晨一两点才睡觉，早上得早起赶通勤，睡眠不足肯定是脑力下降的重要原因。</p><p>于是杜老师给自己定了强制休息规则，晚上 11 点之前必须放下手机，哪怕睡不着也躺在床上闭目养神，尽量保证 8 小时的睡眠。</p><p>刚开始执行的时候特别艰难，总忍不住想刷会儿视频，但坚持了一周左右，明显感觉早上起床后脑子没那么昏沉，专注力也稍微好了一点。</p><h2 id="饮食运动"><a href="#饮食运动" class="headerlink" title="饮食运动"></a>饮食运动</h2><p>其次是调整饮食和运动习惯。以前杜老师早上赶时间，经常不吃早饭，中午也会随便点份外卖应付，晚上又喜欢吃重油重盐大餐。</p><p>查了一些资料发现，大脑运转需要充足营养，比如蛋白质以及维生素 B 族这些，不合理的饮食会直接影响到脑力。</p><p>所以现在杜老师会提前准备好第二天早餐，比如鸡蛋、牛奶、全麦面包，中午尽量选择清淡的家常菜，晚上少吃油腻食物，偶尔还会吃点坚果、蓝莓补充营养。</p><p>同时，杜老师还加入轻度运动，每天下班回家后散步 20 分钟，运动的时候可以让大脑彻底放松，也能促进血液循环，对于改善脑力很有帮助。</p><h2 id="改善效果"><a href="#改善效果" class="headerlink" title="改善效果"></a>改善效果</h2><p>另外，杜老师还调整了工作和学习节奏，不再追求长时间高强度，而是采用分段工作方式。每工作 40 分钟，就起身活动 5 分钟，伸个懒腰或者看看窗外绿植，让大脑短暂的休息。</p><p>同时，杜老师还养成了随时记笔记习惯，不管工作任务、待办事项，还是突然想到点子，都立刻记在手机备忘录，避免因为记忆力差而遗漏重要的事情。</p><p>除此之外，杜老师还减少不必要的信息摄入，以前刷手机会漫无目的地刷各种视频、新闻，现在会刻意的控制时间，只看一些有价值的内容，避免大脑被碎片化信息过度消耗。</p><p>现在坚持了差不多半个多月，能明显感觉到状态慢慢好转。专注力比之前强了，工作效率也有提升，日常里脑子短路的次数也减少了很多。</p><p>如果您也正经历类似的状态，不妨试试杜老师的这些办法，慢慢找回大脑活力。</p><p>最后也想问问大家，你们有没有遇到过脑力不足情况？又有哪些改善的技巧呢？欢迎在评论区和杜老师交流～</p>]]>
-    </content>
-    <id>https://dusays.com/archives/835/</id>
-    <link href="https://dusays.com/archives/835/"/>
-    <published>2025-11-02T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>不知道有没有朋友和杜老师一样，最近这段时间总是被脑力不足的状态困扰。以前处理工作、规划生活都会游刃有余，现在却频繁陷入反应慢半拍、记不住事的窘境，连原本轻松日常都变得有些吃力。今天就来好好聊聊这种状态，也分享下杜老师为了改善它做的那些尝试。</p>
-</blockquote>]]>
-    </summary>
-    <title>最近总觉得脑子不够用？杜老师的脑力不足自救实录</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <category term="系统" scheme="https://dusays.com/tags/%E7%B3%BB%E7%BB%9F/"/>
-    <content>
-      <![CDATA[<blockquote><p>找到一个安全、便捷且资源丰富且下载速度较快的操作系统 ISO 文件下载平台显得尤为重要。很多小伙伴习惯使用 MSDN，但又不喜欢其登录机制，这里杜老师推荐 OS.click，一款专注于为用户提供实用、高效的系统下载服务的网站。</p></blockquote><span id="more"></span><h2 id="丰富的资源库"><a href="#丰富的资源库" class="headerlink" title="丰富的资源库"></a>丰富的资源库</h2><p>OS.click 拥有海量操作系统 ISO 文件可供下载，涵盖了当下主流的两大操作系统阵营。</p><p>在 Windows 系统方面，无论是较为经典的 Windows 8.1，还是广泛运用于个人和企业的 Windows 10，以及最新的 Windows 11，都有完整且经过精心挑选整理的版本提供给用户。</p><p>无论您是想要体验全新的系统功能，还是需要回退到熟悉的旧版本进行系统恢复，甚至是搭建特定的测试环境，OS.click 都能满足您不同的需求。</p><p>对于 Linux 系统爱好者和开发者来说，这里同样是一座宝藏。Ubuntu 作为 Linux 系统中广受欢迎的发行版之一，以其用户友好的界面和强大的社区支持，吸引了众多用户。</p><p>在 OS.click 上，可以轻松获取到各个稳定版本的 Ubuntu ISO，方便用户快速搭建开发环境、进行系统测试或者部署服务器等操作。</p><p>而 Debian 作为 Linux 世界中以稳定性和安全性著称的系统，同样在 OS.click 上有丰富的资源，无论是用于个人桌面电脑还是企业级服务器的系统安装，都能在这里找到合适的 Debian ISO 版本。</p><h2 id="快速便捷下载体验"><a href="#快速便捷下载体验" class="headerlink" title="快速便捷下载体验"></a>快速便捷下载体验</h2><p>网站名称中的 “lightning fast” 绝非夸大其词。</p><p>OS.click 通过先进的服务器技术和优化的网络架构，确保用户能够以极快的速度下载所需的 ISO 文件。</p><p>这意味着用户无需长时间等待，即可快速获取系统安装文件，大大提高了工作效率和使用体验。</p><p>无论您是处于家庭网络环境下，还是在企业内部网络中，OS.click 都能凭借其强大的网络资源和智能的流量分配机制，为用户提供智能、稳定且高速的下载通道，让用户能够迅速开始系统的安装或升级过程。</p><h2 id="简洁直观用户界面"><a href="#简洁直观用户界面" class="headerlink" title="简洁直观用户界面"></a>简洁直观用户界面</h2><p>OS.click 的界面设计简洁明了，易于操作。</p><p>对于那些不熟悉技术或者对网络下载流程不太熟悉的新手用户来说，也能轻松上手。</p><p>在网站的首页，清晰地展示了可下载的各类操作系统 ISO 文件的列表，用户只需通过简单的点击操作，即可进入相应的下载页面。</p><p>没有繁琐的注册流程，也没有复杂的广告干扰，用户可以专注于寻找自己需要的系统文件并立即开始下载，节省了宝贵的时间和精力。</p><h2 id="安全可靠下载保障"><a href="#安全可靠下载保障" class="headerlink" title="安全可靠下载保障"></a>安全可靠下载保障</h2><p>在互联网上下载软件或文件，安全性始终是用户最关心的问题之一。</p><p>OS.click 深知这一点，因此致力于为用户提供能够安全可靠的下载服务。</p><p>网站对所有的 ISO 文件都进行了严格的审核和筛选，确保这些文件没有携带恶意软件、病毒或者其他安全风险。</p><p>用户在 OS.click 上下载的系统文件，可以放心地用于安装和使用，大大降低了因下载到不安全文件而可能导致的系统故障、数据泄露等风险。</p><h2 id="灵活多样应用场景"><a href="#灵活多样应用场景" class="headerlink" title="灵活多样应用场景"></a>灵活多样应用场景</h2><p>OS.click 的服务适用于多种场景。</p><p>例如，当用户的电脑出现系统故障，需要重装系统时，只需访问 OS.click，找到对应的系统 ISO 文件进行下载，然后通过简单的步骤制作启动盘，就能顺利完成系统的重新安装。</p><p>对于那些想要尝试不同操作系统以寻找更适合自己的系统环境的用户来说，OS.click 提供的丰富资源也为其提供了极大的便利性。</p><p>此外，对于企业 IT 管理人员而言，在企业内部进行批量的系统安装或者升级时，OS.click 快速稳定的下载服务能够有效提高工作效率，节省大量的时间和人力成本。</p><h2 id="社区互动支持"><a href="#社区互动支持" class="headerlink" title="社区互动支持"></a>社区互动支持</h2><p>OS.click 并不仅仅是一个单纯的下载平台，它还拥有活跃的用户社区。在这里，用户可以交流使用心得、分享经验技巧、寻求技术支持等。</p><p>对于在系统安装或使用过程中遇到的问题，用户可以在社区中提出咨询，其他同好或者经验丰富的用户会积极地提供帮助和解决方案。</p><p>这种良好的社区互动氛围，不仅增强了用户的使用体验，还促进了用户之间的知识共享和技术交流，有利于整个用户群体的技术水平提升。</p><p>在众多的操作系统 ISO 文件下载平台中，OS.click 凭借其丰富的资源、快速的下载速度、简洁友好的界面、安全保障以及多样化的应用场景，成为了众多用户在系统安装和升级过程中的首选。</p><p>无论是个人用户还是企业用户，无论是新手还是技术老手，OS.click 都能为他们提供满意的服务，助力他们在数字化世界的探索和工作中更加顺利高效。</p><p>如果您也在寻找一个可靠的系统 ISO 下载平台，不妨试试 OS.click，相信它不会让您失望。</p>]]>
-    </content>
-    <id>https://dusays.com/archives/834/</id>
-    <link href="https://dusays.com/archives/834/"/>
-    <published>2025-10-27T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>找到一个安全、便捷且资源丰富且下载速度较快的操作系统 ISO 文件下载平台显得尤为重要。很多小伙伴习惯使用 MSDN，但又不喜欢其登录机制，这里杜老师推荐 OS.click，一款专注于为用户提供实用、高效的系统下载服务的网站。</p>
-</blockquote>]]>
-    </summary>
-    <title>一站式操作系统 ISO 下载平台</title>
-    <updated>2026-07-12T08:42:45.705Z</updated>
+    <updated>2026-07-12T13:03:27.390Z</updated>
   </entry>
 </feed>
