@@ -10,7 +10,47 @@
   <rights>All rights reserved 2026, Teacher Du</rights>
   <subtitle>运维技术分享博客</subtitle>
   <title>杜老师说</title>
-  <updated>2026-07-12T17:32:15.999Z</updated>
+  <updated>2026-07-13T02:38:54.404Z</updated>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="老师讲课" scheme="https://dusays.com/categories/%E8%80%81%E5%B8%88%E8%AE%B2%E8%AF%BE/"/>
+    <category term="学习" scheme="https://dusays.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师参加过几次技术培训，最早一次听 PPT 是死盯屏幕，结果一节课下来什么都没记住。后来杜老师摸索出一套”听完 PPT”的方法，今天跟大家分享一下。</p></blockquote><span id="more"></span><h2 id="一、为什么死盯屏幕没用"><a href="#一、为什么死盯屏幕没用" class="headerlink" title="一、为什么死盯屏幕没用"></a>一、为什么死盯屏幕没用</h2><p>杜老师一开始的听课方式是：</p><ul><li>眼睛紧盯 PPT 上的每行字</li><li>讲师说一句，就抄一句笔记</li><li>一节课下来，笔记本比 PPT 还多</li></ul><p>复盘的时候发现：</p><ul><li>抄笔记的速度跟不上讲师</li><li>抄完根本不会回去看</li><li>真正有用的部分反而没记下来</li></ul><h2 id="二、杜老师的”听完”-3-个步骤"><a href="#二、杜老师的”听完”-3-个步骤" class="headerlink" title="二、杜老师的”听完” 3 个步骤"></a>二、杜老师的”听完” 3 个步骤</h2><h3 id="步骤-1：先听不记，听-5-分钟"><a href="#步骤-1：先听不记，听-5-分钟" class="headerlink" title="步骤 1：先听不记，听 5 分钟"></a>步骤 1：先听不记，听 5 分钟</h3><p>杜老师现在听课的第一件事是：</p><ul><li>眼睛不看屏幕，专注听讲</li><li>大脑先建立”这节课要讲啥”的整体框架</li></ul><p>5 分钟之后再开始记笔记。</p><p>注意：前 5 分钟一般是讲师讲大纲，这部分最容易被错过。</p><h3 id="步骤-2：只记-3-类内容"><a href="#步骤-2：只记-3-类内容" class="headerlink" title="步骤 2：只记 3 类内容"></a>步骤 2：只记 3 类内容</h3><p>杜老师现在笔记只记 3 类：</p><ul><li>一句话总结（这一页讲啥）</li><li>关键命令 &#x2F; 代码片段（讲师敲出来的那种）</li><li>自己的疑问（讲师没讲清楚的地方）</li></ul><p>其他内容全部跳过。</p><h3 id="步骤-3：课后-10-分钟复述一遍"><a href="#步骤-3：课后-10-分钟复述一遍" class="headerlink" title="步骤 3：课后 10 分钟复述一遍"></a>步骤 3：课后 10 分钟复述一遍</h3><p>下课后，杜老师会做一件事：</p><ul><li>离开教室，找个安静的地方</li><li>把今天的内容用自己的话讲一遍</li><li>讲不出来的部分，回去翻 PPT</li></ul><p>这个 10 分钟是杜老师觉得性价比最高的环节。</p><h2 id="三、杜老师的笔记本长这样"><a href="#三、杜老师的笔记本长这样" class="headerlink" title="三、杜老师的笔记本长这样"></a>三、杜老师的笔记本长这样</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 2026-XX-XX 培训主题</span><br><span class="line"></span><br><span class="line">[讲师名字] [章节1] — 一句话总结</span><br><span class="line">[讲师名字] [章节2] — 一句话总结</span><br><span class="line">[章节3] — 关键命令: xxxx</span><br><span class="line"></span><br><span class="line">疑问:</span><br><span class="line">- 章节3 那个参数具体怎么填？</span><br><span class="line">- 章节4 跟之前那个工具是啥关系？</span><br></pre></td></tr></table></figure><p>注意：杜老师的笔记不抄 PPT，只记自己理解后的版本。</p><h2 id="四、这套方法的关键"><a href="#四、这套方法的关键" class="headerlink" title="四、这套方法的关键"></a>四、这套方法的关键</h2><p>杜老师觉得”听完 PPT”的关键不是记得多：</p><ul><li>死记硬背的内容很快会忘</li><li>自己理解过的内容能记很久</li></ul><p>复述一遍，是把”讲师的话”变成”自己的话”。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>听课这件事，杜老师觉得”听懂”比”记全”重要得多。</p><p>希望对同样经常参加培训的您有所帮助。如果您有别的听课方法，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/869/</id>
+    <link href="https://dusays.com/archives/869/"/>
+    <published>2026-05-25T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师参加过几次技术培训，最早一次听 PPT 是死盯屏幕，结果一节课下来什么都没记住。后来杜老师摸索出一套”听完 PPT”的方法，今天跟大家分享一下。</p>
+</blockquote>]]>
+    </summary>
+    <title>培训讲师的 PPT 怎么&quot;听完&quot;</title>
+    <updated>2026-07-13T02:38:54.404Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="出差" scheme="https://dusays.com/tags/%E5%87%BA%E5%B7%AE/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师经常出差，住过几十家酒店。酒店插座这件事看着不起眼，但用不好挺耽误事的。今天杜老师就把自己这两年总结出来的 3 个用法分享给大家。</p></blockquote><span id="more"></span><h2 id="一、酒店插座的常见坑"><a href="#一、酒店插座的常见坑" class="headerlink" title="一、酒店插座的常见坑"></a>一、酒店插座的常见坑</h2><p>杜老师自己碰到过几次：</p><ul><li>床头插座被柜子挡住，根本插不进去</li><li>只有一个三孔插座，充电器是两孔的</li><li>插座通电了但笔记本充不上</li></ul><p>注意：杜老师建议<strong>办完入住第一件事</strong>，就是检查房间插座位置。</p><h2 id="二、3-个用法"><a href="#二、3-个用法" class="headerlink" title="二、3 个用法"></a>二、3 个用法</h2><h3 id="用法-1：自带一个”万能转换头”"><a href="#用法-1：自带一个”万能转换头”" class="headerlink" title="用法 1：自带一个”万能转换头”"></a>用法 1：自带一个”万能转换头”</h3><p>杜老师每次出差都带：</p><ul><li>一个公牛的小型转换头</li><li>一个 USB-A + USB-C 二合一充电头</li></ul><p>这样不管酒店是几孔插座，都能直接用。</p><p>注意：转换头选小一点的，能塞进电脑包侧袋就行。</p><h3 id="用法-2：床头插座只给手机"><a href="#用法-2：床头插座只给手机" class="headerlink" title="用法 2：床头插座只给手机"></a>用法 2：床头插座只给手机</h3><p>杜老师的酒店经验：</p><ul><li>床头插座只插手机充电线</li><li>笔记本、电视这些放桌子上，用桌子旁边的插座</li></ul><p>床头插座被柜子挡的概率很高，桌子旁边的插座一般都好用。</p><h3 id="用法-3：插之前先测电压"><a href="#用法-3：插之前先测电压" class="headerlink" title="用法 3：插之前先测电压"></a>用法 3：插之前先测电压</h3><p>杜老师以前碰到过一次：</p><ul><li>插上充电器，结果笔记本主板烧了</li><li>后来才知道是酒店电压不稳</li></ul><p>杜老师现在带了一个小型的<strong>电压检测插座</strong>：</p><ul><li>插入电压正常才插设备</li><li>价格不贵，几十块一个</li></ul><p>注意：如果酒店配电看着很老旧，一定要测一下。</p><h2 id="三、杜老师自己的出差插座组合"><a href="#三、杜老师自己的出差插座组合" class="headerlink" title="三、杜老师自己的出差插座组合"></a>三、杜老师自己的出差插座组合</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">床头 → 只插手机</span><br><span class="line">桌子 → 笔记本 + 显示器</span><br><span class="line">转换头 → 一个随身带</span><br><span class="line">电压检测 → 一个随身带</span><br></pre></td></tr></table></figure><p>这套组合，杜老师用了两年多，没出过问题。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>酒店插座这件事，杜老师觉得”提前准备”比”现场翻包”管用得多。</p><p>希望对同样经常出差的您有所帮助。如果您有别的酒店经验，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/archives/868/</id>
+    <link href="https://dusays.com/archives/868/"/>
+    <published>2026-05-19T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师经常出差，住过几十家酒店。酒店插座这件事看着不起眼，但用不好挺耽误事的。今天杜老师就把自己这两年总结出来的 3 个用法分享给大家。</p>
+</blockquote>]]>
+    </summary>
+    <title>出差住酒店插座的 3 个用法</title>
+    <updated>2026-07-13T02:38:54.404Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Teacher Du</name>
@@ -29,7 +69,7 @@
 </blockquote>]]>
     </summary>
     <title>培训笔记只记关键字的 3 个好处</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -49,7 +89,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤最后 10 分钟的&quot;减速&quot;技巧</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -69,7 +109,7 @@
 </blockquote>]]>
     </summary>
     <title>两人吃外卖的 2 个小默契</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -89,7 +129,7 @@
 </blockquote>]]>
     </summary>
     <title>深夜吃夜宵的 3 个节制技巧</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -109,7 +149,7 @@
 </blockquote>]]>
     </summary>
     <title>橘猫经常跳上书桌的 3 个应对</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -129,7 +169,7 @@
 </blockquote>]]>
     </summary>
     <title>居家办公桌前的 4 个微习惯</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -149,7 +189,7 @@
 </blockquote>]]>
     </summary>
     <title>培训归来：把新命令收纳到 shell 的命名约定</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -169,7 +209,7 @@
 </blockquote>]]>
     </summary>
     <title>高铁出差路上的电源与网络 3 个 fallback</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -189,7 +229,7 @@
 </blockquote>]]>
     </summary>
     <title>夏季骑行通勤的 3 个小习惯</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -209,7 +249,7 @@
 </blockquote>]]>
     </summary>
     <title>推荐酷鸭数据主机</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -229,7 +269,7 @@
 </blockquote>]]>
     </summary>
     <title>培训归来：把新学到的命令收纳到 shell 的 2 个动作</title>
-    <updated>2026-07-12T17:32:15.999Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -249,7 +289,7 @@
 </blockquote>]]>
     </summary>
     <title>黄昏漫步的&quot;下班缓冲&quot;为什么重要</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -269,7 +309,7 @@
 </blockquote>]]>
     </summary>
     <title>酒店 Wi-Fi 不稳的 3 个 fallback 工具</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -289,7 +329,7 @@
 </blockquote>]]>
     </summary>
     <title>培训归来：怎样把新学到的命令收纳到自己的 shell</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -309,7 +349,7 @@
 </blockquote>]]>
     </summary>
     <title>高铁出差路上的 4 个阅读习惯</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -329,7 +369,7 @@
 </blockquote>]]>
     </summary>
     <title>macOS 终端下本地跑 LLM 实测</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -349,7 +389,7 @@
 </blockquote>]]>
     </summary>
     <title>工作室暗光环境的护眼心得</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
   <entry>
     <author>
@@ -369,46 +409,6 @@
 </blockquote>]]>
     </summary>
     <title>通勤党耳机选型：3 款降噪豆横评</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    <category term="命令" scheme="https://dusays.com/tags/%E5%91%BD%E4%BB%A4/"/>
-    <content>
-      <![CDATA[<blockquote><p>杜老师经常在深夜写东西，最近发现几个不起眼但很顶用的小动作。今天就跟大家分享一下，4 个能让您的 Terminal 稍微顺手一点的小习惯。</p></blockquote><span id="more"></span><h2 id="一、用-alias-把每天都要敲的命令压短一行"><a href="#一、用-alias-把每天都要敲的命令压短一行" class="headerlink" title="一、用 alias 把每天都要敲的命令压短一行"></a>一、用 alias 把每天都要敲的命令压短一行</h2><p>每天都要敲的命令，每周敲几十次，一年下来敲几千次。</p><p>杜老师的例子：</p><ul><li><code>gst</code> 替 <code>git status</code></li><li><code>ll</code> 替 <code>ls -lah</code></li><li><code>vi</code> 替 <code>vim</code></li></ul><p>做法很简单，在 <code>~/.zshrc</code> 里加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias gst=&#x27;git status&#x27;</span><br><span class="line">alias ll=&#x27;ls -lah&#x27;</span><br><span class="line">alias vi=&#x27;vim&#x27;</span><br></pre></td></tr></table></figure><p>保存之后 <code>source ~/.zshrc</code> 就生效。</p><h2 id="二、history-时间戳打开"><a href="#二、history-时间戳打开" class="headerlink" title="二、history 时间戳打开"></a>二、history 时间戳打开</h2><p>你不记得 5 分钟前刚敲过的那条命令？</p><p>默认 <code>history</code> 不带时间，杜老师建议在 <code>~/.zshrc</code> 加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HIST_STAMPS=&quot;yyyy-mm-dd&quot;</span><br></pre></td></tr></table></figure><p>这样 <code>history | tail</code> 直接就能定位到某一条是什么时候敲的。调试环境变量问题时特别有用。</p><h2 id="三、长命令拆成函数"><a href="#三、长命令拆成函数" class="headerlink" title="三、长命令拆成函数"></a>三、长命令拆成函数</h2><p>杜老师有一条每天都要敲的命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose logs -f --tail 200 nginx</span><br></pre></td></tr></table></figure><p>敲全了手指都要打结。改成 <code>.zshrc</code> 里的函数：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dclogs() &#123;</span><br><span class="line">  docker compose logs -f --tail 200 &quot;$1&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>下次直接 <code>dclogs nginx</code>，节省的字符数一年下来很可观。</p><h2 id="四、-与-的妙用"><a href="#四、-与-的妙用" class="headerlink" title="四、!! 与 !$ 的妙用"></a>四、<code>!!</code> 与 <code>!$</code> 的妙用</h2><p>杜老师经常写到一半发现忘了加 sudo。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; systemctl restart nginx</span><br><span class="line">Failed to ...</span><br><span class="line">&gt; sudo !!</span><br></pre></td></tr></table></figure><p><code>!!</code> 会自动重发上一条。同样地，<code>!$</code> 表示上一条命令的最后一个参数，可以在管道里复用：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; mkdir /opt/myapp/logs</span><br><span class="line">&gt; cd !$</span><br></pre></td></tr></table></figure><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>以上 4 个动作，杜老师用了至少两年才把它们全部养成习惯。希望对同样在深夜写东西的您有所帮助。</p><p>咱们下期见！</p>]]>
-    </content>
-    <id>https://dusays.com/archives/846/</id>
-    <link href="https://dusays.com/archives/846/"/>
-    <published>2026-01-07T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>杜老师经常在深夜写东西，最近发现几个不起眼但很顶用的小动作。今天就跟大家分享一下，4 个能让您的 Terminal 稍微顺手一点的小习惯。</p>
-</blockquote>]]>
-    </summary>
-    <title>深夜 Terminal 的 4 个提效小动作</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <category term="生存" scheme="https://dusays.com/tags/%E7%94%9F%E5%AD%98/"/>
-    <content>
-      <![CDATA[<blockquote><p>杜老师在家用机上搭建了一个 Minecraft 游戏平台，配置为 16H32G 内存，500M 的带宽，预估支持 30 人同时在线。如果您喜欢玩我的世界，又感觉自己玩没有意思，欢迎加入我们平台，大家一起 play 一起 happy！</p></blockquote><span id="more"></span><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li><p>本服务端仅支持 Java 版 Minecraft，内置常用插件，身份验证、领地、家设置等；</p></li><li><p>服务端目前支持 1.21.8 版本，如果您已有客户端，只需进入多人游戏，输入杜老师服务器的地址 mc.dusays.com 即可「如果连接失败可加上端口 mc.dusays.com:25565」</p></li><li><p>我们将平台设置为生存模式，容易难度，重生保留物品，并开启了防爆模式；</p></li><li><p>游戏无 GM 直接干预，没有任何隐藏收费项目；</p></li><li><p>我们本着共同游戏更多快乐原则，谢绝恶意玩家进入，请不要破坏他人的劳动成果，谢谢；</p></li><li><p>本游戏服长期有效，只要有一个人在线，游戏服就不会关闭，同时每周进行数据备份；</p></li><li><p>如有任何问题，可在评论区内留言，杜老师都会积极帮大家解决；</p></li><li><p>最终解释权归杜老师说所有。欢迎加 QQ 群 454279233。</p></li></ol><h2 id="1-21-8-客户端"><a href="#1-21-8-客户端" class="headerlink" title="1.21.8 客户端"></a>1.21.8 客户端</h2><p>如果您没有客户端，可下载杜老师整合的客户端：</p><a class="tag-plugin colorful button" color="theme" title="下载地址" href="https://115cdn.com/s/swfbipk3z9y?password=v100&"><span>下载地址</span></a><h2 id="游戏截图"><a href="#游戏截图" class="headerlink" title="游戏截图"></a>游戏截图</h2><p>游戏主城截图：</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="https://cdn.dusays.com/2026/01/845-1.jpg" data-src="https://cdn.dusays.com/2026/01/845-1.jpg" data-fancybox="true"onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"/><div class="lazy-icon" style="background-image:url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd);"></div></div></div><p>生存村庄界面：</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="https://cdn.dusays.com/2026/01/845-2.jpg" data-src="https://cdn.dusays.com/2026/01/845-2.jpg" data-fancybox="true"onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"/><div class="lazy-icon" style="background-image:url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd);"></div></div></div><h2 id="模组版本"><a href="#模组版本" class="headerlink" title="模组版本"></a>模组版本</h2><p>2026 年 01 月 20 日更新：</p><table><thead><tr><th>功能</th><th>名称</th><th>版本</th></tr></thead><tbody><tr><td>IA</td><td>ItemsAdder</td><td>4.0.15</td></tr><tr><td>MOTD</td><td>minimotd-bukkit</td><td>2.1.2</td></tr><tr><td>NPC</td><td>Citizens</td><td>2.0.40-b3959</td></tr><tr><td>扩展</td><td>PurpurExtras</td><td>1.37.0</td></tr><tr><td>TAB</td><td>TAB</td><td>v5.4.0</td></tr><tr><td>世界保护</td><td>worldguard-bukkit</td><td>7.0.14-dist</td></tr><tr><td>全息图</td><td>DecentHolograms</td><td>2.9.9</td></tr><tr><td>全球市场</td><td>PlayerAuctions</td><td>1.32.1</td></tr><tr><td>创世神</td><td>worldedit-bukkit</td><td>7.3.17</td></tr><tr><td>前置</td><td>CMILib</td><td>1.5.7.4</td></tr><tr><td>前置</td><td>nightcore</td><td>2.11.0</td></tr><tr><td>前置</td><td>ProtocolLib</td><td>5.4.1-SNAPSHOT-aa4fab1</td></tr><tr><td>前置</td><td>Vault</td><td>1.7.3-b131</td></tr><tr><td>变量</td><td>PlaceholderAPI</td><td>2.11.7</td></tr><tr><td>基础</td><td>CMI</td><td>9.8.4.4</td></tr><tr><td>多世界</td><td>Multiverse-Core</td><td>4.3.1</td></tr><tr><td>快捷键</td><td>xShiftFCommand</td><td>1.0.0</td></tr><tr><td>抽奖</td><td>ExcellentCrates</td><td>6.6.1</td></tr><tr><td>插件管理</td><td>PlugManX</td><td>3.0.1</td></tr><tr><td>权限</td><td>LuckPerms-Bukkit</td><td>5.5.16</td></tr><tr><td>正版验证</td><td>PremiumVerify</td><td>1.0.8</td></tr><tr><td>每日任务</td><td>ODailyQuests</td><td>3.0.1</td></tr><tr><td>每日回收</td><td>UltimateShop</td><td>3.12.5</td></tr><tr><td>点券</td><td>PlayerPoints</td><td>3.3.3</td></tr><tr><td>玩家地标</td><td>PlayerWarp</td><td>2.2.1-free</td></tr><tr><td>登录</td><td>AuthMe</td><td>5.6.0</td></tr><tr><td>登录标题</td><td>AuthMeTitles</td><td>2.6.6</td></tr><tr><td>离线皮肤</td><td>SkinsRestorer</td><td>15.9.3</td></tr><tr><td>称号</td><td>PlayerTitle</td><td>4.11.2-free</td></tr><tr><td>签到</td><td>LiteSignIn</td><td>1.8.9.0</td></tr><tr><td>箱子商店</td><td>QuickShop-Hikari</td><td>6.2.0.10</td></tr><tr><td>经济</td><td>XConomy-Bukkit</td><td>2.26.3</td></tr><tr><td>菜单</td><td>DeluxeMenus</td><td>1.14.1-Release</td></tr><tr><td>随机传送</td><td>BetterRTP</td><td>3.6.13</td></tr><tr><td>领地</td><td>Residence</td><td>6.0.1.2</td></tr></tbody></table>]]>
-    </content>
-    <id>https://dusays.com/archives/845/</id>
-    <link href="https://dusays.com/archives/845/"/>
-    <published>2026-01-01T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>杜老师在家用机上搭建了一个 Minecraft 游戏平台，配置为 16H32G 内存，500M 的带宽，预估支持 30 人同时在线。如果您喜欢玩我的世界，又感觉自己玩没有意思，欢迎加入我们平台，大家一起 play 一起 happy！</p>
-</blockquote>]]>
-    </summary>
-    <title>Minecraft 生存服务器来啦「1.21.8 版」</title>
-    <updated>2026-07-12T17:32:15.998Z</updated>
+    <updated>2026-07-13T02:38:54.403Z</updated>
   </entry>
 </feed>
