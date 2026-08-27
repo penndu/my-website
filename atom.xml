@@ -10,7 +10,27 @@
   <rights>All rights reserved 2026, Teacher Du</rights>
   <subtitle>运维技术分享博客</subtitle>
   <title>杜老师说</title>
-  <updated>2026-08-27T20:50:34.599Z</updated>
+  <updated>2026-08-27T21:23:30.232Z</updated>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="资源分析" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E6%9E%90/"/>
+    <category term="图床" scheme="https://dusays.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    <content>
+      <![CDATA[<blockquote><p>我方图床服务出现突发异常故障，导致部分用户出现图片上传失败、已上传图片无法正常访问、页面空白等问题，对大家的正常使用造成极大困扰，我们对此深表歉意。</p></blockquote><span id="more"></span><h2 id="一、故障核心原因"><a href="#一、故障核心原因" class="headerlink" title="一、故障核心原因"></a>一、故障核心原因</h2><p>故障发生后，我方技术团队第一时间启动应急排查机制，全员加急排查问题根源、开展抢修工作。目前本次故障已完全处理完毕，图床所有功能已全面恢复正常，图片上传、存储、访问、加载等服务均已回归稳定状态。</p><p>本次图床故障核心原因为<strong>服务主机硬件异常</strong>。</p><p>我方图床运行主机配置双磁盘，分别为系统盘与数据盘，其中数据盘专门用于存储用户图片资源。系统盘采用家用级硬盘，长期不间断开机运行，持续承担日志写入、缓存读写等高负荷读写任务，经常年累积损耗后出现磁盘硬件损坏问题。</p><p>同时，因数据库程序部署运行于该故障系统盘内（图片文件仅存放于独立数据盘），系统盘损坏直接导致数据库服务异常，进而引发图片上传失败、图片无法加载访问等全线服务异常问题。</p><h2 id="二、本次故障修复方案"><a href="#二、本次故障修复方案" class="headerlink" title="二、本次故障修复方案"></a>二、本次故障修复方案</h2><p>故障确认后，我方立即启动应急修复工作，第一时间采购全新企业级硬盘替换损坏的家用级系统盘。新硬盘到货后，开展全流程修复部署工作：</p><ol><li>完成服务器系统重装操作，搭建干净、稳定的服务器运行环境；</li><li>对服务器运行环境进行安全加固、参数优化，适配图床整体运行架构；</li><li>重新部署图床服务架构，配置数据库运行环境与服务接口；</li><li>通过历史备份文件，完整恢复系统盘数据库数据。</li></ol><p>因用户图片资源均存储在独立完好的数据盘，<strong>本次故障全程未产生图片实体数据丢失问题</strong>。修复完成后，我方对全量服务进行多轮测试核验，确认图片上传、加载、访问及数据库读写等所有功能均恢复正常。</p><h2 id="三、故障损失与文件恢复说明"><a href="#三、故障损失与文件恢复说明" class="headerlink" title="三、故障损失与文件恢复说明"></a>三、故障损失与文件恢复说明</h2><p>结合本次故障实际情况，现将故障影响及数据恢复情况如实公示：</p><h3 id="1-服务使用延误"><a href="#1-服务使用延误" class="headerlink" title="1. 服务使用延误"></a>1. 服务使用延误</h3><p>故障期间图床服务出现大面积异常，导致用户无法正常上传、加载、访问图片资源，严重影响各位用户的正常使用，我们再次致以诚挚的歉意。</p><h3 id="2-数据丢失与恢复详情"><a href="#2-数据丢失与恢复详情" class="headerlink" title="2. 数据丢失与恢复详情"></a>2. 数据丢失与恢复详情</h3><ul><li>遗失数据：仅丢失 <strong>8月27日当天的数据库日志、索引及访问记录</strong> 等结构化数据；</li><li>完整数据：所有用户图片实体文件均存储在独立数据盘，且已同步备份至备用节点，<strong>文件本体无丢失、无损坏</strong>。</li></ul><p><strong>专项恢复说明</strong>：</p><p>针对8月27日受数据库数据丢失影响的图片资源，有需要恢复文件的用户，可随时联系站长，我方将一对一协助重新上传并恢复对应资源数据。</p><p>除上述当日数据库数据外，平台所有历史存量图片文件、长期存储数据均完整保留、完好无损。经全功能核验，本次故障隐患已彻底清除，无任何残留问题，平台服务可正常稳定使用。</p><h2 id="后续服务说明"><a href="#后续服务说明" class="headerlink" title="后续服务说明"></a>后续服务说明</h2><p>再次为本次故障给各位用户带来的不便与困扰，致以最诚挚的歉意。后续我们将全面升级服务器硬件配置、优化服务架构、完善故障应急机制，持续打磨服务、优化使用体验，全力为大家提供稳定、可靠、优质的图床服务。</p><p>若大家后续使用过程中遇到任何问题，可随时联系我方，我们将第一时间为您处理。</p><p>特此公告。</p><p><strong>2026年8月28日</strong></p>]]>
+    </content>
+    <id>https://dusays.com/archives/878/</id>
+    <link href="https://dusays.com/archives/878/"/>
+    <published>2026-07-18T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>我方图床服务出现突发异常故障，导致部分用户出现图片上传失败、已上传图片无法正常访问、页面空白等问题，对大家的正常使用造成极大困扰，我们对此深表歉意。</p>
+</blockquote>]]>
+    </summary>
+    <title>图床服务故障修复公告</title>
+    <updated>2026-08-27T21:23:30.232Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Teacher Du</name>
@@ -29,7 +49,7 @@
 </blockquote>]]>
     </summary>
     <title>周末的 3 种过法</title>
-    <updated>2026-08-27T20:50:34.599Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -49,7 +69,7 @@
 </blockquote>]]>
     </summary>
     <title>居家办公 5 个减少分心的动作</title>
-    <updated>2026-08-27T20:50:34.599Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -69,7 +89,7 @@
 </blockquote>]]>
     </summary>
     <title>给猫拍照的 3 个小技巧</title>
-    <updated>2026-08-27T20:50:34.599Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -89,7 +109,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤路上听播客 vs 听音乐的 2 个选择</title>
-    <updated>2026-08-27T20:50:34.599Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -109,7 +129,7 @@
 </blockquote>]]>
     </summary>
     <title>会议室投影仪连不上的 3 个排查</title>
-    <updated>2026-08-27T20:50:34.599Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -129,7 +149,7 @@
 </blockquote>]]>
     </summary>
     <title>雨天出差的 3 件必备</title>
-    <updated>2026-08-27T20:50:34.599Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -149,7 +169,7 @@
 </blockquote>]]>
     </summary>
     <title>桌面零食收纳的 2 个分区</title>
-    <updated>2026-08-27T20:50:34.599Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -169,7 +189,7 @@
 </blockquote>]]>
     </summary>
     <title>演示前一晚的 2 个检查清单</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -189,7 +209,7 @@
 </blockquote>]]>
     </summary>
     <title>培训讲师的 PPT 怎么&quot;听完&quot;</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -209,7 +229,7 @@
 </blockquote>]]>
     </summary>
     <title>出差住酒店插座的 3 个用法</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -229,7 +249,7 @@
 </blockquote>]]>
     </summary>
     <title>培训笔记只记关键字的 3 个好处</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -249,7 +269,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤最后 10 分钟的「减速」技巧</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.232Z</updated>
   </entry>
   <entry>
     <author>
@@ -269,7 +289,7 @@
 </blockquote>]]>
     </summary>
     <title>两人吃外卖的 2 个小默契</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.231Z</updated>
   </entry>
   <entry>
     <author>
@@ -289,7 +309,7 @@
 </blockquote>]]>
     </summary>
     <title>深夜吃夜宵的 3 个节制技巧</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.231Z</updated>
   </entry>
   <entry>
     <author>
@@ -309,7 +329,7 @@
 </blockquote>]]>
     </summary>
     <title>橘猫经常跳上书桌的 3 个应对</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.231Z</updated>
   </entry>
   <entry>
     <author>
@@ -329,7 +349,7 @@
 </blockquote>]]>
     </summary>
     <title>居家办公桌前的 4 个微习惯</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.231Z</updated>
   </entry>
   <entry>
     <author>
@@ -349,7 +369,7 @@
 </blockquote>]]>
     </summary>
     <title>培训归来：把新命令收纳到 shell 的命名约定</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.231Z</updated>
   </entry>
   <entry>
     <author>
@@ -369,7 +389,7 @@
 </blockquote>]]>
     </summary>
     <title>高铁出差路上的电源与网络 3 个 fallback</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
+    <updated>2026-08-27T21:23:30.231Z</updated>
   </entry>
   <entry>
     <author>
@@ -389,26 +409,6 @@
 </blockquote>]]>
     </summary>
     <title>夏季骑行通勤的 3 个小习惯</title>
-    <updated>2026-08-27T20:50:34.598Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <category term="主机" scheme="https://dusays.com/tags/%E4%B8%BB%E6%9C%BA/"/>
-    <content>
-      <![CDATA[<blockquote><p>好久没有发博文了，具体原因近期博文杜老师会说明。本篇博文推荐一下酷鸭数据主机，正巧近期需要采购香港主机，酷鸭数据为杜老师提供一台香港主机，希望可以发布一篇推荐文章，故有此文。</p></blockquote><span id="more"></span><h2 id="平台截图"><a href="#平台截图" class="headerlink" title="平台截图"></a>平台截图</h2><p>平台首页点击 <a href="https://c2.kooya.hk/recommend/GuJLI2MTSStv">这里</a>。首页设置清新简洁：</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/02/855-1.jpg" data-fancybox="true" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"><div class="lazy-icon"></div></div></div><p>后台面板也很直白，不像大厂平台一样一堆操作接口：</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/02/855-2.jpg" data-fancybox="true" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"><div class="lazy-icon"></div></div></div><h2 id="主机测评"><a href="#主机测评" class="headerlink" title="主机测评"></a>主机测评</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">-------------------- A Bench.sh Script By Teddysun -------------------</span><br><span class="line"> Version            : v2026-01-31</span><br><span class="line"> Usage              : wget -qO- bench.sh | bash</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line"> CPU Model          : Intel(R) Xeon(R) Gold 6133 CPU @ 2.50GHz</span><br><span class="line"> CPU Cores          : 8 @ 2494.140 MHz</span><br><span class="line"> CPU Cache          : 28160 KB</span><br><span class="line"> AES-NI             : ✓ Enabled</span><br><span class="line"> VM-x/AMD-V         : ✓ Enabled</span><br><span class="line"> Total Disk         : 29.9 GB (1.9 GB Used)</span><br><span class="line"> Total RAM          : 7.8 GB (338.7 MB Used)</span><br><span class="line"> System Uptime      : 0 days, 20 hour 32 min</span><br><span class="line"> Load Average       : 0.00, 0.00, 0.00</span><br><span class="line"> OS                 : Debian GNU/Linux 12 (bookworm)</span><br><span class="line"> Arch               : x86_64 (64 Bit)</span><br><span class="line"> Kernel             : 6.1.0-10-amd64</span><br><span class="line"> TCP Congestion Ctrl: cubic</span><br><span class="line"> Virtualization     : KVM</span><br><span class="line"> IPv4/IPv6          : ✓ Online / ✗ Offline</span><br><span class="line"> Organization       : AS401701 cognetcloud INC</span><br><span class="line"> Location           : Tung Chung / HK</span><br><span class="line"> Region             : Islands</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line"> I/O Speed(1st run) : 187 MB/s</span><br><span class="line"> I/O Speed(2nd run) : 487 MB/s</span><br><span class="line"> I/O Speed(3rd run) : 489 MB/s</span><br><span class="line"> I/O Speed(average) : 387.7 MB/s</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line"> Node Name        Upload Speed      Download Speed      Latency</span><br><span class="line"> Speedtest.net    2.37 Mbps         9.53 Mbps           1.55 ms</span><br><span class="line"> Los Angeles, US  9.62 Mbps         9.90 Mbps           153.80 ms</span><br><span class="line"> Dallas, US       10.00 Mbps        9.88 Mbps           175.75 ms</span><br><span class="line"> Montreal, CA     9.50 Mbps         6.56 Mbps           216.71 ms</span><br><span class="line"> Paris, FR        9.47 Mbps         8.54 Mbps           300.07 ms</span><br><span class="line"> Amsterdam, NL    10.19 Mbps        10.18 Mbps          190.15 ms</span><br><span class="line"> Suzhou, CN       9.57 Mbps         9.56 Mbps           77.33 ms</span><br><span class="line"> Ningbo, CN       9.55 Mbps         9.34 Mbps           71.59 ms</span><br><span class="line"> Hong Kong, CN    9.46 Mbps         7.85 Mbps           96.12 ms</span><br><span class="line"> Singapore, SG    Test failed</span><br><span class="line"> Taipei, CN       9.48 Mbps         9.52 Mbps           47.49 ms</span><br><span class="line"> Tokyo, JP        9.47 Mbps         9.51 Mbps           50.01 ms</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line"> Finished in        : 4 min 42 sec</span><br><span class="line"> Timestamp          : 2026-04-04 23:24:51 CST</span><br><span class="line">----------------------------------------------------------------------</span><br></pre></td></tr></tbody></table></figure><p>注意：测试命令为 <code>wget -qO- bench.sh | bash</code>。</p><h2 id="特惠福利"><a href="#特惠福利" class="headerlink" title="特惠福利"></a>特惠福利</h2><p>新客可以使用优惠码 <code>9Y920269y</code>，享受 9.9 元体验价格。</p><p>本活动覆盖约百分之 90 商品，少数特殊商品合叠加活动商品可能不可用；是否可用以结算页提示为准。</p><p>复制优惠码后进入选购并且下单，在结算页输入并且使用即可；点击去选购会自动携带优惠码进入到流程。</p><p>优惠码有效期至 2027 年 3 月 6 日前，过期自动失效。</p><h2 id="关于酷鸭"><a href="#关于酷鸭" class="headerlink" title="关于酷鸭"></a>关于酷鸭</h2><p>酷鸭的运营主体法人为印度尼西亚籍，该创始人曾在中国攻读博士学位，依托海外资源创立酷鸭品牌。品牌母公司总部位于印度尼西亚，在印度尼西亚及新加坡均部署有自建机房，基础设施具备一定自主可控能力。</p><p>国内层面，酷鸭数据完成正规公司注册。鉴于母公司主体在境外，且当前业务未涉及中国大陆境内运营，因此暂未办理国内的增值电信业务经营许可证，其运营模式为正规团队运作，并非个人单干的小作坊服务。</p><p>酷鸭目前已上线新加坡、中国香港、美国等地区的云服务器产品，均支持免备案部署，可满足海外建站及相关业务快速上线需求，使用流程较为便捷。</p><p>定价方面，酷鸭整体处于行业常规市场价格区间，定价稳健务实，未采用部分个人服务商常见的超低价引流模式。</p><p>对比市面部分极端低价机型，其定价更符合正常运营成本逻辑，用于承载重要数据的稳定性与可靠性相对更有保障。</p><p>酷鸭整体偏向低调稳健，市场推广活动较少，现阶段仅开设新人体验活动。品牌现阶段不追求快速扩张、短期流量变现，核心思路稳中求进、稳步发展。</p>]]>
-    </content>
-    <id>https://dusays.com/archives/855/</id>
-    <link href="https://dusays.com/archives/855/"/>
-    <published>2026-03-02T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>好久没有发博文了，具体原因近期博文杜老师会说明。本篇博文推荐一下酷鸭数据主机，正巧近期需要采购香港主机，酷鸭数据为杜老师提供一台香港主机，希望可以发布一篇推荐文章，故有此文。</p>
-</blockquote>]]>
-    </summary>
-    <title>推荐酷鸭数据主机</title>
-    <updated>2026-08-27T20:50:34.597Z</updated>
+    <updated>2026-08-27T21:23:30.231Z</updated>
   </entry>
 </feed>
