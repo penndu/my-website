@@ -1,1 +1,0 @@
-export async function mount(n,t){return await t.assets.script(t.extension.config.assets.js),window.stellar?.cardHover?.mountAll?.(n),()=>window.stellar?.cardHover?.unmountAll?.(n)}
