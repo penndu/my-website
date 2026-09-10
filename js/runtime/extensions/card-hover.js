@@ -1,0 +1,1 @@
+export async function mount(n,o){return await o.assets.script(o.extension.config.assets.js),o.signal?.throwIfAborted(),window.stellar?.cardHover?.mountAll?.(n,o.extension.config),()=>window.stellar?.cardHover?.unmountAll?.(n,o.extension.config)}

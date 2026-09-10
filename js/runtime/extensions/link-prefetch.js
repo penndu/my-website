@@ -1,0 +1,1 @@
+export async function mount(e,n){return await n.assets.script(n.extension.config.asset),window.flyingPages({delay:0,ignoreKeywords:[],maxRPS:5,hoverDelay:25}),()=>{}}

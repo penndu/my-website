@@ -1,0 +1,1 @@
+function queryAll(t,e){return[...t.matches?.(e)?[t]:[],...t.querySelectorAll(e)]}export async function mount(t,e){const s=e.extension.config;await e.assets.style(s.assets.css),e.signal?.throwIfAborted(),await e.assets.script(s.assets.js),e.signal?.throwIfAborted();const n=new window.Heti(".heti");return queryAll(t,n.rootSelector).forEach(t=>n.spacingElement(t)),()=>{}}
