@@ -1,1 +1,24 @@
-let typesetting=Promise.resolve();export async function mount(t,a){"function"!=typeof window.MathJax?.typesetPromise&&(window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],processEscapes:!0},startup:{typeset:!1}},await a.assets.script(a.extension.config.asset)),await(window.MathJax.startup?.promise),a.signal.throwIfAborted();const e=typesetting.catch(()=>{}).then(async()=>{a.signal.throwIfAborted(),await window.MathJax.typesetPromise([t]),a.signal.aborted||t.querySelectorAll("mjx-container").forEach(t=>t.parentElement?.classList.add("has-jax"))});typesetting=e,a.onCleanup(async()=>{await e.catch(()=>{}),window.MathJax.typesetClear?.([t])}),await e}
+let typesetting = Promise.resolve();
+
+export async function mount(root, context) {
+  if (typeof window.MathJax?.typesetPromise !== 'function') {
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
+      startup: { typeset: false }
+    };
+    await context.assets.script(context.extension.config.asset);
+  }
+  await window.MathJax.startup?.promise;
+  context.signal.throwIfAborted();
+  const operation = typesetting.catch(() => {}).then(async () => {
+    context.signal.throwIfAborted();
+    await window.MathJax.typesetPromise([root]);
+    if (!context.signal.aborted) root.querySelectorAll('mjx-container').forEach(node => node.parentElement?.classList.add('has-jax'));
+  });
+  typesetting = operation;
+  context.onCleanup(async () => {
+    await operation.catch(() => {});
+    window.MathJax.typesetClear?.([root]);
+  });
+  await operation;
+}

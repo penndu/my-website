@@ -1,1 +1,12 @@
-function queryAll(t,e){return[...t.matches?.(e)?[t]:[],...t.querySelectorAll(e)]}export async function mount(t,e){const s=e.extension.config;await e.assets.style(s.assets.css),e.signal?.throwIfAborted(),await e.assets.script(s.assets.js),e.signal?.throwIfAborted();const n=new window.Heti(".heti");return queryAll(t,n.rootSelector).forEach(t=>n.spacingElement(t)),()=>{}}
+function queryAll(root, selector) { return [...(root.matches?.(selector) ? [root] : []), ...root.querySelectorAll(selector)]; }
+
+export async function mount(root, context) {
+  const config = context.extension.config;
+  await context.assets.style(config.assets.css);
+  context.signal?.throwIfAborted();
+  await context.assets.script(config.assets.js);
+  context.signal?.throwIfAborted();
+  const heti = new window.Heti('.heti');
+  queryAll(root, heti.rootSelector).forEach(element => heti.spacingElement(element));
+  return () => {};
+}

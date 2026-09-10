@@ -1,1 +1,201 @@
-function viewportLoad(e,t,o=!0,s=()=>{}){let n=!0;const a=()=>Promise.resolve().then(()=>t(()=>n)).catch(e=>{n&&s(e)});if(!o||!("IntersectionObserver"in window))return a(),()=>{n=!1};const r=new IntersectionObserver(e=>{e.some(e=>e.isIntersecting)&&(r.disconnect(),a())});return r.observe(e),()=>{n=!1,r.disconnect()}}function copyAttributes(e,t){Array.from(e.attributes).forEach(e=>{["class","id"].includes(e.name)||t.setAttribute(e.name,e.value)})}function commentPath(e){return e.getAttribute("comment_id")??decodeURI(window.location.pathname)}function uploadImage(e,t,o,s,n){return e?.api?a=>{const r=new Headers({Accept:"application/json"});o&&r.set(t||"Authorization",o);const i=new FormData;return i.append(s||"file",a),fetch(e.api,{method:"POST",body:i,headers:r}).then(e=>e.json()).then(e=>e[n])}:null}async function mountArtalk(e,t,o){const s=e.querySelector("#artalk_container");if(!s)return;const n=/[?&]atk_comment=\d+/.test(window.location.search)||/#atk-comment-\d+/.test(window.location.hash);let a=null,r=null;const i=viewportLoad(s,async e=>{if(await Promise.all([t.assets.style(o.assets.localCss),t.assets.style(o.assets.css),t.assets.script(o.assets.js)]),!e())return;const i=window.location.search.match(/[?&]atk_comment=(\d+)/);if(i&&!/#atk-comment-\d+/.test(window.location.hash)){const e=new URLSearchParams(window.location.search).get("atk_notify_key"),t=e?`?atk_notify_key=${encodeURIComponent(e)}`:"";history.replaceState(history.state,"",`${window.location.pathname}${t}#atk-comment-${i[1]}`)}const c=Object.assign({},o.options,{el:"#artalk_container",pageKey:commentPath(s),pageTitle:o.pageTitle}),l=uploadImage(o.options.imageUploader,"Authorization",o.options.imageUploader?.token,"file",o.options.imageUploader?.resp);l&&(c.imgUploader=l),a=window.Artalk.init(c),n&&window.location.search.includes("atk_")&&a.on("list-loaded",()=>{null!==r&&clearTimeout(r),r=setTimeout(()=>{r=null,history.replaceState(history.state,"",window.location.pathname+window.location.hash)},0)})},!n,e=>t.reportError(e));return()=>{i(),null!==r&&clearTimeout(r),r=null,a?.destroy?.()}}function mountEmbed(e,t,o,s){const n=e.querySelector(`#comments #${t}`);if(!n)return;let a=null,r=null;const i=viewportLoad(n,e=>new Promise((s,i)=>{n.replaceChildren(),a=n.ownerDocument.createElement("script"),a.setAttribute("data-stellar-script","embed"),a.src=o,a.async=!0,copyAttributes(n,a);let c=!1;const l=e=>{c||(c=!0,a?.removeEventListener("load",m),a?.removeEventListener("error",u),r=null,e())},m=()=>l(s),u=()=>l(()=>i(new Error(`${t} comment embed failed to load`)));r=()=>l(s),a.addEventListener("load",m,{once:!0}),a.addEventListener("error",u,{once:!0}),e()?n.appendChild(a):r()}),!0,e=>s.reportError(e));return()=>{i(),r?.(),a?.remove()}}function mountTwikoo(e,t,o){const s=e.querySelector("#twikoo_container");if(!s)return;let n=null;const a=viewportLoad(s,async e=>{if(await t.assets.style(o.assets.localCss),await t.assets.script(o.assets.js),!e())return;const a=await window.twikoo.init(Object.assign({},o.options,{el:"#twikoo_container",path:commentPath(s)}));e()?n=a:a?.destroy?.()},!0,e=>t.reportError(e));return()=>{a(),n?.destroy?.()}}function mountWaline(e,t,o){const s=e.querySelector("#waline_container");if(!s)return;let n=null;const a=viewportLoad(s,async e=>{await Promise.all([t.assets.style(o.assets.localCss),t.assets.style(o.assets.css),t.assets.style(o.assets.metaCss)]);const a=await(import(t.assets.resolve(o.assets.js)));if(!e())return;const r=Object.assign({},o.options,{el:"#waline_container",path:commentPath(s)}),i=uploadImage(o.options.imageUploader,o.options.imageUploader?.tokenName,o.options.imageUploader?.token,o.options.imageUploader?.fileName,o.options.imageUploader?.resp);i&&(r.imageUploader=i),n=a.init(r)},!0,e=>t.reportError(e));return()=>{a(),n?.destroy?.()}}export async function mount(e,t){const o=t.extension.config;switch(o.provider){case"artalk":return mountArtalk(e,t,o);case"beaudar":return await t.assets.style(o.assets.localCss),mountEmbed(e,"beaudar",o.assets.js,t);case"giscus":return mountEmbed(e,"giscus",o.assets.js,t);case"utterances":return await t.assets.style(o.assets.localCss),mountEmbed(e,"utterances",o.assets.js,t);case"twikoo":return mountTwikoo(e,t,o);case"waline":return mountWaline(e,t,o);default:throw new TypeError(`unknown comment provider ${o.provider}`)}}
+function viewportLoad(element, callback, enabled = true, onError = () => {}) {
+  let active = true;
+  const run = () => Promise.resolve()
+    .then(() => callback(() => active))
+    .catch(error => {
+      if (active) onError(error);
+    });
+  if (!enabled || !('IntersectionObserver' in window)) {
+    run();
+    return () => { active = false; };
+  }
+  const observer = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      observer.disconnect();
+      run();
+    }
+  });
+  observer.observe(element);
+  return () => {
+    active = false;
+    observer.disconnect();
+  };
+}
+
+function copyAttributes(source, target) {
+  Array.from(source.attributes).forEach(attribute => {
+    if (!['class', 'id'].includes(attribute.name)) target.setAttribute(attribute.name, attribute.value);
+  });
+}
+
+function commentPath(element) {
+  return element.getAttribute('comment_id') ?? decodeURI(window.location.pathname);
+}
+
+function uploadImage(options, tokenHeader, tokenValue, fieldName, responseField) {
+  if (!options?.api) return null;
+  return file => {
+    const headers = new Headers({ Accept: 'application/json' });
+    if (tokenValue) headers.set(tokenHeader || 'Authorization', tokenValue);
+    const body = new FormData();
+    body.append(fieldName || 'file', file);
+    return fetch(options.api, { method: 'POST', body, headers })
+      .then(response => response.json())
+      .then(response => response[responseField]);
+  };
+}
+
+async function mountArtalk(root, context, config) {
+  const element = root.querySelector('#artalk_container');
+  if (!element) return;
+  const targeted = /[?&]atk_comment=\d+/.test(window.location.search) || /#atk-comment-\d+/.test(window.location.hash);
+  let instance = null;
+  let historyTimer = null;
+  const cleanupViewport = viewportLoad(element, async isActive => {
+    await Promise.all([
+      context.assets.style(config.assets.localCss),
+      context.assets.style(config.assets.css),
+      context.assets.script(config.assets.js)
+    ]);
+    if (!isActive()) return;
+    const match = window.location.search.match(/[?&]atk_comment=(\d+)/);
+    if (match && !/#atk-comment-\d+/.test(window.location.hash)) {
+      const params = new URLSearchParams(window.location.search);
+      const notifyKey = params.get('atk_notify_key');
+      const query = notifyKey ? `?atk_notify_key=${encodeURIComponent(notifyKey)}` : '';
+      history.replaceState(history.state, '', `${window.location.pathname}${query}#atk-comment-${match[1]}`);
+    }
+    const options = Object.assign({}, config.options, {
+      el: '#artalk_container',
+      pageKey: commentPath(element),
+      pageTitle: config.pageTitle
+    });
+    const uploader = uploadImage(config.options.imageUploader, 'Authorization', config.options.imageUploader?.token, 'file', config.options.imageUploader?.resp);
+    if (uploader) options.imgUploader = uploader;
+    instance = window.Artalk.init(options);
+    if (targeted && window.location.search.includes('atk_')) {
+      instance.on('list-loaded', () => {
+        if (historyTimer !== null) clearTimeout(historyTimer);
+        historyTimer = setTimeout(() => {
+          historyTimer = null;
+          history.replaceState(history.state, '', window.location.pathname + window.location.hash);
+        }, 0);
+      });
+    }
+  }, !targeted, error => context.reportError(error));
+  return () => {
+    cleanupViewport();
+    if (historyTimer !== null) clearTimeout(historyTimer);
+    historyTimer = null;
+    instance?.destroy?.();
+  };
+}
+
+function mountEmbed(root, provider, src, context) {
+  const element = root.querySelector(`#comments #${provider}`);
+  if (!element) return;
+  let script = null;
+  let cancelLoad = null;
+  const cleanupViewport = viewportLoad(element, isActive => new Promise((resolve, reject) => {
+    element.replaceChildren();
+    script = element.ownerDocument.createElement('script');
+    script.setAttribute('data-stellar-script', 'embed');
+    script.src = src;
+    script.async = true;
+    copyAttributes(element, script);
+    let settled = false;
+    const finish = callback => {
+      if (settled) return;
+      settled = true;
+      script?.removeEventListener('load', onLoad);
+      script?.removeEventListener('error', onError);
+      cancelLoad = null;
+      callback();
+    };
+    const onLoad = () => finish(resolve);
+    const onError = () => finish(() => reject(new Error(`${provider} comment embed failed to load`)));
+    cancelLoad = () => finish(resolve);
+    script.addEventListener('load', onLoad, { once: true });
+    script.addEventListener('error', onError, { once: true });
+    if (!isActive()) {
+      cancelLoad();
+      return;
+    }
+    element.appendChild(script);
+  }), true, error => context.reportError(error));
+  return () => {
+    cleanupViewport();
+    cancelLoad?.();
+    script?.remove();
+  };
+}
+
+function mountTwikoo(root, context, config) {
+  const element = root.querySelector('#twikoo_container');
+  if (!element) return;
+  let instance = null;
+  const cleanupViewport = viewportLoad(element, async isActive => {
+    await context.assets.style(config.assets.localCss);
+    await context.assets.script(config.assets.js);
+    if (!isActive()) return;
+    const created = await window.twikoo.init(Object.assign({}, config.options, {
+      el: '#twikoo_container',
+      path: commentPath(element)
+    }));
+    if (!isActive()) created?.destroy?.();
+    else instance = created;
+  }, true, error => context.reportError(error));
+  return () => {
+    cleanupViewport();
+    instance?.destroy?.();
+  };
+}
+
+function mountWaline(root, context, config) {
+  const element = root.querySelector('#waline_container');
+  if (!element) return;
+  let instance = null;
+  const cleanupViewport = viewportLoad(element, async isActive => {
+    await Promise.all([
+      context.assets.style(config.assets.localCss),
+      context.assets.style(config.assets.css),
+      context.assets.style(config.assets.metaCss)
+    ]);
+    const module = await import(context.assets.resolve(config.assets.js));
+    if (!isActive()) return;
+    const options = Object.assign({}, config.options, {
+      el: '#waline_container',
+      path: commentPath(element)
+    });
+    const uploader = uploadImage(
+      config.options.imageUploader,
+      config.options.imageUploader?.tokenName,
+      config.options.imageUploader?.token,
+      config.options.imageUploader?.fileName,
+      config.options.imageUploader?.resp
+    );
+    if (uploader) options.imageUploader = uploader;
+    instance = module.init(options);
+  }, true, error => context.reportError(error));
+  return () => {
+    cleanupViewport();
+    instance?.destroy?.();
+  };
+}
+
+export async function mount(root, context) {
+  const config = context.extension.config;
+  switch (config.provider) {
+    case 'artalk': return mountArtalk(root, context, config);
+    case 'beaudar':
+      await context.assets.style(config.assets.localCss);
+      return mountEmbed(root, 'beaudar', config.assets.js, context);
+    case 'giscus': return mountEmbed(root, 'giscus', config.assets.js, context);
+    case 'utterances':
+      await context.assets.style(config.assets.localCss);
+      return mountEmbed(root, 'utterances', config.assets.js, context);
+    case 'twikoo': return mountTwikoo(root, context, config);
+    case 'waline': return mountWaline(root, context, config);
+    default: throw new TypeError(`unknown comment provider ${config.provider}`);
+  }
+}

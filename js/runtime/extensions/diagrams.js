@@ -1,1 +1,20 @@
-function queryAll(e,t){return[...e.matches?.(t)?[e]:[],...e.querySelectorAll(t)]}export async function mount(e,t){const a=t.extension.config;await t.assets.script(a.assets.js),t.signal?.throwIfAborted();const r="auto"===a.colorScheme&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":a.theme;return window.mermaid.initialize({startOnLoad:!1,theme:r,logLevel:3,flowchart:{useMaxWidth:!1,htmlLabels:!0,curve:"linear"},gantt:{axisFormat:"%Y/%m/%d"},sequence:{actorMargin:50}}),await window.mermaid.run({nodes:queryAll(e,".mermaid")}),()=>{}}
+function queryAll(root, selector) { return [...(root.matches?.(selector) ? [root] : []), ...root.querySelectorAll(selector)]; }
+
+export async function mount(root, context) {
+  const config = context.extension.config;
+  await context.assets.script(config.assets.js);
+  context.signal?.throwIfAborted();
+  const theme = config.colorScheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : config.theme;
+  window.mermaid.initialize({
+    startOnLoad: false,
+    theme,
+    logLevel: 3,
+    flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'linear' },
+    gantt: { axisFormat: '%Y/%m/%d' },
+    sequence: { actorMargin: 50 }
+  });
+  await window.mermaid.run({ nodes: queryAll(root, '.mermaid') });
+  return () => {};
+}

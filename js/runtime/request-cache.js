@@ -1,1 +1,245 @@
-export const REQUEST_CACHE_PREFIX="Stellar.request-cache.v2.";const SEARCH_CACHE_PREFIX="search_cache_v6:";export function searchCacheKey(e,t){return"search_cache_v6:"+new URL(e,t).href}export function isSearchCacheKey(e){return"string"==typeof e&&e.startsWith("search_cache_v6:")}export function clearSearchStorage(e){let t=0,r=0;try{const n=[];for(let t=0;t<e.length;t++){const r=e.key(t);isSearchCacheKey(r)&&n.push(r)}for(const o of n)try{e.removeItem(o),t++}catch(e){r++}}catch(e){r++}return{ok:0===r,partial:t>0&&r>0,removed:t,failed:r}}function responseFrom(e){return new Response(e.text,{status:200,statusText:"OK",headers:{"Content-Type":e.contentType||"application/json"}})}function requestKey(e,t){return`${t?.method||"GET"} ${e}`}function utf8Bytes(e){return"function"==typeof TextEncoder?(new TextEncoder).encode(e).byteLength:e.length}export function createRequestClient(e={}){const t=e.policy;if(!(t&&Number.isInteger(t.retries)&&t.timeoutMs>0&&t.idleTimeoutMs>0&&t.maxCacheEntryBytes>0))throw new TypeError("[stellar runtime] request policy is required");const r=e.fetch||globalThis.fetch?.bind(globalThis);let n=e.storage;if(!n)try{n=globalThis.localStorage}catch(e){n=null}const o=e.clock||Date.now,c=e.scheduler||(e=>{"function"==typeof globalThis.requestIdleCallback?globalThis.requestIdleCallback(e,{timeout:t.idleTimeoutMs}):setTimeout(e,0)}),s="function"==typeof e.dispatch?e.dispatch:()=>{},l=e.cache;if(!(l&&"boolean"==typeof l.enabled&&l.defaultTtl>=0&&l.ttl&&l.maxEntries>=0))throw new TypeError("[stellar runtime] cache policy is required");const a=new Map;let i=!0===l.enabled;if("function"!=typeof r)throw new TypeError("[stellar runtime] fetch is required");function u(){const e=[];if(!n)return e;try{for(let t=0;t<n.length;t++){const r=n.key(t);r?.startsWith(REQUEST_CACHE_PREFIX)&&e.push(r)}}catch(e){}return e}function f(){const e=u().map(e=>{let t=0;try{t=JSON.parse(n.getItem(e)||"null")?.ts||0}catch(e){}return{key:e,ts:t}}).sort((e,t)=>e.ts-t.ts);for(;e.length>l.maxEntries;)n.removeItem(e.shift().key)}function h(e,r,c,s){if(!n||!(s>0)||utf8Bytes(r)>t.maxCacheEntryBytes)return;const l=REQUEST_CACHE_PREFIX+e,a=JSON.stringify({text:r,contentType:c,ts:o(),ttl:s});try{n.setItem(l,a),f()}catch(e){try{!function(e=""){const t=u().filter(t=>t!==e).map(e=>{let t=0;try{t=JSON.parse(n.getItem(e)||"null")?.ts||0}catch(e){}return{key:e,ts:t}}).sort((e,t)=>e.ts-t.ts);t[0]&&n.removeItem(t[0].key)}(l),n.setItem(l,a),f()}catch(e){i=!1}}}function y(e,t,n){const o=requestKey(e,t);if(a.has(o))return a.get(o).then(e=>e.clone());s("stellar:request-start",{key:o});const c="function"==typeof AbortController?new AbortController:null,l=c?setTimeout(()=>c.abort(),n):null,i=Object.assign({},t);delete i.service,delete i.retries,delete i.timeout,delete i.onNetworkStart,!1===i.cache&&delete i.cache;const u=i.signal;let f=null;if(c){const e=()=>c.abort(u?.reason);u?.aborted?e():u?.addEventListener&&(u.addEventListener("abort",e,{once:!0}),f=()=>u.removeEventListener("abort",e)),i.signal=c.signal}const h=Promise.resolve(r(e,i)).then(e=>{if(!e.ok)throw new Error(`HTTP ${e.status}`);return e}).finally(()=>{null!==l&&clearTimeout(l),f?.(),a.delete(o),s("stellar:request-end",{key:o})});return a.set(o,h),h.then(e=>e.clone())}return Object.freeze({request:async function(e,r={}){const s=function(e){const t=e&&null!=l.ttl?.[e]?l.ttl[e]:l.defaultTtl;return"number"==typeof t&&t>0?t:0}(r.service),a=function(e,t){return!(!i||!1===t.cache||"no-store"===t.cache||"GET"!==(t.method||"GET")||/[?&]t=\d{10,}/.test(e))}(e,r)&&s>0,u=a?function(e){try{const t=n?.getItem(REQUEST_CACHE_PREFIX+e);if(!t)return null;const r=JSON.parse(t);return r&&"string"==typeof r.text&&"number"==typeof r.ts&&"number"==typeof r.ttl?r:null}catch(e){return null}}(e):null;if((f=u)&&f.ttl>0&&o()-f.ts<1e3*f.ttl)return responseFrom(u);var f;"function"==typeof r.onNetworkStart&&r.onNetworkStart();const m=Number.isInteger(r.retries)?r.retries:t.retries,p="number"==typeof r.timeout?r.timeout:t.timeoutMs;let d;for(let t=0;t<=m;t++)try{const t=await y(e,r,p);if(a){const r=t.clone(),n=r.headers.get("Content-Type")||"application/json";c(()=>r.text().then(t=>h(e,t,n,s)).catch(()=>{}))}return t}catch(e){d=e}if(u)return responseFrom(u);throw d},clearCache:function(){if(!n)return Object.freeze({ok:!1,partial:!1,removed:0,failed:1});try{n.length}catch(e){return Object.freeze({ok:!1,partial:!1,removed:0,failed:1})}const e=u();let t=0,r=0;return e.forEach(e=>{try{n.removeItem(e),t++}catch(e){r++}}),Object.freeze({ok:0===r,partial:t>0&&r>0,removed:t,failed:r})}})}
+export const REQUEST_CACHE_PREFIX = 'Stellar.request-cache.v2.';
+
+const SEARCH_CACHE_PREFIX = 'search_cache_v6:';
+
+export function searchCacheKey(url, base) {
+  return SEARCH_CACHE_PREFIX + new URL(url, base).href;
+}
+
+export function isSearchCacheKey(key) {
+  return typeof key === 'string' && key.startsWith(SEARCH_CACHE_PREFIX);
+}
+
+export function clearSearchStorage(storage) {
+  let removed = 0;
+  let failed = 0;
+  try {
+    const keys = [];
+    for (let index = 0; index < storage.length; index++) {
+      const key = storage.key(index);
+      if (isSearchCacheKey(key)) keys.push(key);
+    }
+    for (const key of keys) {
+      try { storage.removeItem(key); removed++; } catch (error) { void error; failed++; }
+    }
+  } catch (error) { void error; failed++; }
+  return { ok: failed === 0, partial: removed > 0 && failed > 0, removed, failed };
+}
+
+function responseFrom(entry) {
+  return new Response(entry.text, {
+    status: 200,
+    statusText: 'OK',
+    headers: { 'Content-Type': entry.contentType || 'application/json' }
+  });
+}
+
+function requestKey(url, options) {
+  return `${options?.method || 'GET'} ${url}`;
+}
+
+function utf8Bytes(value) {
+  if (typeof TextEncoder === 'function') return new TextEncoder().encode(value).byteLength;
+  return value.length;
+}
+
+export function createRequestClient(options = {}) {
+  const policy = options.policy;
+  if (!policy || !Number.isInteger(policy.retries) || !(policy.timeoutMs > 0) || !(policy.idleTimeoutMs > 0) || !(policy.maxCacheEntryBytes > 0)) {
+    throw new TypeError('[stellar runtime] request policy is required');
+  }
+  const fetchImpl = options.fetch || globalThis.fetch?.bind(globalThis);
+  let storage = options.storage;
+  if (!storage) {
+    try { storage = globalThis.localStorage; } catch (error) { void error; storage = null; }
+  }
+  const now = options.clock || Date.now;
+  const schedule = options.scheduler || (fn => {
+    if (typeof globalThis.requestIdleCallback === 'function') {
+      globalThis.requestIdleCallback(fn, { timeout: policy.idleTimeoutMs });
+    } else {
+      setTimeout(fn, 0);
+    }
+  });
+  const dispatch = typeof options.dispatch === 'function' ? options.dispatch : () => {};
+  const config = options.cache;
+  if (!config || typeof config.enabled !== 'boolean' || !(config.defaultTtl >= 0) || !config.ttl || !(config.maxEntries >= 0)) {
+    throw new TypeError('[stellar runtime] cache policy is required');
+  }
+  const pending = new Map();
+  let cacheEnabled = config.enabled === true;
+
+  if (typeof fetchImpl !== 'function') throw new TypeError('[stellar runtime] fetch is required');
+
+  function serviceTtl(service) {
+    const value = service && config.ttl?.[service] != null ? config.ttl[service] : config.defaultTtl;
+    return typeof value === 'number' && value > 0 ? value : 0;
+  }
+
+  function shouldCache(url, requestOptions) {
+    if (!cacheEnabled || requestOptions.cache === false || requestOptions.cache === 'no-store') return false;
+    if ((requestOptions.method || 'GET') !== 'GET') return false;
+    return !/[?&]t=\d{10,}/.test(url);
+  }
+
+  function read(url) {
+    try {
+      const raw = storage?.getItem(REQUEST_CACHE_PREFIX + url);
+      if (!raw) return null;
+      const entry = JSON.parse(raw);
+      if (!entry || typeof entry.text !== 'string' || typeof entry.ts !== 'number' || typeof entry.ttl !== 'number') return null;
+      return entry;
+    } catch (error) {
+      void error;
+      return null;
+    }
+  }
+
+  function keys() {
+    const result = [];
+    if (!storage) return result;
+    try {
+      for (let index = 0; index < storage.length; index++) {
+        const key = storage.key(index);
+        if (key?.startsWith(REQUEST_CACHE_PREFIX)) result.push(key);
+      }
+    } catch (error) { void error; }
+    return result;
+  }
+
+  function clearCache() {
+    if (!storage) return Object.freeze({ ok: false, partial: false, removed: 0, failed: 1 });
+    try { void storage.length; } catch (error) {
+      void error;
+      return Object.freeze({ ok: false, partial: false, removed: 0, failed: 1 });
+    }
+    const targets = keys();
+    let removed = 0;
+    let failed = 0;
+    targets.forEach(key => {
+      try {
+        storage.removeItem(key);
+        removed++;
+      } catch (error) {
+        void error;
+        failed++;
+      }
+    });
+    return Object.freeze({ ok: failed === 0, partial: removed > 0 && failed > 0, removed, failed });
+  }
+
+  function evictOldest(exceptKey = '') {
+    const candidates = keys().filter(key => key !== exceptKey).map(key => {
+      let ts = 0;
+      try {
+        ts = JSON.parse(storage.getItem(key) || 'null')?.ts || 0;
+      } catch (error) {
+        void error;
+      }
+      return { key, ts };
+    }).sort((left, right) => left.ts - right.ts);
+    if (candidates[0]) storage.removeItem(candidates[0].key);
+  }
+
+  function trim() {
+    const all = keys().map(key => {
+      let ts = 0;
+      try {
+        ts = JSON.parse(storage.getItem(key) || 'null')?.ts || 0;
+      } catch (error) {
+        void error;
+      }
+      return { key, ts };
+    }).sort((left, right) => left.ts - right.ts);
+    while (all.length > config.maxEntries) storage.removeItem(all.shift().key);
+  }
+
+  function write(url, text, contentType, ttl) {
+    if (!storage || !(ttl > 0) || utf8Bytes(text) > policy.maxCacheEntryBytes) return;
+    const key = REQUEST_CACHE_PREFIX + url;
+    const value = JSON.stringify({ text, contentType, ts: now(), ttl });
+    try {
+      storage.setItem(key, value);
+      trim();
+    } catch (error) {
+      void error;
+      try {
+        evictOldest(key);
+        storage.setItem(key, value);
+        trim();
+      } catch (error) {
+        void error;
+        cacheEnabled = false;
+      }
+    }
+  }
+
+  function isFresh(entry) {
+    return !!entry && entry.ttl > 0 && now() - entry.ts < entry.ttl * 1000;
+  }
+
+  function sharedFetch(url, requestOptions, timeout) {
+    const key = requestKey(url, requestOptions);
+    if (pending.has(key)) return pending.get(key).then(response => response.clone());
+    dispatch('stellar:request-start', { key });
+    const controller = typeof AbortController === 'function' ? new AbortController() : null;
+    const timer = controller ? setTimeout(() => controller.abort(), timeout) : null;
+    const fetchOptions = Object.assign({}, requestOptions);
+    delete fetchOptions.service;
+    delete fetchOptions.retries;
+    delete fetchOptions.timeout;
+    delete fetchOptions.onNetworkStart;
+    if (fetchOptions.cache === false) delete fetchOptions.cache;
+    const callerSignal = fetchOptions.signal;
+    let removeCallerAbort = null;
+    if (controller) {
+      const abortFromCaller = () => controller.abort(callerSignal?.reason);
+      if (callerSignal?.aborted) abortFromCaller();
+      else if (callerSignal?.addEventListener) {
+        callerSignal.addEventListener('abort', abortFromCaller, { once: true });
+        removeCallerAbort = () => callerSignal.removeEventListener('abort', abortFromCaller);
+      }
+      fetchOptions.signal = controller.signal;
+    }
+    const promise = Promise.resolve(fetchImpl(url, fetchOptions)).then(response => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response;
+    }).finally(() => {
+      if (timer !== null) clearTimeout(timer);
+      removeCallerAbort?.();
+      pending.delete(key);
+      dispatch('stellar:request-end', { key });
+    });
+    pending.set(key, promise);
+    return promise.then(response => response.clone());
+  }
+
+  async function request(url, requestOptions = {}) {
+    const ttl = serviceTtl(requestOptions.service);
+    const cacheable = shouldCache(url, requestOptions) && ttl > 0;
+    const cached = cacheable ? read(url) : null;
+    if (isFresh(cached)) return responseFrom(cached);
+    if (typeof requestOptions.onNetworkStart === 'function') requestOptions.onNetworkStart();
+
+    const retries = Number.isInteger(requestOptions.retries) ? requestOptions.retries : policy.retries;
+    const timeout = typeof requestOptions.timeout === 'number' ? requestOptions.timeout : policy.timeoutMs;
+    let error;
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try {
+        const response = await sharedFetch(url, requestOptions, timeout);
+        if (cacheable) {
+          const clone = response.clone();
+          const contentType = clone.headers.get('Content-Type') || 'application/json';
+          schedule(() => clone.text().then(text => write(url, text, contentType, ttl)).catch(() => {}));
+        }
+        return response;
+      } catch (caught) {
+        error = caught;
+      }
+    }
+    if (cached) return responseFrom(cached);
+    throw error;
+  }
+
+  return Object.freeze({ request, clearCache });
+}

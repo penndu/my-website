@@ -1,1 +1,49 @@
-export function installLegacyRequestAdapter(e,t,r){if(!e||"object"!=typeof e)throw new TypeError("[stellar runtime] utils is required for the data-service adapter");if(!(r&&Number.isInteger(r.retries)&&r.timeoutMs>0))throw new TypeError("[stellar runtime] request policy is required for the data-service adapter");const s=new WeakSet;function i(e,t){if("string"==typeof t?.service&&t.service.length>0)return t.service;const r=String(e?.className||"").match(/\bds-([\w-]+)\b/);return r?.[1]||null}const o=function(o,n,a,u,c={}){if(o&&s.has(o))return Promise.resolve(null);const l=Object.assign({retries:r.retries,timeout:r.timeoutMs},c,{service:i(o,c),onNetworkStart:()=>e.onLoading?.(o)});return t.request(n,l).then(async t=>(c.signal?.throwIfAborted(),o&&s.add(o),e.onLoadSuccess?.(o),await a(t),t)).catch(t=>{if(c.signal?.aborted)throw t;throw e.onLoadFailure?.(o),u?.(t),t})},n=function(e,s={},i=r.retries,o=r.timeoutMs){return t.request(e,Object.assign({},s,{retries:i,timeout:o}))};e.request=o,e.requestWithoutLoading=n;const a=globalThis.__stellarRequestBridge;a&&"function"==typeof a.resolve&&(a.resolve(Object.freeze({request:o,requestWithoutLoading:n})),delete a.resolve)}
+export function installLegacyRequestAdapter(utils, client, policy) {
+  if (!utils || typeof utils !== 'object') {
+    throw new TypeError('[stellar runtime] utils is required for the data-service adapter');
+  }
+  if (!policy || !Number.isInteger(policy.retries) || !(policy.timeoutMs > 0)) {
+    throw new TypeError('[stellar runtime] request policy is required for the data-service adapter');
+  }
+  const loaded = new WeakSet();
+
+  function serviceId(element, options) {
+    if (typeof options?.service === 'string' && options.service.length > 0) return options.service;
+    const match = String(element?.className || '').match(/\bds-([\w-]+)\b/);
+    return match?.[1] || null;
+  }
+
+  const request = function request(element, url, callback, onFailure, options = {}) {
+    if (element && loaded.has(element)) return Promise.resolve(null);
+    const requestOptions = Object.assign({ retries: policy.retries, timeout: policy.timeoutMs }, options, {
+      service: serviceId(element, options),
+      onNetworkStart: () => utils.onLoading?.(element)
+    });
+    return client.request(url, requestOptions).then(async response => {
+      options.signal?.throwIfAborted();
+      if (element) loaded.add(element);
+      utils.onLoadSuccess?.(element);
+      await callback(response);
+      return response;
+    }).catch(error => {
+      if (options.signal?.aborted) throw error;
+      utils.onLoadFailure?.(element);
+      onFailure?.(error);
+      throw error;
+    });
+  };
+
+  const requestWithoutLoading = function requestWithoutLoading(url, options = {}, maxRetry = policy.retries, timeout = policy.timeoutMs) {
+    return client.request(url, Object.assign({}, options, {
+      retries: maxRetry,
+      timeout
+    }));
+  };
+  utils.request = request;
+  utils.requestWithoutLoading = requestWithoutLoading;
+  const bridge = globalThis.__stellarRequestBridge;
+  if (bridge && typeof bridge.resolve === 'function') {
+    bridge.resolve(Object.freeze({ request, requestWithoutLoading }));
+    delete bridge.resolve;
+  }
+}

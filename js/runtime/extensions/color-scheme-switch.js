@@ -1,1 +1,101 @@
-const COLOR_SCHEMES=new Set(["light","dark","auto"]),STORAGE_KEY="Stellar.colorScheme";function selectedColorScheme(e){return e.documentElement.getAttribute("data-theme")||"auto"}export function resolvedColorScheme(e,t){const o=selectedColorScheme(e);return"light"===o||"dark"===o?o:t.matches?"dark":"light"}function readStoredColorScheme(e){try{const t=e?.getItem(STORAGE_KEY);return COLOR_SCHEMES.has(t)?t:null}catch(e){return null}}function persistColorScheme(e,t){try{e?.setItem(STORAGE_KEY,t)}catch(e){}}export function mount(e,t){if(9!==e?.nodeType||!e.defaultView)throw new TypeError("[stellar color-scheme-switch] document root is required");const o=e,r=e.defaultView,n=r.matchMedia("(prefers-color-scheme: dark)");let c=null;try{c=r.localStorage}catch(e){}const s=t.extension.config.messages||{},l=r.setColorScheme;function a(e){o.dispatchEvent(new r.CustomEvent("stellar:color-scheme-change",{detail:Object.freeze({mode:e,resolvedMode:resolvedColorScheme(o,n)})}))}function i(e,r={}){if(!COLOR_SCHEMES.has(e))throw new TypeError(`[stellar color-scheme-switch] unsupported mode ${String(e)}`);return"auto"===e?o.documentElement.removeAttribute("data-theme"):o.documentElement.setAttribute("data-theme",e),!1!==r.persist&&persistColorScheme(c,e),a(e),!1!==r.notify&&t.legacy.stellar?.toast?.(s[e]),e}const m=e=>i(e);r.setColorScheme=m;const d=readStoredColorScheme(c);d?i(d,{persist:!1,notify:!1}):a(selectedColorScheme(o));const h=()=>{"auto"===selectedColorScheme(o)&&a("auto")};return"function"==typeof n.addEventListener?n.addEventListener("change",h):"function"==typeof n.addListener&&n.addListener(h),()=>{"function"==typeof n.removeEventListener?n.removeEventListener("change",h):"function"==typeof n.removeListener&&n.removeListener(h),r.setColorScheme===m&&(void 0===l?delete r.setColorScheme:r.setColorScheme=l)}}
+const COLOR_SCHEMES = new Set(['light', 'dark', 'auto']);
+const STORAGE_KEY = 'Stellar.colorScheme';
+
+function selectedColorScheme(documentRef) {
+  return documentRef.documentElement.getAttribute('data-theme') || 'auto';
+}
+
+export function resolvedColorScheme(documentRef, mediaQuery) {
+  const selected = selectedColorScheme(documentRef);
+  if (selected === 'light' || selected === 'dark') return selected;
+  return mediaQuery.matches ? 'dark' : 'light';
+}
+
+function readStoredColorScheme(storage) {
+  try {
+    const value = storage?.getItem(STORAGE_KEY);
+    return COLOR_SCHEMES.has(value) ? value : null;
+  } catch (error) {
+    return null;
+  }
+}
+
+function persistColorScheme(storage, value) {
+  try {
+    storage?.setItem(STORAGE_KEY, value);
+  } catch (error) {
+    void error;
+  }
+}
+
+export function mount(root, context) {
+  if (root?.nodeType !== 9 || !root.defaultView) {
+    throw new TypeError('[stellar color-scheme-switch] document root is required');
+  }
+  const documentRef = root;
+  const windowRef = root.defaultView;
+  const mediaQuery = windowRef.matchMedia('(prefers-color-scheme: dark)');
+  let storage = null;
+  try {
+    storage = windowRef.localStorage;
+  } catch (error) {
+    void error;
+  }
+  const messages = context.extension.config.messages || {};
+  const previousSetter = windowRef.setColorScheme;
+
+  function dispatch(mode) {
+    documentRef.dispatchEvent(new windowRef.CustomEvent('stellar:color-scheme-change', {
+      detail: Object.freeze({
+        mode,
+        resolvedMode: resolvedColorScheme(documentRef, mediaQuery)
+      })
+    }));
+  }
+
+  function apply(mode, options = {}) {
+    if (!COLOR_SCHEMES.has(mode)) {
+      throw new TypeError(`[stellar color-scheme-switch] unsupported mode ${String(mode)}`);
+    }
+    if (mode === 'auto') {
+      documentRef.documentElement.removeAttribute('data-theme');
+    } else {
+      documentRef.documentElement.setAttribute('data-theme', mode);
+    }
+    if (options.persist !== false) persistColorScheme(storage, mode);
+    dispatch(mode);
+    if (options.notify !== false) context.legacy.stellar?.toast?.(messages[mode]);
+    return mode;
+  }
+
+  const setter = mode => apply(mode);
+  windowRef.setColorScheme = setter;
+
+  const stored = readStoredColorScheme(storage);
+  if (stored) {
+    apply(stored, { persist: false, notify: false });
+  } else {
+    dispatch(selectedColorScheme(documentRef));
+  }
+
+  const handleSystemChange = () => {
+    if (selectedColorScheme(documentRef) === 'auto') dispatch('auto');
+  };
+  if (typeof mediaQuery.addEventListener === 'function') {
+    mediaQuery.addEventListener('change', handleSystemChange);
+  } else if (typeof mediaQuery.addListener === 'function') {
+    mediaQuery.addListener(handleSystemChange);
+  }
+
+  return () => {
+    if (typeof mediaQuery.removeEventListener === 'function') {
+      mediaQuery.removeEventListener('change', handleSystemChange);
+    } else if (typeof mediaQuery.removeListener === 'function') {
+      mediaQuery.removeListener(handleSystemChange);
+    }
+    if (windowRef.setColorScheme === setter) {
+      if (previousSetter === undefined) delete windowRef.setColorScheme;
+      else windowRef.setColorScheme = previousSetter;
+    }
+  };
+}

@@ -1,1 +1,292 @@
-export async function mount(e,t){const n=t.assets,o=t.extension.config,r=t.legacy.ctx.services,i={marked:o.marked},s=[];window.addEventListener("stellar:sites-ready",o=>{const i=o.detail?.target;i&&e.contains(i)&&!t.signal.aborted&&n.script(r.siteinfo.js).then(()=>{t.signal.aborted||window.setSiteCardIcon?.(i.querySelectorAll(".card-link[data-siteinfo-api]"),t.signal)}).catch(e=>{t.signal.aborted||t.reportError(e)})},{signal:t.signal});const a=o=>{if(t.signal.aborted)return;const i=[];for(const n of o){if(!e.contains(n))continue;const o=n.getAttribute("href")?.trim();if(!o||o.startsWith("#")||n.getAttribute("class")||n.getAttribute("role")||n.matches("[cardlink], [data-md-link], [data-siteinfo-api]")||n.closest("pre, code, .highlight, .footnotes")||n.querySelector("img, svg")||!n.textContent.trim())continue;let s;try{s=new URL(o,n.baseURI)}catch{continue}if(!["http:","https:"].includes(s.protocol))continue;n.setAttribute("data-md-link","");const a=document.createElement("span");a.className="md-link-icon ui-icon",a.setAttribute("aria-hidden","true"),a.innerHTML=t.legacy.ctx.icons["default:link"],n.prepend(a),r.siteinfo.api&&(n.setAttribute("data-siteinfo-api",r.siteinfo.api.replace("{href}",encodeURIComponent(s.href))),i.push(n))}i.length&&n.script(r.siteinfo.js).then(()=>{t.signal.aborted||setMdLinkIcon(i,t.signal)}).catch(e=>{t.signal.aborted||t.reportError(e)})};document.addEventListener("stellar:mdrender",e=>a(e.detail?.links||[]),{signal:t.signal});const l=e.querySelectorAll("#artalk_container, #twikoo_container, #waline_container"),c=".atk-content a[href], .tk-content a[href], .wl-content a[href]";let d=null;l.length&&(d=new MutationObserver(e=>{const t=new Set;for(const n of e)for(const e of n.addedNodes)1===e.nodeType&&(e.matches(c)&&t.add(e),e.querySelectorAll(c).forEach(e=>t.add(e)));a(t)}),l.forEach(e=>d.observe(e,{childList:!0,subtree:!0})),t.signal.addEventListener("abort",()=>d.disconnect(),{once:!0}));const u=[],h=window.utils,f=Object.create(h);function g(o){return n.script(o).then(n=>{if(t.signal.throwIfAborted(),"function"!=typeof n.stellarMount)throw new TypeError(`data-service asset has no regional mount: ${o}`);return n.stellarMount(e,{...t,serviceUtils:f})})}f.request=(e,n,o,r,i={})=>h.request(e,n,async e=>{t.signal.throwIfAborted();const n=new Proxy(e,{get(e,n){if("json"===n||"text"===n)return async()=>{const o=await e[n]();return t.signal.throwIfAborted(),o};const o=Reflect.get(e,n,e);return"function"==typeof o?o.bind(e):o}});await o(n)},r,{...i,signal:t.signal}).catch(e=>{t.signal.aborted||t.reportError(e)}),f.requestWithoutLoading=(e,n={})=>h.requestWithoutLoading(e,{...n,signal:t.signal});let p=[],m=[];for(let I of Object.keys(r)){const S=r[I].js;if("siteinfo"==I){const L=e.querySelectorAll("a.link-card[cardlink]"),T=e.querySelectorAll("a[data-md-link][data-siteinfo-api]"),x=e.querySelectorAll(".ds-sites, .site-card .card-link[data-siteinfo-api]");(L?.length>0||x?.length>0||T.length>0)&&s.push(n.script(S).then(function(){t.signal?.throwIfAborted(),setMdLinkIcon(T,t.signal),window.setSiteCardIcon?.(e.querySelectorAll(".site-card .card-link[data-siteinfo-api]"),t.signal),L?.length>0&&setCardLink(L,t.signal)}))}else if("ghinfo"==I){e.querySelectorAll(".ds-ghinfo").length>0&&s.push(g(S))}else if("voice"==I){const M=e.querySelectorAll(".voice>audio");M?.length>0&&s.push(n.script(S).then(function(){t.signal?.throwIfAborted();const e=createVoiceDom(M);"function"==typeof e&&u.push(e)}))}else if("video"==I){const R=e.querySelectorAll(".video>video");R?.length>0&&s.push(n.script(S).then(function(){t.signal?.throwIfAborted(),u.push(videoEvents(R))}))}else if("download-file"==I){const C=e.querySelectorAll(".chat-file");C?.length>0&&s.push(n.script(S).then(function(){t.signal?.throwIfAborted(),u.push(downloadFileEvent(C))}))}else{const j=e.getElementsByClassName(`ds-${I}`);j?.length>0&&("timeline"==I||"memos"==I||"marked"==I||"mdrender"==I?s.push(n.script(i.marked).then(function(){return t.signal?.throwIfAborted(),g(S)})):s.push(g(S)))}}l.forEach(e=>a(e.querySelectorAll(c)));let b=e.querySelectorAll(".chat .status-bar .time"),w=null,y=null;if(b.length>0){v();const H=(new Date).getSeconds();function v(){for(let e=0;e<b.length;++e){const t=b[e],n=new Date,o=n.getHours(),r=n.getMinutes();t.innerHTML=k(o)+":"+k(r)}}function k(e){return e<10?"0"+e:e}w=setInterval(function(){v(),w&&(clearInterval(w),w=null);y=setInterval(v,6e4),p.push(y)},1e3*(60-H)),p.push(w)}const A=new Map,E=new IntersectionObserver((e,t)=>{e.filter(e=>e.isIntersecting).sort((e,t)=>e.intersectionRect.y!==t.intersectionRect.y?e.intersectionRect.y-t.intersectionRect.y:e.intersectionRect.x-t.intersectionRect.x).forEach((e,n)=>{t.unobserve(e.target);const o=setTimeout(()=>{e.target.classList.add("quote-blink");const t=setTimeout(()=>{e.target.classList.remove("quote-blink")},1e3);m.push(t)},Math.max(100,16)*(n+1));m.push(o)})});e.querySelectorAll(".chat .talk .quote").forEach(t=>{const n=function(){var n=(e.ownerDocument||e).getElementById("quote-"+t.getAttribute("quotedCellTag")),o=n&&(e.documentElement||e).contains(n)?n:null;if(o){var r=o.parentElement,i=r.clientHeight/2;o.offsetTop>i-o.clientHeight/2?r.scrollTo({top:o.offsetTop-i+o.clientHeight/2,behavior:"smooth"}):r.scrollTo({top:0,behavior:"smooth"}),E.observe(o)}};t.addEventListener("click",n),A.set(t,n)});const q=()=>{d?.disconnect(),p.forEach(e=>{e&&clearInterval(e)}),p=[],m.forEach(e=>{e&&clearTimeout(e)}),m=[],w&&(clearInterval(w),w=null),y&&(clearInterval(y),y=null),E&&E.disconnect(),A.forEach((e,t)=>{t.removeEventListener("click",e)}),A.clear();for(let e=u.length-1;e>=0;e-=1)u[e]();u.length=0};t.onCleanup?.(q);try{await Promise.allSettled(s.map(e=>e.catch(e=>{t.reportError(e)})))}catch(D){throw q(),D}return q}
+/* global setMdLinkIcon */
+export async function mount(root, context) {
+  const assets = context.assets;
+  const config = context.extension.config;
+  const services = context.legacy.ctx.services;
+  const deps = { marked: config.marked };
+  const loads = [];
+  const onSitesReady = event => {
+    const element = event.detail?.target;
+    if (element && root.contains(element) && !context.signal.aborted) {
+      void assets.script(services.siteinfo.js).then(() => {
+        if (!context.signal.aborted) window.setSiteCardIcon?.(element.querySelectorAll('.card-link[data-siteinfo-api]'), context.signal);
+      }).catch(error => { if (!context.signal.aborted) context.reportError(error); });
+    }
+  };
+  window.addEventListener('stellar:sites-ready', onSitesReady, { signal: context.signal });
+
+  const enhanceLinks = links => {
+    if (context.signal.aborted) return;
+    const mdlinks = [];
+    for (const link of links) {
+      if (!root.contains(link)) continue;
+      const href = link.getAttribute('href')?.trim();
+      if (!href || href.startsWith('#') || link.getAttribute('class') || link.getAttribute('role') ||
+          link.matches('[cardlink], [data-md-link], [data-siteinfo-api]') ||
+          link.closest('pre, code, .highlight, .footnotes') ||
+          link.querySelector('img, svg') || !link.textContent.trim()) continue;
+      let url;
+      try { url = new URL(href, link.baseURI); } catch { continue; }
+      if (!['http:', 'https:'].includes(url.protocol)) continue;
+      link.setAttribute('data-md-link', '');
+      const icon = document.createElement('span');
+      icon.className = 'md-link-icon ui-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.innerHTML = context.legacy.ctx.icons['default:link'];
+      link.prepend(icon);
+      if (services.siteinfo.api) {
+        link.setAttribute('data-siteinfo-api', services.siteinfo.api.replace('{href}', encodeURIComponent(url.href)));
+        mdlinks.push(link);
+      }
+    }
+    if (mdlinks.length) {
+      void assets.script(services.siteinfo.js).then(() => {
+        if (!context.signal.aborted) setMdLinkIcon(mdlinks, context.signal);
+      }).catch(error => { if (!context.signal.aborted) context.reportError(error); });
+    }
+  };
+  const onMarkdownRendered = event => enhanceLinks(event.detail?.links || []);
+  document.addEventListener('stellar:mdrender', onMarkdownRendered, { signal: context.signal });
+
+  // Inline comment providers render asynchronously and replace content on edits/pagination.
+  const commentRoots = root.querySelectorAll('#artalk_container, #twikoo_container, #waline_container');
+  const commentLinkSelector = '.atk-content a[href], .tk-content a[href], .wl-content a[href]';
+  let commentObserver = null;
+  if (commentRoots.length) {
+    commentObserver = new MutationObserver(records => {
+      const links = new Set();
+      for (const record of records) {
+        for (const node of record.addedNodes) {
+          if (node.nodeType !== 1) continue;
+          if (node.matches(commentLinkSelector)) links.add(node);
+          node.querySelectorAll(commentLinkSelector).forEach(link => links.add(link));
+        }
+      }
+      enhanceLinks(links);
+    });
+    commentRoots.forEach(element => commentObserver.observe(element, { childList: true, subtree: true }));
+    context.signal.addEventListener('abort', () => commentObserver.disconnect(), { once: true });
+  }
+
+  const voiceCleanups = [];
+  const baseUtils = window.utils;
+  const serviceUtils = Object.create(baseUtils);
+  serviceUtils.request = (element, url, callback, failure, options = {}) => baseUtils.request(element, url, async response => {
+    context.signal.throwIfAborted();
+    const guarded = new Proxy(response, { get(target, key) {
+      if (key === 'json' || key === 'text') return async () => {
+        const data = await target[key]();
+        context.signal.throwIfAborted();
+        return data;
+      };
+      const value = Reflect.get(target, key, target);
+      return typeof value === 'function' ? value.bind(target) : value;
+    } });
+    await callback(guarded);
+  }, failure, { ...options, signal: context.signal }).catch(error => {
+    if (!context.signal.aborted) context.reportError(error);
+  });
+  serviceUtils.requestWithoutLoading = (url, options = {}) => baseUtils.requestWithoutLoading(url, { ...options, signal: context.signal });
+  function loadService(js) {
+    return assets.script(js).then(script => {
+      context.signal.throwIfAborted();
+      if (typeof script.stellarMount !== 'function') throw new TypeError(`data-service asset has no regional mount: ${js}`);
+      return script.stellarMount(root, { ...context, serviceUtils });
+    });
+  }
+
+  // 用于存储需要清理的资源
+  let intervals = [];
+  let timeouts = [];
+
+  for (let id of Object.keys(services)) {
+    const js = services[id].js;
+    if (id == 'siteinfo') {
+      const cardlinks = root.querySelectorAll('a.link-card[cardlink]');
+      const mdlinks = root.querySelectorAll('a[data-md-link][data-siteinfo-api]');
+      const siteCards = root.querySelectorAll('.ds-sites, .site-card .card-link[data-siteinfo-api]');
+      if (cardlinks?.length > 0 || siteCards?.length > 0 || mdlinks.length > 0) {
+        loads.push(assets.script(js).then(function () {
+          context.signal?.throwIfAborted();
+          setMdLinkIcon(mdlinks, context.signal);
+          window.setSiteCardIcon?.(root.querySelectorAll('.site-card .card-link[data-siteinfo-api]'), context.signal);
+          if (cardlinks?.length > 0) {
+            setCardLink(cardlinks, context.signal);
+          }
+        }));
+      }
+    } else if (id == 'ghinfo') {
+      const els = root.querySelectorAll('.ds-ghinfo');
+      if (els.length > 0) {
+        loads.push(loadService(js));
+      }
+    } else if (id == 'voice') {
+      const voiceAudios = root.querySelectorAll('.voice>audio');
+      if (voiceAudios?.length > 0) {
+        loads.push(assets.script(js).then(function () {
+          context.signal?.throwIfAborted();
+          const voiceCleanup = createVoiceDom(voiceAudios);
+          if (typeof voiceCleanup === 'function') voiceCleanups.push(voiceCleanup);
+        }));
+      }
+    } else if (id == 'video') {
+      const videos = root.querySelectorAll('.video>video');
+      if (videos?.length > 0) {
+        loads.push(assets.script(js).then(function () {
+          context.signal?.throwIfAborted();
+          voiceCleanups.push(videoEvents(videos));
+        }));
+      }
+    } else if (id == 'download-file') {
+      const files = root.querySelectorAll('.chat-file');
+      if (files?.length > 0) {
+        loads.push(assets.script(js).then(function () {
+          context.signal?.throwIfAborted();
+          voiceCleanups.push(downloadFileEvent(files));
+        }));
+      }
+    } else {
+      const els = root.getElementsByClassName(`ds-${id}`);
+      if (els?.length > 0) {
+        if (id == 'timeline' || id == 'memos' || id == 'marked' || id == 'mdrender') {
+          loads.push(assets.script(deps.marked).then(function () {
+          context.signal?.throwIfAborted();
+            return loadService(js);
+          }));
+        } else {
+          loads.push(loadService(js));
+        }
+      }
+    }
+  }
+
+  commentRoots.forEach(element => enhanceLinks(element.querySelectorAll(commentLinkSelector)));
+
+  // chat iphone time
+  let phoneTimes = root.querySelectorAll('.chat .status-bar .time');
+  let firstAdjustInterval = null;
+  let mainInterval = null;
+
+  if (phoneTimes.length > 0) {
+    NowTime();
+    const date = new Date();
+    const sec = date.getSeconds();
+    firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    intervals.push(firstAdjustInterval);
+
+    function firstAdjustTime() {
+      NowTime();
+      if (firstAdjustInterval) {
+        clearInterval(firstAdjustInterval);
+        firstAdjustInterval = null;
+      }
+      mainInterval = setInterval(NowTime, 1000 * 60);
+      intervals.push(mainInterval);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        const timeSpan = phoneTimes[i];
+        const date = new Date();
+        const hour = date.getHours();
+        const min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+  }
+
+  // chat quote - 存储事件监听器以便清理
+  const quoteClickHandlers = new Map();
+  const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+    entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+        observer.unobserve(entry.target);
+        const blinkStart = setTimeout(() => {
+          entry.target.classList.add('quote-blink');
+          const blinkEnd = setTimeout(() => {
+            entry.target.classList.remove('quote-blink');
+          }, 1000);
+          timeouts.push(blinkEnd);
+        }, Math.max(100, 16) * (index + 1));
+        timeouts.push(blinkStart);
+      });
+  });
+
+  var chatQuotes = root.querySelectorAll(".chat .talk .quote");
+  chatQuotes.forEach((quote) => {
+    const handler = function () {
+      var candidate = (root.ownerDocument || root).getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+      var chatCellDom = candidate && (root.documentElement || root).contains(candidate) ? candidate : null;
+      if (chatCellDom) {
+        var chatDiv = chatCellDom.parentElement;
+        var mid = chatDiv.clientHeight / 2;
+        var offsetTop = chatCellDom.offsetTop;
+        if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+          chatDiv.scrollTo({
+            top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+            behavior: "smooth"
+          });
+        } else {
+          chatDiv.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        }
+        chat_quote_obverser.observe(chatCellDom);
+      }
+    };
+    quote.addEventListener('click', handler);
+    quoteClickHandlers.set(quote, handler); // 保存处理器引用
+  });
+
+  // 返回清理函数，用于清理定时器和观察器
+  const cleanup = () => {
+    commentObserver?.disconnect();
+    // 清理所有定时器（包括可能未完成的 firstAdjustInterval）
+    intervals.forEach(timer => {
+      if (timer) clearInterval(timer);
+    });
+    intervals = [];
+    timeouts.forEach(timer => {
+      if (timer) clearTimeout(timer);
+    });
+    timeouts = [];
+    if (firstAdjustInterval) {
+      clearInterval(firstAdjustInterval);
+      firstAdjustInterval = null;
+    }
+    if (mainInterval) {
+      clearInterval(mainInterval);
+      mainInterval = null;
+    }
+
+    // 断开观察器
+    if (chat_quote_obverser) {
+      chat_quote_obverser.disconnect();
+    }
+
+    // 移除所有 click 事件监听器
+    quoteClickHandlers.forEach((handler, quote) => {
+      quote.removeEventListener('click', handler);
+    });
+    quoteClickHandlers.clear();
+    for (let index = voiceCleanups.length - 1; index >= 0; index -= 1) {
+      voiceCleanups[index]();
+    }
+    voiceCleanups.length = 0;
+  };
+  context.onCleanup?.(cleanup);
+  try {
+    await Promise.allSettled(loads.map(promise => promise.catch(error => { context.reportError(error); })));
+  } catch (error) {
+    cleanup();
+    throw error;
+  }
+  return cleanup;
+}

@@ -1,1 +1,19 @@
-function queryAll(e,o){return[...e.matches?.(o)?[e]:[],...e.querySelectorAll(o)]}export async function mount(e,o){const t=o.extension.config,s=t.messages||{},c=o.manifest.policy.features;o.legacy.ctx.copycode={label:s.label||"",copied:s.copied||"",denied:s.denied||"",unsupported:s.unsupported||"",toast_ms:c.codeCopyToastMs},await o.assets.script(t.assets.js),o.signal?.throwIfAborted();const n=queryAll(e,".code");return window.createCopyButtons?.(n),()=>n.forEach(e=>e.querySelector(".copy-btn")?.remove())}
+function queryAll(root, selector) { return [...(root.matches?.(selector) ? [root] : []), ...root.querySelectorAll(selector)]; }
+
+export async function mount(root, context) {
+  const config = context.extension.config;
+  const messages = config.messages || {};
+  const policy = context.manifest.policy.features;
+  context.legacy.ctx.copycode = {
+    label: messages.label || '',
+    copied: messages.copied || '',
+    denied: messages.denied || '',
+    unsupported: messages.unsupported || '',
+    toast_ms: policy.codeCopyToastMs
+  };
+  await context.assets.script(config.assets.js);
+  context.signal?.throwIfAborted();
+  const elements = queryAll(root, '.code');
+  window.createCopyButtons?.(elements);
+  return () => elements.forEach(element => element.querySelector('.copy-btn')?.remove());
+}

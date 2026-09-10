@@ -1,1 +1,92 @@
-const RUNTIME_CONFIG_ID="stellar-runtime-config",RUNTIME_QUERY=new URL(import.meta.url).search;let validateDeclaration;function readManifest(e){const t=e.getElementById(RUNTIME_CONFIG_ID),a=JSON.parse(t?.textContent||"null");if(!a||1!==a.version||!Array.isArray(a.extensions)||a.extensions.some(e=>!["document","region"].includes(e.scope)))throw new TypeError("[stellar runtime] invalid manifest");return a.extensions.forEach(validateDeclaration),a}function dispatch(e,t){document.dispatchEvent(new CustomEvent(e,{detail:t}))}async function start(){const[e,t,a,n]=await Promise.all([import(`./asset-loader.js${RUNTIME_QUERY}`),import(`./extension-registry.js${RUNTIME_QUERY}`),import(`./legacy-request-adapter.js${RUNTIME_QUERY}`),import(`./request-cache.js${RUNTIME_QUERY}`)]);validateDeclaration=t.validateDeclaration;let r=readManifest(document);const o=e.createAssetLoader({document:document,root:r.root,version:RUNTIME_QUERY}),s=n.createRequestClient({cache:r.policy.cache,policy:r.policy.request,dispatch:dispatch});a.installLegacyRequestAdapter(globalThis.utils,s,r.policy.request);const i=new Map,l=new WeakMap;let c=!1;const d=()=>{const e=[...document.querySelectorAll("[data-stellar-runtime-region]")];for(const t of document.body.children)t.matches("script, style, link")||e.some(e=>t===e||t.contains(e))||e.push(t);return e},m=()=>[document.getElementById("main"),document.getElementById("rightbar-region")].filter(Boolean),u={readManifest:readManifest,async unmountPage(){await Promise.all(m().map(p))},async mountPage(e){r=e,await Promise.all(m().map(e=>g(e,"region")))}};async function p(e){const t=i.get(e);if(i.delete(e),!t)return l.get(e);const a=t.unmount(e);l.set(e,a),await a,l.get(e)===a&&l.delete(e)}async function g(e,a){if(await l.get(e),c||i.has(e))return;const n=t.createExtensionRegistry({onError(e){console.error(`[stellar extension:${e.id}] ${e.phase} failed`,e.error),dispatch("stellar:extension-error",e)}});r.extensions.filter(e=>e.scope===a).forEach(e=>n.register({...e,module:`${o.resolve(e.module)}${RUNTIME_QUERY}`})),i.set(e,n),await n.mount(e,Object.freeze({manifest:r,assets:o,request:s,runtime:u,legacy:Object.freeze({ctx:globalThis.ctx,stellar:globalThis.stellar})}))}window.addEventListener("pagehide",()=>{c=!0,Promise.all([...i.keys()].map(p))}),window.addEventListener("pageshow",e=>{c=!1,e.persisted&&Promise.all([g(document,"document"),...d().map(e=>g(e,"region"))])}),await Promise.all([g(document,"document"),...d().map(e=>g(e,"region"))])}start().catch(e=>{console.error("[stellar runtime] bootstrap failed",e),dispatch("stellar:runtime-error",{error:e})});
+const RUNTIME_CONFIG_ID = 'stellar-runtime-config';
+const RUNTIME_QUERY = new URL(import.meta.url).search;
+let validateDeclaration;
+
+function readManifest(documentRef) {
+  const element = documentRef.getElementById(RUNTIME_CONFIG_ID);
+  const manifest = JSON.parse(element?.textContent || 'null');
+  if (!manifest || manifest.version !== 1 || !Array.isArray(manifest.extensions)
+    || manifest.extensions.some(entry => !['document', 'region'].includes(entry.scope))) {
+    throw new TypeError('[stellar runtime] invalid manifest');
+  }
+  manifest.extensions.forEach(validateDeclaration);
+  return manifest;
+}
+
+function dispatch(name, detail) {
+  document.dispatchEvent(new CustomEvent(name, { detail }));
+}
+
+async function start() {
+  const [assetModule, registryModule, adapterModule, requestModule] = await Promise.all([
+    import(`./asset-loader.js${RUNTIME_QUERY}`),
+    import(`./extension-registry.js${RUNTIME_QUERY}`),
+    import(`./legacy-request-adapter.js${RUNTIME_QUERY}`),
+    import(`./request-cache.js${RUNTIME_QUERY}`)
+  ]);
+  validateDeclaration = registryModule.validateDeclaration;
+  let manifest = readManifest(document);
+  const assets = assetModule.createAssetLoader({ document, root: manifest.root, version: RUNTIME_QUERY });
+  const request = requestModule.createRequestClient({ cache: manifest.policy.cache, policy: manifest.policy.request, dispatch });
+  adapterModule.installLegacyRequestAdapter(globalThis.utils, request, manifest.policy.request);
+  const mounted = new Map();
+  const teardowns = new WeakMap();
+  let hidden = false;
+  const regionRoots = () => {
+    const regions = [...document.querySelectorAll('[data-stellar-runtime-region]')];
+    // Preserve enhancement of body injections without adding layout wrappers.
+    for (const element of document.body.children) {
+      if (!element.matches('script, style, link') && !regions.some(region => element === region || element.contains(region))) regions.push(element);
+    }
+    return regions;
+  };
+  const pageRoots = () => [document.getElementById('main'), document.getElementById('rightbar-region')].filter(Boolean);
+  const runtime = {
+    readManifest,
+    async unmountPage() { await Promise.all(pageRoots().map(unmount)); },
+    async mountPage(nextManifest) {
+      manifest = nextManifest;
+      await Promise.all(pageRoots().map(root => mount(root, 'region')));
+    }
+  };
+  function context() {
+    return Object.freeze({ manifest, assets, request, runtime,
+      legacy: Object.freeze({ ctx: globalThis.ctx, stellar: globalThis.stellar }) });
+  }
+  async function unmount(root) {
+    const instance = mounted.get(root);
+    mounted.delete(root);
+    if (!instance) return teardowns.get(root);
+    const pending = instance.unmount(root);
+    teardowns.set(root, pending);
+    await pending;
+    if (teardowns.get(root) === pending) teardowns.delete(root);
+  }
+  async function mount(root, scope) {
+    await teardowns.get(root);
+    if (hidden || mounted.has(root)) return;
+    const registry = registryModule.createExtensionRegistry({ onError(detail) {
+      console.error(`[stellar extension:${detail.id}] ${detail.phase} failed`, detail.error);
+      dispatch('stellar:extension-error', detail);
+    } });
+    manifest.extensions.filter(entry => entry.scope === scope).forEach(entry => registry.register({
+      ...entry, module: `${assets.resolve(entry.module)}${RUNTIME_QUERY}`
+    }));
+    mounted.set(root, registry);
+    await registry.mount(root, context());
+  }
+  window.addEventListener('pagehide', () => {
+    hidden = true;
+    void Promise.all([...mounted.keys()].map(unmount));
+  });
+  window.addEventListener('pageshow', event => {
+    hidden = false;
+    if (event.persisted) void Promise.all([mount(document, 'document'), ...regionRoots().map(root => mount(root, 'region'))]);
+  });
+  await Promise.all([mount(document, 'document'), ...regionRoots().map(root => mount(root, 'region'))]);
+}
+
+start().catch(error => {
+  console.error('[stellar runtime] bootstrap failed', error);
+  dispatch('stellar:runtime-error', { error });
+});

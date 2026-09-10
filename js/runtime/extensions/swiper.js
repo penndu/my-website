@@ -1,1 +1,22 @@
-function queryAll(e,t){return[...e.matches?.(t)?[e]:[],...e.querySelectorAll(t)]}export async function mount(e,t){const s=t.extension.config;await Promise.all([t.assets.style(s.assets.localCss),t.assets.style(s.assets.css),t.assets.script(s.assets.js)]),t.signal?.throwIfAborted();const n=e.querySelector("#swiper-api"),i=new window.Swiper(n,{slidesPerView:"auto",spaceBetween:8,centeredSlides:!0,effect:n?.getAttribute("effect")||"",rewind:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});return()=>i.destroy?.(!0,!0)}
+function queryAll(root, selector) { return [...(root.matches?.(selector) ? [root] : []), ...root.querySelectorAll(selector)]; }
+
+export async function mount(root, context) {
+  const config = context.extension.config;
+  await Promise.all([
+    context.assets.style(config.assets.localCss),
+    context.assets.style(config.assets.css),
+    context.assets.script(config.assets.js)
+  ]);
+  context.signal?.throwIfAborted();
+  const element = root.querySelector('#swiper-api');
+  const instance = new window.Swiper(element, {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    centeredSlides: true,
+    effect: element?.getAttribute('effect') || '',
+    rewind: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+  });
+  return () => instance.destroy?.(true, true);
+}

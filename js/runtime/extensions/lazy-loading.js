@@ -1,1 +1,74 @@
-function queryAll(e,t){return Array.from(e.querySelectorAll(t))}export async function mount(e,t){const a=t.extension.config;if(9!==e.nodeType)throw new TypeError("[stellar runtime] lazy-loading compatibility adapter requires a document root");const o=e.ownerDocument||e;let n=null;const s=t=>{const a="string"==typeof t?e.querySelector(t):t;a&&(queryAll(a,"img").forEach(e=>{if(e.classList.contains("lazy"))return;const t=e.getAttribute("src");if(!t)return;const a=o.createElement("div");a.className="lazy-box";const n=e.cloneNode();n.removeAttribute("src"),n.setAttribute("data-src",t),n.classList.add("lazy");const s=o.createElement("div");s.className="lazy-icon",a.append(n,s),e.replaceWith(a)}),n?.update?.())};window.wrapLazyloadImages=s;const r=e=>{n=e.detail.instance,window.lazyLoadInstance=n},d={elements_selector:".lazy",callback_loaded(e){e.classList.add("loaded");const t=e.closest(".lazy-box")||e.parentElement;t?.querySelector(".lazy-icon")?.remove()}};window.lazyLoadOptions=d,window.addEventListener("LazyLoad::Initialized",r);const l=new MutationObserver(e=>{e.some(e=>Array.from(e.addedNodes).some(e=>1===e.nodeType&&(e.matches?.(".lazy")||e.querySelector?.(".lazy"))))&&n?.update?.()});l.observe(e.documentElement||e,{childList:!0,subtree:!0});const i=()=>{l.disconnect(),window.removeEventListener("LazyLoad::Initialized",r),window.wrapLazyloadImages===s&&delete window.wrapLazyloadImages,window.lazyLoadOptions===d&&delete window.lazyLoadOptions,n?.destroy?.(),window.lazyLoadInstance===n&&delete window.lazyLoadInstance,n=null};try{return await t.assets.script(a.asset),t.signal?.throwIfAborted(),n||"function"!=typeof window.LazyLoad||(n=new window.LazyLoad(d)),window.lazyLoadInstance=n,n?.update?.(),i}catch(e){throw i(),e}}
+function queryAll(root, selector) {
+  return Array.from(root.querySelectorAll(selector));
+}
+
+export async function mount(root, context) {
+  const config = context.extension.config;
+  if (root.nodeType !== 9) {
+    throw new TypeError('[stellar runtime] lazy-loading compatibility adapter requires a document root');
+  }
+  const ownerDocument = root.ownerDocument || root;
+  let instance = null;
+  const wrapLazyloadImages = container => {
+    const target = typeof container === 'string' ? root.querySelector(container) : container;
+    if (!target) return;
+    queryAll(target, 'img').forEach(image => {
+      if (image.classList.contains('lazy')) return;
+      const src = image.getAttribute('src');
+      if (!src) return;
+      const wrapper = ownerDocument.createElement('div');
+      wrapper.className = 'lazy-box';
+      const lazyImage = image.cloneNode();
+      lazyImage.removeAttribute('src');
+      lazyImage.setAttribute('data-src', src);
+      lazyImage.classList.add('lazy');
+      const icon = ownerDocument.createElement('div');
+      icon.className = 'lazy-icon';
+      wrapper.append(lazyImage, icon);
+      image.replaceWith(wrapper);
+    });
+    instance?.update?.();
+  };
+  window.wrapLazyloadImages = wrapLazyloadImages;
+  const onInitialized = event => {
+    instance = event.detail.instance;
+    window.lazyLoadInstance = instance;
+  };
+  const lazyLoadOptions = {
+    elements_selector: '.lazy',
+    callback_loaded(element) {
+      element.classList.add('loaded');
+      const wrapper = element.closest('.lazy-box') || element.parentElement;
+      wrapper?.querySelector('.lazy-icon')?.remove();
+    }
+  };
+  window.lazyLoadOptions = lazyLoadOptions;
+  window.addEventListener('LazyLoad::Initialized', onInitialized);
+  const observer = new MutationObserver(mutations => {
+    const found = mutations.some(mutation => Array.from(mutation.addedNodes).some(node =>
+      node.nodeType === 1 && (node.matches?.('.lazy') || node.querySelector?.('.lazy'))
+    ));
+    if (found) instance?.update?.();
+  });
+  observer.observe(root.documentElement || root, { childList: true, subtree: true });
+  const cleanup = () => {
+    observer.disconnect();
+    window.removeEventListener('LazyLoad::Initialized', onInitialized);
+    if (window.wrapLazyloadImages === wrapLazyloadImages) delete window.wrapLazyloadImages;
+    if (window.lazyLoadOptions === lazyLoadOptions) delete window.lazyLoadOptions;
+    instance?.destroy?.();
+    if (window.lazyLoadInstance === instance) delete window.lazyLoadInstance;
+    instance = null;
+  };
+  try {
+    await context.assets.script(config.asset);
+    context.signal?.throwIfAborted();
+    if (!instance && typeof window.LazyLoad === 'function') instance = new window.LazyLoad(lazyLoadOptions);
+    window.lazyLoadInstance = instance;
+    instance?.update?.();
+    return cleanup;
+  } catch (error) {
+    cleanup();
+    throw error;
+  }
+}

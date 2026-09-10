@@ -1,1 +1,101 @@
-function queryAll(e,t){return[...e.matches?.(t)?[e]:[],...e.querySelectorAll(t)]}const DISTANCE="8px",DURATION_MS=1e3,INTERVAL_MS=100,SCALE=1;function rootWindow(e){return e?.defaultView?e.defaultView:e?.ownerDocument?.defaultView?e.ownerDocument.defaultView:null}function prefersReducedMotion(e){if("function"!=typeof e?.matchMedia)return!1;try{return e.matchMedia("(prefers-reduced-motion: reduce)").matches}catch(e){return!1}}export function mount(e){const t=queryAll(e,".slide-up"),r=rootWindow(e);if(0===t.length||"function"!=typeof r?.IntersectionObserver||prefersReducedMotion(r))return()=>{};const n=new Set,o=new Map,a=new WeakSet(t);let c=null;function i(e){const t=o.get(e);t&&(t.value?e.style.setProperty("opacity",t.value,t.priority):e.style.removeProperty("opacity"),o.delete(e))}function u(){c?.disconnect(),o.forEach((e,t)=>i(t)),n.forEach(e=>e.cancel()),n.clear()}try{c=new r.IntersectionObserver(e=>{let t=0;e.forEach(e=>{if(a.has(e.target))return a.delete(e.target),void(e.isIntersecting||"function"!=typeof e.target.animate?c.unobserve(e.target):(o.set(e.target,{value:e.target.style.getPropertyValue("opacity"),priority:e.target.style.getPropertyPriority("opacity")}),e.target.style.setProperty("opacity","0")));if(e.isIntersecting&&(c.unobserve(e.target),i(e.target),"function"==typeof e.target.animate))try{const r=e.target.animate([{opacity:0,transform:"translateY(8px) scale(1)"},{opacity:1,transform:"translateY(0) scale(1)"}],{delay:100*t,duration:1e3,easing:"ease-out",fill:"backwards"});n.add(r),t+=1}catch(e){}})}),t.forEach(e=>c.observe(e))}catch(e){return u(),()=>{}}return u}
+function queryAll(root, selector) {
+  return [...(root.matches?.(selector) ? [root] : []), ...root.querySelectorAll(selector)];
+}
+
+const DISTANCE = '8px';
+const DURATION_MS = 1000;
+const INTERVAL_MS = 100;
+const SCALE = 1;
+
+function rootWindow(root) {
+  if (root?.defaultView) return root.defaultView;
+  if (root?.ownerDocument?.defaultView) return root.ownerDocument.defaultView;
+  return null;
+}
+
+function prefersReducedMotion(windowRef) {
+  if (typeof windowRef?.matchMedia !== 'function') return false;
+  try {
+    return windowRef.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  } catch (error) {
+    void error;
+    return false;
+  }
+}
+
+export function mount(root) {
+  const elements = queryAll(root, '.slide-up');
+  const windowRef = rootWindow(root);
+  if (
+    elements.length === 0 ||
+    typeof windowRef?.IntersectionObserver !== 'function' ||
+    prefersReducedMotion(windowRef)
+  ) return () => {};
+
+  const animations = new Set();
+  const hiddenElements = new Map();
+  const pendingInitialObservation = new WeakSet(elements);
+  let observer = null;
+
+  function restore(element) {
+    const original = hiddenElements.get(element);
+    if (!original) return;
+    if (original.value) element.style.setProperty('opacity', original.value, original.priority);
+    else element.style.removeProperty('opacity');
+    hiddenElements.delete(element);
+  }
+
+  function cleanup() {
+    observer?.disconnect();
+    hiddenElements.forEach((value, element) => restore(element));
+    animations.forEach(animation => animation.cancel());
+    animations.clear();
+  }
+
+  try {
+    observer = new windowRef.IntersectionObserver(entries => {
+      let sequenceIndex = 0;
+      entries.forEach(entry => {
+        if (pendingInitialObservation.has(entry.target)) {
+          pendingInitialObservation.delete(entry.target);
+          if (entry.isIntersecting || typeof entry.target.animate !== 'function') {
+            observer.unobserve(entry.target);
+          } else {
+            hiddenElements.set(entry.target, {
+              value: entry.target.style.getPropertyValue('opacity'),
+              priority: entry.target.style.getPropertyPriority('opacity')
+            });
+            entry.target.style.setProperty('opacity', '0');
+          }
+          return;
+        }
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        restore(entry.target);
+        if (typeof entry.target.animate !== 'function') return;
+        try {
+          const animation = entry.target.animate([
+            { opacity: 0, transform: `translateY(${DISTANCE}) scale(${SCALE})` },
+            { opacity: 1, transform: 'translateY(0) scale(1)' }
+          ], {
+            delay: sequenceIndex * INTERVAL_MS,
+            duration: DURATION_MS,
+            easing: 'ease-out',
+            fill: 'backwards'
+          });
+          animations.add(animation);
+          sequenceIndex += 1;
+        } catch (error) {
+          void error;
+        }
+      });
+    });
+    elements.forEach(element => observer.observe(element));
+  } catch (error) {
+    void error;
+    cleanup();
+    return () => {};
+  }
+
+  return cleanup;
+}

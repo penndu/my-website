@@ -1,1 +1,70 @@
-function resolveAsset(e,t){if("string"!=typeof t||0===t.length)return"";if(!t.startsWith("/"))return t;return`${("string"==typeof e&&e.length>0?e:"/").replace(/\/$/,"")}${t}`}function versionAsset(e,t,r){if("string"!=typeof e||!e.startsWith("/")||!r)return t;const s=r.replace(/^\?/,"");return`${t}${t.includes("?")?"&":"?"}${s}`}export function createAssetLoader(e={}){const t=e.document||document,r=e.root||"/",s=e.version||"",n=new Map,o=new Map;function i(i,c,a={}){const l=versionAsset(c,resolveAsset(r,c),s);if(!l)return Promise.reject(new TypeError("[stellar runtime] asset URL is required"));const u="script"===i?n:o;if(u.has(l))return u.get(l);if("style"===i&&t.querySelectorAll){const e=new URL(l,t.baseURI).href,r=[...t.querySelectorAll('link[rel="stylesheet"]')].find(t=>t.href===e&&t.sheet);if(r){const e=Promise.resolve(r);return u.set(l,e),e}}const d=new Promise((r,s)=>{const n=t.createElement("script"===i?"script":"link");"script"===i?(n.setAttribute?.("data-stellar-script","asset"),n.src=l,n.async=!1!==a.async):(n.rel="stylesheet",n.href=l);for(const[e,t]of Object.entries(a))n[e]=t;const o=e=>{clearTimeout(d),n.removeEventListener?.("load",c),n.removeEventListener?.("error",u),e?(n.remove?.(),s(e)):r(n)},c=()=>o(),u=()=>o(new Error(`failed to load ${l}`)),d=setTimeout(()=>o(new Error(`asset load timed out: ${l}`)),e.timeoutMs||15e3);n.addEventListener("load",c,{once:!0}),n.addEventListener("error",u,{once:!0}),t.head.appendChild(n)});return u.set(l,d),d.catch(()=>u.delete(l)),d}const c=(e,t)=>i("script",e,t),a=(e,t)=>i("style",e,t),l=e=>resolveAsset(r,e);return Object.freeze({script:c,style:a,resolve:l,scoped:function(e){function t(t){return e.aborted?Promise.reject(e.reason):new Promise((r,s)=>{const n=()=>s(e.reason);e.addEventListener("abort",n,{once:!0}),t.then(t=>{e.removeEventListener("abort",n),e.aborted?s(e.reason):r(t)},t=>{e.removeEventListener("abort",n),s(t)})})}return Object.freeze({resolve:l,script:(...r)=>e.aborted?Promise.reject(e.reason):t(c(...r)),style:(...r)=>e.aborted?Promise.reject(e.reason):t(a(...r))})}})}
+function resolveAsset(root, value) {
+  if (typeof value !== 'string' || value.length === 0) return '';
+  if (!value.startsWith('/')) return value;
+  const base = typeof root === 'string' && root.length > 0 ? root : '/';
+  return `${base.replace(/\/$/, '')}${value}`;
+}
+
+function versionAsset(value, url, version) {
+  if (typeof value !== 'string' || !value.startsWith('/') || !version) return url;
+  const suffix = version.replace(/^\?/, '');
+  return `${url}${url.includes('?') ? '&' : '?'}${suffix}`;
+}
+
+export function createAssetLoader(options = {}) {
+  const documentRef = options.document || document;
+  const root = options.root || '/';
+  const version = options.version || '';
+  const scripts = new Map();
+  const styles = new Map();
+
+  function load(kind, value, attributes = {}) {
+    const url = versionAsset(value, resolveAsset(root, value), version);
+    if (!url) return Promise.reject(new TypeError('[stellar runtime] asset URL is required'));
+    const cache = kind === 'script' ? scripts : styles;
+    if (cache.has(url)) return cache.get(url);
+    if (kind === 'style' && documentRef.querySelectorAll) {
+      const absolute = new URL(url, documentRef.baseURI).href;
+      const existing = [...documentRef.querySelectorAll('link[rel="stylesheet"]')].find(link => link.href === absolute && link.sheet);
+      if (existing) { const ready = Promise.resolve(existing); cache.set(url, ready); return ready; }
+    }
+    const promise = new Promise((resolve, reject) => {
+      const element = documentRef.createElement(kind === 'script' ? 'script' : 'link');
+      if (kind === 'script') { element.setAttribute?.('data-stellar-script', 'asset'); element.src = url; element.async = attributes.async !== false; }
+      else { element.rel = 'stylesheet'; element.href = url; }
+      for (const [key, value] of Object.entries(attributes)) element[key] = value;
+      const done = error => {
+        clearTimeout(timer);
+        element.removeEventListener?.('load', onLoad);
+        element.removeEventListener?.('error', onError);
+        if (error) { element.remove?.(); reject(error); } else resolve(element);
+      };
+      const onLoad = () => done();
+      const onError = () => done(new Error(`failed to load ${url}`));
+      const timer = setTimeout(() => done(new Error(`asset load timed out: ${url}`)), options.timeoutMs || 15000);
+      element.addEventListener('load', onLoad, { once: true });
+      element.addEventListener('error', onError, { once: true });
+      documentRef.head.appendChild(element);
+    });
+    cache.set(url, promise);
+    promise.catch(() => cache.delete(url));
+    return promise;
+  }
+  const script = (src, attributes) => load('script', src, attributes);
+  const style = (href, attributes) => load('style', href, attributes);
+  const resolve = value => resolveAsset(root, value);
+  function scoped(signal) {
+    function wait(promise) {
+      if (signal.aborted) return Promise.reject(signal.reason);
+      return new Promise((resolve, reject) => {
+        const cancel = () => reject(signal.reason);
+        signal.addEventListener('abort', cancel, { once: true });
+        promise.then(value => { signal.removeEventListener('abort', cancel); signal.aborted ? reject(signal.reason) : resolve(value); },
+          error => { signal.removeEventListener('abort', cancel); reject(error); });
+      });
+    }
+    return Object.freeze({ resolve, script: (...args) => signal.aborted ? Promise.reject(signal.reason) : wait(script(...args)),
+      style: (...args) => signal.aborted ? Promise.reject(signal.reason) : wait(style(...args)) });
+  }
+  return Object.freeze({ script, style, resolve, scoped });
+}

@@ -1,1 +1,183 @@
-const EFFECT_SELECTOR="canvas[data-hero-effect]",MODULE_QUERY=new URL(import.meta.url).search;function objectValue(e){return null==e||"object"!=typeof e||Array.isArray(e)?{}:e}function readObject(e,t){const n=e.getAttribute(t);if(!n)return{};try{return objectValue(JSON.parse(n))}catch(e){return{}}}function runtimePolicy(e){const t=readObject(e,"data-effect-runtime");return Object.freeze({pauseWhenHidden:!1!==t.pauseWhenHidden,respectReducedMotion:!1!==t.respectReducedMotion})}function effectCanvases(e){const t=[];return e?.matches?.(EFFECT_SELECTOR)&&t.push(e),e?.querySelectorAll?.(EFFECT_SELECTOR).forEach(e=>t.push(e)),t}function versionedModule(e,t){const n=e.assets.resolve(t);if(!n)throw new TypeError("[stellar hero effect] renderer module is required");return MODULE_QUERY?`${n}${n.includes("?")?"&":"?"}${MODULE_QUERY.slice(1)}`:n}function reducedMotion(e){return!0===e.matchMedia?.("(prefers-reduced-motion: reduce)").matches}function createLifecycle(e,t,n){const r=e.parentElement,o=e.closest(".wiki-hero")||r,i=e.ownerDocument,c=i?.defaultView||window;if(!r||!o||!i)return null;const s={x:.5,y:.5,active:!1};let u=null,a=!0,d=!1;function l(){return!d&&(!n.pauseWhenHidden||a&&!i.hidden)}function f(e){u=null,l()&&(t.render(e,s),u=c.requestAnimationFrame(f))}function h(){l()&&null===u&&(u=c.requestAnimationFrame(f))}function m(){null!==u&&(c.cancelAnimationFrame(u),u=null)}function p(){t.resize(r.getBoundingClientRect(),c.devicePixelRatio||1)}function v(e){const t=r.getBoundingClientRect();t.width<=0||t.height<=0||(s.x=Math.max(0,Math.min(1,(e.clientX-t.left)/t.width)),s.y=Math.max(0,Math.min(1,(e.clientY-t.top)/t.height)),s.active=!0)}function E(){s.active=!1}function y(){i.hidden?m():h()}!0===t.pointer&&(o.addEventListener("mousemove",v),o.addEventListener("mouseleave",E)),n.pauseWhenHidden&&i.addEventListener("visibilitychange",y);let w=null;c.ResizeObserver?(w=new c.ResizeObserver(p),w.observe(r)):c.addEventListener("resize",p);let b=null;return n.pauseWhenHidden&&c.IntersectionObserver&&(b=new c.IntersectionObserver(e=>{a=!0===e[0]?.isIntersecting,a?h():m()},{threshold:.01}),b.observe(r)),p(),h(),function(){d||(d=!0,m(),!0===t.pointer&&(o.removeEventListener("mousemove",v),o.removeEventListener("mouseleave",E)),n.pauseWhenHidden&&i.removeEventListener("visibilitychange",y),c.removeEventListener("resize",p),w?.disconnect(),b?.disconnect(),t.destroy())}}async function mountCanvas(e,t){const n=e.getAttribute("data-hero-effect")||"",r=readObject(e,"data-effect-resource");if(!r||"string"!=typeof r.module)throw new TypeError(`[stellar hero effect] unregistered effect ${n||"<missing>"}`);const o=runtimePolicy(e),i=e.ownerDocument?.defaultView||window;if(o.respectReducedMotion&&reducedMotion(i))return null;const c=await(import(versionedModule(t,r.module)));if("function"!=typeof c.createRenderer)throw new TypeError(`[stellar hero effect] ${n} must export createRenderer(canvas, options, defaults)`);t.signal?.throwIfAborted();const s=c.createRenderer(e,readObject(e,"data-effect-options"),objectValue(r.defaults));if(!s)return null;if("function"!=typeof s.resize||"function"!=typeof s.render||"function"!=typeof s.destroy)throw s.destroy?.(),new TypeError(`[stellar hero effect] ${n} returned an invalid renderer`);return createLifecycle(e,s,o)}export async function mount(e,t){const n=[];if(await Promise.all(effectCanvases(e).map(async e=>{try{const r=await mountCanvas(e,t);"function"==typeof r&&(n.push(r),t.onCleanup?.(r))}catch(e){t.reportError(e)}})),!t.onCleanup)return()=>{for(let e=n.length-1;e>=0;e--)n[e]()}}
+const EFFECT_SELECTOR = 'canvas[data-hero-effect]';
+const MODULE_QUERY = new URL(import.meta.url).search;
+
+function objectValue(value) {
+  return value != null && typeof value === 'object' && !Array.isArray(value) ? value : {};
+}
+
+function readObject(canvas, attribute) {
+  const raw = canvas.getAttribute(attribute);
+  if (!raw) return {};
+  try {
+    return objectValue(JSON.parse(raw));
+  } catch (error) {
+    void error;
+    return {};
+  }
+}
+
+function runtimePolicy(canvas) {
+  const runtime = readObject(canvas, 'data-effect-runtime');
+  return Object.freeze({
+    pauseWhenHidden: runtime.pauseWhenHidden !== false,
+    respectReducedMotion: runtime.respectReducedMotion !== false
+  });
+}
+
+function effectCanvases(root) {
+  const canvases = [];
+  if (root?.matches?.(EFFECT_SELECTOR)) canvases.push(root);
+  root?.querySelectorAll?.(EFFECT_SELECTOR).forEach(canvas => canvases.push(canvas));
+  return canvases;
+}
+
+function versionedModule(context, module) {
+  const resolved = context.assets.resolve(module);
+  if (!resolved) throw new TypeError('[stellar hero effect] renderer module is required');
+  if (!MODULE_QUERY) return resolved;
+  return `${resolved}${resolved.includes('?') ? '&' : '?'}${MODULE_QUERY.slice(1)}`;
+}
+
+function reducedMotion(windowRef) {
+  return windowRef.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
+}
+
+function createLifecycle(canvas, renderer, runtime) {
+  const background = canvas.parentElement;
+  const interactionTarget = canvas.closest('.wiki-hero') || background;
+  const documentRef = canvas.ownerDocument;
+  const windowRef = documentRef?.defaultView || window;
+  if (!background || !interactionTarget || !documentRef) return null;
+
+  const pointer = { x: 0.5, y: 0.5, active: false };
+  let animationFrame = null;
+  let inViewport = true;
+  let destroyed = false;
+
+  function shouldRender() {
+    return !destroyed && (!runtime.pauseWhenHidden || (inViewport && !documentRef.hidden));
+  }
+
+  function frame(time) {
+    animationFrame = null;
+    if (!shouldRender()) return;
+    renderer.render(time, pointer);
+    animationFrame = windowRef.requestAnimationFrame(frame);
+  }
+
+  function start() {
+    if (shouldRender() && animationFrame === null) {
+      animationFrame = windowRef.requestAnimationFrame(frame);
+    }
+  }
+
+  function stop() {
+    if (animationFrame === null) return;
+    windowRef.cancelAnimationFrame(animationFrame);
+    animationFrame = null;
+  }
+
+  function resize() {
+    renderer.resize(background.getBoundingClientRect(), windowRef.devicePixelRatio || 1);
+  }
+
+  function onMouseMove(event) {
+    const rect = background.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
+    pointer.x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+    pointer.y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+    pointer.active = true;
+  }
+
+  function onMouseLeave() {
+    pointer.active = false;
+  }
+
+  function onVisibilityChange() {
+    if (documentRef.hidden) stop();
+    else start();
+  }
+
+  if (renderer.pointer === true) {
+    interactionTarget.addEventListener('mousemove', onMouseMove);
+    interactionTarget.addEventListener('mouseleave', onMouseLeave);
+  }
+  if (runtime.pauseWhenHidden) documentRef.addEventListener('visibilitychange', onVisibilityChange);
+
+  let resizeObserver = null;
+  if (windowRef.ResizeObserver) {
+    resizeObserver = new windowRef.ResizeObserver(resize);
+    resizeObserver.observe(background);
+  } else {
+    windowRef.addEventListener('resize', resize);
+  }
+
+  let viewportObserver = null;
+  if (runtime.pauseWhenHidden && windowRef.IntersectionObserver) {
+    viewportObserver = new windowRef.IntersectionObserver(entries => {
+      inViewport = entries[0]?.isIntersecting === true;
+      if (inViewport) start();
+      else stop();
+    }, { threshold: 0.01 });
+    viewportObserver.observe(background);
+  }
+
+  resize();
+  start();
+
+  return function cleanup() {
+    if (destroyed) return;
+    destroyed = true;
+    stop();
+    if (renderer.pointer === true) {
+      interactionTarget.removeEventListener('mousemove', onMouseMove);
+      interactionTarget.removeEventListener('mouseleave', onMouseLeave);
+    }
+    if (runtime.pauseWhenHidden) documentRef.removeEventListener('visibilitychange', onVisibilityChange);
+    windowRef.removeEventListener('resize', resize);
+    resizeObserver?.disconnect();
+    viewportObserver?.disconnect();
+    renderer.destroy();
+  };
+}
+
+async function mountCanvas(canvas, context) {
+  const type = canvas.getAttribute('data-hero-effect') || '';
+  const definition = readObject(canvas, 'data-effect-resource');
+  if (!definition || typeof definition.module !== 'string') {
+    throw new TypeError(`[stellar hero effect] unregistered effect ${type || '<missing>'}`);
+  }
+  const runtime = runtimePolicy(canvas);
+  const windowRef = canvas.ownerDocument?.defaultView || window;
+  if (runtime.respectReducedMotion && reducedMotion(windowRef)) return null;
+  const module = await import(versionedModule(context, definition.module));
+  if (typeof module.createRenderer !== 'function') {
+    throw new TypeError(`[stellar hero effect] ${type} must export createRenderer(canvas, options, defaults)`);
+  }
+  context.signal?.throwIfAborted();
+  const renderer = module.createRenderer(canvas, readObject(canvas, 'data-effect-options'), objectValue(definition.defaults));
+  if (!renderer) return null;
+  if (typeof renderer.resize !== 'function' || typeof renderer.render !== 'function' || typeof renderer.destroy !== 'function') {
+    renderer.destroy?.();
+    throw new TypeError(`[stellar hero effect] ${type} returned an invalid renderer`);
+  }
+  return createLifecycle(canvas, renderer, runtime);
+}
+
+export async function mount(root, context) {
+  const cleanups = [];
+  await Promise.all(effectCanvases(root).map(async canvas => {
+    try {
+      const cleanup = await mountCanvas(canvas, context);
+      if (typeof cleanup === 'function') {
+        cleanups.push(cleanup);
+        context.onCleanup?.(cleanup);
+      }
+    } catch (error) {
+      context.reportError(error);
+    }
+  }));
+  if (!context.onCleanup) return () => {
+    for (let index = cleanups.length - 1; index >= 0; index--) cleanups[index]();
+  };
+}

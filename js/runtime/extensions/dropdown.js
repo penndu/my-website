@@ -1,1 +1,474 @@
-const selector="details.dropdown",gap=8,viewportPadding=8;let layer=null,active=null,frame=null,menuId=0,mounts=0;function getLayer(){return layer&&document.documentElement.contains(layer)||(layer=document.createElement("div"),layer.className="dropdown-layer",document.body.appendChild(layer)),layer}function getDirectChild(e,t){for(const o of e.children)if(o.matches(t))return o;return null}function getViewportSize(){return{width:document.documentElement.clientWidth||window.innerWidth,height:document.documentElement.clientHeight||window.innerHeight}}function getDirection(e){const t=e.getAttribute("direction");return"up"===t||"down"===t?t:"auto"}function getAlign(e){const t=e.getAttribute("align");return"left"===t||"right"===t?t:"auto"}function setMenuId(e,t){t.id||(menuId+=1,t.id=`stellar-dropdown-menu-${menuId}`);const o=getDirectChild(e,".dropdown-trigger");o&&o.setAttribute("aria-controls",t.id)}function clearMenuPosition(e){e.style.removeProperty("top"),e.style.removeProperty("left"),e.style.removeProperty("max-height"),e.style.removeProperty("visibility"),e.style.removeProperty("opacity"),e.removeAttribute("data-placement")}function hideMenuBeforeOpen(e){const t=getDirectChild(e,".dropdown-menu");t&&!t.classList.contains("dropdown-menu-portal")&&(t.style.visibility="hidden",t.style.opacity="0")}function isPointInRect(e,t){return e.x>=t.left&&e.x<=t.right&&e.y>=t.top&&e.y<=t.bottom}function isPointInPolygon(e,t){let o=!1;for(let n=0,i=t.length-1;n<t.length;i=n++){const r=t[n],d=t[i];r.y>e.y!=d.y>e.y&&e.x<(d.x-r.x)*(e.y-r.y)/(d.y-r.y)+r.x&&(o=!o)}return o}function updateBridge(e,t,o,n){const i="up"===n?[{x:t.left,y:t.top},{x:o.left,y:o.bottom},{x:o.right,y:o.bottom},{x:t.right,y:t.top}]:[{x:t.left,y:t.bottom},{x:t.right,y:t.bottom},{x:o.right,y:o.top},{x:o.left,y:o.top}],r=`polygon(${i.map(e=>`${Math.round(e.x)}px ${Math.round(e.y)}px`).join(", ")})`;e.bridge.__stellarDropdownPolygon=i,e.bridge.style.clipPath=r,e.bridge.style.webkitClipPath=r}function isPointerInsideState(e,t){const o=t.target;if(o&&(e.dropdown.contains(o)||e.menu.contains(o)||e.bridge.contains(o)))return!0;const n={x:t.clientX,y:t.clientY};return!(!isPointInRect(n,e.trigger.getBoundingClientRect())&&!isPointInRect(n,e.menu.getBoundingClientRect()))||isPointInPolygon(n,e.bridge.__stellarDropdownPolygon||[])}function closeState(e,t){e&&active===e&&(active=null,e.dropdown.open&&(e.dropdown.open=!1),e.bridge.parentNode&&e.bridge.remove(),e.menu.classList.remove("dropdown-menu-portal"),e.menu.classList.remove("dropdown-menu-visible"),e.menu.removeAttribute("data-portal"),clearMenuPosition(e.menu),e.placeholder.parentNode?(e.placeholder.parentNode.insertBefore(e.menu,e.placeholder),e.placeholder.remove()):e.menu.parentNode&&e.menu.remove(),e.dropdown.removeAttribute("data-dropdown-open"),t&&document.documentElement.contains(e.trigger)&&e.trigger.focus())}function chooseVertical(e,t,o,n){const i=getDirection(e);return"up"===i?"up":"down"===i||t<=n?"down":t<=o||o>=n?"up":"down"}function chooseHorizontal(e,t,o,n){const i=getAlign(e),r=Math.max(8,n-8-o);if("left"===i)return Math.min(Math.max(t.left,8),r);if("right"===i)return Math.min(Math.max(t.right-o,8),r);const d=t.left,a=t.right-o,l=d>=8&&d<=r,c=a>=8&&a<=r;if(l&&c){return n-8-t.left>=t.right-8?d:a}if(l)return d;if(c)return a;const s=n-8-t.left>=t.right-8?d:a;return Math.min(Math.max(s,8),r)}function positionActive(){if(!active)return;const e=active;if(!document.documentElement.contains(e.trigger))return void closeState(e,!1);const t=e.trigger.getBoundingClientRect(),o=getViewportSize();if(t.bottom<=0||t.top>=o.height)return void closeState(e,!1);const n=Math.max(0,t.top-8-8),i=Math.max(0,o.height-t.bottom-8-8),r=e.menu;r.style.visibility="hidden",r.style.maxHeight="none",r.style.top="0px",r.style.left="0px";const d=r.getBoundingClientRect(),a=chooseVertical(e.dropdown,d.height,n,i),l="up"===a?n:i;r.style.maxHeight=`${Math.max(1,Math.floor(l))}px`;const c=r.getBoundingClientRect(),s=Math.max(8,o.height-8-c.height),u="up"===a?t.top-8-c.height:t.bottom+8,p=Math.min(Math.max(u,8),s),m=chooseHorizontal(e.dropdown,t,c.width,o.width);r.style.top=`${Math.round(p)}px`,r.style.left=`${Math.round(m)}px`,r.setAttribute("data-placement",a),r.style.removeProperty("visibility"),r.style.removeProperty("opacity"),updateBridge(e,t,r.getBoundingClientRect(),a)}function schedulePosition(){active&&null===frame&&(frame=window.requestAnimationFrame(()=>{frame=null,positionActive()}))}function openDropdown(e){const t=getDirectChild(e,".dropdown-menu"),o=getDirectChild(e,".dropdown-trigger");if(!t||!o)return;if(active&&active.dropdown!==e&&closeState(active,!1),active&&active.dropdown===e)return void schedulePosition();const n=document.createComment("dropdown-menu"),i=document.createElement("div");i.className="dropdown-bridge",window.CSS&&"function"==typeof window.CSS.supports&&(window.CSS.supports("clip-path","polygon(0 0, 1px 1px, 2px 2px)")||window.CSS.supports("-webkit-clip-path","polygon(0 0, 1px 1px, 2px 2px)"))||(i.style.pointerEvents="none"),t.style.visibility="hidden",t.style.opacity="0",t.parentNode.insertBefore(n,t);const r=getLayer();r.appendChild(i),r.appendChild(t),setMenuId(e,t),t.classList.add("dropdown-menu-portal"),t.setAttribute("data-portal","true"),e.setAttribute("data-dropdown-open","true"),active={dropdown:e,menu:t,trigger:o,placeholder:n,bridge:i,hoverMode:e.__stellarDropdownHovering},positionActive(),e.open||(e.open=!0),window.requestAnimationFrame(()=>{active&&active.dropdown===e&&t.classList.add("dropdown-menu-visible")})}function listen(e,t,o,n,i){t.addEventListener(o,n,i),e.cleanups.push(()=>t.removeEventListener(o,n,i))}function bind(e,t){if(e.__stellarDropdownBound)return;e.__stellarDropdownBound=!0,t.bound.add(e),listen(t,e,"mouseenter",()=>{e.__stellarDropdownHovering=!0,active&&active.dropdown===e&&(active.hoverMode=!0),active&&active.dropdown===e||openDropdown(e)});const o=getDirectChild(e,".dropdown-trigger");o&&(listen(t,o,"click",t=>{t.preventDefault(),active&&active.dropdown===e||openDropdown(e)}),listen(t,o,"keydown",t=>{"Enter"!==t.key&&" "!==t.key||(t.preventDefault(),active&&active.dropdown===e?closeState(active,!1):openDropdown(e))}));const n=getDirectChild(e,".dropdown-menu");n&&listen(t,n,"click",t=>{t.target.closest(".dropdown-item")&&active?.dropdown===e&&closeState(active,!1)}),listen(t,e,"mouseleave",()=>{e.__stellarDropdownHovering=!1}),listen(t,e,"toggle",()=>{e.open?active&&active.dropdown===e?schedulePosition():(hideMenuBeforeOpen(e),openDropdown(e)):active&&active.dropdown===e&&closeState(active,!1)}),e.open&&openDropdown(e),e.__stellarDropdownHovering=!1}function bindTree(e,t){1===e.nodeType&&(e.matches(selector)&&bind(e,t),e.querySelectorAll(selector).forEach(e=>bind(e,t)))}export function mount(e){const t=e&&9===e.nodeType?e.body:e;if(!t||1!==t.nodeType||!window.MutationObserver)return()=>{};const o={bound:new Set,cleanups:[],observer:null,cleaned:!1};mounts+=1,bindTree(t,o);const n=new MutationObserver(e=>{e.forEach(e=>{e.addedNodes.forEach(e=>bindTree(e,o)),e.removedNodes.forEach(e=>{active&&1===e.nodeType&&(e===active.dropdown||e.contains(active.dropdown))&&closeState(active,!1)})})});return n.observe(t,{childList:!0,subtree:!0}),o.observer=n,listen(o,document,"click",e=>{active&&(active.dropdown.contains(e.target)||active.menu.contains(e.target)||closeState(active,!1))},!0),listen(o,document,"mousemove",e=>{active&&active.hoverMode&&!isPointerInsideState(active,e)&&closeState(active,!1)},!0),listen(o,document,"keydown",e=>{if(active){if("Escape"===e.key)return e.preventDefault(),void closeState(active,!0);if("Tab"===e.key&&document.activeElement===active.trigger&&!e.shiftKey){const t=active.menu.querySelector('a, button, [tabindex]:not([tabindex="-1"])');t&&(e.preventDefault(),t.focus())}}}),listen(o,window,"resize",schedulePosition),listen(o,window,"scroll",schedulePosition,!0),window.visualViewport&&(listen(o,window.visualViewport,"resize",schedulePosition),listen(o,window.visualViewport,"scroll",schedulePosition)),function(){if(!o.cleaned){o.cleaned=!0,o.observer.disconnect(),active&&o.bound.has(active.dropdown)&&closeState(active,!1),null!==frame&&(window.cancelAnimationFrame(frame),frame=null);for(let e=o.cleanups.length-1;e>=0;e-=1)o.cleanups[e]();o.bound.forEach(e=>{delete e.__stellarDropdownBound,delete e.__stellarDropdownHovering}),o.bound.clear(),mounts=Math.max(0,mounts-1),0===mounts&&layer&&(layer.remove(),layer=null)}}}
+// 通用 dropdown 浮层：把打开的菜单挂到 body 下，避免被任意祖先容器裁剪。
+  const selector = 'details.dropdown'
+  const gap = 8
+  const viewportPadding = 8
+  let layer = null
+  let active = null
+  let frame = null
+  let menuId = 0
+  let mounts = 0
+
+  function getLayer() {
+    if (layer && document.documentElement.contains(layer)) {
+      return layer
+    }
+    layer = document.createElement('div')
+    layer.className = 'dropdown-layer'
+    document.body.appendChild(layer)
+    return layer
+  }
+
+  function getDirectChild(parent, childSelector) {
+    for (const child of parent.children) {
+      if (child.matches(childSelector)) {
+        return child
+      }
+    }
+    return null
+  }
+
+  function getViewportSize() {
+    return {
+      width: document.documentElement.clientWidth || window.innerWidth,
+      height: document.documentElement.clientHeight || window.innerHeight
+    }
+  }
+
+  function getDirection(dropdown) {
+    const direction = dropdown.getAttribute('direction')
+    return direction === 'up' || direction === 'down' ? direction : 'auto'
+  }
+
+  function getAlign(dropdown) {
+    const align = dropdown.getAttribute('align')
+    return align === 'left' || align === 'right' ? align : 'auto'
+  }
+
+  function setMenuId(dropdown, menu) {
+    if (!menu.id) {
+      menuId += 1
+      menu.id = `stellar-dropdown-menu-${menuId}`
+    }
+    const trigger = getDirectChild(dropdown, '.dropdown-trigger')
+    if (trigger) {
+      trigger.setAttribute('aria-controls', menu.id)
+    }
+  }
+
+  function clearMenuPosition(menu) {
+    menu.style.removeProperty('top')
+    menu.style.removeProperty('left')
+    menu.style.removeProperty('max-height')
+    menu.style.removeProperty('visibility')
+    menu.style.removeProperty('opacity')
+    menu.removeAttribute('data-placement')
+  }
+
+  function hideMenuBeforeOpen(dropdown) {
+    const menu = getDirectChild(dropdown, '.dropdown-menu')
+    if (!menu || menu.classList.contains('dropdown-menu-portal')) {
+      return
+    }
+    menu.style.visibility = 'hidden'
+    menu.style.opacity = '0'
+  }
+
+  function isPointInRect(point, rect) {
+    return point.x >= rect.left && point.x <= rect.right && point.y >= rect.top && point.y <= rect.bottom
+  }
+
+  function isPointInPolygon(point, polygon) {
+    let inside = false
+    for (let index = 0, previous = polygon.length - 1; index < polygon.length; previous = index++) {
+      const currentPoint = polygon[index]
+      const previousPoint = polygon[previous]
+      const intersects = currentPoint.y > point.y !== previousPoint.y > point.y &&
+        point.x < (previousPoint.x - currentPoint.x) * (point.y - currentPoint.y) /
+        (previousPoint.y - currentPoint.y) + currentPoint.x
+      if (intersects) {
+        inside = !inside
+      }
+    }
+    return inside
+  }
+
+  function updateBridge(state, triggerRect, menuRect, placement) {
+    const polygon = placement === 'up'
+      ? [
+          { x: triggerRect.left, y: triggerRect.top },
+          { x: menuRect.left, y: menuRect.bottom },
+          { x: menuRect.right, y: menuRect.bottom },
+          { x: triggerRect.right, y: triggerRect.top }
+        ]
+      : [
+          { x: triggerRect.left, y: triggerRect.bottom },
+          { x: triggerRect.right, y: triggerRect.bottom },
+          { x: menuRect.right, y: menuRect.top },
+          { x: menuRect.left, y: menuRect.top }
+        ]
+    const clipPath = `polygon(${polygon.map(point => `${Math.round(point.x)}px ${Math.round(point.y)}px`).join(', ')})`
+    state.bridge.__stellarDropdownPolygon = polygon
+    state.bridge.style.clipPath = clipPath
+    state.bridge.style.webkitClipPath = clipPath
+  }
+
+  function isPointerInsideState(state, event) {
+    const target = event.target
+    if (target && (state.dropdown.contains(target) || state.menu.contains(target) || state.bridge.contains(target))) {
+      return true
+    }
+    const point = { x: event.clientX, y: event.clientY }
+    if (isPointInRect(point, state.trigger.getBoundingClientRect()) || isPointInRect(point, state.menu.getBoundingClientRect())) {
+      return true
+    }
+    return isPointInPolygon(point, state.bridge.__stellarDropdownPolygon || [])
+  }
+
+  function closeState(state, focusTrigger) {
+    if (!state || active !== state) {
+      return
+    }
+    active = null
+    if (state.dropdown.open) {
+      state.dropdown.open = false
+    }
+    if (state.bridge.parentNode) {
+      state.bridge.remove()
+    }
+    state.menu.classList.remove('dropdown-menu-portal')
+    state.menu.classList.remove('dropdown-menu-visible')
+    state.menu.removeAttribute('data-portal')
+    clearMenuPosition(state.menu)
+    if (state.placeholder.parentNode) {
+      state.placeholder.parentNode.insertBefore(state.menu, state.placeholder)
+      state.placeholder.remove()
+    } else if (state.menu.parentNode) {
+      state.menu.remove()
+    }
+    state.dropdown.removeAttribute('data-dropdown-open')
+    if (focusTrigger && document.documentElement.contains(state.trigger)) {
+      state.trigger.focus()
+    }
+  }
+
+  function chooseVertical(dropdown, menuHeight, topSpace, bottomSpace) {
+    const direction = getDirection(dropdown)
+    if (direction === 'up') {
+      return 'up'
+    }
+    if (direction === 'down') {
+      return 'down'
+    }
+    if (menuHeight <= bottomSpace) {
+      return 'down'
+    }
+    if (menuHeight <= topSpace) {
+      return 'up'
+    }
+    return topSpace >= bottomSpace ? 'up' : 'down'
+  }
+
+  function chooseHorizontal(dropdown, rect, menuWidth, viewportWidth) {
+    const align = getAlign(dropdown)
+    const minLeft = viewportPadding
+    const maxLeft = Math.max(minLeft, viewportWidth - viewportPadding - menuWidth)
+    if (align === 'left') {
+      return Math.min(Math.max(rect.left, minLeft), maxLeft)
+    }
+    if (align === 'right') {
+      return Math.min(Math.max(rect.right - menuWidth, minLeft), maxLeft)
+    }
+    const leftAlignedLeft = rect.left
+    const rightAlignedLeft = rect.right - menuWidth
+    const leftFits = leftAlignedLeft >= minLeft && leftAlignedLeft <= maxLeft
+    const rightFits = rightAlignedLeft >= minLeft && rightAlignedLeft <= maxLeft
+    if (leftFits && rightFits) {
+      const rightSpace = viewportWidth - viewportPadding - rect.left
+      const leftSpace = rect.right - viewportPadding
+      return rightSpace >= leftSpace ? leftAlignedLeft : rightAlignedLeft
+    }
+    if (leftFits) {
+      return leftAlignedLeft
+    }
+    if (rightFits) {
+      return rightAlignedLeft
+    }
+    const preferLeft = viewportWidth - viewportPadding - rect.left >= rect.right - viewportPadding
+    const preferredLeft = preferLeft ? leftAlignedLeft : rightAlignedLeft
+    return Math.min(Math.max(preferredLeft, minLeft), maxLeft)
+  }
+
+  function positionActive() {
+    if (!active) {
+      return
+    }
+    const state = active
+    if (!document.documentElement.contains(state.trigger)) {
+      closeState(state, false)
+      return
+    }
+    const rect = state.trigger.getBoundingClientRect()
+    const viewport = getViewportSize()
+    if (rect.bottom <= 0 || rect.top >= viewport.height) {
+      closeState(state, false)
+      return
+    }
+
+    const topSpace = Math.max(0, rect.top - gap - viewportPadding)
+    const bottomSpace = Math.max(0, viewport.height - rect.bottom - gap - viewportPadding)
+    const menu = state.menu
+    menu.style.visibility = 'hidden'
+    menu.style.maxHeight = 'none'
+    menu.style.top = '0px'
+    menu.style.left = '0px'
+    const naturalRect = menu.getBoundingClientRect()
+    const vertical = chooseVertical(state.dropdown, naturalRect.height, topSpace, bottomSpace)
+    const availableHeight = vertical === 'up' ? topSpace : bottomSpace
+    menu.style.maxHeight = `${Math.max(1, Math.floor(availableHeight))}px`
+
+    const menuRect = menu.getBoundingClientRect()
+    const topLimit = viewportPadding
+    const bottomLimit = Math.max(topLimit, viewport.height - viewportPadding - menuRect.height)
+    const preferredTop = vertical === 'up'
+      ? rect.top - gap - menuRect.height
+      : rect.bottom + gap
+    const top = Math.min(Math.max(preferredTop, topLimit), bottomLimit)
+    const left = chooseHorizontal(state.dropdown, rect, menuRect.width, viewport.width)
+    menu.style.top = `${Math.round(top)}px`
+    menu.style.left = `${Math.round(left)}px`
+    menu.setAttribute('data-placement', vertical)
+    menu.style.removeProperty('visibility')
+    menu.style.removeProperty('opacity')
+    updateBridge(state, rect, menu.getBoundingClientRect(), vertical)
+  }
+
+  function schedulePosition() {
+    if (!active || frame !== null) {
+      return
+    }
+    frame = window.requestAnimationFrame(() => {
+      frame = null
+      positionActive()
+    })
+  }
+
+  function openDropdown(dropdown) {
+    const menu = getDirectChild(dropdown, '.dropdown-menu')
+    const trigger = getDirectChild(dropdown, '.dropdown-trigger')
+    if (!menu || !trigger) {
+      return
+    }
+    if (active && active.dropdown !== dropdown) {
+      closeState(active, false)
+    }
+    if (active && active.dropdown === dropdown) {
+      schedulePosition()
+      return
+    }
+
+    const placeholder = document.createComment('dropdown-menu')
+    const bridge = document.createElement('div')
+    bridge.className = 'dropdown-bridge'
+    if (!window.CSS || typeof window.CSS.supports !== 'function' ||
+      (!window.CSS.supports('clip-path', 'polygon(0 0, 1px 1px, 2px 2px)') &&
+      !window.CSS.supports('-webkit-clip-path', 'polygon(0 0, 1px 1px, 2px 2px)'))) {
+      bridge.style.pointerEvents = 'none'
+    }
+    menu.style.visibility = 'hidden'
+    menu.style.opacity = '0'
+    menu.parentNode.insertBefore(placeholder, menu)
+    const dropdownLayer = getLayer()
+    dropdownLayer.appendChild(bridge)
+    dropdownLayer.appendChild(menu)
+    setMenuId(dropdown, menu)
+    menu.classList.add('dropdown-menu-portal')
+    menu.setAttribute('data-portal', 'true')
+    dropdown.setAttribute('data-dropdown-open', 'true')
+    active = {
+      dropdown,
+      menu,
+      trigger,
+      placeholder,
+      bridge,
+      hoverMode: dropdown.__stellarDropdownHovering
+    }
+    positionActive()
+    if (!dropdown.open) {
+      dropdown.open = true
+    }
+    window.requestAnimationFrame(() => {
+      if (active && active.dropdown === dropdown) {
+        menu.classList.add('dropdown-menu-visible')
+      }
+    })
+  }
+
+  function listen(state, target, type, handler, options) {
+    target.addEventListener(type, handler, options)
+    state.cleanups.push(() => target.removeEventListener(type, handler, options))
+  }
+
+  function bind(dropdown, state) {
+    if (dropdown.__stellarDropdownBound) {
+      return
+    }
+    dropdown.__stellarDropdownBound = true
+    state.bound.add(dropdown)
+    listen(state, dropdown, 'mouseenter', () => {
+      dropdown.__stellarDropdownHovering = true
+      if (active && active.dropdown === dropdown) {
+        active.hoverMode = true
+      }
+      if (!active || active.dropdown !== dropdown) {
+        openDropdown(dropdown)
+      }
+    })
+    const trigger = getDirectChild(dropdown, '.dropdown-trigger')
+    if (trigger) {
+      listen(state, trigger, 'click', event => {
+        event.preventDefault()
+        if (!active || active.dropdown !== dropdown) {
+          openDropdown(dropdown)
+        }
+      })
+      listen(state, trigger, 'keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          if (active && active.dropdown === dropdown) {
+            closeState(active, false)
+          } else {
+            openDropdown(dropdown)
+          }
+        }
+      })
+    }
+    const menu = getDirectChild(dropdown, '.dropdown-menu')
+    if (menu) {
+      listen(state, menu, 'click', event => {
+        if (event.target.closest('.dropdown-item') && active?.dropdown === dropdown) {
+          closeState(active, false)
+        }
+      })
+    }
+    listen(state, dropdown, 'mouseleave', () => {
+      dropdown.__stellarDropdownHovering = false
+    })
+    listen(state, dropdown, 'toggle', () => {
+      if (dropdown.open) {
+        if (!active || active.dropdown !== dropdown) {
+          hideMenuBeforeOpen(dropdown)
+          openDropdown(dropdown)
+        } else {
+          schedulePosition()
+        }
+      } else if (active && active.dropdown === dropdown) {
+        closeState(active, false)
+      }
+    })
+    if (dropdown.open) {
+      openDropdown(dropdown)
+    }
+    dropdown.__stellarDropdownHovering = false
+  }
+
+  function bindTree(root, state) {
+    if (root.nodeType !== 1) {
+      return
+    }
+    if (root.matches(selector)) {
+      bind(root, state)
+    }
+    root.querySelectorAll(selector).forEach(dropdown => bind(dropdown, state))
+  }
+
+  export function mount(root) {
+    const scope = root && root.nodeType === 9 ? root.body : root
+    if (!scope || scope.nodeType !== 1 || !window.MutationObserver) {
+      return () => {}
+    }
+    const state = { bound: new Set(), cleanups: [], observer: null, cleaned: false }
+    mounts += 1
+    bindTree(scope, state)
+    const observer = new MutationObserver(records => {
+      records.forEach(record => {
+        record.addedNodes.forEach(node => bindTree(node, state))
+        record.removedNodes.forEach(node => {
+          if (active && node.nodeType === 1 && (node === active.dropdown || node.contains(active.dropdown))) {
+            closeState(active, false)
+          }
+        })
+      })
+    })
+    observer.observe(scope, { childList: true, subtree: true })
+    state.observer = observer
+
+    listen(state, document, 'click', event => {
+      if (!active) {
+        return
+      }
+      if (active.dropdown.contains(event.target) || active.menu.contains(event.target)) {
+        return
+      }
+      closeState(active, false)
+    }, true)
+
+    listen(state, document, 'mousemove', event => {
+      if (!active || !active.hoverMode || isPointerInsideState(active, event)) {
+        return
+      }
+      closeState(active, false)
+    }, true)
+
+    listen(state, document, 'keydown', event => {
+      if (!active) {
+        return
+      }
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        closeState(active, true)
+        return
+      }
+      if (event.key === 'Tab' && document.activeElement === active.trigger && !event.shiftKey) {
+        const firstItem = active.menu.querySelector('a, button, [tabindex]:not([tabindex="-1"])')
+        if (firstItem) {
+          event.preventDefault()
+          firstItem.focus()
+        }
+      }
+    })
+
+    listen(state, window, 'resize', schedulePosition)
+    listen(state, window, 'scroll', schedulePosition, true)
+    if (window.visualViewport) {
+      listen(state, window.visualViewport, 'resize', schedulePosition)
+      listen(state, window.visualViewport, 'scroll', schedulePosition)
+    }
+
+    return function cleanup() {
+      if (state.cleaned) {
+        return
+      }
+      state.cleaned = true
+      state.observer.disconnect()
+      if (active && state.bound.has(active.dropdown)) {
+        closeState(active, false)
+      }
+      if (frame !== null) {
+        window.cancelAnimationFrame(frame)
+        frame = null
+      }
+      for (let index = state.cleanups.length - 1; index >= 0; index -= 1) {
+        state.cleanups[index]()
+      }
+      state.bound.forEach(dropdown => {
+        delete dropdown.__stellarDropdownBound
+        delete dropdown.__stellarDropdownHovering
+      })
+      state.bound.clear()
+      mounts = Math.max(0, mounts - 1)
+      if (mounts === 0 && layer) {
+        layer.remove()
+        layer = null
+      }
+    }
+  }

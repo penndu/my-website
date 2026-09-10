@@ -1,1 +1,211 @@
-export const COLOR_CACHE_PREFIX="Stellar.image-color.hsla.v1.";const TTL=2592e6,MAX_ENTRIES=256,memory=new Map,pendingSamples=new Map,failedSamples=new Set;let generation=0;function storageOrNull(){try{return globalThis.localStorage||null}catch{return null}}export function isImageColorKey(e){return"string"==typeof e&&e.startsWith(COLOR_CACHE_PREFIX)}function keys(e){const t=[];for(let r=0;r<e.length;r++){const n=e.key(r);isImageColorKey(n)&&t.push(n)}return t}export function clearImageColorCache(e=storageOrNull()){memory.clear(),failedSamples.clear(),generation++;let t=0,r=0;try{for(const n of keys(e))try{e.removeItem(n),t++}catch{r++}}catch{r++}return{ok:0===r,partial:t>0&&r>0,removed:t,failed:r}}function valid(e){return e&&Number.isFinite(e.ts)&&e.ts<=Date.now()&&Date.now()-e.ts<TTL&&window.stellar.color.validHsla(e.raw)}function remember(e,t){if(memory.set(e,t),memory.size>256){const e=[...memory].sort((e,t)=>e[1].ts-t[1].ts)[0];memory.delete(e[0])}}function read(e){const t=memory.get(e);if(valid(t))return t.raw;memory.delete(e);try{const t=JSON.parse(storageOrNull()?.getItem(e)||"null");if(valid(t))return remember(e,t),t.raw}catch{}return null}function write(e,t){const r={ts:Date.now(),raw:t};remember(e,r);try{const t=storageOrNull(),n=[];for(const r of keys(t)){let o;try{o=JSON.parse(t.getItem(r))}catch{o=null}valid(o)&&r!==e?n.push({key:r,ts:o.ts}):t.removeItem(r)}for(n.sort((e,t)=>e.ts-t.ts);n.length>=256;)t.removeItem(n.shift().key);t.setItem(e,JSON.stringify(r))}catch{}}function normalize(e,t){try{return e?new URL(e,t.ownerDocument.baseURI).href:""}catch{return""}}function source(e){const t=e.getAttribute("src")||"",r=e.getAttribute("srcset")||e.closest?.("picture")?e.currentSrc||t:t||e.currentSrc||"",n=e.getAttribute("data-src");return normalize(!n||r&&!r.startsWith("data:")?r:n,e)}function sample(e,t){try{const r=Math.min(1,t/Math.max(e.naturalWidth,e.naturalHeight)),n=e.ownerDocument.createElement("canvas");n.width=Math.max(1,Math.round(e.naturalWidth*r)),n.height=Math.max(1,Math.round(e.naturalHeight*r));const o=n.getContext("2d");o.drawImage(e,0,0,n.width,n.height);const a=o.getImageData(0,0,n.width,n.height).data,l=[0,0,0,0];for(let e=0;e<a.length;e++)l[e%4]+=a[e];return window.stellar.color.toHsla(Object.fromEntries(["r","g","b","a"].map((e,t)=>[e,l[t]/(a.length/4)])))}catch{return null}}function sampleWithCors(e,t,r,n){if(pendingSamples.has(n))return pendingSamples.get(n);if(failedSamples.has(n))return Promise.resolve(null);const o=generation,a=new Promise(a=>{const l=e.ownerDocument.createElement("img");let s;function i(e){clearTimeout(s),l.onload=null,l.onerror=null,generation===o&&(e?write(n,e):(failedSamples.add(n),failedSamples.size>256&&failedSamples.delete(failedSamples.values().next().value))),a(e)}l.crossOrigin="anonymous",l.onload=()=>i(sample(l,r)),l.onerror=()=>i(null),s=setTimeout(()=>i(null),1e4),l.src=t});return pendingSamples.set(n,a),a.finally(()=>pendingSamples.delete(n)),a}function waitForSample(e,t){return t?t.aborted?Promise.resolve(null):new Promise(r=>{const n=()=>r(null);t.addEventListener("abort",n,{once:!0}),e.then(e=>{t.removeEventListener("abort",n),r(t.aborted?null:e)})}):e}globalThis.addEventListener?.("storage",e=>{(null===e.key||isImageColorKey(e.key))&&(memory.clear(),generation++)});export function readImageColor(e,t={}){if(!e||"IMG"!==e.tagName||t.signal?.aborted)return Promise.resolve(null);const r=source(e);if(!r)return Promise.resolve(null);const n=Number.isInteger(t.size)&&t.size>0?t.size:64;try{const o=JSON.parse(e.getAttribute("data-stellar-image-color")||"null");if(normalize(e.getAttribute("data-stellar-image-source"),e)===r&&o?.size===n&&window.stellar.color.validHsla(o.hsla)){const n=o.hsla;return Promise.resolve().then(()=>source(e)!==r||t.signal?.aborted?null:n)}}catch{}const o=COLOR_CACHE_PREFIX+JSON.stringify([r,n]),a=read(o);if(a)return Promise.resolve().then(()=>source(e)!==r||t.signal?.aborted?null:a);const l=generation;return new Promise(a=>{function s(r){e.removeEventListener("load",u),e.removeEventListener("error",i),t.signal?.removeEventListener("abort",i),a(r)}function i(){s(null)}function u(){if(t.signal?.aborted||source(e)!==r)return s(null);if(normalize(e.currentSrc||e.getAttribute("src"),e)!==r)return;if(!e.naturalWidth||!e.naturalHeight)return s(null);const a=read(o),i=a||sample(e,n);if(!a&&i&&generation===l&&write(o,i),i||e.crossOrigin)return s(i);s(waitForSample(sampleWithCors(e,r,n,o),t.signal))}e.addEventListener("load",u),e.addEventListener("error",i),t.signal?.addEventListener("abort",i,{once:!0}),e.complete&&normalize(e.currentSrc||e.getAttribute("src"),e)===r&&u()}).then(n=>source(e)!==r||t.signal?.aborted?null:n)}
+// Prefer cached colors and display pixels; use one shared CORS sample when display pixels are unreadable.
+export const COLOR_CACHE_PREFIX = 'Stellar.image-color.hsla.v1.';
+const TTL = 30 * 24 * 60 * 60 * 1000;
+const MAX_ENTRIES = 256;
+const memory = new Map();
+const pendingSamples = new Map();
+const failedSamples = new Set();
+let generation = 0;
+
+function storageOrNull() {
+  try { return globalThis.localStorage || null; } catch { return null; }
+}
+
+export function isImageColorKey(key) {
+  return typeof key === 'string' && key.startsWith(COLOR_CACHE_PREFIX);
+}
+
+function keys(storage) {
+  const result = [];
+  for (let i = 0; i < storage.length; i++) {
+    const key = storage.key(i);
+    if (isImageColorKey(key)) result.push(key);
+  }
+  return result;
+}
+
+export function clearImageColorCache(storage = storageOrNull()) {
+  memory.clear();
+  failedSamples.clear();
+  generation++;
+  let removed = 0;
+  let failed = 0;
+  try {
+    for (const key of keys(storage)) {
+      try { storage.removeItem(key); removed++; } catch { failed++; }
+    }
+  } catch { failed++; }
+  return { ok: failed === 0, partial: removed > 0 && failed > 0, removed, failed };
+}
+
+globalThis.addEventListener?.('storage', event => {
+  if (event.key === null || isImageColorKey(event.key)) {
+    memory.clear();
+    generation++;
+  }
+});
+
+function valid(entry) {
+  return entry && Number.isFinite(entry.ts) && entry.ts <= Date.now() && Date.now() - entry.ts < TTL
+    && window.stellar.color.validHsla(entry.raw);
+}
+
+function remember(key, entry) {
+  memory.set(key, entry);
+  if (memory.size > MAX_ENTRIES) {
+    const oldest = [...memory].sort((a, b) => a[1].ts - b[1].ts)[0];
+    memory.delete(oldest[0]);
+  }
+}
+
+function read(key) {
+  const cached = memory.get(key);
+  if (valid(cached)) return cached.raw;
+  memory.delete(key);
+  try {
+    const entry = JSON.parse(storageOrNull()?.getItem(key) || 'null');
+    if (valid(entry)) {
+      remember(key, entry);
+      return entry.raw;
+    }
+  } catch { /* A corrupt or unavailable cache is a miss. */ }
+  return null;
+}
+
+function write(key, raw) {
+  const entry = { ts: Date.now(), raw };
+  remember(key, entry);
+  try {
+    const storage = storageOrNull();
+    const retained = [];
+    for (const candidate of keys(storage)) {
+      let old;
+      try { old = JSON.parse(storage.getItem(candidate)); } catch { old = null; }
+      if (!valid(old) || candidate === key) storage.removeItem(candidate);
+      else retained.push({ key: candidate, ts: old.ts });
+    }
+    retained.sort((a, b) => a.ts - b.ts);
+    while (retained.length >= MAX_ENTRIES) storage.removeItem(retained.shift().key);
+    storage.setItem(key, JSON.stringify(entry));
+  } catch { /* Keep the in-memory result when persistence is unavailable. */ }
+}
+
+function normalize(value, image) {
+  try { return value ? new URL(value, image.ownerDocument.baseURI).href : ''; } catch { return ''; }
+}
+
+function source(image) {
+  // Lazy placeholders must not be sampled or used as persistent identities.
+  const declared = image.getAttribute('src') || '';
+  const responsive = image.getAttribute('srcset') || image.closest?.('picture');
+  const current = responsive ? image.currentSrc || declared : declared || image.currentSrc || '';
+  const deferred = image.getAttribute('data-src');
+  return normalize(deferred && (!current || current.startsWith('data:')) ? deferred : current, image);
+}
+
+function sample(image, size) {
+  try {
+    const scale = Math.min(1, size / Math.max(image.naturalWidth, image.naturalHeight));
+    const canvas = image.ownerDocument.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+    canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    const sums = [0, 0, 0, 0];
+    for (let i = 0; i < data.length; i++) sums[i % 4] += data[i];
+    return window.stellar.color.toHsla(Object.fromEntries(['r', 'g', 'b', 'a'].map((key, i) => [key, sums[i] / (data.length / 4)])));
+  } catch { return null; }
+}
+
+// Display images usually use no-cors, even when their CDN permits anonymous CORS.
+// Keep this fallback independent of individual consumers: aborting one card must
+// not cancel a sample another card is waiting for. Failed samples are page-local.
+function sampleWithCors(image, url, size, key) {
+  if (pendingSamples.has(key)) return pendingSamples.get(key);
+  if (failedSamples.has(key)) return Promise.resolve(null);
+  const started = generation;
+  const promise = new Promise(resolve => {
+    const probe = image.ownerDocument.createElement('img');
+    let timer;
+    function finish(raw) {
+      clearTimeout(timer);
+      probe.onload = null;
+      probe.onerror = null;
+      if (generation === started) {
+        if (raw) write(key, raw);
+        else {
+          failedSamples.add(key);
+          if (failedSamples.size > MAX_ENTRIES) failedSamples.delete(failedSamples.values().next().value);
+        }
+      }
+      resolve(raw);
+    }
+    probe.crossOrigin = 'anonymous';
+    probe.onload = () => finish(sample(probe, size));
+    probe.onerror = () => finish(null);
+    timer = setTimeout(() => finish(null), 10000);
+    probe.src = url;
+  });
+  pendingSamples.set(key, promise);
+  promise.finally(() => pendingSamples.delete(key));
+  return promise;
+}
+
+function waitForSample(promise, signal) {
+  if (!signal) return promise;
+  if (signal.aborted) return Promise.resolve(null);
+  return new Promise(resolve => {
+    const abort = () => resolve(null);
+    signal.addEventListener('abort', abort, { once: true });
+    promise.then(raw => {
+      signal.removeEventListener('abort', abort);
+      resolve(signal.aborted ? null : raw);
+    });
+  });
+}
+
+export function readImageColor(image, options = {}) {
+  if (!image || image.tagName !== 'IMG' || options.signal?.aborted) return Promise.resolve(null);
+  const url = source(image);
+  if (!url) return Promise.resolve(null);
+  const size = Number.isInteger(options.size) && options.size > 0 ? options.size : 64;
+  // Build-owned metadata wins over an older browser cache, including a refreshed
+  // image at the same URL. The source guard prevents reuse after a dynamic swap.
+  try {
+    const embedded = JSON.parse(image.getAttribute('data-stellar-image-color') || 'null');
+    if (normalize(image.getAttribute('data-stellar-image-source'), image) === url
+      && embedded?.size === size && window.stellar.color.validHsla(embedded.hsla)) {
+      const raw = embedded.hsla;
+      return Promise.resolve().then(() => source(image) === url && !options.signal?.aborted ? raw : null);
+    }
+  } catch { /* Missing or invalid metadata falls back to the runtime cache. */ }
+  const key = COLOR_CACHE_PREFIX + JSON.stringify([url, size]);
+  const cached = read(key);
+  if (cached) return Promise.resolve().then(() => source(image) === url && !options.signal?.aborted ? cached : null);
+  const started = generation;
+  return new Promise(resolve => {
+    function finish(raw) {
+      image.removeEventListener('load', onLoad);
+      image.removeEventListener('error', onError);
+      options.signal?.removeEventListener('abort', onError);
+      resolve(raw);
+    }
+    function onError() { finish(null); }
+    function onLoad() {
+      if (options.signal?.aborted || source(image) !== url) return finish(null);
+      const displayed = normalize(image.currentSrc || image.getAttribute('src'), image);
+      if (displayed !== url) return; // The lazy placeholder finished loading.
+      if (!image.naturalWidth || !image.naturalHeight) return finish(null);
+      const existing = read(key);
+      const raw = existing || sample(image, size);
+      if (!existing && raw && generation === started) write(key, raw);
+      if (raw || image.crossOrigin) return finish(raw);
+      finish(waitForSample(sampleWithCors(image, url, size, key), options.signal));
+    }
+    image.addEventListener('load', onLoad);
+    image.addEventListener('error', onError);
+    options.signal?.addEventListener('abort', onError, { once: true });
+    if (image.complete && normalize(image.currentSrc || image.getAttribute('src'), image) === url) onLoad();
+  }).then(raw => source(image) === url && !options.signal?.aborted ? raw : null);
+}
