@@ -10,22 +10,28 @@
   <rights>All rights reserved 2026, Teacher Du</rights>
   <subtitle>运维技术分享博客</subtitle>
   <title>杜老师说</title>
-  <updated>2026-09-17T03:23:50.149Z</updated>
+  <updated>2026-09-17T03:27:47.268Z</updated>
   <entry>
     <author>
       <name>Teacher Du</name>
     </author>
+    <category term="资源分享" scheme="https://dusays.com/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    <category term="开源" scheme="https://dusays.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="技术" scheme="https://dusays.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="商业" scheme="https://dusays.com/tags/%E5%95%86%E4%B8%9A/"/>
     <content>
-      <![CDATA[<blockquote></blockquote><span id="more"></span><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]>
+      <![CDATA[<blockquote><p>这两周杜老师做技术选型时接连被两件事扎到：MinIO 在 5 月悄悄砍掉了社区版的 Web Console，11 万行代码删除；Mattermost v11 给免费版加了”消息历史最多 1 万条”的限制——旧消息还躺在数据库里，但 UI 看不见了。摆在一起看，<strong>“屠龙的少年长出了龙鳞”</strong> 这事好像不再是个比喻。写篇文章，把这两年”开源变收费”的剧本翻出来聊聊。</p></blockquote><span id="more"></span><h2 id="两件小事"><a href="#两件小事" class="headerlink" title="两件小事"></a>两件小事</h2><p><strong>第一件：MinIO 砍 WebUI。</strong> 2025 年 5 月，MinIO 悄悄合并了一个 PR，<strong>把社区版的 Web Console 砍掉了</strong>。11 万行代码删除，只剩一个能看能下载的对象浏览器。你想改个 IAM 策略、看一眼监控指标、配个桶复制？对不起，请升级到 MinIO AIStor Enterprise Edition，<strong>起价 9.6 万美元一年</strong>。</p><p><strong>第二件：Mattermost 限 1 万消息。</strong> 2025 年 12 月发布的 v11 给免费版加了一个神奇的限制——<strong>消息历史最多 1 万条</strong>。超出的旧消息依然躺在你自己的 PostgreSQL 数据库里，但 UI 看不见、搜不到。一所学校 2000 多用户、47 万条历史消息，瞬间被”折叠”。Mattermost 的官方说法是”防止过度部署”，社区里更准确的描述是 <strong>“bait-and-switch”</strong>（先诱后宰）。</p><p>两件事摆一起看，忽然就明白了一件事：<strong>“开源的尽头是收费”不是预言，是 2025 年起所有基础设施软件正在发生的现实</strong>。</p><h2 id="MinIO-十年堕落史"><a href="#MinIO-十年堕落史" class="headerlink" title="MinIO 十年堕落史"></a>MinIO 十年堕落史</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/888-1.png" data-fancybox="true"><div class="lazy-icon"></div></div></div><p><em>MinIO 时间线：从 Apache 2.0 起步，到 2026-04 仓库归档</em></p><p>MinIO 的故事值得展开讲讲，因为它把”开源变收费”的剧本演得最完整：</p><div class="md-table-scroll"><table><thead><tr><th>时间</th><th>事件</th><th>性质</th></tr></thead><tbody><tr><td><strong>2014</strong></td><td>公司成立，Apache 2.0 许可证</td><td>屠龙少年，理想主义</td></tr><tr><td><strong>2019-2021</strong></td><td>许可证从 Apache 2.0 → AGPLv3</td><td>“防止云厂商白嫖”——但已经埋下商业化伏笔</td></tr><tr><td><strong>2022-2023</strong></td><td>起诉 Nutanix、Weka</td><td>法律武器化</td></tr><tr><td><strong>2025-05</strong></td><td>社区版砍掉 Web Console（11 万行删除）</td><td>表面看”防白嫖”，实际是逼付费</td></tr><tr><td><strong>2025-09</strong></td><td>停止社区版 Docker 镜像分发</td><td>让”自建”也得花时间成本</td></tr><tr><td><strong>2025-12</strong></td><td>官方宣布 GitHub 仓库进入”维护模式”</td><td>名存实亡</td></tr><tr><td><strong>2026-04</strong></td><td>仓库归档</td><td>正式死亡</td></tr></tbody></table></div><p>更扎心的是它”留了条活路”的姿态——CEO Anand Babu Periasamy 在采访里说：</p><blockquote><p>“开发者真正需要的是 API，不是 Web UI。”</p></blockquote><p>听听这话：你都要花 9.6 万美元买的”管理界面”，他告诉你”你不需要”。但任何用过 MinIO 的人都懂——CLI 配 IAM、Replication、监控，是真的反人类。</p><p>社区的反应也很真实：</p><blockquote><p><em>“Open source users aren’t confused. They’re insulted. Know the difference between community and capture?”</em>（开源用户不是困惑，是被侮辱了。”社区”和”俘获”的区别，懂吗？）</p></blockquote><p>MinIO 还没有改协议——它依然 AGPLv3，依然”开源”。但 GitHub 仓库归档那一刻起，”License 是开源”和”项目是开源”，<strong>已经是两回事</strong>了。</p><h2 id="Mattermost-的”温柔一刀”"><a href="#Mattermost-的”温柔一刀”" class="headerlink" title="Mattermost 的”温柔一刀”"></a>Mattermost 的”温柔一刀”</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/888-2.png" data-fancybox="true"><div class="lazy-icon"></div></div></div><p><em>配图：聊天 UI 顶部红色告警进度条，旧消息逐渐灰化坠入虚空——“消息历史已达到上限”</em></p><p>Mattermost 是”软切”，MinIO 是”硬切”。但这两种切法背后，是同一套剧本。</p><p>Mattermost v11 的”免费版 Entry”（前身 E0）加了一堆”看起来很美”的限制：</p><ul><li>📜 <strong>消息历史 10,000 条</strong>（旧消息还在 DB，但 UI 不可见）</li><li>📨 <strong>推送通知 10,000 条/月</strong></li><li>📋 <strong>看板卡片 1,000 个</strong></li><li>🎬 <strong>剧本运行 5 次/月</strong></li><li>🎙️ <strong>1:1 音频通话 40 分钟</strong></li><li>🤖 <strong>AI 助手 250 次/月</strong></li></ul><p>加上 Team Edition（真·MIT 协议版）的限制：<strong>用户上限 250，GitLab SSO 没了</strong>。</p><p>懂了吗？这套组合拳的核心是——</p><blockquote><p><strong>先用”高级功能免费”把用户圈进来，再等用户用顺手、用出依赖，最后用”消息历史上限”逼你付费。</strong></p></blockquote><p>byteiota 那篇文章里有个精准的比喻：</p><blockquote><p><em>“Messages remain in the database but become inaccessible through the UI. It’s digital hostage-taking.”</em>（消息还在数据库，但 UI 看不到。这是数字人质劫持。）</p></blockquote><p>而且 Mattermost 没有给过渡期：<strong>v11 一发布，所有现存实例都立刻生效</strong>。一家用 Mattermost 三年的学校管理员在 GitHub 上问：</p><blockquote><p><em>“How can we trust Mattermost from now on?”</em>（从今以后我们还能信 Mattermost 吗？）</p></blockquote><p>这问题问得真好。</p><h2 id="这不是孤例"><a href="#这不是孤例" class="headerlink" title="这不是孤例"></a>这不是孤例</h2><p>把 MinIO、Mattermost 放进时间线看，会发现这早已是一股潮流：</p><div class="md-table-scroll"><table><thead><tr><th>年份</th><th>项目</th><th>发生了什么</th></tr></thead><tbody><tr><td><strong>2018</strong></td><td>MongoDB</td><td>AGPL → SSPL</td></tr><tr><td><strong>2021</strong></td><td>Elastic</td><td>Apache → SSPL（社区后来 fork 出 OpenSearch）</td></tr><tr><td><strong>2023</strong></td><td>HashiCorp Terraform</td><td>MPL → BSL（社区 fork 出 OpenTofu）</td></tr><tr><td><strong>2024</strong></td><td>Redis</td><td>BSD → SSPL + RSAL（社区 fork 出 Valkey；2025-05 部分回归，新增 AGPLv3 选项）</td></tr><tr><td><strong>2024</strong></td><td>CockroachDB</td><td>直接取消免费 Core 版</td></tr><tr><td><strong>2025-05</strong></td><td>MinIO</td><td>砍 WebUI（保留 AGPLv3）</td></tr><tr><td><strong>2025-12</strong></td><td>Mattermost</td><td>10,000 消息上限（保留 MIT，但限制功能）</td></tr></tbody></table></div><p>10 年间，6 个明星项目、5 种”软硬兼施”的手法，<strong>结果都是同一个</strong>：免费版越来越难用，付费墙越来越高。</p><p><strong>背后是同一套商业逻辑</strong>：</p><blockquote><p>投资人要回报 → 公司不能永远靠”开源精神”养活 → 限制免费版、倒逼付费 → 社区骂声一片但已离不开 → 收费闭环跑通。</p></blockquote><h2 id="为什么受伤的总是我们"><a href="#为什么受伤的总是我们" class="headerlink" title="为什么受伤的总是我们"></a>为什么受伤的总是我们</h2><p>认真想一下，<strong>为什么”屠龙少年变恶龙”的剧本总是成立</strong>？</p><p>三个必要条件同时满足，结局就注定：</p><ol><li><strong>单一公司控制项目</strong>（不是基金会、不是广泛社区）</li><li><strong>云厂商白嫖</strong>（AWS、Azure 拿开源赚钱但不贡献代码）</li><li><strong>投资人要求回报</strong>（烧了 VC 的钱总要吐出来）</li></ol><p>三个条件里只要<strong>少一个</strong>，情况就不同：</p><ul><li>Apache、CNCF 旗下的项目（Kafka、Spark、Kubernetes）——背后是基金会，董事会多公司，没人能”绑架”项目</li><li>Linux 内核、Python、PostgreSQL——无单一雇主控制，靠捐赠 + 多家公司雇佣贡献者</li><li>真正”屠龙者”和”恶龙”身份长期分离的项目——更不容易翻车</li></ul><p><strong>这就是为什么我们以后挑基础设施，要先看它背后的”治理结构”，再看技术</strong>。</p><h2 id="我们该警惕什么？怎么做？"><a href="#我们该警惕什么？怎么做？" class="headerlink" title="我们该警惕什么？怎么做？"></a>我们该警惕什么？怎么做？</h2><h3 id="四个危险信号"><a href="#四个危险信号" class="headerlink" title="四个危险信号"></a>四个危险信号</h3><p>看到这些，赶紧想退路：</p><ol><li><strong>License 突然变更</strong>（AGPLv3、SSPL、BSL 都是”危险牌”）</li><li><strong>免费版功能悄悄缩水</strong>（不加新功能是常态；删老功能是警报）</li><li><strong>Docker 镜像停止分发</strong>（”你得自己编译”等于”我们不想伺候免费用户”）</li><li><strong>公司被收购 / 融资异常</strong>（新东家可能一上任就加速商业化）</li></ol><h3 id="选型的五条原则"><a href="#选型的五条原则" class="headerlink" title="选型的五条原则"></a>选型的五条原则</h3><ol><li><strong>看治理，不看技术</strong>——优先 Apache / CNCF / Linux Foundation 旗下项目</li><li><strong>看母公司，不看项目</strong>——单一公司主导的明星项目都有”被收编”风险</li><li><strong>看 fork 活跃度</strong>——Elastic 有 OpenSearch、Terraform 有 OpenTofu、Redis 有 Valkey，这是项目”被社区接管”能力的体现</li><li><strong>数据不外置</strong>——任何”功能限制”如果影响你能看见自己服务器上的数据（比如 Mattermost 的消息限制），都是红旗</li><li><strong>关键路径双备</strong>——别把生产环境的命脉单押给一家商业公司控制的项目</li></ol><h3 id="MinIO-Mattermost-现在怎么选"><a href="#MinIO-Mattermost-现在怎么选" class="headerlink" title="MinIO / Mattermost 现在怎么选"></a>MinIO / Mattermost 现在怎么选</h3><p><strong>MinIO 的替代</strong>：</p><ul><li><strong>Ceph</strong>（重，老牌，复杂）</li><li><strong>Garage</strong>（轻量，新兴，Rust 写）</li><li><strong>SeaweedFS</strong>（速度快，专注海量小文件）</li><li><strong>RustFS</strong>（国产，对标 MinIO 刚起步）</li></ul><p><strong>Mattermost 的替代</strong>：</p><ul><li><strong>Matrix</strong>（端到端加密，联邦架构，法国政府都在用）</li><li><strong>Rocket.Chat</strong>（Slack-like，定制能力强）</li><li><strong>Zulip</strong>（主题分流的邮件式讨论，开发组心头好）</li><li>或者直接退回 Mattermost Team Edition（虽然功能少，但 MIT 协议保底）</li></ul><h2 id="开源精神从未消失，只是换了地方"><a href="#开源精神从未消失，只是换了地方" class="headerlink" title="开源精神从未消失，只是换了地方"></a>开源精神从未消失，只是换了地方</h2><p>写到这里必须说一句：<strong>开源不是死了，只是回到了它该在的地方</strong>。</p><p>那些真正的”基础设施开源”——Linux、Kubernetes、PostgreSQL、Redis（社区版 AGPLv3）、Valkey、OpenSearch、OpenTofu——活得很好。它们有的被资本恶心过，但社区顶住了、有 fork、有基金会保护、有真正的自由。</p><p>反而是那些”曾经开源，现在想收费”的明星项目，正在被市场教训：</p><ul><li>Elastic 被 OpenSearch 抢市场份额</li><li>HashiCorp 被 OpenTofu 抢基础设施客户</li><li>Redis 不得不回归 AGPLv3</li><li>MinIO 把名字搞臭了，仓库归档了</li></ul><p><strong>所以这句话送给所有还在认真做开源的公司</strong>：</p><blockquote><p><em>你可以从开源出发，走向商业。但别走得太远——你走多远，社区的耐心就消失多远。等你回头，发现 Valkey 已经站在你曾经的位置了。</em></p></blockquote><p>至于我们用户：<strong>保持清醒、多备一手、把数据握在自己手里</strong>，就够了。</p><hr><p><strong>你最近被哪个”开源变收费”的项目伤过？评论区聊聊。</strong>（我知道你会说又是”软广”——但这篇文章真的没收钱 😅）</p>]]>
     </content>
     <id>https://dusays.com/archives/888/</id>
     <link href="https://dusays.com/archives/888/"/>
     <published>2026-09-16T16:00:00.000Z</published>
     <summary>
       <![CDATA[<blockquote>
+<p>这两周杜老师做技术选型时接连被两件事扎到：MinIO 在 5 月悄悄砍掉了社区版的 Web Console，11 万行代码删除；Mattermost v11 给免费版加了”消息历史最多 1 万条”的限制——旧消息还躺在数据库里，但 UI 看不见了。摆在一起看，<strong>“屠龙的少年长出了龙鳞”</strong> 这事好像不再是个比喻。写篇文章，把这两年”开源变收费”的剧本翻出来聊聊。</p>
 </blockquote>]]>
     </summary>
-    <updated>2026-09-17T03:23:50.149Z</updated>
+    <title>开源的终点是收费：MinIO 砍掉 WebUI，Mattermost 限制聊天数量</title>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -47,7 +53,7 @@
 </blockquote>]]>
     </summary>
     <title>Python 脚本自动化实战:让重复工作一键完成</title>
-    <updated>2026-09-17T03:23:50.149Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -69,7 +75,7 @@
 </blockquote>]]>
     </summary>
     <title>Web 应用常见漏洞与防御:OWASP Top 10 实战讲解</title>
-    <updated>2026-09-17T03:23:50.149Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -91,7 +97,7 @@
 </blockquote>]]>
     </summary>
     <title>Home Assistant 智能家居搭建:从零打造自动化生活</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -113,7 +119,7 @@
 </blockquote>]]>
     </summary>
     <title>从零理解 TCP/IP 协议栈:网络世界的通用语言</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -135,7 +141,7 @@
 </blockquote>]]>
     </summary>
     <title>运维工程师面试全攻略:从简历到 Offer 的完整指南</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -157,7 +163,7 @@
 </blockquote>]]>
     </summary>
     <title>免费学习平台精选:这 15 个网站让你省下几万培训费</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -179,7 +185,7 @@
 </blockquote>]]>
     </summary>
     <title>开发者必备工具集:这 30 个工具让我的效率提升了 300%</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -201,7 +207,7 @@
 </blockquote>]]>
     </summary>
     <title>WordPress 性能优化实战:从 5 秒加载到 1 秒的蜕变</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.268Z</updated>
   </entry>
   <entry>
     <author>
@@ -223,7 +229,7 @@
 </blockquote>]]>
     </summary>
     <title>Hugo 静态博客从零部署:5 分钟搭建自己的个人网站</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -245,7 +251,7 @@
 </blockquote>]]>
     </summary>
     <title>图床服务故障修复公告</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -267,7 +273,7 @@
 </blockquote>]]>
     </summary>
     <title>周末的 3 种过法</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -289,7 +295,7 @@
 </blockquote>]]>
     </summary>
     <title>居家办公 5 个减少分心的动作</title>
-    <updated>2026-09-17T03:23:50.148Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -311,7 +317,7 @@
 </blockquote>]]>
     </summary>
     <title>给猫拍照的 3 个小技巧</title>
-    <updated>2026-09-17T03:23:50.147Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -333,7 +339,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤路上听播客 vs 听音乐的 2 个选择</title>
-    <updated>2026-09-17T03:23:50.147Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -355,7 +361,7 @@
 </blockquote>]]>
     </summary>
     <title>会议室投影仪连不上的 3 个排查</title>
-    <updated>2026-09-17T03:23:50.147Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -377,7 +383,7 @@
 </blockquote>]]>
     </summary>
     <title>雨天出差的 3 件必备</title>
-    <updated>2026-09-17T03:23:50.147Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -399,7 +405,7 @@
 </blockquote>]]>
     </summary>
     <title>桌面零食收纳的 2 个分区</title>
-    <updated>2026-09-17T03:23:50.147Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -421,7 +427,7 @@
 </blockquote>]]>
     </summary>
     <title>演示前一晚的 2 个检查清单</title>
-    <updated>2026-09-17T03:23:50.147Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
   <entry>
     <author>
@@ -443,6 +449,6 @@
 </blockquote>]]>
     </summary>
     <title>培训讲师的 PPT 怎么&quot;听完&quot;</title>
-    <updated>2026-09-17T03:23:50.147Z</updated>
+    <updated>2026-09-17T03:27:47.267Z</updated>
   </entry>
 </feed>
