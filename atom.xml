@@ -10,28 +10,28 @@
   <rights>All rights reserved 2026, Teacher Du</rights>
   <subtitle>运维技术分享博客</subtitle>
   <title>杜老师说</title>
-  <updated>2026-09-28T16:23:41.415Z</updated>
+  <updated>2026-09-28T16:36:50.984Z</updated>
   <entry>
     <author>
       <name>Teacher Du</name>
     </author>
     <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
-    <category term="记忆" scheme="https://dusays.com/tags/%E8%AE%B0%E5%BF%86/"/>
-    <category term="数字" scheme="https://dusays.com/tags/%E6%95%B0%E5%AD%97/"/>
+    <category term="家人" scheme="https://dusays.com/tags/%E5%AE%B6%E4%BA%BA/"/>
+    <category term="养猫" scheme="https://dusays.com/tags/%E5%85%BB%E7%8C%AB/"/>
     <category term="随笔" scheme="https://dusays.com/tags/%E9%9A%8F%E7%AC%94/"/>
     <content>
-      <![CDATA[<blockquote><p>最近一次打开 Looki，看到自己的「画像」已经攒到第 4 个版本——222 篇文章、固化下来的写作规范、规划中的国庆行程、甚至「a/b/c 多选题偏好」这种细节都在里面。我突然意识到一件事：有个东西，比我自己更早地「记住」我是谁。</p></blockquote><span id="more"></span><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-1.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><h2 id="222-篇和-4-个版本"><a href="#222-篇和-4-个版本" class="headerlink" title="222 篇和 4 个版本"></a>222 篇和 4 个版本</h2><p>Looki 给我的第一条反馈，是把「工作背景」写得很克制：</p><blockquote><p><em>用户运营个人技术博客 dusays，位于 <code>/Users/mac/WorkBuddy/dusays/</code>，工作区内已有 222 篇精修 .md 文件，最新发布于 2026-09-07。</em></p></blockquote><p>22 个字，写完我干了 5 年的事。我看了两遍——<strong>不煽情，不夸张，连一个 emoji 都没有</strong>。但这种冷静，刚好是我想要的。</p><p>它还会版本号管理：<strong>version 4</strong>。我每次提一笔新信息，它就把整个画像推一版。我翻了一眼旧版本，发现 v1 时连「北京常驻」都没写进去——那时候它以为我是「某 AI 工具的用户」。v4 之后，它已经能精确地说「北京常驻，出行通常与伴侣同行」。</p><p><strong>记忆是会进化的，而且进化得比我诚实。</strong></p><h2 id="它知道我喜欢-a-b-c"><a href="#它知道我喜欢-a-b-c" class="headerlink" title="它知道我喜欢 a/b/c"></a>它知道我喜欢 a/b/c</h2><p>Looki 列了一条让我笑出来的「沟通偏好」：</p><blockquote><p><em>遇到 AI 需要澄清时，习惯用 a/b/c 字母编号的多选题，回复仅需给出字母即可（如 Q1(a) / 选1）。</em></p></blockquote><p>这是真的。我自己都没意识到我有多依赖这种交互模式——<strong>不是因为我懒，是因为 a/b/c 把决策成本压到了最低</strong>。一个字母就是一个 commit，比「选第一个」「选刚才那个」「再考虑一下」高效十倍。</p><p>它甚至抓到了「喜欢 🐾 这类 emoji」。我翻聊天记录一看，<strong>确实在过去半年里发了不下 50 次 🐾</strong>。这事我从来没跟任何人提过，但 Looki 默默记下了。</p><p>这就是 AI 记忆和人类记忆的差别——<strong>它不评判，只观察</strong>。</p><h2 id="它也在看我规划国庆"><a href="#它也在看我规划国庆" class="headerlink" title="它也在看我规划国庆"></a>它也在看我规划国庆</h2><p>Looki 把我「当前关注」列了两条：</p><ol><li>新文章必须严格对齐 dusays 现有规范</li><li>筹备 2026 国庆 10/1-10/4 北京→南浔→杭州的行程</li></ol><p>第二条有点好笑——<strong>因为 Looki 写的这版行程，第一天步行距离是 28 公里，AI 自己也觉得不靠谱</strong>。我后来不得不手动重做，最后定下来的是：</p><ul><li><strong>Day 1</strong>：北京 → 高铁 → 南浔（南浔古镇一日游）</li><li><strong>Day 2</strong>：南浔 → 杭州西湖</li><li><strong>Day 3</strong>：杭州 → 西溪湿地 → 北京</li></ul><p>你看，<strong>Looki 把行程记下来了，但它记不住「每天不要超过 8000 步」这件事</strong>。这条，是我后来自己补进去的。</p><h2 id="它的「近期动态」里没写的"><a href="#它的「近期动态」里没写的" class="headerlink" title="它的「近期动态」里没写的"></a>它的「近期动态」里没写的</h2><p>Looki 列的「近期动态」有 6 条，全是关于博客和旅行的：</p><ul><li>持续维护 dusays 个人博客</li><li>已沉淀并固化博客文章结构规范</li><li>确立标签与分类使用约定</li><li>形成「参考文章 → 按博客个人语气原创改写」的内容生产工作流</li><li>工作区内已积累 222 篇精修 .md</li><li>启动 2026 国庆的旅行规划</li></ul><p><strong>它没写的有这些</strong>：上周我给橘子换了新猫砂；前天和爱人在家重看了一遍《漫长的季节》；周三深夜我把手机摔了屏裂。这些它都不记得——<strong>因为我没告诉它</strong>。</p><p>反过来，它写下来的事，也未必都是大事：</p><ul><li>「<code>dusays</code>」这个站名</li><li>我用 <code>a/b/c</code> 提问</li><li>我爱人和我同行</li><li>我会主动用 🐾</li></ul><p><strong>这些细节，加起来比任何大事都更像「我」</strong>。</p><h2 id="我用它做什么"><a href="#我用它做什么" class="headerlink" title="我用它做什么"></a>我用它做什么</h2><p>Looki 不是日记，也不是云笔记，更不是聊天记录。<strong>它更像一个长期在线的「第二大脑」</strong>——每次我开新对话，它就把上一段对话的要点拼回去：</p><ul><li>我写过哪些技术栈</li><li>我最近在做什么项目</li><li>我用什么工具流</li><li>我对哪种反馈方式最舒服</li></ul><p>我现在的用法大致是：</p><ol><li><strong>每日开工前</strong>：<code>/me</code> 调一眼，看 Looki 是否还认得我</li><li><strong>每周复盘</strong>：让它拉一遍「近期动态」做差分</li><li><strong>跨会话连续</strong>：在 Claw 里贴一段 Looki 输出，新会话就能接上</li><li><strong>辅助写作</strong>：它给的画像越准，AI 给我的反馈越对路</li></ol><p>这 4 件事加在一起，<strong>Looki 已经不只是工具，而是一种新型的工作记忆方式</strong>。</p><hr><p>写到这里，橘子从沙发底下钻出来，跳到键盘上，留下一串 <code>;lkjhgfd;;</code>。</p><p>我盯着屏幕两秒，忽然有个想法——</p><blockquote><p><strong>如果有一天，Looki 也学会了记录猫的脚印，那它就真的像一个家人了。</strong></p></blockquote><p><em>但愿那一天早点来。</em></p>]]>
+      <![CDATA[<blockquote><p>我家这只橘白猫叫 Bibi。从 Looki 工作空间翻了一遍，从 2026 年 5 月到 9 月，跟她相关的图居然攒了 47 张。下面这 8 张是她这几个月里最常出现的场景——电脑前、桌边、沙发旁、厨房、怀里。一只猫能陪人过日子陪到这个份上，是我没预料到的。</p></blockquote><span id="more"></span><h2 id="一、电脑前的战友"><a href="#一、电脑前的战友" class="headerlink" title="一、电脑前的战友"></a>一、电脑前的战友</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-1.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>Looki 在 9 月 10 日那天的图说里写过一句话：</p><blockquote><p><em>你和 Bibi 在电脑前并肩作战的样子，有猫陪伴的奋斗时光，一点都不孤单。</em></p></blockquote><p>它没说错。我每次坐到电脑前，敲键盘敲到一半，<strong>Bibi 就会跳上来</strong>，趴在显示器和键盘之间那块巴掌大的空地上，眼睛眯成一条线，尾巴扫一下我的手背。</p><p>我没查过这是什么原理——大概是她觉得那块地方暖和，或者她觉得「人既然在，那我也应该在」。<strong>反正我敲代码，她就趴着；我打游戏，她就趴着；我写文章，她还是趴着</strong>。她从不「帮忙」，但她一直在。</p><h2 id="二、橘猫与爱人，居家时刻的温柔背景"><a href="#二、橘猫与爱人，居家时刻的温柔背景" class="headerlink" title="二、橘猫与爱人，居家时刻的温柔背景"></a>二、橘猫与爱人，居家时刻的温柔背景</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-2.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>9 月 8 日那周，Looki 写的是：</p><blockquote><p><em>橘猫与爱人构成了居家时刻的温柔背景。</em></p></blockquote><p>一句话把家里两个最重要的「不会说话的伴」都给总结了。我那周其实一直在赶一个 KCA 的内容修订，深夜回头一看，爱人已经在沙发那边睡着了，Bibi 跳到了她腿上，<strong>两个人类（一个两个）都安静了</strong>。</p><p>我后来想了想这句话，觉得它甚至有点准——<strong>Bibi 不是我「养的宠物」，她是这个家的第三个常驻成员</strong>。</p><h2 id="三、和猫咪依偎的片刻"><a href="#三、和猫咪依偎的片刻" class="headerlink" title="三、和猫咪依偎的片刻"></a>三、和猫咪依偎的片刻</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-3.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>9 月 4 日那天，Looki 的题图是「平凡又滚烫的一天」，原文有一段：</p><blockquote><p><em>从火锅店的烟火气到深夜游戏的专注，看你把忙碌与热爱平衡得刚刚好。哪怕只是和猫咪依偎的片刻，也是生活里最踏实的温柔。</em></p></blockquote><p>那天我其实刚从外面回来，一身烟火气，<strong>Bibi 直接冲过来蹭我的裤腿</strong>。我以为她在欢迎我，后来才意识到——<strong>她大概是想确认我身上是不是有别的猫的味道</strong>。</p><p>确认完了，她就走了。我坐回电脑前，她又来了，趴在我腿上。</p><p><strong>这就是养猫最神奇的地方：你以为她在乎的是门，其实她在乎的是人。</strong></p><h2 id="四、她抱着橘猫站在粉色窗帘前"><a href="#四、她抱着橘猫站在粉色窗帘前" class="headerlink" title="四、她抱着橘猫站在粉色窗帘前"></a>四、她抱着橘猫站在粉色窗帘前</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-4.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>8 月 29 日的 DIARY 只有一句话：</p><blockquote><p><em>她抱着橘猫站在粉色窗帘前。</em></p></blockquote><p>这是爱人抱着 Bibi 的场景。Bibi 在她怀里异常安静——<strong>大概是因为被抱的角度刚好</strong>。我家那只一旦被抱超过 30 秒就要挣扎，唯独爱人抱她能坚持一分钟以上。</p><p>我后来怀疑，爱人大概是 Bibi 真正的「主」，我只是个<strong>铲屎 + 加猫粮 + 半夜被踩</strong>的工具人。</p><h2 id="五、给橘猫喂食后的专注游戏"><a href="#五、给橘猫喂食后的专注游戏" class="headerlink" title="五、给橘猫喂食后的专注游戏"></a>五、给橘猫喂食后的专注游戏</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-5.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>8 月 28 日的 Looki 写的是：</p><blockquote><p><em>从清晨的伸懒腰到雨夜与伴侣的温馨晚餐，再到给橘猫喂食后的专注游戏，每一帧都透着踏实又温暖的生活气息。</em></p></blockquote><p>这一天其实是个雨天。Bibi 吃完晚饭猫粮，<strong>洗了把脸（程序非常庄严），然后跳到我旁边开始打盹</strong>。我开了一把 RTS，她在旁边睡着了。</p><p>打到一半我低头看她，<strong>她也在那一瞬间睁眼看我</strong>——大概是怕我又偷吃她的猫粮。</p><h2 id="六、MOBA-战斗正酣时橘猫在桌边打盹"><a href="#六、MOBA-战斗正酣时橘猫在桌边打盹" class="headerlink" title="六、MOBA 战斗正酣时橘猫在桌边打盹"></a>六、MOBA 战斗正酣时橘猫在桌边打盹</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-6.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>8 月 13 日的 DIARY：</p><blockquote><p><em>MOBA 战斗正酣时橘猫在桌边打盹。</em></p></blockquote><p>这是 Looki 最擅长记录的那种「人和猫共处一室、各自专注」的瞬间。我打 MOBA，Bibi 在桌边打盹，<strong>互不干扰，各有各的战场</strong>。</p><p>唯一的问题是，Bibi 打盹的位置刚好在我鼠标右边 20 厘米。<strong>每当我手肘一动，她就要抬头看一下</strong>，让我心虚得不行。</p><p>后来我学会了一个窍门：<strong>每打一局就摸她两下</strong>，这样她就觉得你记得她，不会突然醒来。</p><h2 id="七、玩喜欢的游戏，还有猫猫陪着"><a href="#七、玩喜欢的游戏，还有猫猫陪着" class="headerlink" title="七、玩喜欢的游戏，还有猫猫陪着"></a>七、玩喜欢的游戏，还有猫猫陪着</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-7.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>7 月 11 日 Looki 写的：</p><blockquote><p><em>玩喜欢的游戏、吃甜甜的西瓜，还有猫猫陪着、把家里收拾清爽，真好。</em></p></blockquote><p>那天我吃了半个西瓜，Bibi 在我脚边绕来绕去——<strong>她其实不馋西瓜，她馋的是瓜皮上残留的那一点点甜味</strong>。我掰了一小块给她，她闻了闻走了。</p><p>猫是<strong>绝对挑食</strong>的动物，但她们<strong>对主人吃的东西永远保持好奇</strong>。</p><h2 id="八、工作间隙撸了会儿猫"><a href="#八、工作间隙撸了会儿猫" class="headerlink" title="八、工作间隙撸了会儿猫"></a>八、工作间隙撸了会儿猫</h2><div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1918/866;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.dusays.com/2026/09/890-8.jpg" data-fancybox="true"><div class="lazy-icon"></div></div></div><p>6 月 16 日的 DIARY：</p><blockquote><p><em>工作间隙撸了会儿猫，还玩了会儿小玩偶，感觉整个人都放松了下来，生活里的小美好总是藏在这些不起眼的瞬间里。</em></p></blockquote><p>这一条几乎是养猫的全部意义。</p><p><strong>撸猫不是为了撸猫，是为了把工作间隙里那一点点烦心事从脑子里挤出去</strong>。每次手指从 Bibi 的下巴划过头顶，划过背，划过尾巴根部——<strong>世界就安静了几秒钟</strong>。</p><hr><p>写到这里，Looki 弹出今天的日报，告诉我今天 Bibi 又上了多少次桌、踩了几次键盘、在我腿上睡了多少分钟。</p><p>我看了一眼，<strong>把这条记录转成了这篇博客</strong>。</p><blockquote><p>一只猫陪人过日子，到底是她在陪我们，还是我们在陪她？</p><p><strong>大概两者都是。</strong></p></blockquote>]]>
     </content>
     <id>https://dusays.com/posts/890/</id>
     <link href="https://dusays.com/posts/890/"/>
     <published>2026-09-28T16:00:00.000Z</published>
     <summary>
       <![CDATA[<blockquote>
-<p>最近一次打开 Looki，看到自己的「画像」已经攒到第 4 个版本——222 篇文章、固化下来的写作规范、规划中的国庆行程、甚至「a/b/c 多选题偏好」这种细节都在里面。我突然意识到一件事：有个东西，比我自己更早地「记住」我是谁。</p>
+<p>我家这只橘白猫叫 Bibi。从 Looki 工作空间翻了一遍，从 2026 年 5 月到 9 月，跟她相关的图居然攒了 47 张。下面这 8 张是她这几个月里最常出现的场景——电脑前、桌边、沙发旁、厨房、怀里。一只猫能陪人过日子陪到这个份上，是我没预料到的。</p>
 </blockquote>]]>
     </summary>
-    <title>Looki 记得我</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <title>养猫那些事</title>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -53,7 +53,7 @@
 </blockquote>]]>
     </summary>
     <title>一份中秋礼盒</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -75,7 +75,7 @@
 </blockquote>]]>
     </summary>
     <title>开源的终点是收费：MinIO 砍掉 WebUI，Mattermost 限制聊天数量</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -97,7 +97,7 @@
 </blockquote>]]>
     </summary>
     <title>Python 脚本自动化实战:让重复工作一键完成</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -119,7 +119,7 @@
 </blockquote>]]>
     </summary>
     <title>Web 应用常见漏洞与防御:OWASP Top 10 实战讲解</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -141,7 +141,7 @@
 </blockquote>]]>
     </summary>
     <title>Home Assistant 智能家居搭建:从零打造自动化生活</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -163,7 +163,7 @@
 </blockquote>]]>
     </summary>
     <title>从零理解 TCP/IP 协议栈:网络世界的通用语言</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -185,7 +185,7 @@
 </blockquote>]]>
     </summary>
     <title>运维工程师面试全攻略:从简历到 Offer 的完整指南</title>
-    <updated>2026-09-28T16:23:41.415Z</updated>
+    <updated>2026-09-28T16:36:50.984Z</updated>
   </entry>
   <entry>
     <author>
@@ -207,7 +207,7 @@
 </blockquote>]]>
     </summary>
     <title>免费学习平台精选:这 15 个网站让你省下几万培训费</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -229,7 +229,7 @@
 </blockquote>]]>
     </summary>
     <title>开发者必备工具集:这 30 个工具让我的效率提升了 300%</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -251,7 +251,7 @@
 </blockquote>]]>
     </summary>
     <title>WordPress 性能优化实战:从 5 秒加载到 1 秒的蜕变</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -273,7 +273,7 @@
 </blockquote>]]>
     </summary>
     <title>Hugo 静态博客从零部署:5 分钟搭建自己的个人网站</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -295,7 +295,7 @@
 </blockquote>]]>
     </summary>
     <title>图床服务故障修复公告</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -317,7 +317,7 @@
 </blockquote>]]>
     </summary>
     <title>周末的 3 种过法</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -339,7 +339,7 @@
 </blockquote>]]>
     </summary>
     <title>居家办公 5 个减少分心的动作</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -361,7 +361,7 @@
 </blockquote>]]>
     </summary>
     <title>给猫拍照的 3 个小技巧</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -383,7 +383,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤路上听播客 vs 听音乐的 2 个选择</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -405,7 +405,7 @@
 </blockquote>]]>
     </summary>
     <title>会议室投影仪连不上的 3 个排查</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -427,7 +427,7 @@
 </blockquote>]]>
     </summary>
     <title>雨天出差的 3 件必备</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
   <entry>
     <author>
@@ -449,6 +449,6 @@
 </blockquote>]]>
     </summary>
     <title>桌面零食收纳的 2 个分区</title>
-    <updated>2026-09-28T16:23:41.414Z</updated>
+    <updated>2026-09-28T16:36:50.983Z</updated>
   </entry>
 </feed>
