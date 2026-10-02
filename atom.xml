@@ -10,28 +10,7 @@
   <rights>All rights reserved 2026, Teacher Du</rights>
   <subtitle>运维技术分享博客</subtitle>
   <title>杜老师说</title>
-  <updated>2026-10-02T16:30:14.312Z</updated>
-  <entry>
-    <author>
-      <name>Teacher Du</name>
-    </author>
-    <category term="运维教程" scheme="https://dusays.com/categories/%E8%BF%90%E7%BB%B4%E6%95%99%E7%A8%8B/"/>
-    <category term="网络" scheme="https://dusays.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    <category term="缓存" scheme="https://dusays.com/tags/%E7%BC%93%E5%AD%98/"/>
-    <content>
-      <![CDATA[<blockquote><p>这是一篇用于验证单篇头图流程的探针文章，验证完就删。</p></blockquote><span id="more"></span><h2 id="第一段"><a href="#第一段" class="headerlink" title="第一段"></a>第一段</h2><p>探针正文。</p>]]>
-    </content>
-    <id>https://dusays.com/posts/9999probe/</id>
-    <link href="https://dusays.com/posts/9999probe/"/>
-    <published>2026-10-02T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>这是一篇用于验证单篇头图流程的探针文章，验证完就删。</p>
-</blockquote>]]>
-    </summary>
-    <title>探针测试文章</title>
-    <updated>2026-10-02T16:30:14.312Z</updated>
-  </entry>
+  <updated>2026-10-02T16:30:55.445Z</updated>
   <entry>
     <author>
       <name>Teacher Du</name>
@@ -52,7 +31,7 @@
 </blockquote>]]>
     </summary>
     <title>我家猫叫西瓜</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.445Z</updated>
   </entry>
   <entry>
     <author>
@@ -74,7 +53,7 @@
 </blockquote>]]>
     </summary>
     <title>一份中秋礼盒</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.445Z</updated>
   </entry>
   <entry>
     <author>
@@ -96,7 +75,7 @@
 </blockquote>]]>
     </summary>
     <title>开源的终点是收费：MinIO 砍掉 WebUI，Mattermost 限制聊天数量</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.445Z</updated>
   </entry>
   <entry>
     <author>
@@ -118,7 +97,7 @@
 </blockquote>]]>
     </summary>
     <title>Python 脚本自动化实战:让重复工作一键完成</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.445Z</updated>
   </entry>
   <entry>
     <author>
@@ -140,7 +119,7 @@
 </blockquote>]]>
     </summary>
     <title>Web 应用常见漏洞与防御:OWASP Top 10 实战讲解</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.445Z</updated>
   </entry>
   <entry>
     <author>
@@ -162,7 +141,7 @@
 </blockquote>]]>
     </summary>
     <title>Home Assistant 智能家居搭建:从零打造自动化生活</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.445Z</updated>
   </entry>
   <entry>
     <author>
@@ -184,7 +163,7 @@
 </blockquote>]]>
     </summary>
     <title>从零理解 TCP/IP 协议栈:网络世界的通用语言</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -206,7 +185,7 @@
 </blockquote>]]>
     </summary>
     <title>运维工程师面试全攻略:从简历到 Offer 的完整指南</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -228,7 +207,7 @@
 </blockquote>]]>
     </summary>
     <title>免费学习平台精选:这 15 个网站让你省下几万培训费</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -250,7 +229,7 @@
 </blockquote>]]>
     </summary>
     <title>开发者必备工具集:这 30 个工具让我的效率提升了 300%</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -272,7 +251,7 @@
 </blockquote>]]>
     </summary>
     <title>WordPress 性能优化实战:从 5 秒加载到 1 秒的蜕变</title>
-    <updated>2026-10-02T16:30:14.311Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -294,7 +273,7 @@
 </blockquote>]]>
     </summary>
     <title>Hugo 静态博客从零部署:5 分钟搭建自己的个人网站</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -316,7 +295,7 @@
 </blockquote>]]>
     </summary>
     <title>图床服务故障修复公告</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -338,7 +317,7 @@
 </blockquote>]]>
     </summary>
     <title>周末的 3 种过法</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -360,7 +339,7 @@
 </blockquote>]]>
     </summary>
     <title>居家办公 5 个减少分心的动作</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -382,7 +361,7 @@
 </blockquote>]]>
     </summary>
     <title>给猫拍照的 3 个小技巧</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -404,7 +383,7 @@
 </blockquote>]]>
     </summary>
     <title>通勤路上听播客 vs 听音乐的 2 个选择</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.444Z</updated>
   </entry>
   <entry>
     <author>
@@ -426,7 +405,7 @@
 </blockquote>]]>
     </summary>
     <title>会议室投影仪连不上的 3 个排查</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.443Z</updated>
   </entry>
   <entry>
     <author>
@@ -448,6 +427,28 @@
 </blockquote>]]>
     </summary>
     <title>雨天出差的 3 件必备</title>
-    <updated>2026-10-02T16:30:14.310Z</updated>
+    <updated>2026-10-02T16:30:55.443Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Teacher Du</name>
+    </author>
+    <category term="智慧生活" scheme="https://dusays.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="分区" scheme="https://dusays.com/tags/%E5%88%86%E5%8C%BA/"/>
+    <category term="生活" scheme="https://dusays.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="零食" scheme="https://dusays.com/tags/%E9%9B%B6%E9%A3%9F/"/>
+    <content>
+      <![CDATA[<blockquote><p>杜老师以前桌面零食是随手放，吃的时候一通翻。后来摸索出一套”零食分区”的方法，整整一年没再为找零食浪费时间。今天杜老师就把自己用了 1 年的 2 个分区分享给大家。</p></blockquote><span id="more"></span><h2 id="一、为什么要分区"><a href="#一、为什么要分区" class="headerlink" title="一、为什么要分区"></a>一、为什么要分区</h2><p>杜老师一开始的桌面是这样的：</p><ul><li>零食散在桌面左侧</li><li>想吃的时候不知道哪袋在哪</li><li>工作到一半想拿点吃的，要翻好几个抽屉</li></ul><p>看起来都是小事，但累积下来挺影响专注。</p><h2 id="二、2-个分区"><a href="#二、2-个分区" class="headerlink" title="二、2 个分区"></a>二、2 个分区</h2><h3 id="分区-1：高频区（桌面伸手范围内）"><a href="#分区-1：高频区（桌面伸手范围内）" class="headerlink" title="分区 1：高频区（桌面伸手范围内）"></a>分区 1：高频区（桌面伸手范围内）</h3><p>杜老师的高频区放这几样：</p><ul><li>一袋坚果</li><li>一袋肉干</li><li>一两根能量棒</li></ul><p>放在桌面左侧的透明收纳盒里，伸手就能拿到。</p><p>注意：高频区<strong>不超过 5 种</strong>，多了就乱。</p><h3 id="分区-2：低频区（抽屉或书架）"><a href="#分区-2：低频区（抽屉或书架）" class="headerlink" title="分区 2：低频区（抽屉或书架）"></a>分区 2：低频区（抽屉或书架）</h3><p>杜老师的低频区放这几样：</p><ul><li>偶尔想吃的水果（苹果、橘子）</li><li>一个月才吃一次的辣条</li><li>留给客人的零食</li></ul><p>放在桌子下方的抽屉里，要吃的时候站起来拿。</p><p>注意：低频区<strong>不超过 3 天要整理一次</strong>，不然东西会过期。</p><h2 id="三、杜老师自己的分区长这样"><a href="#三、杜老师自己的分区长这样" class="headerlink" title="三、杜老师自己的分区长这样"></a>三、杜老师自己的分区长这样</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">桌面（高频区）</span><br><span class="line">├── 收纳盒 1：坚果</span><br><span class="line">├── 收纳盒 2：肉干</span><br><span class="line">└── 收纳盒 3：能量棒</span><br><span class="line"></span><br><span class="line">抽屉（低频区）</span><br><span class="line">├── 第一层：水果</span><br><span class="line">├── 第二层：辣条、饼干</span><br><span class="line">└── 第三层：客人零食</span><br></pre></td></tr></tbody></table></figure><p>看着其实挺普通的，但每个东西都有自己的位置。</p><h2 id="四、分区的关键"><a href="#四、分区的关键" class="headerlink" title="四、分区的关键"></a>四、分区的关键</h2><p>杜老师觉得零食分区这件事：</p><ul><li>不需要复杂的收纳盒</li><li>关键是<strong>伸手就能拿到 + 知道在哪</strong></li></ul><p>满足了这两点，桌面就会清爽很多。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>桌面零食这件事，杜老师觉得”分区比多收纳盒管用”。</p><p>希望对同样桌面上爱放零食的您有所启发。如果您有别的分区方法，欢迎评论区留言分享。咱们下期见！</p><h2 id="看完记得"><a href="#看完记得" class="headerlink" title="看完记得"></a>看完记得</h2><p>如果您觉得本文对您有帮助，记得收藏、点赞、分享给身边的小伙伴哦！更多精彩内容，欢迎关注杜老师说，咱们下期见！</p>]]>
+    </content>
+    <id>https://dusays.com/posts/871/</id>
+    <link href="https://dusays.com/posts/871/"/>
+    <published>2026-06-06T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>杜老师以前桌面零食是随手放，吃的时候一通翻。后来摸索出一套”零食分区”的方法，整整一年没再为找零食浪费时间。今天杜老师就把自己用了 1 年的 2 个分区分享给大家。</p>
+</blockquote>]]>
+    </summary>
+    <title>桌面零食收纳的 2 个分区</title>
+    <updated>2026-10-02T16:30:55.443Z</updated>
   </entry>
 </feed>
