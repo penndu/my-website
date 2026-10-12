@@ -2,96 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dusays.com/shuoshuo/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/tags/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/yinsi/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/96/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/98/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/99/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/97/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/about/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/archives/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/categories/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/fcircle/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -137,7 +47,25 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/892/</loc>
+    <loc>https://dusays.com/tags/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/shuoshuo/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/yinsi/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -209,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/884/</loc>
+    <loc>https://dusays.com/posts/96/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -218,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/885/</loc>
+    <loc>https://dusays.com/posts/97/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -227,7 +155,43 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/886/</loc>
+    <loc>https://dusays.com/posts/98/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/99/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/about/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/archives/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/categories/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -237,15 +201,6 @@
   
   <url>
     <loc>https://dusays.com/posts/888/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/887/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -290,7 +245,160 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/873/</loc>
+    <loc>https://dusays.com/posts/892/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/88/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/881/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/880/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/882/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/883/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/884/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/886/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/887/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/885/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/865/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/866/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/867/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/868/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/87/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/869/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/870/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/871/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -308,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/875/</loc>
+    <loc>https://dusays.com/posts/873/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -318,6 +426,15 @@
   
   <url>
     <loc>https://dusays.com/posts/874/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/875/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -362,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/88/</loc>
+    <loc>https://dusays.com/posts/851/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -371,7 +488,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/880/</loc>
+    <loc>https://dusays.com/posts/853/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -380,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/881/</loc>
+    <loc>https://dusays.com/posts/852/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -389,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/882/</loc>
+    <loc>https://dusays.com/posts/854/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -398,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/883/</loc>
+    <loc>https://dusays.com/posts/855/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -407,7 +524,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/858/</loc>
+    <loc>https://dusays.com/posts/857/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/856/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -417,6 +543,15 @@
   
   <url>
     <loc>https://dusays.com/posts/859/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/858/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -443,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/862/</loc>
+    <loc>https://dusays.com/posts/861/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -452,7 +587,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/861/</loc>
+    <loc>https://dusays.com/posts/862/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -479,7 +614,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/866/</loc>
+    <loc>https://dusays.com/posts/839/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -488,7 +623,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/865/</loc>
+    <loc>https://dusays.com/posts/84/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -497,7 +632,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/868/</loc>
+    <loc>https://dusays.com/posts/840/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -506,7 +641,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/867/</loc>
+    <loc>https://dusays.com/posts/841/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -515,34 +650,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/869/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/87/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/870/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/871/</loc>
+    <loc>https://dusays.com/posts/842/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -552,6 +660,15 @@
   
   <url>
     <loc>https://dusays.com/posts/844/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/843/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -605,15 +722,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/85/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/850/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -623,7 +731,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/851/</loc>
+    <loc>https://dusays.com/posts/85/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -632,7 +740,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/852/</loc>
+    <loc>https://dusays.com/posts/825/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -641,7 +749,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/853/</loc>
+    <loc>https://dusays.com/posts/826/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -650,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/854/</loc>
+    <loc>https://dusays.com/posts/827/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -659,7 +767,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/855/</loc>
+    <loc>https://dusays.com/posts/828/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -668,7 +776,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/856/</loc>
+    <loc>https://dusays.com/posts/829/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -677,7 +785,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/857/</loc>
+    <loc>https://dusays.com/posts/83/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/830/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -758,7 +875,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/839/</loc>
+    <loc>https://dusays.com/posts/812/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -767,7 +884,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/84/</loc>
+    <loc>https://dusays.com/posts/813/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -776,7 +893,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/840/</loc>
+    <loc>https://dusays.com/posts/814/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -785,7 +902,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/841/</loc>
+    <loc>https://dusays.com/posts/815/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -794,7 +911,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/842/</loc>
+    <loc>https://dusays.com/posts/816/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -803,7 +920,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/843/</loc>
+    <loc>https://dusays.com/posts/818/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -812,7 +929,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/82/</loc>
+    <loc>https://dusays.com/posts/817/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -830,7 +947,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/820/</loc>
+    <loc>https://dusays.com/posts/82/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -839,7 +956,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/822/</loc>
+    <loc>https://dusays.com/posts/820/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -857,7 +974,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/824/</loc>
+    <loc>https://dusays.com/posts/822/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -875,7 +992,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/825/</loc>
+    <loc>https://dusays.com/posts/824/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -884,7 +1001,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/826/</loc>
+    <loc>https://dusays.com/posts/799/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -893,7 +1010,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/827/</loc>
+    <loc>https://dusays.com/posts/8/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -902,7 +1019,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/828/</loc>
+    <loc>https://dusays.com/posts/80/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -911,7 +1028,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/829/</loc>
+    <loc>https://dusays.com/posts/800/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -920,7 +1037,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/83/</loc>
+    <loc>https://dusays.com/posts/801/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -929,7 +1046,25 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/830/</loc>
+    <loc>https://dusays.com/posts/802/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/803/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/804/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1010,7 +1145,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/812/</loc>
+    <loc>https://dusays.com/posts/785/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1019,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/813/</loc>
+    <loc>https://dusays.com/posts/786/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1028,7 +1163,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/814/</loc>
+    <loc>https://dusays.com/posts/787/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1037,7 +1172,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/815/</loc>
+    <loc>https://dusays.com/posts/788/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1046,7 +1181,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/816/</loc>
+    <loc>https://dusays.com/posts/789/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1055,7 +1190,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/817/</loc>
+    <loc>https://dusays.com/posts/79/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1064,7 +1199,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/818/</loc>
+    <loc>https://dusays.com/posts/790/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1091,6 +1226,15 @@
   </url>
   
   <url>
+    <loc>https://dusays.com/posts/793/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/posts/794/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -1100,7 +1244,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/793/</loc>
+    <loc>https://dusays.com/posts/796/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1127,15 +1271,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/796/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/798/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -1145,7 +1280,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/8/</loc>
+    <loc>https://dusays.com/posts/77/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1154,7 +1289,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/799/</loc>
+    <loc>https://dusays.com/posts/770/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1163,7 +1298,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/80/</loc>
+    <loc>https://dusays.com/posts/771/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1172,7 +1307,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/800/</loc>
+    <loc>https://dusays.com/posts/772/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1181,7 +1316,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/801/</loc>
+    <loc>https://dusays.com/posts/774/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1190,7 +1325,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/802/</loc>
+    <loc>https://dusays.com/posts/775/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1199,7 +1334,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/803/</loc>
+    <loc>https://dusays.com/posts/773/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1208,7 +1343,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/804/</loc>
+    <loc>https://dusays.com/posts/776/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/777/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1235,15 +1379,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/78/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/780/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -1262,7 +1397,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/783/</loc>
+    <loc>https://dusays.com/posts/782/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1271,7 +1406,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/782/</loc>
+    <loc>https://dusays.com/posts/78/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/783/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1289,7 +1433,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/785/</loc>
+    <loc>https://dusays.com/posts/756/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1298,7 +1442,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/786/</loc>
+    <loc>https://dusays.com/posts/757/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1307,7 +1451,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/788/</loc>
+    <loc>https://dusays.com/posts/759/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1316,7 +1460,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/787/</loc>
+    <loc>https://dusays.com/posts/758/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1325,7 +1469,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/790/</loc>
+    <loc>https://dusays.com/posts/76/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1334,7 +1478,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/79/</loc>
+    <loc>https://dusays.com/posts/760/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1343,7 +1487,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/789/</loc>
+    <loc>https://dusays.com/posts/761/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/762/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1406,24 +1559,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/77/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/770/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/769/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -1433,7 +1568,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/772/</loc>
+    <loc>https://dusays.com/posts/741/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1442,7 +1577,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/773/</loc>
+    <loc>https://dusays.com/posts/742/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1451,7 +1586,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/771/</loc>
+    <loc>https://dusays.com/posts/743/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1460,7 +1595,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/775/</loc>
+    <loc>https://dusays.com/posts/744/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1469,7 +1604,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/777/</loc>
+    <loc>https://dusays.com/posts/745/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1478,7 +1613,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/774/</loc>
+    <loc>https://dusays.com/posts/746/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1487,7 +1622,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/776/</loc>
+    <loc>https://dusays.com/posts/747/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/748/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1541,7 +1685,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/753/</loc>
+    <loc>https://dusays.com/posts/754/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1550,7 +1694,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/754/</loc>
+    <loc>https://dusays.com/posts/753/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1568,7 +1712,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/757/</loc>
+    <loc>https://dusays.com/posts/727/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1577,7 +1721,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/758/</loc>
+    <loc>https://dusays.com/posts/728/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1586,7 +1730,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/759/</loc>
+    <loc>https://dusays.com/posts/729/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1595,7 +1739,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/76/</loc>
+    <loc>https://dusays.com/posts/73/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1604,7 +1748,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/760/</loc>
+    <loc>https://dusays.com/posts/730/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1613,7 +1757,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/756/</loc>
+    <loc>https://dusays.com/posts/731/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1622,7 +1766,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/761/</loc>
+    <loc>https://dusays.com/posts/732/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1631,7 +1775,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/762/</loc>
+    <loc>https://dusays.com/posts/733/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1712,7 +1856,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/741/</loc>
+    <loc>https://dusays.com/posts/712/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1721,7 +1865,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/742/</loc>
+    <loc>https://dusays.com/posts/711/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1730,7 +1874,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/743/</loc>
+    <loc>https://dusays.com/posts/713/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1739,7 +1883,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/744/</loc>
+    <loc>https://dusays.com/posts/715/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1748,7 +1892,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/745/</loc>
+    <loc>https://dusays.com/posts/714/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1757,7 +1901,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/746/</loc>
+    <loc>https://dusays.com/posts/716/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1766,7 +1910,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/747/</loc>
+    <loc>https://dusays.com/posts/717/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1775,7 +1919,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/748/</loc>
+    <loc>https://dusays.com/posts/718/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1865,7 +2009,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/727/</loc>
+    <loc>https://dusays.com/posts/697/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1874,7 +2018,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/728/</loc>
+    <loc>https://dusays.com/posts/698/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1883,7 +2027,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/729/</loc>
+    <loc>https://dusays.com/posts/699/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1892,7 +2036,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/73/</loc>
+    <loc>https://dusays.com/posts/7/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1901,7 +2045,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/730/</loc>
+    <loc>https://dusays.com/posts/70/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1910,7 +2054,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/731/</loc>
+    <loc>https://dusays.com/posts/700/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1919,7 +2063,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/732/</loc>
+    <loc>https://dusays.com/posts/701/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -1928,7 +2072,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/733/</loc>
+    <loc>https://dusays.com/posts/702/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2018,312 +2162,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/712/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/711/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/713/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/715/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/714/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/716/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/717/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/718/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/689/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/69/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/690/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/691/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/692/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/694/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/693/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/696/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/695/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/697/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/698/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/699/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/7/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/70/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/700/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/701/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/702/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/673/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/675/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/676/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/677/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/678/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/679/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/674/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/68/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/680/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/681/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -2378,15 +2216,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/687/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/688/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -2396,7 +2225,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/659/</loc>
+    <loc>https://dusays.com/posts/687/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2405,7 +2234,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/66/</loc>
+    <loc>https://dusays.com/posts/69/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2414,7 +2243,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/660/</loc>
+    <loc>https://dusays.com/posts/689/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2423,7 +2252,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/661/</loc>
+    <loc>https://dusays.com/posts/690/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2432,7 +2261,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/662/</loc>
+    <loc>https://dusays.com/posts/691/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2441,7 +2270,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/664/</loc>
+    <loc>https://dusays.com/posts/692/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2450,7 +2279,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/663/</loc>
+    <loc>https://dusays.com/posts/693/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2459,7 +2288,34 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/665/</loc>
+    <loc>https://dusays.com/posts/694/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/695/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/696/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/666/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2513,7 +2369,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/666/</loc>
+    <loc>https://dusays.com/posts/671/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2522,7 +2378,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/671/</loc>
+    <loc>https://dusays.com/posts/673/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2540,7 +2396,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/643/</loc>
+    <loc>https://dusays.com/posts/674/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2549,7 +2405,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/644/</loc>
+    <loc>https://dusays.com/posts/675/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2558,7 +2414,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/645/</loc>
+    <loc>https://dusays.com/posts/676/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2567,7 +2423,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/646/</loc>
+    <loc>https://dusays.com/posts/677/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2576,7 +2432,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/647/</loc>
+    <loc>https://dusays.com/posts/678/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2585,7 +2441,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/648/</loc>
+    <loc>https://dusays.com/posts/679/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2594,7 +2450,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/649/</loc>
+    <loc>https://dusays.com/posts/68/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2603,34 +2459,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/65/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/651/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/650/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/652/</loc>
+    <loc>https://dusays.com/posts/680/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2666,7 +2495,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/657/</loc>
+    <loc>https://dusays.com/posts/656/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2675,7 +2504,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/656/</loc>
+    <loc>https://dusays.com/posts/657/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2693,7 +2522,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/63/</loc>
+    <loc>https://dusays.com/posts/659/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2702,7 +2531,268 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/631/</loc>
+    <loc>https://dusays.com/posts/66/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/660/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/661/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/662/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/663/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/664/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/665/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/638/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/639/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/64/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/640/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/641/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/642/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/643/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/644/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/645/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/647/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/646/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/648/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/649/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/65/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/650/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/651/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/652/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/625/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/626/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/627/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/628/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/629/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/63/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2720,7 +2810,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/632/</loc>
+    <loc>https://dusays.com/posts/631/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2730,6 +2820,15 @@
   
   <url>
     <loc>https://dusays.com/posts/633/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/632/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2774,7 +2873,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/639/</loc>
+    <loc>https://dusays.com/posts/61/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2783,7 +2882,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/638/</loc>
+    <loc>https://dusays.com/posts/610/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2792,7 +2891,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/64/</loc>
+    <loc>https://dusays.com/posts/611/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2801,7 +2900,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/640/</loc>
+    <loc>https://dusays.com/posts/612/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2810,7 +2909,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/641/</loc>
+    <loc>https://dusays.com/posts/614/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2819,7 +2918,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/642/</loc>
+    <loc>https://dusays.com/posts/613/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2900,7 +2999,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/622/</loc>
+    <loc>https://dusays.com/posts/623/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2909,7 +3008,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/623/</loc>
+    <loc>https://dusays.com/posts/622/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2927,7 +3026,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/625/</loc>
+    <loc>https://dusays.com/posts/595/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2936,7 +3035,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/626/</loc>
+    <loc>https://dusays.com/posts/596/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2945,7 +3044,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/627/</loc>
+    <loc>https://dusays.com/posts/597/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2954,7 +3053,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/628/</loc>
+    <loc>https://dusays.com/posts/598/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -2963,7 +3062,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/629/</loc>
+    <loc>https://dusays.com/posts/599/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/6/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3071,7 +3179,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/61/</loc>
+    <loc>https://dusays.com/posts/58/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3080,7 +3188,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/610/</loc>
+    <loc>https://dusays.com/posts/581/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3089,7 +3197,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/611/</loc>
+    <loc>https://dusays.com/posts/580/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3098,7 +3206,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/612/</loc>
+    <loc>https://dusays.com/posts/582/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3107,7 +3215,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/613/</loc>
+    <loc>https://dusays.com/posts/583/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3116,7 +3224,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/614/</loc>
+    <loc>https://dusays.com/posts/584/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3152,15 +3260,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/589/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/588/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3171,6 +3270,15 @@
   
   <url>
     <loc>https://dusays.com/posts/59/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/589/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3215,15 +3323,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/595/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/594/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3233,7 +3332,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/596/</loc>
+    <loc>https://dusays.com/posts/566/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3242,7 +3341,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/597/</loc>
+    <loc>https://dusays.com/posts/567/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3251,7 +3350,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/598/</loc>
+    <loc>https://dusays.com/posts/568/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3260,7 +3359,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/6/</loc>
+    <loc>https://dusays.com/posts/569/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3269,7 +3368,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/599/</loc>
+    <loc>https://dusays.com/posts/57/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/570/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3305,15 +3413,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/575/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/574/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3332,7 +3431,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/577/</loc>
+    <loc>https://dusays.com/posts/575/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3341,7 +3440,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/579/</loc>
+    <loc>https://dusays.com/posts/577/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3359,7 +3458,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/58/</loc>
+    <loc>https://dusays.com/posts/579/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3368,7 +3467,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/581/</loc>
+    <loc>https://dusays.com/posts/552/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3377,7 +3476,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/582/</loc>
+    <loc>https://dusays.com/posts/553/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3386,25 +3485,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/583/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/584/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/580/</loc>
+    <loc>https://dusays.com/posts/554/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3422,6 +3503,15 @@
   </url>
   
   <url>
+    <loc>https://dusays.com/posts/555/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/posts/557/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3431,7 +3521,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/558/</loc>
+    <loc>https://dusays.com/posts/559/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3440,7 +3530,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/559/</loc>
+    <loc>https://dusays.com/posts/558/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3512,7 +3602,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/566/</loc>
+    <loc>https://dusays.com/posts/54/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3521,7 +3611,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/567/</loc>
+    <loc>https://dusays.com/posts/540/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3530,34 +3620,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/568/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/569/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/57/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/570/</loc>
+    <loc>https://dusays.com/posts/541/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3584,7 +3647,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/545/</loc>
+    <loc>https://dusays.com/posts/544/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3593,7 +3656,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/544/</loc>
+    <loc>https://dusays.com/posts/545/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3647,15 +3710,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/550/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/551/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3665,7 +3719,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/552/</loc>
+    <loc>https://dusays.com/posts/550/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3674,7 +3728,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/553/</loc>
+    <loc>https://dusays.com/posts/526/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3683,7 +3737,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/554/</loc>
+    <loc>https://dusays.com/posts/525/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3692,7 +3746,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/555/</loc>
+    <loc>https://dusays.com/posts/527/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/528/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3809,7 +3872,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/54/</loc>
+    <loc>https://dusays.com/posts/510/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3818,7 +3881,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/540/</loc>
+    <loc>https://dusays.com/posts/511/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3827,7 +3890,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/541/</loc>
+    <loc>https://dusays.com/posts/512/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/513/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3854,15 +3926,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/516/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/517/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3873,6 +3936,15 @@
   
   <url>
     <loc>https://dusays.com/posts/518/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/516/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3908,6 +3980,15 @@
   </url>
   
   <url>
+    <loc>https://dusays.com/posts/522/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/posts/521/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3926,15 +4007,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/522/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/524/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -3944,7 +4016,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/525/</loc>
+    <loc>https://dusays.com/posts/498/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3953,25 +4025,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/526/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/527/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/528/</loc>
+    <loc>https://dusays.com/posts/499/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -3998,7 +4052,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/501/</loc>
+    <loc>https://dusays.com/posts/5/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4008,6 +4062,15 @@
   
   <url>
     <loc>https://dusays.com/posts/502/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/501/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4034,7 +4097,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/506/</loc>
+    <loc>https://dusays.com/posts/505/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4043,7 +4106,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/505/</loc>
+    <loc>https://dusays.com/posts/506/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4088,7 +4151,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/510/</loc>
+    <loc>https://dusays.com/posts/482/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4097,7 +4160,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/511/</loc>
+    <loc>https://dusays.com/posts/483/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4106,16 +4169,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/512/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/513/</loc>
+    <loc>https://dusays.com/posts/484/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4250,7 +4304,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/498/</loc>
+    <loc>https://dusays.com/posts/467/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4259,7 +4313,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/499/</loc>
+    <loc>https://dusays.com/posts/468/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4268,7 +4322,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/5/</loc>
+    <loc>https://dusays.com/posts/469/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/47/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4394,7 +4457,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/482/</loc>
+    <loc>https://dusays.com/posts/452/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4403,7 +4466,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/483/</loc>
+    <loc>https://dusays.com/posts/453/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4412,7 +4475,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/484/</loc>
+    <loc>https://dusays.com/posts/454/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4493,7 +4556,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/463/</loc>
+    <loc>https://dusays.com/posts/462/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4502,7 +4565,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/462/</loc>
+    <loc>https://dusays.com/posts/463/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4520,15 +4583,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/465/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/466/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -4538,7 +4592,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/467/</loc>
+    <loc>https://dusays.com/posts/465/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4547,7 +4601,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/469/</loc>
+    <loc>https://dusays.com/posts/435/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4556,7 +4610,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/47/</loc>
+    <loc>https://dusays.com/posts/436/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4565,16 +4619,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/468/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/438/</loc>
+    <loc>https://dusays.com/posts/437/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4584,6 +4629,15 @@
   
   <url>
     <loc>https://dusays.com/posts/439/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/438/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4718,7 +4772,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/452/</loc>
+    <loc>https://dusays.com/posts/42/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4727,7 +4781,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/453/</loc>
+    <loc>https://dusays.com/posts/420/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4736,16 +4790,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/454/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/423/</loc>
+    <loc>https://dusays.com/posts/421/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4763,7 +4808,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/424/</loc>
+    <loc>https://dusays.com/posts/423/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4773,6 +4818,15 @@
   
   <url>
     <loc>https://dusays.com/posts/425/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/424/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4871,7 +4925,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/435/</loc>
+    <loc>https://dusays.com/posts/403/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4880,25 +4934,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/437/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/436/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/407/</loc>
+    <loc>https://dusays.com/posts/405/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4908,6 +4944,15 @@
   
   <url>
     <loc>https://dusays.com/posts/406/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/407/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4952,7 +4997,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/411/</loc>
+    <loc>https://dusays.com/posts/412/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4961,7 +5006,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/412/</loc>
+    <loc>https://dusays.com/posts/411/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -4997,15 +5042,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/416/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/417/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -5024,6 +5060,15 @@
   </url>
   
   <url>
+    <loc>https://dusays.com/posts/416/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/posts/419/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -5033,25 +5078,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/42/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/420/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/421/</loc>
+    <loc>https://dusays.com/posts/39/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5061,6 +5088,15 @@
   
   <url>
     <loc>https://dusays.com/posts/391/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/390/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5123,15 +5159,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/399/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/398/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -5142,6 +5169,15 @@
   
   <url>
     <loc>https://dusays.com/posts/4/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/399/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5186,7 +5222,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/403/</loc>
+    <loc>https://dusays.com/posts/373/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5195,7 +5231,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/405/</loc>
+    <loc>https://dusays.com/posts/374/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5231,7 +5267,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/378/</loc>
+    <loc>https://dusays.com/posts/379/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5240,7 +5276,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/379/</loc>
+    <loc>https://dusays.com/posts/378/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5348,7 +5384,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/39/</loc>
+    <loc>https://dusays.com/posts/358/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5357,7 +5393,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/390/</loc>
+    <loc>https://dusays.com/posts/359/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5384,7 +5420,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/362/</loc>
+    <loc>https://dusays.com/posts/361/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5393,7 +5429,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/361/</loc>
+    <loc>https://dusays.com/posts/362/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5411,7 +5447,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/365/</loc>
+    <loc>https://dusays.com/posts/364/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5420,7 +5456,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/364/</loc>
+    <loc>https://dusays.com/posts/365/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5474,7 +5510,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/371/</loc>
+    <loc>https://dusays.com/posts/370/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5483,7 +5519,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/370/</loc>
+    <loc>https://dusays.com/posts/371/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5501,7 +5537,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/373/</loc>
+    <loc>https://dusays.com/posts/34/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5510,7 +5546,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/374/</loc>
+    <loc>https://dusays.com/posts/340/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5520,15 +5556,6 @@
   
   <url>
     <loc>https://dusays.com/posts/342/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/341/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5573,7 +5600,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/347/</loc>
+    <loc>https://dusays.com/posts/341/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5610,6 +5637,15 @@
   
   <url>
     <loc>https://dusays.com/posts/350/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/347/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5681,7 +5717,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/358/</loc>
+    <loc>https://dusays.com/posts/324/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5690,7 +5726,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/359/</loc>
+    <loc>https://dusays.com/posts/325/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5834,25 +5870,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/34/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/340/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/310/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/31/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5897,7 +5924,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/316/</loc>
+    <loc>https://dusays.com/posts/314/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5906,7 +5933,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/314/</loc>
+    <loc>https://dusays.com/posts/316/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5942,7 +5969,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/32/</loc>
+    <loc>https://dusays.com/posts/320/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5951,7 +5978,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/320/</loc>
+    <loc>https://dusays.com/posts/32/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5987,7 +6014,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/324/</loc>
+    <loc>https://dusays.com/posts/296/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -5996,7 +6023,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/325/</loc>
+    <loc>https://dusays.com/posts/297/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/298/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6032,15 +6068,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/301/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/300/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -6050,16 +6077,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/303/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/302/</loc>
+    <loc>https://dusays.com/posts/301/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6113,6 +6131,24 @@
   </url>
   
   <url>
+    <loc>https://dusays.com/posts/303/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/302/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/posts/309/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -6122,7 +6158,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/31/</loc>
+    <loc>https://dusays.com/posts/281/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6131,7 +6167,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/298/</loc>
+    <loc>https://dusays.com/posts/282/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6167,7 +6203,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/286/</loc>
+    <loc>https://dusays.com/posts/287/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6176,7 +6212,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/287/</loc>
+    <loc>https://dusays.com/posts/286/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6221,15 +6257,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/292/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/291/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -6239,7 +6266,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/293/</loc>
+    <loc>https://dusays.com/posts/292/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6257,6 +6284,15 @@
   </url>
   
   <url>
+    <loc>https://dusays.com/posts/293/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/posts/295/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -6266,7 +6302,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/296/</loc>
+    <loc>https://dusays.com/posts/267/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6275,7 +6311,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/297/</loc>
+    <loc>https://dusays.com/posts/266/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6311,7 +6347,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/271/</loc>
+    <loc>https://dusays.com/posts/270/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6320,7 +6356,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/270/</loc>
+    <loc>https://dusays.com/posts/271/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6383,7 +6419,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/278/</loc>
+    <loc>https://dusays.com/posts/279/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6392,7 +6428,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/279/</loc>
+    <loc>https://dusays.com/posts/278/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6419,16 +6455,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/282/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/281/</loc>
+    <loc>https://dusays.com/posts/252/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6465,6 +6492,15 @@
   
   <url>
     <loc>https://dusays.com/posts/256/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/251/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6563,7 +6599,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/266/</loc>
+    <loc>https://dusays.com/posts/234/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6572,7 +6608,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/267/</loc>
+    <loc>https://dusays.com/posts/235/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6582,6 +6618,15 @@
   
   <url>
     <loc>https://dusays.com/posts/236/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/237/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6600,15 +6645,6 @@
   
   <url>
     <loc>https://dusays.com/posts/239/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/237/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6734,7 +6770,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/251/</loc>
+    <loc>https://dusays.com/posts/215/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6743,7 +6779,16 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/252/</loc>
+    <loc>https://dusays.com/posts/217/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/216/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6914,7 +6959,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/234/</loc>
+    <loc>https://dusays.com/posts/199/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6923,7 +6968,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/235/</loc>
+    <loc>https://dusays.com/posts/2/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6950,7 +6995,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/201/</loc>
+    <loc>https://dusays.com/posts/202/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -6959,7 +7004,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/202/</loc>
+    <loc>https://dusays.com/posts/201/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7031,7 +7076,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/21/</loc>
+    <loc>https://dusays.com/posts/210/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7040,7 +7085,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/210/</loc>
+    <loc>https://dusays.com/posts/21/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7085,7 +7130,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/215/</loc>
+    <loc>https://dusays.com/posts/181/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7094,16 +7139,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/216/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/217/</loc>
+    <loc>https://dusays.com/posts/182/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7265,16 +7301,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/199/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/2/</loc>
+    <loc>https://dusays.com/posts/17/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7301,7 +7328,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/172/</loc>
+    <loc>https://dusays.com/posts/173/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7310,7 +7337,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/173/</loc>
+    <loc>https://dusays.com/posts/172/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7391,7 +7418,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/181/</loc>
+    <loc>https://dusays.com/posts/160/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7400,7 +7427,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/182/</loc>
+    <loc>https://dusays.com/posts/161/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7418,7 +7445,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/164/</loc>
+    <loc>https://dusays.com/posts/163/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7427,7 +7454,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/163/</loc>
+    <loc>https://dusays.com/posts/164/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7481,7 +7508,34 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/17/</loc>
+    <loc>https://dusays.com/posts/141/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/142/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/143/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/144/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7535,6 +7589,15 @@
   </url>
   
   <url>
+    <loc>https://dusays.com/posts/150/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/posts/15/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -7544,7 +7607,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/150/</loc>
+    <loc>https://dusays.com/posts/151/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7563,15 +7626,6 @@
   
   <url>
     <loc>https://dusays.com/posts/153/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/151/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7616,15 +7670,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/158/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/posts/159/</loc>
     
     <lastmod>2026-10-12</lastmod>
@@ -7643,7 +7688,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/160/</loc>
+    <loc>https://dusays.com/posts/158/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7652,7 +7697,52 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/161/</loc>
+    <loc>https://dusays.com/posts/121/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/122/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/123/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/124/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/125/</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/posts/126/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -7797,42 +7887,6 @@
   
   <url>
     <loc>https://dusays.com/posts/140/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/141/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/142/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/144/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/143/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -8058,60 +8112,6 @@
   
   <url>
     <loc>https://dusays.com/posts/120/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/121/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/122/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/123/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/124/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/125/</loc>
-    
-    <lastmod>2026-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/posts/126/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -8777,13 +8777,6 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/tags/%E7%B4%A2%E5%BC%95/</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dusays.com/tags/%E5%8F%8D%E4%BB%A3/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -8792,6 +8785,13 @@
   
   <url>
     <loc>https://dusays.com/tags/%E5%AE%9E%E6%88%98/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/tags/%E7%B4%A2%E5%BC%95/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -9043,14 +9043,14 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/tags/%E8%A3%85%E5%A4%87/</loc>
+    <loc>https://dusays.com/tags/%E9%98%B2%E6%8A%A4/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://dusays.com/tags/%E9%98%B2%E6%8A%A4/</loc>
+    <loc>https://dusays.com/tags/%E8%A3%85%E5%A4%87/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -9400,14 +9400,14 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/tags/%E5%BD%B1%E8%A7%86/</loc>
+    <loc>https://dusays.com/tags/%E5%AE%A1%E8%AE%A1/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://dusays.com/tags/%E5%AE%A1%E8%AE%A1/</loc>
+    <loc>https://dusays.com/tags/%E5%BD%B1%E8%A7%86/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
