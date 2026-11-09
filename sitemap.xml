@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dusays.com/yinsi/</loc>
+    
+    <lastmod>2026-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dusays.com/about/</loc>
     
     <lastmod>2026-11-09</lastmod>
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/yinsi/</loc>
+    <loc>https://dusays.com/7bu/</loc>
     
     <lastmod>2026-11-09</lastmod>
     
@@ -74,9 +83,9 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/7bu/</loc>
+    <loc>https://dusays.com/posts/897/</loc>
     
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4970,7 +4979,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/352/</loc>
+    <loc>https://dusays.com/posts/351/</loc>
     
     <lastmod>2021-06-11</lastmod>
     
@@ -4979,7 +4988,7 @@
   </url>
   
   <url>
-    <loc>https://dusays.com/posts/351/</loc>
+    <loc>https://dusays.com/posts/352/</loc>
     
     <lastmod>2021-06-11</lastmod>
     
