@@ -4,7 +4,7 @@
   <url>
     <loc>https://dusays.com/yinsi/</loc>
     
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://dusays.com/about/</loc>
     
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>https://dusays.com/fcircle/</loc>
     
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>https://dusays.com/friends/</loc>
     
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>https://dusays.com/mianze/</loc>
     
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,16 +49,7 @@
   <url>
     <loc>https://dusays.com/says/</loc>
     
-    <lastmod>2026-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/shuoshuo/</loc>
-    
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +58,16 @@
   <url>
     <loc>https://dusays.com/sffw/</loc>
     
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/shuoshuo/</loc>
+    
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +76,7 @@
   <url>
     <loc>https://dusays.com/7bu/</loc>
     
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8140,7 +8140,7 @@
 
   <url>
     <loc>https://dusays.com/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
