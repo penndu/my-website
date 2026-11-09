@@ -2,16 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dusays.com/mianze/</loc>
-    
-    <lastmod>2026-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/says/</loc>
+    <loc>https://dusays.com/sffw/</loc>
     
     <lastmod>2026-11-09</lastmod>
     
@@ -21,15 +12,6 @@
   
   <url>
     <loc>https://dusays.com/shuoshuo/</loc>
-    
-    <lastmod>2026-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dusays.com/sffw/</loc>
     
     <lastmod>2026-11-09</lastmod>
     
@@ -66,6 +48,24 @@
   
   <url>
     <loc>https://dusays.com/friends/</loc>
+    
+    <lastmod>2026-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/mianze/</loc>
+    
+    <lastmod>2026-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dusays.com/says/</loc>
     
     <lastmod>2026-11-09</lastmod>
     
